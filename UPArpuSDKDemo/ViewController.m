@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "UPADShowViewController.h"
+@import UpArpuSDK;
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property(nonatomic, readonly) UITableView *tableView;
 @property(nonatomic, readonly) NSArray<NSString*>* placementNames;
@@ -17,7 +18,7 @@ static NSString *const kCellIdentifier = @"cell";
 @implementation ViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _placementNames = @[kFlurryPlacement, kApplovinPlacement, kPlacement0Name, kInmobiPlacement, kFacebookPlacement, kAdMobPlacement, kPlacement1Name, kPlacement2Name, kPlacement3Name];
+    _placementNames = @[kFacebookPlacement, kAdMobPlacement, kInmobiPlacement, kFlurryPlacement, kApplovinPlacement, kMobvistaPlacement, kMopubPlacementName];
     
     _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kCellIdentifier];
@@ -25,8 +26,12 @@ static NSString *const kCellIdentifier = @"cell";
     _tableView.delegate = self;
     [self.view addSubview:_tableView];
     
-    UIImage *img = [UIImage imageNamed:@"video_player_mute"];
-    img = nil;
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"GDPR" style:UIBarButtonItemStylePlain target:self action:@selector(policyButtonTapped)];
+    self.navigationItem.rightBarButtonItem = item;
+}
+
+-(void)policyButtonTapped {
+    [[UPArpuAPI sharedInstance] presentDataConsentDialogInViewController:self];
 }
 
 -(NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {

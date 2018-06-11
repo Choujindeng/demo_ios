@@ -7,15 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-extern NSString *const kPlacement0Name;
 extern NSString *const kInmobiPlacement;
 extern NSString *const kFacebookPlacement;
 extern NSString *const kAdMobPlacement;
 extern NSString *const kApplovinPlacement;
 extern NSString *const kFlurryPlacement;
-extern NSString *const kPlacement1Name;
-extern NSString *const kPlacement2Name;
-extern NSString *const kPlacement3Name;
+extern NSString *const kMopubPlacementName;
+extern NSString *const kMopubVideoPlacementName;
+extern NSString *const kMobvistaPlacement;
 @interface UPADShowViewController : UIViewController
 -(instancetype) initWithPlacementName:(NSString*)name;
 @end

@@ -8,12 +8,14 @@
 
 #ifndef UPArpuNativeADDelegate_h
 #define UPArpuNativeADDelegate_h
-@class UPNativeADView;
+@class UPArpuNativeADView;
 @protocol UPArpuNativeADDelegate<NSObject>
 -(void) didFinishLoadingADWithPlacementID:(NSString *)placementID;
 -(void) didFailToLoadADWithPlacementID:(NSString*)placementID error:(NSError*)error;
 -(void) exceptionDidOccurWithPlacementID:(NSString*)placementID;
--(void) didShowNativeAdInAdView:(UPNativeADView*)adView placementID:(NSString*)placementID;
--(void) didClickNativeAdInAdView:(UPNativeADView*)adView placementID:(NSString*)placementID;
+-(void) didShowNativeAdInAdView:(UPArpuNativeADView*)adView placementID:(NSString*)placementID;
+-(void) didClickNativeAdInAdView:(UPArpuNativeADView*)adView placementID:(NSString*)placementID;
+-(void) didStartPlayingVideoInAdView:(UPArpuNativeADView*)adView placementID:(NSString*)placementID;
+-(void) didEndPlayingVideoInAdView:(UPArpuNativeADView*)adView placementID:(NSString*)placementID;
 @end
 #endif /* UPArpuNativeADDelegate_h */

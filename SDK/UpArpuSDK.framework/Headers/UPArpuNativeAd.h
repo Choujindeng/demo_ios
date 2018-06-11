@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface UPArpuNativeAd : NSObject
+@property(nonatomic, readonly) NSString *advertiser;
 @property(nonatomic, readonly) NSString *title;
 @property(nonatomic, readonly) NSString *mainText;
 @property(nonatomic, readonly) NSString *ctaText;

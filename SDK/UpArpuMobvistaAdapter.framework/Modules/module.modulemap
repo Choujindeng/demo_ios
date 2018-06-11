@@ -1,0 +1,6 @@
+framework module UpArpuMobvistaAdapter {
+  umbrella header "UpArpuMobvistaAdapter.h"
+
+  export *
+  module * { export * }
+}

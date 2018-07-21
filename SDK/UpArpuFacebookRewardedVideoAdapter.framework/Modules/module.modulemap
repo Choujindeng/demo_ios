@@ -1,0 +1,6 @@
+framework module UpArpuFacebookRewardedVideoAdapter {
+  umbrella header "UpArpuFacebookRewardedVideoAdapter.h"
+
+  export *
+  module * { export * }
+}

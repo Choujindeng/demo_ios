@@ -1,6 +1,0 @@
-framework module UpArpuMopubAdapter {
-  umbrella header "UpArpuMopubAdapter.h"
-
-  export *
-  module * { export * }
-}

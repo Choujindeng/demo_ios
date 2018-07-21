@@ -14,19 +14,19 @@
     view.translatesAutoresizingMaskIntoConstraints = NO;
     return view;
 }
-
+    
 - (NSArray<__kindof NSLayoutConstraint *> *)addConstraintsWithVisualFormat:(NSString *)format options:(NSLayoutFormatOptions)opts metrics:(NSDictionary<NSString *,id> *)metrics views:(NSDictionary<NSString *, id> *)views {
     NSArray<__kindof NSLayoutConstraint*>* constraints = [NSLayoutConstraint constraintsWithVisualFormat:format options:opts metrics:metrics views:views];
     [self addConstraints:constraints];
     return constraints;
 }
-
+    
 -(NSLayoutConstraint*)addConstraintWithItem:(id)view1 attribute:(NSLayoutAttribute)attr1 relatedBy:(NSLayoutRelation)relation toItem:(id)view2 attribute:(NSLayoutAttribute)attr2 multiplier:(CGFloat)multiplier constant:(CGFloat)c {
     NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:view1 attribute:attr1 relatedBy:relation toItem:view2 attribute:attr2 multiplier:multiplier constant:c];
     [self addConstraint:constraint];
     return constraint;
 }
-@end
+    @end
 
 @implementation UILabel(Autolayout)
 +(instancetype) autolayoutLabelFont:(UIFont*)font textColor:(UIColor*)textColor textAlignment:(NSTextAlignment)textAlignment {
@@ -37,11 +37,11 @@
     label.textAlignment = textAlignment;
     return label;
 }
-
+    
 +(instancetype) autolayoutLabelFont:(UIFont*)font textColor:(UIColor*)textColor {
     return [self autolayoutLabelFont:font textColor:textColor textAlignment:NSTextAlignmentLeft];
 }
-@end
+    @end
 
 @implementation UIButton(Autolayout)
 +(instancetype) autolayoutButtonWithType:(UIButtonType)type {
@@ -49,4 +49,5 @@
     button.translatesAutoresizingMaskIntoConstraints = NO;
     return button;
 }
-@end
+    @end
+

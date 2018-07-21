@@ -14,7 +14,8 @@ extern NSString *const kApplovinPlacement;
 extern NSString *const kFlurryPlacement;
 extern NSString *const kMopubPlacementName;
 extern NSString *const kMopubVideoPlacementName;
-extern NSString *const kMobvistaPlacement;
+extern NSString *const kMintegralPlacement;
+extern NSString *const kAllPlacementName;
 @interface UPADShowViewController : UIViewController
 -(instancetype) initWithPlacementName:(NSString*)name;
-@end
+    @end

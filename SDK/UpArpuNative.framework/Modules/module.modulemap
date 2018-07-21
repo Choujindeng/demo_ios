@@ -1,0 +1,6 @@
+framework module UpArpuNative {
+  umbrella header "UpArpuNative.h"
+
+  export *
+  module * { export * }
+}

@@ -8,12 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "UPArpuAPI.h"
-#import "UPArpuNativeAd.h"
 #import "UPArpuAdManager.h"
-#import "UPArpuNativeADView.h"
-#import "UPArpuNativeRendering.h"
-#import "UPArpuNativeADConfiguration.h"
-#import "UPArpuNativeADDelegate.h"
+#import "UPArpuAdLoadingDelegate.h"
 
 //! Project version number for UpArpuSDK.
 FOUNDATION_EXPORT double UpArpuSDKVersionNumber;

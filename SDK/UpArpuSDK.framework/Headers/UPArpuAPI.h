@@ -44,6 +44,9 @@ extern NSString *const kNetworkNameVungle;
 extern NSString *const kNetworkNameAdColony;
 extern NSString *const kNetworkNameUnityAds;
 
+extern NSString *const kInmobiGDPRStringKey;
+extern NSString *const kInmobiConsentStringKey;
+
 extern NSString *const kAdmobConsentStatusKey;
 extern NSString *const kAdmobUnderAgeKey;
 
@@ -83,6 +86,7 @@ typedef NS_ENUM(NSInteger, UpArpuDataConsentSet) {
  * Whether the device is located in data protected area.
  */
 -(BOOL)inDataProtectionArea;
+    
 
 /**
  * Show the data consent dialog using the specified constroller as the presenting view controller.
@@ -97,7 +101,9 @@ typedef NS_ENUM(NSInteger, UpArpuDataConsentSet) {
 /**
  * Set network consent info individually; according to the network specifications, types for the info you should provide for the networks should be as follows:
  * Mintegral: dictionary, in which you can either set @YES/@NO for key @0 to allow/prevent all three types of data collection(example, @{@0:@YES}), or you can set @YES/@NO each for @1, @2, @3 keys respectively(example, @{@1:@YES, @2:@NO, @3:@YES});for more detailed infomation, please refer to its official website.
- * Inmobi: BOOL wrapped as an NSNumber
+ * Inmobi: A dictionary containing the follow keys and values:
+    1) An string, @"0" means user not being in GDPR area, @"1" otherwise, with key kInmobiGDPRStringKey
+    2) An string, @"true" means user having granted consent, @"false" otherwise with key kInmobiConsentStringKey
  * Mopub: BOOL wrapped as an NSNumber
  * Admob: A dictionary containing the follow keys and values:
  *       1) An NSInteger wrapped as an NSNumber specifying the consent status(0=unknown, 1=non personalized or 2=personalized), under the key kAdmobConsentStatusKey

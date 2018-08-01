@@ -9,13 +9,15 @@
 #import "UPADShowViewController.h"
 #import "MTAutolayoutCategories.h"
 #import <UpArpuSDK/UPArpuAPI.h>
+#ifdef NATIVE_INTEGRATED
 #import <UpArpuNative/UPArpuNativeADConfiguration.h>
 #import <UpArpuNative/UPArpuNativeADView.h>
 #import <UpArpuNative/UPArpuAdManager+Native.h>
 #import <UpArpuNative/UPArpuNativeADDelegate.h>
-
-@import UpArpuSDK;
 @import UpArpuNative;
+#endif
+@import UpArpuSDK;
+
 
 NSString *const kInmobiPlacement = @"Inmobi";
 NSString *const kFacebookPlacement = @"Facebook";
@@ -50,7 +52,7 @@ static NSString *const kMopubPlacementID = @"b5b0f55624527a";
 static NSString *const kMopubVideoPlacementID = @"b5afbe325b1303";
 static NSString *const kAllPlacementID = @"b5b0f5663c6e4a";
 //#endif
-
+#ifdef NATIVE_INTEGRATED
 @interface DMADView:UPArpuNativeADView
 @property(nonatomic, readonly) UILabel *advertiserLabel;
 @property(nonatomic, readonly) UILabel *textLabel;
@@ -121,8 +123,13 @@ static NSString *const kAllPlacementID = @"b5b0f5663c6e4a";
     [self addConstraintsWithVisualFormat:@"V:|-15-[titleLabel]-8-[textLabel]-8-[ctaLabel]-8-[ratingLabel]-8-[advertiserLabel]" options:NSLayoutFormatAlignAllLeading | NSLayoutFormatAlignAllTrailing metrics:nil views:viewsDict];
 }
 @end
+#endif
 
+#ifdef NATIVE_INTEGRATED
 @interface UPADShowViewController()<UPArpuNativeADDelegate>
+#else
+@interface UPADShowViewController()
+#endif
     @property(nonatomic, readonly) NSDictionary *placementIDs;
     @property(nonatomic, readonly) NSString *name;
     @property(nonatomic, readonly) UIActivityIndicatorView *loadingView;
@@ -132,7 +139,9 @@ static NSString *const kAllPlacementID = @"b5b0f5663c6e4a";
     @property(nonatomic, readonly) UILabel *failureTipsLabel;
     @property(nonatomic, readonly) UIButton *removeAdButton;
     @end
+
 @implementation UPADShowViewController
+#ifdef NATIVE_INTEGRATED
 -(instancetype) initWithPlacementName:(NSString*)name {
     self = [super initWithNibName:nil bundle:nil];
     if (self != nil) {
@@ -288,4 +297,5 @@ static NSString *const kAllPlacementID = @"b5b0f5663c6e4a";
     _reloadADButton.enabled = YES;
     NSLog(@"Did fail to load ad, error: %@", error);
 }
+#endif
     @end

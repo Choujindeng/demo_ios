@@ -10,12 +10,17 @@
 
 #import "MTAutolayoutCategories.h"
 #import <UpArpuSDK/UPArpuAPI.h>
+#ifdef REWARDED_VIDEO_INTEGRATED
 #import <UpArpuRewardedVideo/UPArpuRewardedVideoDelegate.h>
 #import <UpArpuRewardedVideo/UPArpuAdManager+RewardedVideo.h>
+#endif
 //@import UpArpuSDK;
 //@import UpArpuRewardedVideo;
-
+#ifdef REWARDED_VIDEO_INTEGRATED
 @interface UPArpuRewardedVideoVideoViewController ()<UPArpuRewardedVideoDelegate>
+#else
+@interface UPArpuRewardedVideoVideoViewController ()
+#endif
 @property(nonatomic, readonly) NSString *name;
 @property(nonatomic, readonly) NSDictionary *placementIDs;
 @property(nonatomic, readonly) UIActivityIndicatorView *loadingView;
@@ -70,6 +75,7 @@ static NSString *const kUnityAdsPlacementID = @"b5b44a0c7b9b64";//to be modified
 static NSString *const kAllPlacementID = @"b5b44a0f115321";
 //#endif
 @implementation UPArpuRewardedVideoVideoViewController
+#ifdef REWARDED_VIDEO_INTEGRATED
 -(instancetype) initWithPlacementName:(NSString*)name {
     self = [super initWithNibName:nil bundle:nil];
     if (self != nil) {
@@ -210,4 +216,5 @@ static NSString *const kAllPlacementID = @"b5b44a0f115321";
 -(void) rewardedVideoDidClickForPlacementID:(NSString*)placementID {
     NSLog(@"RV Demo: rewardedVideoDidClickForPlacementID:%@", placementID);
 }
+#endif
 @end

@@ -15,6 +15,22 @@
 		8DE56EEA209C70BC002A1427 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE56EE9209C70BC002A1427 /* main.m */; };
 		8DE56EF5209C715A002A1427 /* MTAutolayoutCategories.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE56EF3209C715A002A1427 /* MTAutolayoutCategories.m */; };
 		8DE56EF8209C7179002A1427 /* UPADShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE56EF6209C7178002A1427 /* UPADShowViewController.m */; };
+		8DFE7C9321115FF10046F254 /* UpArpuAdmobNativeAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DFE7C8B21115FEF0046F254 /* UpArpuAdmobNativeAdapter.framework */; };
+		8DFE7C9421115FF10046F254 /* UpArpuAdmobNativeAdapter.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8DFE7C8B21115FEF0046F254 /* UpArpuAdmobNativeAdapter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8DFE7C9521115FF10046F254 /* UpArpuMopubNativeAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DFE7C8C21115FEF0046F254 /* UpArpuMopubNativeAdapter.framework */; };
+		8DFE7C9621115FF10046F254 /* UpArpuMopubNativeAdapter.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8DFE7C8C21115FEF0046F254 /* UpArpuMopubNativeAdapter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8DFE7C9721115FF10046F254 /* UpArpuNative.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DFE7C8D21115FEF0046F254 /* UpArpuNative.framework */; };
+		8DFE7C9821115FF10046F254 /* UpArpuNative.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8DFE7C8D21115FEF0046F254 /* UpArpuNative.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8DFE7C9921115FF10046F254 /* UpArpuApplovinNativeAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DFE7C8E21115FF00046F254 /* UpArpuApplovinNativeAdapter.framework */; };
+		8DFE7C9A21115FF10046F254 /* UpArpuApplovinNativeAdapter.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8DFE7C8E21115FF00046F254 /* UpArpuApplovinNativeAdapter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8DFE7C9B21115FF10046F254 /* UpArpuFlurryNativeAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DFE7C8F21115FF00046F254 /* UpArpuFlurryNativeAdapter.framework */; };
+		8DFE7C9C21115FF10046F254 /* UpArpuFlurryNativeAdapter.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8DFE7C8F21115FF00046F254 /* UpArpuFlurryNativeAdapter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8DFE7C9D21115FF10046F254 /* UpArpuInmobiNativeAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DFE7C9021115FF00046F254 /* UpArpuInmobiNativeAdapter.framework */; };
+		8DFE7C9E21115FF10046F254 /* UpArpuInmobiNativeAdapter.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8DFE7C9021115FF00046F254 /* UpArpuInmobiNativeAdapter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8DFE7C9F21115FF10046F254 /* UpArpuFacebookNativeAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DFE7C9121115FF00046F254 /* UpArpuFacebookNativeAdapter.framework */; };
+		8DFE7CA021115FF10046F254 /* UpArpuFacebookNativeAdapter.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8DFE7C9121115FF00046F254 /* UpArpuFacebookNativeAdapter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8DFE7CA121115FF10046F254 /* UpArpuMintegralNativeAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DFE7C9221115FF10046F254 /* UpArpuMintegralNativeAdapter.framework */; };
+		8DFE7CA221115FF10046F254 /* UpArpuMintegralNativeAdapter.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8DFE7C9221115FF10046F254 /* UpArpuMintegralNativeAdapter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DC6F97A1210338F3003C3F42 /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC6F97A0210338F2003C3F42 /* FBAudienceNetwork.framework */; };
 		DC6F97A22103406F003C3F42 /* AdColony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC83F7B22101EC3C003FFC3C /* AdColony.framework */; };
 		DC6F97A4210340AD003C3F42 /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DC6F97A3210340AC003C3F42 /* libz.1.2.5.tbd */; };
@@ -302,11 +318,16 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				8DFE7C9821115FF10046F254 /* UpArpuNative.framework in CopyFiles */,
+				8DFE7C9A21115FF10046F254 /* UpArpuApplovinNativeAdapter.framework in CopyFiles */,
+				8DFE7CA021115FF10046F254 /* UpArpuFacebookNativeAdapter.framework in CopyFiles */,
 				DC83FAB721022F93003FFC3C /* UpArpuRewardedVideo.framework in CopyFiles */,
 				DC83FABD21022F93003FFC3C /* UpArpuVungleRewardedVideoAdapter.framework in CopyFiles */,
 				DC83FAAF21022F92003FFC3C /* UpArpuMintegralRewardedVideoAdapter.framework in CopyFiles */,
 				DC83FABB21022F93003FFC3C /* UpArpuUnityAdsRewardedVideoAdapter.framework in CopyFiles */,
 				DC83FAA921022F92003FFC3C /* UpArpuInmobiRewardedVideoAdapter.framework in CopyFiles */,
+				8DFE7C9621115FF10046F254 /* UpArpuMopubNativeAdapter.framework in CopyFiles */,
+				8DFE7C9C21115FF10046F254 /* UpArpuFlurryNativeAdapter.framework in CopyFiles */,
 				DC83FA9721022F91003FFC3C /* UpArpuAdmobRewardedVideoAdapter.framework in CopyFiles */,
 				DC83FAA521022F92003FFC3C /* UpArpuFlurryRewardedVideoAdapter.framework in CopyFiles */,
 				DC83FA9D21022F92003FFC3C /* UpArpuChartboostRewardedVideoAdapter.framework in CopyFiles */,
@@ -314,9 +335,12 @@
 				DC83FA9B21022F91003FFC3C /* UpArpuApplovinRewardedVideoAdapter.framework in CopyFiles */,
 				DC83FAA121022F92003FFC3C /* UpArpuFacebookRewardedVideoAdapter.framework in CopyFiles */,
 				DC83FAB321022F92003FFC3C /* UpArpuMopubRewardedVideoAdapter.framework in CopyFiles */,
+				8DFE7C9E21115FF10046F254 /* UpArpuInmobiNativeAdapter.framework in CopyFiles */,
 				DC83FA9321022F91003FFC3C /* UpArpuAdColonyRewardedVideoAdapter.framework in CopyFiles */,
 				DC83FAB921022F93003FFC3C /* UpArpuTapjoyRewardedVideoAdapter.framework in CopyFiles */,
+				8DFE7C9421115FF10046F254 /* UpArpuAdmobNativeAdapter.framework in CopyFiles */,
 				DC83FAAB21022F92003FFC3C /* UpArpuIronSourceRewardedVideoAdapter.framework in CopyFiles */,
+				8DFE7CA221115FF10046F254 /* UpArpuMintegralNativeAdapter.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +362,14 @@
 		8DE56EF4209C715A002A1427 /* MTAutolayoutCategories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTAutolayoutCategories.h; sourceTree = "<group>"; };
 		8DE56EF6209C7178002A1427 /* UPADShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPADShowViewController.m; sourceTree = "<group>"; };
 		8DE56EF7209C7178002A1427 /* UPADShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPADShowViewController.h; sourceTree = "<group>"; };
+		8DFE7C8B21115FEF0046F254 /* UpArpuAdmobNativeAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuAdmobNativeAdapter.framework; path = SDK/UpArpuAdmobNativeAdapter.framework; sourceTree = "<group>"; };
+		8DFE7C8C21115FEF0046F254 /* UpArpuMopubNativeAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuMopubNativeAdapter.framework; path = SDK/UpArpuMopubNativeAdapter.framework; sourceTree = "<group>"; };
+		8DFE7C8D21115FEF0046F254 /* UpArpuNative.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuNative.framework; path = SDK/UpArpuNative.framework; sourceTree = "<group>"; };
+		8DFE7C8E21115FF00046F254 /* UpArpuApplovinNativeAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuApplovinNativeAdapter.framework; path = SDK/UpArpuApplovinNativeAdapter.framework; sourceTree = "<group>"; };
+		8DFE7C8F21115FF00046F254 /* UpArpuFlurryNativeAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuFlurryNativeAdapter.framework; path = SDK/UpArpuFlurryNativeAdapter.framework; sourceTree = "<group>"; };
+		8DFE7C9021115FF00046F254 /* UpArpuInmobiNativeAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuInmobiNativeAdapter.framework; path = SDK/UpArpuInmobiNativeAdapter.framework; sourceTree = "<group>"; };
+		8DFE7C9121115FF00046F254 /* UpArpuFacebookNativeAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuFacebookNativeAdapter.framework; path = SDK/UpArpuFacebookNativeAdapter.framework; sourceTree = "<group>"; };
+		8DFE7C9221115FF10046F254 /* UpArpuMintegralNativeAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuMintegralNativeAdapter.framework; path = SDK/UpArpuMintegralNativeAdapter.framework; sourceTree = "<group>"; };
 		DC6F97A0210338F2003C3F42 /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBAudienceNetwork.framework; path = SDK/FBAudienceNetwork.framework; sourceTree = "<group>"; };
 		DC6F97A3210340AC003C3F42 /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
 		DC6F97A5210340B8003C3F42 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
@@ -844,6 +876,7 @@
 				DC6F97B82103411D003C3F42 /* StoreKit.framework in Frameworks */,
 				DC6F97B621034112003C3F42 /* Social.framework in Frameworks */,
 				DC6F97B421034109003C3F42 /* MobileCoreServices.framework in Frameworks */,
+				8DFE7C9521115FF10046F254 /* UpArpuMopubNativeAdapter.framework in Frameworks */,
 				DC6F97B2210340FF003C3F42 /* MessageUI.framework in Frameworks */,
 				DC6F97B0210340F6003C3F42 /* JavaScriptCore.framework in Frameworks */,
 				DC6F97AE210340EC003C3F42 /* CoreTelephony.framework in Frameworks */,
@@ -861,14 +894,17 @@
 				DC83F8102101ECB0003FFC3C /* libFlurryAds_1.0.0.a in Frameworks */,
 				DC83F80F2101ECA4003FFC3C /* libFlurry_9.0.0.a in Frameworks */,
 				DC83FA4E2101F08D003FFC3C /* libAvid-mopub-3.6.1.a in Frameworks */,
+				8DFE7C9F21115FF10046F254 /* UpArpuFacebookNativeAdapter.framework in Frameworks */,
 				DC83F7F72101EC68003FFC3C /* UnityAds.framework in Frameworks */,
 				DC83F7F82101EC68003FFC3C /* UpArpuAdColonyRewardedVideoAdapter.framework in Frameworks */,
 				DC83FA4F2101F08D003FFC3C /* MPUBMoatMobileAppKit.framework in Frameworks */,
 				DC83FAA821022F92003FFC3C /* UpArpuInmobiRewardedVideoAdapter.framework in Frameworks */,
+				8DFE7C9B21115FF10046F254 /* UpArpuFlurryNativeAdapter.framework in Frameworks */,
 				DC83F7FA2101EC68003FFC3C /* UpArpuAdmobRewardedVideoAdapter.framework in Frameworks */,
 				DC83FAA421022F92003FFC3C /* UpArpuFlurryRewardedVideoAdapter.framework in Frameworks */,
 				DC83F7FC2101EC68003FFC3C /* UpArpuApplovinRewardedVideoAdapter.framework in Frameworks */,
 				DC83FABE21022F93003FFC3C /* UpArpuSDK.framework in Frameworks */,
+				8DFE7C9921115FF10046F254 /* UpArpuApplovinNativeAdapter.framework in Frameworks */,
 				DC83F7FD2101EC68003FFC3C /* UpArpuChartboostRewardedVideoAdapter.framework in Frameworks */,
 				DC83F7FF2101EC68003FFC3C /* UpArpuFacebookRewardedVideoAdapter.framework in Frameworks */,
 				DC83FAB621022F93003FFC3C /* UpArpuRewardedVideo.framework in Frameworks */,
@@ -881,6 +917,7 @@
 				DC83FAB821022F93003FFC3C /* UpArpuTapjoyRewardedVideoAdapter.framework in Frameworks */,
 				DC83F7A72101EC3B003FFC3C /* UpArpuSDK.framework in Frameworks */,
 				DC83FAB221022F92003FFC3C /* UpArpuMopubRewardedVideoAdapter.framework in Frameworks */,
+				8DFE7C9D21115FF10046F254 /* UpArpuInmobiNativeAdapter.framework in Frameworks */,
 				DC83F80B2101EC68003FFC3C /* UpArpuTapjoyRewardedVideoAdapter.framework in Frameworks */,
 				DC83FAA021022F92003FFC3C /* UpArpuFacebookRewardedVideoAdapter.framework in Frameworks */,
 				DC83F80C2101EC68003FFC3C /* UpArpuUnityAdsRewardedVideoAdapter.framework in Frameworks */,
@@ -892,6 +929,7 @@
 				DC83FABA21022F93003FFC3C /* UpArpuUnityAdsRewardedVideoAdapter.framework in Frameworks */,
 				DC83F7F42101EC59003FFC3C /* IronSource.framework in Frameworks */,
 				DC83FA9C21022F92003FFC3C /* UpArpuChartboostRewardedVideoAdapter.framework in Frameworks */,
+				8DFE7CA121115FF10046F254 /* UpArpuMintegralNativeAdapter.framework in Frameworks */,
 				DC83FABC21022F93003FFC3C /* UpArpuVungleRewardedVideoAdapter.framework in Frameworks */,
 				DC83F7F52101EC59003FFC3C /* MTGSDK.framework in Frameworks */,
 				DC83F7F62101EC59003FFC3C /* MTGSDKReward.framework in Frameworks */,
@@ -902,6 +940,8 @@
 				DC83F8152101ECDB003FFC3C /* Tapjoy.framework in Frameworks */,
 				DC83FAAA21022F92003FFC3C /* UpArpuIronSourceRewardedVideoAdapter.framework in Frameworks */,
 				DC83F7EF2101EC49003FFC3C /* Chartboost.framework in Frameworks */,
+				8DFE7C9321115FF10046F254 /* UpArpuAdmobNativeAdapter.framework in Frameworks */,
+				8DFE7C9721115FF10046F254 /* UpArpuNative.framework in Frameworks */,
 				DC83FAAE21022F92003FFC3C /* UpArpuMintegralRewardedVideoAdapter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -912,6 +952,14 @@
 		8DE56ECE209C70BC002A1427 = {
 			isa = PBXGroup;
 			children = (
+				8DFE7C8B21115FEF0046F254 /* UpArpuAdmobNativeAdapter.framework */,
+				8DFE7C8E21115FF00046F254 /* UpArpuApplovinNativeAdapter.framework */,
+				8DFE7C9121115FF00046F254 /* UpArpuFacebookNativeAdapter.framework */,
+				8DFE7C8F21115FF00046F254 /* UpArpuFlurryNativeAdapter.framework */,
+				8DFE7C9021115FF00046F254 /* UpArpuInmobiNativeAdapter.framework */,
+				8DFE7C9221115FF10046F254 /* UpArpuMintegralNativeAdapter.framework */,
+				8DFE7C8C21115FEF0046F254 /* UpArpuMopubNativeAdapter.framework */,
+				8DFE7C8D21115FEF0046F254 /* UpArpuNative.framework */,
 				DC6F97A0210338F2003C3F42 /* FBAudienceNetwork.framework */,
 				DC83F8172101F051003FFC3C /* mopub */,
 				DC83F8112101ECDA003FFC3C /* Tapjoy.embeddedframework */,
@@ -2140,7 +2188,10 @@
 					"$(PROJECT_DIR)/mopub/Viewability/MOAT",
 					"$(PROJECT_DIR)",
 				);
-				GCC_PREPROCESSOR_DEFINITIONS = REWARDED_VIDEO_INTEGRATED;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					REWARDED_VIDEO_INTEGRATED,
+					NATIVE_INTEGRATED,
+				);
 				INFOPLIST_FILE = UPArpuSDKDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
@@ -2173,7 +2224,10 @@
 					"$(PROJECT_DIR)/mopub/Viewability/MOAT",
 					"$(PROJECT_DIR)",
 				);
-				GCC_PREPROCESSOR_DEFINITIONS = REWARDED_VIDEO_INTEGRATED;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					REWARDED_VIDEO_INTEGRATED,
+					NATIVE_INTEGRATED,
+				);
 				INFOPLIST_FILE = UPArpuSDKDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (

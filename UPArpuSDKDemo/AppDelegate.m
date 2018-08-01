@@ -24,7 +24,7 @@
     [[UPArpuAPI sharedInstance] setDataConsentSet:UpArpuDataConsentSetPersonalized consentString:nil];
     [UPArpuAPI sharedInstance].networkConsentInfo = @{
                                                       kNetworkNameMintegral:@{@1:@YES, @2:@YES, @3:@YES},
-                                                      kNetworkNameInmobi:@YES,
+                                                      kNetworkNameInmobi:@{kInmobiGDPRStringKey:@"0", kInmobiConsentStringKey:@"true"},
                                                       kNetworkNameMopub:@NO,
                                                       kNetworkNameAdmob:@{kAdmobConsentStatusKey:@1, kAdmobUnderAgeKey:@NO},
                                                       kNetworkNameApplovin:@{kApplovinConscentStatusKey:@YES, kApplovinUnderAgeKey:@NO},

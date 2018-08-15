@@ -38,6 +38,7 @@ NSString *const kIronsourcePlacementName = @"Ironsource";
 NSString *const kVunglePlacementName = @"Vungle";
 NSString *const kAdcolonyPlacementName = @"Adcolony";
 NSString *const kUnityAdsPlacementName = @"Unity Ads";
+NSString *const kTTPlacementName = @"TT";
 
 //#ifdef DEBUG
 //static NSString *const kPlacement0ID = @"b5b3c9ce05d849";
@@ -73,6 +74,7 @@ static NSString *const kVungleRVPlacementID = @"b5b44a0d05d707";//to be modified
 static NSString *const kAdcolonyRVPlacementID = @"b5b44a0de295ad";//to be modified
 static NSString *const kUnityAdsPlacementID = @"b5b44a0c7b9b64";//to be modified
 static NSString *const kAllPlacementID = @"b5b44a0f115321";
+static NSString *const kTTPlacementID = @"b5b72b21184aa8";
 //#endif
 @implementation UPArpuRewardedVideoVideoViewController
 #ifdef REWARDED_VIDEO_INTEGRATED
@@ -95,7 +97,8 @@ static NSString *const kAllPlacementID = @"b5b44a0f115321";
                           kVunglePlacementName:kVungleRVPlacementID,
                           kAdcolonyPlacementName:kAdcolonyRVPlacementID,
                           kUnityAdsPlacementName:kUnityAdsPlacementID,
-                          kFlurryPlacement:kFlurryPlacementID
+                          kFlurryPlacement:kFlurryPlacementID,
+                          kTTPlacementName:kTTPlacementID
                           };
     }
     return self;

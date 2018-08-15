@@ -22,6 +22,7 @@ extern NSString *const kVunglePlacementName;
 extern NSString *const kAdcolonyPlacementName;
 extern NSString *const kUnityAdsPlacementName;
 extern NSString *const kAllPlacementName;
+extern NSString *const kTTPlacementName;
 @interface UPArpuRewardedVideoVideoViewController : UIViewController
 -(instancetype) initWithPlacementName:(NSString*)name;
 @end

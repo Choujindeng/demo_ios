@@ -30,7 +30,7 @@ static NSString *const kCellIdentifier = @"cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSLog(@"ViewController viewDidLoad");
-    _placementNames = @[@[kFacebookPlacement, kAdMobPlacement, kInmobiPlacement, kFlurryPlacement, kApplovinPlacement, kMintegralPlacement, kMopubPlacementName, kTapjoyPlacementName, kChartboostPlacementName, kIronsourcePlacementName, kVunglePlacementName, kAdcolonyPlacementName, kUnityAdsPlacementName, kAllPlacementName],
+    _placementNames = @[@[kFacebookPlacement, kAdMobPlacement, kInmobiPlacement, kFlurryPlacement, kApplovinPlacement, kMintegralPlacement, kMopubPlacementName, kTapjoyPlacementName, kChartboostPlacementName, kIronsourcePlacementName, kVunglePlacementName, kAdcolonyPlacementName, kUnityAdsPlacementName, kTTPlacementName, kAllPlacementName],
                         @[kFacebookPlacement, kAdMobPlacement, kInmobiPlacement, kFlurryPlacement, kApplovinPlacement, kMintegralPlacement, kMopubPlacementName, kAllPlacementName]];
     
     _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];

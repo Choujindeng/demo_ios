@@ -43,6 +43,7 @@ extern NSString *const kNetworkNameIronSource;
 extern NSString *const kNetworkNameVungle;
 extern NSString *const kNetworkNameAdColony;
 extern NSString *const kNetworkNameUnityAds;
+extern NSString *const kNetworkNameTT;
 
 extern NSString *const kInmobiGDPRStringKey;
 extern NSString *const kInmobiConsentStringKey;

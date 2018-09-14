@@ -8,7 +8,7 @@
 
 #ifndef UPArpuRewardedVideoDelegate_h
 #define UPArpuRewardedVideoDelegate_h
-@import UpArpuSDK;
+#import <UpArpuSDK/UpArpuSDK.h>
 @protocol UPArpuRewardedVideoDelegate<UPArpuAdLoadingDelegate>
 -(void) rewardedVideoDidStartPlayingForPlacementID:(NSString*)placementID;
 -(void) rewardedVideoDidEndPlayingForPlacementID:(NSString*)placementID;

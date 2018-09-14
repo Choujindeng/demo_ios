@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8D23373421242448003D577E /* WMAdSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8D23373321242448003D577E /* WMAdSDK.bundle */; };
 		8D23373621242466003D577E /* WMAdSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D23373521242466003D577E /* WMAdSDK.framework */; };
+		8D3B3550214B9DDD0064FBD2 /* UpArpuSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8D3B354F214B9DDC0064FBD2 /* UpArpuSDK.bundle */; };
 		8DA1B57821242771008280DB /* UpArpuAdColonyRewardedVideoAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC83F7EB2101EC3E003FFC3C /* UpArpuAdColonyRewardedVideoAdapter.framework */; };
 		8DA1B57921242771008280DB /* UpArpuAdColonyRewardedVideoAdapter.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = DC83F7EB2101EC3E003FFC3C /* UpArpuAdColonyRewardedVideoAdapter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8DA1B57A21242771008280DB /* UpArpuAdmobNativeAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC83F7A82101EC3B003FFC3C /* UpArpuAdmobNativeAdapter.framework */; };
@@ -341,6 +342,7 @@
 /* Begin PBXFileReference section */
 		8D23373321242448003D577E /* WMAdSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = WMAdSDK.bundle; path = SDK/WMAdSDK.bundle; sourceTree = "<group>"; };
 		8D23373521242466003D577E /* WMAdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WMAdSDK.framework; path = SDK/WMAdSDK.framework; sourceTree = "<group>"; };
+		8D3B354F214B9DDC0064FBD2 /* UpArpuSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = UpArpuSDK.bundle; path = SDK/UpArpuSDK.bundle; sourceTree = "<group>"; };
 		8DA1B5A4212427CE008280DB /* UpArpuTTRewardedVideoAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuTTRewardedVideoAdapter.framework; path = SDK/UpArpuTTRewardedVideoAdapter.framework; sourceTree = "<group>"; };
 		8DDD89B620A1AA3C00C95818 /* UpArpuSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuSDK.framework; path = SDK/UpArpuSDK.framework; sourceTree = "<group>"; };
 		8DE56ED7209C70BC002A1427 /* UPArpuSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UPArpuSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -927,6 +929,7 @@
 		8DE56ECE209C70BC002A1427 = {
 			isa = PBXGroup;
 			children = (
+				8D3B354F214B9DDC0064FBD2 /* UpArpuSDK.bundle */,
 				8DA1B5A4212427CE008280DB /* UpArpuTTRewardedVideoAdapter.framework */,
 				8D23373321242448003D577E /* WMAdSDK.bundle */,
 				DC6F97A0210338F2003C3F42 /* FBAudienceNetwork.framework */,
@@ -1799,6 +1802,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D3B3550214B9DDD0064FBD2 /* UpArpuSDK.bundle in Resources */,
 				8D23373421242448003D577E /* WMAdSDK.bundle in Resources */,
 				DC83F9D02101F08D003FFC3C /* MPCloseBtn@3x.png in Resources */,
 				DC83F9DD2101F08D003FFC3C /* MPDAAIcon@2x.png in Resources */,

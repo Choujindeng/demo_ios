@@ -8,7 +8,7 @@
 
 #ifndef UPArpuNativeADDelegate_h
 #define UPArpuNativeADDelegate_h
-@import UpArpuSDK;
+#import <UpArpuSDK/UpArpuSDK.h>
 @class UPArpuNativeADView;
 @protocol UPArpuNativeADDelegate<UPArpuAdLoadingDelegate>
 -(void) didShowNativeAdInAdView:(UPArpuNativeADView*)adView placementID:(NSString*)placementID;

@@ -29,6 +29,7 @@ static NSString *const kAdmobPlacementID = @"b5bacad6860972";
 static NSString *const kMintegralPlacementID = @"b5bacad46a8bbb";
 static NSString *const kMintegralVideoPlacementID = @"b5bacad5962e84";
 static NSString *const kApplovinPlacementID = @"b5bacad34e4294";
+static NSString *const kFacebookPlacementID = @"b5baf4bf9829e4";
 static NSString *const kAllPlacementID = @"b5bacad26a752a";
 #endif
 
@@ -55,6 +56,7 @@ static NSString *const kAllPlacementID = @"b5bacad26a752a";
                           kMintegralPlacement:kMintegralPlacementID,
                           kMintegralVideoPlacement:kMintegralVideoPlacementID,
                           kApplovinPlacement:kApplovinPlacementID,
+                          kFacebookPlacement:kFacebookPlacementID,
                           kAllPlacementName:kAllPlacementID
                           };
     }
@@ -119,6 +121,7 @@ static NSString *const kAllPlacementID = @"b5bacad26a752a";
 }
 
 -(void) reloadADButtonTapped {
+    NSLog(@"Begin loading interstitial ad");
     _failureTipsLabel.hidden = YES;
     [self.view addSubview:_loadingView];
     [[UPArpuAdManager sharedManager] loadADWithPlacementID:_placementIDs[_name] extra:nil customData:nil delegate:self];
@@ -132,6 +135,7 @@ static NSString *const kAllPlacementID = @"b5bacad26a752a";
 #pragma mark - delegate method(s)
 -(void) didFinishLoadingADWithPlacementID:(NSString *)placementID {
     NSLog(@"UPArpuInterstitialViewController::didFinishLoadingADWithPlacementID:%@", placementID);
+    _showAdButton.enabled = YES;
 }
 
 -(void) didFailToLoadADWithPlacementID:(NSString*)placementID error:(NSError*)error {

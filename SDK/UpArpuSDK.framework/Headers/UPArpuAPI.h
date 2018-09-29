@@ -36,6 +36,7 @@ extern NSString *const kNetworkNameAdmob;
 extern NSString *const kNetworkNameFlurry;
 extern NSString *const kNetworkNameMintegral;
 extern NSString *const kNetworkNameApplovin;
+extern NSString *const kNetworkNameGDT;
 extern NSString *const kNetworkNameMopub;
 extern NSString *const kNetworkNameTapjoy;
 extern NSString *const kNetworkNameChartboost;

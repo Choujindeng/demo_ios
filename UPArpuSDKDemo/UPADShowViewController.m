@@ -8,16 +8,10 @@
 
 #import "UPADShowViewController.h"
 #import "MTAutolayoutCategories.h"
-#import <UpArpuSDK/UPArpuAPI.h>
+@import UpArpuSDK;
 #ifdef NATIVE_INTEGRATED
-#import <UpArpuNative/UPArpuNativeADConfiguration.h>
-#import <UpArpuNative/UPArpuNativeADView.h>
-#import <UpArpuNative/UPArpuAdManager+Native.h>
-#import <UpArpuNative/UPArpuNativeADDelegate.h>
 @import UpArpuNative;
 #endif
-@import UpArpuSDK;
-
 
 NSString *const kInmobiPlacement = @"Inmobi";
 NSString *const kFacebookPlacement = @"Facebook";
@@ -27,20 +21,24 @@ NSString *const kFlurryPlacement = @"Flurry";
 NSString *const kMintegralPlacement = @"Mintegral";
 NSString *const kMopubPlacementName = @"Mopub";
 NSString *const kMopubVideoPlacementName = @"Mopub Video Placement";
+NSString *const kGDTPlacement = @"GDT";
+NSString *const kGDTTemplatePlacement = @"GDT(Template)";
 NSString *const kAllPlacementName = @"All";
 
-//#ifdef DEBUG
-//static NSString *const kPlacement0ID = @"b5b3c9ce05d849";
-//static NSString *const kInmobiPlacementID = @"b5b0f553483724";
-//static NSString *const kMintegralPlacementID = @"b5b3c9ce05d849";
-//static NSString *const kFacebookPlacementID = @"b5b0f551340ea9";
-//static NSString *const kAdMobPlacementID = @"b5b0f55228375a";
-//static NSString *const kApplovinPlacementID = @"b5b0f554ec9c4e";
-//static NSString *const kFlurryPlacementID = @"b5b0f554166ad1";
-//static NSString *const kMopubPlacementID = @"b5b0f55624527a";
-//static NSString *const kMopubVideoPlacementID = @"b5afbe325b1303";
-//static NSString *const kAllPlacementID = @"b5b0f5663c6e4a";
-//#else
+#ifdef DEBUG
+static NSString *const kPlacement0ID = @"b5b3c9ce05d849";
+static NSString *const kInmobiPlacementID = @"b5b7ea464ecc07";
+static NSString *const kMintegralPlacementID = @"b5b7ea485828b1";
+static NSString *const kFacebookPlacementID = @"b5b7ea44a6d3ca";
+static NSString *const kAdMobPlacementID = @"b5b7ea456bb0ec";
+static NSString *const kApplovinPlacementID = @"b5b7ea4789562a";
+static NSString *const kFlurryPlacementID = @"b5b7ea4a970252";
+static NSString *const kMopubPlacementID = @"b5b7ea49415238";
+static NSString *const kGDTPlacementID = @"b5bac73f0796e5";
+static NSString *const kGDTTemplatePlacementID = @"b5ba34ee81601a";
+static NSString *const kMopubVideoPlacementID = @"b5afbe325b1303";
+static NSString *const kAllPlacementID = @"b5b7ea43935ea5";
+#else
 static NSString *const kPlacement0ID = @"b5ad9ba61dcb39";
 static NSString *const kInmobiPlacementID = @"b5b0f553483724";
 static NSString *const kMintegralPlacementID = @"b5b0f555698607";
@@ -49,9 +47,11 @@ static NSString *const kAdMobPlacementID = @"b5b0f55228375a";
 static NSString *const kApplovinPlacementID = @"b5b0f554ec9c4e";
 static NSString *const kFlurryPlacementID = @"b5b0f554166ad1";
 static NSString *const kMopubPlacementID = @"b5b0f55624527a";
+static NSString *const kGDTPlacementID = @"b5bacac5f73476";
+static NSString *const kGDTTemplatePlacementID = @"b5bacac780e03b";
 static NSString *const kMopubVideoPlacementID = @"b5afbe325b1303";
 static NSString *const kAllPlacementID = @"b5b0f5663c6e4a";
-//#endif
+#endif
 #ifdef NATIVE_INTEGRATED
 @interface DMADView:UPArpuNativeADView
 @property(nonatomic, readonly) UILabel *advertiserLabel;
@@ -130,16 +130,15 @@ static NSString *const kAllPlacementID = @"b5b0f5663c6e4a";
 #else
 @interface UPADShowViewController()
 #endif
-    @property(nonatomic, readonly) NSDictionary *placementIDs;
-    @property(nonatomic, readonly) NSString *name;
-    @property(nonatomic, readonly) UIActivityIndicatorView *loadingView;
-    @property(nonatomic, readonly) UIButton *reloadADButton;
-    @property(nonatomic, readonly) UIButton *clearAdButton;
-    @property(nonatomic, readonly) UIButton *showAdButton;
-    @property(nonatomic, readonly) UILabel *failureTipsLabel;
-    @property(nonatomic, readonly) UIButton *removeAdButton;
-    @end
-
+@property(nonatomic, readonly) NSDictionary *placementIDs;
+@property(nonatomic, readonly) NSString *name;
+@property(nonatomic, readonly) UIActivityIndicatorView *loadingView;
+@property(nonatomic, readonly) UIButton *reloadADButton;
+@property(nonatomic, readonly) UIButton *clearAdButton;
+@property(nonatomic, readonly) UIButton *showAdButton;
+@property(nonatomic, readonly) UILabel *failureTipsLabel;
+@property(nonatomic, readonly) UIButton *removeAdButton;
+@end
 @implementation UPADShowViewController
 #ifdef NATIVE_INTEGRATED
 -(instancetype) initWithPlacementName:(NSString*)name {
@@ -155,12 +154,14 @@ static NSString *const kAllPlacementID = @"b5b0f5663c6e4a";
                           kMopubPlacementName:kMopubPlacementID,
                           kMopubVideoPlacementName:kMopubVideoPlacementID,
                           kApplovinPlacement:kApplovinPlacementID,
-                          kFlurryPlacement:kFlurryPlacementID
+                          kFlurryPlacement:kFlurryPlacementID,
+                          kGDTPlacement:kGDTPlacementID,
+                          kGDTTemplatePlacement:kGDTTemplatePlacementID
                           };
     }
     return self;
 }
-    
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = _name;
@@ -209,30 +210,30 @@ static NSString *const kAllPlacementID = @"b5b0f5663c6e4a";
         _loadingView.center = _failureTipsLabel.center;
         [_loadingView startAnimating];
         [self.view addSubview:_loadingView];
-        [[UPArpuAdManager sharedManager] loadADWithPlacementID:_placementIDs[_name] customData:@{@"network":@"facebook"} delegate:self];
+        [[UPArpuAdManager sharedManager] loadADWithPlacementID:_placementIDs[_name] extra:@{kExtraInfoNativeAdTypeKey:@([@{kGDTPlacement:@(UPArpuGDTNativeAdTypeSelfRendering), kGDTTemplatePlacement:@(UPArpuGDTNativeAdTypeTemplate), kMintegralPlacement:@(UPArpuGDTNativeAdTypeSelfRendering)}[_name] integerValue]), kExtraInfoNativeAdSizeKey:[NSValue valueWithCGSize:CGSizeMake(CGRectGetWidth(self.view.bounds) - 30.0f, 400.0f)]} customData:@{@"network":@"facebook"} delegate:self];
     }
 }
-    
+
 -(void) removeAdButtonTapped {
     [[self.view viewWithTag:adViewTag] removeFromSuperview];
 }
-    
+
 -(void) clearAdButtonTapped {
     [[UPArpuAdManager sharedManager] clearCache];
 }
-    
+
 -(void) dealloc {
     NSLog(@"dealloc");
 }
-    
-    static NSInteger adViewTag = 3333;
+
+static NSInteger adViewTag = 3333;
 -(void) reloadADButtonTapped {
     _failureTipsLabel.hidden = YES;
     _reloadADButton.enabled = NO;
     [self.view addSubview:_loadingView];
-    [[UPArpuAdManager sharedManager] loadADWithPlacementID:_placementIDs[_name] customData:nil delegate:self];
+    [[UPArpuAdManager sharedManager] loadADWithPlacementID:_placementIDs[_name] extra:@{kExtraInfoNativeAdTypeKey:@([@{kGDTPlacement:@(UPArpuGDTNativeAdTypeSelfRendering), kGDTTemplatePlacement:@(UPArpuGDTNativeAdTypeTemplate)}[_name] integerValue]), kExtraInfoNativeAdSizeKey:[NSValue valueWithCGSize:CGSizeMake(CGRectGetWidth(self.view.bounds) - 30.0f, 400.0f)]} customData:nil delegate:self];
 }
-    
+
 -(void) showAD {
     //Remove previously shown ad first.
     [self removeAdButtonTapped];
@@ -246,39 +247,26 @@ static NSString *const kAllPlacementID = @"b5b0f5663c6e4a";
     [self.view addSubview:adView];
     if (adView == nil) NSLog(@"retrive ad view failed");
 }
-    
-#pragma mark - ad loading delegate
-    /**
-     Called when video starts playing
-     */
+
 -(void) didStartPlayingVideoInAdView:(UPArpuNativeADView*)adView placementID:(NSString*)placementID {
-    NSLog(@"Video start playing in:%@", placementID);
+    NSLog(@"UPADShowViewController:: didStartPlayingVideoInAdView:placementID:%@", placementID);
 }
-    
-    /**
-     Called when video ends playing
-     */
+
 -(void) didEndPlayingVideoInAdView:(UPArpuNativeADView*)adView placementID:(NSString*)placementID {
-    NSLog(@"Video end playing in:%@", placementID);
+    NSLog(@"UPADShowViewController:: didEndPlayingVideoInAdView:placementID:%@", placementID);
 }
-    /**
-     Called when user click the ad
-     */
+
 -(void) didClickNativeAdInAdView:(UPArpuNativeADView*)adView placementID:(NSString*)placementID {
-    NSLog(@"did click native ad with placement id:%@", placementID);
+    NSLog(@"UPADShowViewController:: didClickNativeAdInAdView:placementID:%@", placementID);
 }
-    
-    /**
-     Called when the ad has been shown
-     */
--(void) didShowNativeAdInAdView:(DMADView*)adView placementID:(NSString*)placementID {
+
+-(void) didShowNativeAdInAdView:(UPArpuNativeADView*)adView placementID:(NSString*)placementID {
+    NSLog(@"UPADShowViewController:: didShowNativeAdInAdView:placementID:%@", placementID);
     adView.mainImageView.hidden = [adView isVideoContents];
 }
-    
-    /**
-     Called when the ad has been loaded
-     */
+
 -(void) didFinishLoadingADWithPlacementID:(NSString *)placementID {
+    NSLog(@"UPADShowViewController:: didFinishLoadingADWithPlacementID:%@", placementID);
     [_loadingView removeFromSuperview];
     _failureTipsLabel.hidden = YES;
     _reloadADButton.enabled = YES;
@@ -287,15 +275,12 @@ static NSString *const kAllPlacementID = @"b5b0f5663c6e4a";
         [self showAD];
     }
 }
-    
-    /**
-     Called when the ad loading has failed
-     */
+
 -(void) didFailToLoadADWithPlacementID:(NSString *)placementID error:(NSError *)error {
+    NSLog(@"UPADShowViewController:: didFailToLoadADWithPlacementID:%@ error:%@", placementID, error);
     [_loadingView removeFromSuperview];
     _failureTipsLabel.hidden = NO;
     _reloadADButton.enabled = YES;
-    NSLog(@"Did fail to load ad, error: %@", error);
 }
 #endif
-    @end
+@end

@@ -14,13 +14,7 @@
 #import <UpArpuRewardedVideo/UPArpuRewardedVideoDelegate.h>
 #import <UpArpuRewardedVideo/UPArpuAdManager+RewardedVideo.h>
 #endif
-//@import UpArpuSDK;
-//@import UpArpuRewardedVideo;
-#ifdef REWARDED_VIDEO_INTEGRATED
 @interface UPArpuRewardedVideoVideoViewController ()<UPArpuRewardedVideoDelegate>
-#else
-@interface UPArpuRewardedVideoVideoViewController ()
-#endif
 @property(nonatomic, readonly) NSString *name;
 @property(nonatomic, readonly) NSDictionary *placementIDs;
 @property(nonatomic, readonly) UIActivityIndicatorView *loadingView;
@@ -40,24 +34,25 @@ NSString *const kAdcolonyPlacementName = @"Adcolony";
 NSString *const kUnityAdsPlacementName = @"Unity Ads";
 NSString *const kTTPlacementName = @"TT";
 
-//#ifdef DEBUG
-//static NSString *const kPlacement0ID = @"b5b3c9ce05d849";
-//static NSString *const kInmobiPlacementID = @"b5b403793ef6c5";
-//static NSString *const kMintegralPlacementID = @"b5b40377da122e";
-//static NSString *const kFacebookPlacementID = @"b5b0f551340ea9";
-//static NSString *const kAdMobPlacementID = @"b5b40374b43071";
-//static NSString *const kApplovinPlacementID = @"b5b40376678dcf";
-//static NSString *const kFlurryPlacementID = @"b5b4037886e27d";
-//static NSString *const kMopubPlacementID = @"b5b40379d64400";
-//static NSString *const kMopubVideoPlacementID = @"b5afbe325b1303";
-//static NSString *const kTapjoyRVPlacementID = @"b5b4037fc73984";
-//static NSString *const kChartboostRVPlacementID = @"b5b4037ef61d03";
-//static NSString *const kIronsourceRVPlacementID = @"b5b4037d86b5b0";
-//static NSString *const kVungleRVPlacementID = @"b5b4037cb650c2";
-//static NSString *const kAdcolonyRVPlacementID = @"b5b4037bf5ff53";
-//static NSString *const kUnityAdsPlacementID = @"b5b4037b242ae4";
-//static NSString *const kAllPlacementID = @"b5b4022fadb8ed";
-//#else
+#ifdef DEBUG
+static NSString *const kPlacement0ID = @"b5b3c9ce05d849";
+static NSString *const kInmobiPlacementID = @"b5b403793ef6c5";
+static NSString *const kMintegralPlacementID = @"b5b40377da122e";
+static NSString *const kFacebookPlacementID = @"b5b7ea86c44fc3";
+static NSString *const kAdMobPlacementID = @"b5b40374b43071";
+static NSString *const kApplovinPlacementID = @"b5b40376678dcf";
+static NSString *const kFlurryPlacementID = @"b5b4037886e27d";
+static NSString *const kMopubPlacementID = @"b5b40379d64400";
+static NSString *const kMopubVideoPlacementID = @"b5afbe325b1303";
+static NSString *const kTapjoyRVPlacementID = @"b5b4037fc73984";
+static NSString *const kChartboostRVPlacementID = @"b5b4037ef61d03";
+static NSString *const kIronsourceRVPlacementID = @"b5b4037d86b5b0";
+static NSString *const kVungleRVPlacementID = @"b5b4037cb650c2";
+static NSString *const kAdcolonyRVPlacementID = @"b5b4037bf5ff53";
+static NSString *const kUnityAdsPlacementID = @"b5b4037b242ae4";
+static NSString *const kTTPlacementID = @"b5b7ea145a6bab";
+static NSString *const kAllPlacementID = @"b5b4022fadb8ed";
+#else
 static NSString *const kPlacement0ID = @"b5ad9ba61dcb39";
 static NSString *const kInmobiPlacementID = @"b5b44a03522f92";
 static NSString *const kMintegralPlacementID = @"b5b44a07fc3bf6";
@@ -75,9 +70,8 @@ static NSString *const kAdcolonyRVPlacementID = @"b5b44a0de295ad";//to be modifi
 static NSString *const kUnityAdsPlacementID = @"b5b44a0c7b9b64";//to be modified
 static NSString *const kAllPlacementID = @"b5b44a0f115321";
 static NSString *const kTTPlacementID = @"b5b72b21184aa8";
-//#endif
+#endif
 @implementation UPArpuRewardedVideoVideoViewController
-#ifdef REWARDED_VIDEO_INTEGRATED
 -(instancetype) initWithPlacementName:(NSString*)name {
     self = [super initWithNibName:nil bundle:nil];
     if (self != nil) {
@@ -143,15 +137,6 @@ static NSString *const kTTPlacementID = @"b5b72b21184aa8";
     _failureTipsLabel.hidden = YES;
     
     [UPArpuAdManager sharedManager].extra = @{kUPArpuAdLoadingExtraUserIDKey:@"test_user_id", kUPArpuAdLoadingExtraCustomData:@"test_custom_data"};
-//    if ([[UPArpuAdManager sharedManager] rewardedVideoReadyForPlacementID:_placementIDs[_name]]) {
-//        [self showAD];
-//    } else {
-//        _loadingView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-//        _loadingView.center = _failureTipsLabel.center;
-//        [_loadingView startAnimating];
-//        [self.view addSubview:_loadingView];
-//        [[UPArpuAdManager sharedManager] loadADWithPlacementID:_placementIDs[_name] customData:@{@"network":@"facebook"} delegate:self];
-//    }
 }
 
 -(void) removeAdButtonTapped {
@@ -174,7 +159,7 @@ static NSString *const kTTPlacementID = @"b5b72b21184aa8";
     _failureTipsLabel.hidden = YES;
     _reloadADButton.enabled = NO;
     [self.view addSubview:_loadingView];
-    [[UPArpuAdManager sharedManager] loadADWithPlacementID:_placementIDs[_name] customData:nil delegate:self];
+    [[UPArpuAdManager sharedManager] loadADWithPlacementID:_placementIDs[_name] extra:nil customData:nil delegate:self];
 }
 
 -(void) showAD {
@@ -219,5 +204,4 @@ static NSString *const kTTPlacementID = @"b5b72b21184aa8";
 -(void) rewardedVideoDidClickForPlacementID:(NSString*)placementID {
     NSLog(@"RV Demo: rewardedVideoDidClickForPlacementID:%@", placementID);
 }
-#endif
 @end

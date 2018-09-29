@@ -7,14 +7,12 @@
 //
 
 #import "ViewController.h"
-
 #import "UPADShowViewController.h"
 #import "UPArpuRewardedVideoVideoViewController.h"
-//#import "Utilities.h"
-//#import "UPArpuPlacementSettingManager.h"
-//#import "UPArpuAPI.h"
-//#import "UPArpuVideoView.h"
-//#import "UPArpuRewardedVideoVideoViewController.h"
+#import "UPADShowViewController.h"
+#import "UPArpuRewardedVideoVideoViewController.h"
+#import "UPArpuBannerViewController.h"
+#import "UPArpuInterstitialViewController.h"
 
 @import UpArpuSDK;
 @import UpArpuRewardedVideo;
@@ -29,9 +27,10 @@ static NSString *const kCellIdentifier = @"cell";
 @implementation ViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"ViewController viewDidLoad");
-    _placementNames = @[@[kFacebookPlacement, kAdMobPlacement, kInmobiPlacement, kFlurryPlacement, kApplovinPlacement, kMintegralPlacement, kMopubPlacementName, kTapjoyPlacementName, kChartboostPlacementName, kIronsourcePlacementName, kVunglePlacementName, kAdcolonyPlacementName, kUnityAdsPlacementName, kTTPlacementName, kAllPlacementName],
-                        @[kFacebookPlacement, kAdMobPlacement, kInmobiPlacement, kFlurryPlacement, kApplovinPlacement, kMintegralPlacement, kMopubPlacementName, kAllPlacementName]];
+    _placementNames = @[@[kApplovinPlacement, kAdMobPlacement, kGDTPlacement, kMintegralPlacement, kMintegralVideoPlacement, kTTPlacementName, kTTVideoPlacement],
+                        @[kApplovinPlacement, kAdMobPlacement, kGDTPlacement, kTTPlacementName],
+                        @[kFacebookPlacement, kAdMobPlacement, kInmobiPlacement, kFlurryPlacement, kApplovinPlacement, kMintegralPlacement, kMopubPlacementName, kTapjoyPlacementName, kChartboostPlacementName, kIronsourcePlacementName, kVunglePlacementName, kAdcolonyPlacementName, kUnityAdsPlacementName, kTTPlacementName, kAllPlacementName],
+                        @[kFacebookPlacement, kAdMobPlacement, kInmobiPlacement, kFlurryPlacement, kApplovinPlacement, kMintegralPlacement, kMopubPlacementName, kGDTPlacement, kGDTTemplatePlacement, kAllPlacementName]];
     
     _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kCellIdentifier];
@@ -39,57 +38,52 @@ static NSString *const kCellIdentifier = @"cell";
     _tableView.delegate = self;
     [self.view addSubview:_tableView];
     
-    NSLog(@"ViewController _placementNames init");
-    
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"GDPR" style:UIBarButtonItemStylePlain target:self action:@selector(policyButtonTapped)];
     self.navigationItem.rightBarButtonItem = item;
 }
-    
+
 -(void)policyButtonTapped {
     [[UPArpuAPI sharedInstance] presentDataConsentDialogInViewController:self];
-    NSLog(@"ViewController policyButtonTapped");
 }
-    
+
 -(NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {
-    NSLog(@"ViewController numberOfSectionsInTableView");
-    return 2;
+    return [_placementNames count];
 }
-    
+
 -(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSLog(@"ViewController numberOfRowsInSection");
     return [_placementNames[section] count];
 }
-    
+
 -(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"ViewController heightForRowAtIndexPath");
     return 50.0f;
 }
-    
+
 -(CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-     NSLog(@"ViewController heightForHeaderInSection");
     return 25.0f;
 }
-    
+
 -(NSString*) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    NSLog(@"ViewController titleForHeaderInSection %ld", section);
-    return @[@"RV", @"Native"][section];
+    return @[@"Interstitial", @"Banner", @"RV", @"Native"][section];
 }
-    
+
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifier];
     cell.textLabel.text = _placementNames[[indexPath section]][[indexPath row]];
-    NSLog(@"ViewController cellForRowAtIndexPath %ld %ld", [indexPath section], [indexPath row]);
     return cell;
 }
-    
+
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
-    NSLog(@"ViewController didSelectRowAtIndexPath");
-    if ([indexPath section] == 0) {
+    if ([indexPath section] == 2) {
         UPArpuRewardedVideoVideoViewController *tVC = [[UPArpuRewardedVideoVideoViewController alloc] initWithPlacementName:_placementNames[[indexPath section]][[indexPath row]]];
         [self.navigationController pushViewController:tVC animated:YES];
+    } else if ([indexPath section] == 3) {        UPADShowViewController *tVC = [[UPADShowViewController alloc] initWithPlacementName: _placementNames[[indexPath section]][[indexPath row]]];
+        [self.navigationController pushViewController:tVC animated:YES];
     } else if ([indexPath section] == 1) {
-        UPADShowViewController *tVC = [[UPADShowViewController alloc] initWithPlacementName: _placementNames[[indexPath section]][[indexPath row]]];
+        UPArpuBannerViewController *tVC = [[UPArpuBannerViewController alloc] initWithPlacementName:_placementNames[[indexPath section]][[indexPath row]]];
+        [self.navigationController pushViewController:tVC animated:YES];
+    } else if ([indexPath section] == 0) {
+        UPArpuInterstitialViewController *tVC = [[UPArpuInterstitialViewController alloc] initWithPlacementName:_placementNames[[indexPath section]][[indexPath row]]];
         [self.navigationController pushViewController:tVC animated:YES];
     }
 }

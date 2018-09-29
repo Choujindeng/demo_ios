@@ -7,6 +7,14 @@
 //
 
 #import <UpArpuSDK/UpArpuSDK.h>
+
+//Currently only GDT supports these two keys.
+extern NSString *const kExtraInfoNativeAdSizeKey;//the value has to be an NSValue wrapped CGSize object.
+extern NSString *const kExtraInfoNativeAdTypeKey;//The value is requried for GDT native ad and has to be an NSNumber warpped UPArpuGDTNativeAdType(NSInteger); Pass @(UPArpuGDTNativeAdTypeTemplate)(@1) for template ads and @(UPArpuGDTNativeAdTypeSelfRendering)(@2) for self rendering ads.
+typedef NS_ENUM(NSInteger, UPArpuGDTNativeAdType) {
+    UPArpuGDTNativeAdTypeTemplate = 1,
+    UPArpuGDTNativeAdTypeSelfRendering = 2
+};
 @class UPArpuNativeADView;
 @class UPArpuNativeADConfiguration;
 @interface UPArpuAdManager (Native)

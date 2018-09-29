@@ -180,7 +180,6 @@ static NSString *const kAllPlacementID = @"b5b0f5663c6e4a";
     [_showAdButton setTitle:@"Show AD" forState:UIControlStateNormal];
     _showAdButton.frame = CGRectMake(CGRectGetMaxX(_reloadADButton.frame) + 40.0f, CGRectGetMinY(_reloadADButton.frame), (CGRectGetWidth(self.view.bounds) - 40) / 2.0f, 60.0f);
     [self.view addSubview:_showAdButton];
-    _showAdButton.enabled = NO;
     
     _clearAdButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [_clearAdButton addTarget:self action:@selector(clearAdButtonTapped) forControlEvents:UIControlEventTouchUpInside];
@@ -195,7 +194,6 @@ static NSString *const kAllPlacementID = @"b5b0f5663c6e4a";
     [_removeAdButton setTitle:@"Remove Ad" forState:UIControlStateNormal];
     _removeAdButton.frame = CGRectMake(CGRectGetMaxX(_clearAdButton.frame) + 40.0f, CGRectGetMinY(_clearAdButton.frame), (CGRectGetWidth(self.view.bounds) - 40) / 2.0f, 60.0f);
     [self.view addSubview:_removeAdButton];
-    _removeAdButton.enabled = NO;
     
     _failureTipsLabel = [[UILabel alloc] initWithFrame:CGRectMake(.0f, 64.0f, CGRectGetWidth(self.view.bounds), 400.0f)];
     _failureTipsLabel.text = @"Failed to load ad";
@@ -229,7 +227,6 @@ static NSString *const kAllPlacementID = @"b5b0f5663c6e4a";
 static NSInteger adViewTag = 3333;
 -(void) reloadADButtonTapped {
     _failureTipsLabel.hidden = YES;
-    _reloadADButton.enabled = NO;
     [self.view addSubview:_loadingView];
     [[UPArpuAdManager sharedManager] loadADWithPlacementID:_placementIDs[_name] extra:@{kExtraInfoNativeAdTypeKey:@([@{kGDTPlacement:@(UPArpuGDTNativeAdTypeSelfRendering), kGDTTemplatePlacement:@(UPArpuGDTNativeAdTypeTemplate)}[_name] integerValue]), kExtraInfoNativeAdSizeKey:[NSValue valueWithCGSize:CGSizeMake(CGRectGetWidth(self.view.bounds) - 30.0f, 400.0f)]} customData:nil delegate:self];
 }
@@ -237,7 +234,6 @@ static NSInteger adViewTag = 3333;
 -(void) showAD {
     //Remove previously shown ad first.
     [self removeAdButtonTapped];
-    _removeAdButton.enabled = YES;
     UPArpuNativeADConfiguration *config = [[UPArpuNativeADConfiguration alloc] init];
     config.ADFrame = CGRectMake(.0f, 64.0f, CGRectGetWidth(self.view.bounds), 300.0f);
     config.delegate = self;
@@ -269,8 +265,6 @@ static NSInteger adViewTag = 3333;
     NSLog(@"UPADShowViewController:: didFinishLoadingADWithPlacementID:%@", placementID);
     [_loadingView removeFromSuperview];
     _failureTipsLabel.hidden = YES;
-    _reloadADButton.enabled = YES;
-    _showAdButton.enabled = YES;
     if ([self.view viewWithTag:adViewTag] == nil) {
         [self showAD];
     }
@@ -280,7 +274,6 @@ static NSInteger adViewTag = 3333;
     NSLog(@"UPADShowViewController:: didFailToLoadADWithPlacementID:%@ error:%@", placementID, error);
     [_loadingView removeFromSuperview];
     _failureTipsLabel.hidden = NO;
-    _reloadADButton.enabled = YES;
 }
 #endif
 @end

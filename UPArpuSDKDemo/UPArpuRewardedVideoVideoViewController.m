@@ -157,7 +157,6 @@ static NSString *const kTTPlacementID = @"b5b72b21184aa8";
 -(void) reloadADButtonTapped {
     _reload = YES;
     _failureTipsLabel.hidden = YES;
-    _reloadADButton.enabled = NO;
     [self.view addSubview:_loadingView];
     [[UPArpuAdManager sharedManager] loadADWithPlacementID:_placementIDs[_name] extra:nil customData:nil delegate:self];
 }
@@ -171,8 +170,6 @@ static NSString *const kTTPlacementID = @"b5b72b21184aa8";
 -(void) didFinishLoadingADWithPlacementID:(NSString *)placementID {
     NSLog(@"RV Demo: didFinishLoadingADWithPlacementID");
     _failureTipsLabel.hidden = YES;
-    _reloadADButton.enabled = YES;
-    _showAdButton.enabled = YES;
     [_loadingView removeFromSuperview];
     if (!_reload) [self showAD];
     _reload = NO;
@@ -181,7 +178,6 @@ static NSString *const kTTPlacementID = @"b5b72b21184aa8";
 -(void) didFailToLoadADWithPlacementID:(NSString*)placementID error:(NSError*)error {
     [_loadingView removeFromSuperview];
     _failureTipsLabel.hidden = NO;
-    _reloadADButton.enabled = YES;
     NSLog(@"RV Demo: failed to load:%@", error);
 }
 #pragma mark - showing delegate

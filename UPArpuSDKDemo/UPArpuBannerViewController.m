@@ -115,15 +115,19 @@ static NSString *const kAllPlacementID = @"b5bacaccb61c29";
 }
 
 -(void) showBanner {
-    NSInteger tag = 3333;
-    [[self.view viewWithTag:tag] removeFromSuperview];
-    UPArpuBannerView *bannerView = [[UPArpuAdManager sharedManager] retrieveBannerViewForPlacementID:_placementIDs[_name]];
-    bannerView.delegate = self;
-    bannerView.translatesAutoresizingMaskIntoConstraints = NO;
-    bannerView.tag = tag;
-    [self.view addSubview:bannerView];
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.view attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:bannerView attribute:NSLayoutAttributeCenterX multiplier:1.0f constant:.0f]];
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:bannerView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1.0f constant:64.0f]];
+    if ([[UPArpuAdManager sharedManager] bannerAdReadyForPlacementID:_placementIDs[_name]]) {
+        NSInteger tag = 3333;
+        [[self.view viewWithTag:tag] removeFromSuperview];
+        UPArpuBannerView *bannerView = [[UPArpuAdManager sharedManager] retrieveBannerViewForPlacementID:_placementIDs[_name]];
+        bannerView.delegate = self;
+        bannerView.translatesAutoresizingMaskIntoConstraints = NO;
+        bannerView.tag = tag;
+        [self.view addSubview:bannerView];
+        [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.view attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:bannerView attribute:NSLayoutAttributeCenterX multiplier:1.0f constant:.0f]];
+        [self.view addConstraint:[NSLayoutConstraint constraintWithItem:bannerView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1.0f constant:64.0f]];
+    } else {
+        NSLog(@"Banner ad's not ready for placementID:%@", _placementIDs[_name]);
+    }
 }
 
 #pragma mark - delegate method(s)
@@ -136,12 +140,10 @@ static NSString *const kAllPlacementID = @"b5bacaccb61c29";
 -(void) didFailToLoadADWithPlacementID:(NSString*)placementID error:(NSError*)error {
     NSLog(@"UPArpuBannerViewController::didFailToLoadADWithPlacementID:%@ error:%@", placementID, error);
     _failureTipsLabel.hidden = NO;
-    _reloadADButton.enabled = YES;
 }
 
 -(void) bannerView:(UPArpuBannerView *)bannerView didShowAdWithPlacementID:(NSString *)placementID {
     NSLog(@"UPArpuBannerViewController::bannerView:didShowAdWithPlacementID:%@", placementID);
-    _removeAdButton.enabled = YES;
 }
 
 -(void) bannerView:(UPArpuBannerView*)bannerView didClickWithPlacementID:(NSString*)placementID {

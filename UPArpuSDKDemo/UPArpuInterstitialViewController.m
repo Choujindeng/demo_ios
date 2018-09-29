@@ -132,7 +132,6 @@ static NSString *const kAllPlacementID = @"b5bacad26a752a";
 #pragma mark - delegate method(s)
 -(void) didFinishLoadingADWithPlacementID:(NSString *)placementID {
     NSLog(@"UPArpuInterstitialViewController::didFinishLoadingADWithPlacementID:%@", placementID);
-    _showAdButton.enabled = YES;
 }
 
 -(void) didFailToLoadADWithPlacementID:(NSString*)placementID error:(NSError*)error {

@@ -11,5 +11,8 @@
 @class UPArpuBannerView;
 @interface UPArpuAdManager (Banner)
 -(BOOL) bannerAdReadyForPlacementID:(NSString*)placementID;
--(UPArpuBannerView*)retrieveBannerViewForPlacementID:(NSString*)placementID;
+/*
+ nil will be returned if you try to show banner ad for the placementID if it's not ready.
+ */
+-(nullable UPArpuBannerView*)retrieveBannerViewForPlacementID:(NSString*)placementID;
 @end

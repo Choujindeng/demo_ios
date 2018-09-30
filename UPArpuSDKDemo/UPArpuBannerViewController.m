@@ -20,6 +20,7 @@ static NSString *const kGDTPlacementID = @"b5bacad0803fd1";
 static NSString *const kTTPlacementID = @"b5bacacfc470c9";
 static NSString *const kAdmobPlacementID = @"b5bacacef17717";
 static NSString *const kApplovinPlacementID = @"b5bacace1549da";
+static NSString *const kFacebookPlacementID = @"b5baf502bb23e3";
 static NSString *const kAllPlacementID = @"b5bacaccb61c29";
 #endif
 @interface UPArpuBannerViewController ()<UPArpuBannerDelegate>
@@ -43,6 +44,7 @@ static NSString *const kAllPlacementID = @"b5bacaccb61c29";
                           kTTPlacementName:kTTPlacementID,
                           kAdMobPlacement:kAdmobPlacementID,
                           kApplovinPlacement:kApplovinPlacementID,
+                          kFacebookPlacement:kFacebookPlacementID,
                           kAllPlacementName:kAllPlacementID
                           };
     }

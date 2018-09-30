@@ -28,7 +28,7 @@ static NSString *const kCellIdentifier = @"cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     _placementNames = @[@[kApplovinPlacement, kAdMobPlacement, kGDTPlacement, kMintegralPlacement, kMintegralVideoPlacement, kTTPlacementName, kTTVideoPlacement, kFacebookPlacement],
-                        @[kApplovinPlacement, kAdMobPlacement, kGDTPlacement, kTTPlacementName],
+                        @[kApplovinPlacement, kAdMobPlacement, kGDTPlacement, kTTPlacementName, kFacebookPlacement],
                         @[kFacebookPlacement, kAdMobPlacement, kInmobiPlacement, kFlurryPlacement, kApplovinPlacement, kMintegralPlacement, kMopubPlacementName, kTapjoyPlacementName, kChartboostPlacementName, kIronsourcePlacementName, kVunglePlacementName, kAdcolonyPlacementName, kUnityAdsPlacementName, kTTPlacementName, kAllPlacementName],
                         @[kFacebookPlacement, kAdMobPlacement, kInmobiPlacement, kFlurryPlacement, kApplovinPlacement, kMintegralPlacement, kMopubPlacementName, kGDTPlacement, kGDTTemplatePlacement, kAllPlacementName]];
     

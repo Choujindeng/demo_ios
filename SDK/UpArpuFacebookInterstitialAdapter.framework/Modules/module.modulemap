@@ -1,6 +1,0 @@
-framework module UpArpuFacebookInterstitialAdapter {
-  umbrella header "UpArpuFacebookInterstitialAdapter.h"
-
-  export *
-  module * { export * }
-}

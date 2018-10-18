@@ -23,6 +23,8 @@ NSString *const kMopubPlacementName = @"Mopub";
 NSString *const kMopubVideoPlacementName = @"Mopub Video Placement";
 NSString *const kGDTPlacement = @"GDT";
 NSString *const kGDTTemplatePlacement = @"GDT(Template)";
+NSString *const kYeahmobiPlacement = @"Yeahmobi";
+NSString *const kAppnextPlacement = @"Appnext";
 NSString *const kAllPlacementName = @"All";
 
 #ifdef DEBUG
@@ -37,6 +39,8 @@ static NSString *const kMopubPlacementID = @"b5b7ea49415238";
 static NSString *const kGDTPlacementID = @"b5bac73f0796e5";
 static NSString *const kGDTTemplatePlacementID = @"b5ba34ee81601a";
 static NSString *const kMopubVideoPlacementID = @"b5afbe325b1303";
+static NSString *const kYeahmobiPlacementID = @"b5bc7ec73074a0";
+static NSString *const kAppnextPlacementID = @"b5bc7ec86f35e7";
 static NSString *const kAllPlacementID = @"b5b7ea43935ea5";
 #else
 static NSString *const kPlacement0ID = @"b5ad9ba61dcb39";
@@ -50,6 +54,8 @@ static NSString *const kMopubPlacementID = @"b5b0f55624527a";
 static NSString *const kGDTPlacementID = @"b5bacac5f73476";
 static NSString *const kGDTTemplatePlacementID = @"b5bacac780e03b";
 static NSString *const kMopubVideoPlacementID = @"b5afbe325b1303";
+static NSString *const kYeahmobiPlacementID = @"b5bc7fb1d0b02f";
+static NSString *const kAppnextPlacementID = @"b5bc7fb2787f1e";
 static NSString *const kAllPlacementID = @"b5b0f5663c6e4a";
 #endif
 #ifdef NATIVE_INTEGRATED
@@ -156,7 +162,9 @@ static NSString *const kAllPlacementID = @"b5b0f5663c6e4a";
                           kApplovinPlacement:kApplovinPlacementID,
                           kFlurryPlacement:kFlurryPlacementID,
                           kGDTPlacement:kGDTPlacementID,
-                          kGDTTemplatePlacement:kGDTTemplatePlacementID
+                          kGDTTemplatePlacement:kGDTTemplatePlacementID,
+                          kYeahmobiPlacement:kYeahmobiPlacementID,
+                          kAppnextPlacement:kAppnextPlacementID
                           };
     }
     return self;

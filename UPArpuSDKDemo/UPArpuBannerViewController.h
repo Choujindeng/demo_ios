@@ -24,6 +24,8 @@ extern NSString *const kAdcolonyPlacementName;
 extern NSString *const kUnityAdsPlacementName;
 extern NSString *const kAllPlacementName;
 extern NSString *const kTTPlacementName;
+extern NSString *const kYeahmobiPlacement;
+extern NSString *const kAppnextPlacement;
 @interface UPArpuBannerViewController : UIViewController
 -(instancetype) initWithPlacementName:(NSString*)name;
 @end

@@ -33,6 +33,7 @@ NSString *const kVunglePlacementName = @"Vungle";
 NSString *const kAdcolonyPlacementName = @"Adcolony";
 NSString *const kUnityAdsPlacementName = @"Unity Ads";
 NSString *const kTTPlacementName = @"TT";
+NSString *const kOnewayPlacementName = @"Oneway";
 
 #ifdef DEBUG
 static NSString *const kPlacement0ID = @"b5b3c9ce05d849";
@@ -51,6 +52,9 @@ static NSString *const kVungleRVPlacementID = @"b5b4037cb650c2";
 static NSString *const kAdcolonyRVPlacementID = @"b5b4037bf5ff53";
 static NSString *const kUnityAdsPlacementID = @"b5b4037b242ae4";
 static NSString *const kTTPlacementID = @"b5b7ea145a6bab";
+static NSString *const kOnewayPlacementID = @"b5baf668a68f6b";
+static NSString *const kYeahmobiPlacementID = @"b5bc7eca17eab7";
+static NSString *const kAppnextPlacementID = @"b5bc7ecad24839";
 static NSString *const kAllPlacementID = @"b5b4022fadb8ed";
 #else
 static NSString *const kPlacement0ID = @"b5ad9ba61dcb39";
@@ -70,6 +74,9 @@ static NSString *const kAdcolonyRVPlacementID = @"b5b44a0de295ad";//to be modifi
 static NSString *const kUnityAdsPlacementID = @"b5b44a0c7b9b64";//to be modified
 static NSString *const kAllPlacementID = @"b5b44a0f115321";
 static NSString *const kTTPlacementID = @"b5b72b21184aa8";
+static NSString *const kYeahmobiPlacementID = @"b5bc7fb44d382f";
+static NSString *const kAppnextPlacementID = @"b5bc7fb4fd15e6";
+static NSString *const kOnewayPlacementID = @"b5baf668a68f6b";
 #endif
 @implementation UPArpuRewardedVideoVideoViewController
 -(instancetype) initWithPlacementName:(NSString*)name {
@@ -92,7 +99,10 @@ static NSString *const kTTPlacementID = @"b5b72b21184aa8";
                           kAdcolonyPlacementName:kAdcolonyRVPlacementID,
                           kUnityAdsPlacementName:kUnityAdsPlacementID,
                           kFlurryPlacement:kFlurryPlacementID,
-                          kTTPlacementName:kTTPlacementID
+                          kTTPlacementName:kTTPlacementID,
+                          kOnewayPlacementName:kOnewayPlacementID,
+                          kYeahmobiPlacement:kYeahmobiPlacementID,
+                          kAppnextPlacement:kAppnextPlacementID
                           };
     }
     return self;

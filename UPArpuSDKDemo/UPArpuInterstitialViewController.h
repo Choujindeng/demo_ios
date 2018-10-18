@@ -26,6 +26,9 @@ extern NSString *const kUnityAdsPlacementName;
 extern NSString *const kAllPlacementName;
 extern NSString *const kTTPlacementName;
 extern NSString *const kTTVideoPlacement;
+extern NSString *const kOnewayPlacementName;
+extern NSString *const kYeahmobiPlacement;
+extern NSString *const kAppnextPlacement;
 @interface UPArpuInterstitialViewController : UIViewController
 -(instancetype) initWithPlacementName:(NSString*)name;
 @end

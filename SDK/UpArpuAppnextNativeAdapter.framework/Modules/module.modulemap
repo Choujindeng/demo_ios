@@ -1,0 +1,6 @@
+framework module UpArpuAppnextNativeAdapter {
+  umbrella header "UpArpuAppnextNativeAdapter.h"
+
+  export *
+  module * { export * }
+}

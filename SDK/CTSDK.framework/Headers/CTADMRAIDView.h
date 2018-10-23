@@ -69,6 +69,9 @@ typedef enum
 //jump to safari or internal webview
 - (BOOL)CTAdView:(CTADMRAIDView*)adView shouldOpenURL:(NSURL*)url;
 
+//mraid ad clicked
+- (void)CTAdViewClicked:(CTADMRAIDView*)adView;
+
 //did click close button
 - (void)CTAdViewCloseButtonPressed:(CTADMRAIDView*)adView;
 

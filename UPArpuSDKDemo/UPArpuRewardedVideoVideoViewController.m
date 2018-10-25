@@ -192,6 +192,7 @@ static NSString *const kOnewayPlacementID = @"b5baf668a68f6b";
 }
 #pragma mark - showing delegate
 -(void) rewardedVideoDidStartPlayingForPlacementID:(NSString*)placementID {
+    [self reloadADButtonTapped];
     NSLog(@"RV Demo: rewardedVideoDidStartPlayingForPlacementID:%@", placementID);
 }
 

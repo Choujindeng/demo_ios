@@ -176,6 +176,7 @@ static NSString *const kAppnextPlacementID = @"b5bc7fb9cbfff1";
 }
 
 -(void) interstitialDidShowForPlacementID:(NSString *)placementID {
+    [self reloadADButtonTapped];
     NSLog(@"UPArpuInterstitialViewController::interstitialDidShowForPlacementID:%@", placementID);
 }
 

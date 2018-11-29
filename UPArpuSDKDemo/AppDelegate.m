@@ -21,6 +21,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     NSLog(@"application didFinishLaunchingWithOptions");
+    [UPArpuAPI setLogEnabled:YES];
     [[UPArpuAPI sharedInstance] setDataConsentSet:UpArpuDataConsentSetPersonalized consentString:nil];
     [UPArpuAPI sharedInstance].networkConsentInfo = @{
                                                       kNetworkNameMintegral:@{@1:@YES, @2:@YES, @3:@YES},

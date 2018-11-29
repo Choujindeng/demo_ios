@@ -79,6 +79,9 @@ typedef NS_ENUM(NSInteger, UpArpuDataConsentSet) {
 };
 
 @interface UPArpuAPI : NSObject
++(NSDictionary<NSNumber*, NSString*>*)networkNameMap;
++(void) setLogEnabled:(BOOL)logEnabled;
+
 +(instancetype)sharedInstance;
 /**
  * Inspect the error parameter to see what's the matter.

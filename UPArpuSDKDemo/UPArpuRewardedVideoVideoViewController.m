@@ -36,29 +36,6 @@ NSString *const kTTPlacementName = @"TT";
 NSString *const kOnewayPlacementName = @"Oneway";
 NSString *const kBaiduPlacement = @"Baidu";
 
-#ifdef DEBUG
-static NSString *const kPlacement0ID = @"b5b3c9ce05d849";
-static NSString *const kInmobiPlacementID = @"b5b403793ef6c5";
-static NSString *const kMintegralPlacementID = @"b5b40377da122e";
-static NSString *const kFacebookPlacementID = @"b5b7ea86c44fc3";
-static NSString *const kAdMobPlacementID = @"b5b40374b43071";
-static NSString *const kApplovinPlacementID = @"b5b40376678dcf";
-static NSString *const kFlurryPlacementID = @"b5b4037886e27d";
-static NSString *const kMopubPlacementID = @"b5b40379d64400";
-static NSString *const kMopubVideoPlacementID = @"b5afbe325b1303";
-static NSString *const kTapjoyRVPlacementID = @"b5b4037fc73984";
-static NSString *const kChartboostRVPlacementID = @"b5b4037ef61d03";
-static NSString *const kIronsourceRVPlacementID = @"b5b4037d86b5b0";
-static NSString *const kVungleRVPlacementID = @"b5b4037cb650c2";
-static NSString *const kAdcolonyRVPlacementID = @"b5b4037bf5ff53";
-static NSString *const kUnityAdsPlacementID = @"b5b4037b242ae4";
-static NSString *const kTTPlacementID = @"b5b7ea145a6bab";
-static NSString *const kOnewayPlacementID = @"b5baf668a68f6b";
-static NSString *const kYeahmobiPlacementID = @"b5bc7eca17eab7";
-static NSString *const kAppnextPlacementID = @"b5bc7ecad24839";
-static NSString *const kAllPlacementID = @"b5b4022fadb8ed";
-static NSString *const kBaiduPlacementID = @"b5c01f85ecbb2c";
-#else
 static NSString *const kPlacement0ID = @"b5ad9ba61dcb39";
 static NSString *const kInmobiPlacementID = @"b5b44a03522f92";
 static NSString *const kMintegralPlacementID = @"b5b44a07fc3bf6";
@@ -80,7 +57,7 @@ static NSString *const kYeahmobiPlacementID = @"b5bc7fb44d382f";
 static NSString *const kAppnextPlacementID = @"b5bc7fb4fd15e6";
 static NSString *const kOnewayPlacementID = @"b5baf668a68f6b";
 static NSString *const kBaiduPlacementID = @"b5c01f85ecbb2c";
-#endif
+
 @implementation UPArpuRewardedVideoVideoViewController
 -(instancetype) initWithPlacementName:(NSString*)name {
     self = [super initWithNibName:nil bundle:nil];

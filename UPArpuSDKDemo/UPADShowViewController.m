@@ -27,22 +27,6 @@ NSString *const kYeahmobiPlacement = @"Yeahmobi";
 NSString *const kAppnextPlacement = @"Appnext";
 NSString *const kAllPlacementName = @"All";
 
-#ifdef DEBUG
-static NSString *const kPlacement0ID = @"b5b3c9ce05d849";
-static NSString *const kInmobiPlacementID = @"b5b7ea464ecc07";
-static NSString *const kMintegralPlacementID = @"b5b7ea485828b1";
-static NSString *const kFacebookPlacementID = @"b5b7ea44a6d3ca";
-static NSString *const kAdMobPlacementID = @"b5b7ea456bb0ec";
-static NSString *const kApplovinPlacementID = @"b5b7ea4789562a";
-static NSString *const kFlurryPlacementID = @"b5b7ea4a970252";
-static NSString *const kMopubPlacementID = @"b5b7ea49415238";
-static NSString *const kGDTPlacementID = @"b5bac73f0796e5";
-static NSString *const kGDTTemplatePlacementID = @"b5ba34ee81601a";
-static NSString *const kMopubVideoPlacementID = @"b5afbe325b1303";
-static NSString *const kYeahmobiPlacementID = @"b5bc7ec73074a0";
-static NSString *const kAppnextPlacementID = @"b5bc7ec86f35e7";
-static NSString *const kAllPlacementID = @"b5b7ea43935ea5";
-#else
 static NSString *const kPlacement0ID = @"b5ad9ba61dcb39";
 static NSString *const kInmobiPlacementID = @"b5b0f553483724";
 static NSString *const kMintegralPlacementID = @"b5b0f555698607";
@@ -57,7 +41,7 @@ static NSString *const kMopubVideoPlacementID = @"b5afbe325b1303";
 static NSString *const kYeahmobiPlacementID = @"b5bc7fb1d0b02f";
 static NSString *const kAppnextPlacementID = @"b5bc7fb2787f1e";
 static NSString *const kAllPlacementID = @"b5b0f5663c6e4a";
-#endif
+
 #ifdef NATIVE_INTEGRATED
 @interface DMADView:UPArpuNativeADView
 @property(nonatomic, readonly) UILabel *advertiserLabel;

@@ -26,6 +26,8 @@
 		8D03FE80215F5E32005DC75D /* MTGSDKInterstitial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D03FE7E215F5E32005DC75D /* MTGSDKInterstitial.framework */; };
 		8D23373421242448003D577E /* WMAdSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8D23373321242448003D577E /* WMAdSDK.bundle */; };
 		8D23373621242466003D577E /* WMAdSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D23373521242466003D577E /* WMAdSDK.framework */; };
+		8D3A583221B28AC60033C44C /* baidumobadsdk.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8D3A583121B28AC60033C44C /* baidumobadsdk.bundle */; };
+		8D3A583421B28ADC0033C44C /* BaiduMobAdSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D3A583321B28ADC0033C44C /* BaiduMobAdSDK.framework */; };
 		8D3B3550214B9DDD0064FBD2 /* UpArpuSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8D3B354F214B9DDC0064FBD2 /* UpArpuSDK.bundle */; };
 		8D7350C32174340A00D8FAE6 /* UpArpuFlurryInterstitialAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D7350C22174340A00D8FAE6 /* UpArpuFlurryInterstitialAdapter.framework */; };
 		8D7351DF21785CFA00D8FAE6 /* UpArpuOnewayInterstitialAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D7351D821785CF900D8FAE6 /* UpArpuOnewayInterstitialAdapter.framework */; };
@@ -397,6 +399,8 @@
 		8D03FE7E215F5E32005DC75D /* MTGSDKInterstitial.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MTGSDKInterstitial.framework; path = SDK/MTGSDKInterstitial.framework; sourceTree = "<group>"; };
 		8D23373321242448003D577E /* WMAdSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = WMAdSDK.bundle; path = SDK/WMAdSDK.bundle; sourceTree = "<group>"; };
 		8D23373521242466003D577E /* WMAdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WMAdSDK.framework; path = SDK/WMAdSDK.framework; sourceTree = "<group>"; };
+		8D3A583121B28AC60033C44C /* baidumobadsdk.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = baidumobadsdk.bundle; sourceTree = "<group>"; };
+		8D3A583321B28ADC0033C44C /* BaiduMobAdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMobAdSDK.framework; sourceTree = "<group>"; };
 		8D3B354F214B9DDC0064FBD2 /* UpArpuSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = UpArpuSDK.bundle; path = SDK/UpArpuSDK.bundle; sourceTree = "<group>"; };
 		8D7350C22174340A00D8FAE6 /* UpArpuFlurryInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuFlurryInterstitialAdapter.framework; path = SDK/UpArpuFlurryInterstitialAdapter.framework; sourceTree = "<group>"; };
 		8D7351D821785CF900D8FAE6 /* UpArpuOnewayInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuOnewayInterstitialAdapter.framework; path = SDK/UpArpuOnewayInterstitialAdapter.framework; sourceTree = "<group>"; };
@@ -1011,6 +1015,7 @@
 				DC83F7F22101EC59003FFC3C /* GoogleMobileAds.framework in Frameworks */,
 				DC83F7F32101EC59003FFC3C /* InMobiSDK.framework in Frameworks */,
 				DC6F97A1210338F3003C3F42 /* FBAudienceNetwork.framework in Frameworks */,
+				8D3A583421B28ADC0033C44C /* BaiduMobAdSDK.framework in Frameworks */,
 				DC83F7F42101EC59003FFC3C /* IronSource.framework in Frameworks */,
 				DC83F7F52101EC59003FFC3C /* MTGSDK.framework in Frameworks */,
 				DC83F7F62101EC59003FFC3C /* MTGSDKReward.framework in Frameworks */,
@@ -1217,6 +1222,7 @@
 		8DE56ECE209C70BC002A1427 = {
 			isa = PBXGroup;
 			children = (
+				8D3A583121B28AC60033C44C /* baidumobadsdk.bundle */,
 				8D73520F21786B1500D8FAE6 /* AppnextIOSSDK */,
 				8D73522821786B1500D8FAE6 /* AppnextNativeAdsSDK */,
 				8D73520621786ADB00D8FAE6 /* Oneway */,
@@ -1268,6 +1274,7 @@
 		8DE56EF0209C711D002A1427 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8D3A583321B28ADC0033C44C /* BaiduMobAdSDK.framework */,
 				8D73520421786A3F00D8FAE6 /* CTSDK.framework */,
 				8D7352022178694400D8FAE6 /* UpArpuMopubBannerAdapter.framework */,
 				8D7352002178675E00D8FAE6 /* UpArpuFlurryBannerAdapter.framework */,
@@ -2145,6 +2152,7 @@
 				DC83F9D32101F08D003FFC3C /* MPUnmutedBtn@2x.png in Resources */,
 				DC83F8162101ECDB003FFC3C /* TapjoyResources.bundle in Resources */,
 				8DE56EE7209C70BC002A1427 /* LaunchScreen.storyboard in Resources */,
+				8D3A583221B28AC60033C44C /* baidumobadsdk.bundle in Resources */,
 				8DE56EE4209C70BC002A1427 /* Assets.xcassets in Resources */,
 				DC83F9D42101F08D003FFC3C /* MPCountdownTimer.html in Resources */,
 				DC83F9DC2101F08D003FFC3C /* MPMutedBtn@2x.png in Resources */,

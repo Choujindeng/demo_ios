@@ -34,6 +34,7 @@ NSString *const kAdcolonyPlacementName = @"Adcolony";
 NSString *const kUnityAdsPlacementName = @"Unity Ads";
 NSString *const kTTPlacementName = @"TT";
 NSString *const kOnewayPlacementName = @"Oneway";
+NSString *const kBaiduPlacement = @"Baidu";
 
 #ifdef DEBUG
 static NSString *const kPlacement0ID = @"b5b3c9ce05d849";
@@ -56,6 +57,7 @@ static NSString *const kOnewayPlacementID = @"b5baf668a68f6b";
 static NSString *const kYeahmobiPlacementID = @"b5bc7eca17eab7";
 static NSString *const kAppnextPlacementID = @"b5bc7ecad24839";
 static NSString *const kAllPlacementID = @"b5b4022fadb8ed";
+static NSString *const kBaiduPlacementID = @"b5c01f85ecbb2c";
 #else
 static NSString *const kPlacement0ID = @"b5ad9ba61dcb39";
 static NSString *const kInmobiPlacementID = @"b5b44a03522f92";
@@ -77,6 +79,7 @@ static NSString *const kTTPlacementID = @"b5b72b21184aa8";
 static NSString *const kYeahmobiPlacementID = @"b5bc7fb44d382f";
 static NSString *const kAppnextPlacementID = @"b5bc7fb4fd15e6";
 static NSString *const kOnewayPlacementID = @"b5baf668a68f6b";
+static NSString *const kBaiduPlacementID = @"b5c01f85ecbb2c";
 #endif
 @implementation UPArpuRewardedVideoVideoViewController
 -(instancetype) initWithPlacementName:(NSString*)name {
@@ -102,7 +105,8 @@ static NSString *const kOnewayPlacementID = @"b5baf668a68f6b";
                           kTTPlacementName:kTTPlacementID,
                           kOnewayPlacementName:kOnewayPlacementID,
                           kYeahmobiPlacement:kYeahmobiPlacementID,
-                          kAppnextPlacement:kAppnextPlacementID
+                          kAppnextPlacement:kAppnextPlacementID,
+                          kBaiduPlacement:kBaiduPlacementID
                           };
     }
     return self;

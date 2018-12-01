@@ -29,6 +29,7 @@ extern NSString *const kTTVideoPlacement;
 extern NSString *const kOnewayPlacementName;
 extern NSString *const kYeahmobiPlacement;
 extern NSString *const kAppnextPlacement;
+extern NSString *const kBaiduPlacement;
 @interface UPArpuInterstitialViewController : UIViewController
 -(instancetype) initWithPlacementName:(NSString*)name;
 @end

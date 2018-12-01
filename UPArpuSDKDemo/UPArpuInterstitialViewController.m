@@ -32,6 +32,7 @@ static NSString *const kVunglePlacementID = @"b5baf61edafdbb";
 static NSString *const kAdColonyPlacementID = @"b5baf620280a65";
 static NSString *const kYeahmobiPlacementID = @"b5bc7ed19323a7";
 static NSString *const kAppnextPlacementID = @"b5bc7ed242ce03";
+static NSString *const kBaiduPlacementID = @"b5c01f8a7b4d9a";
 #else
 static NSString *const kGDTPlacementID = @"b5bacad8ea3036";
 static NSString *const kTTPlacementID = @"b5bacad7373b89";
@@ -53,6 +54,7 @@ static NSString *const kVunglePlacementID = @"b5baf61edafdbb";
 static NSString *const kAdColonyPlacementID = @"b5baf620280a65";
 static NSString *const kYeahmobiPlacementID = @"b5bc7fb8d54acc";
 static NSString *const kAppnextPlacementID = @"b5bc7fb9cbfff1";
+static NSString *const kBaiduPlacementID = @"b5c01f8a7b4d9a";
 #endif
 
 @interface UPArpuInterstitialViewController ()<UPArpuInterstitialDelegate>
@@ -90,7 +92,8 @@ static NSString *const kAppnextPlacementID = @"b5bc7fb9cbfff1";
                           kAdcolonyPlacementName:kAdColonyPlacementID,
                           kAllPlacementName:kAllPlacementID,
                           kYeahmobiPlacement:kYeahmobiPlacementID,
-                          kAppnextPlacement:kAppnextPlacementID
+                          kAppnextPlacement:kAppnextPlacementID,
+                          kBaiduPlacement:kBaiduPlacementID
                           };
     }
     return self;

@@ -56,7 +56,7 @@ static NSString *const kTTPlacementID = @"b5b72b21184aa8";
 static NSString *const kYeahmobiPlacementID = @"b5bc7fb44d382f";
 static NSString *const kAppnextPlacementID = @"b5bc7fb4fd15e6";
 static NSString *const kOnewayPlacementID = @"b5baf668a68f6b";
-static NSString *const kBaiduPlacementID = @"b5c01f85ecbb2c";
+static NSString *const kBaiduPlacementID = @"b5c04dd81c1af3";
 
 @implementation UPArpuRewardedVideoVideoViewController
 -(instancetype) initWithPlacementName:(NSString*)name {

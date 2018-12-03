@@ -33,7 +33,7 @@ static NSString *const kVunglePlacementID = @"b5baf61edafdbb";
 static NSString *const kAdColonyPlacementID = @"b5baf620280a65";
 static NSString *const kYeahmobiPlacementID = @"b5bc7fb8d54acc";
 static NSString *const kAppnextPlacementID = @"b5bc7fb9cbfff1";
-static NSString *const kBaiduPlacementID = @"b5c01f8a7b4d9a";
+static NSString *const kBaiduPlacementID = @"b5c04ddc6ba49e";
 
 @interface UPArpuInterstitialViewController ()<UPArpuInterstitialDelegate>
 @property(nonatomic, readonly) NSString *name;

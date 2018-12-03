@@ -21,7 +21,7 @@ static NSString *const kInmobiPlacementID = @"b5baf522891992";
 static NSString *const kAllPlacementID = @"b5bacaccb61c29";
 static NSString *const kYeahmobiPlacementID = @"b5bc7fb61b3213";
 static NSString *const kAppnextPlacementID = @"b5bc7fb78288e9";
-static NSString *const kBaiduPlacementID = @"b5c01f884913be";
+static NSString *const kBaiduPlacementID = @"b5c04dda229f7e";
 
 NSString *const kBannerShownNotification = @"banner_shown";
 NSString *const kBannerLoadingFailedNotification = @"banner_failed_to_load";

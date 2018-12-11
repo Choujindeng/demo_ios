@@ -14,5 +14,7 @@
 -(void) bannerView:(UPArpuBannerView*)bannerView didShowAdWithPlacementID:(NSString*)placementID;
 -(void) bannerView:(UPArpuBannerView*)bannerView didClickWithPlacementID:(NSString*)placementID;
 -(void) bannerView:(UPArpuBannerView*)bannerView didCloseWithPlacementID:(NSString*)placementID;
+-(void) bannerView:(UPArpuBannerView*)bannerView didAutoRefreshWithPlacement:(NSString*)placementID;
+-(void) bannerView:(UPArpuBannerView*)bannerView failedToAutoRefreshWithPlacementID:(NSString*)placementID error:(NSError*)error;
 @end
 #endif /* UPArpuBannerDelegate_h */

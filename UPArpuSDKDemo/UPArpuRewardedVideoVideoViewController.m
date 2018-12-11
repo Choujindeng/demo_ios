@@ -45,6 +45,7 @@ static NSString *const kApplovinPlacementID = @"b5b44a0646e64b";
 static NSString *const kFlurryPlacementID = @"b5b44a042a4950";
 static NSString *const kMopubPlacementID = @"b5b44a088ba48d";
 static NSString *const kMopubVideoPlacementID = @"b5b44a088ba48d";
+static NSString *const kGDTPlacementID = @"b5c0f7cd196a4c";
 static NSString *const kTapjoyRVPlacementID = @"b5b44a0ac855ff";//to be modified
 static NSString *const kChartboostRVPlacementID = @"b5b44a09a5c912";//to be modified
 static NSString *const kIronsourceRVPlacementID = @"b5b44a0bf09475";//to be modified
@@ -71,6 +72,7 @@ static NSString *const kBaiduPlacementID = @"b5c04dd81c1af3";
                           kAdMobPlacement:kAdMobPlacementID,
                           kMopubPlacementName:kMopubPlacementID,
                           kMopubVideoPlacementName:kMopubVideoPlacementID,
+                          kGDTPlacement:kGDTPlacementID,
                           kApplovinPlacement:kApplovinPlacementID,
                           kTapjoyPlacementName:kTapjoyRVPlacementID,
                           kChartboostPlacementName:kChartboostRVPlacementID,
@@ -169,11 +171,10 @@ static NSString *const kBaiduPlacementID = @"b5c04dd81c1af3";
 -(void) didFailToLoadADWithPlacementID:(NSString*)placementID error:(NSError*)error {
     [_loadingView removeFromSuperview];
     _failureTipsLabel.hidden = NO;
-    NSLog(@"RV Demo: failed to load:%@", error);
+    NSLog(@"RV Demo: didFailToLoadADWithPlacementID:%@ error:%@", placementID, error);
 }
 #pragma mark - showing delegate
 -(void) rewardedVideoDidStartPlayingForPlacementID:(NSString*)placementID {
-    [self reloadADButtonTapped];
     NSLog(@"RV Demo: rewardedVideoDidStartPlayingForPlacementID:%@", placementID);
 }
 

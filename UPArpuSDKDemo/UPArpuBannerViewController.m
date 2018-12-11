@@ -102,14 +102,14 @@ NSString *const kBannerLoadingFailedNotification = @"banner_failed_to_load";
         [self showBanner];
     } else {
         NSLog(@"UPArpuBannerViewController::banner ad not ready, will load");
-        [[UPArpuAdManager sharedManager] loadADWithPlacementID:_placementIDs[_name] extra:@{kExtraInfoRootViewControllerKey:self} customData:nil delegate:self];
+        [[UPArpuAdManager sharedManager] loadADWithPlacementID:_placementIDs[_name] extra:nil customData:nil delegate:self];
     }
 }
 
 -(void) reloadADButtonTapped {
     _failureTipsLabel.hidden = YES;
     [self.view addSubview:_loadingView];
-    [[UPArpuAdManager sharedManager] loadADWithPlacementID:_placementIDs[_name] extra:@{kExtraInfoRootViewControllerKey:self} customData:nil delegate:self];
+    [[UPArpuAdManager sharedManager] loadADWithPlacementID:_placementIDs[_name] extra:nil customData:nil delegate:self];
 }
 
 -(void) removeAdButtonTapped {

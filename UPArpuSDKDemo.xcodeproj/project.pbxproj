@@ -31,6 +31,7 @@
 		8D3A583821B532BF0033C44C /* UpArpuBaiduInterstitialAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D3A583521B532BE0033C44C /* UpArpuBaiduInterstitialAdapter.framework */; };
 		8D3A583921B532BF0033C44C /* UpArpuBaiduBannerAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D3A583621B532BF0033C44C /* UpArpuBaiduBannerAdapter.framework */; };
 		8D3A583A21B532BF0033C44C /* UpArpuBaiduRewardedVideoAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D3A583721B532BF0033C44C /* UpArpuBaiduRewardedVideoAdapter.framework */; };
+		8D3A585721BFC4BA0033C44C /* UpArpuGDTRewardedVideoAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D3A585621BFC4BA0033C44C /* UpArpuGDTRewardedVideoAdapter.framework */; };
 		8D3B3550214B9DDD0064FBD2 /* UpArpuSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8D3B354F214B9DDC0064FBD2 /* UpArpuSDK.bundle */; };
 		8D7350C32174340A00D8FAE6 /* UpArpuFlurryInterstitialAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D7350C22174340A00D8FAE6 /* UpArpuFlurryInterstitialAdapter.framework */; };
 		8D7351DF21785CFA00D8FAE6 /* UpArpuOnewayInterstitialAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D7351D821785CF900D8FAE6 /* UpArpuOnewayInterstitialAdapter.framework */; };
@@ -407,6 +408,7 @@
 		8D3A583521B532BE0033C44C /* UpArpuBaiduInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuBaiduInterstitialAdapter.framework; path = SDK/UpArpuBaiduInterstitialAdapter.framework; sourceTree = "<group>"; };
 		8D3A583621B532BF0033C44C /* UpArpuBaiduBannerAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuBaiduBannerAdapter.framework; path = SDK/UpArpuBaiduBannerAdapter.framework; sourceTree = "<group>"; };
 		8D3A583721B532BF0033C44C /* UpArpuBaiduRewardedVideoAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuBaiduRewardedVideoAdapter.framework; path = SDK/UpArpuBaiduRewardedVideoAdapter.framework; sourceTree = "<group>"; };
+		8D3A585621BFC4BA0033C44C /* UpArpuGDTRewardedVideoAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuGDTRewardedVideoAdapter.framework; path = SDK/UpArpuGDTRewardedVideoAdapter.framework; sourceTree = "<group>"; };
 		8D3B354F214B9DDC0064FBD2 /* UpArpuSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = UpArpuSDK.bundle; path = SDK/UpArpuSDK.bundle; sourceTree = "<group>"; };
 		8D7350C22174340A00D8FAE6 /* UpArpuFlurryInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuFlurryInterstitialAdapter.framework; path = SDK/UpArpuFlurryInterstitialAdapter.framework; sourceTree = "<group>"; };
 		8D7351D821785CF900D8FAE6 /* UpArpuOnewayInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuOnewayInterstitialAdapter.framework; path = SDK/UpArpuOnewayInterstitialAdapter.framework; sourceTree = "<group>"; };
@@ -987,6 +989,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D3A585721BFC4BA0033C44C /* UpArpuGDTRewardedVideoAdapter.framework in Frameworks */,
 				8D3A583821B532BF0033C44C /* UpArpuBaiduInterstitialAdapter.framework in Frameworks */,
 				8D3A583921B532BF0033C44C /* UpArpuBaiduBannerAdapter.framework in Frameworks */,
 				8D3A583A21B532BF0033C44C /* UpArpuBaiduRewardedVideoAdapter.framework in Frameworks */,
@@ -1283,6 +1286,7 @@
 		8DE56EF0209C711D002A1427 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8D3A585621BFC4BA0033C44C /* UpArpuGDTRewardedVideoAdapter.framework */,
 				8D3A583621B532BF0033C44C /* UpArpuBaiduBannerAdapter.framework */,
 				8D3A583521B532BE0033C44C /* UpArpuBaiduInterstitialAdapter.framework */,
 				8D3A583721B532BF0033C44C /* UpArpuBaiduRewardedVideoAdapter.framework */,

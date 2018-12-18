@@ -102,8 +102,6 @@
 		8DE56EEA209C70BC002A1427 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE56EE9209C70BC002A1427 /* main.m */; };
 		8DE56EF5209C715A002A1427 /* MTAutolayoutCategories.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE56EF3209C715A002A1427 /* MTAutolayoutCategories.m */; };
 		8DE56EF8209C7179002A1427 /* UPADShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE56EF6209C7178002A1427 /* UPADShowViewController.m */; };
-		8DFECF3521C77CF00006941B /* MobPowerSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DFECF3321C77CEF0006941B /* MobPowerSDK.framework */; };
-		8DFECF3621C77CF00006941B /* MobPowerNative.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DFECF3421C77CEF0006941B /* MobPowerNative.framework */; };
 		DC6F97A1210338F3003C3F42 /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC6F97A0210338F2003C3F42 /* FBAudienceNetwork.framework */; };
 		DC6F97A22103406F003C3F42 /* AdColony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC83F7B22101EC3C003FFC3C /* AdColony.framework */; };
 		DC6F97A4210340AD003C3F42 /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DC6F97A3210340AC003C3F42 /* libz.1.2.5.tbd */; };
@@ -479,8 +477,6 @@
 		8DE56EF4209C715A002A1427 /* MTAutolayoutCategories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTAutolayoutCategories.h; sourceTree = "<group>"; };
 		8DE56EF6209C7178002A1427 /* UPADShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPADShowViewController.m; sourceTree = "<group>"; };
 		8DE56EF7209C7178002A1427 /* UPADShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPADShowViewController.h; sourceTree = "<group>"; };
-		8DFECF3321C77CEF0006941B /* MobPowerSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MobPowerSDK.framework; sourceTree = "<group>"; };
-		8DFECF3421C77CEF0006941B /* MobPowerNative.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MobPowerNative.framework; sourceTree = "<group>"; };
 		DC6F97A0210338F2003C3F42 /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBAudienceNetwork.framework; path = SDK/FBAudienceNetwork.framework; sourceTree = "<group>"; };
 		DC6F97A3210340AC003C3F42 /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
 		DC6F97A5210340B8003C3F42 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
@@ -985,7 +981,6 @@
 				8D03FE7F215F5E32005DC75D /* MTGSDKInterstitialVideo.framework in Frameworks */,
 				8D03FE80215F5E32005DC75D /* MTGSDKInterstitial.framework in Frameworks */,
 				8D23373621242466003D577E /* WMAdSDK.framework in Frameworks */,
-				8DFECF3521C77CF00006941B /* MobPowerSDK.framework in Frameworks */,
 				DC6F97BE21034139003C3F42 /* WebKit.framework in Frameworks */,
 				DC6F97BC21034130003C3F42 /* WatchConnectivity.framework in Frameworks */,
 				DC6F97BA21034126003C3F42 /* SystemConfiguration.framework in Frameworks */,
@@ -1001,7 +996,6 @@
 				DC6F97A8210340C4003C3F42 /* AudioToolbox.framework in Frameworks */,
 				DC6F97A6210340B8003C3F42 /* AdSupport.framework in Frameworks */,
 				DC6F97A4210340AD003C3F42 /* libz.1.2.5.tbd in Frameworks */,
-				8DFECF3621C77CF00006941B /* MobPowerNative.framework in Frameworks */,
 				DC6F97A22103406F003C3F42 /* AdColony.framework in Frameworks */,
 				DCA62C7E2103102F008812DC /* libz.tbd in Frameworks */,
 				DCA62C7C21031025008812DC /* libc++.tbd in Frameworks */,
@@ -1223,8 +1217,6 @@
 		8DE56ECE209C70BC002A1427 = {
 			isa = PBXGroup;
 			children = (
-				8DFECF3421C77CEF0006941B /* MobPowerNative.framework */,
-				8DFECF3321C77CEF0006941B /* MobPowerSDK.framework */,
 				8D73520F21786B1500D8FAE6 /* AppnextIOSSDK */,
 				8D73522821786B1500D8FAE6 /* AppnextNativeAdsSDK */,
 				8D73520621786ADB00D8FAE6 /* Oneway */,

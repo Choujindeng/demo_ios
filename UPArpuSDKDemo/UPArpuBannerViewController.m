@@ -9,17 +9,7 @@
 #import "UPArpuBannerViewController.h"
 @import UpArpuSDK;
 @import UpArpuBanner;
-#ifdef DEBUG
-static NSString *const kGDTPlacementID = @"b5ba34f1ab7965";
-static NSString *const kTTPlacementID = @"b5ba34f9cd9da4";
-static NSString *const kAdmobPlacementID = @"b5ba351d45b55a";
-static NSString *const kApplovinPlacementID = @"b5ba3529911aef";
-static NSString *const kMopubPlacementID = @"b5baf57068e0b6";
-static NSString *const kFlurryPlacementID = @"b5baf52fe4e57b";
-static NSString *const kAllPlacementID = @"b5b0f551340ea9";
-static NSString *const kYeahmobiPlacementID = @"b5bc7ece984253";
-static NSString *const kAppnextPlacementID = @"b5bc7ecfe8084b";
-#else
+
 static NSString *const kGDTPlacementID = @"b5bacad0803fd1";
 static NSString *const kTTPlacementID = @"b5bacacfc470c9";
 static NSString *const kAdmobPlacementID = @"b5bacacef17717";
@@ -31,7 +21,7 @@ static NSString *const kInmobiPlacementID = @"b5baf522891992";
 static NSString *const kAllPlacementID = @"b5bacaccb61c29";
 static NSString *const kYeahmobiPlacementID = @"b5bc7fb61b3213";
 static NSString *const kAppnextPlacementID = @"b5bc7fb78288e9";
-#endif
+static NSString *const kBaiduPlacementID = @"b5c04dda229f7e";
 
 NSString *const kBannerShownNotification = @"banner_shown";
 NSString *const kBannerLoadingFailedNotification = @"banner_failed_to_load";
@@ -62,7 +52,8 @@ NSString *const kBannerLoadingFailedNotification = @"banner_failed_to_load";
                           kInmobiPlacement:kInmobiPlacementID,
                           kAllPlacementName:kAllPlacementID,
                           kYeahmobiPlacement:kYeahmobiPlacementID,
-                          kAppnextPlacement:kAppnextPlacementID
+                          kAppnextPlacement:kAppnextPlacementID,
+                          kBaiduPlacement:kBaiduPlacementID
                           };
     }
     return self;
@@ -111,14 +102,14 @@ NSString *const kBannerLoadingFailedNotification = @"banner_failed_to_load";
         [self showBanner];
     } else {
         NSLog(@"UPArpuBannerViewController::banner ad not ready, will load");
-        [[UPArpuAdManager sharedManager] loadADWithPlacementID:_placementIDs[_name] extra:@{kExtraInfoRootViewControllerKey:self} customData:nil delegate:self];
+        [[UPArpuAdManager sharedManager] loadADWithPlacementID:_placementIDs[_name] extra:nil customData:nil delegate:self];
     }
 }
 
 -(void) reloadADButtonTapped {
     _failureTipsLabel.hidden = YES;
     [self.view addSubview:_loadingView];
-    [[UPArpuAdManager sharedManager] loadADWithPlacementID:_placementIDs[_name] extra:@{kExtraInfoRootViewControllerKey:self} customData:nil delegate:self];
+    [[UPArpuAdManager sharedManager] loadADWithPlacementID:_placementIDs[_name] extra:nil customData:nil delegate:self];
 }
 
 -(void) removeAdButtonTapped {

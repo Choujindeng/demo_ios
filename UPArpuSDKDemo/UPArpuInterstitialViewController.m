@@ -34,6 +34,7 @@ static NSString *const kAdColonyPlacementID = @"b5baf620280a65";
 static NSString *const kYeahmobiPlacementID = @"b5bc7fb8d54acc";
 static NSString *const kAppnextPlacementID = @"b5bc7fb9cbfff1";
 static NSString *const kBaiduPlacementID = @"b5c04ddc6ba49e";
+static NSString *const kUnityAdsPlacementID = @"b5c21a055a51ab";
 
 @interface UPArpuInterstitialViewController ()<UPArpuInterstitialDelegate>
 @property(nonatomic, readonly) NSString *name;
@@ -71,7 +72,8 @@ static NSString *const kBaiduPlacementID = @"b5c04ddc6ba49e";
                           kAllPlacementName:kAllPlacementID,
                           kYeahmobiPlacement:kYeahmobiPlacementID,
                           kAppnextPlacement:kAppnextPlacementID,
-                          kBaiduPlacement:kBaiduPlacementID
+                          kBaiduPlacement:kBaiduPlacementID,
+                          kUnityAdsPlacementName:kUnityAdsPlacementID
                           };
     }
     return self;

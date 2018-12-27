@@ -1,0 +1,6 @@
+framework module UpArpuBaiduSplashAdapter {
+  umbrella header "UpArpuBaiduSplashAdapter.h"
+
+  export *
+  module * { export * }
+}

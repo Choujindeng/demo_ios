@@ -1,0 +1,6 @@
+framework module UpArpuGDTSplashAdapter {
+  umbrella header "UpArpuGDTSplashAdapter.h"
+
+  export *
+  module * { export * }
+}

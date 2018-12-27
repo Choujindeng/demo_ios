@@ -49,6 +49,7 @@ extern NSString *const kNetworkNameOneway;
 extern NSString *const kNetworkNameAppnext;
 extern NSString *const kNetworkNameYeahmobi;
 extern NSString *const kNetworkNameBaidu;
+extern NSString *const kNetworkNameMobPower;
 
 extern NSString *const kInmobiGDPRStringKey;
 extern NSString *const kInmobiConsentStringKey;

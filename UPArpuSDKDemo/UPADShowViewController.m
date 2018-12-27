@@ -12,7 +12,7 @@
 #ifdef NATIVE_INTEGRATED
 @import UpArpuNative;
 #endif
-
+NSString *const kMPPlacement = @"MobPower";
 NSString *const kInmobiPlacement = @"Inmobi";
 NSString *const kFacebookPlacement = @"Facebook";
 NSString *const kAdMobPlacement = @"AdMob";
@@ -40,6 +40,7 @@ static NSString *const kGDTTemplatePlacementID = @"b5bacac780e03b";
 static NSString *const kMopubVideoPlacementID = @"b5afbe325b1303";
 static NSString *const kYeahmobiPlacementID = @"b5bc7fb1d0b02f";
 static NSString *const kAppnextPlacementID = @"b5bc7fb2787f1e";
+static NSString *const kMPPlacementID = @"b5c2084d12aca4";
 static NSString *const kAllPlacementID = @"b5b0f5663c6e4a";
 
 #ifdef NATIVE_INTEGRATED
@@ -136,6 +137,7 @@ static NSString *const kAllPlacementID = @"b5b0f5663c6e4a";
     if (self != nil) {
         _name = name;
         _placementIDs = @{
+                          kMPPlacement:kMPPlacementID,
                           kMintegralPlacement:kMintegralPlacementID,
                           kAllPlacementName:kAllPlacementID,
                           kInmobiPlacement:kInmobiPlacementID,

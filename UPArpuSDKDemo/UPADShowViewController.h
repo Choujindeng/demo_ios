@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+extern NSString *const kMPPlacement;
 extern NSString *const kInmobiPlacement;
 extern NSString *const kFacebookPlacement;
 extern NSString *const kAdMobPlacement;

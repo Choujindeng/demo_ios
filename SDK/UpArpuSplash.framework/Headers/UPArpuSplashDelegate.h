@@ -8,7 +8,7 @@
 
 #ifndef UPArpuSplashDelegate_h
 #define UPArpuSplashDelegate_h
-#import "UPArpuAdLoadingDelegate.h"
+#import <UpArpuSDK/UpArpuSDK.h>
 @protocol UPArpuSplashDelegate<UPArpuAdLoadingDelegate>
 -(void)splashDidShowForPlacementID:(NSString*)placementID;
 -(void)splashDidClickForPlacementID:(NSString*)placementID;

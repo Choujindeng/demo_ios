@@ -62,6 +62,14 @@
 		8D73523821786B1500D8FAE6 /* libAppnextSDKCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D73522721786B1500D8FAE6 /* libAppnextSDKCore.a */; };
 		8D73523921786B1500D8FAE6 /* libAppnextSDKCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D73523521786B1500D8FAE6 /* libAppnextSDKCore.a */; };
 		8D73523A21786B1500D8FAE6 /* libAppnextNativeAdsSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D73523621786B1500D8FAE6 /* libAppnextNativeAdsSDK.a */; };
+		8D90878C21D4A0590070EDCE /* UpArpuUnityAdsInterstitialAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D90878721D4A0580070EDCE /* UpArpuUnityAdsInterstitialAdapter.framework */; };
+		8D90878D21D4A0590070EDCE /* UpArpuGDTSplashAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D90878821D4A0580070EDCE /* UpArpuGDTSplashAdapter.framework */; };
+		8D90878E21D4A0590070EDCE /* UpArpuTTSplashAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D90878921D4A0580070EDCE /* UpArpuTTSplashAdapter.framework */; };
+		8D90879021D4A0590070EDCE /* UpArpuBaiduSplashAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D90878B21D4A0590070EDCE /* UpArpuBaiduSplashAdapter.framework */; };
+		8D90879221D4A0BE0070EDCE /* UpArpuMobPowerNativeAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D90879121D4A0BE0070EDCE /* UpArpuMobPowerNativeAdapter.framework */; };
+		8D90879421D4A2CF0070EDCE /* UpArpuSplash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D90878A21D4A0580070EDCE /* UpArpuSplash.framework */; };
+		8D90879721D4A41C0070EDCE /* MobPowerNative.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D90879521D4A41B0070EDCE /* MobPowerNative.framework */; };
+		8D90879821D4A41C0070EDCE /* MobPowerSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D90879621D4A41C0070EDCE /* MobPowerSDK.framework */; };
 		8DA1B57821242771008280DB /* UpArpuAdColonyRewardedVideoAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC83F7EB2101EC3E003FFC3C /* UpArpuAdColonyRewardedVideoAdapter.framework */; };
 		8DA1B57921242771008280DB /* UpArpuAdColonyRewardedVideoAdapter.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = DC83F7EB2101EC3E003FFC3C /* UpArpuAdColonyRewardedVideoAdapter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8DA1B57A21242771008280DB /* UpArpuAdmobNativeAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC83F7A82101EC3B003FFC3C /* UpArpuAdmobNativeAdapter.framework */; };
@@ -473,6 +481,14 @@
 		8D73523421786B1500D8FAE6 /* AppnextNativeAdsSDKApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppnextNativeAdsSDKApi.h; sourceTree = "<group>"; };
 		8D73523521786B1500D8FAE6 /* libAppnextSDKCore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAppnextSDKCore.a; sourceTree = "<group>"; };
 		8D73523621786B1500D8FAE6 /* libAppnextNativeAdsSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAppnextNativeAdsSDK.a; sourceTree = "<group>"; };
+		8D90878721D4A0580070EDCE /* UpArpuUnityAdsInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuUnityAdsInterstitialAdapter.framework; path = SDK/UpArpuUnityAdsInterstitialAdapter.framework; sourceTree = "<group>"; };
+		8D90878821D4A0580070EDCE /* UpArpuGDTSplashAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuGDTSplashAdapter.framework; path = SDK/UpArpuGDTSplashAdapter.framework; sourceTree = "<group>"; };
+		8D90878921D4A0580070EDCE /* UpArpuTTSplashAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuTTSplashAdapter.framework; path = SDK/UpArpuTTSplashAdapter.framework; sourceTree = "<group>"; };
+		8D90878A21D4A0580070EDCE /* UpArpuSplash.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuSplash.framework; path = SDK/UpArpuSplash.framework; sourceTree = "<group>"; };
+		8D90878B21D4A0590070EDCE /* UpArpuBaiduSplashAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuBaiduSplashAdapter.framework; path = SDK/UpArpuBaiduSplashAdapter.framework; sourceTree = "<group>"; };
+		8D90879121D4A0BE0070EDCE /* UpArpuMobPowerNativeAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuMobPowerNativeAdapter.framework; path = SDK/UpArpuMobPowerNativeAdapter.framework; sourceTree = "<group>"; };
+		8D90879521D4A41B0070EDCE /* MobPowerNative.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobPowerNative.framework; path = SDK/MobPowerNative.framework; sourceTree = "<group>"; };
+		8D90879621D4A41C0070EDCE /* MobPowerSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobPowerSDK.framework; path = SDK/MobPowerSDK.framework; sourceTree = "<group>"; };
 		8DA1B5A4212427CE008280DB /* UpArpuTTRewardedVideoAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UpArpuTTRewardedVideoAdapter.framework; sourceTree = "<group>"; };
 		8DDD89B620A1AA3C00C95818 /* UpArpuSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuSDK.framework; path = SDK/UpArpuSDK.framework; sourceTree = "<group>"; };
 		8DE56ED7209C70BC002A1427 /* UPArpuSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UPArpuSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -989,6 +1005,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D90879721D4A41C0070EDCE /* MobPowerNative.framework in Frameworks */,
+				8D90879821D4A41C0070EDCE /* MobPowerSDK.framework in Frameworks */,
+				8D90879421D4A2CF0070EDCE /* UpArpuSplash.framework in Frameworks */,
+				8D90879221D4A0BE0070EDCE /* UpArpuMobPowerNativeAdapter.framework in Frameworks */,
+				8D90878C21D4A0590070EDCE /* UpArpuUnityAdsInterstitialAdapter.framework in Frameworks */,
+				8D90878D21D4A0590070EDCE /* UpArpuGDTSplashAdapter.framework in Frameworks */,
+				8D90878E21D4A0590070EDCE /* UpArpuTTSplashAdapter.framework in Frameworks */,
+				8D90879021D4A0590070EDCE /* UpArpuBaiduSplashAdapter.framework in Frameworks */,
 				8D3A585721BFC4BA0033C44C /* UpArpuGDTRewardedVideoAdapter.framework in Frameworks */,
 				8D3A583821B532BF0033C44C /* UpArpuBaiduInterstitialAdapter.framework in Frameworks */,
 				8D3A583921B532BF0033C44C /* UpArpuBaiduBannerAdapter.framework in Frameworks */,
@@ -1286,6 +1310,14 @@
 		8DE56EF0209C711D002A1427 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8D90879521D4A41B0070EDCE /* MobPowerNative.framework */,
+				8D90879621D4A41C0070EDCE /* MobPowerSDK.framework */,
+				8D90879121D4A0BE0070EDCE /* UpArpuMobPowerNativeAdapter.framework */,
+				8D90878B21D4A0590070EDCE /* UpArpuBaiduSplashAdapter.framework */,
+				8D90878821D4A0580070EDCE /* UpArpuGDTSplashAdapter.framework */,
+				8D90878A21D4A0580070EDCE /* UpArpuSplash.framework */,
+				8D90878921D4A0580070EDCE /* UpArpuTTSplashAdapter.framework */,
+				8D90878721D4A0580070EDCE /* UpArpuUnityAdsInterstitialAdapter.framework */,
 				8D3A585621BFC4BA0033C44C /* UpArpuGDTRewardedVideoAdapter.framework */,
 				8D3A583621B532BF0033C44C /* UpArpuBaiduBannerAdapter.framework */,
 				8D3A583521B532BE0033C44C /* UpArpuBaiduInterstitialAdapter.framework */,
@@ -2542,7 +2574,7 @@
 					"-ObjC",
 					"-fobjc-arc",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.uparpu.UpArpuSDKDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joypac.kaihi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -2582,7 +2614,7 @@
 					"-ObjC",
 					"-fobjc-arc",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.uparpu.UpArpuSDKDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joypac.kaihi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

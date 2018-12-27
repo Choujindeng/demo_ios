@@ -16,8 +16,7 @@
 
 @import UpArpuSDK;
 @import UpArpuRewardedVideo;
-#import <VungleSDK/VungleSDK.h>
-
+@import UpArpuSplash;
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
     @property(nonatomic, readonly) UITableView *tableView;
     @property(nonatomic, readonly) NSArray<NSArray<NSString*>*>* placementNames;
@@ -27,10 +26,11 @@ static NSString *const kCellIdentifier = @"cell";
 @implementation ViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _placementNames = @[@[kFacebookPlacement, kAdMobPlacement, kInmobiPlacement, kFlurryPlacement, kApplovinPlacement, kMintegralPlacement, kMintegralVideoPlacement, kMopubPlacementName, kGDTPlacement, kChartboostPlacementName, kTapjoyPlacementName, kIronsourcePlacementName, kVunglePlacementName, kAdcolonyPlacementName, kTTPlacementName, kTTVideoPlacement, kOnewayPlacementName, kYeahmobiPlacement, kAppnextPlacement, kBaiduPlacement],
+    _placementNames = @[@[kGDTPlacement, kBaiduPlacement, kTTPlacementName, kAllPlacementName],
+                        @[kUnityAdsPlacementName, kFacebookPlacement, kAdMobPlacement, kInmobiPlacement, kFlurryPlacement, kApplovinPlacement, kMintegralPlacement, kMintegralVideoPlacement, kMopubPlacementName, kGDTPlacement, kChartboostPlacementName, kTapjoyPlacementName, kIronsourcePlacementName, kVunglePlacementName, kAdcolonyPlacementName, kTTPlacementName, kTTVideoPlacement, kOnewayPlacementName, kYeahmobiPlacement, kAppnextPlacement, kBaiduPlacement],
                         @[kFacebookPlacement, kAdMobPlacement, kInmobiPlacement, kFlurryPlacement, kApplovinPlacement, kGDTPlacement, kMopubPlacementName, kTTPlacementName, kYeahmobiPlacement, kAppnextPlacement, kBaiduPlacement],
                         @[kFacebookPlacement, kAdMobPlacement, kInmobiPlacement, kFlurryPlacement, kApplovinPlacement, kMintegralPlacement, kMopubPlacementName, kGDTPlacement, kChartboostPlacementName, kTapjoyPlacementName, kIronsourcePlacementName, kVunglePlacementName, kAdcolonyPlacementName, kUnityAdsPlacementName, kTTPlacementName, kOnewayPlacementName, kYeahmobiPlacement, kAppnextPlacement, kBaiduPlacement, kAllPlacementName],
-                        @[kFacebookPlacement, kAdMobPlacement, kInmobiPlacement, kFlurryPlacement, kApplovinPlacement, kMintegralPlacement, kMopubPlacementName, kGDTPlacement, kGDTTemplatePlacement, kYeahmobiPlacement, kAppnextPlacement, kAllPlacementName]];
+                        @[kMPPlacement, kFacebookPlacement, kAdMobPlacement, kInmobiPlacement, kFlurryPlacement, kApplovinPlacement, kMintegralPlacement, kMopubPlacementName, kGDTPlacement, kGDTTemplatePlacement, kYeahmobiPlacement, kAppnextPlacement, kAllPlacementName]];
     
     _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kCellIdentifier];
@@ -63,7 +63,7 @@ static NSString *const kCellIdentifier = @"cell";
 }
 
 -(NSString*) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return @[@"Interstitial", @"Banner", @"RV", @"Native"][section];
+    return @[@"Splash", @"Interstitial", @"Banner", @"RV", @"Native"][section];
 }
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -74,17 +74,28 @@ static NSString *const kCellIdentifier = @"cell";
 
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
-    if ([indexPath section] == 2) {
+    if ([indexPath section] == 3) {
         UPArpuRewardedVideoVideoViewController *tVC = [[UPArpuRewardedVideoVideoViewController alloc] initWithPlacementName:_placementNames[[indexPath section]][[indexPath row]]];
         [self.navigationController pushViewController:tVC animated:YES];
-    } else if ([indexPath section] == 3) {        UPADShowViewController *tVC = [[UPADShowViewController alloc] initWithPlacementName: _placementNames[[indexPath section]][[indexPath row]]];
+    } else if ([indexPath section] == 4) {        UPADShowViewController *tVC = [[UPADShowViewController alloc] initWithPlacementName: _placementNames[[indexPath section]][[indexPath row]]];
         [self.navigationController pushViewController:tVC animated:YES];
-    } else if ([indexPath section] == 1) {
+    } else if ([indexPath section] == 2) {
         UPArpuBannerViewController *tVC = [[UPArpuBannerViewController alloc] initWithPlacementName:_placementNames[[indexPath section]][[indexPath row]]];
         [self.navigationController pushViewController:tVC animated:YES];
-    } else if ([indexPath section] == 0) {
+    } else if ([indexPath section] == 1) {
         UPArpuInterstitialViewController *tVC = [[UPArpuInterstitialViewController alloc] initWithPlacementName:_placementNames[[indexPath section]][[indexPath row]]];
         [self.navigationController pushViewController:tVC animated:YES];
+    } else if ([indexPath section] == 0) {
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(.0f, .0f, CGRectGetWidth([UIScreen mainScreen].bounds), 100.0f)];
+        label.text = @"Splash Container View";
+        label.backgroundColor = [UIColor whiteColor];
+        label.textAlignment = NSTextAlignmentCenter;
+        
+        UILabel *skipBtn = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMidX(self.view.bounds) - 80.0f, CGRectGetMidY(self.view.bounds) - 40.0f, 160.0f, 80.0f)];
+        skipBtn.text = @"Skip Button";
+        skipBtn.backgroundColor = [UIColor blueColor];
+        skipBtn.textAlignment = NSTextAlignmentCenter;
+        [[UPArpuAdManager sharedManager] loadADWithPlacementID:@[@"b5c1b0470c7e4a", @"b5c1b047a970fe", @"b5c1b048c498b9", @"b5c22f0e5cc7a0"][[indexPath row]] extra:nil customData:nil delegate:self window:[UIApplication sharedApplication].keyWindow containerView:label];
     }
 }
     @end

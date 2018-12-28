@@ -12,7 +12,8 @@
 @import InMobiSDK;
 //@import FBAudienceNetwork;
 @import GoogleMobileAds;
-@interface AppDelegate ()
+@import UpArpuSplash;
+@interface AppDelegate ()<UPArpuSplashDelegate>
     
     @end
 
@@ -36,6 +37,14 @@
                                                       };
 
     [[UPArpuAPI sharedInstance] startWithAppID:@"a5b0e8491845b3" appKey:@"7eae0567827cfe2b22874061763f30c9" error:nil];
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(.0f, .0f, CGRectGetWidth([UIScreen mainScreen].bounds), 100.0f)];
+    label.text = @"Splash Container View";
+    label.backgroundColor = [UIColor whiteColor];
+    label.textAlignment = NSTextAlignmentCenter;
+    
+    [self.window makeKeyAndVisible];
+    [[UPArpuAdManager sharedManager] loadADWithPlacementID:@"b5c22f0e5cc7a0" extra:nil customData:nil delegate:self window:[UIApplication sharedApplication].keyWindow containerView:label];
     NSLog(@"application UPArpuAPI startWithAppID end");
     return YES;
 }
@@ -69,7 +78,27 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
-    
-    
-    @end
+
+#pragma mark - UPArpu Splash Delegate method(s)
+-(void) didFinishLoadingADWithPlacementID:(NSString *)placementID {
+    NSLog(@"AppDelegate::didFinishLoadingADWithPlacementID:%@", placementID);
+}
+
+-(void) didFailToLoadADWithPlacementID:(NSString*)placementID error:(NSError*)error {
+    NSLog(@"AppDelegate::didFailToLoadADWithPlacementID:%@ error:%@", placementID, error);
+}
+
+-(void)splashDidShowForPlacementID:(NSString*)placementID {
+    NSLog(@"AppDelegate::splashDidShowForPlacementID:%@", placementID);
+}
+
+-(void)splashDidClickForPlacementID:(NSString*)placementID {
+    NSLog(@"AppDelegate::splashDidClickForPlacementID:%@", placementID);
+}
+
+-(void)splashDidCloseForPlacementID:(NSString*)placementID {
+    NSLog(@"AppDelegate::splashDidCloseForPlacementID:%@", placementID);
+}
+
+@end
 

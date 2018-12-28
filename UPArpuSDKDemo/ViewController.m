@@ -91,10 +91,6 @@ static NSString *const kCellIdentifier = @"cell";
         label.backgroundColor = [UIColor whiteColor];
         label.textAlignment = NSTextAlignmentCenter;
         
-        UILabel *skipBtn = [[UILabel alloc] initWithFrame:CGRectMake(CGRectGetMidX(self.view.bounds) - 80.0f, CGRectGetMidY(self.view.bounds) - 40.0f, 160.0f, 80.0f)];
-        skipBtn.text = @"Skip Button";
-        skipBtn.backgroundColor = [UIColor blueColor];
-        skipBtn.textAlignment = NSTextAlignmentCenter;
         [[UPArpuAdManager sharedManager] loadADWithPlacementID:@[@"b5c1b0470c7e4a", @"b5c1b047a970fe", @"b5c1b048c498b9", @"b5c22f0e5cc7a0"][[indexPath row]] extra:nil customData:nil delegate:self window:[UIApplication sharedApplication].keyWindow containerView:label];
     }
 }

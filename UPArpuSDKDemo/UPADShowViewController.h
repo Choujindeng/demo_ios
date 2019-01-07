@@ -20,6 +20,8 @@ extern NSString *const kGDTPlacement;
 extern NSString *const kGDTTemplatePlacement;
 extern NSString *const kYeahmobiPlacement;
 extern NSString *const kAppnextPlacement;
+extern NSString *const kTTFeedPlacementName;
+extern NSString *const kTTDrawPlacementName;
 extern NSString *const kAllPlacementName;
 @interface UPADShowViewController : UIViewController
 -(instancetype) initWithPlacementName:(NSString*)name;

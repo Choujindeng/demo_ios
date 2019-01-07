@@ -116,6 +116,7 @@
 		8DE56EF8209C7179002A1427 /* UPADShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE56EF6209C7178002A1427 /* UPADShowViewController.m */; };
 		8DE79C6721E2FBF40072988B /* BUAdSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8DE79C6621E2FBF40072988B /* BUAdSDK.bundle */; };
 		8DE79C6921E2FC200072988B /* BUAdSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DE79C6821E2FC200072988B /* BUAdSDK.framework */; };
+		8DE79C6C21E3395F0072988B /* libresolv.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DE79C6B21E3395F0072988B /* libresolv.9.tbd */; };
 		DC6F97A1210338F3003C3F42 /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC6F97A0210338F2003C3F42 /* FBAudienceNetwork.framework */; };
 		DC6F97A22103406F003C3F42 /* AdColony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC83F7B22101EC3C003FFC3C /* AdColony.framework */; };
 		DC6F97A4210340AD003C3F42 /* libz.1.2.5.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DC6F97A3210340AC003C3F42 /* libz.1.2.5.tbd */; };
@@ -505,6 +506,7 @@
 		8DE56EF7209C7178002A1427 /* UPADShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPADShowViewController.h; sourceTree = "<group>"; };
 		8DE79C6621E2FBF40072988B /* BUAdSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = BUAdSDK.bundle; sourceTree = "<group>"; };
 		8DE79C6821E2FC200072988B /* BUAdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BUAdSDK.framework; sourceTree = SOURCE_ROOT; };
+		8DE79C6B21E3395F0072988B /* libresolv.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.9.tbd; path = usr/lib/libresolv.9.tbd; sourceTree = SDKROOT; };
 		DC6F97A0210338F2003C3F42 /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBAudienceNetwork.framework; path = SDK/FBAudienceNetwork.framework; sourceTree = "<group>"; };
 		DC6F97A3210340AC003C3F42 /* libz.1.2.5.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.2.5.tbd; path = usr/lib/libz.1.2.5.tbd; sourceTree = SDKROOT; };
 		DC6F97A5210340B8003C3F42 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
@@ -1005,6 +1007,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DE79C6C21E3395F0072988B /* libresolv.9.tbd in Frameworks */,
 				8D90879721D4A41C0070EDCE /* MobPowerNative.framework in Frameworks */,
 				8D90879821D4A41C0070EDCE /* MobPowerSDK.framework in Frameworks */,
 				8D90879421D4A2CF0070EDCE /* UpArpuSplash.framework in Frameworks */,
@@ -1310,6 +1313,7 @@
 		8DE56EF0209C711D002A1427 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8DE79C6B21E3395F0072988B /* libresolv.9.tbd */,
 				8D90879521D4A41B0070EDCE /* MobPowerNative.framework */,
 				8D90879621D4A41C0070EDCE /* MobPowerSDK.framework */,
 				8D90879121D4A0BE0070EDCE /* UpArpuMobPowerNativeAdapter.framework */,

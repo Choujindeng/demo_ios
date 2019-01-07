@@ -25,6 +25,8 @@ NSString *const kGDTPlacement = @"GDT";
 NSString *const kGDTTemplatePlacement = @"GDT(Template)";
 NSString *const kYeahmobiPlacement = @"Yeahmobi";
 NSString *const kAppnextPlacement = @"Appnext";
+NSString *const kTTFeedPlacementName = @"TT(Feed)";
+NSString *const kTTDrawPlacementName = @"TT(Draw)";
 NSString *const kAllPlacementName = @"All";
 
 static NSString *const kPlacement0ID = @"b5ad9ba61dcb39";
@@ -41,7 +43,10 @@ static NSString *const kMopubVideoPlacementID = @"b5afbe325b1303";
 static NSString *const kYeahmobiPlacementID = @"b5bc7fb1d0b02f";
 static NSString *const kAppnextPlacementID = @"b5bc7fb2787f1e";
 static NSString *const kMPPlacementID = @"b5c2084d12aca4";
+static NSString *const kTTFeedPlacementID = @"b5c2c6d50e7f44";
+static NSString *const kTTDrawPlacementID = @"b5c2c6d62b9d65";
 static NSString *const kAllPlacementID = @"b5b0f5663c6e4a";
+
 
 #ifdef NATIVE_INTEGRATED
 @interface DMADView:UPArpuNativeADView
@@ -150,7 +155,9 @@ static NSString *const kAllPlacementID = @"b5b0f5663c6e4a";
                           kGDTPlacement:kGDTPlacementID,
                           kGDTTemplatePlacement:kGDTTemplatePlacementID,
                           kYeahmobiPlacement:kYeahmobiPlacementID,
-                          kAppnextPlacement:kAppnextPlacementID
+                          kAppnextPlacement:kAppnextPlacementID,
+                          kTTFeedPlacementName:kTTFeedPlacementID,
+                          kTTDrawPlacementName:kTTDrawPlacementID
                           };
     }
     return self;

@@ -50,9 +50,26 @@
 /**
  * The view that is used to play video or other media; it is set by the sdk; might be nil.
  */
-@property(nonatomic) UIView *mediaView;
+@property(nonatomic, nullable) UIView *mediaView;
 /**
  * The native ad that is being shown.
  */
 @property(nonatomic, readonly) UPArpuNativeAd *nativeAd;
+@end
+
+//Defined for TT native
+extern NSString const* kUPArpuExtraNativeImageSize228_150;
+extern NSString const* kUPArpuExtraNativeImageSize690_388;
+extern NSString *const kUPArpuExtraNativeImageSizeKey;
+
+@interface UPArpuNativeADView(DrawVideo)
+/*
+ * Override this method to layout draw video assets.
+ */
+-(void) makeConstraintsDrawVideoAssets;
+@property (nonatomic, strong, readonly, nullable) UIButton *dislikeButton;
+@property (nonatomic, strong, readonly, nullable) UILabel *adLabel;
+@property (nonatomic, strong, readonly, nullable) UIImageView *logoImageView;
+@property (nonatomic, strong, readonly, nullable) UIImageView *logoADImageView;
+@property (nonatomic, strong, readonly, nullable) UIView *videoAdView;
 @end

@@ -1007,6 +1007,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DE79C6921E2FC200072988B /* BUAdSDK.framework in Frameworks */,
 				8DE79C6C21E3395F0072988B /* libresolv.9.tbd in Frameworks */,
 				8D90879721D4A41C0070EDCE /* MobPowerNative.framework in Frameworks */,
 				8D90879821D4A41C0070EDCE /* MobPowerSDK.framework in Frameworks */,
@@ -1097,7 +1098,6 @@
 				8DA1B58221242771008280DB /* UpArpuChartboostRewardedVideoAdapter.framework in Frameworks */,
 				8DA1B59E21242771008280DB /* UpArpuTapjoyRewardedVideoAdapter.framework in Frameworks */,
 				8D73523921786B1500D8FAE6 /* libAppnextSDKCore.a in Frameworks */,
-				8DE79C6921E2FC200072988B /* BUAdSDK.framework in Frameworks */,
 				8DA1B59021242771008280DB /* UpArpuIronSourceRewardedVideoAdapter.framework in Frameworks */,
 				8DA1B5A221242771008280DB /* UpArpuVungleRewardedVideoAdapter.framework in Frameworks */,
 				8DA1B57821242771008280DB /* UpArpuAdColonyRewardedVideoAdapter.framework in Frameworks */,

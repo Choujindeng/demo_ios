@@ -17,7 +17,7 @@
 @import UpArpuSDK;
 @import UpArpuRewardedVideo;
 @import UpArpuSplash;
-@interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
+@interface ViewController ()<UITableViewDelegate, UITableViewDataSource, UPArpuSplashDelegate>
     @property(nonatomic, readonly) UITableView *tableView;
     @property(nonatomic, readonly) NSArray<NSArray<NSString*>*>* placementNames;
     @end
@@ -93,5 +93,26 @@ static NSString *const kCellIdentifier = @"cell";
         
         [[UPArpuAdManager sharedManager] loadADWithPlacementID:@[@"b5c1b0470c7e4a", @"b5c1b047a970fe", @"b5c1b048c498b9", @"b5c22f0e5cc7a0"][[indexPath row]] extra:nil customData:nil delegate:self window:[UIApplication sharedApplication].keyWindow containerView:label];
     }
+}
+
+#pragma mark - UPArpu Splash Delegate method(s)
+-(void) didFinishLoadingADWithPlacementID:(NSString *)placementID {
+    NSLog(@"AppDelegate::didFinishLoadingADWithPlacementID:%@", placementID);
+}
+
+-(void) didFailToLoadADWithPlacementID:(NSString*)placementID error:(NSError*)error {
+    NSLog(@"AppDelegate::didFailToLoadADWithPlacementID:%@ error:%@", placementID, error);
+}
+
+-(void)splashDidShowForPlacementID:(NSString*)placementID {
+    NSLog(@"AppDelegate::splashDidShowForPlacementID:%@", placementID);
+}
+
+-(void)splashDidClickForPlacementID:(NSString*)placementID {
+    NSLog(@"AppDelegate::splashDidClickForPlacementID:%@", placementID);
+}
+
+-(void)splashDidCloseForPlacementID:(NSString*)placementID {
+    NSLog(@"AppDelegate::splashDidCloseForPlacementID:%@", placementID);
 }
     @end

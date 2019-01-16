@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8D03FE5D215F1497005DC75D /* libGDTMobSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D03FE57215F1496005DC75D /* libGDTMobSDK.a */; };
 		8D03FE62215F1655005DC75D /* UPArpuInterstitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D03FE5F215F1655005DC75D /* UPArpuInterstitialViewController.m */; };
 		8D03FE63215F1655005DC75D /* UPArpuBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D03FE60215F1655005DC75D /* UPArpuBannerViewController.m */; };
 		8D03FE65215F177D005DC75D /* UpArpuGDTNativeAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D03FE64215F177D005DC75D /* UpArpuGDTNativeAdapter.framework */; };
@@ -60,6 +59,7 @@
 		8D73523821786B1500D8FAE6 /* libAppnextSDKCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D73522721786B1500D8FAE6 /* libAppnextSDKCore.a */; };
 		8D73523921786B1500D8FAE6 /* libAppnextSDKCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D73523521786B1500D8FAE6 /* libAppnextSDKCore.a */; };
 		8D73523A21786B1500D8FAE6 /* libAppnextNativeAdsSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D73523621786B1500D8FAE6 /* libAppnextNativeAdsSDK.a */; };
+		8D8A72BF21EF3BCB00815825 /* libGDTMobSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D8A72B521EF3BC800815825 /* libGDTMobSDK.a */; };
 		8D90878C21D4A0590070EDCE /* UpArpuUnityAdsInterstitialAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D90878721D4A0580070EDCE /* UpArpuUnityAdsInterstitialAdapter.framework */; };
 		8D90878D21D4A0590070EDCE /* UpArpuGDTSplashAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D90878821D4A0580070EDCE /* UpArpuGDTSplashAdapter.framework */; };
 		8D90878E21D4A0590070EDCE /* UpArpuTTSplashAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D90878921D4A0580070EDCE /* UpArpuTTSplashAdapter.framework */; };
@@ -383,15 +383,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		8D03FE54215F1494005DC75D /* GDTSplashAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTSplashAd.h; sourceTree = "<group>"; };
-		8D03FE55215F1494005DC75D /* GDTNativeExpressAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTNativeExpressAd.h; sourceTree = "<group>"; };
-		8D03FE56215F1494005DC75D /* GDTNativeExpressAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTNativeExpressAdView.h; sourceTree = "<group>"; };
-		8D03FE57215F1496005DC75D /* libGDTMobSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGDTMobSDK.a; sourceTree = "<group>"; };
-		8D03FE58215F1496005DC75D /* GDTSDKConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTSDKConfig.h; sourceTree = "<group>"; };
-		8D03FE59215F1496005DC75D /* GDTMobBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTMobBannerView.h; sourceTree = "<group>"; };
-		8D03FE5A215F1496005DC75D /* GDTMobInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTMobInterstitial.h; sourceTree = "<group>"; };
-		8D03FE5B215F1497005DC75D /* GDTNativeAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTNativeAd.h; sourceTree = "<group>"; };
-		8D03FE5C215F1497005DC75D /* GDTSDKDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTSDKDefines.h; sourceTree = "<group>"; };
 		8D03FE5E215F1655005DC75D /* UPArpuInterstitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPArpuInterstitialViewController.h; sourceTree = "<group>"; };
 		8D03FE5F215F1655005DC75D /* UPArpuInterstitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPArpuInterstitialViewController.m; sourceTree = "<group>"; };
 		8D03FE60215F1655005DC75D /* UPArpuBannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPArpuBannerViewController.m; sourceTree = "<group>"; };
@@ -480,6 +471,16 @@
 		8D73523421786B1500D8FAE6 /* AppnextNativeAdsSDKApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppnextNativeAdsSDKApi.h; sourceTree = "<group>"; };
 		8D73523521786B1500D8FAE6 /* libAppnextSDKCore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAppnextSDKCore.a; sourceTree = "<group>"; };
 		8D73523621786B1500D8FAE6 /* libAppnextNativeAdsSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAppnextNativeAdsSDK.a; sourceTree = "<group>"; };
+		8D8A72B521EF3BC800815825 /* libGDTMobSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGDTMobSDK.a; sourceTree = "<group>"; };
+		8D8A72B621EF3BC800815825 /* GDTSDKDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTSDKDefines.h; sourceTree = "<group>"; };
+		8D8A72B721EF3BC800815825 /* GDTNativeAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTNativeAd.h; sourceTree = "<group>"; };
+		8D8A72B821EF3BC900815825 /* GDTMobInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTMobInterstitial.h; sourceTree = "<group>"; };
+		8D8A72B921EF3BCA00815825 /* GDTSplashAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTSplashAd.h; sourceTree = "<group>"; };
+		8D8A72BA21EF3BCA00815825 /* GDTNativeExpressAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTNativeExpressAdView.h; sourceTree = "<group>"; };
+		8D8A72BB21EF3BCA00815825 /* GDTSDKConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTSDKConfig.h; sourceTree = "<group>"; };
+		8D8A72BC21EF3BCB00815825 /* GDTMobBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTMobBannerView.h; sourceTree = "<group>"; };
+		8D8A72BD21EF3BCB00815825 /* GDTNativeExpressAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTNativeExpressAd.h; sourceTree = "<group>"; };
+		8D8A72BE21EF3BCB00815825 /* GDTRewardVideoAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDTRewardVideoAd.h; path = "../../UPArpu SDK/up_sdk_ios/UpArpuSDK/NetworkFrameworks/GDT/GDTRewardVideoAd.h"; sourceTree = "<group>"; };
 		8D90878721D4A0580070EDCE /* UpArpuUnityAdsInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuUnityAdsInterstitialAdapter.framework; path = SDK/UpArpuUnityAdsInterstitialAdapter.framework; sourceTree = "<group>"; };
 		8D90878821D4A0580070EDCE /* UpArpuGDTSplashAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuGDTSplashAdapter.framework; path = SDK/UpArpuGDTSplashAdapter.framework; sourceTree = "<group>"; };
 		8D90878921D4A0580070EDCE /* UpArpuTTSplashAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuTTSplashAdapter.framework; path = SDK/UpArpuTTSplashAdapter.framework; sourceTree = "<group>"; };
@@ -1033,7 +1034,6 @@
 				DC6F97B2210340FF003C3F42 /* MessageUI.framework in Frameworks */,
 				DC6F97B0210340F6003C3F42 /* JavaScriptCore.framework in Frameworks */,
 				DC6F97AE210340EC003C3F42 /* CoreTelephony.framework in Frameworks */,
-				8D03FE5D215F1497005DC75D /* libGDTMobSDK.a in Frameworks */,
 				DC6F97AC210340DB003C3F42 /* CoreMedia.framework in Frameworks */,
 				DC6F97AA210340CF003C3F42 /* AVFoundation.framework in Frameworks */,
 				DC6F97A8210340C4003C3F42 /* AudioToolbox.framework in Frameworks */,
@@ -1051,6 +1051,7 @@
 				8D73523821786B1500D8FAE6 /* libAppnextSDKCore.a in Frameworks */,
 				DC83FA4F2101F08D003FFC3C /* MPUBMoatMobileAppKit.framework in Frameworks */,
 				DC83F80E2101EC68003FFC3C /* VungleSDK.framework in Frameworks */,
+				8D8A72BF21EF3BCB00815825 /* libGDTMobSDK.a in Frameworks */,
 				DC83F7F22101EC59003FFC3C /* GoogleMobileAds.framework in Frameworks */,
 				DC83F7F32101EC59003FFC3C /* InMobiSDK.framework in Frameworks */,
 				DC6F97A1210338F3003C3F42 /* FBAudienceNetwork.framework in Frameworks */,
@@ -1134,15 +1135,16 @@
 		8D03FE53215F145D005DC75D /* GDT */ = {
 			isa = PBXGroup;
 			children = (
-				8D03FE59215F1496005DC75D /* GDTMobBannerView.h */,
-				8D03FE5A215F1496005DC75D /* GDTMobInterstitial.h */,
-				8D03FE5B215F1497005DC75D /* GDTNativeAd.h */,
-				8D03FE55215F1494005DC75D /* GDTNativeExpressAd.h */,
-				8D03FE56215F1494005DC75D /* GDTNativeExpressAdView.h */,
-				8D03FE58215F1496005DC75D /* GDTSDKConfig.h */,
-				8D03FE5C215F1497005DC75D /* GDTSDKDefines.h */,
-				8D03FE54215F1494005DC75D /* GDTSplashAd.h */,
-				8D03FE57215F1496005DC75D /* libGDTMobSDK.a */,
+				8D8A72BC21EF3BCB00815825 /* GDTMobBannerView.h */,
+				8D8A72B821EF3BC900815825 /* GDTMobInterstitial.h */,
+				8D8A72B721EF3BC800815825 /* GDTNativeAd.h */,
+				8D8A72BD21EF3BCB00815825 /* GDTNativeExpressAd.h */,
+				8D8A72BA21EF3BCA00815825 /* GDTNativeExpressAdView.h */,
+				8D8A72BE21EF3BCB00815825 /* GDTRewardVideoAd.h */,
+				8D8A72BB21EF3BCA00815825 /* GDTSDKConfig.h */,
+				8D8A72B621EF3BC800815825 /* GDTSDKDefines.h */,
+				8D8A72B921EF3BCA00815825 /* GDTSplashAd.h */,
+				8D8A72B521EF3BC800815825 /* libGDTMobSDK.a */,
 			);
 			path = GDT;
 			sourceTree = "<group>";

@@ -163,4 +163,12 @@ NSString *const kBannerLoadingFailedNotification = @"banner_failed_to_load";
 -(void) bannerView:(UPArpuBannerView*)bannerView didCloseWithPlacementID:(NSString*)placementID {
     NSLog(@"UPArpuBannerViewController::bannerView:didCloseWithPlacementID:%@", placementID);
 }
+
+-(void) bannerView:(UPArpuBannerView *)bannerView didAutoRefreshWithPlacement:(NSString *)placementID {
+    NSLog(@"UPArpuBannerViewController::bannerView:didAutoRefreshWithPlacement:%@", placementID);
+}
+
+-(void) bannerView:(UPArpuBannerView *)bannerView failedToAutoRefreshWithPlacementID:(NSString *)placementID error:(NSError *)error {
+    NSLog(@"UPArpuBannerViewController::bannerView:failedToAutoRefreshWithPlacementID:%@ error:%@", placementID, error);
+}
 @end

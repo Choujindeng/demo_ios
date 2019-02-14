@@ -6,7 +6,7 @@
 //
 
 
-#define MTGSDKVersion @"4.0.0"
+#define MTGSDKVersion @"4.9.0"
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
@@ -123,8 +123,26 @@
 
 @property (nonatomic, assign) BOOL autoSetAudioCategory;
 
+/**
+ Set user GDPR authorization information
+ 
+ Set YES to indicate the user's data will be collected otherwise NO. Default to be YES.
+ 
+@abstract According to the GDPR, set method of this property must be called before "setAppID: ApiKey:", or by default will collect user's information.
+@Attention Do not mix the usage of `setConsentStatus:` and `setUserPrivateInfoType:agree` simultaneously in your app.
+ */
+@property (nonatomic, assign) BOOL consentStatus;
+
 - (void)setUserInfo:(nonnull MTGUserInfo *)userInfo;
 
+/**
+ Show the privacy consent authorization tips view.
+ 
+ @abstract This method must be called before "setAppID: ApiKey:", Or by default will collect user information.
+
+ @param callback A block that accepts a Bool and an NSError as input parameters. The NSError parameter which provides information on a failed consent update request, the Bool parameter which provides the updated consent status.
+ */
+- (void)showConsentInfoTips:(nullable void (^)(BOOL consentStatus, NSError *_Nullable error))callback;
 
 
 /**
@@ -137,7 +155,7 @@
  
  @param agree whether this type of data should be collect.
  */
-- (void)setUserPrivateInfoType:(MTGUserPrivateType)type agree:(BOOL)agree;
+- (void)setUserPrivateInfoType:(MTGUserPrivateType)type agree:(BOOL)agree DEPRECATED_MSG_ATTRIBUTE("Use `[MTGSDK sharedInstance] setConsentStatus:` instead");
 
 /**
  *
@@ -145,7 +163,7 @@
  
  @abstract You can get all status for current 'MTGUserPrivateType' by using this method.
  */
-- (MTGUserPrivateTypeInfo *_Nonnull)userPrivateInfo;
+- (MTGUserPrivateTypeInfo *_Nonnull)userPrivateInfo DEPRECATED_MSG_ATTRIBUTE("Use `[MTGSDK sharedInstance] consentStatus` instead");
 
 /**
  *
@@ -155,8 +173,7 @@
  Authorization tips view is added upon the "window”, don't cover it.
  @param block result block.
  */
-
-- (void)showUserPrivateInfoTips:(MTGUserPrivateInfoTipsResultBlock _Nonnull )block;
+- (void)showUserPrivateInfoTips:(MTGUserPrivateInfoTipsResultBlock _Nonnull )block DEPRECATED_MSG_ATTRIBUTE("Use `[MTGSDK sharedInstance] showConsentInfoTips:` instead");
 
 
 @end

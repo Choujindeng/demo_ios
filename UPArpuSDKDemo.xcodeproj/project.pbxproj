@@ -1008,6 +1008,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC83F7F52101EC59003FFC3C /* MTGSDK.framework in Frameworks */,
+				DC83F7F62101EC59003FFC3C /* MTGSDKReward.framework in Frameworks */,
 				8DE79C6921E2FC200072988B /* BUAdSDK.framework in Frameworks */,
 				8DE79C6C21E3395F0072988B /* libresolv.9.tbd in Frameworks */,
 				8D90879721D4A41C0070EDCE /* MobPowerNative.framework in Frameworks */,
@@ -1057,8 +1059,6 @@
 				DC6F97A1210338F3003C3F42 /* FBAudienceNetwork.framework in Frameworks */,
 				8D3A583421B28ADC0033C44C /* BaiduMobAdSDK.framework in Frameworks */,
 				DC83F7F42101EC59003FFC3C /* IronSource.framework in Frameworks */,
-				DC83F7F52101EC59003FFC3C /* MTGSDK.framework in Frameworks */,
-				DC83F7F62101EC59003FFC3C /* MTGSDKReward.framework in Frameworks */,
 				DC83F7ED2101EC49003FFC3C /* AppLovinSDK.framework in Frameworks */,
 				DC83F7EE2101EC49003FFC3C /* CHAMoatMobileAppKit.framework in Frameworks */,
 				DC83F8152101ECDB003FFC3C /* Tapjoy.framework in Frameworks */,

@@ -34,8 +34,10 @@ typedef NS_ENUM (NSInteger, MTGErrorCode) {
     kMTGErrorCodeFailedToShowCbp                                = 12930008,
     kMTGErrorCodeDailyLimit                                     = 12930009,
     kMTGErrorCodeLoadAdsTimeOut                                 = 12930010,
-
-    kMTGErrorCodeNoSupportPopupWindow                           = 12930011,
+    kMTGErrorCodeMaterialLoadFailed                             = 12930011,
+    
+    
+    kMTGErrorCodeNoSupportPopupWindow                           = 12940001,
 };
 
 @interface MTGErrorCodeConstant : NSObject

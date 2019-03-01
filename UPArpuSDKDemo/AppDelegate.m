@@ -43,9 +43,9 @@
     label.backgroundColor = [UIColor whiteColor];
     label.textAlignment = NSTextAlignmentCenter;
     
-    [self.window makeKeyAndVisible];
-    [[UPArpuAdManager sharedManager] loadADWithPlacementID:@"b5c248a48049cb" extra:nil customData:nil delegate:self window:[UIApplication sharedApplication].keyWindow containerView:label];
-    NSLog(@"application UPArpuAPI startWithAppID end");
+//    [self.window makeKeyAndVisible];
+//    [[UPArpuAdManager sharedManager] loadADWithPlacementID:@"b5c248a48049cb" extra:nil customData:nil delegate:self window:[UIApplication sharedApplication].keyWindow containerView:label];
+//    NSLog(@"application UPArpuAPI startWithAppID end");
     return YES;
 }
     

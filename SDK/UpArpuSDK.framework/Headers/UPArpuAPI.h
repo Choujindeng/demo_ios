@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+extern NSString *const UPADShowingErrorDomain;
 
 extern NSString *const UPADLoadingErrorDomain;
 extern NSInteger const UPADLoadingErrorCodePlacementStrategyInvalidResponse;

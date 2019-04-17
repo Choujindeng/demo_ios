@@ -57,6 +57,7 @@
 		8D73523821786B1500D8FAE6 /* libAppnextSDKCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D73522721786B1500D8FAE6 /* libAppnextSDKCore.a */; };
 		8D73523921786B1500D8FAE6 /* libAppnextSDKCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D73523521786B1500D8FAE6 /* libAppnextSDKCore.a */; };
 		8D73523A21786B1500D8FAE6 /* libAppnextNativeAdsSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D73523621786B1500D8FAE6 /* libAppnextNativeAdsSDK.a */; };
+		8D8058CC2267612A003468B7 /* UpArpuTTNativeAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D8058CB2267612A003468B7 /* UpArpuTTNativeAdapter.framework */; };
 		8D8DF6BC2227F1F500C5F617 /* UpArpuTTRewardedVideoAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D8DF6BB2227F1F400C5F617 /* UpArpuTTRewardedVideoAdapter.framework */; };
 		8D90878C21D4A0590070EDCE /* UpArpuUnityAdsInterstitialAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D90878721D4A0580070EDCE /* UpArpuUnityAdsInterstitialAdapter.framework */; };
 		8D90878D21D4A0590070EDCE /* UpArpuGDTSplashAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D90878821D4A0580070EDCE /* UpArpuGDTSplashAdapter.framework */; };
@@ -469,6 +470,7 @@
 		8D73523421786B1500D8FAE6 /* AppnextNativeAdsSDKApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppnextNativeAdsSDKApi.h; sourceTree = "<group>"; };
 		8D73523521786B1500D8FAE6 /* libAppnextSDKCore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAppnextSDKCore.a; sourceTree = "<group>"; };
 		8D73523621786B1500D8FAE6 /* libAppnextNativeAdsSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAppnextNativeAdsSDK.a; sourceTree = "<group>"; };
+		8D8058CB2267612A003468B7 /* UpArpuTTNativeAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuTTNativeAdapter.framework; path = SDK/UpArpuTTNativeAdapter.framework; sourceTree = "<group>"; };
 		8D8DF6BB2227F1F400C5F617 /* UpArpuTTRewardedVideoAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuTTRewardedVideoAdapter.framework; path = SDK/UpArpuTTRewardedVideoAdapter.framework; sourceTree = "<group>"; };
 		8D90878721D4A0580070EDCE /* UpArpuUnityAdsInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuUnityAdsInterstitialAdapter.framework; path = SDK/UpArpuUnityAdsInterstitialAdapter.framework; sourceTree = "<group>"; };
 		8D90878821D4A0580070EDCE /* UpArpuGDTSplashAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuGDTSplashAdapter.framework; path = SDK/UpArpuGDTSplashAdapter.framework; sourceTree = "<group>"; };
@@ -1008,6 +1010,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D8058CC2267612A003468B7 /* UpArpuTTNativeAdapter.framework in Frameworks */,
 				8D8DF6BC2227F1F500C5F617 /* UpArpuTTRewardedVideoAdapter.framework in Frameworks */,
 				DC83F7F52101EC59003FFC3C /* MTGSDK.framework in Frameworks */,
 				DC83F7F62101EC59003FFC3C /* MTGSDKReward.framework in Frameworks */,
@@ -1337,6 +1340,7 @@
 		8DE56EF0209C711D002A1427 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8D8058CB2267612A003468B7 /* UpArpuTTNativeAdapter.framework */,
 				8D8DF6BB2227F1F400C5F617 /* UpArpuTTRewardedVideoAdapter.framework */,
 				8DE79C6B21E3395F0072988B /* libresolv.9.tbd */,
 				8D90879521D4A41B0070EDCE /* MobPowerNative.framework */,

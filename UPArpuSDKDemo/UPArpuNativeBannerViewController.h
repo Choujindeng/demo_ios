@@ -1,12 +1,13 @@
 //
-//  UPADShowViewController.h
+//  UPArpuNativeBannerViewController.h
 //  UpArpuSDKDemo
 //
-//  Created by Martin Lau on 17/04/2018.
-//  Copyright © 2018 Martin Lau. All rights reserved.
+//  Created by Martin Lau on 2019/4/10.
+//  Copyright © 2019 Martin Lau. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
+
 extern NSString *const kMPPlacement;
 extern NSString *const kInmobiPlacement;
 extern NSString *const kFacebookPlacement;
@@ -23,7 +24,6 @@ extern NSString *const kAppnextPlacement;
 extern NSString *const kTTFeedPlacementName;
 extern NSString *const kTTDrawPlacementName;
 extern NSString *const kAllPlacementName;
-@interface UPADShowViewController : UIViewController
+@interface UPArpuNativeBannerViewController : UIViewController
 -(instancetype) initWithPlacementName:(NSString*)name;
-+(NSDictionary<NSString*, NSString*>*)nativePlacementIDs;
 @end

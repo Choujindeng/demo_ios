@@ -141,26 +141,30 @@ static NSString *const kAllPlacementID = @"b5b0f5663c6e4a";
     self = [super initWithNibName:nil bundle:nil];
     if (self != nil) {
         _name = name;
-        _placementIDs = @{
-                          kMPPlacement:kMPPlacementID,
-                          kMintegralPlacement:kMintegralPlacementID,
-                          kAllPlacementName:kAllPlacementID,
-                          kInmobiPlacement:kInmobiPlacementID,
-                          kFacebookPlacement:kFacebookPlacementID,
-                          kAdMobPlacement:kAdMobPlacementID,
-                          kMopubPlacementName:kMopubPlacementID,
-                          kMopubVideoPlacementName:kMopubVideoPlacementID,
-                          kApplovinPlacement:kApplovinPlacementID,
-                          kFlurryPlacement:kFlurryPlacementID,
-                          kGDTPlacement:kGDTPlacementID,
-                          kGDTTemplatePlacement:kGDTTemplatePlacementID,
-                          kYeahmobiPlacement:kYeahmobiPlacementID,
-                          kAppnextPlacement:kAppnextPlacementID,
-                          kTTFeedPlacementName:kTTFeedPlacementID,
-                          kTTDrawPlacementName:kTTDrawPlacementID
-                          };
+        _placementIDs = [UPADShowViewController nativePlacementIDs];
     }
     return self;
+}
+
++(NSDictionary<NSString*, NSString*>*)nativePlacementIDs {
+    return @{
+             kMPPlacement:kMPPlacementID,
+             kMintegralPlacement:kMintegralPlacementID,
+             kAllPlacementName:kAllPlacementID,
+             kInmobiPlacement:kInmobiPlacementID,
+             kFacebookPlacement:kFacebookPlacementID,
+             kAdMobPlacement:kAdMobPlacementID,
+             kMopubPlacementName:kMopubPlacementID,
+             kMopubVideoPlacementName:kMopubVideoPlacementID,
+             kApplovinPlacement:kApplovinPlacementID,
+             kFlurryPlacement:kFlurryPlacementID,
+             kGDTPlacement:kGDTPlacementID,
+             kGDTTemplatePlacement:kGDTTemplatePlacementID,
+             kYeahmobiPlacement:kYeahmobiPlacementID,
+             kAppnextPlacement:kAppnextPlacementID,
+             kTTFeedPlacementName:kTTFeedPlacementID,
+             kTTDrawPlacementName:kTTDrawPlacementID
+             };
 }
 
 - (void)viewDidLoad {

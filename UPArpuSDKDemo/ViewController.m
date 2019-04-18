@@ -13,11 +13,13 @@
 #import "UPArpuRewardedVideoVideoViewController.h"
 #import "UPArpuBannerViewController.h"
 #import "UPArpuInterstitialViewController.h"
-
+#import "UPArpuNativeBannerViewController.h"
+#import "UPArpuNativeBannerWrapper.h"
+#import "UPArpuNativeSplashWrapper.h"
 @import UpArpuSDK;
 @import UpArpuRewardedVideo;
 @import UpArpuSplash;
-@interface ViewController ()<UITableViewDelegate, UITableViewDataSource, UPArpuSplashDelegate>
+@interface ViewController ()<UITableViewDelegate, UITableViewDataSource, UPArpuSplashDelegate, UPArpuNativeBannerDelegate, UPArpuNativeSplashDelegate>
     @property(nonatomic, readonly) UITableView *tableView;
     @property(nonatomic, readonly) NSArray<NSArray<NSString*>*>* placementNames;
     @end
@@ -30,10 +32,13 @@ static NSString *const kCellIdentifier = @"cell";
                         @[kUnityAdsPlacementName, kFacebookPlacement, kAdMobPlacement, kInmobiPlacement, kFlurryPlacement, kApplovinPlacement, kMintegralPlacement, kMintegralVideoPlacement, kMopubPlacementName, kGDTPlacement, kChartboostPlacementName, kTapjoyPlacementName, kIronsourcePlacementName, kVunglePlacementName, kAdcolonyPlacementName, kTTPlacementName, kTTVideoPlacement, kOnewayPlacementName, kYeahmobiPlacement, kAppnextPlacement, kBaiduPlacement, kAllPlacementName],
                         @[kFacebookPlacement, kAdMobPlacement, kInmobiPlacement, kFlurryPlacement, kApplovinPlacement, kGDTPlacement, kMopubPlacementName, kTTPlacementName, kYeahmobiPlacement, kAppnextPlacement, kBaiduPlacement, kAllPlacementName],
                         @[kFacebookPlacement, kAdMobPlacement, kInmobiPlacement, kFlurryPlacement, kApplovinPlacement, kMintegralPlacement, kMopubPlacementName, kGDTPlacement, kChartboostPlacementName, kTapjoyPlacementName, kIronsourcePlacementName, kVunglePlacementName, kAdcolonyPlacementName, kUnityAdsPlacementName, kTTPlacementName, kOnewayPlacementName, kYeahmobiPlacement, kAppnextPlacement, kBaiduPlacement, kAllPlacementName],
-                        @[kTTFeedPlacementName, kTTDrawPlacementName, kMPPlacement, kFacebookPlacement, kAdMobPlacement, kInmobiPlacement, kFlurryPlacement, kApplovinPlacement, kMintegralPlacement, kMopubPlacementName, kGDTPlacement, kGDTTemplatePlacement, kYeahmobiPlacement, kAppnextPlacement, kAllPlacementName]];
+                        @[kTTFeedPlacementName, kTTDrawPlacementName, kMPPlacement, kFacebookPlacement, kAdMobPlacement, kInmobiPlacement, kFlurryPlacement, kApplovinPlacement, kMintegralPlacement, kMopubPlacementName, kGDTPlacement, kGDTTemplatePlacement, kYeahmobiPlacement, kAppnextPlacement, kAllPlacementName],
+                        @[kTTFeedPlacementName, kTTDrawPlacementName, kMPPlacement, kFacebookPlacement, kAdMobPlacement, kInmobiPlacement, kFlurryPlacement, kApplovinPlacement, kMintegralPlacement, kMopubPlacementName, kGDTPlacement, kGDTTemplatePlacement, kYeahmobiPlacement, kAppnextPlacement, kAllPlacementName],
+                        @[kTTFeedPlacementName, kMPPlacement, kFacebookPlacement, kAdMobPlacement, kApplovinPlacement, kMintegralPlacement, kGDTPlacement, kYeahmobiPlacement, kAppnextPlacement, kAllPlacementName]];
     
     _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kCellIdentifier];
+    _tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     _tableView.dataSource = self;
     _tableView.delegate = self;
     [self.view addSubview:_tableView];
@@ -63,7 +68,7 @@ static NSString *const kCellIdentifier = @"cell";
 }
 
 -(NSString*) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return @[@"Splash", @"Interstitial", @"Banner", @"RV", @"Native"][section];
+    return @[@"Splash", @"Interstitial", @"Banner", @"RV", @"Native", @"Native Banner", @"Native Splash"][section];
 }
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -77,7 +82,13 @@ static NSString *const kCellIdentifier = @"cell";
     if ([indexPath section] == 3) {
         UPArpuRewardedVideoVideoViewController *tVC = [[UPArpuRewardedVideoVideoViewController alloc] initWithPlacementName:_placementNames[[indexPath section]][[indexPath row]]];
         [self.navigationController pushViewController:tVC animated:YES];
-    } else if ([indexPath section] == 4) {        UPADShowViewController *tVC = [[UPADShowViewController alloc] initWithPlacementName: _placementNames[[indexPath section]][[indexPath row]]];
+    } else if ([indexPath section] == 6) {
+        [UPArpuNativeSplashWrapper loadNativeSplashAdWithPlacementID:[UPADShowViewController nativePlacementIDs][_placementNames[[indexPath section]][[indexPath row]]] extra:@{kExtraInfoNativeAdTypeKey:@(UPArpuGDTNativeAdTypeSelfRendering), kExtraInfoNativeAdSizeKey:[NSValue valueWithCGSize:CGSizeMake(CGRectGetWidth(self.view.bounds) - 30.0f, 400.0f)], kUPArpuExtraNativeImageSizeKey:kUPArpuExtraNativeImageSize690_388, kUPArpuNativeSplashShowingExtraCountdownIntervalKey:@3} customData:nil delegate:self];
+    } else if ([indexPath section] == 5) {
+        UPArpuNativeBannerViewController *tVC = [[UPArpuNativeBannerViewController alloc] initWithPlacementName: _placementNames[[indexPath section]][[indexPath row]]];
+        [self.navigationController pushViewController:tVC animated:YES];
+    } else if ([indexPath section] == 4) {
+        UPADShowViewController *tVC = [[UPADShowViewController alloc] initWithPlacementName: _placementNames[[indexPath section]][[indexPath row]]];
         [self.navigationController pushViewController:tVC animated:YES];
     } else if ([indexPath section] == 2) {
         UPArpuBannerViewController *tVC = [[UPArpuBannerViewController alloc] initWithPlacementName:_placementNames[[indexPath section]][[indexPath row]]];
@@ -95,24 +106,51 @@ static NSString *const kCellIdentifier = @"cell";
     }
 }
 
+#pragma mark - native splash delegate(s)
+-(void) finishLoadingNativeSplashAdForPlacementID:(NSString*)placementID {
+    NSLog(@"ViewController::finishLoadingNativeSplashAdForPlacementID:%@", placementID);
+    CGFloat width = UIDeviceOrientationIsPortrait([UIDevice currentDevice].orientation) ? CGRectGetWidth([UIScreen mainScreen].bounds) : 100.0f;
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(UIDeviceOrientationIsPortrait([UIDevice currentDevice].orientation) ? .0f : CGRectGetWidth(self.view.bounds) - width, .0f, width, UIDeviceOrientationIsPortrait([UIDevice currentDevice].orientation) ? 79.0f : CGRectGetHeight([UIScreen mainScreen].bounds))];
+    label.textAlignment = NSTextAlignmentCenter;
+    label.backgroundColor = [UIColor whiteColor];
+    label.text = @"Joypac";
+    [UPArpuNativeSplashWrapper showNativeSplashAdWithPlacementID:placementID extra:@{kUPArpuNatievSplashShowingExtraStyleKey:UIDeviceOrientationIsPortrait([UIDevice currentDevice].orientation) ? kUPArpuNativeSplashShowingExtraStylePortrait : kUPArpuNativeSplashShowingExtraStyleLandscape, kUPArpuNativeSplashShowingExtraCountdownIntervalKey:@3, kUPArpuNativeSplashShowingExtraContainerViewKey:label} delegate:self];
+}
+
+-(void) failedToLoadNativeSplashAdForPlacementID:(NSString*)placementID error:(NSError*)error {
+    NSLog(@"ViewController::failedToLoadNativeSplashAdForPlacementID:%@ error:%@", placementID, error);
+}
+
+-(void) didShowNativeSplashAdForPlacementID:(NSString*)placementID {
+    NSLog(@"ViewController::didShowNativeSplashAdForPlacementID:%@", placementID);
+}
+
+-(void) didClickNaitveSplashAdForPlacementID:(NSString*)placementID {
+    NSLog(@"ViewController::didClickNaitveSplashAdForPlacementID:%@", placementID);
+}
+
+-(void) didCloseNativeSplashAdForPlacementID:(NSString*)placementID {
+    NSLog(@"ViewController::didCloseNativeSplashAdForPlacementID:%@", placementID);
+}
+
 #pragma mark - UPArpu Splash Delegate method(s)
 -(void) didFinishLoadingADWithPlacementID:(NSString *)placementID {
-    NSLog(@"AppDelegate::didFinishLoadingADWithPlacementID:%@", placementID);
+    NSLog(@"ViewController::didFinishLoadingADWithPlacementID:%@", placementID);
 }
 
 -(void) didFailToLoadADWithPlacementID:(NSString*)placementID error:(NSError*)error {
-    NSLog(@"AppDelegate::didFailToLoadADWithPlacementID:%@ error:%@", placementID, error);
+    NSLog(@"ViewController::didFailToLoadADWithPlacementID:%@ error:%@", placementID, error);
 }
 
 -(void)splashDidShowForPlacementID:(NSString*)placementID {
-    NSLog(@"AppDelegate::splashDidShowForPlacementID:%@", placementID);
+    NSLog(@"ViewController::splashDidShowForPlacementID:%@", placementID);
 }
 
 -(void)splashDidClickForPlacementID:(NSString*)placementID {
-    NSLog(@"AppDelegate::splashDidClickForPlacementID:%@", placementID);
+    NSLog(@"ViewController::splashDidClickForPlacementID:%@", placementID);
 }
 
 -(void)splashDidCloseForPlacementID:(NSString*)placementID {
-    NSLog(@"AppDelegate::splashDidCloseForPlacementID:%@", placementID);
+    NSLog(@"ViewController::splashDidCloseForPlacementID:%@", placementID);
 }
     @end

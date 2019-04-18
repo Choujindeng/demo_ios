@@ -112,7 +112,6 @@ static CGFloat kStarDimension = 12.0f;
     [self addSubview:_titleLabel];
     
     _textLabel = [UILabel autolayoutLabelFont:[UIFont systemFontOfSize:12.0f] textColor:[UIColor blackColor]];
-    _textLabel.numberOfLines = 2;
     [self addSubview:_textLabel];
     
     _starRatingView = [UPArpuStarRatingView autolayoutView];
@@ -151,15 +150,15 @@ static CGFloat kStarDimension = 12.0f;
     [self addConstraintsWithVisualFormat:@"V:|-5-[_iconImageView]-5-|" options:0 metrics:nil views:viewsDict];
     [self addConstraintWithItem:_iconImageView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:_iconImageView attribute:NSLayoutAttributeHeight multiplier:1.0f constant:.0f];
     
-    [self addConstraintsWithVisualFormat:@"[_ctaLabel(76)]-22-|" options:0 metrics:nil views:viewsDict];
+    [self addConstraintsWithVisualFormat:@"[_titleLabel]->=5-[_ctaLabel(76)]-22-|" options:0 metrics:nil views:viewsDict];
     [self addConstraintsWithVisualFormat:@"V:[_ctaLabel(28)]" options:0 metrics:nil views:viewsDict];
     [self addConstraintWithItem:_ctaLabel attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterY multiplier:1.0f constant:.0f];
     _ctaLabel.layer.cornerRadius = 14.0f;
     _ctaLabel.hidden = [self.nativeAd.ctaText length] == 0;
     [self addConstraintsWithVisualFormat:@"[hAnchoringView]-15-[_textLabel]" options:0 metrics:nil views:viewsDict];
     [self addConstraintsWithVisualFormat:@"V:|-10-[_titleLabel]" options:0 metrics:nil views:viewsDict];
-    [self addConstraintsWithVisualFormat:@"[_titleLabel]-22-|" options:0 metrics:nil views:viewsDict];
     [self addConstraintsWithVisualFormat:[NSString stringWithFormat:@"[_textLabel]-spacing-%@", [self.nativeAd.ctaText length] > 0 ? @"[_ctaLabel]" : @"|"] options:0 metrics:@{@"spacing":@([self.nativeAd.ctaText length] > 0 ? 5.0f : 22.0f)} views:viewsDict];
+    [self addConstraintsWithVisualFormat:@"[_advertiserLabel]->=5-[_ctaLabel]" options:0 metrics:nil views:viewsDict];
     
     NSMutableArray<UIView*> *vViews = [NSMutableArray arrayWithObjects:_textLabel, nil];
     if ([self.nativeAd.advertiser length] > 0) { [vViews addObject:_advertiserLabel]; }
@@ -280,7 +279,7 @@ static CGFloat kStarDimension = 12.0f;
         [self addSubview:button];
     }
     
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(2.0f, 2.0f, 24.0f, 11.0f)];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(.0f, .0f, 24.0f, 11.0f)];
     label.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:.3f];
     label.text = @"AD";
     label.textAlignment = NSTextAlignmentCenter;

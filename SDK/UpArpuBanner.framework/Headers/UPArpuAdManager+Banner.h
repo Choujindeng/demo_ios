@@ -7,7 +7,8 @@
 //
 
 #import <UpArpuSDK/UpArpuSDK.h>
-
+//Supported by Nend banner only
+extern NSString *const kUPArpuBannerLoadingExtraParameters;
 @class UPArpuBannerView;
 @interface UPArpuAdManager (Banner)
 -(BOOL) bannerAdReadyForPlacementID:(NSString*)placementID;

@@ -11,6 +11,11 @@
 //Currently only GDT supports these two keys.
 extern NSString *const kExtraInfoNativeAdSizeKey;//the value has to be an NSValue wrapped CGSize object.
 extern NSString *const kExtraInfoNativeAdTypeKey;//The value is requried for GDT native ad and has to be an NSNumber warpped UPArpuGDTNativeAdType(NSInteger); Pass @(UPArpuGDTNativeAdTypeTemplate)(@1) for template ads and @(UPArpuGDTNativeAdTypeSelfRendering)(@2) for self rendering ads.
+//Following keys are supported by nend only
+extern NSString *const kExtraInfoNativeAdUserIDKey;
+extern NSString *const kExtraInfoNativeAdMediationNameKey;
+extern NSString *const kExtraInfoNaitveAdUserFeatureKey;
+extern NSString *const kExtraInfoNativeAdLocationEnabledFlagKey;
 typedef NS_ENUM(NSInteger, UPArpuGDTNativeAdType) {
     UPArpuGDTNativeAdTypeTemplate = 1,
     UPArpuGDTNativeAdTypeSelfRendering = 2

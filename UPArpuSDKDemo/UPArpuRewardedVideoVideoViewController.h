@@ -28,6 +28,8 @@ extern NSString *const kOnewayPlacementName;
 extern NSString *const kYeahmobiPlacement;
 extern NSString *const kAppnextPlacement;
 extern NSString *const kBaiduPlacement;
+extern NSString *const kNendPlacement;
+extern NSString *const kMaioPlacement;
 @interface UPArpuRewardedVideoVideoViewController : UIViewController
 -(instancetype) initWithPlacementName:(NSString*)name;
 @end

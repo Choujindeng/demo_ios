@@ -30,6 +30,10 @@ extern NSString *const kOnewayPlacementName;
 extern NSString *const kYeahmobiPlacement;
 extern NSString *const kAppnextPlacement;
 extern NSString *const kBaiduPlacement;
+extern NSString *const kNendPlacement;
+extern NSString *const kNendInterstitialVideoPlacement;
+extern NSString *const kNendFullScreenInterstitialPlacement;
+extern NSString *const kMaioPlacement;
 @interface UPArpuInterstitialViewController : UIViewController
 -(instancetype) initWithPlacementName:(NSString*)name;
 @end

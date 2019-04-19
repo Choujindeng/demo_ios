@@ -22,6 +22,7 @@ static NSString *const kAllPlacementID = @"b5bacaccb61c29";
 static NSString *const kYeahmobiPlacementID = @"b5bc7fb61b3213";
 static NSString *const kAppnextPlacementID = @"b5bc7fb78288e9";
 static NSString *const kBaiduPlacementID = @"b5c04dda229f7e";
+static NSString *const kNendPlacementID = @"b5cb96d97400b3";
 
 NSString *const kBannerShownNotification = @"banner_shown";
 NSString *const kBannerLoadingFailedNotification = @"banner_failed_to_load";
@@ -53,7 +54,8 @@ NSString *const kBannerLoadingFailedNotification = @"banner_failed_to_load";
                           kAllPlacementName:kAllPlacementID,
                           kYeahmobiPlacement:kYeahmobiPlacementID,
                           kAppnextPlacement:kAppnextPlacementID,
-                          kBaiduPlacement:kBaiduPlacementID
+                          kBaiduPlacement:kBaiduPlacementID,
+                          kNendPlacement:kNendPlacementID,
                           };
     }
     return self;

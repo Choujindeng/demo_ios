@@ -12,6 +12,8 @@
 
 NSString *const kMintegralVideoPlacement = @"Mintegral(Video)";
 NSString *const kTTVideoPlacement = @"TT(Video)";
+NSString *const kNendInterstitialVideoPlacement = @"Nend(Video)";
+NSString *const kNendFullScreenInterstitialPlacement = @"Nend(Full Screen)";
 
 static NSString *const kGDTPlacementID = @"b5bacad8ea3036";
 static NSString *const kTTPlacementID = @"b5bacad7373b89";
@@ -35,6 +37,10 @@ static NSString *const kYeahmobiPlacementID = @"b5bc7fb8d54acc";
 static NSString *const kAppnextPlacementID = @"b5bc7fb9cbfff1";
 static NSString *const kBaiduPlacementID = @"b5c04ddc6ba49e";
 static NSString *const kUnityAdsPlacementID = @"b5c21a055a51ab";
+static NSString *const kNendPlacementID = @"b5cb96db9b3b0f";
+static NSString *const kNendVideoPlacementID = @"b5cb96dd930c57";
+static NSString *const kNendFullScreenPlacementID = @"b5cb96df0f1914";
+static NSString *const kMaioPlacementID = @"b5cb96cf795c4b";
 
 @interface UPArpuInterstitialViewController ()<UPArpuInterstitialDelegate>
 @property(nonatomic, readonly) NSString *name;
@@ -73,7 +79,11 @@ static NSString *const kUnityAdsPlacementID = @"b5c21a055a51ab";
                           kYeahmobiPlacement:kYeahmobiPlacementID,
                           kAppnextPlacement:kAppnextPlacementID,
                           kBaiduPlacement:kBaiduPlacementID,
-                          kUnityAdsPlacementName:kUnityAdsPlacementID
+                          kUnityAdsPlacementName:kUnityAdsPlacementID,
+                          kNendPlacement:kNendPlacementID,
+                          kNendInterstitialVideoPlacement:kNendVideoPlacementID,
+                          kNendFullScreenInterstitialPlacement:kNendFullScreenPlacementID,
+                          kMaioPlacement:kMaioPlacementID
                           };
     }
     return self;

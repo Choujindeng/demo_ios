@@ -35,6 +35,8 @@ NSString *const kUnityAdsPlacementName = @"Unity Ads";
 NSString *const kTTPlacementName = @"TT";
 NSString *const kOnewayPlacementName = @"Oneway";
 NSString *const kBaiduPlacement = @"Baidu";
+NSString *const kNendPlacement = @"Nend";
+NSString *const kMaioPlacement = @"Maio";
 
 static NSString *const kPlacement0ID = @"b5ad9ba61dcb39";
 static NSString *const kInmobiPlacementID = @"b5b44a03522f92";
@@ -58,6 +60,8 @@ static NSString *const kYeahmobiPlacementID = @"b5bc7fb44d382f";
 static NSString *const kAppnextPlacementID = @"b5bc7fb4fd15e6";
 static NSString *const kOnewayPlacementID = @"b5baf668a68f6b";
 static NSString *const kBaiduPlacementID = @"b5c04dd81c1af3";
+static NSString *const kNendPlacementID = @"b5cb96d6f68fdb";
+static NSString *const kMaioPlacementID = @"b5cb96ce0b931e";
 
 @implementation UPArpuRewardedVideoVideoViewController
 -(instancetype) initWithPlacementName:(NSString*)name {
@@ -70,9 +74,9 @@ static NSString *const kBaiduPlacementID = @"b5c04dd81c1af3";
                           kInmobiPlacement:kInmobiPlacementID,
                           kFacebookPlacement:kFacebookPlacementID,
                           kAdMobPlacement:kAdMobPlacementID,
+                          kGDTPlacement:kGDTPlacementID,
                           kMopubPlacementName:kMopubPlacementID,
                           kMopubVideoPlacementName:kMopubVideoPlacementID,
-                          kGDTPlacement:kGDTPlacementID,
                           kApplovinPlacement:kApplovinPlacementID,
                           kTapjoyPlacementName:kTapjoyRVPlacementID,
                           kChartboostPlacementName:kChartboostRVPlacementID,
@@ -85,7 +89,9 @@ static NSString *const kBaiduPlacementID = @"b5c04dd81c1af3";
                           kOnewayPlacementName:kOnewayPlacementID,
                           kYeahmobiPlacement:kYeahmobiPlacementID,
                           kAppnextPlacement:kAppnextPlacementID,
-                          kBaiduPlacement:kBaiduPlacementID
+                          kBaiduPlacement:kBaiduPlacementID,
+                          kNendPlacement:kNendPlacementID,
+                          kMaioPlacement:kMaioPlacementID
                           };
     }
     return self;

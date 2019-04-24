@@ -28,6 +28,7 @@ NSString *const kAppnextPlacement = @"Appnext";
 NSString *const kTTFeedPlacementName = @"TT(Feed)";
 NSString *const kTTDrawPlacementName = @"TT(Draw)";
 NSString *const kAllPlacementName = @"All";
+NSString *const kNendVideoPlacement = @"Nend(Video)";
 
 static NSString *const kPlacement0ID = @"b5ad9ba61dcb39";
 static NSString *const kInmobiPlacementID = @"b5b0f553483724";
@@ -46,6 +47,8 @@ static NSString *const kMPPlacementID = @"b5c2084d12aca4";
 static NSString *const kTTFeedPlacementID = @"b5c2c6d50e7f44";
 static NSString *const kTTDrawPlacementID = @"b5c2c6d62b9d65";
 static NSString *const kAllPlacementID = @"b5b0f5663c6e4a";
+static NSString *const kNendPlacementID = @"b5cb96d44c0c5f";
+static NSString *const kNendVideoPlacementID = @"b5cb96d5291e93";
 
 
 #ifdef NATIVE_INTEGRATED
@@ -141,26 +144,32 @@ static NSString *const kAllPlacementID = @"b5b0f5663c6e4a";
     self = [super initWithNibName:nil bundle:nil];
     if (self != nil) {
         _name = name;
-        _placementIDs = @{
-                          kMPPlacement:kMPPlacementID,
-                          kMintegralPlacement:kMintegralPlacementID,
-                          kAllPlacementName:kAllPlacementID,
-                          kInmobiPlacement:kInmobiPlacementID,
-                          kFacebookPlacement:kFacebookPlacementID,
-                          kAdMobPlacement:kAdMobPlacementID,
-                          kMopubPlacementName:kMopubPlacementID,
-                          kMopubVideoPlacementName:kMopubVideoPlacementID,
-                          kApplovinPlacement:kApplovinPlacementID,
-                          kFlurryPlacement:kFlurryPlacementID,
-                          kGDTPlacement:kGDTPlacementID,
-                          kGDTTemplatePlacement:kGDTTemplatePlacementID,
-                          kYeahmobiPlacement:kYeahmobiPlacementID,
-                          kAppnextPlacement:kAppnextPlacementID,
-                          kTTFeedPlacementName:kTTFeedPlacementID,
-                          kTTDrawPlacementName:kTTDrawPlacementID
-                          };
+        _placementIDs = [UPADShowViewController nativePlacementIDs];
     }
     return self;
+}
+
++(NSDictionary<NSString*, NSString*>*)nativePlacementIDs {
+    return @{
+             kMPPlacement:kMPPlacementID,
+             kMintegralPlacement:kMintegralPlacementID,
+             kAllPlacementName:kAllPlacementID,
+             kInmobiPlacement:kInmobiPlacementID,
+             kFacebookPlacement:kFacebookPlacementID,
+             kAdMobPlacement:kAdMobPlacementID,
+             kMopubPlacementName:kMopubPlacementID,
+             kMopubVideoPlacementName:kMopubVideoPlacementID,
+             kApplovinPlacement:kApplovinPlacementID,
+             kFlurryPlacement:kFlurryPlacementID,
+             kGDTPlacement:kGDTPlacementID,
+             kGDTTemplatePlacement:kGDTTemplatePlacementID,
+             kYeahmobiPlacement:kYeahmobiPlacementID,
+             kAppnextPlacement:kAppnextPlacementID,
+             kTTFeedPlacementName:kTTFeedPlacementID,
+             kTTDrawPlacementName:kTTDrawPlacementID,
+             kNendPlacement:kNendPlacementID,
+             kNendVideoPlacement:kNendVideoPlacementID
+             };
 }
 
 - (void)viewDidLoad {

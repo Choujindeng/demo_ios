@@ -15,5 +15,7 @@
 -(void) didClickNativeAdInAdView:(UPArpuNativeADView*)adView placementID:(NSString*)placementID;
 -(void) didStartPlayingVideoInAdView:(UPArpuNativeADView*)adView placementID:(NSString*)placementID;
 -(void) didEndPlayingVideoInAdView:(UPArpuNativeADView*)adView placementID:(NSString*)placementID;
+-(void) didEnterFullScreenVideoInAdView:(UPArpuNativeADView*)adView placementID:(NSString*)placementID;
+-(void) didExitFullScreenVideoInAdView:(UPArpuNativeADView*)adView placementID:(NSString*)placementID;
 @end
 #endif /* UPArpuNativeADDelegate_h */

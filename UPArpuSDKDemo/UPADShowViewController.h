@@ -23,6 +23,10 @@ extern NSString *const kAppnextPlacement;
 extern NSString *const kTTFeedPlacementName;
 extern NSString *const kTTDrawPlacementName;
 extern NSString *const kAllPlacementName;
+extern NSString *const kNendPlacement;
+extern NSString *const kNendVideoPlacement;
+extern NSString *const kMaioPlacement;
 @interface UPADShowViewController : UIViewController
 -(instancetype) initWithPlacementName:(NSString*)name;
-    @end
++(NSDictionary<NSString*, NSString*>*)nativePlacementIDs;
+@end

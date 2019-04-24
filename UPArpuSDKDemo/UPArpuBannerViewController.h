@@ -27,6 +27,7 @@ extern NSString *const kTTPlacementName;
 extern NSString *const kYeahmobiPlacement;
 extern NSString *const kAppnextPlacement;
 extern NSString *const kBaiduPlacement;
+extern NSString *const kNendPlacement;
 @interface UPArpuBannerViewController : UIViewController
 -(instancetype) initWithPlacementName:(NSString*)name;
 @end

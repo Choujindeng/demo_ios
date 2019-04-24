@@ -57,6 +57,40 @@
 		8D73523821786B1500D8FAE6 /* libAppnextSDKCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D73522721786B1500D8FAE6 /* libAppnextSDKCore.a */; };
 		8D73523921786B1500D8FAE6 /* libAppnextSDKCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D73523521786B1500D8FAE6 /* libAppnextSDKCore.a */; };
 		8D73523A21786B1500D8FAE6 /* libAppnextNativeAdsSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D73523621786B1500D8FAE6 /* libAppnextNativeAdsSDK.a */; };
+		8D8058CC2267612A003468B7 /* UpArpuTTNativeAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D8058CB2267612A003468B7 /* UpArpuTTNativeAdapter.framework */; };
+		8D8058CE226764D4003468B7 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D8058CD226764D4003468B7 /* VideoToolbox.framework */; };
+		8D8058F02268110C003468B7 /* UPArpuNativeSplashWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8058D22268110C003468B7 /* UPArpuNativeSplashWrapper.m */; };
+		8D8058F12268110C003468B7 /* star_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8058D42268110C003468B7 /* star_on.png */; };
+		8D8058F22268110C003468B7 /* semi_star.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8058D52268110C003468B7 /* semi_star.png */; };
+		8D8058F32268110C003468B7 /* semi_star@3x .png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8058D62268110C003468B7 /* semi_star@3x .png */; };
+		8D8058F42268110C003468B7 /* star_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8058D72268110C003468B7 /* star_off.png */; };
+		8D8058F52268110C003468B7 /* star_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8058D82268110C003468B7 /* star_on@2x.png */; };
+		8D8058F62268110C003468B7 /* star_off@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8058D92268110C003468B7 /* star_off@3x.png */; };
+		8D8058F72268110C003468B7 /* star_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8058DA2268110C003468B7 /* star_off@2x.png */; };
+		8D8058F82268110C003468B7 /* star_on@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8058DB2268110C003468B7 /* star_on@3x.png */; };
+		8D8058F92268110C003468B7 /* cta_btn_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8058DC2268110C003468B7 /* cta_btn_bg.png */; };
+		8D8058FA2268110C003468B7 /* cta_btn_bg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8058DD2268110C003468B7 /* cta_btn_bg@3x.png */; };
+		8D8058FB2268110C003468B7 /* semi_star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8058DE2268110C003468B7 /* semi_star@2x.png */; };
+		8D8058FC2268110C003468B7 /* cta_btn_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8058DF2268110C003468B7 /* cta_btn_bg@2x.png */; };
+		8D8058FD2268110C003468B7 /* UPArpuNativeBannerWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8058E32268110C003468B7 /* UPArpuNativeBannerWrapper.m */; };
+		8D8058FE2268110C003468B7 /* native_banner_star_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8058E52268110C003468B7 /* native_banner_star_on.png */; };
+		8D8058FF2268110C003468B7 /* native_banner_star_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8058E62268110C003468B7 /* native_banner_star_off.png */; };
+		8D8059002268110C003468B7 /* native_banner_semi_star.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8058E72268110C003468B7 /* native_banner_semi_star.png */; };
+		8D8059012268110C003468B7 /* native_banner_star_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8058E82268110C003468B7 /* native_banner_star_off@2x.png */; };
+		8D8059022268110C003468B7 /* native_banner_semi_star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8058E92268110C003468B7 /* native_banner_semi_star@2x.png */; };
+		8D8059032268110C003468B7 /* native_banner_semi_star@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8058EA2268110C003468B7 /* native_banner_semi_star@3x.png */; };
+		8D8059042268110C003468B7 /* native_banner_star_off@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8058EB2268110C003468B7 /* native_banner_star_off@3x.png */; };
+		8D8059052268110C003468B7 /* native_banner_close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8058EC2268110C003468B7 /* native_banner_close@3x.png */; };
+		8D8059062268110C003468B7 /* native_banner_star_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8058ED2268110C003468B7 /* native_banner_star_on@2x.png */; };
+		8D8059072268110C003468B7 /* native_banner_star_on@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8058EE2268110C003468B7 /* native_banner_star_on@3x.png */; };
+		8D8059082268110C003468B7 /* native_banner_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8058EF2268110C003468B7 /* native_banner_close@2x.png */; };
+		8D80590B2268147C003468B7 /* UPArpuNativeBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D80590A2268147B003468B7 /* UPArpuNativeBannerViewController.m */; };
+		8D8059752269E017003468B7 /* UpArpuNendInterstitialAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D80596F2269E016003468B7 /* UpArpuNendInterstitialAdapter.framework */; };
+		8D8059762269E017003468B7 /* UpArpuNendRewardedVideoAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D8059702269E017003468B7 /* UpArpuNendRewardedVideoAdapter.framework */; };
+		8D8059772269E017003468B7 /* UpArpuMaioRewardedVideoAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D8059712269E017003468B7 /* UpArpuMaioRewardedVideoAdapter.framework */; };
+		8D8059782269E017003468B7 /* UpArpuNendBannerAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D8059722269E017003468B7 /* UpArpuNendBannerAdapter.framework */; };
+		8D8059792269E017003468B7 /* UpArpuMaioInterstitialAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D8059732269E017003468B7 /* UpArpuMaioInterstitialAdapter.framework */; };
+		8D80597A2269E017003468B7 /* UpArpuNendNativeAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D8059742269E017003468B7 /* UpArpuNendNativeAdapter.framework */; };
 		8D8DF6BC2227F1F500C5F617 /* UpArpuTTRewardedVideoAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D8DF6BB2227F1F400C5F617 /* UpArpuTTRewardedVideoAdapter.framework */; };
 		8D90878C21D4A0590070EDCE /* UpArpuUnityAdsInterstitialAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D90878721D4A0580070EDCE /* UpArpuUnityAdsInterstitialAdapter.framework */; };
 		8D90878D21D4A0590070EDCE /* UpArpuGDTSplashAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D90878821D4A0580070EDCE /* UpArpuGDTSplashAdapter.framework */; };
@@ -108,6 +142,9 @@
 		8DD6F342221547B200EA97A1 /* BaiduMobAdSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD6F340221547B200EA97A1 /* BaiduMobAdSDK.framework */; };
 		8DD6F346221547CA00EA97A1 /* BUAdSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD6F344221547CA00EA97A1 /* BUAdSDK.framework */; };
 		8DD6F347221547CA00EA97A1 /* BUAdSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8DD6F345221547CA00EA97A1 /* BUAdSDK.bundle */; };
+		8DD9B45922706D0800A2FFBE /* NendAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD9B45622706D0800A2FFBE /* NendAd.framework */; };
+		8DD9B45A22706D0800A2FFBE /* NendAdResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8DD9B45822706D0800A2FFBE /* NendAdResource.bundle */; };
+		8DD9B45C22706D2300A2FFBE /* Maio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD9B45B22706D2200A2FFBE /* Maio.framework */; };
 		8DE56EDC209C70BC002A1427 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE56EDB209C70BC002A1427 /* AppDelegate.m */; };
 		8DE56EDF209C70BC002A1427 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE56EDE209C70BC002A1427 /* ViewController.m */; };
 		8DE56EE2209C70BC002A1427 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DE56EE0209C70BC002A1427 /* Main.storyboard */; };
@@ -469,6 +506,43 @@
 		8D73523421786B1500D8FAE6 /* AppnextNativeAdsSDKApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppnextNativeAdsSDKApi.h; sourceTree = "<group>"; };
 		8D73523521786B1500D8FAE6 /* libAppnextSDKCore.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAppnextSDKCore.a; sourceTree = "<group>"; };
 		8D73523621786B1500D8FAE6 /* libAppnextNativeAdsSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAppnextNativeAdsSDK.a; sourceTree = "<group>"; };
+		8D8058CB2267612A003468B7 /* UpArpuTTNativeAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuTTNativeAdapter.framework; path = SDK/UpArpuTTNativeAdapter.framework; sourceTree = "<group>"; };
+		8D8058CD226764D4003468B7 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		8D8058D12268110C003468B7 /* UPArpuNativeSplashWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPArpuNativeSplashWrapper.h; sourceTree = "<group>"; };
+		8D8058D22268110C003468B7 /* UPArpuNativeSplashWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPArpuNativeSplashWrapper.m; sourceTree = "<group>"; };
+		8D8058D42268110C003468B7 /* star_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star_on.png; sourceTree = "<group>"; };
+		8D8058D52268110C003468B7 /* semi_star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = semi_star.png; sourceTree = "<group>"; };
+		8D8058D62268110C003468B7 /* semi_star@3x .png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "semi_star@3x .png"; sourceTree = "<group>"; };
+		8D8058D72268110C003468B7 /* star_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star_off.png; sourceTree = "<group>"; };
+		8D8058D82268110C003468B7 /* star_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star_on@2x.png"; sourceTree = "<group>"; };
+		8D8058D92268110C003468B7 /* star_off@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star_off@3x.png"; sourceTree = "<group>"; };
+		8D8058DA2268110C003468B7 /* star_off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star_off@2x.png"; sourceTree = "<group>"; };
+		8D8058DB2268110C003468B7 /* star_on@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star_on@3x.png"; sourceTree = "<group>"; };
+		8D8058DC2268110C003468B7 /* cta_btn_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cta_btn_bg.png; sourceTree = "<group>"; };
+		8D8058DD2268110C003468B7 /* cta_btn_bg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cta_btn_bg@3x.png"; sourceTree = "<group>"; };
+		8D8058DE2268110C003468B7 /* semi_star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "semi_star@2x.png"; sourceTree = "<group>"; };
+		8D8058DF2268110C003468B7 /* cta_btn_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cta_btn_bg@2x.png"; sourceTree = "<group>"; };
+		8D8058E22268110C003468B7 /* UPArpuNativeBannerWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPArpuNativeBannerWrapper.h; sourceTree = "<group>"; };
+		8D8058E32268110C003468B7 /* UPArpuNativeBannerWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPArpuNativeBannerWrapper.m; sourceTree = "<group>"; };
+		8D8058E52268110C003468B7 /* native_banner_star_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = native_banner_star_on.png; sourceTree = "<group>"; };
+		8D8058E62268110C003468B7 /* native_banner_star_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = native_banner_star_off.png; sourceTree = "<group>"; };
+		8D8058E72268110C003468B7 /* native_banner_semi_star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = native_banner_semi_star.png; sourceTree = "<group>"; };
+		8D8058E82268110C003468B7 /* native_banner_star_off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "native_banner_star_off@2x.png"; sourceTree = "<group>"; };
+		8D8058E92268110C003468B7 /* native_banner_semi_star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "native_banner_semi_star@2x.png"; sourceTree = "<group>"; };
+		8D8058EA2268110C003468B7 /* native_banner_semi_star@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "native_banner_semi_star@3x.png"; sourceTree = "<group>"; };
+		8D8058EB2268110C003468B7 /* native_banner_star_off@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "native_banner_star_off@3x.png"; sourceTree = "<group>"; };
+		8D8058EC2268110C003468B7 /* native_banner_close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "native_banner_close@3x.png"; sourceTree = "<group>"; };
+		8D8058ED2268110C003468B7 /* native_banner_star_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "native_banner_star_on@2x.png"; sourceTree = "<group>"; };
+		8D8058EE2268110C003468B7 /* native_banner_star_on@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "native_banner_star_on@3x.png"; sourceTree = "<group>"; };
+		8D8058EF2268110C003468B7 /* native_banner_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "native_banner_close@2x.png"; sourceTree = "<group>"; };
+		8D8059092268147B003468B7 /* UPArpuNativeBannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPArpuNativeBannerViewController.h; sourceTree = "<group>"; };
+		8D80590A2268147B003468B7 /* UPArpuNativeBannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPArpuNativeBannerViewController.m; sourceTree = "<group>"; };
+		8D80596F2269E016003468B7 /* UpArpuNendInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuNendInterstitialAdapter.framework; path = SDK/UpArpuNendInterstitialAdapter.framework; sourceTree = "<group>"; };
+		8D8059702269E017003468B7 /* UpArpuNendRewardedVideoAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuNendRewardedVideoAdapter.framework; path = SDK/UpArpuNendRewardedVideoAdapter.framework; sourceTree = "<group>"; };
+		8D8059712269E017003468B7 /* UpArpuMaioRewardedVideoAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuMaioRewardedVideoAdapter.framework; path = SDK/UpArpuMaioRewardedVideoAdapter.framework; sourceTree = "<group>"; };
+		8D8059722269E017003468B7 /* UpArpuNendBannerAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuNendBannerAdapter.framework; path = SDK/UpArpuNendBannerAdapter.framework; sourceTree = "<group>"; };
+		8D8059732269E017003468B7 /* UpArpuMaioInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuMaioInterstitialAdapter.framework; path = SDK/UpArpuMaioInterstitialAdapter.framework; sourceTree = "<group>"; };
+		8D8059742269E017003468B7 /* UpArpuNendNativeAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuNendNativeAdapter.framework; path = SDK/UpArpuNendNativeAdapter.framework; sourceTree = "<group>"; };
 		8D8DF6BB2227F1F400C5F617 /* UpArpuTTRewardedVideoAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuTTRewardedVideoAdapter.framework; path = SDK/UpArpuTTRewardedVideoAdapter.framework; sourceTree = "<group>"; };
 		8D90878721D4A0580070EDCE /* UpArpuUnityAdsInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuUnityAdsInterstitialAdapter.framework; path = SDK/UpArpuUnityAdsInterstitialAdapter.framework; sourceTree = "<group>"; };
 		8D90878821D4A0580070EDCE /* UpArpuGDTSplashAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuGDTSplashAdapter.framework; path = SDK/UpArpuGDTSplashAdapter.framework; sourceTree = "<group>"; };
@@ -492,6 +566,9 @@
 		8DD6F340221547B200EA97A1 /* BaiduMobAdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMobAdSDK.framework; sourceTree = "<group>"; };
 		8DD6F344221547CA00EA97A1 /* BUAdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BUAdSDK.framework; sourceTree = "<group>"; };
 		8DD6F345221547CA00EA97A1 /* BUAdSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = BUAdSDK.bundle; sourceTree = "<group>"; };
+		8DD9B45622706D0800A2FFBE /* NendAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NendAd.framework; sourceTree = "<group>"; };
+		8DD9B45822706D0800A2FFBE /* NendAdResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NendAdResource.bundle; sourceTree = "<group>"; };
+		8DD9B45B22706D2200A2FFBE /* Maio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Maio.framework; path = SDK/Maio.framework; sourceTree = "<group>"; };
 		8DDD89B620A1AA3C00C95818 /* UpArpuSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuSDK.framework; path = SDK/UpArpuSDK.framework; sourceTree = "<group>"; };
 		8DE56ED7209C70BC002A1427 /* UPArpuSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UPArpuSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DE56EDA209C70BC002A1427 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1008,6 +1085,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D8059752269E017003468B7 /* UpArpuNendInterstitialAdapter.framework in Frameworks */,
+				8D8059762269E017003468B7 /* UpArpuNendRewardedVideoAdapter.framework in Frameworks */,
+				8D8059772269E017003468B7 /* UpArpuMaioRewardedVideoAdapter.framework in Frameworks */,
+				8D8059782269E017003468B7 /* UpArpuNendBannerAdapter.framework in Frameworks */,
+				8D8059792269E017003468B7 /* UpArpuMaioInterstitialAdapter.framework in Frameworks */,
+				8D80597A2269E017003468B7 /* UpArpuNendNativeAdapter.framework in Frameworks */,
+				8D8058CE226764D4003468B7 /* VideoToolbox.framework in Frameworks */,
+				8D8058CC2267612A003468B7 /* UpArpuTTNativeAdapter.framework in Frameworks */,
 				8D8DF6BC2227F1F500C5F617 /* UpArpuTTRewardedVideoAdapter.framework in Frameworks */,
 				DC83F7F52101EC59003FFC3C /* MTGSDK.framework in Frameworks */,
 				DC83F7F62101EC59003FFC3C /* MTGSDKReward.framework in Frameworks */,
@@ -1016,6 +1101,7 @@
 				8D90879821D4A41C0070EDCE /* MobPowerSDK.framework in Frameworks */,
 				8D90879421D4A2CF0070EDCE /* UpArpuSplash.framework in Frameworks */,
 				8D90879221D4A0BE0070EDCE /* UpArpuMobPowerNativeAdapter.framework in Frameworks */,
+				8DD9B45C22706D2300A2FFBE /* Maio.framework in Frameworks */,
 				8D90878C21D4A0590070EDCE /* UpArpuUnityAdsInterstitialAdapter.framework in Frameworks */,
 				8D90878D21D4A0590070EDCE /* UpArpuGDTSplashAdapter.framework in Frameworks */,
 				8DD6F346221547CA00EA97A1 /* BUAdSDK.framework in Frameworks */,
@@ -1109,6 +1195,7 @@
 				8DD6F342221547B200EA97A1 /* BaiduMobAdSDK.framework in Frameworks */,
 				8D7351E821785D6700D8FAE6 /* UpArpuFacebookInterstitialAdapter.framework in Frameworks */,
 				8D03FE79215F17F1005DC75D /* UpArpuAdmobInterstitialAdapter.framework in Frameworks */,
+				8DD9B45922706D0800A2FFBE /* NendAd.framework in Frameworks */,
 				8DD6F33D221547A100EA97A1 /* libGDTMobSDK.a in Frameworks */,
 				8D7351E521785CFA00D8FAE6 /* UpArpuInmobiInterstitialAdapter.framework in Frameworks */,
 				8D7350C32174340A00D8FAE6 /* UpArpuFlurryInterstitialAdapter.framework in Frameworks */,
@@ -1243,6 +1330,79 @@
 			path = AppnextNativeAdsSDK;
 			sourceTree = "<group>";
 		};
+		8D8058CF2268110C003468B7 /* Native Splash */ = {
+			isa = PBXGroup;
+			children = (
+				8D8058D02268110C003468B7 /* Source Code */,
+				8D8058D32268110C003468B7 /* Images */,
+			);
+			path = "Native Splash";
+			sourceTree = "<group>";
+		};
+		8D8058D02268110C003468B7 /* Source Code */ = {
+			isa = PBXGroup;
+			children = (
+				8D8058D12268110C003468B7 /* UPArpuNativeSplashWrapper.h */,
+				8D8058D22268110C003468B7 /* UPArpuNativeSplashWrapper.m */,
+			);
+			path = "Source Code";
+			sourceTree = "<group>";
+		};
+		8D8058D32268110C003468B7 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				8D8058D42268110C003468B7 /* star_on.png */,
+				8D8058D52268110C003468B7 /* semi_star.png */,
+				8D8058D62268110C003468B7 /* semi_star@3x .png */,
+				8D8058D72268110C003468B7 /* star_off.png */,
+				8D8058D82268110C003468B7 /* star_on@2x.png */,
+				8D8058D92268110C003468B7 /* star_off@3x.png */,
+				8D8058DA2268110C003468B7 /* star_off@2x.png */,
+				8D8058DB2268110C003468B7 /* star_on@3x.png */,
+				8D8058DC2268110C003468B7 /* cta_btn_bg.png */,
+				8D8058DD2268110C003468B7 /* cta_btn_bg@3x.png */,
+				8D8058DE2268110C003468B7 /* semi_star@2x.png */,
+				8D8058DF2268110C003468B7 /* cta_btn_bg@2x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		8D8058E02268110C003468B7 /* Native Banner */ = {
+			isa = PBXGroup;
+			children = (
+				8D8058E12268110C003468B7 /* Source Code */,
+				8D8058E42268110C003468B7 /* Images */,
+			);
+			path = "Native Banner";
+			sourceTree = "<group>";
+		};
+		8D8058E12268110C003468B7 /* Source Code */ = {
+			isa = PBXGroup;
+			children = (
+				8D8058E22268110C003468B7 /* UPArpuNativeBannerWrapper.h */,
+				8D8058E32268110C003468B7 /* UPArpuNativeBannerWrapper.m */,
+			);
+			path = "Source Code";
+			sourceTree = "<group>";
+		};
+		8D8058E42268110C003468B7 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				8D8058E52268110C003468B7 /* native_banner_star_on.png */,
+				8D8058E62268110C003468B7 /* native_banner_star_off.png */,
+				8D8058E72268110C003468B7 /* native_banner_semi_star.png */,
+				8D8058E82268110C003468B7 /* native_banner_star_off@2x.png */,
+				8D8058E92268110C003468B7 /* native_banner_semi_star@2x.png */,
+				8D8058EA2268110C003468B7 /* native_banner_semi_star@3x.png */,
+				8D8058EB2268110C003468B7 /* native_banner_star_off@3x.png */,
+				8D8058EC2268110C003468B7 /* native_banner_close@3x.png */,
+				8D8058ED2268110C003468B7 /* native_banner_star_on@2x.png */,
+				8D8058EE2268110C003468B7 /* native_banner_star_on@3x.png */,
+				8D8058EF2268110C003468B7 /* native_banner_close@2x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		8DD6F332221547A100EA97A1 /* GDT */ = {
 			isa = PBXGroup;
 			children = (
@@ -1281,9 +1441,28 @@
 			path = SDK/Toutiao;
 			sourceTree = "<group>";
 		};
+		8DD9B45522706D0800A2FFBE /* NendAd.embeddedframework */ = {
+			isa = PBXGroup;
+			children = (
+				8DD9B45622706D0800A2FFBE /* NendAd.framework */,
+				8DD9B45722706D0800A2FFBE /* Resources */,
+			);
+			name = NendAd.embeddedframework;
+			path = SDK/NendAd.embeddedframework;
+			sourceTree = "<group>";
+		};
+		8DD9B45722706D0800A2FFBE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8DD9B45822706D0800A2FFBE /* NendAdResource.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		8DE56ECE209C70BC002A1427 = {
 			isa = PBXGroup;
 			children = (
+				8DD9B45522706D0800A2FFBE /* NendAd.embeddedframework */,
 				8DD6F343221547CA00EA97A1 /* Toutiao */,
 				8DD6F33E221547B200EA97A1 /* Baidu */,
 				8DD6F332221547A100EA97A1 /* GDT */,
@@ -1311,12 +1490,16 @@
 		8DE56ED9209C70BC002A1427 /* UPArpuSDKDemo */ = {
 			isa = PBXGroup;
 			children = (
+				8D8058E02268110C003468B7 /* Native Banner */,
+				8D8058CF2268110C003468B7 /* Native Splash */,
 				8D03FE61215F1655005DC75D /* UPArpuBannerViewController.h */,
 				8D03FE60215F1655005DC75D /* UPArpuBannerViewController.m */,
 				8D03FE5E215F1655005DC75D /* UPArpuInterstitialViewController.h */,
 				8D03FE5F215F1655005DC75D /* UPArpuInterstitialViewController.m */,
 				DC83FA8E2101F785003FFC3C /* UPArpuRewardedVideoVideoViewController.h */,
 				DC83FA8F2101F785003FFC3C /* UPArpuRewardedVideoVideoViewController.m */,
+				8D8059092268147B003468B7 /* UPArpuNativeBannerViewController.h */,
+				8D80590A2268147B003468B7 /* UPArpuNativeBannerViewController.m */,
 				8DE56EDA209C70BC002A1427 /* AppDelegate.h */,
 				8DE56EDB209C70BC002A1427 /* AppDelegate.m */,
 				8DE56EDD209C70BC002A1427 /* ViewController.h */,
@@ -1337,6 +1520,15 @@
 		8DE56EF0209C711D002A1427 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8DD9B45B22706D2200A2FFBE /* Maio.framework */,
+				8D8059732269E017003468B7 /* UpArpuMaioInterstitialAdapter.framework */,
+				8D8059712269E017003468B7 /* UpArpuMaioRewardedVideoAdapter.framework */,
+				8D8059722269E017003468B7 /* UpArpuNendBannerAdapter.framework */,
+				8D80596F2269E016003468B7 /* UpArpuNendInterstitialAdapter.framework */,
+				8D8059742269E017003468B7 /* UpArpuNendNativeAdapter.framework */,
+				8D8059702269E017003468B7 /* UpArpuNendRewardedVideoAdapter.framework */,
+				8D8058CD226764D4003468B7 /* VideoToolbox.framework */,
+				8D8058CB2267612A003468B7 /* UpArpuTTNativeAdapter.framework */,
 				8D8DF6BB2227F1F400C5F617 /* UpArpuTTRewardedVideoAdapter.framework */,
 				8DE79C6B21E3395F0072988B /* libresolv.9.tbd */,
 				8D90879521D4A41B0070EDCE /* MobPowerNative.framework */,
@@ -2217,31 +2409,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D3B3550214B9DDD0064FBD2 /* UpArpuSDK.bundle in Resources */,
+				8D8059052268110C003468B7 /* native_banner_close@3x.png in Resources */,
+				8D8058FE2268110C003468B7 /* native_banner_star_on.png in Resources */,
 				DC83F9D02101F08D003FFC3C /* MPCloseBtn@3x.png in Resources */,
 				DC83F9DD2101F08D003FFC3C /* MPDAAIcon@2x.png in Resources */,
 				DC83FA182101F08D003FFC3C /* LICENSE in Resources */,
+				8D8058FB2268110C003468B7 /* semi_star@2x.png in Resources */,
 				DC83F9D82101F08D003FFC3C /* MPDAAIcon@3x.png in Resources */,
 				DC83F9D32101F08D003FFC3C /* MPUnmutedBtn@2x.png in Resources */,
 				DC83F8162101ECDB003FFC3C /* TapjoyResources.bundle in Resources */,
 				8DD6F347221547CA00EA97A1 /* BUAdSDK.bundle in Resources */,
+				8D8058F92268110C003468B7 /* cta_btn_bg.png in Resources */,
+				8D8059082268110C003468B7 /* native_banner_close@2x.png in Resources */,
 				8DE56EE7209C70BC002A1427 /* LaunchScreen.storyboard in Resources */,
+				8D8058F52268110C003468B7 /* star_on@2x.png in Resources */,
+				8DD9B45A22706D0800A2FFBE /* NendAdResource.bundle in Resources */,
 				8DE56EE4209C70BC002A1427 /* Assets.xcassets in Resources */,
 				DC83F9D42101F08D003FFC3C /* MPCountdownTimer.html in Resources */,
 				DC83F9DC2101F08D003FFC3C /* MPMutedBtn@2x.png in Resources */,
 				DC83F9CF2101F08D003FFC3C /* MPCloseBtn@2x.png in Resources */,
 				DC83F9CB2101F08D003FFC3C /* MRAID.bundle in Resources */,
+				8D8058F22268110C003468B7 /* semi_star.png in Resources */,
+				8D8058F12268110C003468B7 /* star_on.png in Resources */,
+				8D8058FA2268110C003468B7 /* cta_btn_bg@3x.png in Resources */,
+				8D8058FF2268110C003468B7 /* native_banner_star_off.png in Resources */,
 				DC83F9DB2101F08D003FFC3C /* MPMutedBtn.png in Resources */,
+				8D8059072268110C003468B7 /* native_banner_star_on@3x.png in Resources */,
+				8D8059022268110C003468B7 /* native_banner_semi_star@2x.png in Resources */,
+				8D8058FC2268110C003468B7 /* cta_btn_bg@2x.png in Resources */,
 				DC83F9DA2101F08D003FFC3C /* MPPlayBtn.png in Resources */,
 				DC83F9CD2101F08D003FFC3C /* MPUnmutedBtn@3x.png in Resources */,
 				DC83F9D52101F08D003FFC3C /* MPCloseButtonX@2x.png in Resources */,
 				DC83F9D72101F08D003FFC3C /* MPCloseButtonX.png in Resources */,
 				DC83F9D62101F08D003FFC3C /* MPCloseButtonX@3x.png in Resources */,
+				8D8058F32268110C003468B7 /* semi_star@3x .png in Resources */,
+				8D8059032268110C003468B7 /* native_banner_semi_star@3x.png in Resources */,
+				8D8058F72268110C003468B7 /* star_off@2x.png in Resources */,
 				DC83F9CC2101F08D003FFC3C /* MPDAAIcon.png in Resources */,
 				DC83F9D12101F08D003FFC3C /* MPCloseBtn.png in Resources */,
+				8D8058F62268110C003468B7 /* star_off@3x.png in Resources */,
+				8D8059012268110C003468B7 /* native_banner_star_off@2x.png in Resources */,
+				8D8059062268110C003468B7 /* native_banner_star_on@2x.png in Resources */,
 				DC83F9D92101F08D003FFC3C /* MPMutedBtn@3x.png in Resources */,
 				DC83F9CE2101F08D003FFC3C /* MPPlayBtn@2x.png in Resources */,
+				8D8059002268110C003468B7 /* native_banner_semi_star.png in Resources */,
+				8D8058F82268110C003468B7 /* star_on@3x.png in Resources */,
 				DC83F9D22101F08D003FFC3C /* MPPlayBtn@3x.png in Resources */,
+				8D8059042268110C003468B7 /* native_banner_star_off@3x.png in Resources */,
 				8DE56EE2209C70BC002A1427 /* Main.storyboard in Resources */,
+				8D8058F42268110C003468B7 /* star_off.png in Resources */,
 				DC83FA022101F08D003FFC3C /* MPAdBrowserController.xib in Resources */,
 				8DD6F341221547B200EA97A1 /* baidumobadsdk.bundle in Resources */,
 				DC83F9CA2101F08D003FFC3C /* MPUnmutedBtn.png in Resources */,
@@ -2406,12 +2622,14 @@
 				DC83FA552101F08D003FFC3C /* MPNativeAdRequest.m in Sources */,
 				DC83FA6B2101F08D003FFC3C /* MPNativeView.m in Sources */,
 				DC83F9E72101F08D003FFC3C /* MPRewardedVideoCustomEvent.m in Sources */,
+				8D8058FD2268110C003468B7 /* UPArpuNativeBannerWrapper.m in Sources */,
 				DC83FA522101F08D003FFC3C /* MPWebView+Viewability.m in Sources */,
 				DC83FA4A2101F08D003FFC3C /* MPVASTResponse.m in Sources */,
 				8DE56EDC209C70BC002A1427 /* AppDelegate.m in Sources */,
 				DC83F9EC2101F08D003FFC3C /* MPInterstitialAdManager.m in Sources */,
 				DC83FA792101F08D003FFC3C /* MOPUBPlayerManager.m in Sources */,
 				DC83FA482101F08D003FFC3C /* MPVASTTrackingEvent.m in Sources */,
+				8D80590B2268147C003468B7 /* UPArpuNativeBannerViewController.m in Sources */,
 				DC83FA842101F08D003FFC3C /* MOPUBAVPlayer.m in Sources */,
 				DC83FA0F2101F08D003FFC3C /* MPConsentManager.m in Sources */,
 				DC83FA412101F08D003FFC3C /* MPVASTWrapper.m in Sources */,
@@ -2429,6 +2647,7 @@
 				DC83FA752101F08D003FFC3C /* MPNativeAd.m in Sources */,
 				DC83F9E02101F08D003FFC3C /* MPRewardedVideoAdManager.m in Sources */,
 				DC83FA7D2101F08D003FFC3C /* MOPUBFullscreenPlayerViewController.m in Sources */,
+				8D8058F02268110C003468B7 /* UPArpuNativeSplashWrapper.m in Sources */,
 				DC83FA772101F08D003FFC3C /* MPClientAdPositioning.m in Sources */,
 				DC83FA6C2101F08D003FFC3C /* MPTableViewCellImpressionTracker.m in Sources */,
 				DC83F9F72101F08D003FFC3C /* MPBaseBannerAdapter.m in Sources */,
@@ -2580,6 +2799,8 @@
 					"$(PROJECT_DIR)/SDK",
 					"$(PROJECT_DIR)/SDK/Baidu",
 					"$(PROJECT_DIR)/SDK/Toutiao",
+					"$(PROJECT_DIR)/NendAd.embeddedframework",
+					"$(PROJECT_DIR)/SDK/NendAd.embeddedframework",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					REWARDED_VIDEO_INTEGRATED,
@@ -2623,6 +2844,8 @@
 					"$(PROJECT_DIR)/SDK",
 					"$(PROJECT_DIR)/SDK/Baidu",
 					"$(PROJECT_DIR)/SDK/Toutiao",
+					"$(PROJECT_DIR)/NendAd.embeddedframework",
+					"$(PROJECT_DIR)/SDK/NendAd.embeddedframework",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					REWARDED_VIDEO_INTEGRATED,

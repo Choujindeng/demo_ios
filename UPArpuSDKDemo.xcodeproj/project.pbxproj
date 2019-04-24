@@ -85,9 +85,6 @@
 		8D8059072268110C003468B7 /* native_banner_star_on@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8058EE2268110C003468B7 /* native_banner_star_on@3x.png */; };
 		8D8059082268110C003468B7 /* native_banner_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8058EF2268110C003468B7 /* native_banner_close@2x.png */; };
 		8D80590B2268147C003468B7 /* UPArpuNativeBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D80590A2268147B003468B7 /* UPArpuNativeBannerViewController.m */; };
-		8D80596B2269BBF4003468B7 /* NendAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D8059682269BBF4003468B7 /* NendAd.framework */; };
-		8D80596C2269BBF4003468B7 /* NendAdResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8D80596A2269BBF4003468B7 /* NendAdResource.bundle */; };
-		8D80596E2269BC2B003468B7 /* Maio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D80596D2269BC2A003468B7 /* Maio.framework */; };
 		8D8059752269E017003468B7 /* UpArpuNendInterstitialAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D80596F2269E016003468B7 /* UpArpuNendInterstitialAdapter.framework */; };
 		8D8059762269E017003468B7 /* UpArpuNendRewardedVideoAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D8059702269E017003468B7 /* UpArpuNendRewardedVideoAdapter.framework */; };
 		8D8059772269E017003468B7 /* UpArpuMaioRewardedVideoAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D8059712269E017003468B7 /* UpArpuMaioRewardedVideoAdapter.framework */; };
@@ -145,6 +142,9 @@
 		8DD6F342221547B200EA97A1 /* BaiduMobAdSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD6F340221547B200EA97A1 /* BaiduMobAdSDK.framework */; };
 		8DD6F346221547CA00EA97A1 /* BUAdSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD6F344221547CA00EA97A1 /* BUAdSDK.framework */; };
 		8DD6F347221547CA00EA97A1 /* BUAdSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8DD6F345221547CA00EA97A1 /* BUAdSDK.bundle */; };
+		8DD9B45922706D0800A2FFBE /* NendAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD9B45622706D0800A2FFBE /* NendAd.framework */; };
+		8DD9B45A22706D0800A2FFBE /* NendAdResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8DD9B45822706D0800A2FFBE /* NendAdResource.bundle */; };
+		8DD9B45C22706D2300A2FFBE /* Maio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD9B45B22706D2200A2FFBE /* Maio.framework */; };
 		8DE56EDC209C70BC002A1427 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE56EDB209C70BC002A1427 /* AppDelegate.m */; };
 		8DE56EDF209C70BC002A1427 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE56EDE209C70BC002A1427 /* ViewController.m */; };
 		8DE56EE2209C70BC002A1427 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DE56EE0209C70BC002A1427 /* Main.storyboard */; };
@@ -537,9 +537,6 @@
 		8D8058EF2268110C003468B7 /* native_banner_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "native_banner_close@2x.png"; sourceTree = "<group>"; };
 		8D8059092268147B003468B7 /* UPArpuNativeBannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPArpuNativeBannerViewController.h; sourceTree = "<group>"; };
 		8D80590A2268147B003468B7 /* UPArpuNativeBannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPArpuNativeBannerViewController.m; sourceTree = "<group>"; };
-		8D8059682269BBF4003468B7 /* NendAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NendAd.framework; sourceTree = "<group>"; };
-		8D80596A2269BBF4003468B7 /* NendAdResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NendAdResource.bundle; sourceTree = "<group>"; };
-		8D80596D2269BC2A003468B7 /* Maio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Maio.framework; sourceTree = "<group>"; };
 		8D80596F2269E016003468B7 /* UpArpuNendInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuNendInterstitialAdapter.framework; path = SDK/UpArpuNendInterstitialAdapter.framework; sourceTree = "<group>"; };
 		8D8059702269E017003468B7 /* UpArpuNendRewardedVideoAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuNendRewardedVideoAdapter.framework; path = SDK/UpArpuNendRewardedVideoAdapter.framework; sourceTree = "<group>"; };
 		8D8059712269E017003468B7 /* UpArpuMaioRewardedVideoAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuMaioRewardedVideoAdapter.framework; path = SDK/UpArpuMaioRewardedVideoAdapter.framework; sourceTree = "<group>"; };
@@ -569,6 +566,9 @@
 		8DD6F340221547B200EA97A1 /* BaiduMobAdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMobAdSDK.framework; sourceTree = "<group>"; };
 		8DD6F344221547CA00EA97A1 /* BUAdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BUAdSDK.framework; sourceTree = "<group>"; };
 		8DD6F345221547CA00EA97A1 /* BUAdSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = BUAdSDK.bundle; sourceTree = "<group>"; };
+		8DD9B45622706D0800A2FFBE /* NendAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NendAd.framework; sourceTree = "<group>"; };
+		8DD9B45822706D0800A2FFBE /* NendAdResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NendAdResource.bundle; sourceTree = "<group>"; };
+		8DD9B45B22706D2200A2FFBE /* Maio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Maio.framework; path = SDK/Maio.framework; sourceTree = "<group>"; };
 		8DDD89B620A1AA3C00C95818 /* UpArpuSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuSDK.framework; path = SDK/UpArpuSDK.framework; sourceTree = "<group>"; };
 		8DE56ED7209C70BC002A1427 /* UPArpuSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UPArpuSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DE56EDA209C70BC002A1427 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1101,6 +1101,7 @@
 				8D90879821D4A41C0070EDCE /* MobPowerSDK.framework in Frameworks */,
 				8D90879421D4A2CF0070EDCE /* UpArpuSplash.framework in Frameworks */,
 				8D90879221D4A0BE0070EDCE /* UpArpuMobPowerNativeAdapter.framework in Frameworks */,
+				8DD9B45C22706D2300A2FFBE /* Maio.framework in Frameworks */,
 				8D90878C21D4A0590070EDCE /* UpArpuUnityAdsInterstitialAdapter.framework in Frameworks */,
 				8D90878D21D4A0590070EDCE /* UpArpuGDTSplashAdapter.framework in Frameworks */,
 				8DD6F346221547CA00EA97A1 /* BUAdSDK.framework in Frameworks */,
@@ -1173,7 +1174,6 @@
 				8D7351F421785F7B00D8FAE6 /* UpArpuAppnextBannerAdapter.framework in Frameworks */,
 				8D7351FB21785F7B00D8FAE6 /* UpArpuYeahmobiBannerAdapter.framework in Frameworks */,
 				8DA1B59C21242771008280DB /* UpArpuRewardedVideo.framework in Frameworks */,
-				8D80596E2269BC2B003468B7 /* Maio.framework in Frameworks */,
 				8DA1B58621242771008280DB /* UpArpuFacebookRewardedVideoAdapter.framework in Frameworks */,
 				8DA1B57C21242771008280DB /* UpArpuAdmobRewardedVideoAdapter.framework in Frameworks */,
 				8DA1B58E21242771008280DB /* UpArpuInmobiRewardedVideoAdapter.framework in Frameworks */,
@@ -1192,10 +1192,10 @@
 				8D7351F521785F7B00D8FAE6 /* UpArpuYeahmobiRewardedVideoAdapter.framework in Frameworks */,
 				8D7351F921785F7B00D8FAE6 /* UpArpuAppnextRewardedVideoAdapter.framework in Frameworks */,
 				8D03FE77215F17F1005DC75D /* UpArpuInterstitial.framework in Frameworks */,
-				8D80596B2269BBF4003468B7 /* NendAd.framework in Frameworks */,
 				8DD6F342221547B200EA97A1 /* BaiduMobAdSDK.framework in Frameworks */,
 				8D7351E821785D6700D8FAE6 /* UpArpuFacebookInterstitialAdapter.framework in Frameworks */,
 				8D03FE79215F17F1005DC75D /* UpArpuAdmobInterstitialAdapter.framework in Frameworks */,
+				8DD9B45922706D0800A2FFBE /* NendAd.framework in Frameworks */,
 				8DD6F33D221547A100EA97A1 /* libGDTMobSDK.a in Frameworks */,
 				8D7351E521785CFA00D8FAE6 /* UpArpuInmobiInterstitialAdapter.framework in Frameworks */,
 				8D7350C32174340A00D8FAE6 /* UpArpuFlurryInterstitialAdapter.framework in Frameworks */,
@@ -1403,23 +1403,6 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
-		8D8059672269BBF3003468B7 /* NendAd.embeddedframework */ = {
-			isa = PBXGroup;
-			children = (
-				8D8059682269BBF4003468B7 /* NendAd.framework */,
-				8D8059692269BBF4003468B7 /* Resources */,
-			);
-			path = NendAd.embeddedframework;
-			sourceTree = "<group>";
-		};
-		8D8059692269BBF4003468B7 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				8D80596A2269BBF4003468B7 /* NendAdResource.bundle */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		8DD6F332221547A100EA97A1 /* GDT */ = {
 			isa = PBXGroup;
 			children = (
@@ -1458,10 +1441,28 @@
 			path = SDK/Toutiao;
 			sourceTree = "<group>";
 		};
+		8DD9B45522706D0800A2FFBE /* NendAd.embeddedframework */ = {
+			isa = PBXGroup;
+			children = (
+				8DD9B45622706D0800A2FFBE /* NendAd.framework */,
+				8DD9B45722706D0800A2FFBE /* Resources */,
+			);
+			name = NendAd.embeddedframework;
+			path = SDK/NendAd.embeddedframework;
+			sourceTree = "<group>";
+		};
+		8DD9B45722706D0800A2FFBE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8DD9B45822706D0800A2FFBE /* NendAdResource.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		8DE56ECE209C70BC002A1427 = {
 			isa = PBXGroup;
 			children = (
-				8D8059672269BBF3003468B7 /* NendAd.embeddedframework */,
+				8DD9B45522706D0800A2FFBE /* NendAd.embeddedframework */,
 				8DD6F343221547CA00EA97A1 /* Toutiao */,
 				8DD6F33E221547B200EA97A1 /* Baidu */,
 				8DD6F332221547A100EA97A1 /* GDT */,
@@ -1519,13 +1520,13 @@
 		8DE56EF0209C711D002A1427 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8DD9B45B22706D2200A2FFBE /* Maio.framework */,
 				8D8059732269E017003468B7 /* UpArpuMaioInterstitialAdapter.framework */,
 				8D8059712269E017003468B7 /* UpArpuMaioRewardedVideoAdapter.framework */,
 				8D8059722269E017003468B7 /* UpArpuNendBannerAdapter.framework */,
 				8D80596F2269E016003468B7 /* UpArpuNendInterstitialAdapter.framework */,
 				8D8059742269E017003468B7 /* UpArpuNendNativeAdapter.framework */,
 				8D8059702269E017003468B7 /* UpArpuNendRewardedVideoAdapter.framework */,
-				8D80596D2269BC2A003468B7 /* Maio.framework */,
 				8D8058CD226764D4003468B7 /* VideoToolbox.framework */,
 				8D8058CB2267612A003468B7 /* UpArpuTTNativeAdapter.framework */,
 				8D8DF6BB2227F1F400C5F617 /* UpArpuTTRewardedVideoAdapter.framework */,
@@ -2422,7 +2423,7 @@
 				8D8059082268110C003468B7 /* native_banner_close@2x.png in Resources */,
 				8DE56EE7209C70BC002A1427 /* LaunchScreen.storyboard in Resources */,
 				8D8058F52268110C003468B7 /* star_on@2x.png in Resources */,
-				8D80596C2269BBF4003468B7 /* NendAdResource.bundle in Resources */,
+				8DD9B45A22706D0800A2FFBE /* NendAdResource.bundle in Resources */,
 				8DE56EE4209C70BC002A1427 /* Assets.xcassets in Resources */,
 				DC83F9D42101F08D003FFC3C /* MPCountdownTimer.html in Resources */,
 				DC83F9DC2101F08D003FFC3C /* MPMutedBtn@2x.png in Resources */,
@@ -2799,6 +2800,7 @@
 					"$(PROJECT_DIR)/SDK/Baidu",
 					"$(PROJECT_DIR)/SDK/Toutiao",
 					"$(PROJECT_DIR)/NendAd.embeddedframework",
+					"$(PROJECT_DIR)/SDK/NendAd.embeddedframework",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					REWARDED_VIDEO_INTEGRATED,
@@ -2843,6 +2845,7 @@
 					"$(PROJECT_DIR)/SDK/Baidu",
 					"$(PROJECT_DIR)/SDK/Toutiao",
 					"$(PROJECT_DIR)/NendAd.embeddedframework",
+					"$(PROJECT_DIR)/SDK/NendAd.embeddedframework",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					REWARDED_VIDEO_INTEGRATED,

@@ -16,6 +16,9 @@ extern NSString *const kExtraInfoNativeAdUserIDKey;
 extern NSString *const kExtraInfoNativeAdMediationNameKey;
 extern NSString *const kExtraInfoNaitveAdUserFeatureKey;
 extern NSString *const kExtraInfoNativeAdLocationEnabledFlagKey;
+
+extern NSString *const kNativeAdAutorefreshConfigurationSwitchKey;//BOOL wrapped in NSNumber
+extern NSString *const kNativeAdAutorefreshConfigurationRefreshIntervalKey;//NSTimeInterval wrapped in NSNumber
 typedef NS_ENUM(NSInteger, UPArpuGDTNativeAdType) {
     UPArpuGDTNativeAdTypeTemplate = 1,
     UPArpuGDTNativeAdTypeSelfRendering = 2
@@ -31,4 +34,7 @@ typedef NS_ENUM(NSInteger, UPArpuGDTNativeAdType) {
  * To retrieve the instance of the class you specify as the rendering view class, cast the returned view to UPArpuNativeADView and call its embededAdView method(the view returned might not be of class UPArpuNativeADView).
  */
 -(__kindof UIView*) retriveAdViewWithPlacementID:(NSString*)placementID configuration:(UPArpuNativeADConfiguration*)configuration;
+
+//
+-(NSDictionary*) autoRefreshConfigurationForPlacementID:(NSString*)placementID;
 @end

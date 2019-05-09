@@ -296,6 +296,26 @@ static NSString *const kTimerUserInfoBlockKey = @"com.uparpu.timer_block";
 
 @end
 
+static NSString *const kUPArpuUIViewControllerPresentationNotification = @"com.uparpu.NativeSplashPresentation";
+static NSString *const kUPArpuUIViewControllerDismissalNotification = @"com.uparpu.NativeSplashDismissal";
+@interface UIViewController(UPArpuSplashUtilities)
+-(void)UPArpuSplash_presentViewController:(UIViewController *)viewControllerToPresent animated:(BOOL)flag completion:(void (^)(void))completion;
+-(void)UPArpuSplash_dismissViewControllerAnimated:(BOOL)flag completion:(void (^)(void))completion;
+@end
+
+#pragma mark - vc swizzling
+@implementation UIViewController (UPArpuSplashUtilities)
+-(void)UPArpuSplash_presentViewController:(UIViewController *)viewControllerToPresent animated:(BOOL)flag completion:(void (^)(void))completion {
+    [[NSNotificationCenter defaultCenter] postNotificationName:kUPArpuUIViewControllerPresentationNotification object:nil];
+    [self UPArpuSplash_presentViewController:viewControllerToPresent animated:flag completion:completion];
+}
+
+-(void) UPArpuSplash_dismissViewControllerAnimated:(BOOL)flag completion:(void (^)(void))completion {
+    [[NSNotificationCenter defaultCenter] postNotificationName:kUPArpuUIViewControllerDismissalNotification object:nil];
+    [self UPArpuSplash_dismissViewControllerAnimated:flag completion:completion];
+}
+@end
+
 #pragma mark - splash wrapper
 @interface UPArpuNativeSplashWrapper()<UPArpuNativeADDelegate>
 @property(nonatomic, readonly) dispatch_queue_t delegates_accessing_queue;
@@ -303,6 +323,7 @@ static NSString *const kTimerUserInfoBlockKey = @"com.uparpu.timer_block";
 @property(nonatomic) UPArpuNativeSplashView *currentSplashView;
 @property(nonatomic, weak) UIView *containerView;
 @property(nonatomic) NSString *layoutStyle;
+@property(nonatomic) BOOL landingPageBeingShown;
 @end
 @implementation UPArpuNativeSplashWrapper
 +(instancetype) sharedWrapper {
@@ -314,11 +335,35 @@ static NSString *const kTimerUserInfoBlockKey = @"com.uparpu.timer_block";
     return sharedManager;
 }
 
++(void) swizzleMethodWithSelector:(SEL)originalSel swizzledMethodSelector:(SEL)swizzledMethodSel inClass:(Class)inClass {
+    if (originalSel != NULL && swizzledMethodSel != NULL && inClass != nil) {
+        Method originalMethod = class_getInstanceMethod(inClass, originalSel);
+        Method swizzledMethod = class_getInstanceMethod(inClass, swizzledMethodSel);
+        
+        BOOL didAddMethod = class_addMethod(inClass, originalSel, method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod));
+        
+        if (didAddMethod) {
+            class_replaceMethod(inClass, swizzledMethodSel, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));
+        } else {
+            method_exchangeImplementations(originalMethod, swizzledMethod);
+        }
+    }
+}
+
 -(instancetype) init {
     self = [super init];
     if (self != nil) {
         _delegates_accessing_queue = dispatch_queue_create("nativeSplashDelegatesAccessingQueue.com.uparpu", DISPATCH_QUEUE_CONCURRENT);
         _delegates = [NSMutableDictionary<NSString*, id<UPArpuNativeSplashDelegate>> dictionary];
+        [UPArpuNativeSplashWrapper swizzleMethodWithSelector:@selector(presentViewController:animated:completion:) swizzledMethodSelector:@selector(UPArpuSplash_presentViewController:animated:completion:) inClass:[UIViewController class]];
+        [UPArpuNativeSplashWrapper swizzleMethodWithSelector:@selector(dismissViewControllerAnimated:completion:) swizzledMethodSelector:@selector(UPArpuSplash_dismissViewControllerAnimated:completion:) inClass:[UIViewController class]];
+        [[NSNotificationCenter defaultCenter] addObserverForName:kUPArpuUIViewControllerPresentationNotification object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
+            [UPArpuNativeSplashWrapper sharedWrapper].landingPageBeingShown = YES;
+        }];
+        [[NSNotificationCenter defaultCenter] addObserverForName:kUPArpuUIViewControllerDismissalNotification object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
+            [UPArpuNativeSplashWrapper sharedWrapper].landingPageBeingShown = NO;
+            [[UPArpuNativeSplashWrapper sharedWrapper] skipButtonTapped];
+        }];
     }
     return self;
 }
@@ -330,7 +375,7 @@ static NSString *const kTimerUserInfoBlockKey = @"com.uparpu.timer_block";
             [_currentSplashView.skipButton setTitle:[NSString stringWithFormat:kSkipTextFormatString, --remainingTime] forState:UIControlStateNormal];
             if (remainingTime == 0) {
                 [timer invalidate];
-                [self skipButtonTapped];
+                if (![UPArpuNativeSplashWrapper sharedWrapper].landingPageBeingShown) { [self skipButtonTapped]; }
             }
         } else {
             [timer invalidate];
@@ -432,16 +477,11 @@ static NSString *const kTimerUserInfoBlockKey = @"com.uparpu.timer_block";
 }
 
 -(void) didClickNativeAdInAdView:(UPArpuNativeADView*)adView placementID:(NSString*)placementID {
-    
     NSLog(@"UPArpuNativeSplashWrapper:: didClickNativeAdInAdView:placementID:%@", placementID);
     id<UPArpuNativeSplashDelegate> delegate = [self delegateForPlacementID:placementID];
     if ([delegate respondsToSelector:@selector(didCloseNativeSplashAdForPlacementID:)]) {
         [delegate didClickNaitveSplashAdForPlacementID:placementID];
     }
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [[UPArpuNativeSplashWrapper sharedWrapper] skipButtonTapped];
-    });
-    
 }
 
 -(void) didShowNativeAdInAdView:(UPArpuNativeADView*)adView placementID:(NSString*)placementID {

@@ -247,6 +247,7 @@ static NSInteger adViewTag = 3333;
     UPArpuNativeADConfiguration *config = [[UPArpuNativeADConfiguration alloc] init];
     config.ADFrame = CGRectMake(.0f, 64.0f, CGRectGetWidth(self.view.bounds), 300.0f);
     config.delegate = self;
+    config.rootViewController = self;
     config.renderingViewClass = [DMADView class];
     UIView *adView = [[UPArpuAdManager sharedManager] retriveAdViewWithPlacementID:_placementIDs[_name] configuration:config];
     adView.tag = adViewTag;

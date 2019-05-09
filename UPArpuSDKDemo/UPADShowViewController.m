@@ -97,7 +97,9 @@ static NSString *const kNendVideoPlacementID = @"b5cb96d5291e93";
 }
 
 -(NSArray<UIView*>*)clickableViews {
-    return @[_iconImageView, _ctaLabel];
+    NSMutableArray<UIView*> *clickableViews = [NSMutableArray<UIView*> arrayWithObjects:_iconImageView, _ctaLabel, nil];
+    if (self.mediaView != nil) { [clickableViews addObject:self.mediaView]; }
+    return clickableViews;
 }
 
 -(void) layoutMediaView {

@@ -375,6 +375,7 @@ static NSString *const kTimerUserInfoBlockKey = @"com.uparpu.timer_block";
     CGFloat bottom = safeAreaInsets.bottom;
     config.ADFrame = CGRectMake(.0f, top, CGRectGetWidth([UIScreen mainScreen].bounds), CGRectGetHeight([UIScreen mainScreen].bounds) - top - bottom);
     config.delegate = [UPArpuNativeSplashWrapper sharedWrapper];
+    config.rootViewController = [UIApplication sharedApplication].keyWindow.rootViewController;
     config.renderingViewClass = [UPArpuNativeSplashView class];
     [UPArpuNativeSplashWrapper sharedWrapper].currentSplashView = [[UPArpuAdManager sharedManager] retriveAdViewWithPlacementID:placementID configuration:config];
     if ([UPArpuNativeSplashWrapper sharedWrapper].currentSplashView != nil) {

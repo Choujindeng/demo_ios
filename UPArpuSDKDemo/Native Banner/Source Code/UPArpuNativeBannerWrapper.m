@@ -306,6 +306,7 @@ static CGFloat kStarDimension = 12.0f;
     config.ADFrame = self.bounds;
     config.delegate = self;
     config.renderingViewClass = [UPArpuNativeBannerInternalNativeView class];
+    config.rootViewController = [UIApplication sharedApplication].keyWindow.rootViewController;
     UPArpuNativeBannerInternalNativeView *nativeAdView = [[UPArpuAdManager sharedManager] retriveAdViewWithPlacementID:_placementID configuration:config];
     if (nativeAdView != nil) {
         NSLog(@"UPArpuNativeBannerView::native ad view retrieved, will attach");

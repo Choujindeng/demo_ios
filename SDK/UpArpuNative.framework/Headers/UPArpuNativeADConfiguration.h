@@ -16,6 +16,5 @@
 @property(nonatomic) NSDictionary *context;
 @property(nonatomic) Class renderingViewClass;
 @property(nonatomic) CGRect ADFrame;
-@property(nonatomic, weak) UIViewController *rootViewController;
 @property(nonatomic, weak) id<UPArpuNativeADDelegate> delegate;
 @end

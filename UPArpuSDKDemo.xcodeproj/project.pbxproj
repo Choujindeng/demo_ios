@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D02FE4E22924EAE00E94C6A /* UIViewController+PresentationAndDismissalSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D02FE4D22924EAE00E94C6A /* UIViewController+PresentationAndDismissalSwizzling.m */; };
 		8D03FE62215F1655005DC75D /* UPArpuInterstitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D03FE5F215F1655005DC75D /* UPArpuInterstitialViewController.m */; };
 		8D03FE63215F1655005DC75D /* UPArpuBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D03FE60215F1655005DC75D /* UPArpuBannerViewController.m */; };
 		8D03FE65215F177D005DC75D /* UpArpuGDTNativeAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D03FE64215F177D005DC75D /* UpArpuGDTNativeAdapter.framework */; };
@@ -420,6 +421,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8D02FE4C22924EAE00E94C6A /* UIViewController+PresentationAndDismissalSwizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+PresentationAndDismissalSwizzling.h"; sourceTree = "<group>"; };
+		8D02FE4D22924EAE00E94C6A /* UIViewController+PresentationAndDismissalSwizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+PresentationAndDismissalSwizzling.m"; sourceTree = "<group>"; };
 		8D03FE5E215F1655005DC75D /* UPArpuInterstitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPArpuInterstitialViewController.h; sourceTree = "<group>"; };
 		8D03FE5F215F1655005DC75D /* UPArpuInterstitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPArpuInterstitialViewController.m; sourceTree = "<group>"; };
 		8D03FE60215F1655005DC75D /* UPArpuBannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPArpuBannerViewController.m; sourceTree = "<group>"; };
@@ -1219,6 +1222,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D02FE4B22924EAE00E94C6A /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				8D02FE4C22924EAE00E94C6A /* UIViewController+PresentationAndDismissalSwizzling.h */,
+				8D02FE4D22924EAE00E94C6A /* UIViewController+PresentationAndDismissalSwizzling.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		8D73520621786ADB00D8FAE6 /* Oneway */ = {
 			isa = PBXGroup;
 			children = (
@@ -1490,6 +1502,7 @@
 		8DE56ED9209C70BC002A1427 /* UPArpuSDKDemo */ = {
 			isa = PBXGroup;
 			children = (
+				8D02FE4B22924EAE00E94C6A /* Base */,
 				8D8058E02268110C003468B7 /* Native Banner */,
 				8D8058CF2268110C003468B7 /* Native Splash */,
 				8D03FE61215F1655005DC75D /* UPArpuBannerViewController.h */,
@@ -2632,6 +2645,7 @@
 				8D80590B2268147C003468B7 /* UPArpuNativeBannerViewController.m in Sources */,
 				DC83FA842101F08D003FFC3C /* MOPUBAVPlayer.m in Sources */,
 				DC83FA0F2101F08D003FFC3C /* MPConsentManager.m in Sources */,
+				8D02FE4E22924EAE00E94C6A /* UIViewController+PresentationAndDismissalSwizzling.m in Sources */,
 				DC83FA412101F08D003FFC3C /* MPVASTWrapper.m in Sources */,
 				DC83FA062101F08D003FFC3C /* MPCountdownTimerView.m in Sources */,
 				DC83FA402101F08D003FFC3C /* MPVASTModel.m in Sources */,

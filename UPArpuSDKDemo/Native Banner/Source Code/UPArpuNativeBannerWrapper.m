@@ -9,6 +9,7 @@
 #import "UPArpuNativeBannerWrapper.h"
 #import <objc/runtime.h>
 #import "MTAutoLayoutCategories.h"
+#import "UIViewController+PresentationAndDismissalSwizzling.h"
 
 NSString *const kUPArpuNativeBannerAdShowingExtraBackgroundColorKey = @"bckground_color";
 NSString *const kUPArpuNativeBannerAdShowingExtraAdSizeKey = @"ad_size";
@@ -170,7 +171,13 @@ static CGFloat kStarDimension = 12.0f;
 }
 
 -(void) layoutMediaView {
-    self.mediaView.frame = CGRectMake(.0f, .0f, CGRectGetHeight(self.bounds) * 3.0f / 2.0f, CGRectGetHeight(self.bounds));
+    if (self.mediaView != nil && self.mainImageView != nil) {
+        self.mediaView.translatesAutoresizingMaskIntoConstraints = NO;
+        [self addConstraintWithItem:self.mediaView attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self.mainImageView attribute:NSLayoutAttributeCenterX multiplier:1.0f constant:.0f];
+        [self addConstraintWithItem:self.mediaView attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.mainImageView attribute:NSLayoutAttributeCenterY multiplier:1.0f constant:.0f];
+        [self addConstraintWithItem:self.mediaView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.mainImageView attribute:NSLayoutAttributeWidth multiplier:1.0f constant:.0f];
+        [self addConstraintWithItem:self.mediaView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:self.mainImageView attribute:NSLayoutAttributeHeight multiplier:1.0f constant:.0f];
+    }
 }
 
 +(void) configureAdView:(UPArpuNativeBannerInternalNativeView*)adView withExtra:(NSDictionary*)extra {
@@ -258,6 +265,7 @@ static CGFloat kStarDimension = 12.0f;
         self.clipsToBounds = YES;
         _delegate = delegate;
         _placementID = placementID;
+        _shouldNotifyShow = YES;
         [self configureAccessoryViews];
         [self attachNewInternalNativeAdView];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleApplicationWillResignActiveNotification:) name:UIApplicationWillResignActiveNotification object:nil];
@@ -299,6 +307,7 @@ static CGFloat kStarDimension = 12.0f;
     config.ADFrame = self.bounds;
     config.delegate = self;
     config.renderingViewClass = [UPArpuNativeBannerInternalNativeView class];
+    config.rootViewController = [UIApplication sharedApplication].keyWindow.rootViewController;
     UPArpuNativeBannerInternalNativeView *nativeAdView = [[UPArpuAdManager sharedManager] retriveAdViewWithPlacementID:_placementID configuration:config];
     if (nativeAdView != nil) {
         NSLog(@"UPArpuNativeBannerView::native ad view retrieved, will attach");
@@ -328,11 +337,13 @@ static CGFloat kStarDimension = 12.0f;
 }
 
 -(void) scheduleNextLoad {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        NSLog(@"UPArpuNativeBannerView::scheduleNextLoad, will fire next in %lf seconds", _autoRefreshInterval);
-        [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(loadNext) object:nil];
-        [self performSelector:@selector(loadNext) withObject:nil afterDelay:_autoRefreshInterval];
-    });
+    if (_autoRefreshInterval > 0) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSLog(@"UPArpuNativeBannerView::scheduleNextLoad, will fire next in %lf seconds", _autoRefreshInterval);
+            [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(loadNext) object:nil];
+            [self performSelector:@selector(loadNext) withObject:nil afterDelay:_autoRefreshInterval];
+        });
+    }
 }
 
 -(void) loadNext {
@@ -400,6 +411,10 @@ static CGFloat kStarDimension = 12.0f;
 -(instancetype) init {
     self = [super init];
     if (self != nil) {
+        [UIViewController swizzleMethods];
+        [[NSNotificationCenter defaultCenter] addObserverForName:kUPArpuUIViewControllerPresentationNotification object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) { [_banners enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) { [((UPArpuNativeBannerView*)obj) cancelScheduledLoad]; }]; }];
+        [[NSNotificationCenter defaultCenter] addObserverForName:kUPArpuUIViewControllerDismissalNotification object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) { [_banners enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) { [((UPArpuNativeBannerView*)obj) scheduleNextLoad]; }]; }];
+        
         _delegates = [NSMutableDictionary new];
         _delegates_accessing_queue = dispatch_queue_create("com.uparpu.delegateAccessingControlQueue", DISPATCH_QUEUE_CONCURRENT);
         
@@ -478,40 +493,46 @@ static CGFloat kStarDimension = 12.0f;
 }
 
 -(void) setLoadingExtra:(NSDictionary*)extra forPlacementID:(NSString*)placementID {
-    __weak typeof(self) weakSelf = self;
     dispatch_barrier_async(_loadingExtras_accessing_control_queue, ^{
-        weakSelf.loadingExtras[placementID] = extra;
+        _loadingExtras[placementID] = extra;
     });
 }
 
 -(NSDictionary*)loadingExtraForPlacementID:(NSString*)placementID {
     __block NSDictionary *extra = nil;
-    __weak typeof(self) weakSelf = self;
     dispatch_sync(_loadingExtras_accessing_control_queue, ^{
-        extra = weakSelf.loadingExtras[placementID];
+        extra = _loadingExtras[placementID];
     });
     return extra;
 }
 
 +(void) loadNativeBannerAdWithPlacementID:(NSString*)placementID extra:(NSDictionary*)extra customData:(NSDictionary*)customData delegate:(id<UPArpuNativeBannerDelegate>)delegate {
     NSLog(@"UPArpuNativeBannerWrapper::loadNativeBannerAdWithPlacementID:%@ extra:%@ customData:%@ delegate:", placementID, extra, customData);
-    NSMutableDictionary *localExtra = [NSMutableDictionary dictionary];
-    if (extra[kExtraInfoNativeAdTypeKey] != nil) { localExtra[kExtraInfoNativeAdTypeKey] = extra[kExtraInfoNativeAdTypeKey]; }
-    if (extra[kUPArpuExtraNativeImageSizeKey] != nil) { localExtra[kUPArpuExtraNativeImageSizeKey] = extra[kUPArpuExtraNativeImageSizeKey]; }
+    NSMutableDictionary *localExtra = [NSMutableDictionary dictionaryWithDictionary:@{kExtraInfoNativeAdTypeKey:@(UPArpuGDTNativeAdTypeSelfRendering), kUPArpuExtraNativeImageSizeKey:kUPArpuExtraNativeImageSize690_388}];
+    if ([extra isKindOfClass:[NSDictionary class]] && [extra count] > 0) { [localExtra addEntriesFromDictionary:extra]; }
     [[UPArpuNativeBannerWrapper sharedWrapper] setLoadingExtra:localExtra forPlacementID:placementID];
     [[UPArpuNativeBannerWrapper sharedWrapper] setDelegate:delegate forPlacementID:placementID];
     [[[UPArpuNativeBannerWrapper sharedWrapper] nativeBannerViewForPlacementID:placementID] cancelScheduledLoad];
-    [[UPArpuAdManager sharedManager] loadADWithPlacementID:placementID extra:extra customData:customData delegate:[UPArpuNativeBannerWrapper sharedWrapper]];
+    [[UPArpuAdManager sharedManager] loadADWithPlacementID:placementID extra:localExtra customData:customData delegate:[UPArpuNativeBannerWrapper sharedWrapper]];
 }
 
 +(UPArpuNativeBannerView*) retrieveNativeBannerAdViewWithPlacementID:(NSString*)placementID extra:(NSDictionary*)extra delegate:(id<UPArpuNativeBannerDelegate>)delegate {
     NSLog(@"UPArpuNativeBannerWrapper::retrieveNativeBannerAdViewWithPlacementID:%@ extra:%@ delegate:", placementID, extra);
     if ([self nativeBannerAdReadyForPlacementID:placementID]) {
-        [[UPArpuNativeBannerWrapper sharedWrapper] setShowingExtra:extra forPlacementID:placementID];
+        NSMutableDictionary *extraToBeSaved = [NSMutableDictionary dictionaryWithDictionary:extra];
+        if (extraToBeSaved[kUPArpuNativeBannerAdShowingExtraAutorefreshIntervalKey] == nil) {
+            NSDictionary *placementConfig = [[UPArpuAdManager sharedManager] autoRefreshConfigurationForPlacementID:placementID];
+            if ([placementConfig[kNativeAdAutorefreshConfigurationSwitchKey] boolValue] && [placementConfig[kNativeAdAutorefreshConfigurationRefreshIntervalKey] doubleValue] > 0) {
+                extraToBeSaved[kUPArpuNativeBannerAdShowingExtraAutorefreshIntervalKey] = placementConfig[kNativeAdAutorefreshConfigurationRefreshIntervalKey];
+            }
+        }
+        [[UPArpuNativeBannerWrapper sharedWrapper] setShowingExtra:extraToBeSaved forPlacementID:placementID];
         NSLog(@"Native banner ad ready, will be shown");
-        CGSize size = extra[kUPArpuNativeBannerAdShowingExtraAdSizeKey] != nil ? [extra[kUPArpuNativeBannerAdShowingExtraAdSizeKey] CGSizeValue] : CGSizeMake(320.0f, 80.0f);
+        CGSize size = extraToBeSaved[kUPArpuNativeBannerAdShowingExtraAdSizeKey] != nil ? [extraToBeSaved[kUPArpuNativeBannerAdShowingExtraAdSizeKey] CGSizeValue] : CGSizeMake(320.0f, 80.0f);
         UPArpuNativeBannerView *bannerView = [[UPArpuNativeBannerView alloc] initWithFrame:CGRectMake(.0f, .0f, size.width, size.height) delegate:delegate placementID:placementID];
-        bannerView.autoRefreshInterval = [extra[kUPArpuNativeBannerAdShowingExtraAutorefreshIntervalKey] respondsToSelector:@selector(doubleValue)] ? [extra[kUPArpuNativeBannerAdShowingExtraAutorefreshIntervalKey] doubleValue] : 10.0f;
+        if ([extraToBeSaved[kUPArpuNativeBannerAdShowingExtraAutorefreshIntervalKey] respondsToSelector:@selector(doubleValue)] && [extraToBeSaved[kUPArpuNativeBannerAdShowingExtraAutorefreshIntervalKey] doubleValue] > 0) {
+            bannerView.autoRefreshInterval = [extraToBeSaved[kUPArpuNativeBannerAdShowingExtraAutorefreshIntervalKey] doubleValue];
+        }
         [[UPArpuNativeBannerWrapper sharedWrapper].banners setObject:bannerView forKey:placementID];
         return bannerView;
     } else {

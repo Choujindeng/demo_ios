@@ -10,21 +10,6 @@
 #import <UIKit/UIKit.h>
 #import "GDTSDKDefines.h"
 
-/**
- *  视频模板广告播放器状态
- *
- *  播放器只可能处于以下状态中的一种
- *
- */
-typedef NS_ENUM(NSUInteger, GDTMediaPlayerStatus) {
-    GDTMediaPlayerStatusInitial = 0,         // 初始状态
-    GDTMediaPlayerStatusLoading = 1,         // 加载中
-    GDTMediaPlayerStatusStarted = 2,         // 开始播放
-    GDTMediaPlayerStatusPaused = 3,          // 用户行为导致暂停
-    GDTMediaPlayerStatusStoped = 4,          // 播放停止
-    GDTMediaPlayerStatusError = 5,           // 播放出错
-};
-
 @class GDTNativeExpressAdView;
 @class GDTNativeExpressAd;
 
@@ -87,7 +72,7 @@ typedef NS_ENUM(NSUInteger, GDTMediaPlayerStatus) {
 - (void)nativeExpressAdViewDidDissmissScreen:(GDTNativeExpressAdView *)nativeExpressAdView;
 
 /**
- * 原生模板广告点击之后应用进入后台时回调
+ * 详解:当点击应用下载或者广告调用系统程序打开时调用
  */
 - (void)nativeExpressAdViewApplicationWillEnterBackground:(GDTNativeExpressAdView *)nativeExpressAdView;
 

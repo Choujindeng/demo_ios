@@ -97,7 +97,9 @@ static NSString *const kNendVideoPlacementID = @"b5cb96d5291e93";
 }
 
 -(NSArray<UIView*>*)clickableViews {
-    return @[_iconImageView, _ctaLabel];
+    NSMutableArray<UIView*> *clickableViews = [NSMutableArray<UIView*> arrayWithObjects:_iconImageView, _ctaLabel, nil];
+    if (self.mediaView != nil) { [clickableViews addObject:self.mediaView]; }
+    return clickableViews;
 }
 
 -(void) layoutMediaView {
@@ -247,6 +249,7 @@ static NSInteger adViewTag = 3333;
     UPArpuNativeADConfiguration *config = [[UPArpuNativeADConfiguration alloc] init];
     config.ADFrame = CGRectMake(.0f, 64.0f, CGRectGetWidth(self.view.bounds), 300.0f);
     config.delegate = self;
+    config.rootViewController = self;
     config.renderingViewClass = [DMADView class];
     UIView *adView = [[UPArpuAdManager sharedManager] retriveAdViewWithPlacementID:_placementIDs[_name] configuration:config];
     adView.tag = adViewTag;

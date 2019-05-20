@@ -24,6 +24,7 @@
 		8D03FE7B215F17F1005DC75D /* UpArpuGDTInterstitialAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D03FE75215F17F1005DC75D /* UpArpuGDTInterstitialAdapter.framework */; };
 		8D03FE7F215F5E32005DC75D /* MTGSDKInterstitialVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D03FE7D215F5E32005DC75D /* MTGSDKInterstitialVideo.framework */; };
 		8D03FE80215F5E32005DC75D /* MTGSDKInterstitial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D03FE7E215F5E32005DC75D /* MTGSDKInterstitial.framework */; };
+		8D12AE3C2283D05800FAA85F /* libGDTMobSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D12AE3A2283D05800FAA85F /* libGDTMobSDK.a */; };
 		8D3A583821B532BF0033C44C /* UpArpuBaiduInterstitialAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D3A583521B532BE0033C44C /* UpArpuBaiduInterstitialAdapter.framework */; };
 		8D3A583921B532BF0033C44C /* UpArpuBaiduBannerAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D3A583621B532BF0033C44C /* UpArpuBaiduBannerAdapter.framework */; };
 		8D3A583A21B532BF0033C44C /* UpArpuBaiduRewardedVideoAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D3A583721B532BF0033C44C /* UpArpuBaiduRewardedVideoAdapter.framework */; };
@@ -138,7 +139,6 @@
 		8DA1B5A021242771008280DB /* UpArpuUnityAdsRewardedVideoAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC83F7AD2101EC3B003FFC3C /* UpArpuUnityAdsRewardedVideoAdapter.framework */; };
 		8DA1B5A121242771008280DB /* UpArpuUnityAdsRewardedVideoAdapter.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = DC83F7AD2101EC3B003FFC3C /* UpArpuUnityAdsRewardedVideoAdapter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8DA1B5A221242771008280DB /* UpArpuVungleRewardedVideoAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC83F7BA2101EC3D003FFC3C /* UpArpuVungleRewardedVideoAdapter.framework */; };
-		8DD6F33D221547A100EA97A1 /* libGDTMobSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD6F33C221547A100EA97A1 /* libGDTMobSDK.a */; };
 		8DD6F341221547B200EA97A1 /* baidumobadsdk.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8DD6F33F221547B200EA97A1 /* baidumobadsdk.bundle */; };
 		8DD6F342221547B200EA97A1 /* BaiduMobAdSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD6F340221547B200EA97A1 /* BaiduMobAdSDK.framework */; };
 		8DD6F346221547CA00EA97A1 /* BUAdSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD6F344221547CA00EA97A1 /* BUAdSDK.framework */; };
@@ -441,6 +441,24 @@
 		8D03FE75215F17F1005DC75D /* UpArpuGDTInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuGDTInterstitialAdapter.framework; path = SDK/UpArpuGDTInterstitialAdapter.framework; sourceTree = "<group>"; };
 		8D03FE7D215F5E32005DC75D /* MTGSDKInterstitialVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MTGSDKInterstitialVideo.framework; path = SDK/MTGSDKInterstitialVideo.framework; sourceTree = "<group>"; };
 		8D03FE7E215F5E32005DC75D /* MTGSDKInterstitial.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MTGSDKInterstitial.framework; path = SDK/MTGSDKInterstitial.framework; sourceTree = "<group>"; };
+		8D12AE2A2283D05700FAA85F /* GDTSDKConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTSDKConfig.h; sourceTree = "<group>"; };
+		8D12AE2B2283D05700FAA85F /* GDTNativeAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTNativeAd.h; sourceTree = "<group>"; };
+		8D12AE2C2283D05700FAA85F /* GDTNativeExpressAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTNativeExpressAdView.h; sourceTree = "<group>"; };
+		8D12AE2D2283D05700FAA85F /* GDTMobBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTMobBannerView.h; sourceTree = "<group>"; };
+		8D12AE2E2283D05700FAA85F /* GDTMobInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTMobInterstitial.h; sourceTree = "<group>"; };
+		8D12AE2F2283D05700FAA85F /* GDTUnifiedNativeAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTUnifiedNativeAdView.h; sourceTree = "<group>"; };
+		8D12AE302283D05700FAA85F /* GDTUnifiedNativeAdDataObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTUnifiedNativeAdDataObject.h; sourceTree = "<group>"; };
+		8D12AE312283D05700FAA85F /* GDTMediaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTMediaView.h; sourceTree = "<group>"; };
+		8D12AE322283D05800FAA85F /* GDTRewardVideoAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTRewardVideoAd.h; sourceTree = "<group>"; };
+		8D12AE332283D05800FAA85F /* GDTHybridAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTHybridAd.h; sourceTree = "<group>"; };
+		8D12AE342283D05800FAA85F /* GDTSplashAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTSplashAd.h; sourceTree = "<group>"; };
+		8D12AE352283D05800FAA85F /* GDTNativeExpressAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTNativeExpressAd.h; sourceTree = "<group>"; };
+		8D12AE362283D05800FAA85F /* GDTUnifiedBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTUnifiedBannerView.h; sourceTree = "<group>"; };
+		8D12AE372283D05800FAA85F /* GDTLogoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTLogoView.h; sourceTree = "<group>"; };
+		8D12AE382283D05800FAA85F /* GDTUnifiedInterstitialAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTUnifiedInterstitialAd.h; sourceTree = "<group>"; };
+		8D12AE392283D05800FAA85F /* GDTUnifiedNativeAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTUnifiedNativeAd.h; sourceTree = "<group>"; };
+		8D12AE3A2283D05800FAA85F /* libGDTMobSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGDTMobSDK.a; sourceTree = "<group>"; };
+		8D12AE3B2283D05800FAA85F /* GDTSDKDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTSDKDefines.h; sourceTree = "<group>"; };
 		8D3A583521B532BE0033C44C /* UpArpuBaiduInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuBaiduInterstitialAdapter.framework; path = SDK/UpArpuBaiduInterstitialAdapter.framework; sourceTree = "<group>"; };
 		8D3A583621B532BF0033C44C /* UpArpuBaiduBannerAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuBaiduBannerAdapter.framework; path = SDK/UpArpuBaiduBannerAdapter.framework; sourceTree = "<group>"; };
 		8D3A583721B532BF0033C44C /* UpArpuBaiduRewardedVideoAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuBaiduRewardedVideoAdapter.framework; path = SDK/UpArpuBaiduRewardedVideoAdapter.framework; sourceTree = "<group>"; };
@@ -555,16 +573,6 @@
 		8D90879121D4A0BE0070EDCE /* UpArpuMobPowerNativeAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuMobPowerNativeAdapter.framework; path = SDK/UpArpuMobPowerNativeAdapter.framework; sourceTree = "<group>"; };
 		8D90879521D4A41B0070EDCE /* MobPowerNative.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobPowerNative.framework; path = SDK/MobPowerNative.framework; sourceTree = "<group>"; };
 		8D90879621D4A41C0070EDCE /* MobPowerSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobPowerSDK.framework; path = SDK/MobPowerSDK.framework; sourceTree = "<group>"; };
-		8DD6F333221547A100EA97A1 /* GDTNativeExpressAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTNativeExpressAdView.h; sourceTree = "<group>"; };
-		8DD6F334221547A100EA97A1 /* GDTMobBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTMobBannerView.h; sourceTree = "<group>"; };
-		8DD6F335221547A100EA97A1 /* GDTNativeAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTNativeAd.h; sourceTree = "<group>"; };
-		8DD6F336221547A100EA97A1 /* GDTSDKConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTSDKConfig.h; sourceTree = "<group>"; };
-		8DD6F337221547A100EA97A1 /* GDTMobInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTMobInterstitial.h; sourceTree = "<group>"; };
-		8DD6F338221547A100EA97A1 /* GDTRewardVideoAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTRewardVideoAd.h; sourceTree = "<group>"; };
-		8DD6F339221547A100EA97A1 /* GDTSplashAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTSplashAd.h; sourceTree = "<group>"; };
-		8DD6F33A221547A100EA97A1 /* GDTNativeExpressAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTNativeExpressAd.h; sourceTree = "<group>"; };
-		8DD6F33B221547A100EA97A1 /* GDTSDKDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTSDKDefines.h; sourceTree = "<group>"; };
-		8DD6F33C221547A100EA97A1 /* libGDTMobSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGDTMobSDK.a; sourceTree = "<group>"; };
 		8DD6F33F221547B200EA97A1 /* baidumobadsdk.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = baidumobadsdk.bundle; sourceTree = "<group>"; };
 		8DD6F340221547B200EA97A1 /* BaiduMobAdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMobAdSDK.framework; sourceTree = "<group>"; };
 		8DD6F344221547CA00EA97A1 /* BUAdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BUAdSDK.framework; sourceTree = "<group>"; };
@@ -1139,6 +1147,7 @@
 				DC83F8102101ECB0003FFC3C /* libFlurryAds_1.0.0.a in Frameworks */,
 				DC83F80F2101ECA4003FFC3C /* libFlurry_9.0.0.a in Frameworks */,
 				DC83FA4E2101F08D003FFC3C /* libAvid-mopub-3.6.1.a in Frameworks */,
+				8D12AE3C2283D05800FAA85F /* libGDTMobSDK.a in Frameworks */,
 				DC83F7F72101EC68003FFC3C /* UnityAds.framework in Frameworks */,
 				8D73523821786B1500D8FAE6 /* libAppnextSDKCore.a in Frameworks */,
 				DC83FA4F2101F08D003FFC3C /* MPUBMoatMobileAppKit.framework in Frameworks */,
@@ -1199,7 +1208,6 @@
 				8D7351E821785D6700D8FAE6 /* UpArpuFacebookInterstitialAdapter.framework in Frameworks */,
 				8D03FE79215F17F1005DC75D /* UpArpuAdmobInterstitialAdapter.framework in Frameworks */,
 				8DD9B45922706D0800A2FFBE /* NendAd.framework in Frameworks */,
-				8DD6F33D221547A100EA97A1 /* libGDTMobSDK.a in Frameworks */,
 				8D7351E521785CFA00D8FAE6 /* UpArpuInmobiInterstitialAdapter.framework in Frameworks */,
 				8D7350C32174340A00D8FAE6 /* UpArpuFlurryInterstitialAdapter.framework in Frameworks */,
 				8D03FE7A215F17F1005DC75D /* UpArpuApplovinInterstitialAdapter.framework in Frameworks */,
@@ -1418,16 +1426,24 @@
 		8DD6F332221547A100EA97A1 /* GDT */ = {
 			isa = PBXGroup;
 			children = (
-				8DD6F333221547A100EA97A1 /* GDTNativeExpressAdView.h */,
-				8DD6F334221547A100EA97A1 /* GDTMobBannerView.h */,
-				8DD6F335221547A100EA97A1 /* GDTNativeAd.h */,
-				8DD6F336221547A100EA97A1 /* GDTSDKConfig.h */,
-				8DD6F337221547A100EA97A1 /* GDTMobInterstitial.h */,
-				8DD6F338221547A100EA97A1 /* GDTRewardVideoAd.h */,
-				8DD6F339221547A100EA97A1 /* GDTSplashAd.h */,
-				8DD6F33A221547A100EA97A1 /* GDTNativeExpressAd.h */,
-				8DD6F33B221547A100EA97A1 /* GDTSDKDefines.h */,
-				8DD6F33C221547A100EA97A1 /* libGDTMobSDK.a */,
+				8D12AE332283D05800FAA85F /* GDTHybridAd.h */,
+				8D12AE372283D05800FAA85F /* GDTLogoView.h */,
+				8D12AE312283D05700FAA85F /* GDTMediaView.h */,
+				8D12AE2D2283D05700FAA85F /* GDTMobBannerView.h */,
+				8D12AE2E2283D05700FAA85F /* GDTMobInterstitial.h */,
+				8D12AE2B2283D05700FAA85F /* GDTNativeAd.h */,
+				8D12AE352283D05800FAA85F /* GDTNativeExpressAd.h */,
+				8D12AE2C2283D05700FAA85F /* GDTNativeExpressAdView.h */,
+				8D12AE322283D05800FAA85F /* GDTRewardVideoAd.h */,
+				8D12AE2A2283D05700FAA85F /* GDTSDKConfig.h */,
+				8D12AE3B2283D05800FAA85F /* GDTSDKDefines.h */,
+				8D12AE342283D05800FAA85F /* GDTSplashAd.h */,
+				8D12AE362283D05800FAA85F /* GDTUnifiedBannerView.h */,
+				8D12AE382283D05800FAA85F /* GDTUnifiedInterstitialAd.h */,
+				8D12AE392283D05800FAA85F /* GDTUnifiedNativeAd.h */,
+				8D12AE302283D05700FAA85F /* GDTUnifiedNativeAdDataObject.h */,
+				8D12AE2F2283D05700FAA85F /* GDTUnifiedNativeAdView.h */,
+				8D12AE3A2283D05800FAA85F /* libGDTMobSDK.a */,
 			);
 			name = GDT;
 			path = SDK/GDT;

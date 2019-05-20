@@ -391,7 +391,7 @@ static NSString *const kTimerUserInfoBlockKey = @"com.uparpu.timer_block";
             objc_setAssociatedObject([UPArpuNativeSplashWrapper sharedWrapper], (__bridge_retained void*)kUPArpuNativeSplashShowingExtraCountdownIntervalKey, extra[kUPArpuNativeSplashShowingExtraCountdownIntervalKey], OBJC_ASSOCIATION_RETAIN);
             [[UPArpuNativeSplashWrapper sharedWrapper].currentSplashView.skipButton setTitle:[NSString stringWithFormat:kSkipTextFormatString, [extra[kUPArpuNativeSplashShowingExtraCountdownIntervalKey] integerValue]] forState:UIControlStateNormal];
         }
-
+        
         if ([extra[kUPArpuNativeSplashShowingExtraCTAButtonBackgroundColorKey] isKindOfClass:[UIColor class]]) {
             [UPArpuNativeSplashWrapper sharedWrapper].currentSplashView.ctaLabel.backgroundColor = extra[kUPArpuNativeSplashShowingExtraCTAButtonBackgroundColorKey];
         }

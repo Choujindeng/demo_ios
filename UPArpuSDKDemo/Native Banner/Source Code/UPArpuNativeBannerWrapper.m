@@ -9,6 +9,7 @@
 #import "UPArpuNativeBannerWrapper.h"
 #import <objc/runtime.h>
 #import "MTAutoLayoutCategories.h"
+#import "UIViewController+PresentationAndDismissalSwizzling.h"
 
 NSString *const kUPArpuNativeBannerAdShowingExtraBackgroundColorKey = @"bckground_color";
 NSString *const kUPArpuNativeBannerAdShowingExtraAdSizeKey = @"ad_size";
@@ -410,6 +411,10 @@ static CGFloat kStarDimension = 12.0f;
 -(instancetype) init {
     self = [super init];
     if (self != nil) {
+        [UIViewController swizzleMethods];
+        [[NSNotificationCenter defaultCenter] addObserverForName:kUPArpuUIViewControllerPresentationNotification object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) { [_banners enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) { [((UPArpuNativeBannerView*)obj) cancelScheduledLoad]; }]; }];
+        [[NSNotificationCenter defaultCenter] addObserverForName:kUPArpuUIViewControllerDismissalNotification object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) { [_banners enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) { [((UPArpuNativeBannerView*)obj) scheduleNextLoad]; }]; }];
+        
         _delegates = [NSMutableDictionary new];
         _delegates_accessing_queue = dispatch_queue_create("com.uparpu.delegateAccessingControlQueue", DISPATCH_QUEUE_CONCURRENT);
         

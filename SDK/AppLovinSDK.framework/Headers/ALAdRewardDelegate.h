@@ -1,16 +1,14 @@
 //
 //  ALAdRewardDelegate.h
-//  sdk
+//  AppLovinSDK
 //
-//  Created by Matt Szaro on 1/3/14.
 //
+//  Copyright © 2019 AppLovin Corporation. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import "ALAnnotations.h"
 #import "ALAd.h"
 
-AL_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  *  This protocol defines a listener for rewarded video events.
@@ -62,15 +60,8 @@ AL_ASSUME_NONNULL_BEGIN
 
 @optional
 
-/**
- * This method will be invoked if the user chooses 'no' when asked if they want to view a rewarded video.
- *
- * This is only possible if you have the pre-video modal enabled in the Manage Apps UI.
- *
- * @param ad       Ad which was offered to the user, but declined.
- */
-- (void)userDeclinedToViewAd:(ALAd *)ad;
+- (void)userDeclinedToViewAd:(ALAd *)ad  __deprecated_msg("Users will no longer be able to receive rewarded video prompts.");
 
 @end
 
-AL_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END

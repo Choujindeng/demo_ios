@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8D02FE4E22924EAE00E94C6A /* UIViewController+PresentationAndDismissalSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D02FE4D22924EAE00E94C6A /* UIViewController+PresentationAndDismissalSwizzling.m */; };
 		8D03FE62215F1655005DC75D /* UPArpuInterstitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D03FE5F215F1655005DC75D /* UPArpuInterstitialViewController.m */; };
 		8D03FE63215F1655005DC75D /* UPArpuBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D03FE60215F1655005DC75D /* UPArpuBannerViewController.m */; };
 		8D03FE65215F177D005DC75D /* UpArpuGDTNativeAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D03FE64215F177D005DC75D /* UpArpuGDTNativeAdapter.framework */; };
@@ -61,31 +60,6 @@
 		8D73523A21786B1500D8FAE6 /* libAppnextNativeAdsSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D73523621786B1500D8FAE6 /* libAppnextNativeAdsSDK.a */; };
 		8D8058CC2267612A003468B7 /* UpArpuTTNativeAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D8058CB2267612A003468B7 /* UpArpuTTNativeAdapter.framework */; };
 		8D8058CE226764D4003468B7 /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D8058CD226764D4003468B7 /* VideoToolbox.framework */; };
-		8D8058F02268110C003468B7 /* UPArpuNativeSplashWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8058D22268110C003468B7 /* UPArpuNativeSplashWrapper.m */; };
-		8D8058F12268110C003468B7 /* star_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8058D42268110C003468B7 /* star_on.png */; };
-		8D8058F22268110C003468B7 /* semi_star.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8058D52268110C003468B7 /* semi_star.png */; };
-		8D8058F32268110C003468B7 /* semi_star@3x .png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8058D62268110C003468B7 /* semi_star@3x .png */; };
-		8D8058F42268110C003468B7 /* star_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8058D72268110C003468B7 /* star_off.png */; };
-		8D8058F52268110C003468B7 /* star_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8058D82268110C003468B7 /* star_on@2x.png */; };
-		8D8058F62268110C003468B7 /* star_off@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8058D92268110C003468B7 /* star_off@3x.png */; };
-		8D8058F72268110C003468B7 /* star_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8058DA2268110C003468B7 /* star_off@2x.png */; };
-		8D8058F82268110C003468B7 /* star_on@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8058DB2268110C003468B7 /* star_on@3x.png */; };
-		8D8058F92268110C003468B7 /* cta_btn_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8058DC2268110C003468B7 /* cta_btn_bg.png */; };
-		8D8058FA2268110C003468B7 /* cta_btn_bg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8058DD2268110C003468B7 /* cta_btn_bg@3x.png */; };
-		8D8058FB2268110C003468B7 /* semi_star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8058DE2268110C003468B7 /* semi_star@2x.png */; };
-		8D8058FC2268110C003468B7 /* cta_btn_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8058DF2268110C003468B7 /* cta_btn_bg@2x.png */; };
-		8D8058FD2268110C003468B7 /* UPArpuNativeBannerWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8058E32268110C003468B7 /* UPArpuNativeBannerWrapper.m */; };
-		8D8058FE2268110C003468B7 /* native_banner_star_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8058E52268110C003468B7 /* native_banner_star_on.png */; };
-		8D8058FF2268110C003468B7 /* native_banner_star_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8058E62268110C003468B7 /* native_banner_star_off.png */; };
-		8D8059002268110C003468B7 /* native_banner_semi_star.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8058E72268110C003468B7 /* native_banner_semi_star.png */; };
-		8D8059012268110C003468B7 /* native_banner_star_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8058E82268110C003468B7 /* native_banner_star_off@2x.png */; };
-		8D8059022268110C003468B7 /* native_banner_semi_star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8058E92268110C003468B7 /* native_banner_semi_star@2x.png */; };
-		8D8059032268110C003468B7 /* native_banner_semi_star@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8058EA2268110C003468B7 /* native_banner_semi_star@3x.png */; };
-		8D8059042268110C003468B7 /* native_banner_star_off@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8058EB2268110C003468B7 /* native_banner_star_off@3x.png */; };
-		8D8059052268110C003468B7 /* native_banner_close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8058EC2268110C003468B7 /* native_banner_close@3x.png */; };
-		8D8059062268110C003468B7 /* native_banner_star_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8058ED2268110C003468B7 /* native_banner_star_on@2x.png */; };
-		8D8059072268110C003468B7 /* native_banner_star_on@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8058EE2268110C003468B7 /* native_banner_star_on@3x.png */; };
-		8D8059082268110C003468B7 /* native_banner_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8D8058EF2268110C003468B7 /* native_banner_close@2x.png */; };
 		8D80590B2268147C003468B7 /* UPArpuNativeBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D80590A2268147B003468B7 /* UPArpuNativeBannerViewController.m */; };
 		8D8059752269E017003468B7 /* UpArpuNendInterstitialAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D80596F2269E016003468B7 /* UpArpuNendInterstitialAdapter.framework */; };
 		8D8059762269E017003468B7 /* UpArpuNendRewardedVideoAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D8059702269E017003468B7 /* UpArpuNendRewardedVideoAdapter.framework */; };
@@ -421,8 +395,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		8D02FE4C22924EAE00E94C6A /* UIViewController+PresentationAndDismissalSwizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+PresentationAndDismissalSwizzling.h"; sourceTree = "<group>"; };
-		8D02FE4D22924EAE00E94C6A /* UIViewController+PresentationAndDismissalSwizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+PresentationAndDismissalSwizzling.m"; sourceTree = "<group>"; };
 		8D03FE5E215F1655005DC75D /* UPArpuInterstitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPArpuInterstitialViewController.h; sourceTree = "<group>"; };
 		8D03FE5F215F1655005DC75D /* UPArpuInterstitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPArpuInterstitialViewController.m; sourceTree = "<group>"; };
 		8D03FE60215F1655005DC75D /* UPArpuBannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPArpuBannerViewController.m; sourceTree = "<group>"; };
@@ -529,33 +501,6 @@
 		8D73523621786B1500D8FAE6 /* libAppnextNativeAdsSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAppnextNativeAdsSDK.a; sourceTree = "<group>"; };
 		8D8058CB2267612A003468B7 /* UpArpuTTNativeAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuTTNativeAdapter.framework; path = SDK/UpArpuTTNativeAdapter.framework; sourceTree = "<group>"; };
 		8D8058CD226764D4003468B7 /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
-		8D8058D12268110C003468B7 /* UPArpuNativeSplashWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPArpuNativeSplashWrapper.h; sourceTree = "<group>"; };
-		8D8058D22268110C003468B7 /* UPArpuNativeSplashWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPArpuNativeSplashWrapper.m; sourceTree = "<group>"; };
-		8D8058D42268110C003468B7 /* star_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star_on.png; sourceTree = "<group>"; };
-		8D8058D52268110C003468B7 /* semi_star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = semi_star.png; sourceTree = "<group>"; };
-		8D8058D62268110C003468B7 /* semi_star@3x .png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "semi_star@3x .png"; sourceTree = "<group>"; };
-		8D8058D72268110C003468B7 /* star_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star_off.png; sourceTree = "<group>"; };
-		8D8058D82268110C003468B7 /* star_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star_on@2x.png"; sourceTree = "<group>"; };
-		8D8058D92268110C003468B7 /* star_off@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star_off@3x.png"; sourceTree = "<group>"; };
-		8D8058DA2268110C003468B7 /* star_off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star_off@2x.png"; sourceTree = "<group>"; };
-		8D8058DB2268110C003468B7 /* star_on@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star_on@3x.png"; sourceTree = "<group>"; };
-		8D8058DC2268110C003468B7 /* cta_btn_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cta_btn_bg.png; sourceTree = "<group>"; };
-		8D8058DD2268110C003468B7 /* cta_btn_bg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cta_btn_bg@3x.png"; sourceTree = "<group>"; };
-		8D8058DE2268110C003468B7 /* semi_star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "semi_star@2x.png"; sourceTree = "<group>"; };
-		8D8058DF2268110C003468B7 /* cta_btn_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cta_btn_bg@2x.png"; sourceTree = "<group>"; };
-		8D8058E22268110C003468B7 /* UPArpuNativeBannerWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPArpuNativeBannerWrapper.h; sourceTree = "<group>"; };
-		8D8058E32268110C003468B7 /* UPArpuNativeBannerWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPArpuNativeBannerWrapper.m; sourceTree = "<group>"; };
-		8D8058E52268110C003468B7 /* native_banner_star_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = native_banner_star_on.png; sourceTree = "<group>"; };
-		8D8058E62268110C003468B7 /* native_banner_star_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = native_banner_star_off.png; sourceTree = "<group>"; };
-		8D8058E72268110C003468B7 /* native_banner_semi_star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = native_banner_semi_star.png; sourceTree = "<group>"; };
-		8D8058E82268110C003468B7 /* native_banner_star_off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "native_banner_star_off@2x.png"; sourceTree = "<group>"; };
-		8D8058E92268110C003468B7 /* native_banner_semi_star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "native_banner_semi_star@2x.png"; sourceTree = "<group>"; };
-		8D8058EA2268110C003468B7 /* native_banner_semi_star@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "native_banner_semi_star@3x.png"; sourceTree = "<group>"; };
-		8D8058EB2268110C003468B7 /* native_banner_star_off@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "native_banner_star_off@3x.png"; sourceTree = "<group>"; };
-		8D8058EC2268110C003468B7 /* native_banner_close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "native_banner_close@3x.png"; sourceTree = "<group>"; };
-		8D8058ED2268110C003468B7 /* native_banner_star_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "native_banner_star_on@2x.png"; sourceTree = "<group>"; };
-		8D8058EE2268110C003468B7 /* native_banner_star_on@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "native_banner_star_on@3x.png"; sourceTree = "<group>"; };
-		8D8058EF2268110C003468B7 /* native_banner_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "native_banner_close@2x.png"; sourceTree = "<group>"; };
 		8D8059092268147B003468B7 /* UPArpuNativeBannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPArpuNativeBannerViewController.h; sourceTree = "<group>"; };
 		8D80590A2268147B003468B7 /* UPArpuNativeBannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPArpuNativeBannerViewController.m; sourceTree = "<group>"; };
 		8D80596F2269E016003468B7 /* UpArpuNendInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuNendInterstitialAdapter.framework; path = SDK/UpArpuNendInterstitialAdapter.framework; sourceTree = "<group>"; };
@@ -1230,15 +1175,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8D02FE4B22924EAE00E94C6A /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				8D02FE4C22924EAE00E94C6A /* UIViewController+PresentationAndDismissalSwizzling.h */,
-				8D02FE4D22924EAE00E94C6A /* UIViewController+PresentationAndDismissalSwizzling.m */,
-			);
-			path = Base;
-			sourceTree = "<group>";
-		};
 		8D73520621786ADB00D8FAE6 /* Oneway */ = {
 			isa = PBXGroup;
 			children = (
@@ -1350,79 +1286,6 @@
 			path = AppnextNativeAdsSDK;
 			sourceTree = "<group>";
 		};
-		8D8058CF2268110C003468B7 /* Native Splash */ = {
-			isa = PBXGroup;
-			children = (
-				8D8058D02268110C003468B7 /* Source Code */,
-				8D8058D32268110C003468B7 /* Images */,
-			);
-			path = "Native Splash";
-			sourceTree = "<group>";
-		};
-		8D8058D02268110C003468B7 /* Source Code */ = {
-			isa = PBXGroup;
-			children = (
-				8D8058D12268110C003468B7 /* UPArpuNativeSplashWrapper.h */,
-				8D8058D22268110C003468B7 /* UPArpuNativeSplashWrapper.m */,
-			);
-			path = "Source Code";
-			sourceTree = "<group>";
-		};
-		8D8058D32268110C003468B7 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				8D8058D42268110C003468B7 /* star_on.png */,
-				8D8058D52268110C003468B7 /* semi_star.png */,
-				8D8058D62268110C003468B7 /* semi_star@3x .png */,
-				8D8058D72268110C003468B7 /* star_off.png */,
-				8D8058D82268110C003468B7 /* star_on@2x.png */,
-				8D8058D92268110C003468B7 /* star_off@3x.png */,
-				8D8058DA2268110C003468B7 /* star_off@2x.png */,
-				8D8058DB2268110C003468B7 /* star_on@3x.png */,
-				8D8058DC2268110C003468B7 /* cta_btn_bg.png */,
-				8D8058DD2268110C003468B7 /* cta_btn_bg@3x.png */,
-				8D8058DE2268110C003468B7 /* semi_star@2x.png */,
-				8D8058DF2268110C003468B7 /* cta_btn_bg@2x.png */,
-			);
-			path = Images;
-			sourceTree = "<group>";
-		};
-		8D8058E02268110C003468B7 /* Native Banner */ = {
-			isa = PBXGroup;
-			children = (
-				8D8058E12268110C003468B7 /* Source Code */,
-				8D8058E42268110C003468B7 /* Images */,
-			);
-			path = "Native Banner";
-			sourceTree = "<group>";
-		};
-		8D8058E12268110C003468B7 /* Source Code */ = {
-			isa = PBXGroup;
-			children = (
-				8D8058E22268110C003468B7 /* UPArpuNativeBannerWrapper.h */,
-				8D8058E32268110C003468B7 /* UPArpuNativeBannerWrapper.m */,
-			);
-			path = "Source Code";
-			sourceTree = "<group>";
-		};
-		8D8058E42268110C003468B7 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				8D8058E52268110C003468B7 /* native_banner_star_on.png */,
-				8D8058E62268110C003468B7 /* native_banner_star_off.png */,
-				8D8058E72268110C003468B7 /* native_banner_semi_star.png */,
-				8D8058E82268110C003468B7 /* native_banner_star_off@2x.png */,
-				8D8058E92268110C003468B7 /* native_banner_semi_star@2x.png */,
-				8D8058EA2268110C003468B7 /* native_banner_semi_star@3x.png */,
-				8D8058EB2268110C003468B7 /* native_banner_star_off@3x.png */,
-				8D8058EC2268110C003468B7 /* native_banner_close@3x.png */,
-				8D8058ED2268110C003468B7 /* native_banner_star_on@2x.png */,
-				8D8058EE2268110C003468B7 /* native_banner_star_on@3x.png */,
-				8D8058EF2268110C003468B7 /* native_banner_close@2x.png */,
-			);
-			path = Images;
-			sourceTree = "<group>";
-		};
 		8DD6F332221547A100EA97A1 /* GDT */ = {
 			isa = PBXGroup;
 			children = (
@@ -1518,9 +1381,6 @@
 		8DE56ED9209C70BC002A1427 /* UPArpuSDKDemo */ = {
 			isa = PBXGroup;
 			children = (
-				8D02FE4B22924EAE00E94C6A /* Base */,
-				8D8058E02268110C003468B7 /* Native Banner */,
-				8D8058CF2268110C003468B7 /* Native Splash */,
 				8D03FE61215F1655005DC75D /* UPArpuBannerViewController.h */,
 				8D03FE60215F1655005DC75D /* UPArpuBannerViewController.m */,
 				8D03FE5E215F1655005DC75D /* UPArpuInterstitialViewController.h */,
@@ -2438,55 +2298,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D3B3550214B9DDD0064FBD2 /* UpArpuSDK.bundle in Resources */,
-				8D8059052268110C003468B7 /* native_banner_close@3x.png in Resources */,
-				8D8058FE2268110C003468B7 /* native_banner_star_on.png in Resources */,
 				DC83F9D02101F08D003FFC3C /* MPCloseBtn@3x.png in Resources */,
 				DC83F9DD2101F08D003FFC3C /* MPDAAIcon@2x.png in Resources */,
 				DC83FA182101F08D003FFC3C /* LICENSE in Resources */,
-				8D8058FB2268110C003468B7 /* semi_star@2x.png in Resources */,
 				DC83F9D82101F08D003FFC3C /* MPDAAIcon@3x.png in Resources */,
 				DC83F9D32101F08D003FFC3C /* MPUnmutedBtn@2x.png in Resources */,
 				DC83F8162101ECDB003FFC3C /* TapjoyResources.bundle in Resources */,
 				8DD6F347221547CA00EA97A1 /* BUAdSDK.bundle in Resources */,
-				8D8058F92268110C003468B7 /* cta_btn_bg.png in Resources */,
-				8D8059082268110C003468B7 /* native_banner_close@2x.png in Resources */,
 				8DE56EE7209C70BC002A1427 /* LaunchScreen.storyboard in Resources */,
-				8D8058F52268110C003468B7 /* star_on@2x.png in Resources */,
 				8DD9B45A22706D0800A2FFBE /* NendAdResource.bundle in Resources */,
 				8DE56EE4209C70BC002A1427 /* Assets.xcassets in Resources */,
 				DC83F9D42101F08D003FFC3C /* MPCountdownTimer.html in Resources */,
 				DC83F9DC2101F08D003FFC3C /* MPMutedBtn@2x.png in Resources */,
 				DC83F9CF2101F08D003FFC3C /* MPCloseBtn@2x.png in Resources */,
 				DC83F9CB2101F08D003FFC3C /* MRAID.bundle in Resources */,
-				8D8058F22268110C003468B7 /* semi_star.png in Resources */,
-				8D8058F12268110C003468B7 /* star_on.png in Resources */,
-				8D8058FA2268110C003468B7 /* cta_btn_bg@3x.png in Resources */,
-				8D8058FF2268110C003468B7 /* native_banner_star_off.png in Resources */,
 				DC83F9DB2101F08D003FFC3C /* MPMutedBtn.png in Resources */,
-				8D8059072268110C003468B7 /* native_banner_star_on@3x.png in Resources */,
-				8D8059022268110C003468B7 /* native_banner_semi_star@2x.png in Resources */,
-				8D8058FC2268110C003468B7 /* cta_btn_bg@2x.png in Resources */,
 				DC83F9DA2101F08D003FFC3C /* MPPlayBtn.png in Resources */,
 				DC83F9CD2101F08D003FFC3C /* MPUnmutedBtn@3x.png in Resources */,
 				DC83F9D52101F08D003FFC3C /* MPCloseButtonX@2x.png in Resources */,
 				DC83F9D72101F08D003FFC3C /* MPCloseButtonX.png in Resources */,
 				DC83F9D62101F08D003FFC3C /* MPCloseButtonX@3x.png in Resources */,
-				8D8058F32268110C003468B7 /* semi_star@3x .png in Resources */,
-				8D8059032268110C003468B7 /* native_banner_semi_star@3x.png in Resources */,
-				8D8058F72268110C003468B7 /* star_off@2x.png in Resources */,
 				DC83F9CC2101F08D003FFC3C /* MPDAAIcon.png in Resources */,
 				DC83F9D12101F08D003FFC3C /* MPCloseBtn.png in Resources */,
-				8D8058F62268110C003468B7 /* star_off@3x.png in Resources */,
-				8D8059012268110C003468B7 /* native_banner_star_off@2x.png in Resources */,
-				8D8059062268110C003468B7 /* native_banner_star_on@2x.png in Resources */,
 				DC83F9D92101F08D003FFC3C /* MPMutedBtn@3x.png in Resources */,
 				DC83F9CE2101F08D003FFC3C /* MPPlayBtn@2x.png in Resources */,
-				8D8059002268110C003468B7 /* native_banner_semi_star.png in Resources */,
-				8D8058F82268110C003468B7 /* star_on@3x.png in Resources */,
 				DC83F9D22101F08D003FFC3C /* MPPlayBtn@3x.png in Resources */,
-				8D8059042268110C003468B7 /* native_banner_star_off@3x.png in Resources */,
 				8DE56EE2209C70BC002A1427 /* Main.storyboard in Resources */,
-				8D8058F42268110C003468B7 /* star_off.png in Resources */,
 				DC83FA022101F08D003FFC3C /* MPAdBrowserController.xib in Resources */,
 				8DD6F341221547B200EA97A1 /* baidumobadsdk.bundle in Resources */,
 				DC83F9CA2101F08D003FFC3C /* MPUnmutedBtn.png in Resources */,
@@ -2651,7 +2488,6 @@
 				DC83FA552101F08D003FFC3C /* MPNativeAdRequest.m in Sources */,
 				DC83FA6B2101F08D003FFC3C /* MPNativeView.m in Sources */,
 				DC83F9E72101F08D003FFC3C /* MPRewardedVideoCustomEvent.m in Sources */,
-				8D8058FD2268110C003468B7 /* UPArpuNativeBannerWrapper.m in Sources */,
 				DC83FA522101F08D003FFC3C /* MPWebView+Viewability.m in Sources */,
 				DC83FA4A2101F08D003FFC3C /* MPVASTResponse.m in Sources */,
 				8DE56EDC209C70BC002A1427 /* AppDelegate.m in Sources */,
@@ -2661,7 +2497,6 @@
 				8D80590B2268147C003468B7 /* UPArpuNativeBannerViewController.m in Sources */,
 				DC83FA842101F08D003FFC3C /* MOPUBAVPlayer.m in Sources */,
 				DC83FA0F2101F08D003FFC3C /* MPConsentManager.m in Sources */,
-				8D02FE4E22924EAE00E94C6A /* UIViewController+PresentationAndDismissalSwizzling.m in Sources */,
 				DC83FA412101F08D003FFC3C /* MPVASTWrapper.m in Sources */,
 				DC83FA062101F08D003FFC3C /* MPCountdownTimerView.m in Sources */,
 				DC83FA402101F08D003FFC3C /* MPVASTModel.m in Sources */,
@@ -2677,7 +2512,6 @@
 				DC83FA752101F08D003FFC3C /* MPNativeAd.m in Sources */,
 				DC83F9E02101F08D003FFC3C /* MPRewardedVideoAdManager.m in Sources */,
 				DC83FA7D2101F08D003FFC3C /* MOPUBFullscreenPlayerViewController.m in Sources */,
-				8D8058F02268110C003468B7 /* UPArpuNativeSplashWrapper.m in Sources */,
 				DC83FA772101F08D003FFC3C /* MPClientAdPositioning.m in Sources */,
 				DC83FA6C2101F08D003FFC3C /* MPTableViewCellImpressionTracker.m in Sources */,
 				DC83F9F72101F08D003FFC3C /* MPBaseBannerAdapter.m in Sources */,

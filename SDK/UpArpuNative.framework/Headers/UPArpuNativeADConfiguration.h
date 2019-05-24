@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+extern NSString *const kUPArpuNativeAdConfigurationContextAdOptionsViewFrameKey;//CGRect wrapped as NSValue, supported by facebook
+extern NSString *const kUPArpuNativeAdConfigurationContextAdLogoViewFrameKey;//CGRect wrapped as NSValue, supported by gdt
 @protocol UPArpuNativeADDelegate;
 @interface UPArpuNativeADConfiguration : NSObject
 /**
@@ -16,6 +18,7 @@
 @property(nonatomic) NSDictionary *context;
 @property(nonatomic) Class renderingViewClass;
 @property(nonatomic) CGRect ADFrame;
+@property(nonatomic) CGRect mediaViewFrame;
 @property(nonatomic, weak) UIViewController *rootViewController;
 @property(nonatomic, weak) id<UPArpuNativeADDelegate> delegate;
 @end

@@ -9,10 +9,6 @@
 #import <UpArpuSDK/UpArpuSDK.h>
 #import "UPArpuRewardedVideoDelegate.h"
 /*
- * A String, used for s2s
- */
-extern NSString *const kUPArpuAdLoadingExtraCustomData;
-/*
  * Third-party extra data
  */
 extern NSString *const kUPArpuAdLoadingExtraKeywordKey;

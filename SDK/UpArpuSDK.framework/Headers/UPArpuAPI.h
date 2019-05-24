@@ -88,6 +88,7 @@ typedef NS_ENUM(NSInteger, UpArpuDataConsentSet) {
 +(void) setLogEnabled:(BOOL)logEnabled;
 
 +(instancetype)sharedInstance;
+
 /**
  * Inspect the error parameter to see what's the matter.
  */
@@ -166,6 +167,10 @@ typedef NS_ENUM(NSInteger, UpArpuDataConsentSet) {
 @property(nonatomic, readonly) NSDictionary<NSString*, NSString*>* consentStrings;
 @property(nonatomic, readonly) NSString *appID;
 @property(nonatomic, readonly) NSString *appKey;
-
+/*
+ channel & customData has to be set before init
+ */
+@property(nonatomic) NSString *channel;
+@property(nonatomic) NSDictionary *customData;
 -(NSString*)version;
 @end

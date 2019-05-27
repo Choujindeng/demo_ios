@@ -134,8 +134,6 @@ static NSString *const kMaioPlacementID = @"b5cb96ce0b931e";
     _failureTipsLabel.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:_failureTipsLabel];
     _failureTipsLabel.hidden = YES;
-    
-    [UPArpuAdManager sharedManager].extra = @{kUPArpuAdLoadingExtraUserIDKey:@"test_user_id", kUPArpuAdLoadingExtraCustomData:@"test_custom_data"};
 }
 
 -(void) removeAdButtonTapped {

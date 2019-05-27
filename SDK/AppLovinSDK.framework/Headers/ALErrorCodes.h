@@ -1,9 +1,8 @@
 //
 //  ALErrorCodes.h
-//  sdk
+//  AppLovinSDK
 //
-//  Created by Matt Szaro on 4/8/14.
-//
+//  Copyright © 2019 AppLovin Corporation. All rights reserved.
 //
 
 // Loading & Displaying Ads
@@ -26,7 +25,7 @@
 // Indicates that there has been a failure to render an ad on screen.
 #define kALErrorCodeUnableToRenderAd -6
 
-// Indicates that the zone provided is invalid; the zone needs to be added to your AppLovin account.
+// Indicates that the zone provided is invalid; the zone needs to be added to your AppLovin account or may still be propagating to our servers.
 #define kALErrorCodeInvalidZone -7
 
 // Indicates that the provided ad token is invalid; ad token must be returned from AppLovin S2S integration.

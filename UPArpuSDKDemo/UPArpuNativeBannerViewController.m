@@ -7,8 +7,8 @@
 //
 
 #import "UPArpuNativeBannerViewController.h"
-#import "UPArpuNativeBannerWrapper.h"
 #import "ViewController.h"
+@import UpArpuNative;
 static NSString *const kMPPlacementID = @"b5c2084d12aca4";
 static NSString *const kPlacement0ID = @"b5ad9ba61dcb39";
 static NSString *const kInmobiPlacementID = @"b5b0f553483724";

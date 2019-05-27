@@ -1,15 +1,12 @@
 //
 //  ALAdType.h
-//  sdk
+//  AppLovinSDK
 //
-//  Created by Matt Szaro on 10/1/13.
 //
+//  Copyright © 2019 AppLovin Corporation. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import "ALAnnotations.h"
-
-AL_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  *  This class represents the behavior of an ad.
@@ -62,4 +59,4 @@ AL_ASSUME_NONNULL_BEGIN
 
 @end
 
-AL_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END

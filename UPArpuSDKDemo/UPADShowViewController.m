@@ -248,6 +248,8 @@ static NSInteger adViewTag = 3333;
     [self removeAdButtonTapped];
     UPArpuNativeADConfiguration *config = [[UPArpuNativeADConfiguration alloc] init];
     config.ADFrame = CGRectMake(.0f, 64.0f, CGRectGetWidth(self.view.bounds), 300.0f);
+    config.mediaViewFrame = CGRectMake(0, 120.0f, CGRectGetWidth(self.view.bounds), 300.0f - 120.0f);
+    config.context = @{kUPArpuNativeAdConfigurationContextAdOptionsViewFrameKey:[NSValue valueWithCGRect:CGRectMake(CGRectGetWidth(self.view.bounds) - 43.0f, .0f, 43.0f, 18.0f)], kUPArpuNativeAdConfigurationContextAdLogoViewFrameKey:[NSValue valueWithCGRect:CGRectMake(.0f, .0f, 54.0f, 18.0f)]};
     config.delegate = self;
     config.rootViewController = self;
     config.renderingViewClass = [DMADView class];

@@ -36,6 +36,8 @@
                                                       kNetworkNameIronSource:@YES
                                                       };
 
+    [UPArpuAPI sharedInstance].channel = @"test_channel_demo";
+    [UPArpuAPI sharedInstance].customData = @{@"demo_custom_data_key":@"demo_custom_data_val"};
     [[UPArpuAPI sharedInstance] startWithAppID:@"a5b0e8491845b3" appKey:@"7eae0567827cfe2b22874061763f30c9" error:nil];
     
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(.0f, .0f, CGRectGetWidth([UIScreen mainScreen].bounds), 100.0f)];

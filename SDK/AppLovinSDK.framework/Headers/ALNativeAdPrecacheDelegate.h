@@ -1,16 +1,14 @@
 //
 //  ALNativeAdPrecacheDelegate.h
-//  sdk
+//  AppLovinSDK
 //
-//  Created by Matt Szaro on 5/21/15.
 //
+//  Copyright © 2019 AppLovin Corporation. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import "ALAnnotations.h"
 #import "ALNativeAd.h"
 
-AL_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 @class ALNativeAdService;
 
@@ -60,4 +58,4 @@ AL_ASSUME_NONNULL_BEGIN
 
 @end
 
-AL_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END

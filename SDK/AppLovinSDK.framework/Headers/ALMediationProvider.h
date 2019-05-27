@@ -1,13 +1,13 @@
 //
 //  ALMediationProvider.h
-//  sdk
+//  AppLovinSDK
 //
 //  Created by Thomas So on 1/28/18.
+//  Copyright © 2019 AppLovin Corporation. All rights reserved.
 //
 
-#import "ALAnnotations.h"
 
-AL_ASSUME_NONNULL_BEGIN
+NS_ASSUME_NONNULL_BEGIN
 
 /**
  * Names of mediation providers.
@@ -25,4 +25,4 @@ extern NSString *const ALMediationProviderIronsource;
 extern NSString *const ALMediationProviderMoPub;
 extern NSString *const ALMediationProviderTapdaq;
 
-AL_ASSUME_NONNULL_END
+NS_ASSUME_NONNULL_END

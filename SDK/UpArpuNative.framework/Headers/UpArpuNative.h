@@ -13,6 +13,8 @@
 #import "UPArpuNativeAd.h"
 #import "UPArpuNativeRendering.h"
 #import "UPArpuNativeADDelegate.h"
+#import "UPArpuNativeSplashWrapper.h"
+#import "UPArpuNativeBannerWrapper.h"
 //! Project version number for UpArpuNative.
 FOUNDATION_EXPORT double UpArpuNativeVersionNumber;
 

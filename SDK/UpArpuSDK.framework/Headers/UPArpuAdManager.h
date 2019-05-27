@@ -15,6 +15,10 @@ extern NSString *const kExtraInfoAdSizeKey;
 @interface UPArpuAdManager : NSObject
 +(instancetype) sharedManager;
 @property(nonatomic, strong) NSDictionary *extra;
--(void) loadADWithPlacementID:(NSString*)placementID extra:(NSDictionary*)extra customData:(NSDictionary*)customData delegate:(id<UPArpuAdLoadingDelegate>)delegate;
+/*
+ We mark this method as deprecated because we move customData into UPArpuAPI's shared instance. customData passed via this method will just be ignored.
+ */
+-(void) loadADWithPlacementID:(NSString*)placementID extra:(NSDictionary*)extra customData:(NSDictionary*)customData delegate:(id<UPArpuAdLoadingDelegate>)delegate DEPRECATED_ATTRIBUTE;
+-(void) loadADWithPlacementID:(NSString*)placementID extra:(NSDictionary*)extra delegate:(id<UPArpuAdLoadingDelegate>)delegate;
 -(void) clearCache;
 @end

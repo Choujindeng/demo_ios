@@ -14,11 +14,10 @@
 #import "UPArpuBannerViewController.h"
 #import "UPArpuInterstitialViewController.h"
 #import "UPArpuNativeBannerViewController.h"
-#import "UPArpuNativeBannerWrapper.h"
-#import "UPArpuNativeSplashWrapper.h"
 @import UpArpuSDK;
 @import UpArpuRewardedVideo;
 @import UpArpuSplash;
+@import UpArpuNative;
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource, UPArpuSplashDelegate, UPArpuNativeBannerDelegate, UPArpuNativeSplashDelegate>
     @property(nonatomic, readonly) UITableView *tableView;
     @property(nonatomic, readonly) NSArray<NSArray<NSString*>*>* placementNames;

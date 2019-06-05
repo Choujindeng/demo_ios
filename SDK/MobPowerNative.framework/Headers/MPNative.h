@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)registerViewForInteraction:(UIView *)view withViewController:(nullable UIViewController *)viewController withClickableViews:(NSArray<UIView*>*)clickableViews;
 @property(nonatomic, readonly) NSString *placementID;
-@property(nonatomic, readonly) NSString *titile;
+@property(nonatomic, readonly) NSString *title;
 @property(nonatomic, readonly) NSString *body;
 @property(nonatomic, readonly) double star;
 @property(nonatomic, readonly) NSString *ctaText;

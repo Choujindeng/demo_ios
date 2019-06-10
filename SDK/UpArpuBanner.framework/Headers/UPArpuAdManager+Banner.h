@@ -9,7 +9,8 @@
 #import <UpArpuSDK/UpArpuSDK.h>
 //Supported by Nend banner only
 extern NSString *const kUPArpuBannerLoadingExtraParameters;
-extern NSString *const kUPArpuBannerExtraAdSizeKey;//Supported by TT, of type CGSize, wrapped by NSValue; defaults to 640 X 100
+extern NSString *const kUPArpuAdLoadingExtraBannerAdSizeKey;//defaults to 320 * 50
+extern NSString *const kUPArpuAdLoadingExtraBannerSizeAdjustKey;//Currently supported by Nend
 @class UPArpuBannerView;
 @interface UPArpuAdManager (Banner)
 -(BOOL) bannerAdReadyForPlacementID:(NSString*)placementID;

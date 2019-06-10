@@ -99,7 +99,7 @@ NSString *const kBannerLoadingFailedNotification = @"banner_failed_to_load";
     _failureTipsLabel.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:_failureTipsLabel];
     _failureTipsLabel.hidden = YES;
-    
+    _adSize = CGSizeMake(CGRectGetWidth(self.view.bounds), 250.0f);
     if ([[UPArpuAdManager sharedManager] bannerAdReadyForPlacementID:_placementIDs[_name]]) {
         NSLog(@"UPArpuBannerViewController::banner ad ready, will show");
         [self showBanner];

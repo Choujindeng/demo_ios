@@ -35,6 +35,7 @@ NSString *const kBannerLoadingFailedNotification = @"banner_failed_to_load";
 @property(nonatomic, readonly) UIButton *showAdButton;
 @property(nonatomic, readonly) UILabel *failureTipsLabel;
 @property(nonatomic, readonly) UIButton *removeAdButton;
+@property(nonatomic, readonly) CGSize adSize;
 @end
 
 @implementation UPArpuBannerViewController
@@ -104,14 +105,14 @@ NSString *const kBannerLoadingFailedNotification = @"banner_failed_to_load";
         [self showBanner];
     } else {
         NSLog(@"UPArpuBannerViewController::banner ad not ready, will load");
-        [[UPArpuAdManager sharedManager] loadADWithPlacementID:_placementIDs[_name] extra:nil customData:nil delegate:self];
+        [self reloadADButtonTapped];
     }
 }
 
 -(void) reloadADButtonTapped {
     _failureTipsLabel.hidden = YES;
     [self.view addSubview:_loadingView];
-    [[UPArpuAdManager sharedManager] loadADWithPlacementID:_placementIDs[_name] extra:nil customData:nil delegate:self];
+    [[UPArpuAdManager sharedManager] loadADWithPlacementID:_placementIDs[_name] extra:@{kUPArpuAdLoadingExtraBannerAdSizeKey:[NSValue valueWithCGSize:_adSize], kUPArpuAdLoadingExtraBannerSizeAdjustKey:@YES} delegate:self];
 }
 
 -(void) removeAdButtonTapped {
@@ -137,6 +138,8 @@ NSString *const kBannerLoadingFailedNotification = @"banner_failed_to_load";
         [self.view addSubview:bannerView];
         [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.view attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:bannerView attribute:NSLayoutAttributeCenterX multiplier:1.0f constant:.0f]];
         [self.view addConstraint:[NSLayoutConstraint constraintWithItem:bannerView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1.0f constant:64.0f]];
+        [self.view addConstraint:[NSLayoutConstraint constraintWithItem:bannerView attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0f constant:_adSize.width]];
+        [self.view addConstraint:[NSLayoutConstraint constraintWithItem:bannerView attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0f constant:_adSize.height]];
     } else {
         NSLog(@"Banner ad's not ready for placementID:%@", _placementIDs[_name]);
     }

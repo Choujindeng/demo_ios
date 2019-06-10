@@ -26,6 +26,8 @@ static NSString *const kAppnextPlacementID = @"b5bc7fb2787f1e";
 static NSString *const kAllPlacementID = @"b5b0f5663c6e4a";
 static NSString *const kTTFeedPlacementID = @"b5c2c6d50e7f44";
 static NSString *const kTTDrawPlacementID = @"b5c2c6d62b9d65";
+static NSString *const kNendPlacementID = @"b5cb96d44c0c5f";
+static NSString *const kMaioPlacementID = @"b5cb96d44c0c5f";
 
 @interface UPArpuNativeBannerViewController ()<UPArpuNativeBannerDelegate>
 @property(nonatomic, readonly) NSDictionary *placementIDs;
@@ -59,7 +61,8 @@ static NSString *const kTTDrawPlacementID = @"b5c2c6d62b9d65";
                           kYeahmobiPlacement:kYeahmobiPlacementID,
                           kAppnextPlacement:kAppnextPlacementID,
                           kTTFeedPlacementName:kTTFeedPlacementID,
-                          kTTDrawPlacementName:kTTDrawPlacementID
+                          kTTDrawPlacementName:kTTDrawPlacementID,
+                          kNendPlacement:kNendPlacementID,
                           };
         _placementID = _placementIDs[_name];
     }

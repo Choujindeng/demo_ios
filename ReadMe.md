@@ -53,5 +53,3 @@
 |Baidu|22|
 |Nend|23|
 |Maio|24|
-|StartApp |25|
-|SuperAwesome |26|

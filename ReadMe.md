@@ -3,7 +3,7 @@ Third-party SDK version for uparpu_ios_sdk_3.6.5
 
 
 | Network | SDK Version |
-|---|---|---|
+|---|---|
 | Facebook | 5.3.2 |
 | Admob | 7.45.0 |
 | Inmobi | 8.1.1 |

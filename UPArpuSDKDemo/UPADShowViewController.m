@@ -31,7 +31,7 @@ NSString *const kAllPlacementName = @"All";
 NSString *const kNendVideoPlacement = @"Nend(Video)";
 
 static NSString *const kPlacement0ID = @"b5ad9ba61dcb39";
-static NSString *const kInmobiPlacementID = @"b5b0f553483724";
+static NSString *const kInmobiPlacementID = @"b5cf755533c6f2";
 static NSString *const kMintegralPlacementID = @"b5b0f555698607";
 static NSString *const kFacebookPlacementID = @"b5b0f551340ea9";
 static NSString *const kAdMobPlacementID = @"b5b0f55228375a";

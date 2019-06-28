@@ -36,6 +36,7 @@
 		8D048E3A22C5EAB800883294 /* UPArpuHeaderBiddingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D048E2F22C5EAB800883294 /* UPArpuHeaderBiddingManager.m */; };
 		8D048E3C22C5EB0800883294 /* MTGSDKBidding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D048E3B22C5EB0800883294 /* MTGSDKBidding.framework */; };
 		8D048E3E22C5EB9900883294 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D048E3D22C5EB9900883294 /* FBSDKCoreKit.framework */; };
+		8D048E4022C5EF4100883294 /* FBAudienceNetworkBiddingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D048E3F22C5EF4000883294 /* FBAudienceNetworkBiddingKit.framework */; };
 		8D12AE3C2283D05800FAA85F /* libGDTMobSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D12AE3A2283D05800FAA85F /* libGDTMobSDK.a */; };
 		8D3A583821B532BF0033C44C /* UpArpuBaiduInterstitialAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D3A583521B532BE0033C44C /* UpArpuBaiduInterstitialAdapter.framework */; };
 		8D3A583921B532BF0033C44C /* UpArpuBaiduBannerAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D3A583621B532BF0033C44C /* UpArpuBaiduBannerAdapter.framework */; };
@@ -453,6 +454,7 @@
 		8D048E2F22C5EAB800883294 /* UPArpuHeaderBiddingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPArpuHeaderBiddingManager.m; sourceTree = "<group>"; };
 		8D048E3B22C5EB0800883294 /* MTGSDKBidding.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MTGSDKBidding.framework; path = SDK/MTGSDKBidding.framework; sourceTree = "<group>"; };
 		8D048E3D22C5EB9900883294 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = SDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		8D048E3F22C5EF4000883294 /* FBAudienceNetworkBiddingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBAudienceNetworkBiddingKit.framework; path = SDK/FBAudienceNetworkBiddingKit.framework; sourceTree = "<group>"; };
 		8D12AE2A2283D05700FAA85F /* GDTSDKConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTSDKConfig.h; sourceTree = "<group>"; };
 		8D12AE2B2283D05700FAA85F /* GDTNativeAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTNativeAd.h; sourceTree = "<group>"; };
 		8D12AE2C2283D05700FAA85F /* GDTNativeExpressAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTNativeExpressAdView.h; sourceTree = "<group>"; };
@@ -1098,6 +1100,7 @@
 				8D90879221D4A0BE0070EDCE /* UpArpuMobPowerNativeAdapter.framework in Frameworks */,
 				8DD9B45C22706D2300A2FFBE /* Maio.framework in Frameworks */,
 				8D90878C21D4A0590070EDCE /* UpArpuUnityAdsInterstitialAdapter.framework in Frameworks */,
+				8D048E4022C5EF4100883294 /* FBAudienceNetworkBiddingKit.framework in Frameworks */,
 				8D90878D21D4A0590070EDCE /* UpArpuGDTSplashAdapter.framework in Frameworks */,
 				8DD6F346221547CA00EA97A1 /* BUAdSDK.framework in Frameworks */,
 				8D90878E21D4A0590070EDCE /* UpArpuTTSplashAdapter.framework in Frameworks */,
@@ -1499,6 +1502,7 @@
 		8DE56EF0209C711D002A1427 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8D048E3F22C5EF4000883294 /* FBAudienceNetworkBiddingKit.framework */,
 				8D048E3D22C5EB9900883294 /* FBSDKCoreKit.framework */,
 				8D048E3B22C5EB0800883294 /* MTGSDKBidding.framework */,
 				8DD9B45B22706D2200A2FFBE /* Maio.framework */,

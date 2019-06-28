@@ -41,6 +41,7 @@ NSString *const kMaioPlacement = @"Maio";
 static NSString *const kPlacement0ID = @"b5ad9ba61dcb39";
 static NSString *const kInmobiPlacementID = @"b5b44a03522f92";
 static NSString *const kMintegralPlacementID = @"b5b44a07fc3bf6";
+static NSString *const kMintegralHeaderBiddingPlacementID = @"b5d13341598199";
 static NSString *const kFacebookPlacementID = @"b5b44a02112383";
 static NSString *const kAdMobPlacementID = @"b5b44a02bf08c0";
 static NSString *const kApplovinPlacementID = @"b5b44a0646e64b";
@@ -70,6 +71,7 @@ static NSString *const kMaioPlacementID = @"b5cb96ce0b931e";
         _name = name;
         _placementIDs = @{
                           kMintegralPlacement:kMintegralPlacementID,
+                          kHeaderBiddingPlacement:kMintegralHeaderBiddingPlacementID,
                           kAllPlacementName:kAllPlacementID,
                           kInmobiPlacement:kInmobiPlacementID,
                           kFacebookPlacement:kFacebookPlacementID,

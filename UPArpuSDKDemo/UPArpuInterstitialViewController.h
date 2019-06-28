@@ -16,6 +16,7 @@ extern NSString *const kMopubPlacementName;
 extern NSString *const kMopubVideoPlacementName;
 extern NSString *const kMintegralPlacement;
 extern NSString *const kMintegralVideoPlacement;
+extern NSString *const kHeaderBiddingPlacement;
 extern NSString *const kGDTPlacement;
 extern NSString *const kTapjoyPlacementName;
 extern NSString *const kChartboostPlacementName;

@@ -14,6 +14,7 @@ NSString *const kMintegralVideoPlacement = @"Mintegral(Video)";
 NSString *const kTTVideoPlacement = @"TT(Video)";
 NSString *const kNendInterstitialVideoPlacement = @"Nend(Video)";
 NSString *const kNendFullScreenInterstitialPlacement = @"Nend(Full Screen)";
+NSString *const kHeaderBiddingPlacement = @"Header Bidding";
 
 static NSString *const kGDTPlacementID = @"b5bacad8ea3036";
 static NSString *const kTTPlacementID = @"b5bacad7373b89";
@@ -21,6 +22,7 @@ static NSString *const kTTVideoPlacementID = @"b5bacad80a0fb1";
 static NSString *const kAdmobPlacementID = @"b5bacad6860972";
 static NSString *const kMintegralPlacementID = @"b5bacad46a8bbb";
 static NSString *const kMintegralVideoPlacementID = @"b5bacad5962e84";
+static NSString *const kMintegralHeaderBiddingPlacementID = @"b5d13340a1dd21";
 static NSString *const kApplovinPlacementID = @"b5bacad34e4294";
 static NSString *const kFacebookPlacementID = @"b5baf4bf9829e4";
 static NSString *const kAllPlacementID = @"b5bacad26a752a";
@@ -64,6 +66,7 @@ static NSString *const kMaioPlacementID = @"b5cb96cf795c4b";
                           kAdMobPlacement:kAdmobPlacementID,
                           kMintegralPlacement:kMintegralPlacementID,
                           kMintegralVideoPlacement:kMintegralVideoPlacementID,
+                          kHeaderBiddingPlacement:kMintegralHeaderBiddingPlacementID,
                           kApplovinPlacement:kApplovinPlacementID,
                           kFacebookPlacement:kFacebookPlacementID,
                           kOnewayPlacementName:kOnewayPlacementID,

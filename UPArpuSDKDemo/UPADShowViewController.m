@@ -30,6 +30,7 @@ NSString *const kTTDrawPlacementName = @"TT(Draw)";
 NSString *const kAllPlacementName = @"All";
 NSString *const kNendVideoPlacement = @"Nend(Video)";
 
+static NSString *const kMintegralHeaderBiddingPlacementID = @"b5d1333d023691";
 static NSString *const kPlacement0ID = @"b5ad9ba61dcb39";
 static NSString *const kInmobiPlacementID = @"b5b0f553483724";
 static NSString *const kMintegralPlacementID = @"b5b0f555698607";
@@ -155,6 +156,7 @@ static NSString *const kNendVideoPlacementID = @"b5cb96d5291e93";
     return @{
              kMPPlacement:kMPPlacementID,
              kMintegralPlacement:kMintegralPlacementID,
+             kHeaderBiddingPlacement:kMintegralHeaderBiddingPlacementID,
              kAllPlacementName:kAllPlacementID,
              kInmobiPlacement:kInmobiPlacementID,
              kFacebookPlacement:kFacebookPlacementID,

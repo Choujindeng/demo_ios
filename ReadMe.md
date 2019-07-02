@@ -15,10 +15,10 @@
 | Yeahmobi | 3.2.0 |
 | Appnext | 1.9.0 |
 | Chartboost | 7.2.0 |
-| Ironsource | 6.8.3 |
+| Ironsource | 6.8.4 |
 | Vungle | 6.2.0 |
 | Adcolony | 3.3.5.0 |
-| UnityAds | 3.0.0 |
+| UnityAds | 3.1.0 |
 | TT | 2.0.1.4 |
 | Tapjoy | 12.0.0 |
 | Oneway | 2.1.0 |

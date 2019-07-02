@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		453401C722CB2A490063AB57 /* UpArpuHeaderBidding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 453401C622CB2A490063AB57 /* UpArpuHeaderBidding.framework */; };
+		4554E2ED22CB44FD009BDBFA /* UpArpuHeaderBidding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 453401C622CB2A490063AB57 /* UpArpuHeaderBidding.framework */; };
+		4554E2EE22CB456A009BDBFA /* FBAudienceNetworkBiddingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D048E3F22C5EF4000883294 /* FBAudienceNetworkBiddingKit.framework */; };
+		4554E2EF22CB456C009BDBFA /* MTGSDKBidding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D048E3B22C5EB0800883294 /* MTGSDKBidding.framework */; };
 		8D03FE62215F1655005DC75D /* UPArpuInterstitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D03FE5F215F1655005DC75D /* UPArpuInterstitialViewController.m */; };
 		8D03FE63215F1655005DC75D /* UPArpuBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D03FE60215F1655005DC75D /* UPArpuBannerViewController.m */; };
 		8D03FE65215F177D005DC75D /* UpArpuGDTNativeAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D03FE64215F177D005DC75D /* UpArpuGDTNativeAdapter.framework */; };
@@ -24,9 +26,7 @@
 		8D03FE7B215F17F1005DC75D /* UpArpuGDTInterstitialAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D03FE75215F17F1005DC75D /* UpArpuGDTInterstitialAdapter.framework */; };
 		8D03FE7F215F5E32005DC75D /* MTGSDKInterstitialVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D03FE7D215F5E32005DC75D /* MTGSDKInterstitialVideo.framework */; };
 		8D03FE80215F5E32005DC75D /* MTGSDKInterstitial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D03FE7E215F5E32005DC75D /* MTGSDKInterstitial.framework */; };
-		8D048E3C22C5EB0800883294 /* MTGSDKBidding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D048E3B22C5EB0800883294 /* MTGSDKBidding.framework */; };
 		8D048E3E22C5EB9900883294 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D048E3D22C5EB9900883294 /* FBSDKCoreKit.framework */; };
-		8D048E4022C5EF4100883294 /* FBAudienceNetworkBiddingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D048E3F22C5EF4000883294 /* FBAudienceNetworkBiddingKit.framework */; };
 		8D12AE3C2283D05800FAA85F /* libGDTMobSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D12AE3A2283D05800FAA85F /* libGDTMobSDK.a */; };
 		8D3A583821B532BF0033C44C /* UpArpuBaiduInterstitialAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D3A583521B532BE0033C44C /* UpArpuBaiduInterstitialAdapter.framework */; };
 		8D3A583921B532BF0033C44C /* UpArpuBaiduBannerAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D3A583621B532BF0033C44C /* UpArpuBaiduBannerAdapter.framework */; };
@@ -1048,7 +1048,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				453401C722CB2A490063AB57 /* UpArpuHeaderBidding.framework in Frameworks */,
 				8D8059752269E017003468B7 /* UpArpuNendInterstitialAdapter.framework in Frameworks */,
 				8D8059762269E017003468B7 /* UpArpuNendRewardedVideoAdapter.framework in Frameworks */,
 				8D8059772269E017003468B7 /* UpArpuMaioRewardedVideoAdapter.framework in Frameworks */,
@@ -1067,10 +1066,11 @@
 				8D90879221D4A0BE0070EDCE /* UpArpuMobPowerNativeAdapter.framework in Frameworks */,
 				8DD9B45C22706D2300A2FFBE /* Maio.framework in Frameworks */,
 				8D90878C21D4A0590070EDCE /* UpArpuUnityAdsInterstitialAdapter.framework in Frameworks */,
-				8D048E4022C5EF4100883294 /* FBAudienceNetworkBiddingKit.framework in Frameworks */,
+				4554E2EE22CB456A009BDBFA /* FBAudienceNetworkBiddingKit.framework in Frameworks */,
 				8D90878D21D4A0590070EDCE /* UpArpuGDTSplashAdapter.framework in Frameworks */,
 				8DD6F346221547CA00EA97A1 /* BUAdSDK.framework in Frameworks */,
 				8D90878E21D4A0590070EDCE /* UpArpuTTSplashAdapter.framework in Frameworks */,
+				4554E2EF22CB456C009BDBFA /* MTGSDKBidding.framework in Frameworks */,
 				8D90879021D4A0590070EDCE /* UpArpuBaiduSplashAdapter.framework in Frameworks */,
 				8D3A585721BFC4BA0033C44C /* UpArpuGDTRewardedVideoAdapter.framework in Frameworks */,
 				8D3A583821B532BF0033C44C /* UpArpuBaiduInterstitialAdapter.framework in Frameworks */,
@@ -1093,7 +1093,6 @@
 				DC6F97A8210340C4003C3F42 /* AudioToolbox.framework in Frameworks */,
 				DC6F97A6210340B8003C3F42 /* AdSupport.framework in Frameworks */,
 				DC6F97A4210340AD003C3F42 /* libz.1.2.5.tbd in Frameworks */,
-				8D048E3C22C5EB0800883294 /* MTGSDKBidding.framework in Frameworks */,
 				DC6F97A22103406F003C3F42 /* AdColony.framework in Frameworks */,
 				DCA62C7E2103102F008812DC /* libz.tbd in Frameworks */,
 				DCA62C7C21031025008812DC /* libc++.tbd in Frameworks */,
@@ -1173,6 +1172,7 @@
 				8D73523A21786B1500D8FAE6 /* libAppnextNativeAdsSDK.a in Frameworks */,
 				8D7351E021785CFA00D8FAE6 /* UpArpuTapjoyInterstitialAdapter.framework in Frameworks */,
 				8D7351E321785CFA00D8FAE6 /* UpArpuIronSourceInterstitialAdapter.framework in Frameworks */,
+				4554E2ED22CB44FD009BDBFA /* UpArpuHeaderBidding.framework in Frameworks */,
 				8D7351EB21785DE700D8FAE6 /* UpArpuVungleInterstitialAdapter.framework in Frameworks */,
 				8D7351E421785CFA00D8FAE6 /* UpArpuAdColonyInterstitialAdapter.framework in Frameworks */,
 				8D048E3E22C5EB9900883294 /* FBSDKCoreKit.framework in Frameworks */,

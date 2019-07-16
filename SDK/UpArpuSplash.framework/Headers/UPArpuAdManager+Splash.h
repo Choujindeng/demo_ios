@@ -17,5 +17,10 @@ extern NSString *const kUPArpuSplashExtraCustomSkipButtonKey;
 extern NSString *const kUPArpuSplashExtraCanClickFlagKey;
 @protocol UPArpuSplashDelegate;
 @interface UPArpuAdManager (Splash)
--(void) loadADWithPlacementID:(NSString*)placementID extra:(NSDictionary*)extra customData:(NSDictionary*)customData delegate:(id<UPArpuSplashDelegate>)delegate window:(UIWindow*)window containerView:(UIView*)containerView;
+-(void) loadADWithPlacementID:(NSString*)placementID extra:(NSDictionary*)extra delegate:(id<UPArpuSplashDelegate>)delegate window:(UIWindow*)window containerView:(UIView*)containerView;
+
+/*
+ * Marked as deprecated from v4.0.2 & will be removed in future versions; please use loadADWithPlacementID:extra:delegate:window:containerView: instead.
+ */
+-(void) loadADWithPlacementID:(NSString*)placementID extra:(NSDictionary*)extra customData:(NSDictionary*)customData delegate:(id<UPArpuSplashDelegate>)delegate window:(UIWindow*)window containerView:(UIView*)containerView DEPRECATED_ATTRIBUTE;
 @end

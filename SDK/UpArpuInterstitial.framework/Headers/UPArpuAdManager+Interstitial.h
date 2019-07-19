@@ -14,7 +14,7 @@ extern NSString *const kUPArpuInterstitialExtraUserFeatureKey;
 extern NSString *const kUPArpuInterstitialExtraLocationEnabledFlagKey;
 extern NSString *const kUPArpuInterstitialExtraMuteStartPlayingFlagKey;
 extern NSString *const kUPArpuInterstitialExtraFallbackFullboardBackgroundColorKey;
-extern NSString *const kUPArpuInterstitialExtraAdSizeKey;//Supported by TT interstitial, defaults to 600 X 600
+extern NSString *const kUPArpuInterstitialExtraAdSizeKey;//Supported by TT interstitial, defaults to 300 X 300(use pt)
 
 extern NSString *const kUPArpuInterstitialExtraAdSize600_400;
 extern NSString *const kUPArpuInterstitialExtraAdSize600_600;

@@ -153,7 +153,7 @@ static NSString *const kMaioPlacementID = @"b5cb96cf795c4b";
     NSLog(@"Begin loading interstitial ad");
     _failureTipsLabel.hidden = YES;
     [self.view addSubview:_loadingView];
-    [[UPArpuAdManager sharedManager] loadADWithPlacementID:_placementIDs[_name] extra:nil customData:nil delegate:self];
+    [[UPArpuAdManager sharedManager] loadADWithPlacementID:_placementIDs[_name] extra:@{kUPArpuInterstitialExtraAdSizeKey:[NSValue valueWithCGSize:CGSizeMake(300.0f, 450.0f)]} delegate:self];
 }
 
 -(void) showAD {

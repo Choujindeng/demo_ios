@@ -1,5 +1,8 @@
-# UPARPU_iOS_SDK_3.6.5
-## Third-party SDK version for uparpu_ios_sdk_3.6.5
+# UPARPU_iOS_SDK_4.0.4
+
+##[IMPORTANT] DO NOT expose any of the frameworks to Windows operating system; Windows modifies frameworks, making them incomplete and resulting in compile errors.
+
+## Third-party SDK version for uparpu_ios_sdk_4.0.4
 
 
 | Network | SDK Version |

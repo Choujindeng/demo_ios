@@ -6,6 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @class UIView;
 
@@ -86,7 +87,9 @@ typedef NS_ENUM(NSUInteger, CBMediation) {
     /*! HyprMX */
     CBMediationHyprMX,
     /*! AerServ */
-    CBMediationAerServ
+    CBMediationAerServ,
+    /*! Helium */
+    CBMediationHelium
 };
 
 
@@ -127,7 +130,9 @@ typedef NS_ENUM(NSUInteger, CBLoadError) {
     /*! Error Originating from the JS side of a Web View */
     CBLoadErrorWebViewScriptError = 22,
     /*! Network is unavailable while attempting to show. */
-    CBLoadErrorInternetUnavailableAtShow = 25
+    CBLoadErrorInternetUnavailableAtShow = 25,
+    /*! Error trying to present the ad. */
+    CBLoadErrorAdPresentationFailure = 33
 };
 
 /*!
@@ -162,6 +167,23 @@ typedef NS_ENUM(NSUInteger, CBStatusBarBehavior) {
     /*! Respect the status bar fully; fullscreen ads will not use the status bar space. */
     CBStatusBarBehaviorRespect
 };
+
+
+/*!
+ @typedef NS_ENUM (NSUInteger, CBPIDataUseConsent)
+ 
+ @abstract
+ GDPR compliance settings:
+ */
+typedef NS_ENUM(NSInteger, CBPIDataUseConsent) {
+  /*! Publisher hasn't implemented functionality or the user has the option to not answer. */
+  Unknown = -1,
+  /*! User does not consent to targeting (Contextual ads). */
+  NoBehavioral = 0,
+  /*! User consents (Behavioral and Contextual Ads). */
+  YesBehavioral = 1
+};
+
 
 /*!
  @typedef CBLocation

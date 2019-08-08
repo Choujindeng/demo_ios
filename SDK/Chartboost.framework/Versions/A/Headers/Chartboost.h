@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "ChartboostDelegate.h"
 @class CBInPlay;
+FOUNDATION_EXPORT BOOL ChartboostInitialized(const char* function);
 @interface Chartboost : NSObject
 #pragma mark - Main Chartboost API
 
@@ -84,19 +85,6 @@
  additional Chartboost API server requests to fetch data to present.
  */
 + (BOOL)hasRewardedVideo:(CBLocation)location;
-/*!
- @abstract
- Determine if a locally cached InPlay object exists for the given CBLocation.
- 
- @param location The location for the Chartboost impression type.
- 
- @return YES if there a locally cached InPlay object, and NO if not.
- 
- @discussion A return value of YES here indicates that the corresponding
- getInPlay:(CBLocation)location method will return an InPlay object without making
- additional Chartboost API server requests to fetch data to present.
- */
-+ (BOOL)hasInPlay:(CBLocation)location;
 
 /*!
  @abstract
@@ -109,6 +97,7 @@
  the method will attempt to fetch data from the Chartboost API server.
  */
 + (void)cacheInterstitial:(CBLocation)location;
+
 /*!
  @abstract
  Present an interstitial for the given CBLocation.
@@ -136,8 +125,6 @@
  */
 + (void)cacheRewardedVideo:(CBLocation)location;
 
-
-
 /*!
  @abstract
  Present a rewarded video for the given CBLocation.
@@ -152,35 +139,6 @@
  is a no-op.
  */
 + (void)showRewardedVideo:(CBLocation)location;
-/*!
- @abstract
- Cache a number of InPlay objects for the given CBLocation.
- 
- @param location The location for the Chartboost impression type.
- 
- @discussion This method will first check if there is a locally cached InPlay object set
- for the given CBLocation and, if found, will do nothing. If no locally cached data exists
- the method will attempt to fetch data from the Chartboost API server.
- */
-+ (void)cacheInPlay:(CBLocation)location;
-
-
-/*!
- @abstract
- Return an InPlay object for the given CBLocation.
- 
- @param location The location for the Chartboost impression type.
- 
- @return CBInPlay object if one exists in the InPlay cache or nil if one is not yet available.
- 
- @discussion This method will first check if there is a locally cached InPlay object
- for the given CBLocation and, if found, will return the object using the locally cached data.
- If no locally cached data exists the method will attempt to fetch data from the
- Chartboost API server.  If the Chartboost API server is unavailable
- or there is no eligible InPlay object to present in the given CBLocation this method
- is a no-op.
- */
-+ (CBInPlay *)getInPlay:(CBLocation)location;
 
 #pragma mark - Advanced Configuration & Use
 /*!
@@ -294,14 +252,15 @@
 /*!
  @abstract
  Set a custom mediation library to append to the POST body of every request.
- example setMediation:CBMediationMoPub withVersion:@"3.8.0"
+ example setMediation:CBMediationMoPub withLibraryVersion:@"3.8.0" adapterVersionn:@"2.0"
  
  @param library The constant for the name of the mediation library.
- @param libraryVersion The version sent as a string.
+ @param libraryVersion The mediation library version sent as a string.
+ @param adapterVersion The adapter version sent as a string.
  
  @discussion This is an internal method used by mediation partners to track their usage.
  */
-+ (void)setMediation:(CBMediation)library withVersion:(NSString*)libraryVersion;
++ (void)setMediation:(CBMediation)library withLibraryVersion:(NSString*)libraryVersion adapterVersion:(NSString*)adapterVersion;
 
 /*!
  @abstract
@@ -368,18 +327,6 @@
 
 /*!
  @abstract
- Set to control how the fullscreen ad units should interact with the status bar. (CBStatusBarBehaviorIgnore by default).
- 
- @param statusBarBehavior The param to set if fullscreen video should respect the status bar.
- 
- @discussion See the enum value comments for descriptions on the values and their behavior.  Only use this feature if your
- application has the status bar enabled.
- */
-+ (void)setStatusBarBehavior:(CBStatusBarBehavior)statusBarBehavior;
-
-
-/*!
- @abstract
  returns YES if auto IAP tracking is enabled, NO if it isn't.
  
  @discussion Call to check if automatic tracking of in-app purchases is enabled.
@@ -397,20 +344,32 @@
 
 /*!
  @abstract
- Set to restrict Chartboost's ability to collect personal data from the device. When this is set to YES. IDFA and ip address will not
- be collected by the SDK or the server. Use this to communicate an EEU Data Subject's preference regarding data collection.
+ Set to restrict Chartboost's ability to collect personal data from the device. See CBPIDataUseConsent declaration for details
  Note: This method should be called before starting the Chartboost SDK with startWithAppId:appSignature:delegate.
- @param restrict: Whether to restrict data collection or not
- @discussion Default value is NOT
+ @param consent set the consent level
+ @discussion Default value is Unknown
  */
-+ (void)restrictDataCollection:(BOOL)shouldRestrict;
++ (void)setPIDataUseConsent:(CBPIDataUseConsent)consent;
+
+/*!
+ @abstract
+ Get the current consent setting
+ */
++ (CBPIDataUseConsent)getPIDataUseConsent;
 
 #pragma mark - Deprecated
++ (void)restrictDataCollection:(BOOL)shouldRestrict __attribute__((deprecated("Use setPIDataUseConsent:(CBPIDataUseConsent)consent instead")));
+
 + (BOOL)hasMoreApps:(CBLocation)location  __attribute__((deprecated("This method is deprecated will always return false")));
 + (void)showMoreApps:(CBLocation)location __attribute__((deprecated("This method is deprecated and is a no-op")));
 + (void)showMoreApps:(UIViewController *)viewController
             location:(CBLocation)location  __attribute__((deprecated("This method is deprecated and is a no-op")));
 + (void)setShouldDisplayLoadingViewForMoreApps:(BOOL)shouldDisplay __attribute__((deprecated("This method is deprecated and is a no-op")));
 + (void)cacheMoreApps:(CBLocation)location __attribute__((deprecated("This method is deprecated and is a no-op")));
++ (void)setStatusBarBehavior:(CBStatusBarBehavior)statusBarBehavior __attribute__((deprecated("This method is deprecated and is a no-op")));
++ (void)setMediation:(CBMediation)library withVersion:(NSString*)libraryVersion DEPRECATED_MSG_ATTRIBUTE("Please use setMediation:withLibraryVersion:adapterVersion: instead.");
++ (void)cacheInPlay:(CBLocation)location DEPRECATED_MSG_ATTRIBUTE("This method is deprecated and will be removed in a future version.");
++ (BOOL)hasInPlay:(CBLocation)location DEPRECATED_MSG_ATTRIBUTE("This method is deprecated and will be removed in a future version.");
++ (CBInPlay *)getInPlay:(CBLocation)location DEPRECATED_MSG_ATTRIBUTE("This method is deprecated and will be removed in a future version.");
 
 @end

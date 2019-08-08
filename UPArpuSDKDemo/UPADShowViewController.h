@@ -24,6 +24,7 @@ extern NSString *const kTTFeedPlacementName;
 extern NSString *const kTTDrawPlacementName;
 extern NSString *const kAllPlacementName;
 extern NSString *const kNendPlacement;
+extern NSString *const kBaiduPlacement;
 extern NSString *const kNendVideoPlacement;
 extern NSString *const kMaioPlacement;
 extern NSString *const kHeaderBiddingPlacement;

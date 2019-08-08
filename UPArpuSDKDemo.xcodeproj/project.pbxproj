@@ -124,6 +124,7 @@
 		8DD9B45922706D0800A2FFBE /* NendAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD9B45622706D0800A2FFBE /* NendAd.framework */; };
 		8DD9B45A22706D0800A2FFBE /* NendAdResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8DD9B45822706D0800A2FFBE /* NendAdResource.bundle */; };
 		8DD9B45C22706D2300A2FFBE /* Maio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD9B45B22706D2200A2FFBE /* Maio.framework */; };
+		8DD9FB4B22FC247000EF5191 /* UpArpuBaiduNativeAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DD9FB4A22FC246F00EF5191 /* UpArpuBaiduNativeAdapter.framework */; };
 		8DE56EDC209C70BC002A1427 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE56EDB209C70BC002A1427 /* AppDelegate.m */; };
 		8DE56EDF209C70BC002A1427 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DE56EDE209C70BC002A1427 /* ViewController.m */; };
 		8DE56EE2209C70BC002A1427 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DE56EE0209C70BC002A1427 /* Main.storyboard */; };
@@ -533,6 +534,7 @@
 		8DD9B45622706D0800A2FFBE /* NendAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NendAd.framework; sourceTree = "<group>"; };
 		8DD9B45822706D0800A2FFBE /* NendAdResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NendAdResource.bundle; sourceTree = "<group>"; };
 		8DD9B45B22706D2200A2FFBE /* Maio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Maio.framework; path = SDK/Maio.framework; sourceTree = "<group>"; };
+		8DD9FB4A22FC246F00EF5191 /* UpArpuBaiduNativeAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuBaiduNativeAdapter.framework; path = SDK/UpArpuBaiduNativeAdapter.framework; sourceTree = "<group>"; };
 		8DDD89B620A1AA3C00C95818 /* UpArpuSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuSDK.framework; path = SDK/UpArpuSDK.framework; sourceTree = "<group>"; };
 		8DE56ED7209C70BC002A1427 /* UPArpuSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UPArpuSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DE56EDA209C70BC002A1427 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1048,6 +1050,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DD9FB4B22FC247000EF5191 /* UpArpuBaiduNativeAdapter.framework in Frameworks */,
 				8D8059752269E017003468B7 /* UpArpuNendInterstitialAdapter.framework in Frameworks */,
 				8D8059762269E017003468B7 /* UpArpuNendRewardedVideoAdapter.framework in Frameworks */,
 				8D8059772269E017003468B7 /* UpArpuMaioRewardedVideoAdapter.framework in Frameworks */,
@@ -1420,6 +1423,7 @@
 		8DE56EF0209C711D002A1427 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8DD9FB4A22FC246F00EF5191 /* UpArpuBaiduNativeAdapter.framework */,
 				453401C622CB2A490063AB57 /* UpArpuHeaderBidding.framework */,
 				8D048E3F22C5EF4000883294 /* FBAudienceNetworkBiddingKit.framework */,
 				8D048E3D22C5EB9900883294 /* FBSDKCoreKit.framework */,

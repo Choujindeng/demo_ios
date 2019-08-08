@@ -171,6 +171,7 @@ typedef NS_ENUM(NSInteger, UpArpuDataConsentSet) {
  channel & customData has to be set before init
  */
 @property(nonatomic) NSString *channel;
+@property(nonatomic) NSString *subchannel;
 @property(nonatomic) NSDictionary *customData;
 -(NSString*)version;
 @end

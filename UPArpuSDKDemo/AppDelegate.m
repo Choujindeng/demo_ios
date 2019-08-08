@@ -37,6 +37,8 @@
                                                       };
 
     [UPArpuAPI sharedInstance].channel = @"test_channel_demo";
+    [UPArpuAPI sharedInstance].subchannel = @"test_subchannel";
+
     [UPArpuAPI sharedInstance].customData = @{@"demo_custom_data_key":@"demo_custom_data_val"};
     [[UPArpuAPI sharedInstance] startWithAppID:@"a5b0e8491845b3" appKey:@"7eae0567827cfe2b22874061763f30c9" error:nil];
     

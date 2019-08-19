@@ -10,6 +10,8 @@
 		4554E2ED22CB44FD009BDBFA /* UpArpuHeaderBidding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 453401C622CB2A490063AB57 /* UpArpuHeaderBidding.framework */; };
 		4554E2EE22CB456A009BDBFA /* FBAudienceNetworkBiddingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D048E3F22C5EF4000883294 /* FBAudienceNetworkBiddingKit.framework */; };
 		4554E2EF22CB456C009BDBFA /* MTGSDKBidding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D048E3B22C5EB0800883294 /* MTGSDKBidding.framework */; };
+		45D7B9FB230AC928005ED4D7 /* MoPubSDKFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45D7B9FA230AC928005ED4D7 /* MoPubSDKFramework.framework */; };
+		45D7B9FC230AC928005ED4D7 /* MoPubSDKFramework.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = 45D7B9FA230AC928005ED4D7 /* MoPubSDKFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8D03FE62215F1655005DC75D /* UPArpuInterstitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D03FE5F215F1655005DC75D /* UPArpuInterstitialViewController.m */; };
 		8D03FE63215F1655005DC75D /* UPArpuBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D03FE60215F1655005DC75D /* UPArpuBannerViewController.m */; };
 		8D03FE65215F177D005DC75D /* UpArpuGDTNativeAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D03FE64215F177D005DC75D /* UpArpuGDTNativeAdapter.framework */; };
@@ -189,6 +191,7 @@
 				8DA1B57921242771008280DB /* UpArpuAdColonyRewardedVideoAdapter.framework in Copy Files */,
 				8DA1B57B21242771008280DB /* UpArpuAdmobNativeAdapter.framework in Copy Files */,
 				8DA1B5A121242771008280DB /* UpArpuUnityAdsRewardedVideoAdapter.framework in Copy Files */,
+				45D7B9FC230AC928005ED4D7 /* MoPubSDKFramework.framework in Copy Files */,
 				8DA1B59F21242771008280DB /* UpArpuTapjoyRewardedVideoAdapter.framework in Copy Files */,
 				DC83FABF21022F93003FFC3C /* UpArpuSDK.framework in Copy Files */,
 				8DA1B57D21242771008280DB /* UpArpuAdmobRewardedVideoAdapter.framework in Copy Files */,
@@ -205,6 +208,7 @@
 
 /* Begin PBXFileReference section */
 		453401C622CB2A490063AB57 /* UpArpuHeaderBidding.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuHeaderBidding.framework; path = SDK/UpArpuHeaderBidding.framework; sourceTree = "<group>"; };
+		45D7B9FA230AC928005ED4D7 /* MoPubSDKFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MoPubSDKFramework.framework; path = SDK/MoPubSDKFramework.framework; sourceTree = "<group>"; };
 		8D03FE5E215F1655005DC75D /* UPArpuInterstitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPArpuInterstitialViewController.h; sourceTree = "<group>"; };
 		8D03FE5F215F1655005DC75D /* UPArpuInterstitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPArpuInterstitialViewController.m; sourceTree = "<group>"; };
 		8D03FE60215F1655005DC75D /* UPArpuBannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPArpuBannerViewController.m; sourceTree = "<group>"; };
@@ -530,6 +534,7 @@
 				8D7351FF217864F300D8FAE6 /* UpArpuInmobiBannerAdapter.framework in Frameworks */,
 				8D03FE6C215F17AC005DC75D /* UpArpuApplovinBannerAdapter.framework in Frameworks */,
 				8D7352012178675E00D8FAE6 /* UpArpuFlurryBannerAdapter.framework in Frameworks */,
+				45D7B9FB230AC928005ED4D7 /* MoPubSDKFramework.framework in Frameworks */,
 				8D03FE6F215F17AC005DC75D /* UpArpuGDTBannerAdapter.framework in Frameworks */,
 				8D7352032178694400D8FAE6 /* UpArpuMopubBannerAdapter.framework in Frameworks */,
 				8D03FE6D215F17AC005DC75D /* UpArpuTTBannerAdapter.framework in Frameworks */,
@@ -760,6 +765,7 @@
 		8DE56ECE209C70BC002A1427 = {
 			isa = PBXGroup;
 			children = (
+				45D7B9FA230AC928005ED4D7 /* MoPubSDKFramework.framework */,
 				8DD9B45522706D0800A2FFBE /* NendAd.embeddedframework */,
 				8DD6F343221547CA00EA97A1 /* Toutiao */,
 				8DD6F33E221547B200EA97A1 /* Baidu */,

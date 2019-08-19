@@ -10,8 +10,8 @@
 
 @property (nonatomic, strong) NSString *categories;
 @property (nonatomic, strong) NSString *postback;
-@property (nonatomic, strong) NSString *buttonText;
 @property (nonatomic, strong) NSString *buttonColor;
 @property (nonatomic, strong) NSString *preferredOrientation;
+@property (nonatomic, assign) BOOL clickInApp;
 
 @end

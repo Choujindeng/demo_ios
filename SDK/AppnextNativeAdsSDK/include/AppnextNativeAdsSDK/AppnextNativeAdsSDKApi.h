@@ -41,7 +41,8 @@
 
 #pragma mark - Public methods
 
-- (instancetype) initWithPlacementID:(NSString *)placement;
+- (instancetype) initWithPlacementID:(NSString *)placement withViewController:(UIViewController *) viewController;
+- (void) setViewController:(UIViewController *) viewController;
 - (void) loadAds:(AppnextNativeAdsRequest *)request withRequestDelegate:(id<AppnextNativeAdsRequestDelegate>)delegate;
 - (void) adClicked:(AppnextAdData *)adData withAdOpenedDelegate:(id<AppnextNativeAdOpenedDelegate>)delegate;
 - (void) adImpression:(AppnextAdData *)adData;

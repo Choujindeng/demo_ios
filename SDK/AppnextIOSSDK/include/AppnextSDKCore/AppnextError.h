@@ -17,12 +17,10 @@ typedef NS_ENUM(NSInteger, AppnextError) {
     AppnextTimeOut
 };
 
-static NSString * const AppnextError_toString[];
-
 // In a source file
 // initialize arrays with explicit indices to make sure
 // the string match the enums properly
-static NSString * const AppnextError_toString[] = {
+static NSString * const AppnextError_toString[5] = {
     [AppnextNoAds] = @"AppnextNoAds",
     [AppnextAdNotReady] = @"AppnextAdNotReady",
     [AppnextConnectionError] = @"AppnextConnectionError",

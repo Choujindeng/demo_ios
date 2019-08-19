@@ -23,9 +23,6 @@
 typedef void (^currencyCompletion)(NSDictionary *parameters, NSError *error);
 typedef void (^networkCompletion)(BOOL success, NSError *error);
 
-@interface TJCAdView : UIView <UIWebViewDelegate>
-@end
-
 @class TJCCurrencyManager;
 @class TJCVideoManager;
 @class TJCViewHandler;
@@ -55,9 +52,10 @@ typedef void (^networkCompletion)(BOOL success, NSError *error);
 @property (nonatomic, copy) NSString *plugin;
 
 /** The currency multiplier value, used to adjust currency earned. */
-@property (nonatomic, assign) float currencyMultiplier;	
+@property (nonatomic, assign) float currencyMultiplier;
 
 @property (nonatomic, copy) NSString *appGroupID;
+
 @property (nonatomic, copy) NSString *store;
 @property (nonatomic, copy) NSString *analyticsApiKey;
 @property (nonatomic, copy) NSString *managedDeviceID;
@@ -352,6 +350,14 @@ typedef void (^networkCompletion)(BOOL success, NSError *error);
  */
 + (NSString*)getVersion;
 
+/** Used by limited SDK only **/
+@property (nonatomic, copy) NSString *limitedSdkKey;
+@property (nonatomic, copy) NSString *limitedAppID;
+@property (nonatomic, copy) NSString *limitedSecretKey;
+@property (nonatomic, copy) NSString *limitedAppGroupID;
++ (BOOL)isLimitedConnected;
++ (void)limitedConnect:(NSString *)sdkKey;
+
 @end
 
 /**
@@ -471,6 +477,22 @@ typedef void (^networkCompletion)(BOOL success, NSError *error);
  */
 +(void)subjectToGDPR:(BOOL) gdprApplicability;
 
+/**
+ * In the US, the Children’s Online Privacy Protection Act (COPPA) imposes certain requirements on operators of online services that (a)
+ * have actual knowledge that the connected user is a child under 13 years of age, or (b) operate services (including apps) that are
+ * directed to children under 13.
+ *
+ * Similarly, the GDPR imposes certain requirements in connection with data subjects who are below the applicable local minimum age for
+ * online consent (ranging from 13 to 16, as established by each member state).
+ *
+ * For applications that are not directed towards children under 13 years of age, but still have a minority share of users known to be
+ * under the applicable minimum age, utilize this method to access Tapjoy’s monetization capability. This method will set
+ * ad_tracking_enabled to false for Tapjoy which only shows the user contextual ads. No ad tracking will be done on this user.
+ *
+ * @param isBelowConsentAge YES if the user is affected by COPPA, NO if they are not.
+ */
++(void)belowConsentAge:(BOOL) isBelowConsentAge;
+
 @end
 
 
@@ -484,6 +506,11 @@ typedef void (^networkCompletion)(BOOL success, NSError *error);
  */
 + (void)setVideoAdDelegate:(id<TJCVideoAdDelegate>)delegate;
 
+@end
+
+@protocol TJCTopViewControllerProtocol <NSObject>
+@required
+@property (nonatomic, assign) BOOL canRotate;
 @end
 
 #endif

@@ -84,11 +84,13 @@ typedef NS_ENUM(NSInteger, UpArpuDataConsentSet) {
 };
 
 @interface UPArpuAPI : NSObject
+
 +(NSDictionary<NSNumber*, NSString*>*)networkNameMap;
 +(void) setLogEnabled:(BOOL)logEnabled;
 
 +(instancetype)sharedInstance;
-
++(BOOL) getMPisInit ;
++(void) setMPisInit:(BOOL)MPisInit;
 /**
  * Inspect the error parameter to see what's the matter.
  */
@@ -167,6 +169,7 @@ typedef NS_ENUM(NSInteger, UpArpuDataConsentSet) {
 @property(nonatomic, readonly) NSDictionary<NSString*, NSString*>* consentStrings;
 @property(nonatomic, readonly) NSString *appID;
 @property(nonatomic, readonly) NSString *appKey;
+
 /*
  channel & customData has to be set before init
  */

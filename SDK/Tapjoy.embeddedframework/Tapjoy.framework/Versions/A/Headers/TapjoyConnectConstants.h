@@ -10,6 +10,9 @@
 #define TJC_CONNECT_SUCCESS					@"TJC_Connect_Success"
 #define TJC_CONNECT_FAILED					@"TJC_Connect_Failed"
 
+#define TJC_LIMITED_CONNECT_SUCCESS                    @"TJC_Limited_Connect_Success"
+#define TJC_LIMITED_CONNECT_FAILED                    @"TJC_Limited_Connect_Failed"
+
 // This notification is fired after getCurrencyBalance has been called, and indicates that user currency amount has been received from the server.
 #define TJC_GET_CURRENCY_RESPONSE_NOTIFICATION				@"TJC_GET_CURRENCY_RESPONSE_NOTIFICATION"
 // This notification is fired after spendCurrency has been called, and indicates that the user has successfully spent currency.
@@ -44,16 +47,6 @@
 #define TJC_OPTION_ENABLE_LOGGING				@"TJC_OPTION_ENABLE_LOGGING"
 #define TJC_OPTION_USER_ID						@"TJC_OPTION_USER_ID"
 #define TJC_OPTION_CLEAR_SHARED_URL_CACHE		@"TJC_OPTION_CLEAR_SHARED_URL_CACHE"
-#define TJC_OPTION_COLLECT_MAC_ADDRESS			@"TJC_OPTION_COLLECT_MAC_ADDRESS"
 #define TJC_OPTION_DISABLE_GENERIC_ERROR_ALERT  @"TJC_OPTION_DISABLE_GENERIC_ERROR_ALERT"
 
-/*!  \enum TJCMacAddressOption
- *  \brief Settings for collection of MAC address. Use this with the TJC_OPTION_COLLECT_MAC_ADDRESS option.
- */
-typedef enum TJCMacAddressOption
-{
-	TJCMacAddressOptionOn = 0,        /*!< Enables collection of MAC address. */
-	TJCMacAddressOptionOffWithVersionCheck,  /*!< Disables collection of MAC address for iOS versions 6.0 and above. */
-	TJCMacAddressOptionOff          /*!< Completely disables collection of MAC address. THIS WILL EFFECTIVELY DISABLE THE SDK FOR IOS VERSIONS BELOW 6.0! */
-} TJCMacAddressOption;
 

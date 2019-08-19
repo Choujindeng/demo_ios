@@ -181,22 +181,38 @@ static NSString *const kMaioPlacementID = @"b5cb96ce0b931e";
 }
 #pragma mark - showing delegate
 -(void) rewardedVideoDidStartPlayingForPlacementID:(NSString*)placementID {
-    NSLog(@"RV Demo: rewardedVideoDidStartPlayingForPlacementID:%@", placementID);
+    NSLog(@"UPArpuRewardedVideoVideoViewController::rewardedVideoDidStartPlayingForPlacementID:%@", placementID);
+}
+
+-(void) rewardedVideoDidStartPlayingForPlacementID:(NSString *)placementID extra:(NSDictionary *)extra {
+    NSLog(@"UPArpuRewardedVideoVideoViewController::rewardedVideoDidStartPlayingForPlacementID:%@ extra:%@", placementID, extra);
 }
 
 -(void) rewardedVideoDidEndPlayingForPlacementID:(NSString*)placementID {
-    NSLog(@"RV Demo: rewardedVideoDidEndPlayingForPlacementID:%@", placementID);
+    NSLog(@"UPArpuRewardedVideoVideoViewController::rewardedVideoDidEndPlayingForPlacementID:%@", placementID);
+}
+
+-(void) rewardedVideoDidEndPlayingForPlacementID:(NSString*)placementID extra:(NSDictionary *)extra {
+    NSLog(@"UPArpuRewardedVideoVideoViewController::rewardedVideoDidEndPlayingForPlacementID:%@ extra:%@", placementID, extra);
 }
 
 -(void) rewardedVideoDidFailToPlayForPlacementID:(NSString*)placementID error:(NSError*)error {
-    NSLog(@"RV Demo: rewardedVideoDidFailToPlayForPlacementID:%@ error:%@", placementID, error);
+    NSLog(@"UPArpuRewardedVideoVideoViewController::rewardedVideoDidFailToPlayForPlacementID:%@ error:%@", placementID, error);
 }
 
--(void) rewardedVideoDidCloseForPlacementID:(NSString*)placementID rewarded:(BOOL)rewarded {
-    NSLog(@"RV Demo: rewardedVideoDidCloseForPlacementID:%@, rewarded:%@", placementID, rewarded ? @"yes" : @"no");
+-(void) rewardedVideoDidFailToPlayForPlacementID:(NSString*)placementID error:(NSError*)error extra:(NSDictionary *)extra {
+    NSLog(@"UPArpuRewardedVideoVideoViewController::rewardedVideoDidFailToPlayForPlacementID:%@ error:%@ extra:%@", placementID, error, extra);
+}
+
+-(void) rewardedVideoDidCloseForPlacementID:(NSString*)placementID rewarded:(BOOL)rewarded extra:(NSDictionary *)extra {
+    NSLog(@"UPArpuRewardedVideoVideoViewController::rewardedVideoDidCloseForPlacementID:%@, rewarded:%@ extra:%@", placementID, rewarded ? @"yes" : @"no", extra);
 }
 
 -(void) rewardedVideoDidClickForPlacementID:(NSString*)placementID {
-    NSLog(@"RV Demo: rewardedVideoDidClickForPlacementID:%@", placementID);
+    NSLog(@"UPArpuRewardedVideoVideoViewController::rewardedVideoDidClickForPlacementID:%@", placementID);
+}
+
+-(void) rewardedVideoDidClickForPlacementID:(NSString*)placementID extra:(NSDictionary *)extra {
+    NSLog(@"UPArpuRewardedVideoVideoViewController::rewardedVideoDidClickForPlacementID:%@ extra:%@", placementID, extra);
 }
 @end

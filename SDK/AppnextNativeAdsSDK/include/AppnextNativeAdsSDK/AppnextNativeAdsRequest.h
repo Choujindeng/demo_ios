@@ -14,5 +14,6 @@
 @property (nonatomic, strong) NSString *postback;
 @property (nonatomic, assign) NSUInteger count;
 @property (nonatomic, assign) ANCreativeType creativeType;
+@property (nonatomic, assign) BOOL clickInApp;
 
 @end

@@ -9,5 +9,5 @@
 #import <AppnextSDKCore/AppnextAd.h>
 
 @interface AppnextNativeAd : AppnextAd
-
+- (instancetype) initWithPlacementID:(NSString *)placement withViewController:(UIViewController*) viewController;
 @end

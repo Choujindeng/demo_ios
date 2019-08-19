@@ -8,6 +8,7 @@
 
 #import <AppnextSDKCore/AppnextAdConfiguration.h>
 #import <AppnextSDKCore/AppnextAdData.h>
+#import <AppnextSDKCore/OpenLinkHelper.h>
 
 @class AppnextAd;
 
@@ -35,6 +36,7 @@
 
 @property (nonatomic, strong) NSString *placementID;
 @property (nonatomic, strong, readonly) AppnextAdConfiguration *adConfiguration;
+@property (nonatomic, strong) OpenLinkHelper* openLinkHelper;
 @property (nonatomic, assign, readonly) BOOL adIsLoaded;
 
 - (instancetype) init;
@@ -50,11 +52,11 @@
 - (NSString *) getCategories;
 - (void) setPostback:(NSString *)postback;
 - (NSString *) getPostback;
-- (void) setButtonText:(NSString *)buttonText;
 - (NSString *) getButtonText;
 - (void) setButtonColor:(NSString *)buttonColor;
 - (NSString *) getButtonColor;
 - (void) setPreferredOrientation:(NSString *)preferredOrientation;
 - (NSString *) getPreferredOrientation;
+- (void) setClickInApp:(BOOL) clickInApp;
 
 @end

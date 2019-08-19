@@ -109,6 +109,13 @@ typedef enum TJCActionRequestTypeEnum {
  */
 - (void)contentDidDisappear:(TJPlacement*)placement;
 
+/**
+ * Called when a click event has occurred
+ * @param placement The TJPlacement that was sent
+ * @return n/a
+ */
+- (void)didClick:(TJPlacement*)placement;
+
 
 /**
  * Callback issued by TJ to publisher when the user has successfully completed a purchase request
@@ -199,6 +206,9 @@ typedef enum TJCActionRequestTypeEnum {
 /** The UIViewController to show the content in */
 @property (nonatomic, retain) UIViewController* presentationViewController;
 
+/** Allows plugins to specify a topViewController class (currently only used by Unity) */
+@property (nonatomic, copy) NSString *topViewControllerClassName;
+
 /**
  * Creates a new instance of TJPlacement
  * @param placementName The name of the placement
@@ -235,5 +245,7 @@ typedef enum TJCActionRequestTypeEnum {
 /** Programmatic mediation */
 @property (nonatomic, copy) NSDictionary *auctionData;
 
-
+/** Used by limited SDK request Only **/
+@property (nonatomic, assign) BOOL isLimited;
++ (id)limitedPlacementWithName:(NSString*)placementName mediationAgent:(NSString*)mediationAgent delegate:(id<TJPlacementDelegate>)delegate;
 @end

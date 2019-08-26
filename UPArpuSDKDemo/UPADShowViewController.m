@@ -313,7 +313,6 @@ static NSInteger adViewTag = 3333;
 }
 
 -(void) didFinishLoadingADWithPlacementID:(NSString *)placementID extra:(NSDictionary *)extra{
-    [self increaseCallback];
     NSLog(@"UPADShowViewController:: didFinishLoadingADWithPlacementID:%@", placementID);
     [_loadingView removeFromSuperview];
     _failureTipsLabel.hidden = YES;
@@ -323,7 +322,6 @@ static NSInteger adViewTag = 3333;
 }
 
 -(void) didFailToLoadADWithPlacementID:(NSString *)placementID extra:(NSDictionary *)extra error:(NSError *)error {
-    [self increaseCallback];
     NSLog(@"UPADShowViewController:: didFailToLoadADWithPlacementID:%@ error:%@", placementID, error);
     [_loadingView removeFromSuperview];
     _failureTipsLabel.hidden = NO;

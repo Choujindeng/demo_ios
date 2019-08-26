@@ -1,6 +1,6 @@
 ## [IMPORTANT] DO NOT expose any of the frameworks to Windows operating system; Windows modifies frameworks, making them incomplete and resulting in compile errors.
-# UPARPU_iOS_SDK_4.2.1
-## Third-party SDK version for uparpu_ios_sdk_4.2.1
+# UPARPU_iOS_SDK_4.2.2
+## Third-party SDK version for uparpu_ios_sdk_4.2.2
 
 
 | Network | SDK Version |
@@ -20,7 +20,7 @@
 | Vungle | 6.3.2 |
 | Adcolony | 3.3.8.1 |
 | UnityAds | 3.2.0 |
-| TT | 2.2.0.2 |
+| TT | 2.3.1.0 |
 | Tapjoy | 12.3.1 |
 | Oneway | 2.1.0 |
 | Baidu | 4.6.4 |

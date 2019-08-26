@@ -19,9 +19,13 @@ extern NSString *const kUPArpuNativeSplashShowingExtraStyleLandscape;
 @protocol UPArpuNativeSplashDelegate<NSObject>
 -(void) finishLoadingNativeSplashAdForPlacementID:(NSString*)placementID;
 -(void) failedToLoadNativeSplashAdForPlacementID:(NSString*)placementID error:(NSError*)error;
--(void) didShowNativeSplashAdForPlacementID:(NSString*)placementID;
--(void) didClickNaitveSplashAdForPlacementID:(NSString*)placementID;
--(void) didCloseNativeSplashAdForPlacementID:(NSString*)placementID;
+-(void) didShowNativeSplashAdForPlacementID:(NSString*)placementID DEPRECATED_ATTRIBUTE;
+-(void) didClickNaitveSplashAdForPlacementID:(NSString*)placementID DEPRECATED_ATTRIBUTE;
+-(void) didCloseNativeSplashAdForPlacementID:(NSString*)placementID DEPRECATED_ATTRIBUTE;
+
+-(void) didShowNativeSplashAdForPlacementID:(NSString*)placementID extra:(NSDictionary *)extra;
+-(void) didClickNaitveSplashAdForPlacementID:(NSString*)placementID extra:(NSDictionary *)extra;
+-(void) didCloseNativeSplashAdForPlacementID:(NSString*)placementID extra:(NSDictionary *)extra;
 @end
 
 @interface UPArpuNativeSplashWrapper : NSObject

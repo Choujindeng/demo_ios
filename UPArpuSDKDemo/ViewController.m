@@ -131,7 +131,6 @@ static NSString *const kCellIdentifier = @"cell";
 -(void) didCloseNativeSplashAdForPlacementID:(NSString*)placementID {
     NSLog(@"ViewController::didCloseNativeSplashAdForPlacementID:%@", placementID);
 }
-
 #pragma mark - UPArpu Splash Delegate method(s)
 -(void) didFinishLoadingADWithPlacementID:(NSString *)placementID {
     NSLog(@"ViewController::didFinishLoadingADWithPlacementID:%@", placementID);
@@ -152,4 +151,30 @@ static NSString *const kCellIdentifier = @"cell";
 -(void)splashDidCloseForPlacementID:(NSString*)placementID {
     NSLog(@"ViewController::splashDidCloseForPlacementID:%@", placementID);
 }
-    @end
+
+#pragma mark - splash delegate with networkID and adsourceID
+-(void)didShowNativeSplashAdForPlacementID:(NSString*)placementID extra:(NSDictionary *)extra{
+    NSLog(@"ViewController::splashDidShowForPlacementID:%@ with extra: %@", placementID,extra);
+}
+
+-(void)didClickNaitveSplashAdForPlacementID:(NSString*)placementID extra:(NSDictionary *)extra{
+    NSLog(@"ViewController::splashDidClickForPlacementID:%@ with extra: %@", placementID,extra);
+}
+
+-(void)didCloseNativeSplashAdForPlacementID:(NSString*)placementID extra:(NSDictionary *)extra{
+    NSLog(@"ViewController::splashDidCloseForPlacementID:%@ with extra: %@", placementID,extra);
+}
+-(void)splashDidShowForPlacementID:(NSString*)placementID extra:(NSDictionary *)extra {
+    NSLog(@"AppDelegate::splashDidShowForPlacementID:%@ with extra: %@", placementID,extra);
+    
+}
+
+-(void)splashDidClickForPlacementID:(NSString*)placementID extra:(NSDictionary *)extra{
+    NSLog(@"AppDelegate::splashDidClickForPlacementID:%@ with extra: %@", placementID,extra);
+    
+}
+
+-(void)splashDidCloseForPlacementID:(NSString*)placementID extra:(NSDictionary *)extra{
+    NSLog(@"AppDelegate::splashDidCloseForPlacementID:%@ with extra: %@", placementID,extra);
+}
+@end

@@ -199,6 +199,8 @@ static NSString *const kMaioPlacementID = @"b5cb96cf795c4b";
     NSLog(@"UPArpuInterstitialViewController::interstitialDidClickForPlacementID:%@", placementID);
 }
 
+
+#pragma mark - delegate with networkID and adsourceID
 -(void) interstitialDidShowForPlacementID:(NSString *)placementID extra:(NSDictionary *)extra {
     NSLog(@"UPArpuInterstitialViewController::interstitialDidShowForPlacementID:%@ extra:%@", placementID, extra);
 }

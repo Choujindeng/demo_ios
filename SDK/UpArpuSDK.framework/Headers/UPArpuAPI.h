@@ -105,6 +105,8 @@ typedef NS_ENUM(NSInteger, UpArpuDataConsentSet) {
  * Whether the device is located in data protected area.
  */
 -(BOOL)inDataProtectionArea;
+
+-(NSString*)psID;
     
 
 /**

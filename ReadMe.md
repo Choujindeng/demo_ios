@@ -1,30 +1,32 @@
 ## [IMPORTANT] DO NOT expose any of the frameworks to Windows operating system; Windows modifies frameworks, making them incomplete and resulting in compile errors.
-# UPARPU_iOS_SDK_4.2.1
-## Third-party SDK version for uparpu_ios_sdk_4.2.1
+# UPARPU_iOS_SDK_4.2.2
+## Third-party SDK version for uparpu_ios_sdk_4.2.2
 
 
 | Network | SDK Version |
 |---|---|
-| Facebook | 5.2.0 |
-| Admob | 7.44.0 |
-| Inmobi | 7.1.1 |
+| Facebook | 5.4.0 |
+| Admob | 7.48.0 |
+| Inmobi | 7.3.1 |
 | Flurry | 9.0.0 |
-| Applovin | 6.6.1 |
-| Mintegral | 5.3.2 |
-| Mopub | 5.0.0 |
-| GDT | 4.10.3 |
+| Applovin | 6.8.1 |
+| Mintegral | 5.5.3 |
+| Mopub | 5.8.0 |
+| GDT | 4.10.7 |
 | Yeahmobi | 3.2.0 |
-| Appnext | 1.9.0 |
-| Chartboost | 7.2.0 |
-| Ironsource | 6.8.4 |
-| Vungle | 6.2.0 |
-| Adcolony | 3.3.5.0 |
-| UnityAds | 3.1.0 |
-| TT | 2.0.1.4 |
-| Tapjoy | 12.0.0 |
+| Appnext | 1.9.3 |
+| Chartboost | 8.0.1 |
+| Ironsource | 6.8.4.2 |
+| Vungle | 6.3.2 |
+| Adcolony | 3.3.8.1 |
+| UnityAds | 3.2.0 |
+| TT | 2.3.1.0 |
+| Tapjoy | 12.3.1 |
 | Oneway | 2.1.0 |
 | Baidu | 4.6.4 |
 | MobPower | 1.0.0 |
+| Nend | 5.2.0 |
+| Maio | 1.4.7 |
 
 ## UPARPU network_name and network_firm_id mapping
 

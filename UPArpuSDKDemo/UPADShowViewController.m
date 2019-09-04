@@ -32,7 +32,7 @@ NSString *const kNendVideoPlacement = @"Nend(Video)";
 
 static NSString *const kMintegralHeaderBiddingPlacementID = @"b5d1333d023691";
 static NSString *const kPlacement0ID = @"b5ad9ba61dcb39";
-static NSString *const kInmobiPlacementID = @"b5cf755533c6f2";
+static NSString *const kInmobiPlacementID = @"b5b0f553483724";
 static NSString *const kMintegralPlacementID = @"b5b0f555698607";
 static NSString *const kFacebookPlacementID = @"b5b0f551340ea9";
 static NSString *const kAdMobPlacementID = @"b5b0f55228375a";
@@ -293,5 +293,47 @@ static NSInteger adViewTag = 3333;
     [_loadingView removeFromSuperview];
     _failureTipsLabel.hidden = NO;
 }
+
+#pragma mark - delegate with networkID and adsourceID
+-(void) didStartPlayingVideoInAdView:(UPArpuNativeADView*)adView placementID:(NSString*)placementID extra:(NSDictionary *)extra{
+    NSLog(@"UPADShowViewController:: didStartPlayingVideoInAdView:placementID:%@with extra: %@", placementID,extra);
+}
+
+-(void) didEndPlayingVideoInAdView:(UPArpuNativeADView*)adView placementID:(NSString*)placementID extra:(NSDictionary *)extra{
+    NSLog(@"UPADShowViewController:: didEndPlayingVideoInAdView:placementID:%@", placementID);
+}
+
+-(void) didClickNativeAdInAdView:(UPArpuNativeADView*)adView placementID:(NSString*)placementID extra:(NSDictionary *)extra{
+    NSLog(@"UPADShowViewController:: didClickNativeAdInAdView:placementID:%@ with extra: %@", placementID,extra);
+}
+
+-(void) didShowNativeAdInAdView:(UPArpuNativeADView*)adView placementID:(NSString*)placementID extra:(NSDictionary *)extra{
+    NSLog(@"UPADShowViewController:: didShowNativeAdInAdView:placementID:%@ with extra: %@", placementID,extra);
+    adView.mainImageView.hidden = [adView isVideoContents];
+}
+
+-(void) didFinishLoadingADWithPlacementID:(NSString *)placementID extra:(NSDictionary *)extra{
+    NSLog(@"UPADShowViewController:: didFinishLoadingADWithPlacementID:%@", placementID);
+    [_loadingView removeFromSuperview];
+    _failureTipsLabel.hidden = YES;
+    if ([self.view viewWithTag:adViewTag] == nil) {
+        [self showAD];
+    }
+}
+
+-(void) didFailToLoadADWithPlacementID:(NSString *)placementID extra:(NSDictionary *)extra error:(NSError *)error {
+    NSLog(@"UPADShowViewController:: didFailToLoadADWithPlacementID:%@ error:%@", placementID, error);
+    [_loadingView removeFromSuperview];
+    _failureTipsLabel.hidden = NO;
+}
+
+-(void) didEnterFullScreenVideoInAdView:(UPArpuNativeADView*)adView placementID:(NSString*)placementID extra:(NSDictionary *)extra{
+    NSLog(@"UPADShowViewController:: didEnterFullScreenVideoInAdView:placementID:%@", placementID);
+}
+
+-(void) didExitFullScreenVideoInAdView:(UPArpuNativeADView*)adView placementID:(NSString*)placementID extra:(NSDictionary *)extra{
+    NSLog(@"UPADShowViewController:: didExitFullScreenVideoInAdView:placementID:%@", placementID);
+}
 #endif
 @end
+

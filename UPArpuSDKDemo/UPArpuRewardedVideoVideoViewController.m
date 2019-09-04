@@ -23,7 +23,6 @@
 @property(nonatomic, readonly) UIButton *showAdButton;
 @property(nonatomic, readonly) UILabel *failureTipsLabel;
 @property(nonatomic, readonly) UIButton *removeAdButton;
-@property(nonatomic, readonly) BOOL reload;
 @end
 
 NSString *const kTapjoyPlacementName = @"Tapjoy";
@@ -155,7 +154,6 @@ static NSString *const kMaioPlacementID = @"b5cb96ce0b931e";
 }
 
 -(void) reloadADButtonTapped {
-    _reload = YES;
     _failureTipsLabel.hidden = YES;
     [self.view addSubview:_loadingView];
     [[UPArpuAdManager sharedManager] loadADWithPlacementID:_placementIDs[_name] extra:nil customData:nil delegate:self];
@@ -171,8 +169,6 @@ static NSString *const kMaioPlacementID = @"b5cb96ce0b931e";
     NSLog(@"RV Demo: didFinishLoadingADWithPlacementID");
     _failureTipsLabel.hidden = YES;
     [_loadingView removeFromSuperview];
-    if (!_reload) [self showAD];
-    _reload = NO;
 }
 
 -(void) didFailToLoadADWithPlacementID:(NSString*)placementID error:(NSError*)error {

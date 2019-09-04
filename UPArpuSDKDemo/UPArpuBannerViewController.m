@@ -176,4 +176,27 @@ NSString *const kBannerLoadingFailedNotification = @"banner_failed_to_load";
 -(void) bannerView:(UPArpuBannerView *)bannerView failedToAutoRefreshWithPlacementID:(NSString *)placementID error:(NSError *)error {
     NSLog(@"UPArpuBannerViewController::bannerView:failedToAutoRefreshWithPlacementID:%@ error:%@", placementID, error);
 }
+
+#pragma mark - add networkID and adsourceID delegate
+
+-(void) bannerView:(UPArpuBannerView*)bannerView didShowAdWithPlacementID:(NSString*)placementID extra:(NSDictionary *)extra{
+    NSLog(@"UPArpuBannerViewController::bannerView:didShowAdWithPlacementID:%@ with extra: %@", placementID,extra);
+#ifdef BANNER_AUTO_TEST
+    [[NSNotificationCenter defaultCenter] postNotificationName:kBannerShownNotification object:nil];
+    [self.navigationController popViewControllerAnimated:NO];
+#endif
+}
+-(void) bannerView:(UPArpuBannerView*)bannerView didClickWithPlacementID:(NSString*)placementID extra:(NSDictionary *)extra{
+    NSLog(@"UPArpuBannerViewController::bannerView:didClickWithPlacementID:%@ with extra: %@", placementID,extra);
+}
+-(void) bannerView:(UPArpuBannerView*)bannerView didCloseWithPlacementID:(NSString*)placementID extra:(NSDictionary *)extra{
+    NSLog(@"UPArpuBannerViewController::bannerView:didCloseWithPlacementID:%@ with extra: %@", placementID,extra);
+}
+-(void) bannerView:(UPArpuBannerView*)bannerView didAutoRefreshWithPlacement:(NSString*)placementID extra:(NSDictionary *)extra{
+    NSLog(@"UPArpuBannerViewController::bannerView:didAutoRefreshWithPlacement:%@ with extra: %@", placementID,extra);
+}
+-(void) bannerView:(UPArpuBannerView*)bannerView failedToAutoRefreshWithPlacementID:(NSString*)placementID  extra:(NSDictionary *)extra error:(NSError*)error {
+    NSLog(@"UPArpuBannerViewController::bannerView:failedToAutoRefreshWithPlacementID:%@ error:%@", placementID, error);
+}
+
 @end

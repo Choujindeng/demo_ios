@@ -374,6 +374,21 @@ namespace tapjoy {
     */
     static void setUserConsent(const char* value);
 
+    /**
+     * @brief In the US, the Children’s Online Privacy Protection Act (COPPA) imposes certain requirements on operators of online
+     *        services that (a) have actual knowledge that the connected user is a child under 13 years of age, or (b) operate services
+     *        (including apps) that are directed to children under 13.
+     *
+     *        Similarly, the GDPR imposes certain requirements in connection with data subjects who are below the applicable local
+     *        minimum age for online consent (ranging from 13 to 16, as established by each member state).
+     *
+     *        For applications that are not directed towards children under 13 years of age, but still have a minority share of users known
+     *        to be under the applicable minimum age, utilize this method to access Tapjoy’s monetization capability. This method will set
+     *        ad_tracking_enabled to false for Tapjoy which only shows the user contextual ads. No ad tracking will be done on this user.
+     * @param isBelowConsentAge True if below consent age (COPPA) applies to this user, false otherwise
+     */
+    static void belowConsentAge(bool isBelowConsentAge);
+      
 #if defined(ANDROID)
     /**
      * @brief Returns true if the push notification is disabled.
@@ -386,6 +401,25 @@ namespace tapjoy {
      *        true to disable the push notification
      */
     static void setPushNotificationDisabled(bool disabled);
+      
+    /**
+     * @brief Set Firebase Token to initiate Firebase messaging for your application.
+     *        Call this method when the Firebase token service callback is triggered to update the token.
+     *
+     * @param deviceToken
+     *           deviceToken is a registration token for firebase senderID and AppID to register in Tapjoy Server.
+     *           It is updated through Firebase token service callback triggered everytime Firebase update the token.
+     */
+    static void setDeviceToken(const char* deviceToken);
+      
+    /**
+     * @brief Sets the context and RemoteMessage data so that our SDK can display the push notification.
+     *        Call this when a message is received from Firebase
+     *
+     * @param context: The Application context (jobject)
+     * @param remoteMessage: The message(jobject) received from Firebase
+     */
+    static void setReceiveRemoteNotification(jobject context,jobject remoteMessage);
 #endif
 
     /**
@@ -460,6 +494,7 @@ namespace tapjoy {
     virtual void onContentReady(TJPlacementHandle placementHandle, const char* placementName) {}
     virtual void onContentShow(TJPlacementHandle placementHandle, const char* placementName) {}
     virtual void onContentDismiss(TJPlacementHandle placementHandle, const char* placementName) {}
+    virtual void onClick(TJPlacementHandle placementHandle, const char* placementName) {}
     virtual void onPurchaseRequest(TJPlacementHandle placementHandle, const char* placementName, TJActionRequestHandle requestHandle, const char* requestId, const char* requestToken, const char* productId) {}
     virtual void onRewardRequest(TJPlacementHandle placementHandle, const char* placementName, TJActionRequestHandle requestHandle, const char* requestId, const char* requestToken, const char* itemId, int quantity) {}
   };

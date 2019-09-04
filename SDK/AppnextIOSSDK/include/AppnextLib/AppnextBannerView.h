@@ -20,6 +20,6 @@
 
 @interface AppnextBannerView : UIView
 @property (nonatomic, weak) id<AppnextBannerDelegate> delegate;
-- (instancetype) initBannerWithPlacementID:(NSString *) placemnetID withBannerRequest:(BannerRequest * ) bannerRequest;
-- (void) loadAd;
+- (instancetype) initBannerWithPlacementID:(NSString *) placemnetID;
+- (void) loadAd:(BannerRequest *) bannerRequest;
 @end

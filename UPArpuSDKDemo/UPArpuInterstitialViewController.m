@@ -198,4 +198,32 @@ static NSString *const kMaioPlacementID = @"b5cb96cf795c4b";
 -(void) interstitialDidClickForPlacementID:(NSString*)placementID {
     NSLog(@"UPArpuInterstitialViewController::interstitialDidClickForPlacementID:%@", placementID);
 }
+
+-(void) interstitialDidShowForPlacementID:(NSString *)placementID extra:(NSDictionary *)extra {
+    NSLog(@"UPArpuInterstitialViewController::interstitialDidShowForPlacementID:%@ extra:%@", placementID, extra);
+}
+
+-(void) interstitialFailedToShowForPlacementID:(NSString*)placementID error:(NSError*)error extra:(NSDictionary *)extra {
+    NSLog(@"UPArpuInterstitialViewController::interstitialFailedToShowForPlacementID:%@ error:%@ extra:%@", placementID, error, extra);
+}
+
+-(void) interstitialDidFailToPlayVideoForPlacementID:(NSString*)placementID error:(NSError*)error extra:(NSDictionary*)extra {
+    NSLog(@"UPArpuInterstitialViewController::interstitialDidFailToPlayVideoForPlacementID:%@ error:%@ extra:%@", placementID, error, extra);
+}
+
+-(void) interstitialDidStartPlayingVideoForPlacementID:(NSString*)placementID extra:(NSDictionary *)extra {
+    NSLog(@"UPArpuInterstitialViewController::interstitialDidStartPlayingVideoForPlacementID:%@ extra:%@", placementID, extra);
+}
+
+-(void) interstitialDidEndPlayingVideoForPlacementID:(NSString*)placementID extra:(NSDictionary *)extra {
+    NSLog(@"UPArpuInterstitialViewController::interstitialDidEndPlayingVideoForPlacementID:%@ extra:%@", placementID, extra);
+}
+
+-(void) interstitialDidCloseForPlacementID:(NSString*)placementID extra:(NSDictionary *)extra {
+    NSLog(@"UPArpuInterstitialViewController::interstitialDidCloseForPlacementID:%@ extra:%@", placementID, extra);
+}
+
+-(void) interstitialDidClickForPlacementID:(NSString*)placementID extra:(NSDictionary *)extra {
+    NSLog(@"UPArpuInterstitialViewController::interstitialDidClickForPlacementID:%@ extra:%@", placementID, extra);
+}
 @end

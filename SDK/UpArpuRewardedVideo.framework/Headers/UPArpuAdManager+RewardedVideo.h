@@ -15,6 +15,9 @@ extern NSString *const kUPArpuAdLoadingExtraKeywordKey;
 extern NSString *const kUPArpuAdLoadingExtraUserDataKeywordKey;
 extern NSString *const kUPArpuAdLoadingExtraUserIDKey;
 extern NSString *const kUPArpuAdLoadingExtraLocationKey;
+
+extern NSString *const kUPArpuRewardedVideoCallbackExtraAdsourceIDKey;
+extern NSString *const kUPArpuRewardedVideoCallbackExtraNetworkIDKey;
 @interface UPArpuAdManager (RewardedVideo)
 -(BOOL) rewardedVideoReadyForPlacementID:(NSString*)placementID;
 -(void) showRewardedVideoWithPlacementID:(NSString*)placementID inViewController:(UIViewController*)viewController delegate:(id<UPArpuRewardedVideoDelegate>)delegate;

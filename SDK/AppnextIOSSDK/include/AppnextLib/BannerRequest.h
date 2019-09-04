@@ -23,7 +23,9 @@ typedef enum{Banner, LargeBanner, MediumRectangle}BannerType;
 @property (nonatomic, assign, getter = isClickEnabled) BOOL clickEnabled;
 @property (nonatomic, assign) NSInteger maxVideoLength;
 @property (nonatomic, assign) NSInteger minVideoLength;
+@property (nonatomic, assign) BOOL clickInApp;
 @property (nonatomic, assign) BannerType bannerType;
+
 /*
 + (BannerType) getBannerTypeByString:(NSString *) bannerTypeAsString;
 + (Creative) getCreativeTypeByString:(NSString *) bannerCreativeAsString;

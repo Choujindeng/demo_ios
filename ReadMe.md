@@ -2,9 +2,11 @@
 # UPARPU_iOS_SDK_4.2.2
 ## Third-party SDK version for uparpu_ios_sdk_4.2.2
 
-[Integrate Guide for UpArpuSDK for iOS](/Docs/iOS_Integration_Guide.md)
+[Integrate Guide for UpArpuSDK for iOS(English)](/Docs_EN/iOS_Integration_Guide.md)
+[Error Code And FAQ(English)](/Docs_EN/Error_Code_and_FAQ.md)
 
-[Error Code And FAQ](/Docs/Error_Code_and_FAQ.md)
+[Integrate Guide for UpArpuSDK for iOS(Chinese)](/iOS_Docs_CHN/iOS_Integration_Guide.md)
+[Error Code And FAQ(Chinese)](/iOS_Docs_CHN/Error_Code_and_FAQ.md)
 
 | Network | SDK Version |
 |---|---|

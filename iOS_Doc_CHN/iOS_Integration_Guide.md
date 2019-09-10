@@ -1,13 +1,13 @@
-#**iOS集成UpArpuSDK**#
+#**iOS集成UpArpuSDK**
 
-##1 简介##
+##1 简介
 本文档介绍如何去集成iOS端的UparpuSDK（后面简称为SDK），包括获取开发者账号，获取AppID和AppKey并创建配置进行广告投放。
-###1.1 支持的广告类型###
+###1.1 支持的广告类型
 UpArpuSDK支持原生广告(Native),激励视频广告(rewardVideo)，banner广告，插屏广告(intersitial)和开屏广告(splash)。
-###1.2 SDK架构###
+###1.2 SDK架构
 ![](UpArpuSDK_Architecture.png)
-##<h2 id='1'>2 配置</h2>##
-###2.1 基础配置###
+##<h2 id='1'>2 配置</h2>
+###2.1 基础配置
 	Xcode10版本及以上。
 	Target iOS 8.0及以上。
 

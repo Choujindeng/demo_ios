@@ -1,4 +1,4 @@
-##12 Error Code
+## 12 Error Code
 Here's brief summary of the predefined error codes:
 
 |Constants|Value|Note|
@@ -23,8 +23,8 @@ Here's brief summary of the predefined error codes:
 | UPADLoadingErrorCodeInvalidInputEncountered| 1014 |Invalid parameters encountered(App ID、App Key orPlacement ID being nil)|
 | UPADLoadingErrorCodePlacementAdDeliverySwitchOff | 1015 |Ad delivery not turned on for the placement|
 
-##13 FAQ
-###13.1 App Not Compiles
+## 13 FAQ
+### 13.1 App Not Compiles
 If your project does not compile and the error message issued by Xcode contains something like **"Undefined symbols for architecture..."** and/or **"ld: symbol(s) not found for architecture..."**:
 ![](Undefined_Symbols_Errors.png)
 
@@ -47,7 +47,7 @@ Here's another example.
 ![](xml_error.png)
 After some searches you'll find that the missing symbols(**\_xmlStrlen** and **\_xmlBufferLength**, for example) are defined in **libxml2.tbd**, adding it to your project by walking through the steps listed above will resolve this issue.
 
-###13.2 App Crashes on Launching
+### 13.2 App Crashes on Launching
 App crashes on launching because you are missing some project configurations. We give some examples here:
 
 1) Missing **-ObjC** flag in **Other Linker Flags** in **Build Settings**:
@@ -66,7 +66,7 @@ You encounter this crash because you are integrating Admob's SDK in your project
 ![](Admob_Update_Infoplist.png)
 **NOTE: Make sure you use your own Admob app id instead of the one shown in the picture above.**
 
-###13.3 App Fails to Load Ad
+### 13.3 App Fails to Load Ad
 Your app might fail to load ad due to various reasons. We give some examples here:
 
 If your app fail to load ad and the error message displayed in the console contains something like **This might be du to ... SDK not being imported or it's imported but a unsupported version is being used.**, it because you are missing some third party SDK in your project. 

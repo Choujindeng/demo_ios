@@ -40,7 +40,7 @@ If you don't see the popup as the picture above, just double click the row marke
 The table below gives a brief summary of third party SDKs. Only import those of the ad networks you would like to integrate.
 
 |Network|SDK Package Contents|Current Version Supported by **TopOn**|Download Link|Reference Website|Note|    
-|---|---|---|---|---|---|---|    
+|---|---|---|---|---|---|    
 |Facebook|FBAudienceNetwork.framework<br> FBAudienceNetworkBiddingKit.framework <br>FBSDKCoreKit.framework<br>|v5.4.0|https://developers.facebook.com/docs/audience-network/download#ios|https://developers.facebook.com/docs/audience-network/ios|   
 |Admob|GoogleMobileAds.framework|v7.48.0|https://support.google.com/admob/answer/2993059?hl=en|https://developers.google.com/admob/ios/quick-start|Admob requires that **app id be configured in the Info.plist of your project**; for more information please refer to <a href="https://developers.google.com/admob/ios/quick-start#update\_your\_infoplist">Admob's website</a>.|   
 | Inmobi |InMobiSDK.framework|v7.3.1|https://support.inmobi.com/monetize/ios-guidelines/||||   
@@ -87,6 +87,7 @@ The quickest way to test ad functionalities is to use **UpArpuSDK** provided tes
 |Splash|b5c1b048c498b9|
 |Native Splash| b5b0f5663c6e4a |
 |Native|b5b0f5663c6e4a|
+
 Note: These placements are associated with **AppID** a5b0e8491845b3 and **AppKey** 7eae0567827cfe2b22874061763f30c9.
 After testing, you have to change these IDs into those created under your own **TopOn** account.
 

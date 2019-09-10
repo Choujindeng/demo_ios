@@ -32,8 +32,8 @@ UpArpuSDK支持原生广告(Native),激励视频广告(rewardVideo)，banner广�
 ### 2.4 导入第三方的SDK###
 
 
-|第三方平台|需要导入的包|**TopOn**支持的版本|下载链接|参考网址|备注| 
-|---|---|---|---|---|---|---|
+|第三方平台|需要导入的包|**TopOn**支持的版本|下载链接|参考网址|备注|    
+|---|---|---|---|---|---|---|   
 |Facebook|FBAudienceNetwork.framework<br> FBAudienceNetworkBiddingKit.framework <br>FBSDKCoreKit.framework<br>|v5.4.0|https://developers.facebook.com/docs/audience-network/download#ios|https://developers.facebook.com/docs/audience-network/ios|
 |Admob|GoogleMobileAds.framework|v7.48.0|https://support.google.com/admob/answer/2993059?hl=en|https://developers.google.com/admob/ios/quick-start|Admob requires that **app id be configured in the Info.plist of your project**; for more information please refer to <a href="https://developers.google.com/admob/ios/quick-start#update\_your\_infoplist">Admob's website</a>.|
 | Inmobi |InMobiSDK.framework|v7.3.1|https://support.inmobi.com/monetize/ios-guidelines/||||

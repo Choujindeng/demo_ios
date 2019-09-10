@@ -1,4 +1,4 @@
-##12 Error Code
+## 12 Error Code
 以下是错误码摘要：
 
 |Constants|Value|Note|
@@ -23,8 +23,8 @@
 | UPADLoadingErrorCodeInvalidInputEncountered| 1014 |(无效的App ID、App Key 或Placement ID)Invalid parameters encountered(App ID、App Key orPlacement ID being nil)|
 | UPADLoadingErrorCodePlacementAdDeliverySwitchOff | 1015 |(广告位没有开启广告投放)Ad delivery not turned on for the placement|
 
-##13 FAQ
-###13.1 应用程序没有编译(App Not Compiles)
+## 13 FAQ
+### 13.1 应用程序没有编译(App Not Compiles)
 如果您的项目没有编译，并且Xcode发出这样的一些错误信息： **"Undefined symbols for architecture..."** 或是 **"ld: symbol(s) not found for architecture..."**:
 ![](Undefined_Symbols_Errors.png)
 
@@ -46,7 +46,7 @@
 ![](xml_error.png)
 搜索之后发现缺失的symbol是在 **libxml2.tbd**中被定义的(例如**\_xmlStrlen** 和 **\_xmlBufferLength**)使用上述的方法把它添加到您的项目即可解决。
 
-###13.2 启动时崩溃(App Crashes on Launching)
+### 13.2 启动时崩溃(App Crashes on Launching)
 应用程序在启动时崩溃时因为您缺少了某些配置，我们这里给出几个例子：
 
 1) 在**Build Settings**中的**Other Linker Flags**缺失**-ObjC** flag配置项：
@@ -64,7 +64,7 @@
 ![](Admob_Update_Infoplist.png)
 **注: 如果您的应用程序导入了Admob的SDK，请保证您的app配置了以上操作。**
 
-###13.3 App加载广告失败(App Fails to Load Ad)
+### 13.3 App加载广告失败(App Fails to Load Ad)
 可能会有各种因素导致您的应用程序加载广告失败，这里举几个例子：
 
 如果您app加载广告失败，并在控制台日志中找到类似于这样的信息**This might be du to ... SDK not being imported or it's imported but a unsupported version is being used.**，这是因为您没有将第三方平台的SDK导入到您的项目中。

@@ -11,6 +11,9 @@
 		4554E2EE22CB456A009BDBFA /* FBAudienceNetworkBiddingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D048E3F22C5EF4000883294 /* FBAudienceNetworkBiddingKit.framework */; };
 		4554E2EF22CB456C009BDBFA /* MTGSDKBidding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D048E3B22C5EB0800883294 /* MTGSDKBidding.framework */; };
 		455C99DC23290352005405F4 /* WindSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 455C99DB23290352005405F4 /* WindSDK.framework */; };
+		455C99E02329079B005405F4 /* UpArpuSigmobSplashAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 455C99DD2329079B005405F4 /* UpArpuSigmobSplashAdapter.framework */; };
+		455C99E12329079B005405F4 /* UpArpuSigmobInterstitialAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 455C99DE2329079B005405F4 /* UpArpuSigmobInterstitialAdapter.framework */; };
+		455C99E22329079B005405F4 /* UpArpuSigmobRewardedVideoAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 455C99DF2329079B005405F4 /* UpArpuSigmobRewardedVideoAdapter.framework */; };
 		45D7B9FB230AC928005ED4D7 /* MoPubSDKFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45D7B9FA230AC928005ED4D7 /* MoPubSDKFramework.framework */; };
 		45D7B9FC230AC928005ED4D7 /* MoPubSDKFramework.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = 45D7B9FA230AC928005ED4D7 /* MoPubSDKFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8D03FE62215F1655005DC75D /* UPArpuInterstitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D03FE5F215F1655005DC75D /* UPArpuInterstitialViewController.m */; };
@@ -210,6 +213,9 @@
 /* Begin PBXFileReference section */
 		453401C622CB2A490063AB57 /* UpArpuHeaderBidding.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuHeaderBidding.framework; path = SDK/UpArpuHeaderBidding.framework; sourceTree = "<group>"; };
 		455C99DB23290352005405F4 /* WindSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WindSDK.framework; path = SDK/WindSDK.framework; sourceTree = "<group>"; };
+		455C99DD2329079B005405F4 /* UpArpuSigmobSplashAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuSigmobSplashAdapter.framework; path = SDK/UpArpuSigmobSplashAdapter.framework; sourceTree = "<group>"; };
+		455C99DE2329079B005405F4 /* UpArpuSigmobInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuSigmobInterstitialAdapter.framework; path = SDK/UpArpuSigmobInterstitialAdapter.framework; sourceTree = "<group>"; };
+		455C99DF2329079B005405F4 /* UpArpuSigmobRewardedVideoAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuSigmobRewardedVideoAdapter.framework; path = SDK/UpArpuSigmobRewardedVideoAdapter.framework; sourceTree = "<group>"; };
 		45D7B9FA230AC928005ED4D7 /* MoPubSDKFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MoPubSDKFramework.framework; path = SDK/MoPubSDKFramework.framework; sourceTree = "<group>"; };
 		8D03FE5E215F1655005DC75D /* UPArpuInterstitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPArpuInterstitialViewController.h; sourceTree = "<group>"; };
 		8D03FE5F215F1655005DC75D /* UPArpuInterstitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPArpuInterstitialViewController.m; sourceTree = "<group>"; };
@@ -450,6 +456,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				455C99E02329079B005405F4 /* UpArpuSigmobSplashAdapter.framework in Frameworks */,
+				455C99E12329079B005405F4 /* UpArpuSigmobInterstitialAdapter.framework in Frameworks */,
+				455C99E22329079B005405F4 /* UpArpuSigmobRewardedVideoAdapter.framework in Frameworks */,
 				8D05B95E230AC77700A969FA /* MoPubSDKFramework.framework in Frameworks */,
 				8DD9FB4B22FC247000EF5191 /* UpArpuBaiduNativeAdapter.framework in Frameworks */,
 				8D8059752269E017003468B7 /* UpArpuNendInterstitialAdapter.framework in Frameworks */,
@@ -824,6 +833,9 @@
 		8DE56EF0209C711D002A1427 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				455C99DE2329079B005405F4 /* UpArpuSigmobInterstitialAdapter.framework */,
+				455C99DF2329079B005405F4 /* UpArpuSigmobRewardedVideoAdapter.framework */,
+				455C99DD2329079B005405F4 /* UpArpuSigmobSplashAdapter.framework */,
 				455C99DB23290352005405F4 /* WindSDK.framework */,
 				8D05B95D230AC77600A969FA /* MoPubSDKFramework.framework */,
 				8DD9FB4A22FC246F00EF5191 /* UpArpuBaiduNativeAdapter.framework */,

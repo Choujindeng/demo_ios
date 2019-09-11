@@ -62,6 +62,8 @@ static NSString *const kOnewayPlacementID = @"b5baf668a68f6b";
 static NSString *const kBaiduPlacementID = @"b5c04dd81c1af3";
 static NSString *const kNendPlacementID = @"b5cb96d6f68fdb";
 static NSString *const kMaioPlacementID = @"b5cb96ce0b931e";
+static NSString *const kSigmobPlacementID = @"b5d771f5a3458f";
+
 
 
 @implementation UPArpuRewardedVideoVideoViewController
@@ -93,7 +95,8 @@ static NSString *const kMaioPlacementID = @"b5cb96ce0b931e";
                           kAppnextPlacement:kAppnextPlacementID,
                           kBaiduPlacement:kBaiduPlacementID,
                           kNendPlacement:kNendPlacementID,
-                          kMaioPlacement:kMaioPlacementID
+                          kMaioPlacement:kMaioPlacementID,
+                          kSigmobPlacement:kSigmobPlacementID
                           };
     }
     return self;

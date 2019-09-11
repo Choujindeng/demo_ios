@@ -29,6 +29,8 @@ NSString *const kTTFeedPlacementName = @"TT(Feed)";
 NSString *const kTTDrawPlacementName = @"TT(Draw)";
 NSString *const kAllPlacementName = @"All";
 NSString *const kNendVideoPlacement = @"Nend(Video)";
+NSString *const kSigmobPlacement = @"Sigmob";
+
 
 static NSString *const kMintegralHeaderBiddingPlacementID = @"b5d1333d023691";
 static NSString *const kPlacement0ID = @"b5ad9ba61dcb39";

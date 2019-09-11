@@ -35,6 +35,8 @@ extern NSString *const kNendPlacement;
 extern NSString *const kNendInterstitialVideoPlacement;
 extern NSString *const kNendFullScreenInterstitialPlacement;
 extern NSString *const kMaioPlacement;
+extern NSString *const kSigmobPlacement;
+
 @interface UPArpuInterstitialViewController : UIViewController
 -(instancetype) initWithPlacementName:(NSString*)name;
 @end

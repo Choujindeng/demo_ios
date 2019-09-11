@@ -28,6 +28,7 @@ extern NSString *const kBaiduPlacement;
 extern NSString *const kNendVideoPlacement;
 extern NSString *const kMaioPlacement;
 extern NSString *const kHeaderBiddingPlacement;
+extern NSString *const kSigmobPlacement;
 @interface UPADShowViewController : UIViewController
 -(instancetype) initWithPlacementName:(NSString*)name;
 +(NSDictionary<NSString*, NSString*>*)nativePlacementIDs;

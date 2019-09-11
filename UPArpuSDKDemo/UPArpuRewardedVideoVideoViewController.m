@@ -180,6 +180,10 @@ static NSString *const kMaioPlacementID = @"b5cb96ce0b931e";
     NSLog(@"RV Demo: didFailToLoadADWithPlacementID:%@ error:%@", placementID, error);
 }
 #pragma mark - showing delegate
+-(void) rewardedVideoDidRewardSuccessForPlacemenID:(NSString *)placementID extra:(NSDictionary *)extra{
+    NSLog(@"UPArpuRewardedVideoVideoViewController::rewardedVideoDidRewardSuccessForPlacemenID:%@ extra:%@",placementID,extra);
+}
+
 -(void) rewardedVideoDidStartPlayingForPlacementID:(NSString*)placementID {
     NSLog(@"RV Demo: rewardedVideoDidStartPlayingForPlacementID:%@", placementID);
 }

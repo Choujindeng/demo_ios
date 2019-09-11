@@ -120,13 +120,7 @@ Splash's load and show functionalities are united into a single api, you can loa
 ### 3.2 Implement Splash Delegates
 
 You can implement **UPArpuSplashDelegate**'s methods to get notified on the various splash ad events:<br>
-1) Make sure you app's delegate confirms to **UPArpuSplashDelegate**:
-<pre><code>
-@interface AppDelegate ()\<UPArpuSplashDelegate\>
-@end
-</code></pre>
 
-2) Implement the following methods in AppDelegate:
 <pre><code>
 #pragma mark - UPArpu Splash Delegate method(s)
 -(void) didFinishLoadingADWithPlacementID:(NSString *)placementID {

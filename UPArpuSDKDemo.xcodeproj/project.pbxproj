@@ -10,6 +10,7 @@
 		4554E2ED22CB44FD009BDBFA /* UpArpuHeaderBidding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 453401C622CB2A490063AB57 /* UpArpuHeaderBidding.framework */; };
 		4554E2EE22CB456A009BDBFA /* FBAudienceNetworkBiddingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D048E3F22C5EF4000883294 /* FBAudienceNetworkBiddingKit.framework */; };
 		4554E2EF22CB456C009BDBFA /* MTGSDKBidding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D048E3B22C5EB0800883294 /* MTGSDKBidding.framework */; };
+		455C99DC23290352005405F4 /* WindSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 455C99DB23290352005405F4 /* WindSDK.framework */; };
 		45D7B9FB230AC928005ED4D7 /* MoPubSDKFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45D7B9FA230AC928005ED4D7 /* MoPubSDKFramework.framework */; };
 		45D7B9FC230AC928005ED4D7 /* MoPubSDKFramework.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = 45D7B9FA230AC928005ED4D7 /* MoPubSDKFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8D03FE62215F1655005DC75D /* UPArpuInterstitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D03FE5F215F1655005DC75D /* UPArpuInterstitialViewController.m */; };
@@ -31,7 +32,6 @@
 		8D048E3E22C5EB9900883294 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D048E3D22C5EB9900883294 /* FBSDKCoreKit.framework */; };
 		8D05B95E230AC77700A969FA /* MoPubSDKFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D05B95D230AC77600A969FA /* MoPubSDKFramework.framework */; };
 		8D12AE3C2283D05800FAA85F /* libGDTMobSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D12AE3A2283D05800FAA85F /* libGDTMobSDK.a */; };
-		8D1DEE712328F8B300976DB7 /* WindSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1DEE702328F8B200976DB7 /* WindSDK.framework */; };
 		8D3A583821B532BF0033C44C /* UpArpuBaiduInterstitialAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D3A583521B532BE0033C44C /* UpArpuBaiduInterstitialAdapter.framework */; };
 		8D3A583921B532BF0033C44C /* UpArpuBaiduBannerAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D3A583621B532BF0033C44C /* UpArpuBaiduBannerAdapter.framework */; };
 		8D3A583A21B532BF0033C44C /* UpArpuBaiduRewardedVideoAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D3A583721B532BF0033C44C /* UpArpuBaiduRewardedVideoAdapter.framework */; };
@@ -209,6 +209,7 @@
 
 /* Begin PBXFileReference section */
 		453401C622CB2A490063AB57 /* UpArpuHeaderBidding.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuHeaderBidding.framework; path = SDK/UpArpuHeaderBidding.framework; sourceTree = "<group>"; };
+		455C99DB23290352005405F4 /* WindSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WindSDK.framework; path = SDK/WindSDK.framework; sourceTree = "<group>"; };
 		45D7B9FA230AC928005ED4D7 /* MoPubSDKFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MoPubSDKFramework.framework; path = SDK/MoPubSDKFramework.framework; sourceTree = "<group>"; };
 		8D03FE5E215F1655005DC75D /* UPArpuInterstitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPArpuInterstitialViewController.h; sourceTree = "<group>"; };
 		8D03FE5F215F1655005DC75D /* UPArpuInterstitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPArpuInterstitialViewController.m; sourceTree = "<group>"; };
@@ -250,7 +251,6 @@
 		8D12AE392283D05800FAA85F /* GDTUnifiedNativeAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTUnifiedNativeAd.h; sourceTree = "<group>"; };
 		8D12AE3A2283D05800FAA85F /* libGDTMobSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGDTMobSDK.a; sourceTree = "<group>"; };
 		8D12AE3B2283D05800FAA85F /* GDTSDKDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDTSDKDefines.h; sourceTree = "<group>"; };
-		8D1DEE702328F8B200976DB7 /* WindSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WindSDK.framework; sourceTree = "<group>"; };
 		8D3A583521B532BE0033C44C /* UpArpuBaiduInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuBaiduInterstitialAdapter.framework; path = SDK/UpArpuBaiduInterstitialAdapter.framework; sourceTree = "<group>"; };
 		8D3A583621B532BF0033C44C /* UpArpuBaiduBannerAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuBaiduBannerAdapter.framework; path = SDK/UpArpuBaiduBannerAdapter.framework; sourceTree = "<group>"; };
 		8D3A583721B532BF0033C44C /* UpArpuBaiduRewardedVideoAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuBaiduRewardedVideoAdapter.framework; path = SDK/UpArpuBaiduRewardedVideoAdapter.framework; sourceTree = "<group>"; };
@@ -504,6 +504,7 @@
 				DCA62C7821031012008812DC /* libsqlite3.tbd in Frameworks */,
 				DC83F8102101ECB0003FFC3C /* libFlurryAds_1.0.0.a in Frameworks */,
 				DC83F80F2101ECA4003FFC3C /* libFlurry_9.0.0.a in Frameworks */,
+				455C99DC23290352005405F4 /* WindSDK.framework in Frameworks */,
 				8D12AE3C2283D05800FAA85F /* libGDTMobSDK.a in Frameworks */,
 				DC83F7F72101EC68003FFC3C /* UnityAds.framework in Frameworks */,
 				8D73523821786B1500D8FAE6 /* libAppnextSDKCore.a in Frameworks */,
@@ -533,7 +534,6 @@
 				8D03FE6B215F17AC005DC75D /* UpArpuBanner.framework in Frameworks */,
 				8D7351E921785D6700D8FAE6 /* UpArpuFacebookBannerAdapter.framework in Frameworks */,
 				8D03FE6E215F17AC005DC75D /* UpArpuAdmobBannerAdapter.framework in Frameworks */,
-				8D1DEE712328F8B300976DB7 /* WindSDK.framework in Frameworks */,
 				8D7351FF217864F300D8FAE6 /* UpArpuInmobiBannerAdapter.framework in Frameworks */,
 				8D03FE6C215F17AC005DC75D /* UpArpuApplovinBannerAdapter.framework in Frameworks */,
 				8D7352012178675E00D8FAE6 /* UpArpuFlurryBannerAdapter.framework in Frameworks */,
@@ -824,7 +824,7 @@
 		8DE56EF0209C711D002A1427 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8D1DEE702328F8B200976DB7 /* WindSDK.framework */,
+				455C99DB23290352005405F4 /* WindSDK.framework */,
 				8D05B95D230AC77600A969FA /* MoPubSDKFramework.framework */,
 				8DD9FB4A22FC246F00EF5191 /* UpArpuBaiduNativeAdapter.framework */,
 				453401C622CB2A490063AB57 /* UpArpuHeaderBidding.framework */,

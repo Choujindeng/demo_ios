@@ -115,7 +115,7 @@ UpArpuSDK支持原生广告(Native),激励视频广告(rewardVideo)，banner广�
 您可以实现**UPArpuSplashDelegate**的方法来获取Splash的各种事件。<br> 
 
 <pre><code>
-\#pragma mark - UPArpu Splash Delegate method(s)
+#pragma mark - UPArpu Splash Delegate method(s)
 -(void) didFinishLoadingADWithPlacementID:(NSString *)placementID {
     NSLog(@"AppDelegate::didFinishLoadingADWithPlacementID:%@", placementID);
 }

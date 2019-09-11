@@ -127,7 +127,7 @@ You can implement **UPArpuSplashDelegate**'s methods to get notified on the vari
     NSLog(@"AppDelegate::didFinishLoadingADWithPlacementID:%@", placementID);
 }
 
--(void) didFailToLoadADWithPlacementID:(NSString\*)placementID error:(NSError*)error {
+-(void) didFailToLoadADWithPlacementID:(NSString*)placementID error:(NSError*)error {
     NSLog(@"AppDelegate::didFailToLoadADWithPlacementID:%@ error:%@", placementID, error);
 }
 

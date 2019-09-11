@@ -8,7 +8,7 @@ UpArpuSDK supports native, rewarded video, banner, interstitial and splash ads.
 
 ## 1.2 UpArpuSDK Architecture
   
-![](https://github.com/uparputeam/uparpu_demo_ios/edit/master/iOS_Doc_EN/UpArpuSDK_Architecture.png)
+![](UpArpuSDK_Architecture.png)
   
 <h2 id='1'>2 Get Started</h2>
 

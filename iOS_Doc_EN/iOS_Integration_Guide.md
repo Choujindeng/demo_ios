@@ -432,7 +432,7 @@ You can implement the methods defined in **UPArpuBannerDelegate** to get notifie
     NSLog(@"UPArpuBannerViewController::bannerView:failedToAutoRefreshWithPlacementID:%@ error:%@", placementID, error);
 }</code></pre>
 
-##7 Implement Native
+## 7 Implement Native
 
 Before you continue, make sure you've walked through the steps listed in the [Get Started](#1) section.
 
@@ -584,7 +584,7 @@ instance, set the frame within which you want to show the ad, the class of your 
     [self.view addSubview:adView];
 }</code></pre>
 
-###7.4 Implement Native Delegate
+### 7.4 Implement Native Delegate
 You can implement the methods defined in **UPArpuNativeDelegate** to get notified on various native event:
 
 

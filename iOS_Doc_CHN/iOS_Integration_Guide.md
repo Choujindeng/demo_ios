@@ -113,20 +113,14 @@ UpArpuSDK支持原生广告(Native),激励视频广告(rewardVideo)，banner广�
 ### 3.2 实现Splash的Delegate
 
 您可以实现**UPArpuSplashDelegate**的方法来获取Splash的各种事件。<br> 
-1）您需要确认您的app添加了**UPArpuSplashDelegate**代理协议：
-<pre><code>
-@interface AppDelegate ()\<UPArpuSplashDelegate\>
-@end
-</code></pre>
 
-2) 在AppDelegate中实现代理方法：
 <pre><code>
 \#pragma mark - UPArpu Splash Delegate method(s)
 -(void) didFinishLoadingADWithPlacementID:(NSString *)placementID {
     NSLog(@"AppDelegate::didFinishLoadingADWithPlacementID:%@", placementID);
 }
 
--(void) didFailToLoadADWithPlacementID:(NSString\*)placementID error:(NSError*)error {
+-(void) didFailToLoadADWithPlacementID:(NSString*)placementID error:(NSError*)error {
     NSLog(@"AppDelegate::didFailToLoadADWithPlacementID:%@ error:%@", placementID, error);
 }
 

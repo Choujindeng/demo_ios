@@ -169,7 +169,7 @@ static NSString *const kSigmobPlacementID = @"b5d771f5a3458f";
 
 #pragma mark - loading delegate
 -(void) didFinishLoadingADWithPlacementID:(NSString *)placementID {
-    NSLog(@"RV Demo: didFinishLoadingADWithPlacementID");
+    NSLog(@"UPArpuRewardedVideoVideoViewController: didFinishLoadingADWithPlacementID");
     _failureTipsLabel.hidden = YES;
     [_loadingView removeFromSuperview];
 }
@@ -177,9 +177,9 @@ static NSString *const kSigmobPlacementID = @"b5d771f5a3458f";
 -(void) didFailToLoadADWithPlacementID:(NSString*)placementID error:(NSError*)error {
     [_loadingView removeFromSuperview];
     _failureTipsLabel.hidden = NO;
-    NSLog(@"RV Demo: didFailToLoadADWithPlacementID:%@ error:%@", placementID, error);
+    NSLog(@"UPArpuRewardedVideoVideoViewController: didFailToLoadADWithPlacementID:%@ error:%@", placementID, error);
 }
-#pragma mark - showing delegate
+#pragma mark - showing delegates
 -(void) rewardedVideoDidRewardSuccessForPlacemenID:(NSString *)placementID extra:(NSDictionary *)extra{
     NSLog(@"UPArpuRewardedVideoVideoViewController::rewardedVideoDidRewardSuccessForPlacemenID:%@ extra:%@",placementID,extra);
 }

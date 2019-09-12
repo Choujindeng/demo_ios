@@ -12,12 +12,12 @@
 
 | Network | SDK Version |
 |---|---|
-| Facebook | 5.4.0 |
+| Facebook | 5.5.0 |
 | Admob | 7.48.0 |
 | Inmobi | 7.3.1 |
 | Flurry | 9.0.0 |
 | Applovin | 6.8.1 |
-| Mintegral | 5.5.3 |
+| Mintegral | 5.7.0 |
 | Mopub | 5.8.0 |
 | GDT | 4.10.7 |
 | Yeahmobi | 3.2.0 |
@@ -27,7 +27,7 @@
 | Vungle | 6.3.2 |
 | Adcolony | 3.3.8.1 |
 | UnityAds | 3.2.0 |
-| TT | 2.3.1.0 |
+| TT | 2.4.6.0 |
 | Tapjoy | 12.3.1 |
 | Oneway | 2.1.0 |
 | Baidu | 4.6.4 |

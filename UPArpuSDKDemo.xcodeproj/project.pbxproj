@@ -83,10 +83,7 @@
 		8D90878D21D4A0590070EDCE /* UpArpuGDTSplashAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D90878821D4A0580070EDCE /* UpArpuGDTSplashAdapter.framework */; };
 		8D90878E21D4A0590070EDCE /* UpArpuTTSplashAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D90878921D4A0580070EDCE /* UpArpuTTSplashAdapter.framework */; };
 		8D90879021D4A0590070EDCE /* UpArpuBaiduSplashAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D90878B21D4A0590070EDCE /* UpArpuBaiduSplashAdapter.framework */; };
-		8D90879221D4A0BE0070EDCE /* UpArpuMobPowerNativeAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D90879121D4A0BE0070EDCE /* UpArpuMobPowerNativeAdapter.framework */; };
 		8D90879421D4A2CF0070EDCE /* UpArpuSplash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D90878A21D4A0580070EDCE /* UpArpuSplash.framework */; };
-		8D90879721D4A41C0070EDCE /* MobPowerNative.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D90879521D4A41B0070EDCE /* MobPowerNative.framework */; };
-		8D90879821D4A41C0070EDCE /* MobPowerSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D90879621D4A41C0070EDCE /* MobPowerSDK.framework */; };
 		8DA1B57821242771008280DB /* UpArpuAdColonyRewardedVideoAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC83F7EB2101EC3E003FFC3C /* UpArpuAdColonyRewardedVideoAdapter.framework */; };
 		8DA1B57921242771008280DB /* UpArpuAdColonyRewardedVideoAdapter.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = DC83F7EB2101EC3E003FFC3C /* UpArpuAdColonyRewardedVideoAdapter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8DA1B57A21242771008280DB /* UpArpuAdmobNativeAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC83F7A82101EC3B003FFC3C /* UpArpuAdmobNativeAdapter.framework */; };
@@ -341,9 +338,6 @@
 		8D90878921D4A0580070EDCE /* UpArpuTTSplashAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuTTSplashAdapter.framework; path = SDK/UpArpuTTSplashAdapter.framework; sourceTree = "<group>"; };
 		8D90878A21D4A0580070EDCE /* UpArpuSplash.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuSplash.framework; path = SDK/UpArpuSplash.framework; sourceTree = "<group>"; };
 		8D90878B21D4A0590070EDCE /* UpArpuBaiduSplashAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuBaiduSplashAdapter.framework; path = SDK/UpArpuBaiduSplashAdapter.framework; sourceTree = "<group>"; };
-		8D90879121D4A0BE0070EDCE /* UpArpuMobPowerNativeAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuMobPowerNativeAdapter.framework; path = SDK/UpArpuMobPowerNativeAdapter.framework; sourceTree = "<group>"; };
-		8D90879521D4A41B0070EDCE /* MobPowerNative.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobPowerNative.framework; path = SDK/MobPowerNative.framework; sourceTree = "<group>"; };
-		8D90879621D4A41C0070EDCE /* MobPowerSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobPowerSDK.framework; path = SDK/MobPowerSDK.framework; sourceTree = "<group>"; };
 		8DD6F33F221547B200EA97A1 /* baidumobadsdk.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = baidumobadsdk.bundle; sourceTree = "<group>"; };
 		8DD6F340221547B200EA97A1 /* BaiduMobAdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMobAdSDK.framework; sourceTree = "<group>"; };
 		8DD6F344221547CA00EA97A1 /* BUAdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BUAdSDK.framework; sourceTree = "<group>"; };
@@ -473,10 +467,7 @@
 				DC83F7F52101EC59003FFC3C /* MTGSDK.framework in Frameworks */,
 				DC83F7F62101EC59003FFC3C /* MTGSDKReward.framework in Frameworks */,
 				8DE79C6C21E3395F0072988B /* libresolv.9.tbd in Frameworks */,
-				8D90879721D4A41C0070EDCE /* MobPowerNative.framework in Frameworks */,
-				8D90879821D4A41C0070EDCE /* MobPowerSDK.framework in Frameworks */,
 				8D90879421D4A2CF0070EDCE /* UpArpuSplash.framework in Frameworks */,
-				8D90879221D4A0BE0070EDCE /* UpArpuMobPowerNativeAdapter.framework in Frameworks */,
 				8DD9B45C22706D2300A2FFBE /* Maio.framework in Frameworks */,
 				8D90878C21D4A0590070EDCE /* UpArpuUnityAdsInterstitialAdapter.framework in Frameworks */,
 				4554E2EE22CB456A009BDBFA /* FBAudienceNetworkBiddingKit.framework in Frameworks */,
@@ -854,9 +845,6 @@
 				8D8058CB2267612A003468B7 /* UpArpuTTNativeAdapter.framework */,
 				8D8DF6BB2227F1F400C5F617 /* UpArpuTTRewardedVideoAdapter.framework */,
 				8DE79C6B21E3395F0072988B /* libresolv.9.tbd */,
-				8D90879521D4A41B0070EDCE /* MobPowerNative.framework */,
-				8D90879621D4A41C0070EDCE /* MobPowerSDK.framework */,
-				8D90879121D4A0BE0070EDCE /* UpArpuMobPowerNativeAdapter.framework */,
 				8D90878B21D4A0590070EDCE /* UpArpuBaiduSplashAdapter.framework */,
 				8D90878821D4A0580070EDCE /* UpArpuGDTSplashAdapter.framework */,
 				8D90878A21D4A0580070EDCE /* UpArpuSplash.framework */,

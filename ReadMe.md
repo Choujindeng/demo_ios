@@ -1,6 +1,6 @@
 ## [IMPORTANT] DO NOT expose any of the frameworks to Windows operating system; Windows modifies frameworks, making them incomplete and resulting in compile errors.
-# UPARPU_iOS_SDK_4.4.1
-## Third-party SDK version for uparpu_ios_sdk_4.4.1
+# UPARPU_iOS_SDK_4.4.2
+## Third-party SDK version for uparpu_ios_sdk_4.4.2
 
 [Integrate Guide for UpArpuSDK for iOS(English)](iOS_Doc_EN/iOS_Integration_Guide.md)
 
@@ -23,7 +23,7 @@
 | Yeahmobi | 3.2.0 |
 | Appnext | 1.9.3 |
 | Chartboost | 8.0.1 |
-| Ironsource | 6.8.4.2 |
+| Ironsource | 6.8.5 |
 | Vungle | 6.3.2 |
 | Adcolony | 3.3.8.1 |
 | UnityAds | 3.2.0 |
@@ -34,6 +34,7 @@
 | MobPower | 1.0.0 |
 | Nend | 5.2.0 |
 | Maio | 1.4.7 |
+| ks | 2.2.7 |
 
 ## UPARPU network_name and network_firm_id mapping
 
@@ -63,3 +64,4 @@
 |Baidu|22|
 |Nend|23|
 |Maio|24|
+

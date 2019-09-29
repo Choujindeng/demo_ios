@@ -12,7 +12,7 @@
 
 | Network | SDK Version |
 |---|---|
-| Facebook | 5.5.0 |
+| Facebook | 5.5.1 |
 | Admob | 7.48.0 |
 | Inmobi | 7.3.1 |
 | Flurry | 9.0.0 |

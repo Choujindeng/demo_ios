@@ -44,6 +44,7 @@ static NSString *const kNendVideoPlacementID = @"b5cb96dd930c57";
 static NSString *const kNendFullScreenPlacementID = @"b5cb96df0f1914";
 static NSString *const kMaioPlacementID = @"b5cb96cf795c4b";
 static NSString *const kSigmobPlacementID = @"b5d771f79e4a32";
+static NSString *const kKSPlacementID = @"b5d807a4846f50";
 
 
 @interface UPArpuInterstitialViewController ()<UPArpuInterstitialDelegate>
@@ -89,7 +90,8 @@ static NSString *const kSigmobPlacementID = @"b5d771f79e4a32";
                           kNendInterstitialVideoPlacement:kNendVideoPlacementID,
                           kNendFullScreenInterstitialPlacement:kNendFullScreenPlacementID,
                           kMaioPlacement:kMaioPlacementID,
-                          kSigmobPlacement:kSigmobPlacementID
+                          kSigmobPlacement:kSigmobPlacementID,
+                          kKSPlacement:kKSPlacementID
                           };
     }
     return self;

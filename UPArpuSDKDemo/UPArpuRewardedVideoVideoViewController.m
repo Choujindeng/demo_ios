@@ -36,6 +36,8 @@ NSString *const kOnewayPlacementName = @"Oneway";
 NSString *const kBaiduPlacement = @"Baidu";
 NSString *const kNendPlacement = @"Nend";
 NSString *const kMaioPlacement = @"Maio";
+NSString *const kKSPlacement = @"KS";
+
 
 static NSString *const kPlacement0ID = @"b5ad9ba61dcb39";
 static NSString *const kInmobiPlacementID = @"b5b44a03522f92";
@@ -63,6 +65,7 @@ static NSString *const kBaiduPlacementID = @"b5c04dd81c1af3";
 static NSString *const kNendPlacementID = @"b5cb96d6f68fdb";
 static NSString *const kMaioPlacementID = @"b5cb96ce0b931e";
 static NSString *const kSigmobPlacementID = @"b5d771f5a3458f";
+static NSString *const kKSPlacementID = @"b5d807a31aa7dd";
 
 
 
@@ -96,7 +99,8 @@ static NSString *const kSigmobPlacementID = @"b5d771f5a3458f";
                           kBaiduPlacement:kBaiduPlacementID,
                           kNendPlacement:kNendPlacementID,
                           kMaioPlacement:kMaioPlacementID,
-                          kSigmobPlacement:kSigmobPlacementID
+                          kSigmobPlacement:kSigmobPlacementID,
+                          kKSPlacement:kKSPlacementID
                           };
     }
     return self;

@@ -32,6 +32,7 @@ extern NSString *const kBaiduPlacement;
 extern NSString *const kNendPlacement;
 extern NSString *const kMaioPlacement;
 extern NSString *const kSigmobPlacement;
+extern NSString *const kKSPlacement;
 
 @interface UPArpuRewardedVideoVideoViewController : UIViewController
 -(instancetype) initWithPlacementName:(NSString*)name;

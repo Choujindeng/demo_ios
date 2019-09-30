@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		453BDF6E234198E600BC5452 /* UpArpuKSRewardedVideoAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 453BDF6C234198E600BC5452 /* UpArpuKSRewardedVideoAdapter.framework */; };
+		453BDF6F234198E600BC5452 /* UpArpuKSInterstitialAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 453BDF6D234198E600BC5452 /* UpArpuKSInterstitialAdapter.framework */; };
 		4554E2ED22CB44FD009BDBFA /* UpArpuHeaderBidding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 453401C622CB2A490063AB57 /* UpArpuHeaderBidding.framework */; };
 		4554E2EE22CB456A009BDBFA /* FBAudienceNetworkBiddingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D048E3F22C5EF4000883294 /* FBAudienceNetworkBiddingKit.framework */; };
 		4554E2EF22CB456C009BDBFA /* MTGSDKBidding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D048E3B22C5EB0800883294 /* MTGSDKBidding.framework */; };
@@ -294,6 +296,8 @@
 
 /* Begin PBXFileReference section */
 		453401C622CB2A490063AB57 /* UpArpuHeaderBidding.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuHeaderBidding.framework; path = SDK/UpArpuHeaderBidding.framework; sourceTree = "<group>"; };
+		453BDF6C234198E600BC5452 /* UpArpuKSRewardedVideoAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuKSRewardedVideoAdapter.framework; path = SDK/UpArpuKSRewardedVideoAdapter.framework; sourceTree = "<group>"; };
+		453BDF6D234198E600BC5452 /* UpArpuKSInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuKSInterstitialAdapter.framework; path = SDK/UpArpuKSInterstitialAdapter.framework; sourceTree = "<group>"; };
 		455C99DB23290352005405F4 /* WindSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WindSDK.framework; path = SDK/WindSDK.framework; sourceTree = "<group>"; };
 		455C99DD2329079B005405F4 /* UpArpuSigmobSplashAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuSigmobSplashAdapter.framework; path = SDK/UpArpuSigmobSplashAdapter.framework; sourceTree = "<group>"; };
 		455C99DE2329079B005405F4 /* UpArpuSigmobInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuSigmobInterstitialAdapter.framework; path = SDK/UpArpuSigmobInterstitialAdapter.framework; sourceTree = "<group>"; };
@@ -814,6 +818,7 @@
 				8DA1B58E21242771008280DB /* UpArpuInmobiRewardedVideoAdapter.framework in Frameworks */,
 				8DA1B58A21242771008280DB /* UpArpuFlurryRewardedVideoAdapter.framework in Frameworks */,
 				8DA1B58021242771008280DB /* UpArpuApplovinRewardedVideoAdapter.framework in Frameworks */,
+				453BDF6F234198E600BC5452 /* UpArpuKSInterstitialAdapter.framework in Frameworks */,
 				8DA1B59421242771008280DB /* UpArpuMintegralRewardedVideoAdapter.framework in Frameworks */,
 				8DA1B59821242771008280DB /* UpArpuMopubRewardedVideoAdapter.framework in Frameworks */,
 				8DA1B58221242771008280DB /* UpArpuChartboostRewardedVideoAdapter.framework in Frameworks */,
@@ -846,6 +851,7 @@
 				8D7351EB21785DE700D8FAE6 /* UpArpuVungleInterstitialAdapter.framework in Frameworks */,
 				8D7351E421785CFA00D8FAE6 /* UpArpuAdColonyInterstitialAdapter.framework in Frameworks */,
 				8D048E3E22C5EB9900883294 /* FBSDKCoreKit.framework in Frameworks */,
+				453BDF6E234198E600BC5452 /* UpArpuKSRewardedVideoAdapter.framework in Frameworks */,
 				8D03FE76215F17F1005DC75D /* UpArpuTTInterstitialAdapter.framework in Frameworks */,
 				8D7351DF21785CFA00D8FAE6 /* UpArpuOnewayInterstitialAdapter.framework in Frameworks */,
 				8D7351F621785F7B00D8FAE6 /* UpArpuYeahmobiInterstitialAdapter.framework in Frameworks */,
@@ -1364,6 +1370,8 @@
 		8DE56EF0209C711D002A1427 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				453BDF6D234198E600BC5452 /* UpArpuKSInterstitialAdapter.framework */,
+				453BDF6C234198E600BC5452 /* UpArpuKSRewardedVideoAdapter.framework */,
 				4584581A233B91EA00F8C9A0 /* AFNetworking */,
 				4584583F233B91EA00F8C9A0 /* Godzippa */,
 				45845803233B91EA00F8C9A0 /* MJExtension */,

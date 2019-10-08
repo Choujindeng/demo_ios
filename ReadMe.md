@@ -1,6 +1,6 @@
 ## [IMPORTANT] DO NOT expose any of the frameworks to Windows operating system; Windows modifies frameworks, making them incomplete and resulting in compile errors.
-# UPARPU_iOS_SDK_4.4.3
-## Third-party SDK version for uparpu_ios_sdk_4.4.3
+# UPARPU_iOS_SDK_4.4.4
+## Third-party SDK version for uparpu_ios_sdk_4.4.4
 
 [Integrate Guide for UpArpuSDK for iOS(English)](iOS_Doc_EN/iOS_Integration_Guide.md)
 
@@ -26,7 +26,7 @@
 | Ironsource | 6.8.6 |
 | Vungle | 6.4.3 |
 | Adcolony | 4.1.0.0 |
-| UnityAds | 3.2.0 |
+| UnityAds | 3.3.0 |
 | TT | 2.4.6.7 |
 | Tapjoy | 12.3.3 |
 | Oneway | 2.1.0 |

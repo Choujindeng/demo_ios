@@ -40,28 +40,28 @@ If you don't see the popup as the picture above, just double click the row marke
 The table below gives a brief summary of third party SDKs. Only import those of the ad networks you would like to integrate.
 
 |Network|SDK Package Contents|Current Version Supported by **TopOn**|Download Link|Reference Website|Note|    
-|---|---|---|---|---|---|    
-|Facebook|FBAudienceNetwork.framework<br> FBAudienceNetworkBiddingKit.framework <br>FBSDKCoreKit.framework<br>|v5.4.0|https://developers.facebook.com/docs/audience-network/download#ios|https://developers.facebook.com/docs/audience-network/ios|To request ads, Facebook requires that the person testing should log into the native Facebook app on their mobile device.|   
-|Admob|GoogleMobileAds.framework|v7.48.0|https://support.google.com/admob/answer/2993059?hl=en|https://developers.google.com/admob/ios/quick-start|Admob requires that **app id be configured in the Info.plist of your project**; for more information please refer to <a href="https://developers.google.com/admob/ios/quick-start#update\_your\_infoplist">Admob's website</a>.|   
-| Inmobi |InMobiSDK.framework|v7.3.1|https://support.inmobi.com/monetize/ios-guidelines/||||   
-| Flurry |libFlurryAds\_1.0.0.a<br>libFlurry\_9.0.0.a|231\_9.0.0|https://dev.flurry.com/admin/applications||||   
-| Applovin |AppLovinSDK.framework<br>AppLovinSDKResources.bundle|v6.8.1|https://dash.applovin.com/docs/integration#iosIntegration||||   
-| Mintegral |MTGSDK.framework<br> MTGSDKBidding.framework<br>MTGSDKReward.framework <br> MTGSDKInterstitialVideo.framework <br> MTGSDKInterstitial.framework|v5.5.3|http://cdn-adn.rayjump.com/cdn-adn/v2/markdown\_v2/index.html?file=sdk-m\_sdk-ios&lang=en||||   
-| Mopub |MobPowerNative.framework <br> MobPowerSDK.framework| v5.8.0 |https://github.com/mopub||||   
-| GDT |libGDTMobSDK.a|v4.10.7|https://e.qq.com/dev/index.html||||   
-| Chartboost |Chartboost.framework| v8.0.1 | https://dashboard.chartboost.com/tools/sdk	||||   
-| Tapjoy |Tapjoy.framework <br> TapjoyResources.bundle| v12.3.1 |||||   
-| Ironsource |IronSource.framework|v6.8.4.1|https://developers.ironsrc.com/sdk-repository/||||   
-| UnityAds |UnityAds.framework| v3.2.0 |https://github.com/Unity-Technologies/unity-ads-ios/releases/tag/3.0.3||||   
-| Vungle |VungleSDK.framework|v6.3.2|||||   
-| Adcolony |AdColony.framework|v3.3.8.1|https://github.com/AdColony||||   
-|TouTiao|BUAdSDK.framework<br>BUAdSDK.bundle|v2.3.1.0|http://ad.toutiao.com/union/media/union/download|||   
-| Oneway |Oneway|v2.1.0|||||   
-| Appnext |AppnextNativeAdsSDK<br>AppnextIOSSDK| v1.9.3 |https://developers.appnext.com/docs/ios-sdk-installation||||   
-| Baidu |BaiduMobAdSDK.framework|v4.6.4|https://mssp.baidu.com/bqt/appco.html#/union/download/sdk||||   
-|Nend|NendAd.framework <br> NendAdResource.bundle|v5.2.0|https://github.com/fan-ADN||||   
-| Maio |Maio.framework|v1.4.7|https://github.com/imobile-maio||||   
-| Yeahmobi |CTSDK.framework|v3.2.0|||||   
+|---|---|---|---|---|---|   
+|Facebook|FBAudienceNetwork.framework<br> FBAudienceNetworkBiddingKit.framework <br>FBSDKCoreKit.framework<br>|v5.4.0|https://developers.facebook.com/docs/audience-network/download#ios|https://developers.facebook.com/docs/audience-network/ios|测试机需安装并登录Facebook客户端才能请求到广告。|
+|Admob|GoogleMobileAds.framework|v7.48.0|https://support.google.com/admob/answer/2993059?hl=en|https://developers.google.com/admob/ios/quick-start|Admob requires that **app id be configured in the Info.plist of your project**; for more information please refer to <a href="https://developers.google.com/admob/ios/quick-start#update\_your\_infoplist">Admob's website</a>.|
+| Inmobi |InMobiSDK.framework|v7.3.1|https://support.inmobi.com/monetize/ios-guidelines/||||
+| Flurry |libFlurryAds\_1.0.0.a<br>libFlurry\_9.0.0.a|231\_9.0.0|https://dev.flurry.com/admin/applications||||
+| Applovin |AppLovinSDK.framework<br>AppLovinSDKResources.bundle|v6.9.3|https://dash.applovin.com/docs/integration#iosIntegration||||
+| Mintegral |MTGSDK.framework<br> MTGSDKBidding.framework<br>MTGSDKReward.framework <br> MTGSDKInterstitialVideo.framework <br> MTGSDKInterstitial.framework|v5.8.0|http://cdn-adn.rayjump.com/cdn-adn/v2/markdown\_v2/index.html?file=sdk-m\_sdk-ios&lang=en||||
+| Mopub |MobPowerNative.framework <br> MobPowerSDK.framework| v5.9.0 |https://github.com/mopub||||
+| GDT |libGDTMobSDK.a|v4.10.13|https://e.qq.com/dev/index.html||||
+| Chartboost |Chartboost.framework| v8.0.1 | https://dashboard.chartboost.com/tools/sdk	||||
+| Tapjoy |Tapjoy.framework <br> TapjoyResources.bundle| v12.3.3 |||||
+| Ironsource |IronSource.framework|v6.8.6|https://developers.ironsrc.com/sdk-repository/||||
+| UnityAds |UnityAds.framework| v3.3.0 |https://github.com/Unity-Technologies/unity-ads-ios/releases/tag/3.0.3||||
+| Vungle |VungleSDK.framework|v6.4.3|||||
+| Adcolony |AdColony.framework|v4.1.0.0|https://github.com/AdColony||||
+|TouTiao|BUAdSDK.framework<br>BUAdSDK.bundle|v2.4.6.7|http://ad.toutiao.com/union/media/union/download|||
+| Oneway |Oneway|v2.1.0|||||
+| Appnext |AppnextNativeAdsSDK<br>AppnextIOSSDK| v1.9.3 |https://developers.appnext.com/docs/ios-sdk-installation||||
+| Baidu |BaiduMobAdSDK.framework|v4.6.7|https://mssp.baidu.com/bqt/appco.html#/union/download/sdk||||
+|Nend|NendAd.framework <br> NendAdResource.bundle|v5.2.0|https://github.com/fan-ADN||||
+| Maio |Maio.framework|v1.4.8|https://github.com/imobile-maio||||
+| Yeahmobi |CTSDK.framework|v3.2.0|||||  
 
 You can use CocoaPods to import third party SDKs or you can download and import them manually.
 

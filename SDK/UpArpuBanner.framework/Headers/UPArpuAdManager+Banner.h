@@ -17,7 +17,7 @@ extern NSString *const kUPArpuAdLoadingExtraBannerSizeAdjustKey;//Currently supp
 /*
  nil will be returned if you try to show banner ad for the placementID if it's not ready.
  */
--(nullable UPArpuBannerView*)retrieveBannerViewForPlacementID:(NSString*)placementID DEPRECATED_ATTRIBUTE;
--(nullable UPArpuBannerView*)retrieveBannerViewForPlacementID:(NSString*)placementID extra:(NSDictionary *)extra;
+-(nullable UPArpuBannerView*)retrieveBannerViewForPlacementID:(NSString*)placementID ;
+-(nullable UPArpuBannerView*)retrieveBannerViewForPlacementID:(NSString*)placementID extra:(NSDictionary *)extra DEPRECATED_ATTRIBUTE;
 
 @end

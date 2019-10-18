@@ -35,7 +35,7 @@
 | Nend | 5.3.0 ||
 | Maio | 1.4.8 ||
 | ks | 2.2.7 |需要额外导入第三方依赖：<br> AFNetworking/Godzippa/MJExtension/SDWebImage|
-| sigmob | 2.12.3 ||
+| sigmob | 2.12.3 |sdk：WindSDK.framework|
 
 
 ## UPARPU network_name and network_firm_id mapping

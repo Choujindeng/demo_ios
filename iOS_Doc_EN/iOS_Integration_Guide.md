@@ -62,6 +62,8 @@ The table below gives a brief summary of third party SDKs. Only import those of 
 |Nend|NendAd.framework <br> NendAdResource.bundle|v5.2.0|https://github.com/fan-ADN||||
 | Maio |Maio.framework|v1.4.8|https://github.com/imobile-maio||||
 | Yeahmobi |CTSDK.framework|v3.2.0|||||  
+| sigmob |WindSDK.framework|v2.12.3|||||
+
 
 You can use CocoaPods to import third party SDKs or you can download and import them manually.
 

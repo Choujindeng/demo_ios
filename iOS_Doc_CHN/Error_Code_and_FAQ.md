@@ -1,4 +1,7 @@
-## 12 Error Code
+12、[Error Code](#12)<br>
+13、[FAQ](#13)<br>
+
+## <h2 id='12'>12 Error Code</h2>
 以下是错误码摘要：
 
 |Constants|Value|Note|
@@ -23,7 +26,7 @@
 | UPADLoadingErrorCodeInvalidInputEncountered| 1014 |(无效的App ID、App Key 或Placement ID)Invalid parameters encountered(App ID、App Key orPlacement ID being nil)|
 | UPADLoadingErrorCodePlacementAdDeliverySwitchOff | 1015 |(广告位没有开启广告投放)Ad delivery not turned on for the placement|
 
-## 13 FAQ
+## <h2 id='13'>13 FAQ</h2>
 ### 13.1 应用程序没有编译(App Not Compiles)
 如果您的项目没有编译，并且Xcode发出这样的一些错误信息： **"Undefined symbols for architecture..."** 或是 **"ld: symbol(s) not found for architecture..."**:
 ![](Undefined_Symbols_Errors.png)

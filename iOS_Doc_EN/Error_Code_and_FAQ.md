@@ -1,5 +1,5 @@
-[Error Code](#12)<br>
-[FAQ](#13)<br>
+12[Error Code](#12)<br>
+13[FAQ](#13)<br>
 
 ## <h2 id='12'>12 Error Code</h2>
 Here's brief summary of the predefined error codes:

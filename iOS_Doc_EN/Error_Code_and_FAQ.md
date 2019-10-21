@@ -1,4 +1,7 @@
-## 12 Error Code
+[Error Code](#12)<br>
+[FAQ](#13)<br>
+
+## <h2 id='12'>12 Error Code</h2>
 Here's brief summary of the predefined error codes:
 
 |Constants|Value|Note|
@@ -23,7 +26,7 @@ Here's brief summary of the predefined error codes:
 | UPADLoadingErrorCodeInvalidInputEncountered| 1014 |Invalid parameters encountered(App ID、App Key orPlacement ID being nil)|
 | UPADLoadingErrorCodePlacementAdDeliverySwitchOff | 1015 |Ad delivery not turned on for the placement|
 
-## 13 FAQ
+## <h2 id='13'>13 FAQ</h2>
 ### 13.1 App Not Compiles
 If your project does not compile and the error message issued by Xcode contains something like **"Undefined symbols for architecture..."** and/or **"ld: symbol(s) not found for architecture..."**:
 ![](Undefined_Symbols_Errors.png)

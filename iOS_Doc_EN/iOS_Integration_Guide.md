@@ -1,5 +1,18 @@
 # Integrating UpArpuSDK for iOS
-## 1 Introduction
+
+1、[Introduction](#2)<br>
+2、[Get Started](#1)<br>
+3、[Implement Splash](#3)<br>
+4、[Implement Rewarded Video](#4)<br>
+5、[Implement Interstitial](#5)<br>
+6、[Implement Banner](#6)<br>
+7、[Implement Native](#7)<br>
+8、[Implement Native Banner](#8)<br>
+9、[Implement Native Splash](#9)<br>
+10、[On Header Bidding](#10)<br>
+11、[On GDPR](#11)<br>
+
+## <h2 id='2'>1 Introduction</h2>
 This document walks you through the process of integrating UpArpuSDK for iOS in a step-by-step manner.
 
 ## 1.1 Supported Ad Formats
@@ -93,7 +106,7 @@ The quickest way to test ad functionalities is to use **UpArpuSDK** provided tes
 Note: These placements are associated with **AppID** a5b0e8491845b3 and **AppKey** 7eae0567827cfe2b22874061763f30c9.
 After testing, you have to change these IDs into those created under your own **TopOn** account.
 
-## 3 Implement Splash
+## <h2 id='3'>3 Implement Splash</h2>
 Before you continue, make sure you've walked through the steps listed in the **Get Started** section.
 
 ### 3.1 Import Splash Framework
@@ -146,7 +159,7 @@ You can implement **UPArpuSplashDelegate**'s methods to get notified on the vari
 }
 </code></pre>
 
-## 4 Implement Rewarded Video
+## <h2 id='4'>4 Implement Rewarded Video</h2>
 Before you continue, make sure you've walked through the steps listed in the [Get Started](#1) section.
 ### 4.1 Import Rewarded Video Framework
 Drag&drop **UpArpuRewardedVideo.framework** into your project. Apart from **UpArpuRewardedVideo.framework**, you need to import the adapter frameworks for the third party ad networks you would like to integrate; Currently **UpArpuSDK**'s rewarded video supports the following networks(their adapter frameworks are also listed here):
@@ -234,7 +247,7 @@ You can implement the methods defined in rewarded video delegate to get notified
     NSLog(@"RV Demo: rewardedVideoDidClickForPlacementID:%@", placementID);
 }</code></pre>
 
-## 5 Implement Interstitial
+## <h2 id='5'>5 Implement Interstitial</h2>
 Before you continue, make sure you've walked through the steps listed in the [Get Started](#1) section.
  
 ### 5.1 Import Interstitial Framework
@@ -331,7 +344,7 @@ You can implement the methods defined in **UPArpuInterstitialDelegate** to get n
     NSLog(@"UPArpuInterstitialViewController::interstitialDidClickForPlacementID:%@", placementID);
 }</code></pre>
 
-## 6 Implement Banner
+## <h2 id='6'>6 Implement Banner</h2>
 Before you continue, make sure you've walked through the steps listed in the [Get Started](#1) section.
 
 ### 6.1 Import Banner Framework
@@ -428,7 +441,7 @@ You can implement the methods defined in **UPArpuBannerDelegate** to get notifie
     NSLog(@"UPArpuBannerViewController::bannerView:failedToAutoRefreshWithPlacementID:%@ error:%@", placementID, error);
 }</code></pre>
 
-## 7 Implement Native
+## <h2 id='7'>7 Implement Native</h2>
 
 Before you continue, make sure you've walked through the steps listed in the [Get Started](#1) section.
 
@@ -593,7 +606,7 @@ You can implement the methods defined in **UPArpuNativeDelegate** to get notifie
     adView.mainImageView.hidden = [adView isVideoContents];
 }</code></pre>
 
-## 8 Implement Native Banner
+## <h2 id='8'>8 Implement Native Banner</h2>
 Before you continue, make sure you've walked through the steps listed in the [Get Started](#1) section.
 
 ### 8.1 Import Native Framework
@@ -664,7 +677,7 @@ After native banner ad has been successfully loaded, you can call the showing AP
     NSLog(@"UPArpuNativeBannerViewController::didFailToAutorefreshNativeBannerAdInView:%@ placementID:%@ error:%@", bannerView, placementID, error);
 }</code></pre>
 
-## 9 Implement Native Splash
+## <h2 id='9'>9 Implement Native Splash</h2>
 Before you continue, make sure you've walked through the steps listed in the [Get Started](#1) section.
 
 ### 9.1 Import Native Framework
@@ -732,7 +745,7 @@ NSLog(@"ViewController::finishLoadingNativeSplashAdForPlacementID:%@", placement
 }</code></pre>
 
 
-## 10 On Header Bidding
+## <h2 id='10'>10 On Header Bidding</h2>
 
 In-app header bidding is an advanced programmatic ad auction technology that allows all demanders to bid for the same impression at the same time, and the highest bidder gets the impression, which ensures that the publisher’s per impression can be more profitable. **TopOn** platform currently supports in-app header bidding for Mintegral and Facebook.
 
@@ -745,7 +758,7 @@ The SDK versions of Mintegral and Facebook that support header bidding are as fo
 | Mintegral | iOS | Native, Rewarded Video, Interstitial Video | >= 5.4.2 | MTGSDKBidding.framework |
 
 
-## 11 On GDPR
+## 11 On GDPR<h2 id='11'>1 Introduction</h2>
 
 **General Data Protection Regulation(GDPR)**, which is issued by EU, has come into effect on 5/25/2018. We've updated our privacy policy accordingly, you can check it out by clicking <a href="https://www.uparpu.com/privacy-policy" target = "_blank">UPARPU Privacy Policy</a>. In the meantime, we've included some features in the SDK, which you can utilize to protect users' private data; please follow this guidelines to set up GDPR settings.
 We provide two methods to support GDPR:<br>

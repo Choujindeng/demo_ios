@@ -1,6 +1,19 @@
-# **iOS集成UpArpuSDK**
+# **iOS集成UpArpuSDK**/r
 
-## 1 简介
+1、简介[简介](#2)
+2、配置[配置](#1)
+3、开屏广告(Splash)[开屏广告](#3)
+4、激励视频(Rewarded Video)[激励视频](#4)
+5、插屏广告(Interstitial)[插屏广告](#5)
+6、Banner广告[banner](#6)
+7、原生广告(Native)[Native](#7)
+8、(原生Banner)Native Banner[NativeBanner](#8)
+9、(原生Splash)Native Splash[NativeSplash](#9)
+10、头部竞价(Header Bidding)[HeaderBidding](#10)
+11、通用数据保护条例GDPR[GDPR](#11)
+
+
+## <h2 id='2'>1 简介</h2>
 本文档介绍如何去集成iOS端的UparpuSDK（后面简称为SDK），包括获取开发者账号，获取AppID和AppKey并创建配置进行广告投放。
 ### 1.1 支持的广告类型
 UpArpuSDK支持原生广告(Native),激励视频广告(rewardVideo)，banner广告，插屏广告(intersitial)和开屏广告(splash)。
@@ -86,7 +99,7 @@ UpArpuSDK支持原生广告(Native),激励视频广告(rewardVideo)，banner广�
 注：使用这些广告位需要关联 **AppID**：a5b0e8491845b3 和 **AppKey**：7eae0567827cfe2b22874061763f30c9 <br>
 测试完成之后，您需要将**id**和**key**更改为您自己在**TopOn**账号下创建的**id**和**key**。
 
-## 3 开屏广告(Splash)
+## 3 开屏广告(Splash)<h2 id='3'>3 </h2>
 在继续接入之前，您需要保证您已经完成了以上 [配置](#1) 步骤。
 
 ### 3.1 导入 Splash Framework
@@ -138,7 +151,7 @@ UpArpuSDK支持原生广告(Native),激励视频广告(rewardVideo)，banner广�
 }
 </code></pre>
 
-## 4 激励视频(Rewarded Video)
+## 4 激励视频(Rewarded Video)<h2 id='4'>4 简介</h2>
 在继续接入之前，您需要保证您已经完成了以上 [配置](#1) 步骤。
 ### 4.1 导入Rewarded Video Framework
 将**UpArpuRewardedVideo.framework**拖到您的项目中，除了**UpArpuRewardedVideo.framework**，您还需要集成第三方平台的Adapter，目前**UpArpuSDK**支持以下的平台(对应平台需要导入的Adapter)。
@@ -227,7 +240,7 @@ if ([[UPArpuAdManager sharedManager] rewardedVideoReadyForPlacementID:@"your rv 
     NSLog(@"RV Demo: rewardedVideoDidClickForPlacementID:%@", placementID);
 }</code></pre>
 
-## 5 插屏广告(Interstitial)
+## 5 插屏广告(Interstitial)<h2 id='5'>5 简介</h2>
 在继续接入之前，您需要保证您已经完成了以上 [配置](#1) 步骤。
 
 ### 5.1 导入Interstitial Framework
@@ -324,7 +337,7 @@ if ([[UPArpuAdManager sharedManager] interstitialReadyForPlacementID:@"your inte
     NSLog(@"UPArpuInterstitialViewController::interstitialDidClickForPlacementID:%@", placementID);
 }</code></pre>
 
-## 6 Banner广告
+## 6 Banner广告<h2 id='6'>6 简介</h2>
 在继续接入之前，您需要保证您已经完成了以上 [配置](#1) 步骤。
 
 ### 6.1 导入Banner Framework
@@ -419,7 +432,7 @@ if ([[UPArpuAdManager sharedManager] bannerAdReadyForPlacementID:@"your banner p
     NSLog(@"UPArpuBannerViewController::bannerView:failedToAutoRefreshWithPlacementID:%@ error:%@", placementID, error);
 }</code></pre>
 
-## 7 原生广告(Native)
+## 7 原生广告(Native)<h2 id='7'>7 简介</h2>
 
 在继续接入之前，您需要保证您已经完成了以上 [配置](#1) 步骤。
 
@@ -580,7 +593,7 @@ UI元素包括：
     adView.mainImageView.hidden = [adView isVideoContents];
 }</code></pre>
 
-## 8 (原生Banner)Native Banner
+## 8 (原生Banner)Native Banner<h2 id='8'>8 简介</h2>
 在继续接入之前，您需要保证您已经完成了以上 [配置](#1) 步骤。
 
 ### 8.1 导入Native Framework
@@ -651,7 +664,7 @@ UI元素包括：
     NSLog(@"UPArpuNativeBannerViewController::didFailToAutorefreshNativeBannerAdInView:%@ placementID:%@ error:%@", bannerView, placementID, error);
 }</code></pre>
 
-## 9 (原生Splash)Native Splash
+## 9 (原生Splash)Native Splash<h2 id='9'>9 简介</h2>
 在继续接入之前，您需要保证您已经完成了以上 [配置](#1) 步骤。
 
 ### 9.1 导入 Native Framework
@@ -719,7 +732,7 @@ NSLog(@"ViewController::finishLoadingNativeSplashAdForPlacementID:%@", placement
 }</code></pre>
 
 
-## 10 头部竞价(Header Bidding)
+## 10 头部竞价(Header Bidding)<h2 id='10'>10 简介</h2>
 
 应用内header bidding是一种先进的程序化广告竞价技术，允许所有需求方针对同一个广告展示同时竞价，最高出价者获得展示机会，这确保发布商的每次展示可以获得更高的收益。目前TopOn平台支持Mintegral和Facebook的应用内header bidding。
 
@@ -735,7 +748,7 @@ Mintegral和Facebook支持header bidding的应用版本如下：
 
 注：Facebook的应用内header bidding需要引外额外的SDK。
 
-## 11 通用数据保护条例GDPR
+## 11 通用数据保护条例GDPR<h2 id='11'>11 简介</h2>
 
 <span style="font-family:‘Times New Roman‘;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>欧盟发布的**《通用数据保护条例》（GDPR）**将于 2018 年 5 月 25 日生效。 为支持GDPR协议我们更新了**<i>UPARPU Privacy Policy</i>**，请开发者从我们官网了解<a href="https://www.uparpu.com/privacy-policy" target = "_blank">**<i>UPARPU Privacy Policy</i>**</a>的相关内容。同时，为保障用户数据的隐私安全，我们在新版的UPARPU SDK v1.2及以上中加入了数据保护功能，请开发者查阅以下文档并完成SDK接入。<br>
 <span style="font-family:‘Times New Roman‘;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>我们提供了两种方法给开发者设置GDPR配置。你可以调用UPARPU SDK的方法来为所有网络设置统一的数据保护级别，也可以分别为各网络设置数据保护级别；如果是后者，传入的数据结构需与第三方网络的要求一致而且这些数据结构在未来可能会发生改变。<br>

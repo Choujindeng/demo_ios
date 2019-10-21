@@ -1,16 +1,16 @@
 # **iOS集成UpArpuSDK**
 
-1、简介[简介](#2)<br>
-2、配置[配置](#1)<br>
-3、开屏广告(Splash)[开屏广告](#3)<br>
-4、激励视频(Rewarded Video)[激励视频](#4)<br>
-5、插屏广告(Interstitial)[插屏广告](#5)<br>
-6、Banner广告[banner](#6)<br>
-7、原生广告(Native)[Native](#7)<br>
-8、(原生Banner)Native Banner[NativeBanner](#8)<br>
-9、(原生Splash)Native Splash[NativeSplash](#9)<br>
-10、头部竞价(Header Bidding)[HeaderBidding](#10)<br>
-11、通用数据保护条例GDPR[GDPR](#11)<br>
+1、[简介](#2)<br>
+2、[配置](#1)<br>
+3、[开屏广告(Splash)](#3)<br>
+4、[激励视频(Rewarded Video)](#4)<br>
+5、[插屏广告(Interstitial)](#5)<br>
+6、[Banner广告](#6)<br>
+7、[原生广告(Native)](#7)<br>
+8、[(原生Banner)Native Banner](#8)<br>
+9、[(原生Splash)Native Splash](#9)<br>
+10、[头部竞价(Header Bidding)](#10)<br>
+11、[通用数据保护条例GDPR](#11)<br>
 
 
 ## <h2 id='2'>1 简介</h2>

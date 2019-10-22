@@ -750,7 +750,7 @@ Mintegral和Facebook支持header bidding的应用版本如下：
 
 ## <h2 id='11'>11 通用数据保护条例GDPR</h2>
 
-<span style="font-family:‘Times New Roman‘;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>欧盟发布的**《通用数据保护条例》（GDPR）**将于 2018 年 5 月 25 日生效。 为支持GDPR协议我们更新了**<i>UPARPU Privacy Policy</i>**，请开发者从我们官网了解<a href="https://www.uparpu.com/privacy-policy" target = "_blank">**<i>UPARPU Privacy Policy</i>**</a>的相关内容。同时，为保障用户数据的隐私安全，我们在新版的UPARPU SDK v1.2及以上中加入了数据保护功能，请开发者查阅以下文档并完成SDK接入。<br>
+<span style="font-family:‘Times New Roman‘;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>欧盟发布的**《通用数据保护条例》(GDPR)**将于 2018 年 5 月 25 日生效。 为支持GDPR协议我们更新了**<i>UPARPU Privacy Policy</i>**，请开发者从我们官网了解<a href="https://www.uparpu.com/privacy-policy" target = "_blank">**<i>UPARPU Privacy Policy</i>**</a>的相关内容。同时，为保障用户数据的隐私安全，我们在新版的UPARPU SDK v1.2及以上中加入了数据保护功能，请开发者查阅以下文档并完成SDK接入。<br>
 <span style="font-family:‘Times New Roman‘;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>我们提供了两种方法给开发者设置GDPR配置。你可以调用UPARPU SDK的方法来为所有网络设置统一的数据保护级别，也可以分别为各网络设置数据保护级别；如果是后者，传入的数据结构需与第三方网络的要求一致而且这些数据结构在未来可能会发生改变。<br>
 <h3>4.1 使用UPARPU SDK方法</h3>
 <span style="font-family:‘Times New Roman‘;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>你可以调用UPARPU SDK里**UPArpuAPI**的单例中的**setDataConsentSet:consentString:**方法来设置GDPR级别，其中consentString参数是为Flurry预留的。UPArpu SDK提供了四个级别的数据保护：<br>

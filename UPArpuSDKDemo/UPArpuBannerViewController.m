@@ -112,7 +112,7 @@ NSString *const kBannerLoadingFailedNotification = @"banner_failed_to_load";
 -(void) reloadADButtonTapped {
     _failureTipsLabel.hidden = YES;
     [self.view addSubview:_loadingView];
-    [[UPArpuAdManager sharedManager] loadADWithPlacementID:_placementIDs[_name] extra:@{kUPArpuAdLoadingExtraBannerAdSizeKey:[NSValue valueWithCGSize:_adSize], kUPArpuAdLoadingExtraBannerSizeAdjustKey:@YES} delegate:self];
+    [[UPArpuAdManager sharedManager] loadADWithPlacementID:_placementIDs[_name] extra:@{kUPArpuAdLoadingExtraBannerSizeAdjustKey:@YES} delegate:self];
 }
 
 -(void) removeAdButtonTapped {
@@ -131,7 +131,7 @@ NSString *const kBannerLoadingFailedNotification = @"banner_failed_to_load";
     if ([[UPArpuAdManager sharedManager] bannerAdReadyForPlacementID:_placementIDs[_name]]) {
         NSInteger tag = 3333;
         [[self.view viewWithTag:tag] removeFromSuperview];
-        UPArpuBannerView *bannerView = [[UPArpuAdManager sharedManager] retrieveBannerViewForPlacementID:_placementIDs[_name]];
+        UPArpuBannerView *bannerView = [[UPArpuAdManager sharedManager] retrieveBannerViewForPlacementID:_placementIDs[_name] extra:@{kUPArpuAdLoadingExtraBannerAdSizeKey:[NSValue valueWithCGSize:_adSize]}];
         bannerView.delegate = self;
         bannerView.translatesAutoresizingMaskIntoConstraints = NO;
         bannerView.tag = tag;

@@ -45,6 +45,7 @@ static NSString *const kNendFullScreenPlacementID = @"b5cb96df0f1914";
 static NSString *const kMaioPlacementID = @"b5cb96cf795c4b";
 static NSString *const kSigmobPlacementID = @"b5d771f79e4a32";
 static NSString *const kKSPlacementID = @"b5d807a4846f50";
+static NSString *const kMyOfferPlacementID = @"b5db6c26999c31";
 
 
 @interface UPArpuInterstitialViewController ()<UPArpuInterstitialDelegate>
@@ -91,7 +92,8 @@ static NSString *const kKSPlacementID = @"b5d807a4846f50";
                           kNendFullScreenInterstitialPlacement:kNendFullScreenPlacementID,
                           kMaioPlacement:kMaioPlacementID,
                           kSigmobPlacement:kSigmobPlacementID,
-                          kKSPlacement:kKSPlacementID
+                          kKSPlacement:kKSPlacementID,
+                          kMyOfferPlacement:kMyOfferPlacementID
                           };
     }
     return self;

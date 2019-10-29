@@ -1,0 +1,6 @@
+framework module UpArpuMyOffer {
+  umbrella header "UpArpuMyOffer.h"
+
+  export *
+  module * { export * }
+}

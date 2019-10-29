@@ -103,6 +103,11 @@
 		45845899233B91EA00F8C9A0 /* NSFileManager+Godzippa.m in Sources */ = {isa = PBXBuildFile; fileRef = 45845844233B91EA00F8C9A0 /* NSFileManager+Godzippa.m */; };
 		45D7B9FB230AC928005ED4D7 /* MoPubSDKFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45D7B9FA230AC928005ED4D7 /* MoPubSDKFramework.framework */; };
 		45D7B9FC230AC928005ED4D7 /* MoPubSDKFramework.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = 45D7B9FA230AC928005ED4D7 /* MoPubSDKFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		45D93B022367DF4100EE89EC /* UpArpuMyOfferInterstitialAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45D93AFE2367DCEC00EE89EC /* UpArpuMyOfferInterstitialAdapter.framework */; };
+		45D93B032367DF4100EE89EC /* UpArpuMyOfferInterstitialAdapter.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = 45D93AFE2367DCEC00EE89EC /* UpArpuMyOfferInterstitialAdapter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		45D93B042367DF4100EE89EC /* UpArpuMyOfferRewardedVideoAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45D93AFF2367DCEC00EE89EC /* UpArpuMyOfferRewardedVideoAdapter.framework */; };
+		45D93B052367DF4100EE89EC /* UpArpuMyOfferRewardedVideoAdapter.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = 45D93AFF2367DCEC00EE89EC /* UpArpuMyOfferRewardedVideoAdapter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		45D93B072367E3DF00EE89EC /* UpArpuMyOffer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45D93B062367E3DE00EE89EC /* UpArpuMyOffer.framework */; };
 		8D03FE62215F1655005DC75D /* UPArpuInterstitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D03FE5F215F1655005DC75D /* UPArpuInterstitialViewController.m */; };
 		8D03FE63215F1655005DC75D /* UPArpuBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D03FE60215F1655005DC75D /* UPArpuBannerViewController.m */; };
 		8D03FE65215F177D005DC75D /* UpArpuGDTNativeAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D03FE64215F177D005DC75D /* UpArpuGDTNativeAdapter.framework */; };
@@ -272,11 +277,13 @@
 			dstSubfolderSpec = 10;
 			files = (
 				8DA1B58321242771008280DB /* UpArpuChartboostRewardedVideoAdapter.framework in Copy Files */,
+				45D93B052367DF4100EE89EC /* UpArpuMyOfferRewardedVideoAdapter.framework in Copy Files */,
 				8DA1B58F21242771008280DB /* UpArpuInmobiRewardedVideoAdapter.framework in Copy Files */,
 				8DA1B58121242771008280DB /* UpArpuApplovinRewardedVideoAdapter.framework in Copy Files */,
 				8DA1B59B21242771008280DB /* UpArpuNative.framework in Copy Files */,
 				8DA1B59121242771008280DB /* UpArpuIronSourceRewardedVideoAdapter.framework in Copy Files */,
 				8DA1B57921242771008280DB /* UpArpuAdColonyRewardedVideoAdapter.framework in Copy Files */,
+				45D93B032367DF4100EE89EC /* UpArpuMyOfferInterstitialAdapter.framework in Copy Files */,
 				8DA1B57B21242771008280DB /* UpArpuAdmobNativeAdapter.framework in Copy Files */,
 				8DA1B5A121242771008280DB /* UpArpuUnityAdsRewardedVideoAdapter.framework in Copy Files */,
 				45D7B9FC230AC928005ED4D7 /* MoPubSDKFramework.framework in Copy Files */,
@@ -483,6 +490,9 @@
 		45845845233B91EA00F8C9A0 /* GodzippaDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GodzippaDefines.h; sourceTree = "<group>"; };
 		45845846233B91EA00F8C9A0 /* NSData+Godzippa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Godzippa.h"; sourceTree = "<group>"; };
 		45D7B9FA230AC928005ED4D7 /* MoPubSDKFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MoPubSDKFramework.framework; path = SDK/MoPubSDKFramework.framework; sourceTree = "<group>"; };
+		45D93AFE2367DCEC00EE89EC /* UpArpuMyOfferInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuMyOfferInterstitialAdapter.framework; path = SDK/UpArpuMyOfferInterstitialAdapter.framework; sourceTree = "<group>"; };
+		45D93AFF2367DCEC00EE89EC /* UpArpuMyOfferRewardedVideoAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuMyOfferRewardedVideoAdapter.framework; path = SDK/UpArpuMyOfferRewardedVideoAdapter.framework; sourceTree = "<group>"; };
+		45D93B062367E3DE00EE89EC /* UpArpuMyOffer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UpArpuMyOffer.framework; path = SDK/UpArpuMyOffer.framework; sourceTree = "<group>"; };
 		8D03FE5E215F1655005DC75D /* UPArpuInterstitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPArpuInterstitialViewController.h; sourceTree = "<group>"; };
 		8D03FE5F215F1655005DC75D /* UPArpuInterstitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPArpuInterstitialViewController.m; sourceTree = "<group>"; };
 		8D03FE60215F1655005DC75D /* UPArpuBannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPArpuBannerViewController.m; sourceTree = "<group>"; };
@@ -749,6 +759,7 @@
 				8D3A583821B532BF0033C44C /* UpArpuBaiduInterstitialAdapter.framework in Frameworks */,
 				8D3A583921B532BF0033C44C /* UpArpuBaiduBannerAdapter.framework in Frameworks */,
 				8D3A583A21B532BF0033C44C /* UpArpuBaiduRewardedVideoAdapter.framework in Frameworks */,
+				45D93B022367DF4100EE89EC /* UpArpuMyOfferInterstitialAdapter.framework in Frameworks */,
 				8D73520521786A3F00D8FAE6 /* CTSDK.framework in Frameworks */,
 				8D03FE7F215F5E32005DC75D /* MTGSDKInterstitialVideo.framework in Frameworks */,
 				8D03FE80215F5E32005DC75D /* MTGSDKInterstitial.framework in Frameworks */,
@@ -802,6 +813,7 @@
 				8D7351FA21785F7B00D8FAE6 /* UpArpuYeahmobiNativeAdapter.framework in Frameworks */,
 				8D03FE6B215F17AC005DC75D /* UpArpuBanner.framework in Frameworks */,
 				8D7351E921785D6700D8FAE6 /* UpArpuFacebookBannerAdapter.framework in Frameworks */,
+				45D93B042367DF4100EE89EC /* UpArpuMyOfferRewardedVideoAdapter.framework in Frameworks */,
 				8D03FE6E215F17AC005DC75D /* UpArpuAdmobBannerAdapter.framework in Frameworks */,
 				8D7351FF217864F300D8FAE6 /* UpArpuInmobiBannerAdapter.framework in Frameworks */,
 				8D03FE6C215F17AC005DC75D /* UpArpuApplovinBannerAdapter.framework in Frameworks */,
@@ -849,6 +861,7 @@
 				8D7351E321785CFA00D8FAE6 /* UpArpuIronSourceInterstitialAdapter.framework in Frameworks */,
 				4554E2ED22CB44FD009BDBFA /* UpArpuHeaderBidding.framework in Frameworks */,
 				8D7351EB21785DE700D8FAE6 /* UpArpuVungleInterstitialAdapter.framework in Frameworks */,
+				45D93B072367E3DF00EE89EC /* UpArpuMyOffer.framework in Frameworks */,
 				8D7351E421785CFA00D8FAE6 /* UpArpuAdColonyInterstitialAdapter.framework in Frameworks */,
 				8D048E3E22C5EB9900883294 /* FBSDKCoreKit.framework in Frameworks */,
 				453BDF6E234198E600BC5452 /* UpArpuKSRewardedVideoAdapter.framework in Frameworks */,
@@ -1370,6 +1383,9 @@
 		8DE56EF0209C711D002A1427 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				45D93B062367E3DE00EE89EC /* UpArpuMyOffer.framework */,
+				45D93AFE2367DCEC00EE89EC /* UpArpuMyOfferInterstitialAdapter.framework */,
+				45D93AFF2367DCEC00EE89EC /* UpArpuMyOfferRewardedVideoAdapter.framework */,
 				453BDF6D234198E600BC5452 /* UpArpuKSInterstitialAdapter.framework */,
 				453BDF6C234198E600BC5452 /* UpArpuKSRewardedVideoAdapter.framework */,
 				4584581A233B91EA00F8C9A0 /* AFNetworking */,

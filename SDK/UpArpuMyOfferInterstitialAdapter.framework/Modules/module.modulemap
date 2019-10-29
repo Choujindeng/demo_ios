@@ -1,0 +1,6 @@
+framework module UpArpuMyOfferInterstitialAdapter {
+  umbrella header "UpArpuMyOfferInterstitialAdapter.h"
+
+  export *
+  module * { export * }
+}

@@ -186,7 +186,8 @@ UpArpuSDK支持原生广告(Native),激励视频广告(rewardVideo)，banner广�
 //Other properties&methods declarations
 @end</code></pre>
 
-加载rewarded video广告:
+加载rewarded video广告:<br>
+**注**:在加载facebook广告的时候一定要传入userid，以获取激励视频回调。
 <pre><code>[[UPArpuAdManager sharedManager] loadADWithPlacementID:@"your rv placement id" extra:@{kUPArpuAdLoadingExtraUserIDKey:@"test\_user\_id"} delegate:self];</code></pre>
 
 您可以实现以下的代理方法来获取各种加载事件：

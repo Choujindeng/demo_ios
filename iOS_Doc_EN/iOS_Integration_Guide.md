@@ -195,6 +195,7 @@ Make your view controller confirm to **UPArpuRewardedVideoDelegate**:
 @end</code></pre>
 
 Load rewarded video ad like this:
+**NOTE**:When loading Facebook ads, be sure to pass in userid to get the video callback.
 <pre><code>[[UPArpuAdManager sharedManager] loadADWithPlacementID:@"your rv placement id" extra:@{kUPArpuAdLoadingExtraUserIDKey:@"test\_user\_id"} delegate:self];</code></pre>
 
 To get notified on various ad loading event, you can implemente the methods in ad loading delegate:

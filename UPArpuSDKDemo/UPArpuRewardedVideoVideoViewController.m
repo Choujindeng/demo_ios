@@ -163,7 +163,7 @@ static NSString *const kKSPlacementID = @"b5d807a31aa7dd";
 -(void) reloadADButtonTapped {
     _failureTipsLabel.hidden = YES;
     [self.view addSubview:_loadingView];
-    [[UPArpuAdManager sharedManager] loadADWithPlacementID:_placementIDs[_name] extra:nil customData:nil delegate:self];
+    [[UPArpuAdManager sharedManager] loadADWithPlacementID:_placementIDs[_name] extra:@{kUPArpuAdLoadingExtraUserIDKey:@"rv_test_user_id"} customData:nil delegate:self];
 }
 
 -(void) showAD {

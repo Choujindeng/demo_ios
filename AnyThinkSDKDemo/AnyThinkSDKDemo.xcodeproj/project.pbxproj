@@ -10,6 +10,8 @@
 		453C1663236D96B3006B430A /* MoPubSDKFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB70849236D8C72007A889D /* MoPubSDKFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		453C1665236D9BB3006B430A /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 453C1664236D9BB3006B430A /* libc++.tbd */; };
 		453C1669236D9D21006B430A /* WindSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 453C1668236D9D21006B430A /* WindSDK.framework */; };
+		453C166C236DBC7E006B430A /* KSAdSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 453C166A236DBC7D006B430A /* KSAdSDK.bundle */; };
+		453C166D236DBC7E006B430A /* KSAdSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 453C166B236DBC7E006B430A /* KSAdSDK.framework */; };
 		8DB704F8236D883A007A889D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB704F7236D883A007A889D /* AppDelegate.m */; };
 		8DB704FB236D883A007A889D /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB704FA236D883A007A889D /* SceneDelegate.m */; };
 		8DB704FE236D883A007A889D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB704FD236D883A007A889D /* ViewController.m */; };
@@ -252,6 +254,8 @@
 /* Begin PBXFileReference section */
 		453C1664236D9BB3006B430A /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		453C1668236D9D21006B430A /* WindSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WindSDK.framework; path = SDK/WindSDK.framework; sourceTree = "<group>"; };
+		453C166A236DBC7D006B430A /* KSAdSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = KSAdSDK.bundle; path = SDK/KSAdSDK.bundle; sourceTree = "<group>"; };
+		453C166B236DBC7E006B430A /* KSAdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KSAdSDK.framework; path = SDK/KSAdSDK.framework; sourceTree = "<group>"; };
 		8DB704F3236D883A007A889D /* AnyThinkSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnyThinkSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DB704F6236D883A007A889D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8DB704F7236D883A007A889D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -751,6 +755,7 @@
 				8DB709B8236D8C89007A889D /* AnyThinkGDTNativeAdapter.framework in Frameworks */,
 				8DB70A64236D8C8A007A889D /* AnyThinkMopubRewardedVideoAdapter.framework in Frameworks */,
 				8DB70A75236D8C8A007A889D /* AnyThinkFlurryNativeAdapter.framework in Frameworks */,
+				453C166D236DBC7E006B430A /* KSAdSDK.framework in Frameworks */,
 				8DB709CB236D8C89007A889D /* AnyThinkMintegralRewardedVideoAdapter.framework in Frameworks */,
 				8DB70A70236D8C8A007A889D /* BUAdSDK.framework in Frameworks */,
 				8DB70A6E236D8C8A007A889D /* CTSDK.framework in Frameworks */,
@@ -990,6 +995,8 @@
 				8DB707DE236D8A5E007A889D /* libsqlite3.tbd */,
 				453C1668236D9D21006B430A /* WindSDK.framework */,
 				8DB707DC236D8A59007A889D /* libz.tbd */,
+				453C166A236DBC7D006B430A /* KSAdSDK.bundle */,
+				453C166B236DBC7E006B430A /* KSAdSDK.framework */,
 				8DB707DA236D8A4F007A889D /* libresolv.9.tbd */,
 				8DB707D8236D8A4B007A889D /* libxml2.tbd */,
 				8DB707D6236D8A45007A889D /* VideoToolbox.framework */,
@@ -1586,6 +1593,7 @@
 				8DB70A38236D8C89007A889D /* NendAdResource.bundle in Resources */,
 				8DB70A55236D8C89007A889D /* TapjoyResources.bundle in Resources */,
 				8DB70A5A236D8C89007A889D /* AnyThinkSDK.bundle in Resources */,
+				453C166C236DBC7E006B430A /* KSAdSDK.bundle in Resources */,
 				8DB70A5C236D8C89007A889D /* baidumobadsdk.bundle in Resources */,
 				8DB70501236D883A007A889D /* Main.storyboard in Resources */,
 			);

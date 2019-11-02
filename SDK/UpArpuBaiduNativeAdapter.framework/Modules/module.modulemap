@@ -1,6 +1,0 @@
-framework module UpArpuBaiduNativeAdapter {
-  umbrella header "UpArpuBaiduNativeAdapter.h"
-
-  export *
-  module * { export * }
-}

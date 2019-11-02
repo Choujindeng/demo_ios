@@ -1,6 +1,0 @@
-framework module UpArpuAppnextInterstitialAdapter {
-  umbrella header "UpArpuAppnextInterstitialAdapter.h"
-
-  export *
-  module * { export * }
-}

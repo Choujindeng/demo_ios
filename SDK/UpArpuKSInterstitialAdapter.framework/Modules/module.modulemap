@@ -1,6 +1,0 @@
-framework module UpArpuKSInterstitialAdapter {
-  umbrella header "UpArpuKSInterstitialAdapter.h"
-
-  export *
-  module * { export * }
-}

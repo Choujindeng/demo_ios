@@ -1,6 +1,0 @@
-framework module UpArpuAppnextRewardedVideoAdapter {
-  umbrella header "UpArpuAppnextRewardedVideoAdapter.h"
-
-  export *
-  module * { export * }
-}

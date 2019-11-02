@@ -1,6 +1,0 @@
-framework module UpArpuSigmobInterstitialAdapter {
-  umbrella header "UpArpuSigmobInterstitialAdapter.h"
-
-  export *
-  module * { export * }
-}

@@ -1,6 +1,0 @@
-framework module UpArpuHeaderBidding {
-  umbrella header "UpArpuHeaderBidding.h"
-
-  export *
-  module * { export * }
-}

@@ -1,6 +1,0 @@
-framework module UpArpuTTSplashAdapter {
-  umbrella header "UpArpuTTSplashAdapter.h"
-
-  export *
-  module * { export * }
-}

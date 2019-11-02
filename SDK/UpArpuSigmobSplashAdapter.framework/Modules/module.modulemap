@@ -1,6 +1,0 @@
-framework module UpArpuSigmobSplashAdapter {
-  umbrella header "UpArpuSigmobSplashAdapter.h"
-
-  export *
-  module * { export * }
-}

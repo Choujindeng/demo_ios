@@ -1,6 +1,0 @@
-framework module UpArpuSigmobRewardedVideoAdapter {
-  umbrella header "UpArpuSigmobRewardedVideoAdapter.h"
-
-  export *
-  module * { export * }
-}

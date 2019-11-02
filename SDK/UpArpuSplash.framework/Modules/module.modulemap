@@ -1,6 +1,0 @@
-framework module UpArpuSplash {
-  umbrella header "UpArpuSplash.h"
-
-  export *
-  module * { export * }
-}

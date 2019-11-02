@@ -12,6 +12,7 @@
 		453C1669236D9D21006B430A /* WindSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 453C1668236D9D21006B430A /* WindSDK.framework */; };
 		453C166C236DBC7E006B430A /* KSAdSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 453C166A236DBC7D006B430A /* KSAdSDK.bundle */; };
 		453C166D236DBC7E006B430A /* KSAdSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 453C166B236DBC7E006B430A /* KSAdSDK.framework */; };
+		453C166E236DBF6D006B430A /* MoPubSDKFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB70849236D8C72007A889D /* MoPubSDKFramework.framework */; };
 		8DB704F8236D883A007A889D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB704F7236D883A007A889D /* AppDelegate.m */; };
 		8DB704FB236D883A007A889D /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB704FA236D883A007A889D /* SceneDelegate.m */; };
 		8DB704FE236D883A007A889D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB704FD236D883A007A889D /* ViewController.m */; };
@@ -693,6 +694,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				453C166E236DBF6D006B430A /* MoPubSDKFramework.framework in Frameworks */,
 				453C1665236D9BB3006B430A /* libc++.tbd in Frameworks */,
 				8DB70A84236D8D3E007A889D /* CoreMedia.framework in Frameworks */,
 				8DB70A82236D8D02007A889D /* AVFoundation.framework in Frameworks */,

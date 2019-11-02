@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		453C1663236D96B3006B430A /* MoPubSDKFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB70849236D8C72007A889D /* MoPubSDKFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		453C1665236D9BB3006B430A /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 453C1664236D9BB3006B430A /* libc++.tbd */; };
+		453C1669236D9D21006B430A /* WindSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 453C1668236D9D21006B430A /* WindSDK.framework */; };
 		8DB704F8236D883A007A889D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB704F7236D883A007A889D /* AppDelegate.m */; };
 		8DB704FB236D883A007A889D /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB704FA236D883A007A889D /* SceneDelegate.m */; };
 		8DB704FE236D883A007A889D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB704FD236D883A007A889D /* ViewController.m */; };
@@ -57,14 +60,11 @@
 		8DB709CA236D8C89007A889D /* MTGSDKInterActive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB70846236D8C72007A889D /* MTGSDKInterActive.framework */; };
 		8DB709CB236D8C89007A889D /* AnyThinkMintegralRewardedVideoAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB70847236D8C72007A889D /* AnyThinkMintegralRewardedVideoAdapter.framework */; };
 		8DB709CC236D8C89007A889D /* AnyThinkNendInterstitialAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB70848236D8C72007A889D /* AnyThinkNendInterstitialAdapter.framework */; };
-		8DB709CD236D8C89007A889D /* MoPubSDKFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB70849236D8C72007A889D /* MoPubSDKFramework.framework */; };
 		8DB709CE236D8C89007A889D /* MTGSDKInterstitialVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB7084A236D8C72007A889D /* MTGSDKInterstitialVideo.framework */; };
 		8DB709CF236D8C89007A889D /* AppLovinSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8DB7084B236D8C72007A889D /* AppLovinSDKResources.bundle */; };
 		8DB709D0236D8C89007A889D /* MTGSDKInterstitial.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB7084C236D8C73007A889D /* MTGSDKInterstitial.framework */; };
 		8DB709D1236D8C89007A889D /* AnyThinkFacebookRewardedVideoAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB7084D236D8C73007A889D /* AnyThinkFacebookRewardedVideoAdapter.framework */; };
 		8DB709D2236D8C89007A889D /* AnyThinkVungleRewardedVideoAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB7084E236D8C74007A889D /* AnyThinkVungleRewardedVideoAdapter.framework */; };
-		8DB709D3236D8C89007A889D /* libFlurryAds_1.0.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB7085A236D8C74007A889D /* libFlurryAds_1.0.0.a */; };
-		8DB709D4236D8C89007A889D /* FlurryAdsEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB70861236D8C74007A889D /* FlurryAdsEmpty.m */; };
 		8DB709D5236D8C89007A889D /* OnewaySDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB70867236D8C74007A889D /* OnewaySDK.a */; };
 		8DB709D6236D8C89007A889D /* AnyThinkBaiduBannerAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB7086A236D8C74007A889D /* AnyThinkBaiduBannerAdapter.framework */; };
 		8DB709D7236D8C89007A889D /* AnyThinkSplash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB7086B236D8C74007A889D /* AnyThinkSplash.framework */; };
@@ -178,11 +178,6 @@
 		8DB70A43236D8C89007A889D /* AnyThinkMopubBannerAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB70954236D8C7B007A889D /* AnyThinkMopubBannerAdapter.framework */; };
 		8DB70A44236D8C89007A889D /* AnyThinkYeahmobiInterstitialAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB70955236D8C7B007A889D /* AnyThinkYeahmobiInterstitialAdapter.framework */; };
 		8DB70A45236D8C89007A889D /* AnyThinkFlurryInterstitialAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB70956236D8C7B007A889D /* AnyThinkFlurryInterstitialAdapter.framework */; };
-		8DB70A46236D8C89007A889D /* libFlurry_9.0.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB7095A236D8C7B007A889D /* libFlurry_9.0.0.a */; };
-		8DB70A47236D8C89007A889D /* FlurryEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB7095B236D8C7B007A889D /* FlurryEmpty.m */; };
-		8DB70A48236D8C89007A889D /* FlurryWatchEmpty.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB7095C236D8C7B007A889D /* FlurryWatchEmpty.m */; };
-		8DB70A49236D8C89007A889D /* libFlurryWatch_9.0.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB7095D236D8C7B007A889D /* libFlurryWatch_9.0.0.a */; };
-		8DB70A4A236D8C89007A889D /* libFlurryTVOS_9.0.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB7095E236D8C7B007A889D /* libFlurryTVOS_9.0.0.a */; };
 		8DB70A4B236D8C89007A889D /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB70961236D8C7C007A889D /* FBAudienceNetwork.framework */; };
 		8DB70A4C236D8C89007A889D /* AnyThinkAdColonyInterstitialAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB70962236D8C7C007A889D /* AnyThinkAdColonyInterstitialAdapter.framework */; };
 		8DB70A4D236D8C89007A889D /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB70963236D8C7C007A889D /* FBSDKCoreKit.framework */; };
@@ -247,6 +242,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				453C1663236D96B3006B430A /* MoPubSDKFramework.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,6 +250,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		453C1664236D9BB3006B430A /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		453C1668236D9D21006B430A /* WindSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WindSDK.framework; path = SDK/WindSDK.framework; sourceTree = "<group>"; };
 		8DB704F3236D883A007A889D /* AnyThinkSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnyThinkSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DB704F6236D883A007A889D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8DB704F7236D883A007A889D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -387,19 +385,6 @@
 		8DB7084C236D8C73007A889D /* MTGSDKInterstitial.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MTGSDKInterstitial.framework; path = SDK/MTGSDKInterstitial.framework; sourceTree = "<group>"; };
 		8DB7084D236D8C73007A889D /* AnyThinkFacebookRewardedVideoAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkFacebookRewardedVideoAdapter.framework; path = SDK/AnyThinkFacebookRewardedVideoAdapter.framework; sourceTree = "<group>"; };
 		8DB7084E236D8C74007A889D /* AnyThinkVungleRewardedVideoAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkVungleRewardedVideoAdapter.framework; path = SDK/AnyThinkVungleRewardedVideoAdapter.framework; sourceTree = "<group>"; };
-		8DB70851236D8C74007A889D /* FlurryAdNativeAsset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryAdNativeAsset.h; sourceTree = "<group>"; };
-		8DB70852236D8C74007A889D /* FlurryAdNative.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryAdNative.h; sourceTree = "<group>"; };
-		8DB70853236D8C74007A889D /* FlurryAdNativeDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryAdNativeDelegate.h; sourceTree = "<group>"; };
-		8DB70854236D8C74007A889D /* FlurryAdNativeStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryAdNativeStyle.h; sourceTree = "<group>"; };
-		8DB70856236D8C74007A889D /* FlurryAdInterstitialDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryAdInterstitialDelegate.h; sourceTree = "<group>"; };
-		8DB70857236D8C74007A889D /* FlurryAdInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryAdInterstitial.h; sourceTree = "<group>"; };
-		8DB70859236D8C74007A889D /* FlurryAdDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryAdDelegate.h; sourceTree = "<group>"; };
-		8DB7085A236D8C74007A889D /* libFlurryAds_1.0.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurryAds_1.0.0.a; sourceTree = "<group>"; };
-		8DB7085C236D8C74007A889D /* FlurryAdTargeting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryAdTargeting.h; sourceTree = "<group>"; };
-		8DB7085D236D8C74007A889D /* FlurryAdError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryAdError.h; sourceTree = "<group>"; };
-		8DB7085F236D8C74007A889D /* FlurryAdBannerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryAdBannerDelegate.h; sourceTree = "<group>"; };
-		8DB70860236D8C74007A889D /* FlurryAdBanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryAdBanner.h; sourceTree = "<group>"; };
-		8DB70861236D8C74007A889D /* FlurryAdsEmpty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlurryAdsEmpty.m; sourceTree = "<group>"; };
 		8DB70863236D8C74007A889D /* OWInterstitialImageAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWInterstitialImageAd.h; sourceTree = "<group>"; };
 		8DB70864236D8C74007A889D /* OWUserMetaData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWUserMetaData.h; sourceTree = "<group>"; };
 		8DB70865236D8C74007A889D /* OWRewardedAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWRewardedAd.h; sourceTree = "<group>"; };
@@ -625,15 +610,6 @@
 		8DB70954236D8C7B007A889D /* AnyThinkMopubBannerAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkMopubBannerAdapter.framework; path = SDK/AnyThinkMopubBannerAdapter.framework; sourceTree = "<group>"; };
 		8DB70955236D8C7B007A889D /* AnyThinkYeahmobiInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkYeahmobiInterstitialAdapter.framework; path = SDK/AnyThinkYeahmobiInterstitialAdapter.framework; sourceTree = "<group>"; };
 		8DB70956236D8C7B007A889D /* AnyThinkFlurryInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkFlurryInterstitialAdapter.framework; path = SDK/AnyThinkFlurryInterstitialAdapter.framework; sourceTree = "<group>"; };
-		8DB70958236D8C7B007A889D /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
-		8DB70959236D8C7B007A889D /* FlurryConsent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryConsent.h; sourceTree = "<group>"; };
-		8DB7095A236D8C7B007A889D /* libFlurry_9.0.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_9.0.0.a; sourceTree = "<group>"; };
-		8DB7095B236D8C7B007A889D /* FlurryEmpty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlurryEmpty.m; sourceTree = "<group>"; };
-		8DB7095C236D8C7B007A889D /* FlurryWatchEmpty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlurryWatchEmpty.m; sourceTree = "<group>"; };
-		8DB7095D236D8C7B007A889D /* libFlurryWatch_9.0.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurryWatch_9.0.0.a; sourceTree = "<group>"; };
-		8DB7095E236D8C7B007A889D /* libFlurryTVOS_9.0.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurryTVOS_9.0.0.a; sourceTree = "<group>"; };
-		8DB7095F236D8C7B007A889D /* FlurryWatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryWatch.h; sourceTree = "<group>"; };
-		8DB70960236D8C7B007A889D /* FlurrySessionBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurrySessionBuilder.h; sourceTree = "<group>"; };
 		8DB70961236D8C7C007A889D /* FBAudienceNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBAudienceNetwork.framework; path = SDK/FBAudienceNetwork.framework; sourceTree = "<group>"; };
 		8DB70962236D8C7C007A889D /* AnyThinkAdColonyInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkAdColonyInterstitialAdapter.framework; path = SDK/AnyThinkAdColonyInterstitialAdapter.framework; sourceTree = "<group>"; };
 		8DB70963236D8C7C007A889D /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = SDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
@@ -713,6 +689,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				453C1665236D9BB3006B430A /* libc++.tbd in Frameworks */,
 				8DB70A84236D8D3E007A889D /* CoreMedia.framework in Frameworks */,
 				8DB70A82236D8D02007A889D /* AVFoundation.framework in Frameworks */,
 				8DB70A54236D8C89007A889D /* Tapjoy.framework in Frameworks */,
@@ -733,7 +710,6 @@
 				8DB709D7236D8C89007A889D /* AnyThinkSplash.framework in Frameworks */,
 				8DB707DF236D8A5E007A889D /* libsqlite3.tbd in Frameworks */,
 				8DB707DD236D8A59007A889D /* libz.tbd in Frameworks */,
-				8DB70A49236D8C89007A889D /* libFlurryWatch_9.0.0.a in Frameworks */,
 				8DB709C5236D8C89007A889D /* AnyThinkInmobiNativeAdapter.framework in Frameworks */,
 				8DB70A61236D8C8A007A889D /* AnyThinkKSRewardedVideoAdapter.framework in Frameworks */,
 				8DB709C3236D8C89007A889D /* AnyThinkMopubNativeAdapter.framework in Frameworks */,
@@ -741,7 +717,6 @@
 				8DB70A58236D8C89007A889D /* AnyThinkApplovinBannerAdapter.framework in Frameworks */,
 				8DB709C6236D8C89007A889D /* AnyThinkAppnextInterstitialAdapter.framework in Frameworks */,
 				8DB70A57236D8C89007A889D /* AnyThinkNendBannerAdapter.framework in Frameworks */,
-				8DB709CD236D8C89007A889D /* MoPubSDKFramework.framework in Frameworks */,
 				8DB707DB236D8A50007A889D /* libresolv.9.tbd in Frameworks */,
 				8DB70A50236D8C89007A889D /* AnyThinkMopubInterstitialAdapter.framework in Frameworks */,
 				8DB70A39236D8C89007A889D /* libAppnextSDKCore.a in Frameworks */,
@@ -754,7 +729,6 @@
 				8DB70A6C236D8C8A007A889D /* AnyThinkAdmobInterstitialAdapter.framework in Frameworks */,
 				8DB70A41236D8C89007A889D /* AnyThinkMaioRewardedVideoAdapter.framework in Frameworks */,
 				8DB70A6D236D8C8A007A889D /* AnyThinkKSInterstitialAdapter.framework in Frameworks */,
-				8DB70A46236D8C89007A889D /* libFlurry_9.0.0.a in Frameworks */,
 				8DB70A7E236D8C8A007A889D /* MTGSDKReward.framework in Frameworks */,
 				8DB70A7D236D8C8A007A889D /* AnyThinkBaiduRewardedVideoAdapter.framework in Frameworks */,
 				8DB709D8236D8C89007A889D /* AnyThinkInterstitial.framework in Frameworks */,
@@ -766,6 +740,7 @@
 				8DB70A3E236D8C89007A889D /* AnyThinkInmobiBannerAdapter.framework in Frameworks */,
 				8DB707D7236D8A46007A889D /* VideoToolbox.framework in Frameworks */,
 				8DB709B4236D8C89007A889D /* AppLovinSDK.framework in Frameworks */,
+				453C1669236D9D21006B430A /* WindSDK.framework in Frameworks */,
 				8DB70A5E236D8C89007A889D /* AnyThinkFacebookInterstitialAdapter.framework in Frameworks */,
 				8DB70A42236D8C89007A889D /* CHAMoatMobileAppKit.framework in Frameworks */,
 				8DB709B5236D8C89007A889D /* VungleSDK.framework in Frameworks */,
@@ -805,7 +780,6 @@
 				8DB709BB236D8C89007A889D /* AnyThinkMintegralInterstitialAdapter.framework in Frameworks */,
 				8DB70A66236D8C8A007A889D /* AnyThinkMaioInterstitialAdapter.framework in Frameworks */,
 				8DB70A40236D8C89007A889D /* AnyThinkSigmobRewardedVideoAdapter.framework in Frameworks */,
-				8DB70A4A236D8C89007A889D /* libFlurryTVOS_9.0.0.a in Frameworks */,
 				8DB70A6A236D8C8A007A889D /* libGDTMobSDK.a in Frameworks */,
 				8DB70A3A236D8C89007A889D /* libAppnextNativeAdsSDK.a in Frameworks */,
 				8DB709B9236D8C89007A889D /* AnyThinkBaiduSplashAdapter.framework in Frameworks */,
@@ -824,7 +798,6 @@
 				8DB70A4B236D8C89007A889D /* FBAudienceNetwork.framework in Frameworks */,
 				8DB709C9236D8C89007A889D /* libAppnextSDKCore.a in Frameworks */,
 				8DB709C1236D8C89007A889D /* Maio.framework in Frameworks */,
-				8DB709D3236D8C89007A889D /* libFlurryAds_1.0.0.a in Frameworks */,
 				8DB709DB236D8C89007A889D /* AnyThinkChartboostRewardedVideoAdapter.framework in Frameworks */,
 				8DB709C8236D8C89007A889D /* libAppnextLib.a in Frameworks */,
 				8DB709DE236D8C89007A889D /* AnyThinkSDK.framework in Frameworks */,
@@ -895,6 +868,7 @@
 		8DB705C7236D898F007A889D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				453C1664236D9BB3006B430A /* libc++.tbd */,
 				8DB70A83236D8D3E007A889D /* CoreMedia.framework */,
 				8DB70A81236D8D02007A889D /* AVFoundation.framework */,
 				8DB70982236D8C84007A889D /* AdColony.framework */,
@@ -992,8 +966,6 @@
 				8DB70961236D8C7C007A889D /* FBAudienceNetwork.framework */,
 				8DB70969236D8C7E007A889D /* FBAudienceNetworkBiddingKit.framework */,
 				8DB70963236D8C7C007A889D /* FBSDKCoreKit.framework */,
-				8DB70957236D8C7B007A889D /* Flurry */,
-				8DB7084F236D8C74007A889D /* FlurryAds */,
 				8DB70983236D8C84007A889D /* GDT */,
 				8DB7094E236D8C7A007A889D /* GoogleMobileAds.framework */,
 				8DB7097E236D8C83007A889D /* InMobiSDK.framework */,
@@ -1016,6 +988,7 @@
 				8DB709A0236D8C86007A889D /* UnityAds.framework */,
 				8DB707EB236D8C6F007A889D /* VungleSDK.framework */,
 				8DB707DE236D8A5E007A889D /* libsqlite3.tbd */,
+				453C1668236D9D21006B430A /* WindSDK.framework */,
 				8DB707DC236D8A59007A889D /* libz.tbd */,
 				8DB707DA236D8A4F007A889D /* libresolv.9.tbd */,
 				8DB707D8236D8A4B007A889D /* libxml2.tbd */,
@@ -1122,67 +1095,6 @@
 				8DB70844236D8C72007A889D /* AppnextVideoAdConfiguration.h */,
 			);
 			path = AppnextLib;
-			sourceTree = "<group>";
-		};
-		8DB7084F236D8C74007A889D /* FlurryAds */ = {
-			isa = PBXGroup;
-			children = (
-				8DB70850236D8C74007A889D /* FlurryAdNative */,
-				8DB70855236D8C74007A889D /* FlurryAdInterstitial */,
-				8DB70858236D8C74007A889D /* StaticAPI */,
-				8DB7085A236D8C74007A889D /* libFlurryAds_1.0.0.a */,
-				8DB7085B236D8C74007A889D /* Shared */,
-				8DB7085E236D8C74007A889D /* FlurryAdBanner */,
-				8DB70861236D8C74007A889D /* FlurryAdsEmpty.m */,
-			);
-			name = FlurryAds;
-			path = SDK/FlurryAds;
-			sourceTree = "<group>";
-		};
-		8DB70850236D8C74007A889D /* FlurryAdNative */ = {
-			isa = PBXGroup;
-			children = (
-				8DB70851236D8C74007A889D /* FlurryAdNativeAsset.h */,
-				8DB70852236D8C74007A889D /* FlurryAdNative.h */,
-				8DB70853236D8C74007A889D /* FlurryAdNativeDelegate.h */,
-				8DB70854236D8C74007A889D /* FlurryAdNativeStyle.h */,
-			);
-			path = FlurryAdNative;
-			sourceTree = "<group>";
-		};
-		8DB70855236D8C74007A889D /* FlurryAdInterstitial */ = {
-			isa = PBXGroup;
-			children = (
-				8DB70856236D8C74007A889D /* FlurryAdInterstitialDelegate.h */,
-				8DB70857236D8C74007A889D /* FlurryAdInterstitial.h */,
-			);
-			path = FlurryAdInterstitial;
-			sourceTree = "<group>";
-		};
-		8DB70858236D8C74007A889D /* StaticAPI */ = {
-			isa = PBXGroup;
-			children = (
-				8DB70859236D8C74007A889D /* FlurryAdDelegate.h */,
-			);
-			path = StaticAPI;
-			sourceTree = "<group>";
-		};
-		8DB7085B236D8C74007A889D /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-				8DB7085C236D8C74007A889D /* FlurryAdTargeting.h */,
-				8DB7085D236D8C74007A889D /* FlurryAdError.h */,
-			);
-			path = Shared;
-			sourceTree = "<group>";
-		};
-		8DB7085E236D8C74007A889D /* FlurryAdBanner */ = {
-			isa = PBXGroup;
-			children = (
-				8DB7085F236D8C74007A889D /* FlurryAdBannerDelegate.h */,
-				8DB70860236D8C74007A889D /* FlurryAdBanner.h */,
-			);
-			path = FlurryAdBanner;
 			sourceTree = "<group>";
 		};
 		8DB70862236D8C74007A889D /* Oneway */ = {
@@ -1545,23 +1457,6 @@
 			path = AppnextNativeAdsSDK;
 			sourceTree = "<group>";
 		};
-		8DB70957236D8C7B007A889D /* Flurry */ = {
-			isa = PBXGroup;
-			children = (
-				8DB70958236D8C7B007A889D /* Flurry.h */,
-				8DB70959236D8C7B007A889D /* FlurryConsent.h */,
-				8DB7095A236D8C7B007A889D /* libFlurry_9.0.0.a */,
-				8DB7095B236D8C7B007A889D /* FlurryEmpty.m */,
-				8DB7095C236D8C7B007A889D /* FlurryWatchEmpty.m */,
-				8DB7095D236D8C7B007A889D /* libFlurryWatch_9.0.0.a */,
-				8DB7095E236D8C7B007A889D /* libFlurryTVOS_9.0.0.a */,
-				8DB7095F236D8C7B007A889D /* FlurryWatch.h */,
-				8DB70960236D8C7B007A889D /* FlurrySessionBuilder.h */,
-			);
-			name = Flurry;
-			path = SDK/Flurry;
-			sourceTree = "<group>";
-		};
 		8DB7096A236D8C7E007A889D /* Tapjoy.embeddedframework */ = {
 			isa = PBXGroup;
 			children = (
@@ -1742,20 +1637,17 @@
 				8DB7051D236D888E007A889D /* ATInterstitialViewController.m in Sources */,
 				8DB70A2B236D8C89007A889D /* UIView+WebCacheOperation.m in Sources */,
 				8DB70A03236D8C89007A889D /* UIImageView+HighlightedWebCache.m in Sources */,
-				8DB709D4236D8C89007A889D /* FlurryAdsEmpty.m in Sources */,
 				8DB70A22236D8C89007A889D /* NSData+ImageContentType.m in Sources */,
 				8DB70A16236D8C89007A889D /* SDImageIOCoder.m in Sources */,
 				8DB70A25236D8C89007A889D /* SDImageCacheDefine.m in Sources */,
 				8DB70A0D236D8C89007A889D /* SDImageCodersManager.m in Sources */,
 				8DB70A35236D8C89007A889D /* NSBezierPath+RoundedCorners.m in Sources */,
-				8DB70A48236D8C89007A889D /* FlurryWatchEmpty.m in Sources */,
 				8DB70A04236D8C89007A889D /* SDAnimatedImage.m in Sources */,
 				8DB70A06236D8C89007A889D /* UIImage+ForceDecode.m in Sources */,
 				8DB70A08236D8C89007A889D /* SDWebImageDownloader.m in Sources */,
 				8DB709E4236D8C89007A889D /* MJPropertyType.m in Sources */,
 				8DB709F4236D8C89007A889D /* UIButton+AFNetworking.m in Sources */,
 				8DB70A2F236D8C89007A889D /* SDWebImageDownloaderRequestModifier.m in Sources */,
-				8DB70A47236D8C89007A889D /* FlurryEmpty.m in Sources */,
 				8DB709E8236D8C89007A889D /* MJExtensionConst.m in Sources */,
 				8DB709F5236D8C89007A889D /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				8DB709FF236D8C89007A889D /* NSImage+Compatibility.m in Sources */,
@@ -1962,6 +1854,7 @@
 					"$(PROJECT_DIR)/SDK/Flurry",
 					"$(PROJECT_DIR)/SDK/GDT",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.anythink.AnyThinkSDKDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1996,6 +1889,7 @@
 					"$(PROJECT_DIR)/SDK/Flurry",
 					"$(PROJECT_DIR)/SDK/GDT",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.anythink.AnyThinkSDKDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

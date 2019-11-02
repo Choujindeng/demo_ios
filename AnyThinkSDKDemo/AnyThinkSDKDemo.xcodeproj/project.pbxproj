@@ -1840,6 +1840,7 @@
 					"$(PROJECT_DIR)/SDK/Baidu",
 					"$(PROJECT_DIR)/SDK/Toutiao",
 				);
+				GCC_PREPROCESSOR_DEFINITIONS = NATIVE_INTEGRATED;
 				INFOPLIST_FILE = AnyThinkSDKDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1875,6 +1876,7 @@
 					"$(PROJECT_DIR)/SDK/Baidu",
 					"$(PROJECT_DIR)/SDK/Toutiao",
 				);
+				GCC_PREPROCESSOR_DEFINITIONS = NATIVE_INTEGRATED;
 				INFOPLIST_FILE = AnyThinkSDKDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

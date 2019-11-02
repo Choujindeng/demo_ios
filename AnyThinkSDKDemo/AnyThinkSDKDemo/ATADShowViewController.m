@@ -8,7 +8,7 @@
 
 #import "ATADShowViewController.h"
 #import "MTAutolayoutCategories.h"
-
+@import NendAd;
 @import AnyThinkSDK;
 #ifdef NATIVE_INTEGRATED
 @import AnyThinkNative;

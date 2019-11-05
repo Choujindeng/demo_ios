@@ -1,4 +1,4 @@
-# **iOS集成UpArpuSDK**
+# **iOS集成AnyThinkSDK**
 
 1、[简介](#2)<br>
 2、[配置](#1)<br>
@@ -14,11 +14,11 @@
 
 
 ## <h2 id='2'>1 简介</h2>
-本文档介绍如何去集成iOS端的UparpuSDK（后面简称为SDK），包括获取开发者账号，获取AppID和AppKey并创建配置进行广告投放。
+本文档介绍如何去集成iOS端的AnyThinkSDK（后面简称为SDK），包括获取开发者账号，获取AppID和AppKey并创建配置进行广告投放。
 ### 1.1 支持的广告类型
-UpArpuSDK支持原生广告(Native),激励视频广告(rewardVideo)，banner广告，插屏广告(intersitial)和开屏广告(splash)。
+AnyThinkSDK支持原生广告(Native),激励视频广告(rewardVideo)，banner广告，插屏广告(intersitial)和开屏广告(splash)。
 ### 1.2 SDK架构
-![](UpArpuSDK_Architecture.png)
+![](AnyThinkSDK_Architecture.png)
 ## <h2 id='1'>2 配置</h2>
 ### 2.1 基础配置
 	Xcode10版本及以上。
@@ -29,11 +29,11 @@ UpArpuSDK支持原生广告(Native),激励视频广告(rewardVideo)，banner广�
 
 |File|Note|
 |---|---|
-|UpArpuSDK.framework|Base framework|
-|UpArpuSDK.bundle|Resource bundle|
-|UpArpuHeaderBiding.framework|Header bidding module|
+|AnyThinkSDK.framework|Base framework|
+|AnyThinkSDK.bundle|Resource bundle|
+|AnyThinkHeaderBiding.framework|Header bidding module|
 
-**注:** 由于**UpArpuSDK**不支持cocoapod，以UpArpu开头的framewrok必须手动下载并导入到您的项目中，而第三方SDK可以使用cocoapod集成。
+**注:** 由于**AnyThinkSDK**不支持cocoapod，以AnyThink开头的framewrok必须手动下载并导入到您的项目中，而第三方SDK可以使用cocoapod集成。
 
 ### 2.3 配置 Build Settings 和 Info.plist
 
@@ -42,6 +42,7 @@ UpArpuSDK支持原生广告(Native),激励视频广告(rewardVideo)，banner广�
 如果您没有看到如上图所示的弹出窗口，只需双击 **Other Linker Flags**。<br><br>
 2) 在您app的Info.plist中添加 **NSAllowsArbitraryLoads** 禁用ATS限制。
 ![](Info_Plist_HTTP.png)
+
 ### 2.4 导入第三方的SDK
 
 
@@ -74,17 +75,17 @@ UpArpuSDK支持原生广告(Native),激励视频广告(rewardVideo)，banner广�
 
 ### 2.4 初始化SDK
 
-您需要在**AppDelegate**的**application:didFinishLaunchingWithOptions:**方法里面初始化**UpArpuSDK**(必须在请求广告之前去初始化SDK)：
+您需要在**AppDelegate**的**application:didFinishLaunchingWithOptions:**方法里面初始化**AnyThinkSDK**(必须在请求广告之前去初始化SDK)：
 
 
 <pre><code>- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-	 [UPArpuAPI setLogEnabled:YES];<span style="color:green">//Turn on debug logs</span>
-    [[UPArpuAPI sharedInstance] startWithAppID:@"a5acc73c25fbf5" appKey:@"4f7b9ac17decb9babec83aac078742c7"];
+	 [ATAPI setLogEnabled:YES];<span style="color:green">//Turn on debug logs</span>
+    [[ATAPI sharedInstance] startWithAppID:@"a5acc73c25fbf5" appKey:@"4f7b9ac17decb9babec83aac078742c7"];
     return YES;
 }</code></pre>
 
-### 2.5 使用UpArpu的广告位进行测试
-使用**UpArpuSDK**提供的测试广告位可以更快地测试广告功能，如下图所示：
+### 2.5 使用AnyThink的广告位进行测试
+使用**AnyThinkSDK**提供的测试广告位可以更快地测试广告功能，如下图所示：
 
 |Ad Format|Placement ID|
 |---|---|
@@ -103,22 +104,22 @@ UpArpuSDK支持原生广告(Native),激励视频广告(rewardVideo)，banner广�
 在继续接入之前，您需要保证您已经完成了以上 [配置](#1) 步骤。
 
 ### 3.1 导入 Splash Framework
-将**UpArpuSplash.framework**拖到您的项目中，除了**UpArpuSplash.framework**，您还需要集成第三方平台的Adapter，目前**UpArpuSDK**支持以下的平台(对应平台需要导入的Adapter)。
+将**AnyThinkSplash.framework**拖到您的项目中，除了**AnyThinkSplash.framework**，您还需要集成第三方平台的Adapter，目前**AnyThinkSDK**支持以下的平台(对应平台需要导入的Adapter)。
 
 |Third Party Ad Network|Adapter Framework|
 |---|---|
-|TouTiao|UpArpuTTSplashAdapter.framework|
-|GDT|UpArpuGDTSplashAdapter.framework|
-|Baidu|UpArpuBaiduSplashAdapter.framework|
+|TouTiao|AnyThinkTTSplashAdapter.framework|
+|GDT|AnyThinkGDTSplashAdapter.framework|
+|Baidu|AnyThinkBaiduSplashAdapter.framework|
 
 ### 3.1 加载并展示Splash
 加载并展示Splash广告的最佳时机是在应用程序的入口，即**AppDelegate**的**application:didFinishLaunchingWithOptions:**方法中，Splash的加载和展示是统一的一个API，您可以使用以下代码加载并展示一个Splash广告：
 
 <pre><code>- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [UPArpuAPI setLogEnabled:YES];
-    [[UPArpuAPI sharedInstance] startWithAppID:@"a5b0e8491845b3" appKey:@"7eae0567827cfe2b22874061763f30c9" error:nil];
+    [ATAPI setLogEnabled:YES];
+    [[ATAPI sharedInstance] startWithAppID:@"a5b0e8491845b3" appKey:@"7eae0567827cfe2b22874061763f30c9" error:nil];
     [self.window makeKeyAndVisible];
-    [[UPArpuAdManager sharedManager] loadADWithPlacementID:@"b5c1b048c498b9" extra:@{kUPArpuSplashExtraTolerateTimeoutKey:@5.5} customData:nil delegate:self window:self.window containerView:nil];
+    [[ATAdManager sharedManager] loadADWithPlacementID:@"b5c1b048c498b9" extra:@{kATSplashExtraTolerateTimeoutKey:@5.5} customData:nil delegate:self window:self.window containerView:nil];
     return YES;
 }</code></pre>
 
@@ -126,10 +127,10 @@ UpArpuSDK支持原生广告(Native),激励视频广告(rewardVideo)，banner广�
 
 ### 3.2 实现Splash的Delegate
 
-您可以实现**UPArpuSplashDelegate**的方法来获取Splash的各种事件。<br> 
+您可以实现**ATSplashDelegate**的方法来获取Splash的各种事件。<br> 
 
 <pre><code>
-#pragma mark - UPArpu Splash Delegate method(s)
+#pragma mark - AT Splash Delegate method(s)
 -(void) didFinishLoadingADWithPlacementID:(NSString *)placementID {
     NSLog(@"AppDelegate::didFinishLoadingADWithPlacementID:%@", placementID);
 }
@@ -154,41 +155,41 @@ UpArpuSDK支持原生广告(Native),激励视频广告(rewardVideo)，banner广�
 ## <h2 id='4'>4 激励视频(Rewarded Video)</h2>
 在继续接入之前，您需要保证您已经完成了以上 [配置](#1) 步骤。
 ### 4.1 导入Rewarded Video Framework
-将**UpArpuRewardedVideo.framework**拖到您的项目中，除了**UpArpuRewardedVideo.framework**，您还需要集成第三方平台的Adapter，目前**UpArpuSDK**支持以下的平台(对应平台需要导入的Adapter)。
+将**AnyThinkRewardedVideo.framework**拖到您的项目中，除了**AnyThinkRewardedVideo.framework**，您还需要集成第三方平台的Adapter，目前**AnyThinkSDK**支持以下的平台(对应平台需要导入的Adapter)。
 
 |Third Party Ad Network|Adapter Framework|
 |---|---|
-|Facebook|UpArpuFacebookRewardedVideoAdapter.framework|
-|Admob|UpArpuAdmobRewardedVideoAdapter.framework|
-|Flurry|UpArpuFlurryRewardedVideoAdapter.framework|
-|Applovin|UpArpuApplovinRewardedVideoAdapter.framework|
-|GDT|UpArpuGDTRewardedVideoAdapter.framework|
-|Baidu|UpArpuBaiduRewardedVideoAdapter.framework|
-|TouTiao|UpArpuTTRewardedVideoAdapter.framework|
-|Nend|UpArpuNendRewardedVideoAdapter.framework|
-|Maio|UpArpuMaioRewardedVideoAdapter.framework|
-|AppNext|UpArpuAppNextRewardedVideoAdapter.framework|
-|Yeahmobi|UpArpuYeahmobiRewardedVideoAdapter.framework|
-|Oneway|UpArpuOnewayRewardedVideoAdapter.framework|
-|Mintegral|UpArpuMintegralRewardedVideoAdapter.framework|
-|Mopub|UpArpuMopubRewardedVideoAdapter.framework|
-|Vungle|UpArpuVungleRewardedVideoAdapter.framework|
-|Ironsource|UpArpuIronSourceRewardedVideoAdapter.framework|
-|Tapjoy|UpArpuTapjoyRewardedVideoAdapter.framework|
-|UnityAds|UpArpuUnityAdsRewardedVideoAdapter.framework|
-|Chartboost|UpArpuChartboostRewardedVideoAdapter.framework|
-|Inmobi|UpArpuInmobiRewardedVideoAdapter.framework|
-|Adcolony|UpArpuAdcolonyRewardedVideoAdapter.framework|
+|Facebook|AnyThinkFacebookRewardedVideoAdapter.framework|
+|Admob|AnyThinkAdmobRewardedVideoAdapter.framework|
+|Flurry|AnyThinkFlurryRewardedVideoAdapter.framework|
+|Applovin|AnyThinkApplovinRewardedVideoAdapter.framework|
+|GDT|AnyThinkGDTRewardedVideoAdapter.framework|
+|Baidu|AnyThinkBaiduRewardedVideoAdapter.framework|
+|TouTiao|AnyThinkTTRewardedVideoAdapter.framework|
+|Nend|AnyThinkNendRewardedVideoAdapter.framework|
+|Maio|AnyThinkMaioRewardedVideoAdapter.framework|
+|AppNext|AnyThinkAppNextRewardedVideoAdapter.framework|
+|Yeahmobi|AnyThinkYeahmobiRewardedVideoAdapter.framework|
+|Oneway|AnyThinkOnewayRewardedVideoAdapter.framework|
+|Mintegral|AnyThinkMintegralRewardedVideoAdapter.framework|
+|Mopub|AnyThinkMopubRewardedVideoAdapter.framework|
+|Vungle|AnyThinkVungleRewardedVideoAdapter.framework|
+|Ironsource|AnyThinkIronSourceRewardedVideoAdapter.framework|
+|Tapjoy|AnyThinkTapjoyRewardedVideoAdapter.framework|
+|UnityAds|AnyThinkUnityAdsRewardedVideoAdapter.framework|
+|Chartboost|AnyThinkChartboostRewardedVideoAdapter.framework|
+|Inmobi|AnyThinkInmobiRewardedVideoAdapter.framework|
+|Adcolony|AnyThinkAdcolonyRewardedVideoAdapter.framework|
 
 ### 4.2 加载Rewarded Video
-您需要确认您添加了**UPArpuRewardedVideoDelegate**代理协议：
-<pre><code>@interface UPArpuRewardedVideoViewController()\<UPArpuRewardedVideoDelegate\>
+您需要确认您添加了**ATRewardedVideoDelegate**代理协议：
+<pre><code>@interface ATRewardedVideoViewController()\<ATRewardedVideoDelegate\>
 //Other properties&methods declarations
 @end</code></pre>
 
 加载rewarded video广告:<br>
 **注**:在加载facebook广告的时候一定要传入userid，以获取激励视频回调。
-<pre><code>[[UPArpuAdManager sharedManager] loadADWithPlacementID:@"your rv placement id" extra:@{kUPArpuAdLoadingExtraUserIDKey:@"test\_user\_id"} delegate:self];</code></pre>
+<pre><code>[[ATAdManager sharedManager] loadADWithPlacementID:@"your rv placement id" extra:@{kATAdLoadingExtraUserIDKey:@"test\_user\_id"} delegate:self];</code></pre>
 
 您可以实现以下的代理方法来获取各种加载事件：
 <pre><code>#pragma mark - loading delegate
@@ -203,7 +204,7 @@ UpArpuSDK支持原生广告(Native),激励视频广告(rewardVideo)，banner广�
 ### 4.3 判断Rewarded Video是否ready
 您可以检查rewarded video广告是否已经ready：
 <pre><code>
-if ([[UPArpuAdManager sharedManager] rewardedVideoReadyForPlacementID:@"your rv placement id"]) {
+if ([[ATAdManager sharedManager] rewardedVideoReadyForPlacementID:@"your rv placement id"]) {
     //Show rv here
 } else {
     //Load rv here
@@ -214,7 +215,7 @@ if ([[UPArpuAdManager sharedManager] rewardedVideoReadyForPlacementID:@"your rv 
 在您rewared video加载完成之后，您可以调用API去展示rewared video：
  
 <pre><code>-(void) showAD {
-    [[UPArpuAdManager sharedManager] showRewardedVideoWithPlacementID:@"rv_placement_id" inViewController:self delegate:self];
+    [[ATAdManager sharedManager] showRewardedVideoWithPlacementID:@"rv_placement_id" inViewController:self delegate:self];
 }</code></pre>
 
 ### 4.5 实现Rewarded Video的Delegate
@@ -245,40 +246,40 @@ if ([[UPArpuAdManager sharedManager] rewardedVideoReadyForPlacementID:@"your rv 
 在继续接入之前，您需要保证您已经完成了以上 [配置](#1) 步骤。
 
 ### 5.1 导入Interstitial Framework
-将**UpArpuInterstitial.framework**拖到您的项目中，除了**UpArpuInterstitial.framework**，您还需要集成第三方平台的Adapter，目前**UpArpuSDK**支持以下的平台(对应平台需要导入的Adapter)。
+将**AnyThinkInterstitial.framework**拖到您的项目中，除了**AnyThinkInterstitial.framework**，您还需要集成第三方平台的Adapter，目前**AnyThinkSDK**支持以下的平台(对应平台需要导入的Adapter)。
 
 |Third Party Ad Network|Adapter Framework|
 |---|---|
-|Facebook|UpArpuFacebookInterstitialAdapter.framework|
-|Admob|UpArpuAdmobInterstitialAdapter.framework|
-|Flurry|UpArpuFlurryInterstitialAdapter.framework|
-|Applovin|UpArpuApplovinInterstitialAdapter.framework|
-|GDT|UpArpuGDTInterstitialAdapter.framework|
-|Baidu|UpArpuBaiduInterstitialAdapter.framework|
-|TouTiao|UpArpuTTInterstitialAdapter.framework|
-|Nend|UpArpuNendInterstitialAdapter.framework|
-|Maio|UpArpuMaioInterstitialAdapter.framework|
-|AppNext|UpArpuAppNextInterstitialAdapter.framework|
-|Yeahmobi|UpArpuYeahmobiInterstitialAdapter.framework|
-|Oneway|UpArpuOnewayInterstitialAdapter.framework|
-|Mintegral|UpArpuMintegralInterstitialAdapter.framework|
-|Mopub|UpArpuMopubInterstitialAdapter.framework|
-|Vungle|UpArpuVungleInterstitialAdapter.framework|
-|Ironsource|UpArpuIronSourceInterstitialAdapter.framework|
-|Tapjoy|UpArpuTapjoyInterstitialAdapter.framework|
-|UnityAds|UpArpuUnityAdsInterstitialAdapter.framework|
-|Chartboost|UpArpuChartboostInterstitialAdapter.framework|
-|Inmobi|UpArpuInmobiInterstitialAdapter.framework|
-|Adcolony|UpArpuAdcolonyInterstitialAdapter.framework|
+|Facebook|AnyThinkFacebookInterstitialAdapter.framework|
+|Admob|AnyThinkAdmobInterstitialAdapter.framework|
+|Flurry|AnyThinkFlurryInterstitialAdapter.framework|
+|Applovin|AnyThinkApplovinInterstitialAdapter.framework|
+|GDT|AnyThinkGDTInterstitialAdapter.framework|
+|Baidu|AnyThinkBaiduInterstitialAdapter.framework|
+|TouTiao|AnyThinkTTInterstitialAdapter.framework|
+|Nend|AnyThinkNendInterstitialAdapter.framework|
+|Maio|AnyThinkMaioInterstitialAdapter.framework|
+|AppNext|AnyThinkAppNextInterstitialAdapter.framework|
+|Yeahmobi|AnyThinkYeahmobiInterstitialAdapter.framework|
+|Oneway|AnyThinkOnewayInterstitialAdapter.framework|
+|Mintegral|AnyThinkMintegralInterstitialAdapter.framework|
+|Mopub|AnyThinkMopubInterstitialAdapter.framework|
+|Vungle|AnyThinkVungleInterstitialAdapter.framework|
+|Ironsource|AnyThinkIronSourceInterstitialAdapter.framework|
+|Tapjoy|AnyThinkTapjoyInterstitialAdapter.framework|
+|UnityAds|AnyThinkUnityAdsInterstitialAdapter.framework|
+|Chartboost|AnyThinkChartboostInterstitialAdapter.framework|
+|Inmobi|AnyThinkInmobiInterstitialAdapter.framework|
+|Adcolony|AnyThinkAdcolonyInterstitialAdapter.framework|
 
 ### 5.2 加载Interstitial
-您需要确认你添加了**UPArpuInterstitialDelegate**代理协议：
-<pre><code>@interface UPArpuInterstitialViewController()\<UPArpuInterstitialDelegate\>
+您需要确认你添加了**ATInterstitialDelegate**代理协议：
+<pre><code>@interface ATInterstitialViewController()\<ATInterstitialDelegate\>
 //Other properties&methods declarations
 @end</code></pre>
 
 加载Interstitial广告:
-<pre><code>[[UPArpuAdManager sharedManager] loadADWithPlacementID:@"your interstitial placement id" extra:nil delegate:self];</code></pre>
+<pre><code>[[ATAdManager sharedManager] loadADWithPlacementID:@"your interstitial placement id" extra:nil delegate:self];</code></pre>
 
 您可以实现以下的代理方法来获取各种加载事件：
 <pre><code>#pragma mark - loading delegate
@@ -293,7 +294,7 @@ if ([[UPArpuAdManager sharedManager] rewardedVideoReadyForPlacementID:@"your rv 
 ### 5.3 判断Interstitial是否Ready
 您可以检查interstitial广告是否已经ready：
 <pre><code>
-if ([[UPArpuAdManager sharedManager] interstitialReadyForPlacementID:@"your interstitial placement id"]) {
+if ([[ATAdManager sharedManager] interstitialReadyForPlacementID:@"your interstitial placement id"]) {
     //Show interstitial here
 } else {
     //Load interstitial here
@@ -304,70 +305,70 @@ if ([[UPArpuAdManager sharedManager] interstitialReadyForPlacementID:@"your inte
 在您Interstitial加载完成之后，您可以调用API去展示Interstitial：
  
 <pre><code>-(void) showAD {
-    [[UPArpuAdManager sharedManager] showInterstitialWithPlacementID:@"interstitial_placement_id" inViewController:self delegate:self];
+    [[ATAdManager sharedManager] showInterstitialWithPlacementID:@"interstitial_placement_id" inViewController:self delegate:self];
 }</code></pre>
 
 ### 5.5 实现Interstitial的Delegate
-您可以实现**UPArpuInterstitialDelegate**的方法来获取interstitial的各种事件：
+您可以实现**ATInterstitialDelegate**的方法来获取interstitial的各种事件：
 <pre><code>#pragma mark - showing delegate
 -(void) interstitialDidShowForPlacementID:(NSString *)placementID {
-    NSLog(@"UPArpuInterstitialViewController::interstitialDidShowForPlacementID:%@", placementID);
+    NSLog(@"ATInterstitialViewController::interstitialDidShowForPlacementID:%@", placementID);
 }
 
 -(void) interstitialFailedToShowForPlacementID:(NSString\*)placementID error:(NSError\*)error {
-    NSLog(@"UPArpuInterstitialViewController::interstitialFailedToShowForPlacementID:%@ error:%@", placementID, error);
+    NSLog(@"ATInterstitialViewController::interstitialFailedToShowForPlacementID:%@ error:%@", placementID, error);
 }
 
 -(void) interstitialDidStartPlayingVideoForPlacementID:(NSString*)placementID {
-    NSLog(@"UPArpuInterstitialViewController::interstitialDidStartPlayingVideoForPlacementID:%@", placementID);
+    NSLog(@"ATInterstitialViewController::interstitialDidStartPlayingVideoForPlacementID:%@", placementID);
 }
 
 -(void) interstitialDidEndPlayingVideoForPlacementID:(NSString*)placementID {
-    NSLog(@"UPArpuInterstitialViewController::interstitialDidEndPlayingVideoForPlacementID:%@", placementID);
+    NSLog(@"ATInterstitialViewController::interstitialDidEndPlayingVideoForPlacementID:%@", placementID);
 }
 
 -(void) interstitialDidFailToPlayForPlacementID:(NSString\*)placementID error:(NSError\*)error {
-    NSLog(@"UPArpuInterstitialViewController::interstitialDidFailToPlayForPlacementID:%@", placementID);
+    NSLog(@"ATInterstitialViewController::interstitialDidFailToPlayForPlacementID:%@", placementID);
 }
 
 -(void) interstitialDidCloseForPlacementID:(NSString*)placementID {
-    NSLog(@"UPArpuInterstitialViewController::interstitialDidCloseForPlacementID:%@", placementID);
+    NSLog(@"ATInterstitialViewController::interstitialDidCloseForPlacementID:%@", placementID);
 }
 
 -(void) interstitialDidClickForPlacementID:(NSString*)placementID {
-    NSLog(@"UPArpuInterstitialViewController::interstitialDidClickForPlacementID:%@", placementID);
+    NSLog(@"ATInterstitialViewController::interstitialDidClickForPlacementID:%@", placementID);
 }</code></pre>
 
 ## <h2 id='6'>6 Banner广告</h2>
 在继续接入之前，您需要保证您已经完成了以上 [配置](#1) 步骤。
 
 ### 6.1 导入Banner Framework
-将**UpArpuBanner.framework**拖到您的项目中，除了**UpArpuBanner.framework**，您还需要集成第三方平台的Adapter，目前**UpArpuSDK**支持以下的平台(对应平台需要导入的Adapter)。
+将**AnyThinkBanner.framework**拖到您的项目中，除了**AnyThinkBanner.framework**，您还需要集成第三方平台的Adapter，目前**AnyThinkSDK**支持以下的平台(对应平台需要导入的Adapter)。
 
 |Third Party Ad Network|Adapter Framework|
 |---|---|
-|Facebook|UpArpuFacebookBannerAdapter.framework|
-|Admob|UpArpuAdmobBannerAdapter.framework|
-|Flurry|UpArpuFlurryBannerAdapter.framework|
-|Applovin|UpArpuApplovinBannerAdapter.framework|
-|GDT|UpArpuGDTBannerAdapter.framework|
-|Baidu|UpArpuBaiduBannerAdapter.framework|
-|TouTiao|UpArpuTTBannerAdapter.framework|
-|Nend|UpArpuNendBannerAdapter.framework|
-|AppNext|UpArpuAppNextBannerAdapter.framework|
-|Yeahmobi|UpArpuYeahmobiBannerAdapter.framework|
-|Oneway|UpArpuOnewayBannerAdapter.framework|
-|Mopub|UpArpuMopubBannerAdapter.framework|
-|Mopub|UpArpuInmobiBannerAdapter.framework|
+|Facebook|AnyThinkFacebookBannerAdapter.framework|
+|Admob|AnyThinkAdmobBannerAdapter.framework|
+|Flurry|AnyThinkFlurryBannerAdapter.framework|
+|Applovin|AnyThinkApplovinBannerAdapter.framework|
+|GDT|AnyThinkGDTBannerAdapter.framework|
+|Baidu|AnyThinkBaiduBannerAdapter.framework|
+|TouTiao|AnyThinkTTBannerAdapter.framework|
+|Nend|AnyThinkNendBannerAdapter.framework|
+|AppNext|AnyThinkAppNextBannerAdapter.framework|
+|Yeahmobi|AnyThinkYeahmobiBannerAdapter.framework|
+|Oneway|AnyThinkOnewayBannerAdapter.framework|
+|Mopub|AnyThinkMopubBannerAdapter.framework|
+|Mopub|AnyThinkInmobiBannerAdapter.framework|
 
 ### 6.2 加载Banner
-您需要确认你添加了**UPArpuBannerDelegate**代理协议：
-<pre><code>@interface UPArpuBannerViewController()\<UPArpuBannerDelegate\>
+您需要确认你添加了**ATBannerDelegate**代理协议：
+<pre><code>@interface ATBannerViewController()\<ATBannerDelegate\>
 //Other properties&methods declarations
 @end</code></pre>
 
 加载banner广告:
-<pre><code>[[UPArpuAdManager sharedManager] loadADWithPlacementID:@"your banner placement id" extra:nil delegate:self];</code></pre>
+<pre><code>[[ATAdManager sharedManager] loadADWithPlacementID:@"your banner placement id" extra:nil delegate:self];</code></pre>
 您可以实现以下的代理方法来获取各种加载事件：
 <pre><code>#pragma mark - loading delegate
 -(void) didFinishLoadingADWithPlacementID:(NSString *)placementID {
@@ -383,7 +384,7 @@ if ([[UPArpuAdManager sharedManager] interstitialReadyForPlacementID:@"your inte
 您可以检查banner广告是否已经ready：
 
 <pre><code>
-if ([[UPArpuAdManager sharedManager] bannerAdReadyForPlacementID:@"your banner placement id"]) {
+if ([[ATAdManager sharedManager] bannerAdReadyForPlacementID:@"your banner placement id"]) {
     //Show banner here
 } else {
     //Load banner here
@@ -394,9 +395,9 @@ if ([[UPArpuAdManager sharedManager] bannerAdReadyForPlacementID:@"your banner p
 在您banner加载完成之后，您可以调用API去展示banner：
  
 <pre><code>-(void) showBanner {
-    if ([[UPArpuAdManager sharedManager] bannerAdReadyForPlacementID:@"banner placement id"]) {
+    if ([[ATAdManager sharedManager] bannerAdReadyForPlacementID:@"banner placement id"]) {
     //Retrieve banner view
-        UPArpuBannerView *bannerView = [[UPArpuAdManager sharedManager] retrieveBannerViewForPlacementID:@"banner placement id"];
+        ATBannerView *bannerView = [[ATAdManager sharedManager] retrieveBannerViewForPlacementID:@"banner placement id"];
         bannerView.delegate = self;
         bannerView.translatesAutoresizingMaskIntoConstraints = NO;
         bannerView.tag = tag;
@@ -412,25 +413,25 @@ if ([[UPArpuAdManager sharedManager] bannerAdReadyForPlacementID:@"your banner p
 }</code></pre>
 
 ### 6.5 实现Banner的Delegate
-您可以实现**UPArpuBannerDelegate**的方法来获取banner的各种事件：
-<pre><code>-(void) bannerView:(UPArpuBannerView *)bannerView didShowAdWithPlacementID:(NSString *)placementID {
-    NSLog(@"UPArpuBannerViewController::bannerView:didShowAdWithPlacementID:%@", placementID);
+您可以实现**ATBannerDelegate**的方法来获取banner的各种事件：
+<pre><code>-(void) bannerView:(ATBannerView *)bannerView didShowAdWithPlacementID:(NSString *)placementID {
+    NSLog(@"ATBannerViewController::bannerView:didShowAdWithPlacementID:%@", placementID);
 }
 
--(void) bannerView:(UPArpuBannerView*)bannerView didClickWithPlacementID:(NSString*)placementID {
-    NSLog(@"UPArpuBannerViewController::bannerView:didClickWithPlacementID:%@", placementID);
+-(void) bannerView:(ATBannerView*)bannerView didClickWithPlacementID:(NSString*)placementID {
+    NSLog(@"ATBannerViewController::bannerView:didClickWithPlacementID:%@", placementID);
 }
 
--(void) bannerView:(UPArpuBannerView*)bannerView didCloseWithPlacementID:(NSString*)placementID {
-    NSLog(@"UPArpuBannerViewController::bannerView:didCloseWithPlacementID:%@", placementID);
+-(void) bannerView:(ATBannerView*)bannerView didCloseWithPlacementID:(NSString*)placementID {
+    NSLog(@"ATBannerViewController::bannerView:didCloseWithPlacementID:%@", placementID);
 }
 
--(void) bannerView:(UPArpuBannerView *)bannerView didAutoRefreshWithPlacement:(NSString *)placementID {
-    NSLog(@"UPArpuBannerViewController::bannerView:didAutoRefreshWithPlacement:%@", placementID);
+-(void) bannerView:(ATBannerView *)bannerView didAutoRefreshWithPlacement:(NSString *)placementID {
+    NSLog(@"ATBannerViewController::bannerView:didAutoRefreshWithPlacement:%@", placementID);
 }
 
--(void) bannerView:(UPArpuBannerView *)bannerView failedToAutoRefreshWithPlacementID:(NSString *)placementID error:(NSError *)error {
-    NSLog(@"UPArpuBannerViewController::bannerView:failedToAutoRefreshWithPlacementID:%@ error:%@", placementID, error);
+-(void) bannerView:(ATBannerView *)bannerView failedToAutoRefreshWithPlacementID:(NSString *)placementID error:(NSError *)error {
+    NSLog(@"ATBannerViewController::bannerView:failedToAutoRefreshWithPlacementID:%@ error:%@", placementID, error);
 }</code></pre>
 
 ## <h2 id='7'>7 原生广告(Native)</h2>
@@ -438,32 +439,32 @@ if ([[UPArpuAdManager sharedManager] bannerAdReadyForPlacementID:@"your banner p
 在继续接入之前，您需要保证您已经完成了以上 [配置](#1) 步骤。
 
 ### 7.1 导入Native Framework
-将**UpArpuNative.framework**拖到您的项目中，除了**UpArpuNative.framework**，您还需要集成第三方平台的Adapter，目前**UpArpuSDK**支持以下的平台(对应平台需要导入的Adapter)。
+将**AnyThinkNative.framework**拖到您的项目中，除了**AnyThinkNative.framework**，您还需要集成第三方平台的Adapter，目前**AnyThinkSDK**支持以下的平台(对应平台需要导入的Adapter)。
 
 |Third Party Ad Network|Adapter Framework|
 |---|---|
-|Facebook|UpArpuFacebookNativeAdapter.framework|
-|Admob|UpArpuAdmobNativeAdapter.framework|
-|Flurry|UpArpuFlurryNativeAdapter.framework|
-|Applovin|UpArpuApplovinNativeAdapter.framework|
-|GDT|UpArpuGDTNativeAdapter.framework|
-|Baidu|UpArpuBaiduNativeAdapter.framework|
-|TouTiao|UpArpuTTNativeAdapter.framework|
-|Nend|UpArpuNendNativeAdapter.framework|
-|AppNext|UpArpuAppNextNativeAdapter.framework|
-|Yeahmobi|UpArpuYeahmobiNativeAdapter.framework|
-|Oneway|UpArpuOnewayNativeAdapter.framework|
-|Mintegral|UpArpuMintegralNativeAdapter.framework|
-|Mopub|UpArpuMopubNativeAdapter.framework|
+|Facebook|AnyThinkFacebookNativeAdapter.framework|
+|Admob|AnyThinkAdmobNativeAdapter.framework|
+|Flurry|AnyThinkFlurryNativeAdapter.framework|
+|Applovin|AnyThinkApplovinNativeAdapter.framework|
+|GDT|AnyThinkGDTNativeAdapter.framework|
+|Baidu|AnyThinkBaiduNativeAdapter.framework|
+|TouTiao|AnyThinkTTNativeAdapter.framework|
+|Nend|AnyThinkNendNativeAdapter.framework|
+|AppNext|AnyThinkAppNextNativeAdapter.framework|
+|Yeahmobi|AnyThinkYeahmobiNativeAdapter.framework|
+|Oneway|AnyThinkOnewayNativeAdapter.framework|
+|Mintegral|AnyThinkMintegralNativeAdapter.framework|
+|Mopub|AnyThinkMopubNativeAdapter.framework|
 
 ### 7.2 加载Native
-您需要确认你添加了**UPArpuNativeADDelegate**代理协议：
-<pre><code>@interface UPArpuNativeViewController()\<UPArpuNativeADDelegate\>
+您需要确认你添加了**ATNativeADDelegate**代理协议：
+<pre><code>@interface ATNativeViewController()\<ATNativeADDelegate\>
 //Other properties&methods declarations
 @end</code></pre>
 
 加载native:
-<pre><code>[[UPArpuAdManager sharedManager] loadADWithPlacementID:@"your native placement id" extra:nil delegate:self];</code></pre>
+<pre><code>[[ATAdManager sharedManager] loadADWithPlacementID:@"your native placement id" extra:nil delegate:self];</code></pre>
 
 您可以实现以下的代理方法来获取各种加载事件：
 <pre><code>#pragma mark - loading delegate
@@ -479,18 +480,18 @@ if ([[UPArpuAdManager sharedManager] bannerAdReadyForPlacementID:@"your banner p
 您可以检查Native广告是否已经ready：
  
 <pre><code>-(void) showAD {
-    UPArpuNativeADConfiguration *config = [[UPArpuNativeADConfiguration alloc] init];
+    ATNativeADConfiguration *config = [[ATNativeADConfiguration alloc] init];
     config.ADFrame = CGRectMake(.0f, 64.0f, CGRectGetWidth(self.view.bounds), 400.0f);
     config.delegate = self;
     config.renderingViewClass = [DMADView class];
-    DMADView *adView = (DMADView*)[[UPArpuAdManager sharedManager] retriveAdViewWithPlacementID:_placementIDs[_name] configuration:config];
+    DMADView *adView = (DMADView*)[[ATAdManager sharedManager] retriveAdViewWithPlacementID:_placementIDs[_name] configuration:config];
     adView.tag = adViewTag;
     [self.view addSubview:adView];
 }</code></pre>
 
 #### 7.3.1 实现Custom Native Ad View
-要展示一个Native广告，您需要定义一个自定义的视图，它需要继承于**UPNativeADView**，并添加**UPNativeRendering**协议。所以需要您去实现某些方法，在我们的Demo中，我们通过添加一些属性，确保协议中的方法可以获取到这些属性。
-<pre><code>@interface DMADView:UPArpuNativeADView
+要展示一个Native广告，您需要定义一个自定义的视图，它需要继承于**ATNativeADView**，并添加**ATNativeRendering**协议。所以需要您去实现某些方法，在我们的Demo中，我们通过添加一些属性，确保协议中的方法可以获取到这些属性。
+<pre><code>@interface DMADView:ATNativeADView
 @property(nonatomic, readonly) UILabel \*advertiserLabel;
 @property(nonatomic, readonly) UILabel \*textLabel;
 @property(nonatomic, readonly) UILabel \*titleLabel;
@@ -569,28 +570,28 @@ UI元素包括：
 使用何种布局技术完全取决于您，可以根据您的习惯任意选择，it‘s up to you。
 
 #### 7.3.2 使用您的Custom Native Ad View展示Native
-展示广告之前，您需要先创建一个**UPNativeADConfiguration**实例，设置您想要的广告大小。定制广告视图的类，也可以用来去实现delegate获取各种展示的事件，之后你可以调用**UPArpuAdManager**的单例方法**retriveAdViewWithPlacementID:configuration:**并带上placementid会返回一个您准备的广告视图对象，您只需要将其添加到您想要展示广告的视图之上：
+展示广告之前，您需要先创建一个**ATNativeADConfiguration**实例，设置您想要的广告大小。定制广告视图的类，也可以用来去实现delegate获取各种展示的事件，之后你可以调用**ATAdManager**的单例方法**retriveAdViewWithPlacementID:configuration:**并带上placementid会返回一个您准备的广告视图对象，您只需要将其添加到您想要展示广告的视图之上：
 
 
 <pre><code>-(void) showAD {
-    UPArpuNativeADConfiguration *config = [[UPArpuNativeADConfiguration alloc] init];
+    ATNativeADConfiguration *config = [[ATNativeADConfiguration alloc] init];
     config.ADFrame = CGRectMake(.0f, 64.0f, CGRectGetWidth(self.view.bounds), 400.0f);
     config.delegate = self;
     config.renderingViewClass = [DMADView class];
-    DMADView *adView = (DMADView*)[[UPArpuAdManager sharedManager] retriveAdViewWithPlacementID:_placementIDs[_name] configuration:config];
+    DMADView *adView = (DMADView*)[[ATAdManager sharedManager] retriveAdViewWithPlacementID:_placementIDs[_name] configuration:config];
     adView.tag = adViewTag;
     [self.view addSubview:adView];
 }</code></pre>
 
 ### 7.4 实现Native的Delegate
-您可以实现**UPArpuNativeDelegate**的方法来获取banner的各种事件：
+您可以实现**ATNativeDelegate**的方法来获取banner的各种事件：
 
 <pre><code>//Called when user click the ad
--(void) didClickNativeAdInAdView:(UPArpuNativeADView*)adView placementID:(NSString*)placementID {
+-(void) didClickNativeAdInAdView:(ATNativeADView*)adView placementID:(NSString*)placementID {
     NSLog(@"did click native ad with placement id:%@", placementID);
 }
 //Called when the ad has been shown
--(void) didShowNativeAdInAdView:(UPArpuNativeADView*)adView placementID:(NSString*)placementID {
+-(void) didShowNativeAdInAdView:(ATNativeADView*)adView placementID:(NSString*)placementID {
     adView.mainImageView.hidden = [adView isVideoContents];
 }</code></pre>
 
@@ -598,38 +599,38 @@ UI元素包括：
 在继续接入之前，您需要保证您已经完成了以上 [配置](#1) 步骤。
 
 ### 8.1 导入Native Framework
-将**UpArpuNative.framework**拖到您的项目中，除了**UpArpuNative.framework**，您还需要集成第三方平台的Adapter，目前**UpArpuSDK**支持以下的平台(对应平台需要导入的Adapter)。
+将**AnyThinkNative.framework**拖到您的项目中，除了**AnyThinkNative.framework**，您还需要集成第三方平台的Adapter，目前**AnyThinkSDK**支持以下的平台(对应平台需要导入的Adapter)。
 
 |Third Party Ad Network|Adapter Framework|
 |---|---|
-|Facebook|UpArpuFacebookNativeAdapter.framework|
-|Admob|UpArpuAdmobNativeAdapter.framework|
-|Flurry|UpArpuFlurryNativeAdapter.framework|
-|Applovin|UpArpuApplovinNativeAdapter.framework|
-|GDT|UpArpuGDTNativeAdapter.framework|
-|Baidu|UpArpuBaiduNativeAdapter.framework|
-|TouTiao|UpArpuTTNativeAdapter.framework|
-|Nend|UpArpuNendNativeAdapter.framework|
-|AppNext|UpArpuAppNextNativeAdapter.framework|
-|Yeahmobi|UpArpuYeahmobiNativeAdapter.framework|
-|Oneway|UpArpuOnewayNativeAdapter.framework|
-|Mintegral|UpArpuMintegralNativeAdapter.framework|
-|Mopub|UpArpuMopubNativeAdapter.framework|
+|Facebook|AnyThinkFacebookNativeAdapter.framework|
+|Admob|AnyThinkAdmobNativeAdapter.framework|
+|Flurry|AnyThinkFlurryNativeAdapter.framework|
+|Applovin|AnyThinkApplovinNativeAdapter.framework|
+|GDT|AnyThinkGDTNativeAdapter.framework|
+|Baidu|AnyThinkBaiduNativeAdapter.framework|
+|TouTiao|AnyThinkTTNativeAdapter.framework|
+|Nend|AnyThinkNendNativeAdapter.framework|
+|AppNext|AnyThinkAppNextNativeAdapter.framework|
+|Yeahmobi|AnyThinkYeahmobiNativeAdapter.framework|
+|Oneway|AnyThinkOnewayNativeAdapter.framework|
+|Mintegral|AnyThinkMintegralNativeAdapter.framework|
+|Mopub|AnyThinkMopubNativeAdapter.framework|
 
 ### 8.2 加载Native Banner
-您需要确认你添加了**UPArpuNativeBannerDelegate**代理协议：
-<pre><code>@interface UPArpuNativeBannerViewController()\<UPArpuNativeBannerDelegate\>
+您需要确认你添加了**ATNativeBannerDelegate**代理协议：
+<pre><code>@interface ATNativeBannerViewController()\<ATNativeBannerDelegate\>
 //Other properties&methods declarations
 @end</code></pre>
 
 加载NativeBanner广告:
-<pre><code>[UPArpuNativeBannerWrapper loadNativeBannerAdWithPlacementID:_placementID extra:nil customData:nil delegate:self];</code></pre>
+<pre><code>[ATNativeBannerWrapper loadNativeBannerAdWithPlacementID:_placementID extra:nil customData:nil delegate:self];</code></pre>
 
 ### 8.3 展示Native Banner
 在您NativeBanner加载完成之后，您可以调用API去展示NativeBanner：
  
 <pre><code>-(void) showAd {
-    UPArpuNativeBannerView *bannerView = [UPArpuNativeBannerWrapper retrieveNativeBannerAdViewWithPlacementID:_placementID extra:@{kUPArpuNativeBannerAdShowingExtraAdSizeKey:[NSValue valueWithCGSize:CGSizeMake(CGRectGetWidth([UIScreen mainScreen].bounds), 80.0f)], kUPArpuNativeBannerAdShowingExtraAutorefreshIntervalKey:@10.0f, kUPArpuNativeBannerAdShowingExtraHideCloseButtonFlagKey:@NO, kUPArpuNativeBannerAdShowingExtraCTAButtonBackgroundColorKey:[UIColor redColor], kUPArpuNativeBannerAdShowingExtraCTAButtonTitleColorKey:[UIColor whiteColor], kUPArpuNativeBannerAdShowingExtraCTAButtonTitleFontKey:[UIFont systemFontOfSize:12.0f], kUPArpuNativeBannerAdShowingExtraTitleColorKey:[UIColor grayColor], kUPArpuNativeBannerAdShowingExtraTitleFontKey:[UIFont systemFontOfSize:12.0f], kUPArpuNativeBannerAdShowingExtraTextColorKey:[UIColor lightGrayColor], kUPArpuNativeBannerAdShowingExtraTextFontKey:[UIFont systemFontOfSize:10.0f], kUPArpuNativeBannerAdShowingExtraBackgroundColorKey:[UIColor whiteColor], kUPArpuNativeBannerAdShowingExtraAdvertiserTextFontKey:[UIFont systemFontOfSize:12.0f], kUPArpuNativeBannerAdShowingExtraAdvertiserTextColorKey:[UIColor lightGrayColor]} delegate:self];
+    ATNativeBannerView *bannerView = [ATNativeBannerWrapper retrieveNativeBannerAdViewWithPlacementID:_placementID extra:@{kATNativeBannerAdShowingExtraAdSizeKey:[NSValue valueWithCGSize:CGSizeMake(CGRectGetWidth([UIScreen mainScreen].bounds), 80.0f)], kATNativeBannerAdShowingExtraAutorefreshIntervalKey:@10.0f, kATNativeBannerAdShowingExtraHideCloseButtonFlagKey:@NO, kATNativeBannerAdShowingExtraCTAButtonBackgroundColorKey:[UIColor redColor], kATNativeBannerAdShowingExtraCTAButtonTitleColorKey:[UIColor whiteColor], kATNativeBannerAdShowingExtraCTAButtonTitleFontKey:[UIFont systemFontOfSize:12.0f], kATNativeBannerAdShowingExtraTitleColorKey:[UIColor grayColor], kATNativeBannerAdShowingExtraTitleFontKey:[UIFont systemFontOfSize:12.0f], kATNativeBannerAdShowingExtraTextColorKey:[UIColor lightGrayColor], kATNativeBannerAdShowingExtraTextFontKey:[UIFont systemFontOfSize:10.0f], kATNativeBannerAdShowingExtraBackgroundColorKey:[UIColor whiteColor], kATNativeBannerAdShowingExtraAdvertiserTextFontKey:[UIFont systemFontOfSize:12.0f], kATNativeBannerAdShowingExtraAdvertiserTextColorKey:[UIColor lightGrayColor]} delegate:self];
     bannerView.frame = CGRectMake(.0f, 100.0f, CGRectGetWidth(bannerView.bounds), CGRectGetHeight(bannerView.bounds));
     bannerView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     [self.view addSubview:bannerView];
@@ -638,66 +639,66 @@ UI元素包括：
 ### 8.4 实现Native Banner的Delegate
 <pre><code>#pragma mark - native banner delegate(s)
 -(void) didFinishLoadingNativeBannerAdWithPlacementID:(NSString *)placementID {
-    NSLog(@"UPArpuNativeBannerViewController::didFinishLoadingNativeBannerAdWithPlacementID:%@", placementID);
+    NSLog(@"ATNativeBannerViewController::didFinishLoadingNativeBannerAdWithPlacementID:%@", placementID);
 }
 
 -(void) didFailToLoadNativeBannerAdWithPlacementID:(NSString*)placementID error:(NSError*)error {
-    NSLog(@"UPArpuNativeBannerViewController::didFailToLoadNativeBannerAdWithPlacementID:%@ error:%@", placementID, error);
+    NSLog(@"ATNativeBannerViewController::didFailToLoadNativeBannerAdWithPlacementID:%@ error:%@", placementID, error);
 }
 
--(void) didShowNativeBannerAdInView:(UPArpuNativeBannerView*)bannerView placementID:(NSString*)placementID {
-    NSLog(@"UPArpuNativeBannerViewController::didShowNativeBannerAdInView:%@ placementID:%@", bannerView, placementID);
+-(void) didShowNativeBannerAdInView:(ATNativeBannerView*)bannerView placementID:(NSString*)placementID {
+    NSLog(@"ATNativeBannerViewController::didShowNativeBannerAdInView:%@ placementID:%@", bannerView, placementID);
 }
 
--(void) didClickNativeBannerAdInView:(UPArpuNativeBannerView*)bannerView placementID:(NSString*)placementID {
-    NSLog(@"UPArpuNativeBannerViewController::didClickNativeBannerAdInView:%@ placementID:%@", bannerView, placementID);
+-(void) didClickNativeBannerAdInView:(ATNativeBannerView*)bannerView placementID:(NSString*)placementID {
+    NSLog(@"ATNativeBannerViewController::didClickNativeBannerAdInView:%@ placementID:%@", bannerView, placementID);
 }
 
--(void) didClickCloseButtonInNativeBannerAdView:(UPArpuNativeBannerView*)bannerView placementID:(NSString*)placementID {
-    NSLog(@"UPArpuNativeBannerViewController::didClickCloseButtonInNativeBannerAdView:%@ placementID:%@", bannerView, placementID);
+-(void) didClickCloseButtonInNativeBannerAdView:(ATNativeBannerView*)bannerView placementID:(NSString*)placementID {
+    NSLog(@"ATNativeBannerViewController::didClickCloseButtonInNativeBannerAdView:%@ placementID:%@", bannerView, placementID);
 }
 
--(void) didAutorefreshNativeBannerAdInView:(UPArpuNativeBannerView*)bannerView placementID:(NSString*)placementID {
-    NSLog(@"UPArpuNativeBannerViewController::didAutorefreshNativeBannerAdInView:%@ placementID:%@", bannerView, placementID);
+-(void) didAutorefreshNativeBannerAdInView:(ATNativeBannerView*)bannerView placementID:(NSString*)placementID {
+    NSLog(@"ATNativeBannerViewController::didAutorefreshNativeBannerAdInView:%@ placementID:%@", bannerView, placementID);
 }
 
--(void) didFailToAutorefreshNativeBannerAdInView:(UPArpuNativeBannerView*)bannerView placementID:(NSString*)placementID error:(NSError*)error {
-    NSLog(@"UPArpuNativeBannerViewController::didFailToAutorefreshNativeBannerAdInView:%@ placementID:%@ error:%@", bannerView, placementID, error);
+-(void) didFailToAutorefreshNativeBannerAdInView:(ATNativeBannerView*)bannerView placementID:(NSString*)placementID error:(NSError*)error {
+    NSLog(@"ATNativeBannerViewController::didFailToAutorefreshNativeBannerAdInView:%@ placementID:%@ error:%@", bannerView, placementID, error);
 }</code></pre>
 
 ## <h2 id='9'>9 (原生Splash)Native Splash</h2>
 在继续接入之前，您需要保证您已经完成了以上 [配置](#1) 步骤。
 
 ### 9.1 导入 Native Framework
-Native Splash是基于Native实现的，所以你需要导入同样的**UpArpuNative.framework**到您的项目中，除了**UpArpuNative.framework**，您还需要集成第三方平台的Adapter，目前**UpArpuSDK**支持以下的平台(对应平台需要导入的Adapter)。
+Native Splash是基于Native实现的，所以你需要导入同样的**AnyThinkNative.framework**到您的项目中，除了**AnyThinkNative.framework**，您还需要集成第三方平台的Adapter，目前**AnyThinkSDK**支持以下的平台(对应平台需要导入的Adapter)。
 
 |Third Party Ad Network|Adapter Framework|
 |---|---|
-|Facebook|UpArpuFacebookNativeAdapter.framework|
-|Admob|UpArpuAdmobNativeAdapter.framework|
-|Flurry|UpArpuFlurryNativeAdapter.framework|
-|Applovin|UpArpuApplovinNativeAdapter.framework|
-|GDT|UpArpuGDTNativeAdapter.framework|
-|Baidu|UpArpuBaiduNativeAdapter.framework|
-|TouTiao|UpArpuTTNativeAdapter.framework|
-|Nend|UpArpuNendNativeAdapter.framework|
-|AppNext|UpArpuAppNextNativeAdapter.framework|
-|Yeahmobi|UpArpuYeahmobiNativeAdapter.framework|
-|Oneway|UpArpuOnewayNativeAdapter.framework|
-|Mintegral|UpArpuMintegralNativeAdapter.framework|
-|Mopub|UpArpuMopubNativeAdapter.framework|
+|Facebook|AnyThinkFacebookNativeAdapter.framework|
+|Admob|AnyThinkAdmobNativeAdapter.framework|
+|Flurry|AnyThinkFlurryNativeAdapter.framework|
+|Applovin|AnyThinkApplovinNativeAdapter.framework|
+|GDT|AnyThinkGDTNativeAdapter.framework|
+|Baidu|AnyThinkBaiduNativeAdapter.framework|
+|TouTiao|AnyThinkTTNativeAdapter.framework|
+|Nend|AnyThinkNendNativeAdapter.framework|
+|AppNext|AnyThinkAppNextNativeAdapter.framework|
+|Yeahmobi|AnyThinkYeahmobiNativeAdapter.framework|
+|Oneway|AnyThinkOnewayNativeAdapter.framework|
+|Mintegral|AnyThinkMintegralNativeAdapter.framework|
+|Mopub|AnyThinkMopubNativeAdapter.framework|
 
 ### 9.2 加载Native Splash
-您需要确认你添加了**UPArpuNativeSplashDelegate**代理协议：
-<pre><code>@interface UPArpuNativeSplashViewController()\<UPArpuNativeSplashDelegate\>
+您需要确认你添加了**ATNativeSplashDelegate**代理协议：
+<pre><code>@interface ATNativeSplashViewController()\<ATNativeSplashDelegate\>
 //Other properties&methods declarations
 @end</code></pre>
 
 加载native splash广告:
-<pre><code>[UPArpuNativeSplashWrapper loadNativeSplashAdWithPlacementID:@"native splash placement id" extra:@{kExtraInfoNativeAdTypeKey:@(UPArpuGDTNativeAdTypeSelfRendering), kExtraInfoNativeAdSizeKey:[NSValue valueWithCGSize:CGSizeMake(CGRectGetWidth(self.view.bounds) - 30.0f, 400.0f)], kUPArpuExtraNativeImageSizeKey:kUPArpuExtraNativeImageSize690_388, kUPArpuNativeSplashShowingExtraCountdownIntervalKey:@3} customData:nil delegate:self];</code></pre>
+<pre><code>[ATNativeSplashWrapper loadNativeSplashAdWithPlacementID:@"native splash placement id" extra:@{kExtraInfoNativeAdTypeKey:@(ATGDTNativeAdTypeSelfRendering), kExtraInfoNativeAdSizeKey:[NSValue valueWithCGSize:CGSizeMake(CGRectGetWidth(self.view.bounds) - 30.0f, 400.0f)], kATExtraNativeImageSizeKey:kATExtraNativeImageSize690_388, kATNativeSplashShowingExtraCountdownIntervalKey:@3} customData:nil delegate:self];</code></pre>
 
 ### 9.3 展示Native Splash
-在您Native Splash加载完成之后，您可以调用API去展示banner：
+在您Native Splash加载完成之后，您可以调用API去展示：
  
 <pre><code>-(void) showAd {
     CGFloat width = CGRectGetWidth([UIScreen mainScreen].bounds);
@@ -705,11 +706,11 @@ Native Splash是基于Native实现的，所以你需要导入同样的**UpArpuNa
     label.textAlignment = NSTextAlignmentCenter;
     label.backgroundColor = [UIColor whiteColor];
     label.text = @"Joypac";
-    [UPArpuNativeSplashWrapper showNativeSplashAdWithPlacementID:placementID extra:@{kUPArpuNatievSplashShowingExtraStyleKey:kUPArpuNativeSplashShowingExtraStylePortrait, kUPArpuNativeSplashShowingExtraCountdownIntervalKey:@3, kUPArpuNativeSplashShowingExtraContainerViewKey:label} delegate:self];
+    [ATNativeSplashWrapper showNativeSplashAdWithPlacementID:placementID extra:@{kATNatievSplashShowingExtraStyleKey:kATNativeSplashShowingExtraStylePortrait, kATNativeSplashShowingExtraCountdownIntervalKey:@3, kATNativeSplashShowingExtraContainerViewKey:label} delegate:self];
 }</code></pre>
 
 ### 9.4 实现Native Splash的Delegate
-您可以实现**UPArpuNativeSplashDelegate**的方法来获取Splash的各种事件：
+您可以实现**ATNativeSplashDelegate**的方法来获取Splash的各种事件：
 
 <pre><code>-(void) finishLoadingNativeSplashAdForPlacementID:(NSString*)placementID {
 NSLog(@"ViewController::finishLoadingNativeSplashAdForPlacementID:%@", placementID);
@@ -751,17 +752,17 @@ Mintegral和Facebook支持header bidding的应用版本如下：
 
 ## <h2 id='11'>11 通用数据保护条例GDPR</h2>
 
-<span style="font-family:‘Times New Roman‘;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>欧盟发布的《**通用数据保护条例**》(GDPR)将于 2018 年 5 月 25 日生效。 为支持GDPR协议我们更新了<i>**UPARPU Privacy Policy**</i>，请开发者从我们官网了解<a href="https://www.uparpu.com/privacy-policy" target = "_blank"><i>**UPARPU Privacy Policy**</i></a>的相关内容。同时，为保障用户数据的隐私安全，我们在新版的UPARPU SDK v1.2及以上中加入了数据保护功能，请开发者查阅以下文档并完成SDK接入。<br>
-<span style="font-family:‘Times New Roman‘;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>我们提供了两种方法给开发者设置GDPR配置。你可以调用UPARPU SDK的方法来为所有网络设置统一的数据保护级别，也可以分别为各网络设置数据保护级别；如果是后者，传入的数据结构需与第三方网络的要求一致而且这些数据结构在未来可能会发生改变。<br>
-<h3>4.1 使用UPARPU SDK方法</h3>
-<span style="font-family:‘Times New Roman‘;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>你可以调用UPARPU SDK里**UPArpuAPI**的单例中的**setDataConsentSet:consentString:**方法来设置GDPR级别，其中consentString参数是为Flurry预留的。UPArpu SDK提供了四个级别的数据保护：<br>
-<span style="font-family:‘Times New Roman‘;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>1) UpArpuDataConsentSetUnknown(0)<br>
+<span style="font-family:‘Times New Roman‘;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>欧盟发布的《**通用数据保护条例**》(GDPR)将于 2018 年 5 月 25 日生效。 为支持GDPR协议我们更新了<i>**AnyThink Privacy Policy**</i>，请开发者从我们官网了解<a href="https://www.topon.com/privacy-policy" target = "_blank"><i>**AnyThink Privacy Policy**</i></a>的相关内容。同时，为保障用户数据的隐私安全，我们在新版的AnyThink SDK v1.2及以上中加入了数据保护功能，请开发者查阅以下文档并完成SDK接入。<br>
+<span style="font-family:‘Times New Roman‘;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>我们提供了两种方法给开发者设置GDPR配置。你可以调用AnyThink SDK的方法来为所有网络设置统一的数据保护级别，也可以分别为各网络设置数据保护级别；如果是后者，传入的数据结构需与第三方网络的要求一致而且这些数据结构在未来可能会发生改变。<br>
+<h3>4.1 使用AnyThink SDK方法</h3>
+<span style="font-family:‘Times New Roman‘;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>你可以调用AnyThink SDK里**ATAPI**的单例中的**setDataConsentSet:consentString:**方法来设置GDPR级别，其中consentString参数是为Flurry预留的。AT SDK提供了四个级别的数据保护：<br>
+<span style="font-family:‘Times New Roman‘;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>1) AnyThinkDataConsentSetUnknown(0)<br>
 <span style="font-family:‘Times New Roman‘;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>这是默认值，当开发者未设置时采用此值；这种情况下，如果用户在GDPR区域内，SDK初始化将失败，后续广告请求也会因为失败。<br>
-<span style="font-family:‘Times New Roman‘;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>2) UpArpuDataConsentSetPersonalized(1)<br>
+<span style="font-family:‘Times New Roman‘;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>2) AnyThinkDataConsentSetPersonalized(1)<br>
 <span style="font-family:‘Times New Roman‘;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>这个级别代表用户同意SDK收集并使用他的个人数据来为他提供相关性更高、更适合他的广告。<br>
-<span style="font-family:‘Times New Roman‘;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>3) UpArpuDataConsentSetNonpersonalized(2)<br>
+<span style="font-family:‘Times New Roman‘;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>3) AnyThinkDataConsentSetNonpersonalized(2)<br>
 <span style="font-family:‘Times New Roman‘;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>如果数据保护级别设置为这个值，SDK不会收集用户个人数据，因为提供的广告可能不会符合用户的情况。另外，在这种情况下，某些不涉及用户隐私的数据可能仍会被收集。<br>
-<span style="font-family:‘Times New Roman‘;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>4) UpArpuDataConsentSetForbidden(3)<br>
+<span style="font-family:‘Times New Roman‘;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>4) AnyThinkDataConsentSetForbidden(3)<br>
 <span style="font-family:‘Times New Roman‘;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>禁止收集任何数据，SDK初始化将失败，广告请求将不会发起。<br>
 
 ### 4.2 Setting data consent separately
@@ -800,5 +801,5 @@ Mintegral和Facebook支持header bidding的应用版本如下：
             kNetworkNameAdmob:@{kAdmobConsentStatusKey:@1, kAdmobUnderAgeKey:@NO},<br>
             kNetworkNameApplovin:@{kApplovinConscentStatusKey:@YES, kApplovinUnderAgeKey:@NO<br>}<br>
            <br>
-具体设置方法请参见[第三方网络配置](http://www.uparpu.com)
+具体设置方法请参见[第三方网络配置](http://www.topon.com)
 

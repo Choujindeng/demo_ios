@@ -1,4 +1,4 @@
-# Integrating UpArpuSDK for iOS
+# Integrating AnyThinkSDK for iOS
 
 1、[Introduction](#2)<br>
 2、[Get Started](#1)<br>
@@ -13,15 +13,34 @@
 11、[On GDPR](#11)<br>
 
 ## <h2 id='2'>1 Introduction</h2>
-This document walks you through the process of integrating UpArpuSDK for iOS in a step-by-step manner.
+This document walks you through the process of integrating AnyThinkSDK for iOS in a step-by-step manner.
 
 ## 1.1 Supported Ad Formats
 
-UpArpuSDK supports native, rewarded video, banner, interstitial and splash ads.
+AnyThinkSDK supports native, rewarded video, banner, interstitial and splash ads.
 
-## 1.2 UpArpuSDK Architecture
+## 1.2 AnyThinkSDK Architecture
   
-![](UpArpuSDK_Architecture.png)
+![](AnyThinkSDK_Architecture.png)
+
+As you can see in the diagram above, the entire SDK can be devided into three layers(apart from Third Party SDK, which, technically, doesn't belong to AnyThinkSDK). When integrating AnyThinkSDK, import these module as decribed below:
+
+|Layer|Required|
+|----|----|
+|AnyThink's Core Module|You have to import these two frameworks into your project regardless of what third party's what format you would like to include.|
+|AnyThink's Format Module|Only import the modules for the formats you would like to include and leave out those you don't need, see the example below.|
+|AnyThink's Adapters|Only import the modules for the formats for the thrid party networks you would like to include and leave out those you don't need, see the example below.|
+|Third Party SDK|Only import the modules for the third party networks you would like to include and leave out those you don't need, see the example below.|
+
+**Example:** 
+Suppose you need to integrate Admob's rewarded video & interstitial, and Facebook's rewarded video, according to the rules above, the frameworks you need to import into your project are listed below:
+
+|Layer|Framework Needed|
+|----|----|
+|AnyThink's Core Module|AnyThinkSDK.framework</br> AnyThinkHeaderBidding.framework|
+|AnyThink's Format Module|AnyThinkInterstitial.framework</br> AnyThinkRewardedVideo.framework|
+|AnyThink's Adapters|AnyThinkAdmobRewardedVideoAdapter.framework</br>AnyThinkAdmobInterstitialAdapter.framework</br>AnyThinkFacebookRewardedVideoAdapter.framework|
+|Third Party SDK|GoogleMobileAds.framework</br>PersonalizedAdConsent.framework</br>FBAudienceNetwork.framework</br>FBAudienceNetworkBiddingKit.framework</br>FBSDKCoreKit.framework|
   
 <h2 id='1'>2 Get Started</h2>
 
@@ -36,11 +55,11 @@ The core module contains the following frameworks and resource bundle files, jus
 
 |File|Note|
 |---|---|
-|UpArpuSDK.framework|Base framework|
-|UpArpuSDK.bundle|Resource bundle|
-|UpArpuHeaderBiding.framework|Header bidding module|
+|AnyThinkSDK.framework|Base framework|
+|AnyThinkSDK.bundle|Resource bundle|
+|AnyThinkHeaderBiding.framework|Header bidding module|
 
-**NOTE:** Since **UpArpuSDK** does not support cocoapods, framewroks whose name start with the prefex UpArpu have to be manually downloaded and imported into your project whereas third party SDK can be integrated using cocoapods if supported.
+**NOTE:** Since **AnyThinkSDK** does not support cocoapods, framewroks whose name start with the prefex AnyThink have to be manually downloaded and imported into your project whereas third party SDK can be integrated using cocoapods if supported.
 
 ### 2.3 Configure Build Settings and Info.plist
 
@@ -82,16 +101,16 @@ You can use CocoaPods to import third party SDKs or you can download and import 
 
 ### 2.4 Initialize the SDK
 
-It's recommanded that you should initialize **UpArpuSDK** in the **application:didFinishLaunchingWithOptions:** method of your **AppDelegate**(You have to initialize the SDK before requesting any ad):
+It's recommanded that you should initialize **AnyThinkSDK** in the **application:didFinishLaunchingWithOptions:** method of your **AppDelegate**(You have to initialize the SDK before requesting any ad):
 
 <pre><code>- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-	 [UPArpuAPI setLogEnabled:YES];<span style="color:green">//Turn on debug logs</span>
-    [[UPArpuAPI sharedInstance] startWithAppID:@"a5acc73c25fbf5" appKey:@"4f7b9ac17decb9babec83aac078742c7"];
+	 [ATAPI setLogEnabled:YES];<span style="color:green">//Turn on debug logs</span>
+    [[ATAPI sharedInstance] startWithAppID:@"a5acc73c25fbf5" appKey:@"4f7b9ac17decb9babec83aac078742c7"];
     return YES;
 }</code></pre>
 
-### 2.5 Use UpArpu's Sample Ad Placements for Testing
-The quickest way to test ad functionalities is to use **UpArpuSDK** provided test placements, which are listed below:
+### 2.5 Use AnyThink's Sample Ad Placements for Testing
+The quickest way to test ad functionalities is to use **AnyThinkSDK** provided test placements, which are listed below:
 
 |Ad Format|Placement ID|
 |---|---|
@@ -110,23 +129,23 @@ After testing, you have to change these IDs into those created under your own **
 Before you continue, make sure you've walked through the steps listed in the **Get Started** section.
 
 ### 3.1 Import Splash Framework
-Drag&drop **UpArpuSplash.framework** into your project. Apart from **UpArpuSplash.framework**, you need to import the adapter frameworks for the third party ad networks you would like to integrate; Currently **UpArpuSDK** supports the following networks(their adapter frameworks are also listed here):
+Drag&drop **AnyThinkSplash.framework** into your project. Apart from **AnyThinkSplash.framework**, you need to import the adapter frameworks for the third party ad networks you would like to integrate; Currently **AnyThinkSDK** supports the following networks(their adapter frameworks are also listed here):
 
 |Third Party Ad Network|Adapter Framework|
 |---|---|
-|TouTiao|UpArpuTTSplashAdapter.framework|
-|GDT|UpArpuGDTSplashAdapter.framework|
-|Baidu|UpArpuBaiduSplashAdapter.framework|
+|TouTiao|AnyThinkTTSplashAdapter.framework|
+|GDT|AnyThinkGDTSplashAdapter.framework|
+|Baidu|AnyThinkBaiduSplashAdapter.framework|
 
 ### 3.1 Load and Show Splash
 The best spot to load&show splash ad is the application entry point, which is the **application:didFinishLaunchingWithOptions:** method of your **AppDelegate**.
 Splash's load and show functionalities are united into a single api, you can load&show a splash ad using the following code:
 
 <pre><code>- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [UPArpuAPI setLogEnabled:YES];
-    [[UPArpuAPI sharedInstance] startWithAppID:@"a5b0e8491845b3" appKey:@"7eae0567827cfe2b22874061763f30c9" error:nil];
+    [ATAPI setLogEnabled:YES];
+    [[ATAPI sharedInstance] startWithAppID:@"a5b0e8491845b3" appKey:@"7eae0567827cfe2b22874061763f30c9" error:nil];
     [self.window makeKeyAndVisible];
-    [[UPArpuAdManager sharedManager] loadADWithPlacementID:@"b5c1b048c498b9" extra:@{kUPArpuSplashExtraTolerateTimeoutKey:@5.5} customData:nil delegate:self window:self.window containerView:nil];
+    [[ATAdManager sharedManager] loadADWithPlacementID:@"b5c1b048c498b9" extra:@{kATSplashExtraTolerateTimeoutKey:@5.5} customData:nil delegate:self window:self.window containerView:nil];
     return YES;
 }</code></pre>
 
@@ -134,10 +153,10 @@ Splash's load and show functionalities are united into a single api, you can loa
 
 ### 3.2 Implement Splash Delegates
 
-You can implement **UPArpuSplashDelegate**'s methods to get notified on the various splash ad events:<br>
+You can implement **ATSplashDelegate**'s methods to get notified on the various splash ad events:<br>
 
 <pre><code>
-#pragma mark - UPArpu Splash Delegate method(s)
+#pragma mark - AT Splash Delegate method(s)
 -(void) didFinishLoadingADWithPlacementID:(NSString *)placementID {
     NSLog(@"AppDelegate::didFinishLoadingADWithPlacementID:%@", placementID);
 }
@@ -162,41 +181,41 @@ You can implement **UPArpuSplashDelegate**'s methods to get notified on the vari
 ## <h2 id='4'>4 Implement Rewarded Video</h2>
 Before you continue, make sure you've walked through the steps listed in the [Get Started](#1) section.
 ### 4.1 Import Rewarded Video Framework
-Drag&drop **UpArpuRewardedVideo.framework** into your project. Apart from **UpArpuRewardedVideo.framework**, you need to import the adapter frameworks for the third party ad networks you would like to integrate; Currently **UpArpuSDK**'s rewarded video supports the following networks(their adapter frameworks are also listed here):
+Drag&drop **AnyThinkRewardedVideo.framework** into your project. Apart from **AnyThinkRewardedVideo.framework**, you need to import the adapter frameworks for the third party ad networks you would like to integrate; Currently **AnyThinkSDK**'s rewarded video supports the following networks(their adapter frameworks are also listed here):
 
 |Third Party Ad Network|Adapter Framework|
 |---|---|
-|Facebook|UpArpuFacebookRewardedVideoAdapter.framework|
-|Admob|UpArpuAdmobRewardedVideoAdapter.framework|
-|Flurry|UpArpuFlurryRewardedVideoAdapter.framework|
-|Applovin|UpArpuApplovinRewardedVideoAdapter.framework|
-|GDT|UpArpuGDTRewardedVideoAdapter.framework|
-|Baidu|UpArpuBaiduRewardedVideoAdapter.framework|
-|TouTiao|UpArpuTTRewardedVideoAdapter.framework|
-|Nend|UpArpuNendRewardedVideoAdapter.framework|
-|Maio|UpArpuMaioRewardedVideoAdapter.framework|
-|AppNext|UpArpuAppNextRewardedVideoAdapter.framework|
-|Yeahmobi|UpArpuYeahmobiRewardedVideoAdapter.framework|
-|Oneway|UpArpuOnewayRewardedVideoAdapter.framework|
-|Mintegral|UpArpuMintegralRewardedVideoAdapter.framework|
-|Mopub|UpArpuMopubRewardedVideoAdapter.framework|
-|Vungle|UpArpuVungleRewardedVideoAdapter.framework|
-|Ironsource|UpArpuIronSourceRewardedVideoAdapter.framework|
-|Tapjoy|UpArpuTapjoyRewardedVideoAdapter.framework|
-|UnityAds|UpArpuUnityAdsRewardedVideoAdapter.framework|
-|Chartboost|UpArpuChartboostRewardedVideoAdapter.framework|
-|Inmobi|UpArpuInmobiRewardedVideoAdapter.framework|
-|Adcolony|UpArpuAdcolonyRewardedVideoAdapter.framework|
+|Facebook|AnyThinkFacebookRewardedVideoAdapter.framework|
+|Admob|AnyThinkAdmobRewardedVideoAdapter.framework|
+|Flurry|AnyThinkFlurryRewardedVideoAdapter.framework|
+|Applovin|AnyThinkApplovinRewardedVideoAdapter.framework|
+|GDT|AnyThinkGDTRewardedVideoAdapter.framework|
+|Baidu|AnyThinkBaiduRewardedVideoAdapter.framework|
+|TouTiao|AnyThinkTTRewardedVideoAdapter.framework|
+|Nend|AnyThinkNendRewardedVideoAdapter.framework|
+|Maio|AnyThinkMaioRewardedVideoAdapter.framework|
+|AppNext|AnyThinkAppNextRewardedVideoAdapter.framework|
+|Yeahmobi|AnyThinkYeahmobiRewardedVideoAdapter.framework|
+|Oneway|AnyThinkOnewayRewardedVideoAdapter.framework|
+|Mintegral|AnyThinkMintegralRewardedVideoAdapter.framework|
+|Mopub|AnyThinkMopubRewardedVideoAdapter.framework|
+|Vungle|AnyThinkVungleRewardedVideoAdapter.framework|
+|Ironsource|AnyThinkIronSourceRewardedVideoAdapter.framework|
+|Tapjoy|AnyThinkTapjoyRewardedVideoAdapter.framework|
+|UnityAds|AnyThinkUnityAdsRewardedVideoAdapter.framework|
+|Chartboost|AnyThinkChartboostRewardedVideoAdapter.framework|
+|Inmobi|AnyThinkInmobiRewardedVideoAdapter.framework|
+|Adcolony|AnyThinkAdcolonyRewardedVideoAdapter.framework|
 
 ### 4.2 Load Rewarded Video
-Make your view controller confirm to **UPArpuRewardedVideoDelegate**:
-<pre><code>@interface UPArpuRewardedVideoViewController()\<UPArpuRewardedVideoDelegate\>
+Make your view controller confirm to **ATRewardedVideoDelegate**:
+<pre><code>@interface ATRewardedVideoViewController()\<ATRewardedVideoDelegate\>
 //Other properties&methods declarations
 @end</code></pre>
 
 Load rewarded video ad like this:
 **NOTE**:When loading Facebook ads, be sure to pass in userid to get the video callback.
-<pre><code>[[UPArpuAdManager sharedManager] loadADWithPlacementID:@"your rv placement id" extra:@{kUPArpuAdLoadingExtraUserIDKey:@"test\_user\_id"} delegate:self];</code></pre>
+<pre><code>[[ATAdManager sharedManager] loadADWithPlacementID:@"your rv placement id" extra:@{kATAdLoadingExtraUserIDKey:@"test\_user\_id"} delegate:self];</code></pre>
 
 To get notified on various ad loading event, you can implemente the methods in ad loading delegate:
 <pre><code>#pragma mark - loading delegate
@@ -211,7 +230,7 @@ To get notified on various ad loading event, you can implemente the methods in a
 ### 4.3 Check If Rewarded Video's Ready
 You can check if rewarded video's ready for a placement as below:
 <pre><code>
-if ([[UPArpuAdManager sharedManager] rewardedVideoReadyForPlacementID:@"your rv placement id"]) {
+if ([[ATAdManager sharedManager] rewardedVideoReadyForPlacementID:@"your rv placement id"]) {
     //Show rv here
 } else {
     //Load rv here
@@ -222,7 +241,7 @@ if ([[UPArpuAdManager sharedManager] rewardedVideoReadyForPlacementID:@"your rv 
 After rewarded video ad has been successfully loaded, you can call the showing API to show it:
  
 <pre><code>-(void) showAD {
-    [[UPArpuAdManager sharedManager] showRewardedVideoWithPlacementID:@"rv_placement_id" inViewController:self delegate:self];
+    [[ATAdManager sharedManager] showRewardedVideoWithPlacementID:@"rv_placement_id" inViewController:self delegate:self];
 }</code></pre>
 
 ### 4.5 Implement Rewarded Video Delegates
@@ -252,40 +271,40 @@ You can implement the methods defined in rewarded video delegate to get notified
 Before you continue, make sure you've walked through the steps listed in the [Get Started](#1) section.
  
 ### 5.1 Import Interstitial Framework
-Drag&drop **UpArpuInterstitial.framework** into your project. Apart from **UpArpuInterstitial.framework**, you need to import the adapter frameworks for the third party ad networks you would like to integrate; Currently **UpArpuSDK**'s interstitial supports the following networks(their adapter frameworks are also listed here):
+Drag&drop **AnyThinkInterstitial.framework** into your project. Apart from **AnyThinkInterstitial.framework**, you need to import the adapter frameworks for the third party ad networks you would like to integrate; Currently **AnyThinkSDK**'s interstitial supports the following networks(their adapter frameworks are also listed here):
 
 |Third Party Ad Network|Adapter Framework|
 |---|---|
-|Facebook|UpArpuFacebookInterstitialAdapter.framework|
-|Admob|UpArpuAdmobInterstitialAdapter.framework|
-|Flurry|UpArpuFlurryInterstitialAdapter.framework|
-|Applovin|UpArpuApplovinInterstitialAdapter.framework|
-|GDT|UpArpuGDTInterstitialAdapter.framework|
-|Baidu|UpArpuBaiduInterstitialAdapter.framework|
-|TouTiao|UpArpuTTInterstitialAdapter.framework|
-|Nend|UpArpuNendInterstitialAdapter.framework|
-|Maio|UpArpuMaioInterstitialAdapter.framework|
-|AppNext|UpArpuAppNextInterstitialAdapter.framework|
-|Yeahmobi|UpArpuYeahmobiInterstitialAdapter.framework|
-|Oneway|UpArpuOnewayInterstitialAdapter.framework|
-|Mintegral|UpArpuMintegralInterstitialAdapter.framework|
-|Mopub|UpArpuMopubInterstitialAdapter.framework|
-|Vungle|UpArpuVungleInterstitialAdapter.framework|
-|Ironsource|UpArpuIronSourceInterstitialAdapter.framework|
-|Tapjoy|UpArpuTapjoyInterstitialAdapter.framework|
-|UnityAds|UpArpuUnityAdsInterstitialAdapter.framework|
-|Chartboost|UpArpuChartboostInterstitialAdapter.framework|
-|Inmobi|UpArpuInmobiInterstitialAdapter.framework|
-|Adcolony|UpArpuAdcolonyInterstitialAdapter.framework|
+|Facebook|AnyThinkFacebookInterstitialAdapter.framework|
+|Admob|AnyThinkAdmobInterstitialAdapter.framework|
+|Flurry|AnyThinkFlurryInterstitialAdapter.framework|
+|Applovin|AnyThinkApplovinInterstitialAdapter.framework|
+|GDT|AnyThinkGDTInterstitialAdapter.framework|
+|Baidu|AnyThinkBaiduInterstitialAdapter.framework|
+|TouTiao|AnyThinkTTInterstitialAdapter.framework|
+|Nend|AnyThinkNendInterstitialAdapter.framework|
+|Maio|AnyThinkMaioInterstitialAdapter.framework|
+|AppNext|AnyThinkAppNextInterstitialAdapter.framework|
+|Yeahmobi|AnyThinkYeahmobiInterstitialAdapter.framework|
+|Oneway|AnyThinkOnewayInterstitialAdapter.framework|
+|Mintegral|AnyThinkMintegralInterstitialAdapter.framework|
+|Mopub|AnyThinkMopubInterstitialAdapter.framework|
+|Vungle|AnyThinkVungleInterstitialAdapter.framework|
+|Ironsource|AnyThinkIronSourceInterstitialAdapter.framework|
+|Tapjoy|AnyThinkTapjoyInterstitialAdapter.framework|
+|UnityAds|AnyThinkUnityAdsInterstitialAdapter.framework|
+|Chartboost|AnyThinkChartboostInterstitialAdapter.framework|
+|Inmobi|AnyThinkInmobiInterstitialAdapter.framework|
+|Adcolony|AnyThinkAdcolonyInterstitialAdapter.framework|
 
 ### 5.2 Load Interstitial
-Make your view controller confirm to **UPArpuInterstitialDelegate**:
-<pre><code>@interface UPArpuInterstitialViewController()\<UPArpuInterstitialDelegate\>
+Make your view controller confirm to **ATInterstitialDelegate**:
+<pre><code>@interface ATInterstitialViewController()\<ATInterstitialDelegate\>
 //Other properties&methods declarations
 @end</code></pre>
 
 Load Interstitial ad like this:
-<pre><code>[[UPArpuAdManager sharedManager] loadADWithPlacementID:@"your interstitial placement id" extra:nil delegate:self];</code></pre>
+<pre><code>[[ATAdManager sharedManager] loadADWithPlacementID:@"your interstitial placement id" extra:nil delegate:self];</code></pre>
 
 To get notified on various ad loading event, you can implemente the methods in ad loading delegate:
 <pre><code>#pragma mark - loading delegate
@@ -300,7 +319,7 @@ To get notified on various ad loading event, you can implemente the methods in a
 ### 5.3 Check If Interstitial's Ready
 You can check if interstitial's ready for a placement as below:
 <pre><code>
-if ([[UPArpuAdManager sharedManager] interstitialReadyForPlacementID:@"your interstitial placement id"]) {
+if ([[ATAdManager sharedManager] interstitialReadyForPlacementID:@"your interstitial placement id"]) {
     //Show interstitial here
 } else {
     //Load interstitial here
@@ -311,71 +330,71 @@ if ([[UPArpuAdManager sharedManager] interstitialReadyForPlacementID:@"your inte
 After interstitial ad has been successfully loaded, you can call the showing API to show it:
  
 <pre><code>-(void) showAD {
-    [[UPArpuAdManager sharedManager] showInterstitialWithPlacementID:@"interstitial_placement_id" inViewController:self delegate:self];
+    [[ATAdManager sharedManager] showInterstitialWithPlacementID:@"interstitial_placement_id" inViewController:self delegate:self];
 }</code></pre>
 
 ### 5.5 Implement Interstitial Delegates
-You can implement the methods defined in **UPArpuInterstitialDelegate** to get notified on various interstitial event:
+You can implement the methods defined in **ATInterstitialDelegate** to get notified on various interstitial event:
 <pre><code>#pragma mark - showing delegate
 -(void) interstitialDidShowForPlacementID:(NSString *)placementID {
-    NSLog(@"UPArpuInterstitialViewController::interstitialDidShowForPlacementID:%@", placementID);
+    NSLog(@"ATInterstitialViewController::interstitialDidShowForPlacementID:%@", placementID);
 }
 
 -(void) interstitialFailedToShowForPlacementID:(NSString\*)placementID error:(NSError\*)error {
-    NSLog(@"UPArpuInterstitialViewController::interstitialFailedToShowForPlacementID:%@ error:%@", placementID, error);
+    NSLog(@"ATInterstitialViewController::interstitialFailedToShowForPlacementID:%@ error:%@", placementID, error);
 }
 
 -(void) interstitialDidStartPlayingVideoForPlacementID:(NSString*)placementID {
-    NSLog(@"UPArpuInterstitialViewController::interstitialDidStartPlayingVideoForPlacementID:%@", placementID);
+    NSLog(@"ATInterstitialViewController::interstitialDidStartPlayingVideoForPlacementID:%@", placementID);
 }
 
 -(void) interstitialDidEndPlayingVideoForPlacementID:(NSString*)placementID {
-    NSLog(@"UPArpuInterstitialViewController::interstitialDidEndPlayingVideoForPlacementID:%@", placementID);
+    NSLog(@"ATInterstitialViewController::interstitialDidEndPlayingVideoForPlacementID:%@", placementID);
 }
 
 -(void) interstitialDidFailToPlayForPlacementID:(NSString\*)placementID error:(NSError\*)error {
-    NSLog(@"UPArpuInterstitialViewController::interstitialDidFailToPlayForPlacementID:%@", placementID);
+    NSLog(@"ATInterstitialViewController::interstitialDidFailToPlayForPlacementID:%@", placementID);
 }
 
 -(void) interstitialDidCloseForPlacementID:(NSString*)placementID {
-    NSLog(@"UPArpuInterstitialViewController::interstitialDidCloseForPlacementID:%@", placementID);
+    NSLog(@"ATInterstitialViewController::interstitialDidCloseForPlacementID:%@", placementID);
 }
 
 -(void) interstitialDidClickForPlacementID:(NSString*)placementID {
-    NSLog(@"UPArpuInterstitialViewController::interstitialDidClickForPlacementID:%@", placementID);
+    NSLog(@"ATInterstitialViewController::interstitialDidClickForPlacementID:%@", placementID);
 }</code></pre>
 
 ## <h2 id='6'>6 Implement Banner</h2>
 Before you continue, make sure you've walked through the steps listed in the [Get Started](#1) section.
 
 ### 6.1 Import Banner Framework
-Drag&drop **UpArpuBanner.framework** into your project. Apart from **UpArpuBanner.framework**, you need to import the adapter frameworks for the third party ad networks you would like to integrate; Currently **UpArpuSDK**'s banner supports the following networks(their adapter frameworks are also listed here):
+Drag&drop **AnyThinkBanner.framework** into your project. Apart from **AnyThinkBanner.framework**, you need to import the adapter frameworks for the third party ad networks you would like to integrate; Currently **AnyThinkSDK**'s banner supports the following networks(their adapter frameworks are also listed here):
 
 |Third Party Ad Network|Adapter Framework|
 |---|---|
-|Facebook|UpArpuFacebookBannerAdapter.framework|
-|Admob|UpArpuAdmobBannerAdapter.framework|
-|Flurry|UpArpuFlurryBannerAdapter.framework|
-|Applovin|UpArpuApplovinBannerAdapter.framework|
-|GDT|UpArpuGDTBannerAdapter.framework|
-|Baidu|UpArpuBaiduBannerAdapter.framework|
-|TouTiao|UpArpuTTBannerAdapter.framework|
-|Nend|UpArpuNendBannerAdapter.framework|
-|AppNext|UpArpuAppNextBannerAdapter.framework|
-|Yeahmobi|UpArpuYeahmobiBannerAdapter.framework|
-|Oneway|UpArpuOnewayBannerAdapter.framework|
-|Mopub|UpArpuMopubBannerAdapter.framework|
-|Mopub|UpArpuInmobiBannerAdapter.framework|
+|Facebook|AnyThinkFacebookBannerAdapter.framework|
+|Admob|AnyThinkAdmobBannerAdapter.framework|
+|Flurry|AnyThinkFlurryBannerAdapter.framework|
+|Applovin|AnyThinkApplovinBannerAdapter.framework|
+|GDT|AnyThinkGDTBannerAdapter.framework|
+|Baidu|AnyThinkBaiduBannerAdapter.framework|
+|TouTiao|AnyThinkTTBannerAdapter.framework|
+|Nend|AnyThinkNendBannerAdapter.framework|
+|AppNext|AnyThinkAppNextBannerAdapter.framework|
+|Yeahmobi|AnyThinkYeahmobiBannerAdapter.framework|
+|Oneway|AnyThinkOnewayBannerAdapter.framework|
+|Mopub|AnyThinkMopubBannerAdapter.framework|
+|Mopub|AnyThinkInmobiBannerAdapter.framework|
 
 ### 6.2 Load Banner
 
-Make your view controller confirm to **UPArpuBannerDelegate**:
-<pre><code>@interface UPArpuBannerViewController()\<UPArpuBannerDelegate\>
+Make your view controller confirm to **ATBannerDelegate**:
+<pre><code>@interface ATBannerViewController()\<ATBannerDelegate\>
 //Other properties&methods declarations
 @end</code></pre>
 
 Load banner ad like this:
-<pre><code>[[UPArpuAdManager sharedManager] loadADWithPlacementID:@"your banner placement id" extra:nil delegate:self];</code></pre>
+<pre><code>[[ATAdManager sharedManager] loadADWithPlacementID:@"your banner placement id" extra:nil delegate:self];</code></pre>
 
 To get notified on various ad loading event, you can implemente the methods in ad loading delegate:
 <pre><code>#pragma mark - loading delegate
@@ -392,7 +411,7 @@ To get notified on various ad loading event, you can implemente the methods in a
 You can check if banner's ready for a placement as below:
 
 <pre><code>
-if ([[UPArpuAdManager sharedManager] bannerAdReadyForPlacementID:@"your banner placement id"]) {
+if ([[ATAdManager sharedManager] bannerAdReadyForPlacementID:@"your banner placement id"]) {
     //Show banner here
 } else {
     //Load banner here
@@ -403,9 +422,9 @@ if ([[UPArpuAdManager sharedManager] bannerAdReadyForPlacementID:@"your banner p
 After banner ad has been successfully loaded, you can call the showing API to show it:
  
 <pre><code>-(void) showBanner {
-    if ([[UPArpuAdManager sharedManager] bannerAdReadyForPlacementID:@"banner placement id"]) {
+    if ([[ATAdManager sharedManager] bannerAdReadyForPlacementID:@"banner placement id"]) {
     //Retrieve banner view
-        UPArpuBannerView *bannerView = [[UPArpuAdManager sharedManager] retrieveBannerViewForPlacementID:@"banner placement id"];
+        ATBannerView *bannerView = [[ATAdManager sharedManager] retrieveBannerViewForPlacementID:@"banner placement id"];
         bannerView.delegate = self;
         bannerView.translatesAutoresizingMaskIntoConstraints = NO;
         bannerView.tag = tag;
@@ -421,25 +440,25 @@ After banner ad has been successfully loaded, you can call the showing API to sh
 }</code></pre>
 
 ### 6.5 Implemente Banner Delegates
-You can implement the methods defined in **UPArpuBannerDelegate** to get notified on various banner event:
-<pre><code>-(void) bannerView:(UPArpuBannerView *)bannerView didShowAdWithPlacementID:(NSString *)placementID {
-    NSLog(@"UPArpuBannerViewController::bannerView:didShowAdWithPlacementID:%@", placementID);
+You can implement the methods defined in **ATBannerDelegate** to get notified on various banner event:
+<pre><code>-(void) bannerView:(ATBannerView *)bannerView didShowAdWithPlacementID:(NSString *)placementID {
+    NSLog(@"ATBannerViewController::bannerView:didShowAdWithPlacementID:%@", placementID);
 }
 
--(void) bannerView:(UPArpuBannerView*)bannerView didClickWithPlacementID:(NSString*)placementID {
-    NSLog(@"UPArpuBannerViewController::bannerView:didClickWithPlacementID:%@", placementID);
+-(void) bannerView:(ATBannerView*)bannerView didClickWithPlacementID:(NSString*)placementID {
+    NSLog(@"ATBannerViewController::bannerView:didClickWithPlacementID:%@", placementID);
 }
 
--(void) bannerView:(UPArpuBannerView*)bannerView didCloseWithPlacementID:(NSString*)placementID {
-    NSLog(@"UPArpuBannerViewController::bannerView:didCloseWithPlacementID:%@", placementID);
+-(void) bannerView:(ATBannerView*)bannerView didCloseWithPlacementID:(NSString*)placementID {
+    NSLog(@"ATBannerViewController::bannerView:didCloseWithPlacementID:%@", placementID);
 }
 
--(void) bannerView:(UPArpuBannerView *)bannerView didAutoRefreshWithPlacement:(NSString *)placementID {
-    NSLog(@"UPArpuBannerViewController::bannerView:didAutoRefreshWithPlacement:%@", placementID);
+-(void) bannerView:(ATBannerView *)bannerView didAutoRefreshWithPlacement:(NSString *)placementID {
+    NSLog(@"ATBannerViewController::bannerView:didAutoRefreshWithPlacement:%@", placementID);
 }
 
--(void) bannerView:(UPArpuBannerView *)bannerView failedToAutoRefreshWithPlacementID:(NSString *)placementID error:(NSError *)error {
-    NSLog(@"UPArpuBannerViewController::bannerView:failedToAutoRefreshWithPlacementID:%@ error:%@", placementID, error);
+-(void) bannerView:(ATBannerView *)bannerView failedToAutoRefreshWithPlacementID:(NSString *)placementID error:(NSError *)error {
+    NSLog(@"ATBannerViewController::bannerView:failedToAutoRefreshWithPlacementID:%@ error:%@", placementID, error);
 }</code></pre>
 
 ## <h2 id='7'>7 Implement Native</h2>
@@ -447,32 +466,32 @@ You can implement the methods defined in **UPArpuBannerDelegate** to get notifie
 Before you continue, make sure you've walked through the steps listed in the [Get Started](#1) section.
 
 ### 7.1 Import Native Framework
-Drag&drop **UpArpuNative.framework** into your project. Apart from **UpArpuNative.framework**, you need to import the adapter frameworks for the third party ad networks you would like to integrate; Currently **UpArpuSDK**'s native supports the following networks(their adapter frameworks are also listed here):
+Drag&drop **AnyThinkNative.framework** into your project. Apart from **AnyThinkNative.framework**, you need to import the adapter frameworks for the third party ad networks you would like to integrate; Currently **AnyThinkSDK**'s native supports the following networks(their adapter frameworks are also listed here):
 
 |Third Party Ad Network|Adapter Framework|
 |---|---|
-|Facebook|UpArpuFacebookNativeAdapter.framework|
-|Admob|UpArpuAdmobNativeAdapter.framework|
-|Flurry|UpArpuFlurryNativeAdapter.framework|
-|Applovin|UpArpuApplovinNativeAdapter.framework|
-|GDT|UpArpuGDTNativeAdapter.framework|
-|Baidu|UpArpuBaiduNativeAdapter.framework|
-|TouTiao|UpArpuTTNativeAdapter.framework|
-|Nend|UpArpuNendNativeAdapter.framework|
-|AppNext|UpArpuAppNextNativeAdapter.framework|
-|Yeahmobi|UpArpuYeahmobiNativeAdapter.framework|
-|Oneway|UpArpuOnewayNativeAdapter.framework|
-|Mintegral|UpArpuMintegralNativeAdapter.framework|
-|Mopub|UpArpuMopubNativeAdapter.framework|
+|Facebook|AnyThinkFacebookNativeAdapter.framework|
+|Admob|AnyThinkAdmobNativeAdapter.framework|
+|Flurry|AnyThinkFlurryNativeAdapter.framework|
+|Applovin|AnyThinkApplovinNativeAdapter.framework|
+|GDT|AnyThinkGDTNativeAdapter.framework|
+|Baidu|AnyThinkBaiduNativeAdapter.framework|
+|TouTiao|AnyThinkTTNativeAdapter.framework|
+|Nend|AnyThinkNendNativeAdapter.framework|
+|AppNext|AnyThinkAppNextNativeAdapter.framework|
+|Yeahmobi|AnyThinkYeahmobiNativeAdapter.framework|
+|Oneway|AnyThinkOnewayNativeAdapter.framework|
+|Mintegral|AnyThinkMintegralNativeAdapter.framework|
+|Mopub|AnyThinkMopubNativeAdapter.framework|
 
 ### 7.2 Load Native
-Make your view controller confirm to **UPArpuNativeADDelegate**:
-<pre><code>@interface UPArpuNativeViewController()\<UPArpuNativeADDelegate\>
+Make your view controller confirm to **ATNativeADDelegate**:
+<pre><code>@interface ATNativeViewController()\<ATNativeADDelegate\>
 //Other properties&methods declarations
 @end</code></pre>
 
 Load native ad like this:
-<pre><code>[[UPArpuAdManager sharedManager] loadADWithPlacementID:@"your native placement id" extra:nil delegate:self];</code></pre>
+<pre><code>[[ATAdManager sharedManager] loadADWithPlacementID:@"your native placement id" extra:nil delegate:self];</code></pre>
 
 To get notified on various ad loading event, you can implemente the methods in ad loading delegate:
 <pre><code>#pragma mark - loading delegate
@@ -488,19 +507,19 @@ To get notified on various ad loading event, you can implemente the methods in a
 After native ad has been successfully loaded, you can call the showing API to show it:
  
 <pre><code>-(void) showAD {
-    UPArpuNativeADConfiguration *config = [[UPArpuNativeADConfiguration alloc] init];
+    ATNativeADConfiguration *config = [[ATNativeADConfiguration alloc] init];
     config.ADFrame = CGRectMake(.0f, 64.0f, CGRectGetWidth(self.view.bounds), 400.0f);
     config.delegate = self;
     config.renderingViewClass = [DMADView class];
-    DMADView *adView = (DMADView*)[[UPArpuAdManager sharedManager] retriveAdViewWithPlacementID:_placementIDs[_name] configuration:config];
+    DMADView *adView = (DMADView*)[[ATAdManager sharedManager] retriveAdViewWithPlacementID:_placementIDs[_name] configuration:config];
     adView.tag = adViewTag;
     [self.view addSubview:adView];
 }</code></pre>
 
 #### 7.3.1 Implement Custom Native Ad View
 
-To show ad, you have to define a custom ad view that is a subclass of the **UPNativeADView**, which confirms to the **UPNativeRendering** protocol. That means you have to somehow implement the method listed in that protocol. In our demo, we do that by adding the various property, thus confirming to the protocol methods through those getters:
-<pre><code>@interface DMADView:UPArpuNativeADView
+To show ad, you have to define a custom ad view that is a subclass of the **ATNativeADView**, which confirms to the **ATNativeRendering** protocol. That means you have to somehow implement the method listed in that protocol. In our demo, we do that by adding the various property, thus confirming to the protocol methods through those getters:
+<pre><code>@interface DMADView:ATNativeADView
 @property(nonatomic, readonly) UILabel \*advertiserLabel;
 @property(nonatomic, readonly) UILabel \*textLabel;
 @property(nonatomic, readonly) UILabel \*titleLabel;
@@ -581,29 +600,29 @@ You can even use the famous **Masonary** open-source layout kit. Besides, **stru
 
 #### 7.3.2 Show Native Using Your Custom Native Ad View
 To show an ad, you first create a 
-**UPNativeADConfiguration** 
-instance, set the frame within which you want to show the ad, the class of your custom ad view and the delegate to get notified on the various ad showing event, then you call the **retriveAdViewWithPlacementID:configuration:** method on the singleton instance of **UPArpuAdManager** with placement id and the configuration object you just created as the parameters, that should return you an ad view ready for showing, you just add it to the view on which you want the ad to be shown:
+**ATNativeADConfiguration** 
+instance, set the frame within which you want to show the ad, the class of your custom ad view and the delegate to get notified on the various ad showing event, then you call the **retriveAdViewWithPlacementID:configuration:** method on the singleton instance of **ATAdManager** with placement id and the configuration object you just created as the parameters, that should return you an ad view ready for showing, you just add it to the view on which you want the ad to be shown:
 
 <pre><code>-(void) showAD {
-    UPArpuNativeADConfiguration *config = [[UPArpuNativeADConfiguration alloc] init];
+    ATNativeADConfiguration *config = [[ATNativeADConfiguration alloc] init];
     config.ADFrame = CGRectMake(.0f, 64.0f, CGRectGetWidth(self.view.bounds), 400.0f);
     config.delegate = self;
     config.renderingViewClass = [DMADView class];
-    DMADView *adView = (DMADView*)[[UPArpuAdManager sharedManager] retriveAdViewWithPlacementID:_placementIDs[_name] configuration:config];
+    DMADView *adView = (DMADView*)[[ATAdManager sharedManager] retriveAdViewWithPlacementID:_placementIDs[_name] configuration:config];
     adView.tag = adViewTag;
     [self.view addSubview:adView];
 }</code></pre>
 
 ### 7.4 Implement Native Delegate
-You can implement the methods defined in **UPArpuNativeDelegate** to get notified on various native event:
+You can implement the methods defined in **ATNativeDelegate** to get notified on various native event:
 
 
 <pre><code>//Called when user click the ad
--(void) didClickNativeAdInAdView:(UPArpuNativeADView*)adView placementID:(NSString*)placementID {
+-(void) didClickNativeAdInAdView:(ATNativeADView*)adView placementID:(NSString*)placementID {
     NSLog(@"did click native ad with placement id:%@", placementID);
 }
 //Called when the ad has been shown
--(void) didShowNativeAdInAdView:(UPArpuNativeADView*)adView placementID:(NSString*)placementID {
+-(void) didShowNativeAdInAdView:(ATNativeADView*)adView placementID:(NSString*)placementID {
     adView.mainImageView.hidden = [adView isVideoContents];
 }</code></pre>
 
@@ -611,38 +630,38 @@ You can implement the methods defined in **UPArpuNativeDelegate** to get notifie
 Before you continue, make sure you've walked through the steps listed in the [Get Started](#1) section.
 
 ### 8.1 Import Native Framework
-Native banner is embeded in native, so the frameworks you need to import are just the same as those of native. Drag&drop **UpArpuNative.framework** into your project. Apart from **UpArpuNative.framework**, you need to import the adapter frameworks for the third party ad networks you would like to integrate; Currently **UpArpuSDK**'s native supports the following networks(their adapter frameworks are also listed here):
+Native banner is embeded in native, so the frameworks you need to import are just the same as those of native. Drag&drop **AnyThinkNative.framework** into your project. Apart from **AnyThinkNative.framework**, you need to import the adapter frameworks for the third party ad networks you would like to integrate; Currently **AnyThinkSDK**'s native supports the following networks(their adapter frameworks are also listed here):
 
 |Third Party Ad Network|Adapter Framework|
 |---|---|
-|Facebook|UpArpuFacebookNativeAdapter.framework|
-|Admob|UpArpuAdmobNativeAdapter.framework|
-|Flurry|UpArpuFlurryNativeAdapter.framework|
-|Applovin|UpArpuApplovinNativeAdapter.framework|
-|GDT|UpArpuGDTNativeAdapter.framework|
-|Baidu|UpArpuBaiduNativeAdapter.framework|
-|TouTiao|UpArpuTTNativeAdapter.framework|
-|Nend|UpArpuNendNativeAdapter.framework|
-|AppNext|UpArpuAppNextNativeAdapter.framework|
-|Yeahmobi|UpArpuYeahmobiNativeAdapter.framework|
-|Oneway|UpArpuOnewayNativeAdapter.framework|
-|Mintegral|UpArpuMintegralNativeAdapter.framework|
-|Mopub|UpArpuMopubNativeAdapter.framework|
+|Facebook|AnyThinkFacebookNativeAdapter.framework|
+|Admob|AnyThinkAdmobNativeAdapter.framework|
+|Flurry|AnyThinkFlurryNativeAdapter.framework|
+|Applovin|AnyThinkApplovinNativeAdapter.framework|
+|GDT|AnyThinkGDTNativeAdapter.framework|
+|Baidu|AnyThinkBaiduNativeAdapter.framework|
+|TouTiao|AnyThinkTTNativeAdapter.framework|
+|Nend|AnyThinkNendNativeAdapter.framework|
+|AppNext|AnyThinkAppNextNativeAdapter.framework|
+|Yeahmobi|AnyThinkYeahmobiNativeAdapter.framework|
+|Oneway|AnyThinkOnewayNativeAdapter.framework|
+|Mintegral|AnyThinkMintegralNativeAdapter.framework|
+|Mopub|AnyThinkMopubNativeAdapter.framework|
 
 ### 8.2 Load Native Banner
-Make your view controller confirm to **UPArpuNativeBannerDelegate**:
-<pre><code>@interface UPArpuNativeBannerViewController()\<UPArpuNativeBannerDelegate\>
+Make your view controller confirm to **ATNativeBannerDelegate**:
+<pre><code>@interface ATNativeBannerViewController()\<ATNativeBannerDelegate\>
 //Other properties&methods declarations
 @end</code></pre>
 
 Load native banner ad like this:
-<pre><code>[UPArpuNativeBannerWrapper loadNativeBannerAdWithPlacementID:_placementID extra:nil customData:nil delegate:self];</code></pre>
+<pre><code>[ATNativeBannerWrapper loadNativeBannerAdWithPlacementID:_placementID extra:nil customData:nil delegate:self];</code></pre>
 
 ### 8.3 Show Native Banner
 After native banner ad has been successfully loaded, you can call the showing API to show it:
  
 <pre><code>-(void) showAd {
-    UPArpuNativeBannerView *bannerView = [UPArpuNativeBannerWrapper retrieveNativeBannerAdViewWithPlacementID:_placementID extra:@{kUPArpuNativeBannerAdShowingExtraAdSizeKey:[NSValue valueWithCGSize:CGSizeMake(CGRectGetWidth([UIScreen mainScreen].bounds), 80.0f)], kUPArpuNativeBannerAdShowingExtraAutorefreshIntervalKey:@10.0f, kUPArpuNativeBannerAdShowingExtraHideCloseButtonFlagKey:@NO, kUPArpuNativeBannerAdShowingExtraCTAButtonBackgroundColorKey:[UIColor redColor], kUPArpuNativeBannerAdShowingExtraCTAButtonTitleColorKey:[UIColor whiteColor], kUPArpuNativeBannerAdShowingExtraCTAButtonTitleFontKey:[UIFont systemFontOfSize:12.0f], kUPArpuNativeBannerAdShowingExtraTitleColorKey:[UIColor grayColor], kUPArpuNativeBannerAdShowingExtraTitleFontKey:[UIFont systemFontOfSize:12.0f], kUPArpuNativeBannerAdShowingExtraTextColorKey:[UIColor lightGrayColor], kUPArpuNativeBannerAdShowingExtraTextFontKey:[UIFont systemFontOfSize:10.0f], kUPArpuNativeBannerAdShowingExtraBackgroundColorKey:[UIColor whiteColor], kUPArpuNativeBannerAdShowingExtraAdvertiserTextFontKey:[UIFont systemFontOfSize:12.0f], kUPArpuNativeBannerAdShowingExtraAdvertiserTextColorKey:[UIColor lightGrayColor]} delegate:self];
+    ATNativeBannerView *bannerView = [ATNativeBannerWrapper retrieveNativeBannerAdViewWithPlacementID:_placementID extra:@{kATNativeBannerAdShowingExtraAdSizeKey:[NSValue valueWithCGSize:CGSizeMake(CGRectGetWidth([UIScreen mainScreen].bounds), 80.0f)], kATNativeBannerAdShowingExtraAutorefreshIntervalKey:@10.0f, kATNativeBannerAdShowingExtraHideCloseButtonFlagKey:@NO, kATNativeBannerAdShowingExtraCTAButtonBackgroundColorKey:[UIColor redColor], kATNativeBannerAdShowingExtraCTAButtonTitleColorKey:[UIColor whiteColor], kATNativeBannerAdShowingExtraCTAButtonTitleFontKey:[UIFont systemFontOfSize:12.0f], kATNativeBannerAdShowingExtraTitleColorKey:[UIColor grayColor], kATNativeBannerAdShowingExtraTitleFontKey:[UIFont systemFontOfSize:12.0f], kATNativeBannerAdShowingExtraTextColorKey:[UIColor lightGrayColor], kATNativeBannerAdShowingExtraTextFontKey:[UIFont systemFontOfSize:10.0f], kATNativeBannerAdShowingExtraBackgroundColorKey:[UIColor whiteColor], kATNativeBannerAdShowingExtraAdvertiserTextFontKey:[UIFont systemFontOfSize:12.0f], kATNativeBannerAdShowingExtraAdvertiserTextColorKey:[UIColor lightGrayColor]} delegate:self];
     bannerView.frame = CGRectMake(.0f, 100.0f, CGRectGetWidth(bannerView.bounds), CGRectGetHeight(bannerView.bounds));
     bannerView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     [self.view addSubview:bannerView];
@@ -651,63 +670,63 @@ After native banner ad has been successfully loaded, you can call the showing AP
 ### 8.4 Implement Native Banner Delegates
 <pre><code>#pragma mark - native banner delegate(s)
 -(void) didFinishLoadingNativeBannerAdWithPlacementID:(NSString *)placementID {
-    NSLog(@"UPArpuNativeBannerViewController::didFinishLoadingNativeBannerAdWithPlacementID:%@", placementID);
+    NSLog(@"ATNativeBannerViewController::didFinishLoadingNativeBannerAdWithPlacementID:%@", placementID);
 }
 
 -(void) didFailToLoadNativeBannerAdWithPlacementID:(NSString*)placementID error:(NSError*)error {
-    NSLog(@"UPArpuNativeBannerViewController::didFailToLoadNativeBannerAdWithPlacementID:%@ error:%@", placementID, error);
+    NSLog(@"ATNativeBannerViewController::didFailToLoadNativeBannerAdWithPlacementID:%@ error:%@", placementID, error);
 }
 
--(void) didShowNativeBannerAdInView:(UPArpuNativeBannerView*)bannerView placementID:(NSString*)placementID {
-    NSLog(@"UPArpuNativeBannerViewController::didShowNativeBannerAdInView:%@ placementID:%@", bannerView, placementID);
+-(void) didShowNativeBannerAdInView:(ATNativeBannerView*)bannerView placementID:(NSString*)placementID {
+    NSLog(@"ATNativeBannerViewController::didShowNativeBannerAdInView:%@ placementID:%@", bannerView, placementID);
 }
 
--(void) didClickNativeBannerAdInView:(UPArpuNativeBannerView*)bannerView placementID:(NSString*)placementID {
-    NSLog(@"UPArpuNativeBannerViewController::didClickNativeBannerAdInView:%@ placementID:%@", bannerView, placementID);
+-(void) didClickNativeBannerAdInView:(ATNativeBannerView*)bannerView placementID:(NSString*)placementID {
+    NSLog(@"ATNativeBannerViewController::didClickNativeBannerAdInView:%@ placementID:%@", bannerView, placementID);
 }
 
--(void) didClickCloseButtonInNativeBannerAdView:(UPArpuNativeBannerView*)bannerView placementID:(NSString*)placementID {
-    NSLog(@"UPArpuNativeBannerViewController::didClickCloseButtonInNativeBannerAdView:%@ placementID:%@", bannerView, placementID);
+-(void) didClickCloseButtonInNativeBannerAdView:(ATNativeBannerView*)bannerView placementID:(NSString*)placementID {
+    NSLog(@"ATNativeBannerViewController::didClickCloseButtonInNativeBannerAdView:%@ placementID:%@", bannerView, placementID);
 }
 
--(void) didAutorefreshNativeBannerAdInView:(UPArpuNativeBannerView*)bannerView placementID:(NSString*)placementID {
-    NSLog(@"UPArpuNativeBannerViewController::didAutorefreshNativeBannerAdInView:%@ placementID:%@", bannerView, placementID);
+-(void) didAutorefreshNativeBannerAdInView:(ATNativeBannerView*)bannerView placementID:(NSString*)placementID {
+    NSLog(@"ATNativeBannerViewController::didAutorefreshNativeBannerAdInView:%@ placementID:%@", bannerView, placementID);
 }
 
--(void) didFailToAutorefreshNativeBannerAdInView:(UPArpuNativeBannerView*)bannerView placementID:(NSString*)placementID error:(NSError*)error {
-    NSLog(@"UPArpuNativeBannerViewController::didFailToAutorefreshNativeBannerAdInView:%@ placementID:%@ error:%@", bannerView, placementID, error);
+-(void) didFailToAutorefreshNativeBannerAdInView:(ATNativeBannerView*)bannerView placementID:(NSString*)placementID error:(NSError*)error {
+    NSLog(@"ATNativeBannerViewController::didFailToAutorefreshNativeBannerAdInView:%@ placementID:%@ error:%@", bannerView, placementID, error);
 }</code></pre>
 
 ## <h2 id='9'>9 Implement Native Splash</h2>
 Before you continue, make sure you've walked through the steps listed in the [Get Started](#1) section.
 
 ### 9.1 Import Native Framework
-Native splash is embeded in native, so the frameworks you need to import are just the same as those of native. Drag&drop **UpArpuNative.framework** into your project. Apart from **UpArpuNative.framework**, you need to import the adapter frameworks for the third party ad networks you would like to integrate; Currently **UpArpuSDK**'s native supports the following networks(their adapter frameworks are also listed here):
+Native splash is embeded in native, so the frameworks you need to import are just the same as those of native. Drag&drop **AnyThinkNative.framework** into your project. Apart from **AnyThinkNative.framework**, you need to import the adapter frameworks for the third party ad networks you would like to integrate; Currently **AnyThinkSDK**'s native supports the following networks(their adapter frameworks are also listed here):
 
 |Third Party Ad Network|Adapter Framework|
 |---|---|
-|Facebook|UpArpuFacebookNativeAdapter.framework|
-|Admob|UpArpuAdmobNativeAdapter.framework|
-|Flurry|UpArpuFlurryNativeAdapter.framework|
-|Applovin|UpArpuApplovinNativeAdapter.framework|
-|GDT|UpArpuGDTNativeAdapter.framework|
-|Baidu|UpArpuBaiduNativeAdapter.framework|
-|TouTiao|UpArpuTTNativeAdapter.framework|
-|Nend|UpArpuNendNativeAdapter.framework|
-|AppNext|UpArpuAppNextNativeAdapter.framework|
-|Yeahmobi|UpArpuYeahmobiNativeAdapter.framework|
-|Oneway|UpArpuOnewayNativeAdapter.framework|
-|Mintegral|UpArpuMintegralNativeAdapter.framework|
-|Mopub|UpArpuMopubNativeAdapter.framework|
+|Facebook|AnyThinkFacebookNativeAdapter.framework|
+|Admob|AnyThinkAdmobNativeAdapter.framework|
+|Flurry|AnyThinkFlurryNativeAdapter.framework|
+|Applovin|AnyThinkApplovinNativeAdapter.framework|
+|GDT|AnyThinkGDTNativeAdapter.framework|
+|Baidu|AnyThinkBaiduNativeAdapter.framework|
+|TouTiao|AnyThinkTTNativeAdapter.framework|
+|Nend|AnyThinkNendNativeAdapter.framework|
+|AppNext|AnyThinkAppNextNativeAdapter.framework|
+|Yeahmobi|AnyThinkYeahmobiNativeAdapter.framework|
+|Oneway|AnyThinkOnewayNativeAdapter.framework|
+|Mintegral|AnyThinkMintegralNativeAdapter.framework|
+|Mopub|AnyThinkMopubNativeAdapter.framework|
 
 ### 9.2 Load Native Splash
-Make your view controller confirm to **UPArpuNativeSplashDelegate**:
-<pre><code>@interface UPArpuNativeSplashViewController()\<UPArpuNativeSplashDelegate\>
+Make your view controller confirm to **ATNativeSplashDelegate**:
+<pre><code>@interface ATNativeSplashViewController()\<ATNativeSplashDelegate\>
 //Other properties&methods declarations
 @end</code></pre>
 
 Load native splash ad like this:
-<pre><code>[UPArpuNativeSplashWrapper loadNativeSplashAdWithPlacementID:@"native splash placement id" extra:@{kExtraInfoNativeAdTypeKey:@(UPArpuGDTNativeAdTypeSelfRendering), kExtraInfoNativeAdSizeKey:[NSValue valueWithCGSize:CGSizeMake(CGRectGetWidth(self.view.bounds) - 30.0f, 400.0f)], kUPArpuExtraNativeImageSizeKey:kUPArpuExtraNativeImageSize690_388, kUPArpuNativeSplashShowingExtraCountdownIntervalKey:@3} customData:nil delegate:self];</code></pre>
+<pre><code>[ATNativeSplashWrapper loadNativeSplashAdWithPlacementID:@"native splash placement id" extra:@{kExtraInfoNativeAdTypeKey:@(ATGDTNativeAdTypeSelfRendering), kExtraInfoNativeAdSizeKey:[NSValue valueWithCGSize:CGSizeMake(CGRectGetWidth(self.view.bounds) - 30.0f, 400.0f)], kATExtraNativeImageSizeKey:kATExtraNativeImageSize690_388, kATNativeSplashShowingExtraCountdownIntervalKey:@3} customData:nil delegate:self];</code></pre>
 
 ### 9.3 Show Native Splash
 After banner ad has been successfully loaded, you can call the showing API to show it:
@@ -718,11 +737,11 @@ After banner ad has been successfully loaded, you can call the showing API to sh
     label.textAlignment = NSTextAlignmentCenter;
     label.backgroundColor = [UIColor whiteColor];
     label.text = @"Joypac";
-    [UPArpuNativeSplashWrapper showNativeSplashAdWithPlacementID:placementID extra:@{kUPArpuNatievSplashShowingExtraStyleKey:kUPArpuNativeSplashShowingExtraStylePortrait, kUPArpuNativeSplashShowingExtraCountdownIntervalKey:@3, kUPArpuNativeSplashShowingExtraContainerViewKey:label} delegate:self];
+    [ATNativeSplashWrapper showNativeSplashAdWithPlacementID:placementID extra:@{kATNatievSplashShowingExtraStyleKey:kATNativeSplashShowingExtraStylePortrait, kATNativeSplashShowingExtraCountdownIntervalKey:@3, kATNativeSplashShowingExtraContainerViewKey:label} delegate:self];
 }</code></pre>
 
 ### 9.4 Implement Native Splash Delegates
-You can implement **UPArpuNativeSplashDelegate**'s methods to get notified on the various splash ad events:<br>
+You can implement **ATNativeSplashDelegate**'s methods to get notified on the various splash ad events:<br>
 
 <pre><code>-(void) finishLoadingNativeSplashAdForPlacementID:(NSString*)placementID {
 NSLog(@"ViewController::finishLoadingNativeSplashAdForPlacementID:%@", placementID);
@@ -761,23 +780,23 @@ The SDK versions of Mintegral and Facebook that support header bidding are as fo
 
 ## 11 On GDPR<h2 id='11'>1 Introduction</h2>
 
-**General Data Protection Regulation(GDPR)**, which is issued by EU, has come into effect on 5/25/2018. We've updated our privacy policy accordingly, you can check it out by clicking <a href="https://www.uparpu.com/privacy-policy" target = "_blank">UPARPU Privacy Policy</a>. In the meantime, we've included some features in the SDK, which you can utilize to protect users' private data; please follow this guidelines to set up GDPR settings.
+**General Data Protection Regulation(GDPR)**, which is issued by EU, has come into effect on 5/25/2018. We've updated our privacy policy accordingly, you can check it out by clicking <a href="https://www.topon.com/privacy-policy" target = "_blank">AnyThink Privacy Policy</a>. In the meantime, we've included some features in the SDK, which you can utilize to protect users' private data; please follow this guidelines to set up GDPR settings.
 We provide two methods to support GDPR:<br>
-1) You can use the **UPArpuAPI** singlton's **setDataConsentSet:consentString:** method to set a uniform consent level for all third party networks;<br>
+1) You can use the **ATAPI** singlton's **setDataConsentSet:consentString:** method to set a uniform consent level for all third party networks;<br>
 2) Or you can use the **networkConsentInfo** property to set consent for third party networks individually; when useing this method, please be aware that data structures of the parameters are subject to future change.<br>
 
-### 4.1 Using UPArpu Method
-You can use the **UPArpuAPI** singlton's **setDataConsentSet:consentString:** method to set a uniform consent level for all third party networks, the **consentString** paramters here is preserved for Flurry; UPArpu SDK provide four levels of data protection:<br>
-<h4>1) UpArpuDataConsentSetUnknown(0)</h4>
+### 4.1 Using AT Method
+You can use the **ATAPI** singlton's **setDataConsentSet:consentString:** method to set a uniform consent level for all third party networks, the **consentString** paramters here is preserved for Flurry; AT SDK provide four levels of data protection:<br>
+<h4>1) AnyThinkDataConsentSetUnknown(0)</h4>
 The default level when data consent is not set. When this is the case and the user is located in GDPR-subject rigion the SDK will failed to be initialized and therefore not able to request ad offers.
 
-#### 2) UpArpuDataConsentSetPersonalized(1)
+#### 2) AnyThinkDataConsentSetPersonalized(1)
 Setting data consent to this level has the meaning that the user has permit the SDK to collect and use their personal data for the purpose of providing him/her with more relevant and personalized ad offers.
 
-#### 3) UpArpuDataConsentSetNonpersonalized(2)
+#### 3) AnyThinkDataConsentSetNonpersonalized(2)
 When this is set as the consent, users' personal data will not be collected(and thus not used); however data that are not subject to GDPR will still be collected and submit to the server; as a result, the ad offers returned by third-party networks might not be as relevant.
 
-#### 4) UpArpuDataConsentSetForbidden(3)
+#### 4) AnyThinkDataConsentSetForbidden(3)
 Forbid any data collection and ad request. SDK will failed to initialize and ad request will not be sent.
 
 ### 4.2 Setting data consent separately

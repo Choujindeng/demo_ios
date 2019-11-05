@@ -6,25 +6,25 @@ Here's brief summary of the predefined error codes:
 
 |Constants|Value|Note|
 |---|---|---|
-| UPSDKInitErrorDomain |@"UpArpuSDKInitErrorDomain.com.uparpu"|SDK Initialization Error Domain|
-| UPSDKInitErrorCodeDataConsentNotSet | 2001 |GDPR consent not set|
-| UPSDKInitErrorCodeDataConsentForbidden | 2002 |Initializztion failed due to GDPR being set to forbidden|
-| UPADLoadingErrorDomain |@"UPNativeADLoadingErrorDomain.com.uparpu"|Ad loading error domain|
-| UPADLoadingErrorCodePlacementStrategyInvalidResponse | 1001 |Placement strategy invalid|
-| UPADLoadingErrorCdoePlacementStragetyNetworkError| 1002 |Placement strategy loading error|
-| UPADLoadingErrorCodeADOfferLoadingFailed | 1003 |Third party SDK ad loading error|
-| UPADLoadingErrorCodePlacementStrategyNotFound | 1004 |Placement Strategy not found|
-| UPADLoadingErrorCodeADOfferNotFound | 1005 |No ad found when trying to show ad|
-| UPADLoadingErrorCodeShowIntervalWithinPlacementPacing | 1006 |Ad show/request too frequent|
-| UPADLoadingErrorCodeShowTimesExceedsHourCap | 1007 |Ad show/request too many time within the same hour|
-| UPADLoadingErrorCodeShowTimesExceedsDayCap | 1008 |Ad show/request too many time within the same day|
-| UPADLoadingErrorCodeAdapterClassNotFound | 1009 |Adapter not imported|
-| UPADLoadingErrorCodeADOfferLoadingTimeout | 10010 |Ad loading timeout|
-| UPADLoadingErrorCodeSDKNotInitalizedProperly | 1011 |SDK not initialized properly|
-| UPADLoadingErrorCodeDataConsentForbidden | 1012 |Ad loading failed due to GDPR being set to forbidden|
-| UPADLoadingErrorCodeThirdPartySDKNotImportedProperly | 1013 |Third party SDK not imported or wrong version's being used|
-| UPADLoadingErrorCodeInvalidInputEncountered| 1014 |Invalid parameters encountered(App ID、App Key orPlacement ID being nil)|
-| UPADLoadingErrorCodePlacementAdDeliverySwitchOff | 1015 |Ad delivery not turned on for the placement|
+| ATSDKInitErrorDomain |@"AnyThinkSDKInitErrorDomain.com.anythink"|SDK Initialization Error Domain|
+| ATSDKInitErrorCodeDataConsentNotSet | 2001 |GDPR consent not set|
+| ATSDKInitErrorCodeDataConsentForbidden | 2002 |Initializztion failed due to GDPR being set to forbidden|
+| ATADLoadingErrorDomain |@"ATNativeADLoadingErrorDomain.com.anythink"|Ad loading error domain|
+| ATADLoadingErrorCodePlacementStrategyInvalidResponse | 1001 |Placement strategy invalid|
+| ATADLoadingErrorCdoePlacementStragetyNetworkError| 1002 |Placement strategy loading error|
+| ATADLoadingErrorCodeADOfferLoadingFailed | 1003 |Third party SDK ad loading error|
+| ATADLoadingErrorCodePlacementStrategyNotFound | 1004 |Placement Strategy not found|
+| ATADLoadingErrorCodeADOfferNotFound | 1005 |No ad found when trying to show ad|
+| ATADLoadingErrorCodeShowIntervalWithinPlacementPacing | 1006 |Ad show/request too frequent|
+| ATADLoadingErrorCodeShowTimesExceedsHourCap | 1007 |Ad show/request too many time within the same hour|
+| ATADLoadingErrorCodeShowTimesExceedsDayCap | 1008 |Ad show/request too many time within the same day|
+| ATADLoadingErrorCodeAdapterClassNotFound | 1009 |Adapter not imported|
+| ATADLoadingErrorCodeADOfferLoadingTimeout | 10010 |Ad loading timeout|
+| ATADLoadingErrorCodeSDKNotInitalizedProperly | 1011 |SDK not initialized properly|
+| ATADLoadingErrorCodeDataConsentForbidden | 1012 |Ad loading failed due to GDPR being set to forbidden|
+| ATADLoadingErrorCodeThirdPartySDKNotImportedProperly | 1013 |Third party SDK not imported or wrong version's being used|
+| ATADLoadingErrorCodeInvalidInputEncountered| 1014 |Invalid parameters encountered(App ID、App Key orPlacement ID being nil)|
+| ATADLoadingErrorCodePlacementAdDeliverySwitchOff | 1015 |Ad delivery not turned on for the placement|
 
 ## <h2 id='13'>13 FAQ</h2>
 ### 13.1 App Not Compiles
@@ -65,7 +65,7 @@ Navigate to **Build Settings** in Xcode, in the search box, enter **Other Linker
 Here's another crash:
 ![](Admob_app_id_error.jpeg)
 
-You encounter this crash because you are integrating Admob's SDK in your project and don't have app id configured in you Info.plist; try this:
+You encounter this crash because you are integrating Admob's SDK in your project and don't have app id configured in your Info.plist; try this:
 ![](Admob_Update_Infoplist.png)
 **NOTE: Make sure you use your own Admob app id instead of the one shown in the picture above.**
 

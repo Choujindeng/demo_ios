@@ -6,25 +6,25 @@
 
 |Constants|Value|Note|
 |---|---|---|
-| UPSDKInitErrorDomain |@"UpArpuSDKInitErrorDomain.com.uparpu"|(初始化失败)SDK Initialization Error Domain|
-| UPSDKInitErrorCodeDataConsentNotSet | 2001 |(没有设置GDPR)GDPR consent not set|
-| UPSDKInitErrorCodeDataConsentForbidden | 2002 |(由于GDPR被设置成Forbidden所以初始化失败)Initializtion failed due to GDPR being set to forbidden|
-| UPADLoadingErrorDomain |@"UPNativeADLoadingErrorDomain.com.uparpu"|(广告加载失败)Ad loading error domain|
-| UPADLoadingErrorCodePlacementStrategyInvalidResponse | 1001 |（无效策略）Placement strategy invalid|
-| UPADLoadingErrorCdoePlacementStragetyNetworkError| 1002 |(策略加载失败)Placement strategy loading error|
-| UPADLoadingErrorCodeADOfferLoadingFailed | 1003 |(第三方平台加载失败)Third party SDK ad loading error|
-| UPADLoadingErrorCodePlacementStrategyNotFound | 1004 |(没有策略)Placement Strategy not found|
-| UPADLoadingErrorCodeADOfferNotFound | 1005 |(没有广告展示)No ad found when trying to show ad|
-| UPADLoadingErrorCodeShowIntervalWithinPlacementPacing | 1006 |(请求或展示过于频繁)Ad show/request too frequent|
-| UPADLoadingErrorCodeShowTimesExceedsHourCap | 1007 |(展示或请求超过小时内最多展示次数)Ad show/request too many time within the same hour|
-| UPADLoadingErrorCodeShowTimesExceedsDayCap | 1008 |(展示或请求超过一天内最多展示次数)Ad show/request too many time within the same day|
-| UPADLoadingErrorCodeAdapterClassNotFound | 1009 |(没有导入对应的Adapter)Adapter not imported|
-| UPADLoadingErrorCodeADOfferLoadingTimeout | 10010 |(广告加载超时)Ad loading timeout|
-| UPADLoadingErrorCodeSDKNotInitalizedProperly | 1011 |(SDK没有初始化)SDK not initialized properly|
-| UPADLoadingErrorCodeDataConsentForbidden | 1012 |(由于GDPR被设置成Forbidden所以加载失败)Ad loading failed due to GDPR being set to forbidden|
-| UPADLoadingErrorCodeThirdPartySDKNotImportedProperly | 1013 |(没有导入第三方平台的SDK或导入了错误的版本)Third party SDK not imported or wrong version's being used|
-| UPADLoadingErrorCodeInvalidInputEncountered| 1014 |(无效的App ID、App Key 或Placement ID)Invalid parameters encountered(App ID、App Key orPlacement ID being nil)|
-| UPADLoadingErrorCodePlacementAdDeliverySwitchOff | 1015 |(广告位没有开启广告投放)Ad delivery not turned on for the placement|
+| ATSDKInitErrorDomain |@"AnyThinkSDKInitErrorDomain.com.anythink"|(初始化失败)SDK Initialization Error Domain|
+| ATSDKInitErrorCodeDataConsentNotSet | 2001 |(没有设置GDPR)GDPR consent not set|
+| ATSDKInitErrorCodeDataConsentForbidden | 2002 |(由于GDPR被设置成Forbidden所以初始化失败)Initializtion failed due to GDPR being set to forbidden|
+| ATADLoadingErrorDomain |@"ATNativeADLoadingErrorDomain.com.anythink"|(广告加载失败)Ad loading error domain|
+| ATADLoadingErrorCodePlacementStrategyInvalidResponse | 1001 |（无效策略）Placement strategy invalid|
+| ATADLoadingErrorCdoePlacementStragetyNetworkError| 1002 |(策略加载失败)Placement strategy loading error|
+| ATADLoadingErrorCodeADOfferLoadingFailed | 1003 |(第三方平台加载失败)Third party SDK ad loading error|
+| ATADLoadingErrorCodePlacementStrategyNotFound | 1004 |(没有策略)Placement Strategy not found|
+| ATADLoadingErrorCodeADOfferNotFound | 1005 |(没有广告展示)No ad found when trying to show ad|
+| ATADLoadingErrorCodeShowIntervalWithinPlacementPacing | 1006 |(请求或展示过于频繁)Ad show/request too frequent|
+| ATADLoadingErrorCodeShowTimesExceedsHourCap | 1007 |(展示或请求超过小时内最多展示次数)Ad show/request too many time within the same hour|
+| ATADLoadingErrorCodeShowTimesExceedsDayCap | 1008 |(展示或请求超过一天内最多展示次数)Ad show/request too many time within the same day|
+| ATADLoadingErrorCodeAdapterClassNotFound | 1009 |(没有导入对应的Adapter)Adapter not imported|
+| ATADLoadingErrorCodeADOfferLoadingTimeout | 10010 |(广告加载超时)Ad loading timeout|
+| ATADLoadingErrorCodeSDKNotInitalizedProperly | 1011 |(SDK没有初始化)SDK not initialized properly|
+| ATADLoadingErrorCodeDataConsentForbidden | 1012 |(由于GDPR被设置成Forbidden所以加载失败)Ad loading failed due to GDPR being set to forbidden|
+| ATADLoadingErrorCodeThirdPartySDKNotImportedProperly | 1013 |(没有导入第三方平台的SDK或导入了错误的版本)Third party SDK not imported or wrong version's being used|
+| ATADLoadingErrorCodeInvalidInputEncountered| 1014 |(无效的App ID、App Key 或Placement ID)Invalid parameters encountered(App ID、App Key orPlacement ID being nil)|
+| ATADLoadingErrorCodePlacementAdDeliverySwitchOff | 1015 |(广告位没有开启广告投放)Ad delivery not turned on for the placement|
 
 ## <h2 id='13'>13 FAQ</h2>
 ### 13.1 应用程序没有编译(App Not Compiles)

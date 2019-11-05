@@ -1,12 +1,12 @@
 ## [IMPORTANT] DO NOT expose any of the frameworks to Windows operating system; Windows modifies frameworks, making them incomplete and resulting in compile errors.
-# UPARPU_iOS_SDK_4.4.5
-## Third-party SDK version for uparpu_ios_sdk_4.4.5
+# AnythinkSDK_iOS_SDK_4.6.0
+## Third-party SDK version for AnyThink_ios_sdk_4.6.0
 
-[Integrate Guide for UpArpuSDK for iOS(English)](iOS_Doc_EN/iOS_Integration_Guide.md)
+[Integrate Guide for AnyThinkSDK for iOS(English)](iOS_Doc_EN/iOS_Integration_Guide.md)
 
 [Error Code And FAQ(English)](iOS_Doc_EN/Error_Code_and_FAQ.md)
 
-[Integrate Guide for UpArpuSDK for iOS(Chinese)](iOS_Doc_CHN/iOS_Integration_Guide.md)
+[Integrate Guide for AnyThinkSDK for iOS(Chinese)](iOS_Doc_CHN/iOS_Integration_Guide.md)
 
 [Error Code And FAQ(Chinese)](iOS_Doc_CHN/Error_Code_and_FAQ.md)
 
@@ -38,7 +38,7 @@
 | sigmob | 2.12.3 |sdk：WindSDK.framework|
 
 
-## UPARPU network_name and network_firm_id mapping
+## AnyThink network_name and network_firm_id mapping
 
 | Network Name| NETWORK FIRM ID|
 |---|---|

@@ -13,6 +13,9 @@
 		453C166C236DBC7E006B430A /* KSAdSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 453C166A236DBC7D006B430A /* KSAdSDK.bundle */; };
 		453C166D236DBC7E006B430A /* KSAdSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 453C166B236DBC7E006B430A /* KSAdSDK.framework */; };
 		453C166E236DBF6D006B430A /* MoPubSDKFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB70849236D8C72007A889D /* MoPubSDKFramework.framework */; };
+		45655577237961A50009DD36 /* AnyThinkMyOfferRewardedVideoAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45655574237961A50009DD36 /* AnyThinkMyOfferRewardedVideoAdapter.framework */; };
+		45655578237961A50009DD36 /* AnyThinkMyOffer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45655575237961A50009DD36 /* AnyThinkMyOffer.framework */; };
+		45655579237961A50009DD36 /* AnyThinkMyOfferInterstitialAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45655576237961A50009DD36 /* AnyThinkMyOfferInterstitialAdapter.framework */; };
 		8DB704F8236D883A007A889D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB704F7236D883A007A889D /* AppDelegate.m */; };
 		8DB704FB236D883A007A889D /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB704FA236D883A007A889D /* SceneDelegate.m */; };
 		8DB704FE236D883A007A889D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB704FD236D883A007A889D /* ViewController.m */; };
@@ -254,6 +257,9 @@
 		453C1668236D9D21006B430A /* WindSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WindSDK.framework; path = SDK/WindSDK.framework; sourceTree = "<group>"; };
 		453C166A236DBC7D006B430A /* KSAdSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = KSAdSDK.bundle; path = SDK/KSAdSDK.bundle; sourceTree = "<group>"; };
 		453C166B236DBC7E006B430A /* KSAdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KSAdSDK.framework; path = SDK/KSAdSDK.framework; sourceTree = "<group>"; };
+		45655574237961A50009DD36 /* AnyThinkMyOfferRewardedVideoAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkMyOfferRewardedVideoAdapter.framework; path = SDK/AnyThinkMyOfferRewardedVideoAdapter.framework; sourceTree = "<group>"; };
+		45655575237961A50009DD36 /* AnyThinkMyOffer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkMyOffer.framework; path = SDK/AnyThinkMyOffer.framework; sourceTree = "<group>"; };
+		45655576237961A50009DD36 /* AnyThinkMyOfferInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkMyOfferInterstitialAdapter.framework; path = SDK/AnyThinkMyOfferInterstitialAdapter.framework; sourceTree = "<group>"; };
 		8DB704F3236D883A007A889D /* AnyThinkSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnyThinkSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DB704F6236D883A007A889D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8DB704F7236D883A007A889D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -701,6 +707,7 @@
 				8DB709DC236D8C89007A889D /* AnyThinkFlurryRewardedVideoAdapter.framework in Frameworks */,
 				8DB709B6236D8C89007A889D /* AnyThinkMintegralNativeAdapter.framework in Frameworks */,
 				8DB709D2236D8C89007A889D /* AnyThinkVungleRewardedVideoAdapter.framework in Frameworks */,
+				45655579237961A50009DD36 /* AnyThinkMyOfferInterstitialAdapter.framework in Frameworks */,
 				8DB70A73236D8C8A007A889D /* AnyThinkGDTInterstitialAdapter.framework in Frameworks */,
 				8DB70A5D236D8C89007A889D /* BaiduMobAdSDK.framework in Frameworks */,
 				8DB70A60236D8C8A007A889D /* AnyThinkIronSourceRewardedVideoAdapter.framework in Frameworks */,
@@ -714,6 +721,7 @@
 				8DB707DD236D8A59007A889D /* libz.tbd in Frameworks */,
 				8DB709C5236D8C89007A889D /* AnyThinkInmobiNativeAdapter.framework in Frameworks */,
 				8DB70A61236D8C8A007A889D /* AnyThinkKSRewardedVideoAdapter.framework in Frameworks */,
+				45655578237961A50009DD36 /* AnyThinkMyOffer.framework in Frameworks */,
 				8DB709C3236D8C89007A889D /* AnyThinkMopubNativeAdapter.framework in Frameworks */,
 				8DB709AD236D8C88007A889D /* AnyThinkTTBannerAdapter.framework in Frameworks */,
 				8DB70A58236D8C89007A889D /* AnyThinkApplovinBannerAdapter.framework in Frameworks */,
@@ -781,6 +789,7 @@
 				8DB709BF236D8C89007A889D /* AnyThinkTapjoyInterstitialAdapter.framework in Frameworks */,
 				8DB709BB236D8C89007A889D /* AnyThinkMintegralInterstitialAdapter.framework in Frameworks */,
 				8DB70A66236D8C8A007A889D /* AnyThinkMaioInterstitialAdapter.framework in Frameworks */,
+				45655577237961A50009DD36 /* AnyThinkMyOfferRewardedVideoAdapter.framework in Frameworks */,
 				8DB70A40236D8C89007A889D /* AnyThinkSigmobRewardedVideoAdapter.framework in Frameworks */,
 				8DB70A6A236D8C8A007A889D /* libGDTMobSDK.a in Frameworks */,
 				8DB70A3A236D8C89007A889D /* libAppnextNativeAdsSDK.a in Frameworks */,
@@ -869,6 +878,9 @@
 		8DB705C7236D898F007A889D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				45655575237961A50009DD36 /* AnyThinkMyOffer.framework */,
+				45655576237961A50009DD36 /* AnyThinkMyOfferInterstitialAdapter.framework */,
+				45655574237961A50009DD36 /* AnyThinkMyOfferRewardedVideoAdapter.framework */,
 				453C1664236D9BB3006B430A /* libc++.tbd */,
 				8DB70A83236D8D3E007A889D /* CoreMedia.framework */,
 				8DB70A81236D8D02007A889D /* AVFoundation.framework */,

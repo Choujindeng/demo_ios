@@ -35,7 +35,8 @@ NS_ASSUME_NONNULL_BEGIN
 #define IS_OFFERWALL @"offerwall"
 #define IS_BANNER @"banner"
 
-static NSString * const MEDIATION_SDK_VERSION     = @"6.8.4";
+static NSString * const MEDIATION_SDK_VERSION     = @"6.8.6";
+static NSString * GitHash = @"a6d4e9484";
 
 @interface IronSource : NSObject
 
@@ -335,7 +336,7 @@ static NSString * const MEDIATION_SDK_VERSION     = @"6.8.4";
 + (void)loadISDemandOnlyInterstitial:(NSString *)instanceId;
 
 /**
- @abstract Show a demand only rewarded video using the default placement.
+ @abstract Show a demand only interstitial using the default placement.
  @param viewController The UIViewController to display the interstitial within.
  @param instanceId The demand only instance id to be used to display the interstitial.
  */

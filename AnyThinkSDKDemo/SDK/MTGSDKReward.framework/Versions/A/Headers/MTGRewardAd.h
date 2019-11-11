@@ -9,7 +9,8 @@
 #import <Foundation/Foundation.h>
 #import <MTGSDK/MTGRewardAdInfo.h>
 
-#define MTGRewardVideoSDKVersion @"5.7.0"
+#define MTGRewardVideoSDKVersion @"5.8.0"
+
 
 /**
  *  This protocol defines a listener for ad video load events.

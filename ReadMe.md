@@ -1,6 +1,6 @@
 ## [IMPORTANT] DO NOT expose any of the frameworks to Windows operating system; Windows modifies frameworks, making them incomplete and resulting in compile errors.
-# AnythinkSDK_iOS_SDK_4.6.0
-## Third-party SDK version for AnyThink_ios_sdk_4.6.0
+# AnythinkSDK_iOS_SDK_5.0.0
+## Third-party SDK version for AnyThink_ios_sdk_5.0.0
 
 [Integrate Guide for AnyThinkSDK for iOS(English)](iOS_Doc_EN/iOS_Integration_Guide.md)
 
@@ -19,18 +19,18 @@
 | Applovin | 6.9.3 ||
 | Mintegral | 5.8.0 ||
 | Mopub | 5.9.0 ||
-| GDT | 4.10.13 |广点通/Tencent/腾讯广告|
+| GDT | 4.10.19 |广点通/Tencent/腾讯广告|
 | Yeahmobi | 3.2.0 ||
 | Appnext | 1.9.3 ||
 | Chartboost | 8.0.1 ||
 | Ironsource | 6.8.6 ||
 | Vungle | 6.4.3 ||
-| Adcolony | 4.1.0.0 ||
+| Adcolony | 4.1.2.0 ||
 | UnityAds | 3.3.0 ||
 | TT | 2.4.6.7 |头条/穿山甲/TT|
 | Tapjoy | 12.3.3 ||
 | Oneway | 2.1.0 ||
-| Baidu | 4.6.7 ||
+| Baidu | 4.67 ||
 | MobPower | 1.0.0 ||
 | Nend | 5.3.0 ||
 | Maio | 1.4.8 ||

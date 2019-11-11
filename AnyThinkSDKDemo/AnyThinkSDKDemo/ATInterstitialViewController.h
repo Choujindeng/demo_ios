@@ -38,6 +38,8 @@ extern NSString *const kNendFullScreenInterstitialPlacement;
 extern NSString *const kMaioPlacement;
 extern NSString *const kSigmobPlacement;
 extern NSString *const kKSPlacement;
+extern NSString *const kMyOfferPlacement;
+
 
 @interface ATInterstitialViewController : UIViewController
 -(instancetype) initWithPlacementName:(NSString*)name;

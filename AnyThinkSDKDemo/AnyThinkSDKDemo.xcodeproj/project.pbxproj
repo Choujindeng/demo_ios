@@ -36,12 +36,10 @@
 		8DB709AF236D8C89007A889D /* AnyThinkUnityAdsRewardedVideoAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB707E5236D8C6E007A889D /* AnyThinkUnityAdsRewardedVideoAdapter.framework */; };
 		8DB709B0236D8C89007A889D /* AnyThinkAppnextNativeAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB707E6236D8C6F007A889D /* AnyThinkAppnextNativeAdapter.framework */; };
 		8DB709B1236D8C89007A889D /* AnyThinkGDTSplashAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB707E7236D8C6F007A889D /* AnyThinkGDTSplashAdapter.framework */; };
-		8DB709B2236D8C89007A889D /* MTGSDKOfferWall.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB707E8236D8C6F007A889D /* MTGSDKOfferWall.framework */; };
 		8DB709B3236D8C89007A889D /* AnyThinkAdColonyRewardedVideoAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB707E9236D8C6F007A889D /* AnyThinkAdColonyRewardedVideoAdapter.framework */; };
 		8DB709B4236D8C89007A889D /* AppLovinSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB707EA236D8C6F007A889D /* AppLovinSDK.framework */; };
 		8DB709B5236D8C89007A889D /* VungleSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB707EB236D8C6F007A889D /* VungleSDK.framework */; };
 		8DB709B6236D8C89007A889D /* AnyThinkMintegralNativeAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB707EC236D8C6F007A889D /* AnyThinkMintegralNativeAdapter.framework */; };
-		8DB709B7236D8C89007A889D /* MTGSDKAppWall.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB707ED236D8C6F007A889D /* MTGSDKAppWall.framework */; };
 		8DB709B8236D8C89007A889D /* AnyThinkGDTNativeAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB707EE236D8C6F007A889D /* AnyThinkGDTNativeAdapter.framework */; };
 		8DB709B9236D8C89007A889D /* AnyThinkBaiduSplashAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB707EF236D8C70007A889D /* AnyThinkBaiduSplashAdapter.framework */; };
 		8DB709BA236D8C89007A889D /* MTGSDKBidding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB707F0236D8C70007A889D /* MTGSDKBidding.framework */; };
@@ -60,7 +58,6 @@
 		8DB709C7236D8C89007A889D /* IronSource.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB707FD236D8C71007A889D /* IronSource.framework */; };
 		8DB709C8236D8C89007A889D /* libAppnextLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB707FF236D8C71007A889D /* libAppnextLib.a */; };
 		8DB709C9236D8C89007A889D /* libAppnextSDKCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB70845236D8C72007A889D /* libAppnextSDKCore.a */; };
-		8DB709CA236D8C89007A889D /* MTGSDKInterActive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB70846236D8C72007A889D /* MTGSDKInterActive.framework */; };
 		8DB709CB236D8C89007A889D /* AnyThinkMintegralRewardedVideoAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB70847236D8C72007A889D /* AnyThinkMintegralRewardedVideoAdapter.framework */; };
 		8DB709CC236D8C89007A889D /* AnyThinkNendInterstitialAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB70848236D8C72007A889D /* AnyThinkNendInterstitialAdapter.framework */; };
 		8DB709CE236D8C89007A889D /* MTGSDKInterstitialVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB7084A236D8C72007A889D /* MTGSDKInterstitialVideo.framework */; };
@@ -710,7 +707,6 @@
 				8DB709E1236D8C89007A889D /* AnyThinkOnewayInterstitialAdapter.framework in Frameworks */,
 				8DB70A62236D8C8A007A889D /* Chartboost.framework in Frameworks */,
 				8DB70A53236D8C89007A889D /* FBAudienceNetworkBiddingKit.framework in Frameworks */,
-				8DB709CA236D8C89007A889D /* MTGSDKInterActive.framework in Frameworks */,
 				8DB70A6F236D8C8A007A889D /* AnyThinkGDTRewardedVideoAdapter.framework in Frameworks */,
 				8DB70A3C236D8C89007A889D /* AnyThinkHeaderBidding.framework in Frameworks */,
 				8DB709D7236D8C89007A889D /* AnyThinkSplash.framework in Frameworks */,
@@ -770,7 +766,6 @@
 				8DB709E3236D8C89007A889D /* AnyThinkNendNativeAdapter.framework in Frameworks */,
 				8DB709D0236D8C89007A889D /* MTGSDKInterstitial.framework in Frameworks */,
 				8DB70A3D236D8C89007A889D /* GoogleMobileAds.framework in Frameworks */,
-				8DB709B2236D8C89007A889D /* MTGSDKOfferWall.framework in Frameworks */,
 				8DB70A5B236D8C89007A889D /* AnyThinkYeahmobiBannerAdapter.framework in Frameworks */,
 				8DB70A4E236D8C89007A889D /* AnyThinkFacebookBannerAdapter.framework in Frameworks */,
 				8DB70A68236D8C8A007A889D /* MTGSDK.framework in Frameworks */,
@@ -790,7 +785,6 @@
 				8DB70A6A236D8C8A007A889D /* libGDTMobSDK.a in Frameworks */,
 				8DB70A3A236D8C89007A889D /* libAppnextNativeAdsSDK.a in Frameworks */,
 				8DB709B9236D8C89007A889D /* AnyThinkBaiduSplashAdapter.framework in Frameworks */,
-				8DB709B7236D8C89007A889D /* MTGSDKAppWall.framework in Frameworks */,
 				8DB709D9236D8C89007A889D /* AnyThinkInmobiRewardedVideoAdapter.framework in Frameworks */,
 				8DB709C7236D8C89007A889D /* IronSource.framework in Frameworks */,
 				8DB70A7C236D8C8A007A889D /* AnyThinkApplovinRewardedVideoAdapter.framework in Frameworks */,

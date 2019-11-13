@@ -218,8 +218,6 @@
 		8DB70A6D236D8C8A007A889D /* AnyThinkKSInterstitialAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB70998236D8C85007A889D /* AnyThinkKSInterstitialAdapter.framework */; };
 		8DB70A6E236D8C8A007A889D /* CTSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB70999236D8C85007A889D /* CTSDK.framework */; };
 		8DB70A6F236D8C8A007A889D /* AnyThinkGDTRewardedVideoAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB7099A236D8C85007A889D /* AnyThinkGDTRewardedVideoAdapter.framework */; };
-		8DB70A70236D8C8A007A889D /* BUAdSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB7099C236D8C86007A889D /* BUAdSDK.framework */; };
-		8DB70A71236D8C8A007A889D /* BUAdSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8DB7099D236D8C86007A889D /* BUAdSDK.bundle */; };
 		8DB70A72236D8C8A007A889D /* AnyThinkYeahmobiRewardedVideoAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB7099E236D8C86007A889D /* AnyThinkYeahmobiRewardedVideoAdapter.framework */; };
 		8DB70A73236D8C8A007A889D /* AnyThinkGDTInterstitialAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB7099F236D8C86007A889D /* AnyThinkGDTInterstitialAdapter.framework */; };
 		8DB70A74236D8C8A007A889D /* UnityAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB709A0236D8C86007A889D /* UnityAds.framework */; };
@@ -672,8 +670,6 @@
 		8DB70998236D8C85007A889D /* AnyThinkKSInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkKSInterstitialAdapter.framework; path = SDK/AnyThinkKSInterstitialAdapter.framework; sourceTree = "<group>"; };
 		8DB70999236D8C85007A889D /* CTSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CTSDK.framework; path = SDK/CTSDK.framework; sourceTree = "<group>"; };
 		8DB7099A236D8C85007A889D /* AnyThinkGDTRewardedVideoAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkGDTRewardedVideoAdapter.framework; path = SDK/AnyThinkGDTRewardedVideoAdapter.framework; sourceTree = "<group>"; };
-		8DB7099C236D8C86007A889D /* BUAdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BUAdSDK.framework; sourceTree = "<group>"; };
-		8DB7099D236D8C86007A889D /* BUAdSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = BUAdSDK.bundle; sourceTree = "<group>"; };
 		8DB7099E236D8C86007A889D /* AnyThinkYeahmobiRewardedVideoAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkYeahmobiRewardedVideoAdapter.framework; path = SDK/AnyThinkYeahmobiRewardedVideoAdapter.framework; sourceTree = "<group>"; };
 		8DB7099F236D8C86007A889D /* AnyThinkGDTInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkGDTInterstitialAdapter.framework; path = SDK/AnyThinkGDTInterstitialAdapter.framework; sourceTree = "<group>"; };
 		8DB709A0236D8C86007A889D /* UnityAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UnityAds.framework; path = SDK/UnityAds.framework; sourceTree = "<group>"; };
@@ -763,7 +759,6 @@
 				8DB70A75236D8C8A007A889D /* AnyThinkFlurryNativeAdapter.framework in Frameworks */,
 				453C166D236DBC7E006B430A /* KSAdSDK.framework in Frameworks */,
 				8DB709CB236D8C89007A889D /* AnyThinkMintegralRewardedVideoAdapter.framework in Frameworks */,
-				8DB70A70236D8C8A007A889D /* BUAdSDK.framework in Frameworks */,
 				8DB70A6E236D8C8A007A889D /* CTSDK.framework in Frameworks */,
 				8DB70A51236D8C89007A889D /* AnyThinkTTInterstitialAdapter.framework in Frameworks */,
 				8DB70A69236D8C8A007A889D /* AdColony.framework in Frameworks */,
@@ -997,7 +992,6 @@
 				8DB70862236D8C74007A889D /* Oneway */,
 				8DB7096A236D8C7E007A889D /* Tapjoy.embeddedframework */,
 				8DB70878236D8C77007A889D /* thirdRely */,
-				8DB7099B236D8C86007A889D /* Toutiao */,
 				8DB709A0236D8C86007A889D /* UnityAds.framework */,
 				8DB707EB236D8C6F007A889D /* VungleSDK.framework */,
 				8DB707DE236D8A5E007A889D /* libsqlite3.tbd */,
@@ -1526,16 +1520,6 @@
 			path = SDK/GDT;
 			sourceTree = "<group>";
 		};
-		8DB7099B236D8C86007A889D /* Toutiao */ = {
-			isa = PBXGroup;
-			children = (
-				8DB7099C236D8C86007A889D /* BUAdSDK.framework */,
-				8DB7099D236D8C86007A889D /* BUAdSDK.bundle */,
-			);
-			name = Toutiao;
-			path = SDK/Toutiao;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1595,7 +1579,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DB70506236D883C007A889D /* LaunchScreen.storyboard in Resources */,
-				8DB70A71236D8C8A007A889D /* BUAdSDK.bundle in Resources */,
 				8DB709CF236D8C89007A889D /* AppLovinSDKResources.bundle in Resources */,
 				8DB70503236D883C007A889D /* Assets.xcassets in Resources */,
 				8DB70A38236D8C89007A889D /* NendAdResource.bundle in Resources */,

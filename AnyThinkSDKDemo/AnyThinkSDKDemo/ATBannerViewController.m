@@ -133,7 +133,7 @@ NSString *const kBannerLoadingFailedNotification = @"banner_failed_to_load";
     _failureTipsLabel.hidden = YES;
     [self.view addSubview:_loadingView];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-        [[ATAdManager sharedManager] loadADWithPlacementID:_placementIDs[_name] extra:@{ kATAdLoadingExtraBannerSizeAdjustKey:@NO} delegate:self];
+        [[ATAdManager sharedManager] loadADWithPlacementID:self->_placementIDs[self->_name] extra:@{kATAdLoadingExtraBannerAdSizeKey:[NSValue valueWithCGSize:_adSize], kATAdLoadingExtraBannerSizeAdjustKey:@NO} delegate:self];
     });
 }
 
@@ -161,7 +161,7 @@ NSString *const kBannerLoadingFailedNotification = @"banner_failed_to_load";
     if ([[ATAdManager sharedManager] bannerAdReadyForPlacementID:_placementIDs[_name]]) {
         NSInteger tag = 3333;
         [[self.view viewWithTag:tag] removeFromSuperview];
-        ATBannerView *bannerView = [[ATAdManager sharedManager] retrieveBannerViewForPlacementID:_placementIDs[_name] extra:@{kATAdLoadingExtraBannerAdSizeKey:[NSValue valueWithCGSize:_adSize]}];
+        ATBannerView *bannerView = [[ATAdManager sharedManager] retrieveBannerViewForPlacementID:_placementIDs[_name]];
         bannerView.delegate = self;
         bannerView.translatesAutoresizingMaskIntoConstraints = NO;
         bannerView.tag = tag;

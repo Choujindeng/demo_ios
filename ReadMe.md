@@ -19,13 +19,13 @@
 | Applovin | 6.9.3 ||
 | Mintegral | 5.8.0 ||
 | Mopub | 5.9.0 ||
-| GDT | 4.10.19 |广点通/Tencent/腾讯广告|
+| GDT | 4.10.13 |广点通/Tencent/腾讯广告|
 | Yeahmobi | 3.2.0 ||
 | Appnext | 1.9.3 ||
 | Chartboost | 8.0.1 ||
 | Ironsource | 6.8.6 ||
 | Vungle | 6.4.3 ||
-| Adcolony | 4.1.2.0 ||
+| Adcolony | 4.1.0.0 ||
 | UnityAds | 3.3.0 ||
 | TT | 2.4.6.7 |头条/穿山甲/TT|
 | Tapjoy | 12.3.3 ||

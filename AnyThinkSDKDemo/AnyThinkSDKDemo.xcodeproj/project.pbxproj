@@ -13,6 +13,8 @@
 		453C166C236DBC7E006B430A /* KSAdSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 453C166A236DBC7D006B430A /* KSAdSDK.bundle */; };
 		453C166D236DBC7E006B430A /* KSAdSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 453C166B236DBC7E006B430A /* KSAdSDK.framework */; };
 		453C166E236DBF6D006B430A /* MoPubSDKFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB70849236D8C72007A889D /* MoPubSDKFramework.framework */; };
+		453E4D44237C0F8500F0ECB2 /* BUAdSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 453E4D42237C0F8500F0ECB2 /* BUAdSDK.bundle */; };
+		453E4D45237C0F8500F0ECB2 /* BUAdSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 453E4D43237C0F8500F0ECB2 /* BUAdSDK.framework */; };
 		45655577237961A50009DD36 /* AnyThinkMyOfferRewardedVideoAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45655574237961A50009DD36 /* AnyThinkMyOfferRewardedVideoAdapter.framework */; };
 		45655578237961A50009DD36 /* AnyThinkMyOffer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45655575237961A50009DD36 /* AnyThinkMyOffer.framework */; };
 		45655579237961A50009DD36 /* AnyThinkMyOfferInterstitialAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45655576237961A50009DD36 /* AnyThinkMyOfferInterstitialAdapter.framework */; };
@@ -255,6 +257,8 @@
 		453C1668236D9D21006B430A /* WindSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WindSDK.framework; path = SDK/WindSDK.framework; sourceTree = "<group>"; };
 		453C166A236DBC7D006B430A /* KSAdSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = KSAdSDK.bundle; path = SDK/KSAdSDK.bundle; sourceTree = "<group>"; };
 		453C166B236DBC7E006B430A /* KSAdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KSAdSDK.framework; path = SDK/KSAdSDK.framework; sourceTree = "<group>"; };
+		453E4D42237C0F8500F0ECB2 /* BUAdSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = BUAdSDK.bundle; path = SDK/BUAdSDK.bundle; sourceTree = "<group>"; };
+		453E4D43237C0F8500F0ECB2 /* BUAdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BUAdSDK.framework; path = SDK/BUAdSDK.framework; sourceTree = "<group>"; };
 		45655574237961A50009DD36 /* AnyThinkMyOfferRewardedVideoAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkMyOfferRewardedVideoAdapter.framework; path = SDK/AnyThinkMyOfferRewardedVideoAdapter.framework; sourceTree = "<group>"; };
 		45655575237961A50009DD36 /* AnyThinkMyOffer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkMyOffer.framework; path = SDK/AnyThinkMyOffer.framework; sourceTree = "<group>"; };
 		45655576237961A50009DD36 /* AnyThinkMyOfferInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkMyOfferInterstitialAdapter.framework; path = SDK/AnyThinkMyOfferInterstitialAdapter.framework; sourceTree = "<group>"; };
@@ -700,6 +704,7 @@
 				8DB70A54236D8C89007A889D /* Tapjoy.framework in Frameworks */,
 				8DB709BC236D8C89007A889D /* AnyThinkAdmobBannerAdapter.framework in Frameworks */,
 				8DB709C0236D8C89007A889D /* AnyThinkFlurryBannerAdapter.framework in Frameworks */,
+				453E4D45237C0F8500F0ECB2 /* BUAdSDK.framework in Frameworks */,
 				8DB709DC236D8C89007A889D /* AnyThinkFlurryRewardedVideoAdapter.framework in Frameworks */,
 				8DB709B6236D8C89007A889D /* AnyThinkMintegralNativeAdapter.framework in Frameworks */,
 				8DB709D2236D8C89007A889D /* AnyThinkVungleRewardedVideoAdapter.framework in Frameworks */,
@@ -873,6 +878,8 @@
 		8DB705C7236D898F007A889D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				453E4D42237C0F8500F0ECB2 /* BUAdSDK.bundle */,
+				453E4D43237C0F8500F0ECB2 /* BUAdSDK.framework */,
 				45655575237961A50009DD36 /* AnyThinkMyOffer.framework */,
 				45655576237961A50009DD36 /* AnyThinkMyOfferInterstitialAdapter.framework */,
 				45655574237961A50009DD36 /* AnyThinkMyOfferRewardedVideoAdapter.framework */,
@@ -1582,6 +1589,7 @@
 				8DB709CF236D8C89007A889D /* AppLovinSDKResources.bundle in Resources */,
 				8DB70503236D883C007A889D /* Assets.xcassets in Resources */,
 				8DB70A38236D8C89007A889D /* NendAdResource.bundle in Resources */,
+				453E4D44237C0F8500F0ECB2 /* BUAdSDK.bundle in Resources */,
 				8DB70A55236D8C89007A889D /* TapjoyResources.bundle in Resources */,
 				8DB70A5A236D8C89007A889D /* AnyThinkSDK.bundle in Resources */,
 				453C166C236DBC7E006B430A /* KSAdSDK.bundle in Resources */,

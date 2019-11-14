@@ -27,7 +27,7 @@
 | Vungle | 6.4.3 ||
 | Adcolony | 4.1.2.0 ||
 | UnityAds | 3.3.0 ||
-| TT | 2.4.6.7 |头条/穿山甲/TT|
+| TT | 2.5.1.5 |头条/穿山甲/TT|
 | Tapjoy | 12.3.3 ||
 | Oneway | 2.1.0 ||
 | Baidu | 4.67 ||

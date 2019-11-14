@@ -13,7 +13,7 @@
 | Network | SDK Version | note |
 |---|---|---|
 | Facebook | 5.5.1 |FBAudienceNetwork.framework 版本为5.5.1<br>FBSDKCoewKit.framework版本为5.5.0|
-| Admob | 7.50.0 ||
+| Admob | 7.52.0 ||
 | Inmobi | 7.3.1 ||
 | Flurry | 9.0.0 ||
 | Applovin | 6.9.3 ||

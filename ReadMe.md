@@ -13,7 +13,7 @@
 | Network | SDK Version | note |
 |---|---|---|
 | Facebook | 5.5.1 |FBAudienceNetwork.framework 版本为5.5.1<br>FBSDKCoewKit.framework版本为5.5.0|
-| Admob | 7.52.0 ||
+| Admob | 7.50.0 ||
 | Inmobi | 7.3.1 ||
 | Flurry | 9.0.0 ||
 | Applovin | 6.9.3 ||
@@ -27,7 +27,7 @@
 | Vungle | 6.4.3 ||
 | Adcolony | 4.1.0.0 ||
 | UnityAds | 3.3.0 ||
-| TT | 2.5.1.5 |头条/穿山甲/TT|
+| TT | 2.4.6.7 |头条/穿山甲/TT|
 | Tapjoy | 12.3.3 ||
 | Oneway | 2.1.0 ||
 | Baidu | 4.6.7 ||

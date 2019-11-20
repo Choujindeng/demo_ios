@@ -15,6 +15,8 @@
 		453C166E236DBF6D006B430A /* MoPubSDKFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB70849236D8C72007A889D /* MoPubSDKFramework.framework */; };
 		453E4D44237C0F8500F0ECB2 /* BUAdSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 453E4D42237C0F8500F0ECB2 /* BUAdSDK.bundle */; };
 		453E4D45237C0F8500F0ECB2 /* BUAdSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 453E4D43237C0F8500F0ECB2 /* BUAdSDK.framework */; };
+		453E4D4723855A3B00F0ECB2 /* AnyThinkMintegralBannerAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 453E4D4623855A3B00F0ECB2 /* AnyThinkMintegralBannerAdapter.framework */; };
+		453E4D4923855AD200F0ECB2 /* MTGSDKBanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 453E4D4823855AD200F0ECB2 /* MTGSDKBanner.framework */; };
 		45655577237961A50009DD36 /* AnyThinkMyOfferRewardedVideoAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45655574237961A50009DD36 /* AnyThinkMyOfferRewardedVideoAdapter.framework */; };
 		45655578237961A50009DD36 /* AnyThinkMyOffer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45655575237961A50009DD36 /* AnyThinkMyOffer.framework */; };
 		45655579237961A50009DD36 /* AnyThinkMyOfferInterstitialAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45655576237961A50009DD36 /* AnyThinkMyOfferInterstitialAdapter.framework */; };
@@ -259,6 +261,8 @@
 		453C166B236DBC7E006B430A /* KSAdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KSAdSDK.framework; path = SDK/KSAdSDK.framework; sourceTree = "<group>"; };
 		453E4D42237C0F8500F0ECB2 /* BUAdSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = BUAdSDK.bundle; path = SDK/BUAdSDK.bundle; sourceTree = "<group>"; };
 		453E4D43237C0F8500F0ECB2 /* BUAdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BUAdSDK.framework; path = SDK/BUAdSDK.framework; sourceTree = "<group>"; };
+		453E4D4623855A3B00F0ECB2 /* AnyThinkMintegralBannerAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkMintegralBannerAdapter.framework; path = SDK/AnyThinkMintegralBannerAdapter.framework; sourceTree = "<group>"; };
+		453E4D4823855AD200F0ECB2 /* MTGSDKBanner.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MTGSDKBanner.framework; path = SDK/MTGSDKBanner.framework; sourceTree = "<group>"; };
 		45655574237961A50009DD36 /* AnyThinkMyOfferRewardedVideoAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkMyOfferRewardedVideoAdapter.framework; path = SDK/AnyThinkMyOfferRewardedVideoAdapter.framework; sourceTree = "<group>"; };
 		45655575237961A50009DD36 /* AnyThinkMyOffer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkMyOffer.framework; path = SDK/AnyThinkMyOffer.framework; sourceTree = "<group>"; };
 		45655576237961A50009DD36 /* AnyThinkMyOfferInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkMyOfferInterstitialAdapter.framework; path = SDK/AnyThinkMyOfferInterstitialAdapter.framework; sourceTree = "<group>"; };
@@ -700,6 +704,7 @@
 				453C166E236DBF6D006B430A /* MoPubSDKFramework.framework in Frameworks */,
 				453C1665236D9BB3006B430A /* libc++.tbd in Frameworks */,
 				8DB70A84236D8D3E007A889D /* CoreMedia.framework in Frameworks */,
+				453E4D4923855AD200F0ECB2 /* MTGSDKBanner.framework in Frameworks */,
 				8DB70A82236D8D02007A889D /* AVFoundation.framework in Frameworks */,
 				8DB70A54236D8C89007A889D /* Tapjoy.framework in Frameworks */,
 				8DB709BC236D8C89007A889D /* AnyThinkAdmobBannerAdapter.framework in Frameworks */,
@@ -715,6 +720,7 @@
 				8DB709E1236D8C89007A889D /* AnyThinkOnewayInterstitialAdapter.framework in Frameworks */,
 				8DB70A62236D8C8A007A889D /* Chartboost.framework in Frameworks */,
 				8DB70A53236D8C89007A889D /* FBAudienceNetworkBiddingKit.framework in Frameworks */,
+				453E4D4723855A3B00F0ECB2 /* AnyThinkMintegralBannerAdapter.framework in Frameworks */,
 				8DB70A6F236D8C8A007A889D /* AnyThinkGDTRewardedVideoAdapter.framework in Frameworks */,
 				8DB70A3C236D8C89007A889D /* AnyThinkHeaderBidding.framework in Frameworks */,
 				8DB709D7236D8C89007A889D /* AnyThinkSplash.framework in Frameworks */,
@@ -878,6 +884,8 @@
 		8DB705C7236D898F007A889D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				453E4D4823855AD200F0ECB2 /* MTGSDKBanner.framework */,
+				453E4D4623855A3B00F0ECB2 /* AnyThinkMintegralBannerAdapter.framework */,
 				453E4D42237C0F8500F0ECB2 /* BUAdSDK.bundle */,
 				453E4D43237C0F8500F0ECB2 /* BUAdSDK.framework */,
 				45655575237961A50009DD36 /* AnyThinkMyOffer.framework */,

@@ -1,6 +1,6 @@
 ## [IMPORTANT] DO NOT expose any of the frameworks to Windows operating system; Windows modifies frameworks, making them incomplete and resulting in compile errors.
-# AnythinkSDK_iOS_SDK_5.0.0
-## Third-party SDK version for AnyThink_ios_sdk_5.0.0
+# AnythinkSDK_iOS_SDK_5.1.0
+## Third-party SDK version for AnyThink_ios_sdk_5.1.0
 
 [Integrate Guide for AnyThinkSDK for iOS(English)](iOS_Doc_EN/iOS_Integration_Guide.md)
 
@@ -17,7 +17,7 @@
 | Inmobi | 7.3.1 ||
 | Flurry | 9.0.0 ||
 | Applovin | 6.9.3 ||
-| Mintegral | 5.8.0 ||
+| Mintegral | 5.8.4 ||
 | Mopub | 5.9.0 ||
 | GDT | 4.10.19 |广点通/Tencent/腾讯广告|
 | Yeahmobi | 3.2.0 ||

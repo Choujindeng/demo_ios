@@ -24,6 +24,7 @@ static NSString *const kAppnextPlacementID = @"b5bc7fb78288e9";
 static NSString *const kBaiduPlacementID = @"b5c04dda229f7e";
 static NSString *const kUnityAdsPlacementID = @"b5c21a04406722";
 static NSString *const kNendPlacementID = @"b5cb96d97400b3";
+static NSString *const kMintegralPlacementID = @"b5dd363166a5ea";
 
 NSString *const kBannerShownNotification = @"banner_shown";
 NSString *const kBannerLoadingFailedNotification = @"banner_failed_to_load";
@@ -62,6 +63,7 @@ NSString *const kBannerLoadingFailedNotification = @"banner_failed_to_load";
                           kBaiduPlacement:kBaiduPlacementID,
                           kUnityAdsPlacementName:kUnityAdsPlacementID,
                           kNendPlacement:kNendPlacementID,
+                          kMintegralPlacement:kMintegralPlacementID,
                           };
     }
     return self;

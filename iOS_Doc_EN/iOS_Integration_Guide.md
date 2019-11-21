@@ -74,7 +74,7 @@ The table below gives a brief summary of third party SDKs. Only import those of 
 |Network|SDK Package Contents|Current Version Supported by **TopOn**|Download Link|Reference Website|Note|    
 |---|---|---|---|---|---|   
 |Facebook|FBAudienceNetwork.framework<br> FBAudienceNetworkBiddingKit.framework <br>FBSDKCoreKit.framework<br>|v5.4.0|https://developers.facebook.com/docs/audience-network/download#ios|https://developers.facebook.com/docs/audience-network/ios|测试机需安装并登录Facebook客户端才能请求到广告。|
-|Admob|GoogleMobileAds.framework|v7.48.0|https://support.google.com/admob/answer/2993059?hl=en|https://developers.google.com/admob/ios/quick-start|Admob requires that **app id be configured in the Info.plist of your project**; for more information please refer to <a href="https://developers.google.com/admob/ios/quick-start#update\_your\_infoplist">Admob's website</a>.|
+|Admob|GoogleMobileAds.framework<br>PersonalizedAdConsent.framework|v7.48.0|https://support.google.com/admob/answer/2993059?hl=en|https://developers.google.com/admob/ios/quick-start|Admob requires that **app id be configured in the Info.plist of your project**; for more information please refer to <a href="https://developers.google.com/admob/ios/quick-start#update\_your\_infoplist">Admob's website</a>.|
 | Inmobi |InMobiSDK.framework|v7.3.1|https://support.inmobi.com/monetize/ios-guidelines/||||
 | Flurry |libFlurryAds\_1.0.0.a<br>libFlurry\_9.0.0.a|231\_9.0.0|https://dev.flurry.com/admin/applications||||
 | Applovin |AppLovinSDK.framework<br>AppLovinSDKResources.bundle|v6.9.3|https://dash.applovin.com/docs/integration#iosIntegration||||

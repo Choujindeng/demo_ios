@@ -74,7 +74,7 @@ The table below gives a brief summary of third party SDKs. Only import those of 
 |Network|SDK Package Contents|Current Version Supported by **TopOn**|Download Link|Reference Website|Note|    
 |---|---|---|---|---|---|   
 |Facebook|FBAudienceNetwork.framework<br> FBAudienceNetworkBiddingKit.framework <br>FBSDKCoreKit.framework<br>|v5.4.0|https://developers.facebook.com/docs/audience-network/download#ios|https://developers.facebook.com/docs/audience-network/ios|测试机需安装并登录Facebook客户端才能请求到广告。|
-|Admob|GoogleMobileAds.framework<br>PersonalizedAdConsent.framework|v7.52.0|https://support.google.com/admob/answer/2993059?hl=en|https://developers.google.com/admob/ios/quick-start|Admob requires that **app id be configured in the Info.plist of your project**; for more information please refer to <a href="https://developers.google.com/admob/ios/quick-start#update\_your\_infoplist">Admob's website</a>.|
+|Admob|GoogleMobileAds.framework<br>PersonalizedAdConsent.framework|v7.48.0|https://support.google.com/admob/answer/2993059?hl=en|https://developers.google.com/admob/ios/quick-start|Admob requires that **app id be configured in the Info.plist of your project**; for more information please refer to <a href="https://developers.google.com/admob/ios/quick-start#update\_your\_infoplist">Admob's website</a>.|
 | Inmobi |InMobiSDK.framework|v7.3.1|https://support.inmobi.com/monetize/ios-guidelines/||||
 | Flurry |libFlurryAds\_1.0.0.a<br>libFlurry\_9.0.0.a|231\_9.0.0|https://dev.flurry.com/admin/applications||||
 | Applovin |AppLovinSDK.framework<br>AppLovinSDKResources.bundle|v6.9.3|https://dash.applovin.com/docs/integration#iosIntegration||||
@@ -98,38 +98,6 @@ The table below gives a brief summary of third party SDKs. Only import those of 
 
 
 You can use CocoaPods to import third party SDKs or you can download and import them manually.
-
-<p id='network_firm_id_table'></p>
-An id(NSInteger) has been assigned to every network supported by AnyThinkSDK, see the table below for more details:
-
-| Network Name| NETWORK FIRM ID|
-|---|---|
-|Facebook | 1 |
-|Admob | 2 |
-|Inmobi | 3 | 
-|Flurry| 4 | 
-|Applovin| 5 | 
-|Mintegral | 6 |
-|Mopub | 7 |
-|GDT | 8|
-|Chartboost | 9| 
-|Tapjoy | 10 |
-|Ironsource | 11|
-|UnityAds | 12 |
-|Vungle | 13 | 
-|Adcolony | 14 | 
-|TouTiao|15|
-|玩转互联 | 16 |
-|Oneway|17|
-|MobPower | 18 |
-|金山云 | 19 |
-|Yeahmobi|20|
-|Appnext|21|
-|Baidu|22|
-|Nend|23|
-|Maio|24|
-|Nend|28|
-|Maio|29|
 
 ### 2.4 Initialize the SDK
 
@@ -197,24 +165,18 @@ You can implement **ATSplashDelegate**'s methods to get notified on the various 
     NSLog(@"AppDelegate::didFailToLoadADWithPlacementID:%@ error:%@", placementID, error);
 }
 
--(void)splashDidShowForPlacementID:(NSString*)placementID extra:(NSDictionary*)extra {
-    NSLog(@"AppDelegate::splashDidShowForPlacementID:%@ extra:%@", placementID, extra);
+-(void)splashDidShowForPlacementID:(NSString*)placementID {
+    NSLog(@"AppDelegate::splashDidShowForPlacementID:%@", placementID);
 }
 
--(void)splashDidClickForPlacementID:(NSString*)placementID extra:(NSDictionary*)extra {
-    NSLog(@"AppDelegate::splashDidClickForPlacementID:%@ extra:%@", placementID, extra);
+-(void)splashDidClickForPlacementID:(NSString*)placementID {
+    NSLog(@"AppDelegate::splashDidClickForPlacementID:%@", placementID);
 }
 
--(void)splashDidCloseForPlacementID:(NSString*)placementID extra:(NSDictionary*)extra {
-    NSLog(@"AppDelegate::splashDidCloseForPlacementID:%@ extra:%@", placementID, extra);
+-(void)splashDidCloseForPlacementID:(NSString*)placementID {
+    NSLog(@"AppDelegate::splashDidCloseForPlacementID:%@", placementID);
 }
 </code></pre>
-
-**Note:**The trailing extra parameter contains ad network specific info, which, for splash ad, is passed using **kATSplashDelegateExtraNetworkIDKey** and **kATSplashDelegateExtraAdSourceIDKey** as keys; see the pic below for an example:
-
-![](Splash_delegate_call_log.png)
-
-Refer to [Network Firm Id Table](#network\_firm\_id\_table) for more info on network firm id.
 
 ## <h2 id='4'>4 Implement Rewarded Video</h2>
 Before you continue, make sure you've walked through the steps listed in the [Get Started](#1) section.
@@ -285,38 +247,25 @@ After rewarded video ad has been successfully loaded, you can call the showing A
 ### 4.5 Implement Rewarded Video Delegates
 You can implement the methods defined in rewarded video delegate to get notified on various rewarded video event:
 <pre><code>#pragma mark - showing delegate
--(void) rewardedVideoDidRewardSuccessForPlacemenID:(NSString *)placementID extra:(NSDictionary *)extra{
-    NSLog(@"ATRewardedVideoVideoViewController::rewardedVideoDidRewardSuccessForPlacemenID:%@ extra:%@",placementID,extra);
+-(void) rewardedVideoDidStartPlayingForPlacementID:(NSString*)placementID {
+    NSLog(@"RV Demo: rewardedVideoDidStartPlayingForPlacementID:%@", placementID);
 }
 
--(void) rewardedVideoDidStartPlayingForPlacementID:(NSString *)placementID extra:(NSDictionary *)extra {
-    NSLog(@"ATRewardedVideoVideoViewController::rewardedVideoDidStartPlayingForPlacementID:%@ extra:%@", placementID, extra);
+-(void) rewardedVideoDidEndPlayingForPlacementID:(NSString*)placementID {
+    NSLog(@"RV Demo: rewardedVideoDidEndPlayingForPlacementID:%@", placementID);
 }
 
--(void) rewardedVideoDidEndPlayingForPlacementID:(NSString*)placementID extra:(NSDictionary *)extra {
-    NSLog(@"ATRewardedVideoVideoViewController::rewardedVideoDidEndPlayingForPlacementID:%@ extra:%@", placementID, extra);
+-(void) rewardedVideoDidFailToPlayForPlacementID:(NSString* )placementID error:(NSError*)error {
+    NSLog(@"RV Demo: rewardedVideoDidFailToPlayForPlacementID:%@ error:%@", placementID, error);
 }
 
--(void) rewardedVideoDidFailToPlayForPlacementID:(NSString*)placementID error:(NSError*)error extra:(NSDictionary *)extra {
-    NSLog(@"ATRewardedVideoVideoViewController::rewardedVideoDidFailToPlayForPlacementID:%@ error:%@ extra:%@", placementID, error, extra);
+-(void) rewardedVideoDidCloseForPlacementID:(NSString*)placementID rewarded:(BOOL)rewarded {
+    NSLog(@"RV Demo: rewardedVideoDidCloseForPlacementID:%@, rewarded:%@", placementID, rewarded ? @"yes" : @"no");
 }
 
--(void) rewardedVideoDidCloseForPlacementID:(NSString*)placementID rewarded:(BOOL)rewarded extra:(NSDictionary *)extra {
-    NSLog(@"ATRewardedVideoVideoViewController::rewardedVideoDidCloseForPlacementID:%@, rewarded:%@ extra:%@", placementID, rewarded ? @"yes" : @"no", extra);
-}
-
--(void) rewardedVideoDidClickForPlacementID:(NSString*)placementID extra:(NSDictionary *)extra {
-    NSLog(@"ATRewardedVideoVideoViewController::rewardedVideoDidClickForPlacementID:%@ extra:%@", placementID, extra);
+-(void) rewardedVideoDidClickForPlacementID:(NSString*)placementID {
+    NSLog(@"RV Demo: rewardedVideoDidClickForPlacementID:%@", placementID);
 }</code></pre>
-
-**Note:**The trailing extra parameter contains ad network specific info, which, for rewarded video ad, is passed using **kATRewardedVideoCallbackExtraAdsourceIDKey** and **kATRewardedVideoCallbackExtraNetworkIDKey** as keys; here's an example of extra:
-
-<pre><code>{
-    "ad_source_id" = 9805;
-    "network_firm_id" = 8;
-}</code></pre>
-
-Refer to [Network Firm Id Table](#network\_firm\_id\_table) for more info on network firm id.
 
 ## <h2 id='5'>5 Implement Interstitial</h2>
 Before you continue, make sure you've walked through the steps listed in the [Get Started](#1) section.
@@ -369,7 +318,8 @@ To get notified on various ad loading event, you can implemente the methods in a
 
 ### 5.3 Check If Interstitial's Ready
 You can check if interstitial's ready for a placement as below:
-<pre><code>if ([[ATAdManager sharedManager] interstitialReadyForPlacementID:@"your interstitial placement id"]) {
+<pre><code>
+if ([[ATAdManager sharedManager] interstitialReadyForPlacementID:@"your interstitial placement id"]) {
     //Show interstitial here
 } else {
     //Load interstitial here
@@ -386,42 +336,33 @@ After interstitial ad has been successfully loaded, you can call the showing API
 ### 5.5 Implement Interstitial Delegates
 You can implement the methods defined in **ATInterstitialDelegate** to get notified on various interstitial event:
 <pre><code>#pragma mark - showing delegate
--(void) interstitialDidShowForPlacementID:(NSString *)placementID extra:(NSDictionary *)extra {
-    NSLog(@"ATInterstitialViewController::interstitialDidShowForPlacementID:%@ extra:%@", placementID, extra);
+-(void) interstitialDidShowForPlacementID:(NSString *)placementID {
+    NSLog(@"ATInterstitialViewController::interstitialDidShowForPlacementID:%@", placementID);
 }
 
--(void) interstitialFailedToShowForPlacementID:(NSString*)placementID error:(NSError*)error extra:(NSDictionary *)extra {
-    NSLog(@"ATInterstitialViewController::interstitialFailedToShowForPlacementID:%@ error:%@ extra:%@", placementID, error, extra);
+-(void) interstitialFailedToShowForPlacementID:(NSString\*)placementID error:(NSError\*)error {
+    NSLog(@"ATInterstitialViewController::interstitialFailedToShowForPlacementID:%@ error:%@", placementID, error);
 }
 
--(void) interstitialDidFailToPlayVideoForPlacementID:(NSString*)placementID error:(NSError*)error extra:(NSDictionary*)extra {
-    NSLog(@"ATInterstitialViewController::interstitialDidFailToPlayVideoForPlacementID:%@ error:%@ extra:%@", placementID, error, extra);
+-(void) interstitialDidStartPlayingVideoForPlacementID:(NSString*)placementID {
+    NSLog(@"ATInterstitialViewController::interstitialDidStartPlayingVideoForPlacementID:%@", placementID);
 }
 
--(void) interstitialDidStartPlayingVideoForPlacementID:(NSString*)placementID extra:(NSDictionary *)extra {
-    NSLog(@"ATInterstitialViewController::interstitialDidStartPlayingVideoForPlacementID:%@ extra:%@", placementID, extra);
+-(void) interstitialDidEndPlayingVideoForPlacementID:(NSString*)placementID {
+    NSLog(@"ATInterstitialViewController::interstitialDidEndPlayingVideoForPlacementID:%@", placementID);
 }
 
--(void) interstitialDidEndPlayingVideoForPlacementID:(NSString*)placementID extra:(NSDictionary *)extra {
-    NSLog(@"ATInterstitialViewController::interstitialDidEndPlayingVideoForPlacementID:%@ extra:%@", placementID, extra);
+-(void) interstitialDidFailToPlayForPlacementID:(NSString\*)placementID error:(NSError\*)error {
+    NSLog(@"ATInterstitialViewController::interstitialDidFailToPlayForPlacementID:%@", placementID);
 }
 
--(void) interstitialDidCloseForPlacementID:(NSString*)placementID extra:(NSDictionary *)extra {
-    NSLog(@"ATInterstitialViewController::interstitialDidCloseForPlacementID:%@ extra:%@", placementID, extra);
+-(void) interstitialDidCloseForPlacementID:(NSString*)placementID {
+    NSLog(@"ATInterstitialViewController::interstitialDidCloseForPlacementID:%@", placementID);
 }
 
--(void) interstitialDidClickForPlacementID:(NSString*)placementID extra:(NSDictionary *)extra {
-    NSLog(@"ATInterstitialViewController::interstitialDidClickForPlacementID:%@ extra:%@", placementID, extra);
+-(void) interstitialDidClickForPlacementID:(NSString*)placementID {
+    NSLog(@"ATInterstitialViewController::interstitialDidClickForPlacementID:%@", placementID);
 }</code></pre>
-
-**Note:**The trailing extra parameter contains ad network specific info, which, for interstitial ad, is passed using **kATInterstitialDelegateExtraNetworkIDKey** and **kATInterstitialDelegateExtraAdSourceIDKey** as keys; here's an example of extra:
-
-<pre><code>{
-    "ad_source_id" = 9805;
-    "network_firm_id" = 8;
-}</code></pre>
-
-Refer to [Network Firm Id Table](#network\_firm\_id\_table) for more info on network firm id.
 
 ## <h2 id='6'>6 Implement Banner</h2>
 Before you continue, make sure you've walked through the steps listed in the [Get Started](#1) section.
@@ -500,30 +441,25 @@ After banner ad has been successfully loaded, you can call the showing API to sh
 
 ### 6.5 Implemente Banner Delegates
 You can implement the methods defined in **ATBannerDelegate** to get notified on various banner event:
-<pre><code>-(void) bannerView:(ATBannerView\*)bannerView didShowAdWithPlacementID:(NSString\*)placementID extra:(NSDictionary \*)extra{
-    NSLog(@"ATBannerViewController::bannerView:didShowAdWithPlacementID:%@ with extra: %@", placementID,extra);
+<pre><code>-(void) bannerView:(ATBannerView *)bannerView didShowAdWithPlacementID:(NSString *)placementID {
+    NSLog(@"ATBannerViewController::bannerView:didShowAdWithPlacementID:%@", placementID);
 }
--(void) bannerView:(ATBannerView\*)bannerView didClickWithPlacementID:(NSString\*)placementID extra:(NSDictionary \*)extra{
-    NSLog(@"ATBannerViewController::bannerView:didClickWithPlacementID:%@ with extra: %@", placementID,extra);
+
+-(void) bannerView:(ATBannerView*)bannerView didClickWithPlacementID:(NSString*)placementID {
+    NSLog(@"ATBannerViewController::bannerView:didClickWithPlacementID:%@", placementID);
 }
--(void) bannerView:(ATBannerView\*)bannerView didCloseWithPlacementID:(NSString\*)placementID extra:(NSDictionary \*)extra{
-    NSLog(@"ATBannerViewController::bannerView:didCloseWithPlacementID:%@ with extra: %@", placementID,extra);
+
+-(void) bannerView:(ATBannerView*)bannerView didCloseWithPlacementID:(NSString*)placementID {
+    NSLog(@"ATBannerViewController::bannerView:didCloseWithPlacementID:%@", placementID);
 }
--(void) bannerView:(ATBannerView\*)bannerView didAutoRefreshWithPlacement:(NSString\*)placementID extra:(NSDictionary \*)extra{
-    NSLog(@"ATBannerViewController::bannerView:didAutoRefreshWithPlacement:%@ with extra: %@", placementID,extra);
+
+-(void) bannerView:(ATBannerView *)bannerView didAutoRefreshWithPlacement:(NSString *)placementID {
+    NSLog(@"ATBannerViewController::bannerView:didAutoRefreshWithPlacement:%@", placementID);
 }
--(void) bannerView:(ATBannerView\*)bannerView failedToAutoRefreshWithPlacementID:(NSString\*)placementID  extra:(NSDictionary \*)extra error:(NSError\*)error {
+
+-(void) bannerView:(ATBannerView *)bannerView failedToAutoRefreshWithPlacementID:(NSString *)placementID error:(NSError *)error {
     NSLog(@"ATBannerViewController::bannerView:failedToAutoRefreshWithPlacementID:%@ error:%@", placementID, error);
 }</code></pre>
-
-**Note:**The trailing extra parameter contains ad network specific info, which, for banner ad, is passed using **kATBannerDelegateExtraNetworkIDKey** and **kATBannerDelegateExtraAdSourceIDKey** as keys; here's an example of extra:
-
-<pre><code>{
-    "ad_source_id" = 9805;
-    "network_firm_id" = 8;
-}</code></pre>
-
-Refer to [Network Firm Id Table](#network\_firm\_id\_table) for more info on network firm id.
 
 ## <h2 id='7'>7 Implement Native</h2>
 
@@ -677,31 +613,18 @@ instance, set the frame within which you want to show the ad, the class of your 
     [self.view addSubview:adView];
 }</code></pre>
 
-The code above gives you the effect shown below:
-
-![](native_ad_effect.png)
-
 ### 7.4 Implement Native Delegate
 You can implement the methods defined in **ATNativeDelegate** to get notified on various native event:
 
 
 <pre><code>//Called when user click the ad
--(void) didClickNativeAdInAdView:(ATNativeADView*)adView placementID:(NSString*)placementID extra:(NSDictionary *)extra{
-    NSLog(@"ATADShowViewController:: didClickNativeAdInAdView:placementID:%@ with extra: %@", placementID,extra);
+-(void) didClickNativeAdInAdView:(ATNativeADView*)adView placementID:(NSString*)placementID {
+    NSLog(@"did click native ad with placement id:%@", placementID);
 }
-
--(void) didShowNativeAdInAdView:(ATNativeADView*)adView placementID:(NSString*)placementID extra:(NSDictionary *)extra{
-    NSLog(@"ATADShowViewController:: didShowNativeAdInAdView:placementID:%@ with extra: %@", placementID,extra);
+//Called when the ad has been shown
+-(void) didShowNativeAdInAdView:(ATNativeADView*)adView placementID:(NSString*)placementID {
+    adView.mainImageView.hidden = [adView isVideoContents];
 }</code></pre>
-
-**Note:**The trailing extra parameter contains ad network specific info, which, for native ad, is passed using **kATNativeDelegateExtraNetworkIDKey** and **kATNativeDelegateExtraAdSourceIDKey** as keys; here's an example of extra:
-
-<pre><code>{
-    "ad_source_id" = 9805;
-    "network_firm_id" = 8;
-}</code></pre>
-
-Refer to [Network Firm Id Table](#network\_firm\_id\_table) for more info on network firm id.
 
 ## <h2 id='8'>8 Implement Native Banner</h2>
 Before you continue, make sure you've walked through the steps listed in the [Get Started](#1) section.
@@ -754,34 +677,25 @@ After native banner ad has been successfully loaded, you can call the showing AP
     NSLog(@"ATNativeBannerViewController::didFailToLoadNativeBannerAdWithPlacementID:%@ error:%@", placementID, error);
 }
 
--(void) didShowNativeBannerAdInView:(ATNativeBannerView*)bannerView placementID:(NSString*)placementID extra:(NSDictionary *)extra{
-    NSLog(@"ATNativeBannerViewController::didShowNativeBannerAdInView:%@ placementID:%@ with extra: %@",bannerView, placementID,extra);
+-(void) didShowNativeBannerAdInView:(ATNativeBannerView*)bannerView placementID:(NSString*)placementID {
+    NSLog(@"ATNativeBannerViewController::didShowNativeBannerAdInView:%@ placementID:%@", bannerView, placementID);
 }
 
--(void) didClickNativeBannerAdInView:(ATNativeBannerView*)bannerView placementID:(NSString*)placementID extra:(NSDictionary *)extra{
-    NSLog(@"ATNativeBannerViewController::didClickNativeBannerAdInView:%@ placementID:%@ with extra: %@",bannerView, placementID,extra);
+-(void) didClickNativeBannerAdInView:(ATNativeBannerView*)bannerView placementID:(NSString*)placementID {
+    NSLog(@"ATNativeBannerViewController::didClickNativeBannerAdInView:%@ placementID:%@", bannerView, placementID);
 }
 
--(void) didClickCloseButtonInNativeBannerAdView:(ATNativeBannerView*)bannerView placementID:(NSString*)placementID extra:(NSDictionary *)extra{
+-(void) didClickCloseButtonInNativeBannerAdView:(ATNativeBannerView*)bannerView placementID:(NSString*)placementID {
     NSLog(@"ATNativeBannerViewController::didClickCloseButtonInNativeBannerAdView:%@ placementID:%@", bannerView, placementID);
 }
 
--(void) didAutorefreshNativeBannerAdInView:(ATNativeBannerView*)bannerView placementID:(NSString*)placementID extra:(NSDictionary *)extra{
-    NSLog(@"ATNativeBannerViewController::didAutorefreshNativeBannerAdInView:%@ placementID:%@ with extra: %@",bannerView, placementID,extra);
+-(void) didAutorefreshNativeBannerAdInView:(ATNativeBannerView*)bannerView placementID:(NSString*)placementID {
+    NSLog(@"ATNativeBannerViewController::didAutorefreshNativeBannerAdInView:%@ placementID:%@", bannerView, placementID);
 }
 
--(void) didFailToAutorefreshNativeBannerAdInView:(ATNativeBannerView*)bannerView placementID:(NSString*)placementID extra:(NSDictionary *)extra error:(NSError*)error {
+-(void) didFailToAutorefreshNativeBannerAdInView:(ATNativeBannerView*)bannerView placementID:(NSString*)placementID error:(NSError*)error {
     NSLog(@"ATNativeBannerViewController::didFailToAutorefreshNativeBannerAdInView:%@ placementID:%@ error:%@", bannerView, placementID, error);
 }</code></pre>
-
-**Note:**The trailing extra parameter contains ad network specific info, which, for native banner ad, is passed using **kATNativeDelegateExtraNetworkIDKey** and **kATNativeDelegateExtraAdSourceIDKey** as keys(the same as those of native ad); here's an example of extra:
-
-<pre><code>{
-    "ad_source_id" = 9805;
-    "network_firm_id" = 8;
-}</code></pre>
-
-Refer to [Network Firm Id Table](#network\_firm\_id\_table) for more info on network firm id.
 
 ## <h2 id='9'>9 Implement Native Splash</h2>
 Before you continue, make sure you've walked through the steps listed in the [Get Started](#1) section.
@@ -829,39 +743,26 @@ After banner ad has been successfully loaded, you can call the showing API to sh
 ### 9.4 Implement Native Splash Delegates
 You can implement **ATNativeSplashDelegate**'s methods to get notified on the various splash ad events:<br>
 
-<pre><code>-(void)didShowNativeSplashAdForPlacementID:(NSString*)placementID extra:(NSDictionary *)extra{
-    NSLog(@"ViewController::splashDidShowForPlacementID:%@ with extra: %@", placementID,extra);
-}
-
--(void)didClickNaitveSplashAdForPlacementID:(NSString*)placementID extra:(NSDictionary *)extra{
-    NSLog(@"ViewController::splashDidClickForPlacementID:%@ with extra: %@", placementID,extra);
-}
-
--(void)didCloseNativeSplashAdForPlacementID:(NSString*)placementID extra:(NSDictionary *)extra{
-    NSLog(@"ViewController::splashDidCloseForPlacementID:%@ with extra: %@", placementID,extra);
-}
--(void)splashDidShowForPlacementID:(NSString*)placementID extra:(NSDictionary *)extra {
-    NSLog(@"AppDelegate::splashDidShowForPlacementID:%@ with extra: %@", placementID,extra);
+<pre><code>-(void) finishLoadingNativeSplashAdForPlacementID:(NSString*)placementID {
+NSLog(@"ViewController::finishLoadingNativeSplashAdForPlacementID:%@", placementID);
     
 }
 
--(void)splashDidClickForPlacementID:(NSString*)placementID extra:(NSDictionary *)extra{
-    NSLog(@"AppDelegate::splashDidClickForPlacementID:%@ with extra: %@", placementID,extra);
-    
+-(void) failedToLoadNativeSplashAdForPlacementID:(NSString*)placementID error:(NSError*)error {
+    NSLog(@"ViewController::failedToLoadNativeSplashAdForPlacementID:%@ error:%@", placementID, error);
 }
 
--(void)splashDidCloseForPlacementID:(NSString*)placementID extra:(NSDictionary *)extra{
-    NSLog(@"AppDelegate::splashDidCloseForPlacementID:%@ with extra: %@", placementID,extra);
+-(void) didShowNativeSplashAdForPlacementID:(NSString*)placementID {
+    NSLog(@"ViewController::didShowNativeSplashAdForPlacementID:%@", placementID);
+}
+
+-(void) didClickNaitveSplashAdForPlacementID:(NSString*)placementID {
+    NSLog(@"ViewController::didClickNaitveSplashAdForPlacementID:%@", placementID);
+}
+
+-(void) didCloseNativeSplashAdForPlacementID:(NSString*)placementID {
+    NSLog(@"ViewController::didCloseNativeSplashAdForPlacementID:%@", placementID);
 }</code></pre>
-
-**Note:**The trailing extra parameter contains ad network specific info, which, for native banner ad, is passed using **kATNativeDelegateExtraNetworkIDKey** and **kATNativeDelegateExtraAdSourceIDKey** as keys(the same as those of native ad); here's an example of extra:
-
-<pre><code>{
-    "ad_source_id" = 9805;
-    "network_firm_id" = 8;
-}</code></pre>
-
-Refer to [Network Firm Id Table](#network\_firm\_id\_table) for more info on network firm id.
 
 
 ## <h2 id='10'>10 On Header Bidding</h2>

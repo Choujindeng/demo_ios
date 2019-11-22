@@ -49,7 +49,7 @@ AnyThinkSDK支持原生广告(Native),激励视频广告(rewardVideo)，banner�
 |第三方平台|需要导入的包|**TopOn**支持的版本|下载链接|参考网址|备注|    
 |---|---|---|---|---|---|   
 |Facebook|FBAudienceNetwork.framework<br> FBAudienceNetworkBiddingKit.framework <br>FBSDKCoreKit.framework<br>|v5.4.0|https://developers.facebook.com/docs/audience-network/download#ios|https://developers.facebook.com/docs/audience-network/ios|测试机需安装并登录Facebook客户端才能请求到广告。|
-|Admob|GoogleMobileAds.framework<br>PersonalizedAdConsent.framework|v7.52.0|https://support.google.com/admob/answer/2993059?hl=en|https://developers.google.com/admob/ios/quick-start|Admob requires that **app id be configured in the Info.plist of your project**; for more information please refer to <a href="https://developers.google.com/admob/ios/quick-start#update\_your\_infoplist">Admob's website</a>.|
+|Admob|GoogleMobileAds.framework<br>PersonalizedAdConsent.framework|v7.48.0|https://support.google.com/admob/answer/2993059?hl=en|https://developers.google.com/admob/ios/quick-start|Admob requires that **app id be configured in the Info.plist of your project**; for more information please refer to <a href="https://developers.google.com/admob/ios/quick-start#update\_your\_infoplist">Admob's website</a>.|
 | Inmobi |InMobiSDK.framework|v7.3.1|https://support.inmobi.com/monetize/ios-guidelines/||||
 | Flurry |libFlurryAds\_1.0.0.a<br>libFlurry\_9.0.0.a|231\_9.0.0|https://dev.flurry.com/admin/applications||||
 | Applovin |AppLovinSDK.framework<br>AppLovinSDKResources.bundle|v6.9.3|https://dash.applovin.com/docs/integration#iosIntegration||||
@@ -72,38 +72,6 @@ AnyThinkSDK支持原生广告(Native),激励视频广告(rewardVideo)，banner�
 | sigmob |WindSDK.framework|v2.12.3|||||
 
 您可以使用CocoaPods导入第三方SDK，也可以手动下载导入第三方SDK。
-
-<p id='network_firm_id_table'></p>
-AnyThinkSDK为每一个支持的第三方广告平台定义了一个id（整型），下表列出了对应的值：
-
-| Network Name| NETWORK FIRM ID|
-|---|---|
-|Facebook | 1 |
-|Admob | 2 |
-|Inmobi | 3 | 
-|Flurry| 4 | 
-|Applovin| 5 | 
-|Mintegral | 6 |
-|Mopub | 7 |
-|GDT | 8|
-|Chartboost | 9| 
-|Tapjoy | 10 |
-|Ironsource | 11|
-|UnityAds | 12 |
-|Vungle | 13 | 
-|Adcolony | 14 | 
-|TouTiao|15|
-|玩转互联 | 16 |
-|Oneway|17|
-|MobPower | 18 |
-|金山云 | 19 |
-|Yeahmobi|20|
-|Appnext|21|
-|Baidu|22|
-|Nend|23|
-|Maio|24|
-|Nend|28|
-|Maio|29|
 
 ### 2.4 初始化SDK
 
@@ -171,24 +139,18 @@ AnyThinkSDK为每一个支持的第三方广告平台定义了一个id（整型�
     NSLog(@"AppDelegate::didFailToLoadADWithPlacementID:%@ error:%@", placementID, error);
 }
 
--(void)splashDidShowForPlacementID:(NSString*)placementID extra:(NSDictionary*)extra {
-    NSLog(@"AppDelegate::splashDidShowForPlacementID:%@ extra:%@", placementID, extra);
+-(void)splashDidShowForPlacementID:(NSString*)placementID {
+    NSLog(@"AppDelegate::splashDidShowForPlacementID:%@", placementID);
 }
 
--(void)splashDidClickForPlacementID:(NSString*)placementID extra:(NSDictionary*)extra {
-    NSLog(@"AppDelegate::splashDidClickForPlacementID:%@ extra:%@", placementID, extra);
+-(void)splashDidClickForPlacementID:(NSString*)placementID {
+    NSLog(@"AppDelegate::splashDidClickForPlacementID:%@", placementID);
 }
 
--(void)splashDidCloseForPlacementID:(NSString*)placementID extra:(NSDictionary*)extra {
-    NSLog(@"AppDelegate::splashDidCloseForPlacementID:%@ extra:%@", placementID, extra);
+-(void)splashDidCloseForPlacementID:(NSString*)placementID {
+    NSLog(@"AppDelegate::splashDidCloseForPlacementID:%@", placementID);
 }
 </code></pre>
-
-**说明：**开屏广告的回调方法最后的extra参数用**kATSplashDelegateExtraNetworkIDKey**和**kATSplashDelegateExtraAdSourceIDKey**作为键包含了第三方平台相关的信息，比如：
-
-![](Splash_delegate_call_log.png)
-
-更多network firm id的相关信息，请参阅[Network Firm Id Table](#network\_firm\_id\_table)
 
 ## <h2 id='4'>4 激励视频(Rewarded Video)</h2>
 在继续接入之前，您需要保证您已经完成了以上 [配置](#1) 步骤。
@@ -260,38 +222,25 @@ if ([[ATAdManager sharedManager] rewardedVideoReadyForPlacementID:@"your rv plac
 您可以实现**Rewarded Video Delegate**的方法来获取rewarded video的各种事件：
 
 <pre><code>#pragma mark - showing delegate
--(void) rewardedVideoDidRewardSuccessForPlacemenID:(NSString *)placementID extra:(NSDictionary *)extra{
-    NSLog(@"ATRewardedVideoVideoViewController::rewardedVideoDidRewardSuccessForPlacemenID:%@ extra:%@",placementID,extra);
+-(void) rewardedVideoDidStartPlayingForPlacementID:(NSString*)placementID {
+    NSLog(@"RV Demo: rewardedVideoDidStartPlayingForPlacementID:%@", placementID);
 }
 
--(void) rewardedVideoDidStartPlayingForPlacementID:(NSString *)placementID extra:(NSDictionary *)extra {
-    NSLog(@"ATRewardedVideoVideoViewController::rewardedVideoDidStartPlayingForPlacementID:%@ extra:%@", placementID, extra);
+-(void) rewardedVideoDidEndPlayingForPlacementID:(NSString*)placementID {
+    NSLog(@"RV Demo: rewardedVideoDidEndPlayingForPlacementID:%@", placementID);
 }
 
--(void) rewardedVideoDidEndPlayingForPlacementID:(NSString*)placementID extra:(NSDictionary *)extra {
-    NSLog(@"ATRewardedVideoVideoViewController::rewardedVideoDidEndPlayingForPlacementID:%@ extra:%@", placementID, extra);
+-(void) rewardedVideoDidFailToPlayForPlacementID:(NSString* )placementID error:(NSError*)error {
+    NSLog(@"RV Demo: rewardedVideoDidFailToPlayForPlacementID:%@ error:%@", placementID, error);
 }
 
--(void) rewardedVideoDidFailToPlayForPlacementID:(NSString*)placementID error:(NSError*)error extra:(NSDictionary *)extra {
-    NSLog(@"ATRewardedVideoVideoViewController::rewardedVideoDidFailToPlayForPlacementID:%@ error:%@ extra:%@", placementID, error, extra);
+-(void) rewardedVideoDidCloseForPlacementID:(NSString*)placementID rewarded:(BOOL)rewarded {
+    NSLog(@"RV Demo: rewardedVideoDidCloseForPlacementID:%@, rewarded:%@", placementID, rewarded ? @"yes" : @"no");
 }
 
--(void) rewardedVideoDidCloseForPlacementID:(NSString*)placementID rewarded:(BOOL)rewarded extra:(NSDictionary *)extra {
-    NSLog(@"ATRewardedVideoVideoViewController::rewardedVideoDidCloseForPlacementID:%@, rewarded:%@ extra:%@", placementID, rewarded ? @"yes" : @"no", extra);
-}
-
--(void) rewardedVideoDidClickForPlacementID:(NSString*)placementID extra:(NSDictionary *)extra {
-    NSLog(@"ATRewardedVideoVideoViewController::rewardedVideoDidClickForPlacementID:%@ extra:%@", placementID, extra);
+-(void) rewardedVideoDidClickForPlacementID:(NSString*)placementID {
+    NSLog(@"RV Demo: rewardedVideoDidClickForPlacementID:%@", placementID);
 }</code></pre>
-
-**说明：**激励视频广告的回调方法最后的extra参数用**kATRewardedVideoCallbackExtraNetworkIDKey**和**kATRewardedVideoCallbackExtraAdsourceIDKey**作为键包含了第三方平台相关的信息，比如：
-
-<pre><code>{
-    "ad_source_id" = 9805;
-    "network_firm_id" = 8;
-}</code></pre>
-
-更多network firm id的相关信息，请参阅[Network Firm Id Table](#network\_firm\_id\_table)
 
 ## <h2 id='5'>5 插屏广告(Interstitial)</h2>
 在继续接入之前，您需要保证您已经完成了以上 [配置](#1) 步骤。
@@ -362,42 +311,33 @@ if ([[ATAdManager sharedManager] interstitialReadyForPlacementID:@"your intersti
 ### 5.5 实现Interstitial的Delegate
 您可以实现**ATInterstitialDelegate**的方法来获取interstitial的各种事件：
 <pre><code>#pragma mark - showing delegate
--(void) interstitialDidShowForPlacementID:(NSString *)placementID extra:(NSDictionary *)extra {
-    NSLog(@"ATInterstitialViewController::interstitialDidShowForPlacementID:%@ extra:%@", placementID, extra);
+-(void) interstitialDidShowForPlacementID:(NSString *)placementID {
+    NSLog(@"ATInterstitialViewController::interstitialDidShowForPlacementID:%@", placementID);
 }
 
--(void) interstitialFailedToShowForPlacementID:(NSString*)placementID error:(NSError*)error extra:(NSDictionary *)extra {
-    NSLog(@"ATInterstitialViewController::interstitialFailedToShowForPlacementID:%@ error:%@ extra:%@", placementID, error, extra);
+-(void) interstitialFailedToShowForPlacementID:(NSString\*)placementID error:(NSError\*)error {
+    NSLog(@"ATInterstitialViewController::interstitialFailedToShowForPlacementID:%@ error:%@", placementID, error);
 }
 
--(void) interstitialDidFailToPlayVideoForPlacementID:(NSString*)placementID error:(NSError*)error extra:(NSDictionary*)extra {
-    NSLog(@"ATInterstitialViewController::interstitialDidFailToPlayVideoForPlacementID:%@ error:%@ extra:%@", placementID, error, extra);
+-(void) interstitialDidStartPlayingVideoForPlacementID:(NSString*)placementID {
+    NSLog(@"ATInterstitialViewController::interstitialDidStartPlayingVideoForPlacementID:%@", placementID);
 }
 
--(void) interstitialDidStartPlayingVideoForPlacementID:(NSString*)placementID extra:(NSDictionary *)extra {
-    NSLog(@"ATInterstitialViewController::interstitialDidStartPlayingVideoForPlacementID:%@ extra:%@", placementID, extra);
+-(void) interstitialDidEndPlayingVideoForPlacementID:(NSString*)placementID {
+    NSLog(@"ATInterstitialViewController::interstitialDidEndPlayingVideoForPlacementID:%@", placementID);
 }
 
--(void) interstitialDidEndPlayingVideoForPlacementID:(NSString*)placementID extra:(NSDictionary *)extra {
-    NSLog(@"ATInterstitialViewController::interstitialDidEndPlayingVideoForPlacementID:%@ extra:%@", placementID, extra);
+-(void) interstitialDidFailToPlayForPlacementID:(NSString\*)placementID error:(NSError\*)error {
+    NSLog(@"ATInterstitialViewController::interstitialDidFailToPlayForPlacementID:%@", placementID);
 }
 
--(void) interstitialDidCloseForPlacementID:(NSString*)placementID extra:(NSDictionary *)extra {
-    NSLog(@"ATInterstitialViewController::interstitialDidCloseForPlacementID:%@ extra:%@", placementID, extra);
+-(void) interstitialDidCloseForPlacementID:(NSString*)placementID {
+    NSLog(@"ATInterstitialViewController::interstitialDidCloseForPlacementID:%@", placementID);
 }
 
--(void) interstitialDidClickForPlacementID:(NSString*)placementID extra:(NSDictionary *)extra {
-    NSLog(@"ATInterstitialViewController::interstitialDidClickForPlacementID:%@ extra:%@", placementID, extra);
+-(void) interstitialDidClickForPlacementID:(NSString*)placementID {
+    NSLog(@"ATInterstitialViewController::interstitialDidClickForPlacementID:%@", placementID);
 }</code></pre>
-
-**说明：**插屏广告的回调方法最后的extra参数用**kATInterstitialDelegateExtraNetworkIDKey**和**kATInterstitialDelegateExtraAdSourceIDKey**作为键包含了第三方平台相关的信息，比如：
-
-<pre><code>{
-    "ad_source_id" = 9805;
-    "network_firm_id" = 8;
-}</code></pre>
-
-更多network firm id的相关信息，请参阅[Network Firm Id Table](#network\_firm\_id\_table)
 
 ## <h2 id='6'>6 Banner广告</h2>
 在继续接入之前，您需要保证您已经完成了以上 [配置](#1) 步骤。
@@ -493,15 +433,6 @@ if ([[ATAdManager sharedManager] bannerAdReadyForPlacementID:@"your banner place
 -(void) bannerView:(ATBannerView *)bannerView failedToAutoRefreshWithPlacementID:(NSString *)placementID error:(NSError *)error {
     NSLog(@"ATBannerViewController::bannerView:failedToAutoRefreshWithPlacementID:%@ error:%@", placementID, error);
 }</code></pre>
-
-**说明：**横幅广告的回调方法最后的extra参数用**kATBannerDelegateExtraNetworkIDKey**和**kATBannerDelegateExtraAdSourceIDKey**作为键包含了第三方平台相关的信息，比如：
-
-<pre><code>{
-    "ad_source_id" = 9805;
-    "network_firm_id" = 8;
-}</code></pre>
-
-更多network firm id的相关信息，请参阅[Network Firm Id Table](#network\_firm\_id\_table)
 
 ## <h2 id='7'>7 原生广告(Native)</h2>
 
@@ -636,7 +567,7 @@ UI元素包括：
 }</code></pre>
 
 您也可以使用**Masonary**开源布局工具，此外还有**struts&springs**布局技术，使用该方法的时候，建议您重写layoutSubviews方法，并给您的subviews设置frames。
-使用何种布局技术完全取决于您，可以根据您的习惯任意选择。
+使用何种布局技术完全取决于您，可以根据您的习惯任意选择，it‘s up to you。
 
 #### 7.3.2 使用您的Custom Native Ad View展示Native
 展示广告之前，您需要先创建一个**ATNativeADConfiguration**实例，设置您想要的广告大小。定制广告视图的类，也可以用来去实现delegate获取各种展示的事件，之后你可以调用**ATAdManager**的单例方法**retriveAdViewWithPlacementID:configuration:**并带上placementid会返回一个您准备的广告视图对象，您只需要将其添加到您想要展示广告的视图之上：
@@ -652,30 +583,17 @@ UI元素包括：
     [self.view addSubview:adView];
 }</code></pre>
 
-使用以上代码，得到的展示效果如下图所示：
-
-![](native_ad_effect.png)
-
 ### 7.4 实现Native的Delegate
-您可以实现**ATNativeDelegate**的方法来获取原生广告的各种事件：
+您可以实现**ATNativeDelegate**的方法来获取banner的各种事件：
 
 <pre><code>//Called when user click the ad
--(void) didClickNativeAdInAdView:(ATNativeADView*)adView placementID:(NSString*)placementID extra:(NSDictionary *)extra{
-    NSLog(@"ATADShowViewController:: didClickNativeAdInAdView:placementID:%@ with extra: %@", placementID,extra);
+-(void) didClickNativeAdInAdView:(ATNativeADView*)adView placementID:(NSString*)placementID {
+    NSLog(@"did click native ad with placement id:%@", placementID);
 }
-
--(void) didShowNativeAdInAdView:(ATNativeADView*)adView placementID:(NSString*)placementID extra:(NSDictionary *)extra{
-    NSLog(@"ATADShowViewController:: didShowNativeAdInAdView:placementID:%@ with extra: %@", placementID,extra);
+//Called when the ad has been shown
+-(void) didShowNativeAdInAdView:(ATNativeADView*)adView placementID:(NSString*)placementID {
+    adView.mainImageView.hidden = [adView isVideoContents];
 }</code></pre>
-
-**说明：**原生广告的回调方法最后的extra参数用**kATNativeDelegateExtraNetworkIDKey**和**kATNativeDelegateExtraAdSourceIDKey**作为键包含了第三方平台相关的信息，比如：
-
-<pre><code>{
-    "ad_source_id" = 9805;
-    "network_firm_id" = 8;
-}</code></pre>
-
-更多network firm id的相关信息，请参阅[Network Firm Id Table](#network\_firm\_id\_table)
 
 ## <h2 id='8'>8 (原生Banner)Native Banner</h2>
 在继续接入之前，您需要保证您已经完成了以上 [配置](#1) 步骤。
@@ -728,31 +646,24 @@ UI元素包括：
     NSLog(@"ATNativeBannerViewController::didFailToLoadNativeBannerAdWithPlacementID:%@ error:%@", placementID, error);
 }
 
--(void) didShowNativeBannerAdInView:(ATNativeBannerView*)bannerView placementID:(NSString*)placementID extra:(NSDictionary *)extra{
-    NSLog(@"ATNativeBannerViewController::didShowNativeBannerAdInView:%@ placementID:%@ with extra: %@",bannerView, placementID,extra);
+-(void) didShowNativeBannerAdInView:(ATNativeBannerView*)bannerView placementID:(NSString*)placementID {
+    NSLog(@"ATNativeBannerViewController::didShowNativeBannerAdInView:%@ placementID:%@", bannerView, placementID);
 }
 
--(void) didClickNativeBannerAdInView:(ATNativeBannerView*)bannerView placementID:(NSString*)placementID extra:(NSDictionary *)extra{
-    NSLog(@"ATNativeBannerViewController::didClickNativeBannerAdInView:%@ placementID:%@ with extra: %@",bannerView, placementID,extra);
+-(void) didClickNativeBannerAdInView:(ATNativeBannerView*)bannerView placementID:(NSString*)placementID {
+    NSLog(@"ATNativeBannerViewController::didClickNativeBannerAdInView:%@ placementID:%@", bannerView, placementID);
 }
 
--(void) didClickCloseButtonInNativeBannerAdView:(ATNativeBannerView*)bannerView placementID:(NSString*)placementID extra:(NSDictionary *)extra{
+-(void) didClickCloseButtonInNativeBannerAdView:(ATNativeBannerView*)bannerView placementID:(NSString*)placementID {
     NSLog(@"ATNativeBannerViewController::didClickCloseButtonInNativeBannerAdView:%@ placementID:%@", bannerView, placementID);
 }
 
--(void) didAutorefreshNativeBannerAdInView:(ATNativeBannerView*)bannerView placementID:(NSString*)placementID extra:(NSDictionary *)extra{
-    NSLog(@"ATNativeBannerViewController::didAutorefreshNativeBannerAdInView:%@ placementID:%@ with extra: %@",bannerView, placementID,extra);
+-(void) didAutorefreshNativeBannerAdInView:(ATNativeBannerView*)bannerView placementID:(NSString*)placementID {
+    NSLog(@"ATNativeBannerViewController::didAutorefreshNativeBannerAdInView:%@ placementID:%@", bannerView, placementID);
 }
 
--(void) didFailToAutorefreshNativeBannerAdInView:(ATNativeBannerView*)bannerView placementID:(NSString*)placementID extra:(NSDictionary *)extra error:(NSError*)error {
+-(void) didFailToAutorefreshNativeBannerAdInView:(ATNativeBannerView*)bannerView placementID:(NSString*)placementID error:(NSError*)error {
     NSLog(@"ATNativeBannerViewController::didFailToAutorefreshNativeBannerAdInView:%@ placementID:%@ error:%@", bannerView, placementID, error);
-}</code></pre>
-
-**说明：**原生横幅广告的回调方法最后的extra参数用**kATNativeDelegateExtraNetworkIDKey**和**kATNativeDelegateExtraAdSourceIDKey**作为键包含了第三方平台相关的信息（所用的键与原生广告一样），比如：
-
-<pre><code>{
-    "ad_source_id" = 9805;
-    "network_firm_id" = 8;
 }</code></pre>
 
 ## <h2 id='9'>9 (原生Splash)Native Splash</h2>
@@ -822,12 +733,6 @@ NSLog(@"ViewController::finishLoadingNativeSplashAdForPlacementID:%@", placement
     NSLog(@"ViewController::didCloseNativeSplashAdForPlacementID:%@", placementID);
 }</code></pre>
 
-**说明：**原生开屏广告的回调方法最后的extra参数用**kATNativeDelegateExtraNetworkIDKey**和**kATNativeDelegateExtraAdSourceIDKey**作为键包含了第三方平台相关的信息（所用的键与原生广告一样），比如：
-
-<pre><code>{
-    "ad_source_id" = 9805;
-    "network_firm_id" = 8;
-}</code></pre>
 
 ## <h2 id='10'>10 头部竞价(Header Bidding)</h2>
 

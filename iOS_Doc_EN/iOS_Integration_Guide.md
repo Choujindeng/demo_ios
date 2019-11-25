@@ -95,7 +95,7 @@ The table below gives a brief summary of third party SDKs. Only import those of 
 | Maio |Maio.framework|v1.4.8|https://github.com/imobile-maio||||
 | Yeahmobi |CTSDK.framework|v3.2.0|||||  
 | sigmob |WindSDK.framework|v2.12.3|||||
-|KS|KSAdSDK.framework <br> KSAdSDK.bundle|v2.2.7|需要额外导入第三方依赖：<br>AFNetworking/Godzippa/MJExtension/SDWebImage||||
+|KS|KSAdSDK.framework <br> KSAdSDK.bundle|v2.2.7|Additional third-party libraries that need to be introduced：<br>AFNetworking/Godzippa/MJExtension/SDWebImage||||
 
 You can use CocoaPods to import third party SDKs or you can download and import them manually.
 
@@ -128,8 +128,8 @@ An id(NSInteger) has been assigned to every network supported by AnyThinkSDK, se
 |Baidu|22|
 |Nend|23|
 |Maio|24|
-|Nend|28|
-|Maio|29|
+|KS|28|
+|Sigmob|29|
 
 ### 2.4 Initialize the SDK
 

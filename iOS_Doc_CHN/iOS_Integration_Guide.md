@@ -70,6 +70,8 @@ AnyThinkSDK支持原生广告(Native),激励视频广告(rewardVideo)，banner�
 | Maio |Maio.framework|v1.4.8|https://github.com/imobile-maio||||
 | Yeahmobi |CTSDK.framework|v3.2.0|||||
 | sigmob |WindSDK.framework|v2.12.3|||||
+|KS|KSAdSDK.framework <br> KSAdSDK.bundle|v2.2.7|需要额外导入第三方依赖：<br>
+AFNetworking/Godzippa/MJExtension/SDWebImage||||
 
 您可以使用CocoaPods导入第三方SDK，也可以手动下载导入第三方SDK。
 

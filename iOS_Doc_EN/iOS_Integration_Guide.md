@@ -168,6 +168,7 @@ Drag&drop **AnyThinkSplash.framework** into your project. Apart from **AnyThinkS
 |TouTiao|AnyThinkTTSplashAdapter.framework|
 |GDT|AnyThinkGDTSplashAdapter.framework|
 |Baidu|AnyThinkBaiduSplashAdapter.framework|
+|Sigmob|AnyThinkSigmobSplashAdapter.framework|
 
 ### 3.1 Load and Show Splash
 The best spot to load&show splash ad is the application entry point, which is the **application:didFinishLaunchingWithOptions:** method of your **AppDelegate**.
@@ -244,6 +245,8 @@ Drag&drop **AnyThinkRewardedVideo.framework** into your project. Apart from **An
 |Chartboost|AnyThinkChartboostRewardedVideoAdapter.framework|
 |Inmobi|AnyThinkInmobiRewardedVideoAdapter.framework|
 |Adcolony|AnyThinkAdcolonyRewardedVideoAdapter.framework|
+|Sigmob|AnyThinkSigmobRewardedVideoAdapter.framework|
+|KS|AnyThinkKSRewardedVideoAdapter.framework|
 
 ### 4.2 Load Rewarded Video
 Make your view controller confirm to **ATRewardedVideoDelegate**:
@@ -347,6 +350,8 @@ Drag&drop **AnyThinkInterstitial.framework** into your project. Apart from **Any
 |Chartboost|AnyThinkChartboostInterstitialAdapter.framework|
 |Inmobi|AnyThinkInmobiInterstitialAdapter.framework|
 |Adcolony|AnyThinkAdcolonyInterstitialAdapter.framework|
+|Sigmob|AnyThinkSigmobInterstitialAdapter.framework|
+|KS|AnyThinkKSInterstitialAdapter.framework|
 
 ### 5.2 Load Interstitial
 Make your view controller confirm to **ATInterstitialDelegate**:

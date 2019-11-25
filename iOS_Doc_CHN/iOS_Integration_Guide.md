@@ -144,6 +144,7 @@ AnyThinkSDK为每一个支持的第三方广告平台定义了一个id（整型�
 |TouTiao|AnyThinkTTSplashAdapter.framework|
 |GDT|AnyThinkGDTSplashAdapter.framework|
 |Baidu|AnyThinkBaiduSplashAdapter.framework|
+|Sigmob|AnyThinkSigmobSplashAdapter.framework|
 
 ### 3.1 加载并展示Splash
 加载并展示Splash广告的最佳时机是在应用程序的入口，即**AppDelegate**的**application:didFinishLaunchingWithOptions:**方法中，Splash的加载和展示是统一的一个API，您可以使用以下代码加载并展示一个Splash广告：
@@ -219,6 +220,8 @@ AnyThinkSDK为每一个支持的第三方广告平台定义了一个id（整型�
 |Chartboost|AnyThinkChartboostRewardedVideoAdapter.framework|
 |Inmobi|AnyThinkInmobiRewardedVideoAdapter.framework|
 |Adcolony|AnyThinkAdcolonyRewardedVideoAdapter.framework|
+|Sigmob|AnyThinkSigmobRewardedVideoAdapter.framework|
+|KS|AnyThinkKSRewardedVideoAdapter.framework|
 
 ### 4.2 加载Rewarded Video
 您需要确认您添加了**ATRewardedVideoDelegate**代理协议：
@@ -323,6 +326,8 @@ if ([[ATAdManager sharedManager] rewardedVideoReadyForPlacementID:@"your rv plac
 |Chartboost|AnyThinkChartboostInterstitialAdapter.framework|
 |Inmobi|AnyThinkInmobiInterstitialAdapter.framework|
 |Adcolony|AnyThinkAdcolonyInterstitialAdapter.framework|
+|Sigmob|AnyThinkSigmobInterstitialAdapter.framework|
+|KS|AnyThinkKSInterstitialAdapter.framework|
 
 ### 5.2 加载Interstitial
 您需要确认你添加了**ATInterstitialDelegate**代理协议：

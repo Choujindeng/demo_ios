@@ -238,6 +238,7 @@
 		8DB70A82236D8D02007A889D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB70A81236D8D02007A889D /* AVFoundation.framework */; };
 		8DB70A84236D8D3E007A889D /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB70A83236D8D3E007A889D /* CoreMedia.framework */; };
 		9B56A19F238BDEAA00204E3D /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB707D6236D8A45007A889D /* VideoToolbox.framework */; };
+		9B56A1B6238D191D00204E3D /* PersonalizedAdConsent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B56A1B5238D191C00204E3D /* PersonalizedAdConsent.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -694,6 +695,7 @@
 		8DB709AC236D8C88007A889D /* AnyThinkTTSplashAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkTTSplashAdapter.framework; path = SDK/AnyThinkTTSplashAdapter.framework; sourceTree = "<group>"; };
 		8DB70A81236D8D02007A889D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		8DB70A83236D8D3E007A889D /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		9B56A1B5238D191C00204E3D /* PersonalizedAdConsent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PersonalizedAdConsent.framework; path = SDK/PersonalizedAdConsent.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -711,6 +713,7 @@
 				8DB709BC236D8C89007A889D /* AnyThinkAdmobBannerAdapter.framework in Frameworks */,
 				8DB709C0236D8C89007A889D /* AnyThinkFlurryBannerAdapter.framework in Frameworks */,
 				453E4D45237C0F8500F0ECB2 /* BUAdSDK.framework in Frameworks */,
+				9B56A1B6238D191D00204E3D /* PersonalizedAdConsent.framework in Frameworks */,
 				8DB709DC236D8C89007A889D /* AnyThinkFlurryRewardedVideoAdapter.framework in Frameworks */,
 				8DB709B6236D8C89007A889D /* AnyThinkMintegralNativeAdapter.framework in Frameworks */,
 				8DB709D2236D8C89007A889D /* AnyThinkVungleRewardedVideoAdapter.framework in Frameworks */,
@@ -884,6 +887,7 @@
 		8DB705C7236D898F007A889D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9B56A1B5238D191C00204E3D /* PersonalizedAdConsent.framework */,
 				453E4D4823855AD200F0ECB2 /* MTGSDKBanner.framework */,
 				453E4D4623855A3B00F0ECB2 /* AnyThinkMintegralBannerAdapter.framework */,
 				453E4D42237C0F8500F0ECB2 /* BUAdSDK.bundle */,

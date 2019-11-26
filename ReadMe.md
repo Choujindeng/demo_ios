@@ -6,9 +6,9 @@
 
 [Error Code And FAQ(English)](iOS_Doc_EN/Error_Code_and_FAQ.md)
 
-[Integrate Guide for AnyThinkSDK for iOS(Chinese)](iOS_Doc_CHN/iOS_Integration_Guide.md)
+[AnyThinkSDK for iOS 中文集成文档](iOS_Doc_CHN/iOS_Integration_Guide.md)
 
-[Error Code And FAQ(Chinese)](iOS_Doc_CHN/Error_Code_and_FAQ.md)
+[Error Code And FAQ 中文版](iOS_Doc_CHN/Error_Code_and_FAQ.md)
 
 | Network | SDK Version | note |
 |---|---|---|

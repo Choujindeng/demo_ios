@@ -19,6 +19,26 @@
 AnyThinkSDK支持原生广告(Native),激励视频广告(rewardVideo)，banner广告，插屏广告(intersitial)和开屏广告(splash)。
 ### 1.2 SDK架构
 ![](AnyThinkSDK_Architecture.png)
+As you can see in the diagram above, the entire SDK can be devided into three layers(apart from Third Party SDK, which, technically, doesn't belong to AnyThinkSDK). When integrating AnyThinkSDK, import these module as decribed below:
+如上图所示，整个SDK可以被分为三层(额外的第三方SDK不属于AnyThinkSDK层级)。根据下方的指引引入具体模型。
+
+|层级|指引|
+|----|----|
+|AnyThink's Core Module|必须要引入如上图所示的Core Module层的两个framewrok到你的项目中|
+|AnyThink's Format Module|只引入你需要用到的广告形式对应的framework到你的项目中，如果项目中不需要用到的广告形式，则不用引入，可以看下方例子|
+|AnyThink's Adapters|只引入你需要集成的第三方平台对应的广告形式的adapter.framewrok，可以看下方例子|
+|Third Party SDK|只引入你需要集成的第三方平台的sdk，请看下方例子|
+
+**Example:** 
+假设你需要用到Admob的激励视频和插屏视频，还有Facebook的激励视频，根据以上规则，有以下列表的framewrok你需要引入：
+
+|Layer|Framework Needed|
+|----|----|
+|AnyThink's Core Module|AnyThinkSDK.framework</br> AnyThinkHeaderBidding.framework|
+|AnyThink's Format Module|AnyThinkInterstitial.framework</br> AnyThinkRewardedVideo.framework|
+|AnyThink's Adapters|AnyThinkAdmobRewardedVideoAdapter.framework</br>AnyThinkAdmobInterstitialAdapter.framework</br>AnyThinkFacebookRewardedVideoAdapter.framework|
+|Third Party SDK|GoogleMobileAds.framework</br>PersonalizedAdConsent.framework</br>FBAudienceNetwork.framework</br>FBAudienceNetworkBiddingKit.framework</br>FBSDKCoreKit.framework|
+
 ## <h2 id='1'>2 配置</h2>
 ### 2.1 基础配置
 	Xcode10版本及以上。

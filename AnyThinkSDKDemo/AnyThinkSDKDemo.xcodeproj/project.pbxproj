@@ -33,7 +33,6 @@
 		8DB7051E236D888E007A889D /* ATRewardedVideoVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB70518236D888D007A889D /* ATRewardedVideoVideoViewController.m */; };
 		8DB7051F236D888E007A889D /* ATBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB70519236D888E007A889D /* ATBannerViewController.m */; };
 		8DB70520236D888E007A889D /* ATADShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB7051A236D888E007A889D /* ATADShowViewController.m */; };
-		8DB707D7236D8A46007A889D /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB707D6236D8A45007A889D /* VideoToolbox.framework */; };
 		8DB707D9236D8A4B007A889D /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB707D8236D8A4B007A889D /* libxml2.tbd */; };
 		8DB707DB236D8A50007A889D /* libresolv.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB707DA236D8A4F007A889D /* libresolv.9.tbd */; };
 		8DB707DD236D8A59007A889D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB707DC236D8A59007A889D /* libz.tbd */; };
@@ -238,6 +237,7 @@
 		8DB70A80236D8C8A007A889D /* AnyThinkTTSplashAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB709AC236D8C88007A889D /* AnyThinkTTSplashAdapter.framework */; };
 		8DB70A82236D8D02007A889D /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB70A81236D8D02007A889D /* AVFoundation.framework */; };
 		8DB70A84236D8D3E007A889D /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB70A83236D8D3E007A889D /* CoreMedia.framework */; };
+		9B56A19F238BDEAA00204E3D /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB707D6236D8A45007A889D /* VideoToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -701,6 +701,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B56A19F238BDEAA00204E3D /* VideoToolbox.framework in Frameworks */,
 				453C166E236DBF6D006B430A /* MoPubSDKFramework.framework in Frameworks */,
 				453C1665236D9BB3006B430A /* libc++.tbd in Frameworks */,
 				8DB70A84236D8D3E007A889D /* CoreMedia.framework in Frameworks */,
@@ -755,7 +756,6 @@
 				8DB709E0236D8C89007A889D /* AnyThinkTapjoyRewardedVideoAdapter.framework in Frameworks */,
 				8DB70A79236D8C8A007A889D /* AnyThinkAppnextRewardedVideoAdapter.framework in Frameworks */,
 				8DB70A3E236D8C89007A889D /* AnyThinkInmobiBannerAdapter.framework in Frameworks */,
-				8DB707D7236D8A46007A889D /* VideoToolbox.framework in Frameworks */,
 				8DB709B4236D8C89007A889D /* AppLovinSDK.framework in Frameworks */,
 				453C1669236D9D21006B430A /* WindSDK.framework in Frameworks */,
 				8DB70A5E236D8C89007A889D /* AnyThinkFacebookInterstitialAdapter.framework in Frameworks */,

@@ -65,7 +65,7 @@ AnyThinkSDK支持原生广告(Native),激励视频广告(rewardVideo)，banner�
 |TouTiao|BUAdSDK.framework<br>BUAdSDK.bundle|v2.4.6.7|http://ad.toutiao.com/union/media/union/download|||
 | Oneway |Oneway|v2.1.0|||||
 | Appnext |AppnextNativeAdsSDK<br>AppnextIOSSDK| v1.9.3 |https://developers.appnext.com/docs/ios-sdk-installation||||
-| Baidu |BaiduMobAdSDK.framework|v4.6.7|https://mssp.baidu.com/bqt/appco.html#/union/download/sdk||||
+| Baidu |BaiduMobAdSDK.framework <br> baidumobadsdk.bundle|v4.6.7|https://mssp.baidu.com/bqt/appco.html#/union/download/sdk||||
 |Nend|NendAd.framework <br> NendAdResource.bundle|v5.2.0|https://github.com/fan-ADN||||
 | Maio |Maio.framework|v1.4.8|https://github.com/imobile-maio||||
 | Yeahmobi |CTSDK.framework|v3.2.0|||||

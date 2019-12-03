@@ -91,10 +91,15 @@ AnyThinkSDK支持原生广告(Native),激励视频广告(rewardVideo)，banner�
 | Yeahmobi |CTSDK.framework|v3.2.0|||||
 | sigmob |WindSDK.framework|v2.14.0|||||
 |KS|KSAdSDK.framework <br> KSAdSDK.bundle|v2.3.9|||需要额外导入第三方依赖：<br> AFNetworking/Godzippa/MJExtension/SDWebImage||
-|Ogury|OguryOED_1.0.3 包含以下sdk<br>OMSDK_Oguryco.framework<br>OguryAds.framework<br>OguryConsentManager.framework|1.0.3|||由于该平台的GDPR设置必须通过其平台的弹窗来进行设置，如若在欧盟地区不用其平台的弹窗设置GDPR等级，则ecpm会相对较低，所以这里需要开发者自己调用Ogury的api弹窗供用户设置GDPR等级(即需要弹出Topon的GDPR和Ogury的两个GDPR选择界面，且两个都需要用户进行选择)。||
+|Ogury|OguryOED_1.0.3 包含以下sdk<br>OMSDK_Oguryco.framework<br>OguryAds.framework<br>OguryConsentManager.framework|1.0.3|||由于该平台的GDPR设置必须通过其平台的弹窗来进行设置，如若在欧盟地区不用其平台的弹窗设置GDPR等级，则ecpm会相对较低，所以这里建议开发者自己调用Ogury的api弹窗供用户设置GDPR等级，在api的回调中把topon的GDPR等级一并设置(即调用Ogury的GDPR弹窗，然后在用户选择等级设置之后的回调里，将Topon的GDPR设置为其回调中的等级)。||
 
 **Ogury的GDPR弹窗api调用**
 <pre><code>[[ConsentManager sharedManager] askWithViewController:myViewController assetKey:@"OGY-0E0F944B6408" andCompletionBlock:^(NSError * error, ConsentManagerAnswer answer) {
+	if(answer == 2){
+		 [[ATAPI sharedInstance] setDataConsentSet:ATDataConsentSetPersonalized consentString:nil];
+	} else {
+	    [[ATAPI sharedInstance] setDataConsentSet:ATDataConsentSetNonpersonalized consentString:nil];
+	}
  }];
 //OGY-0E0F944B6408 换成你自己的assetKey</code></pre>
 

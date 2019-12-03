@@ -20,6 +20,9 @@
 		45655577237961A50009DD36 /* AnyThinkMyOfferRewardedVideoAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45655574237961A50009DD36 /* AnyThinkMyOfferRewardedVideoAdapter.framework */; };
 		45655578237961A50009DD36 /* AnyThinkMyOffer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45655575237961A50009DD36 /* AnyThinkMyOffer.framework */; };
 		45655579237961A50009DD36 /* AnyThinkMyOfferInterstitialAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45655576237961A50009DD36 /* AnyThinkMyOfferInterstitialAdapter.framework */; };
+		459A772B2396416E009BB088 /* AnyThinkOguryInterstitialAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 459A77292396416D009BB088 /* AnyThinkOguryInterstitialAdapter.framework */; };
+		459A772C2396416E009BB088 /* AnyThinkOguryRewardedVideoAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 459A772A2396416D009BB088 /* AnyThinkOguryRewardedVideoAdapter.framework */; };
+		459A772E2396419F009BB088 /* OguryOED_1.0.3 in Resources */ = {isa = PBXBuildFile; fileRef = 459A772D2396419F009BB088 /* OguryOED_1.0.3 */; };
 		8DB704F8236D883A007A889D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB704F7236D883A007A889D /* AppDelegate.m */; };
 		8DB704FB236D883A007A889D /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB704FA236D883A007A889D /* SceneDelegate.m */; };
 		8DB704FE236D883A007A889D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB704FD236D883A007A889D /* ViewController.m */; };
@@ -267,6 +270,9 @@
 		45655574237961A50009DD36 /* AnyThinkMyOfferRewardedVideoAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkMyOfferRewardedVideoAdapter.framework; path = SDK/AnyThinkMyOfferRewardedVideoAdapter.framework; sourceTree = "<group>"; };
 		45655575237961A50009DD36 /* AnyThinkMyOffer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkMyOffer.framework; path = SDK/AnyThinkMyOffer.framework; sourceTree = "<group>"; };
 		45655576237961A50009DD36 /* AnyThinkMyOfferInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkMyOfferInterstitialAdapter.framework; path = SDK/AnyThinkMyOfferInterstitialAdapter.framework; sourceTree = "<group>"; };
+		459A77292396416D009BB088 /* AnyThinkOguryInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkOguryInterstitialAdapter.framework; path = SDK/AnyThinkOguryInterstitialAdapter.framework; sourceTree = "<group>"; };
+		459A772A2396416D009BB088 /* AnyThinkOguryRewardedVideoAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkOguryRewardedVideoAdapter.framework; path = SDK/AnyThinkOguryRewardedVideoAdapter.framework; sourceTree = "<group>"; };
+		459A772D2396419F009BB088 /* OguryOED_1.0.3 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = OguryOED_1.0.3; path = SDK/OguryOED_1.0.3; sourceTree = "<group>"; };
 		8DB704F3236D883A007A889D /* AnyThinkSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnyThinkSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DB704F6236D883A007A889D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8DB704F7236D883A007A889D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -736,6 +742,8 @@
 				8DB709C3236D8C89007A889D /* AnyThinkMopubNativeAdapter.framework in Frameworks */,
 				8DB709AD236D8C88007A889D /* AnyThinkTTBannerAdapter.framework in Frameworks */,
 				8DB70A58236D8C89007A889D /* AnyThinkApplovinBannerAdapter.framework in Frameworks */,
+				459A772C2396416E009BB088 /* AnyThinkOguryRewardedVideoAdapter.framework in Frameworks */,
+				459A772B2396416E009BB088 /* AnyThinkOguryInterstitialAdapter.framework in Frameworks */,
 				8DB709C6236D8C89007A889D /* AnyThinkAppnextInterstitialAdapter.framework in Frameworks */,
 				8DB70A57236D8C89007A889D /* AnyThinkNendBannerAdapter.framework in Frameworks */,
 				8DB707DB236D8A50007A889D /* libresolv.9.tbd in Frameworks */,
@@ -887,6 +895,9 @@
 		8DB705C7236D898F007A889D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				459A772D2396419F009BB088 /* OguryOED_1.0.3 */,
+				459A77292396416D009BB088 /* AnyThinkOguryInterstitialAdapter.framework */,
+				459A772A2396416D009BB088 /* AnyThinkOguryRewardedVideoAdapter.framework */,
 				9B56A1B5238D191C00204E3D /* PersonalizedAdConsent.framework */,
 				453E4D4823855AD200F0ECB2 /* MTGSDKBanner.framework */,
 				453E4D4623855A3B00F0ECB2 /* AnyThinkMintegralBannerAdapter.framework */,
@@ -1607,6 +1618,7 @@
 				453C166C236DBC7E006B430A /* KSAdSDK.bundle in Resources */,
 				8DB70A5C236D8C89007A889D /* baidumobadsdk.bundle in Resources */,
 				8DB70501236D883A007A889D /* Main.storyboard in Resources */,
+				459A772E2396419F009BB088 /* OguryOED_1.0.3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

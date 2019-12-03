@@ -91,17 +91,7 @@ AnyThinkSDK支持原生广告(Native),激励视频广告(rewardVideo)，banner�
 | Yeahmobi |CTSDK.framework|v3.2.0|||||
 | sigmob |WindSDK.framework|v2.14.0|||||
 |KS|KSAdSDK.framework <br> KSAdSDK.bundle|v2.3.9|||需要额外导入第三方依赖：<br> AFNetworking/Godzippa/MJExtension/SDWebImage||
-|Ogury|OguryOED_1.0.3 包含以下sdk<br>OMSDK_Oguryco.framework<br>OguryAds.framework<br>OguryConsentManager.framework|1.0.3|||由于该平台的GDPR设置必须通过其平台的弹窗来进行设置，如若在欧盟地区不用其平台的弹窗设置GDPR等级，则ecpm会相对较低，所以这里建议开发者自己调用Ogury的api弹窗供用户设置GDPR等级，在api的回调中把topon的GDPR等级一并设置(即调用Ogury的GDPR弹窗，然后在用户选择等级设置之后的回调里，将Topon的GDPR设置为其回调中的等级)。||
-
-**Ogury的GDPR弹窗api调用**
-<pre><code>[[ConsentManager sharedManager] askWithViewController:myViewController assetKey:@"OGY-0E0F944B6408" andCompletionBlock:^(NSError * error, ConsentManagerAnswer answer) {
-	if(answer == 2){
-		 [[ATAPI sharedInstance] setDataConsentSet:ATDataConsentSetPersonalized consentString:nil];
-	} else {
-	    [[ATAPI sharedInstance] setDataConsentSet:ATDataConsentSetNonpersonalized consentString:nil];
-	}
- }];
-//OGY-0E0F944B6408 换成你自己的assetKey</code></pre>
+|Ogury|OMSDK_Oguryco.framework<br>OguryAds.framework<br>OguryConsentManager.framework|1.0.3|||由于该平台的GDPR设置必须通过其平台的弹窗来进行设置，如若在欧盟地区不用其平台的弹窗设置GDPR等级，则ecpm会相对较低，所以这里建议开发者自己调用Ogury的api弹窗供用户设置GDPR等级，在api的回调中把topon的GDPR等级一并设置(即调用Ogury的GDPR弹窗，然后在用户选择等级设置之后的回调里，将Topon的GDPR设置为其回调中的等级)。||
 
 您可以使用CocoaPods导入第三方SDK，也可以手动下载导入第三方SDK。
 
@@ -887,7 +877,7 @@ Mintegral和Facebook支持header bidding的应用版本如下：
 
 <span style="font-family:‘Times New Roman‘;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>欧盟发布的《**通用数据保护条例**》(GDPR)将于 2018 年 5 月 25 日生效。 为支持GDPR协议我们更新了<i>**AnyThink Privacy Policy**</i>，请开发者从我们官网了解<a href="https://www.topon.com/privacy-policy" target = "_blank"><i>**AnyThink Privacy Policy**</i></a>的相关内容。同时，为保障用户数据的隐私安全，我们在新版的AnyThink SDK v1.2及以上中加入了数据保护功能，请开发者查阅以下文档并完成SDK接入。<br>
 <span style="font-family:‘Times New Roman‘;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>我们提供了两种方法给开发者设置GDPR配置。你可以调用AnyThink SDK的方法来为所有网络设置统一的数据保护级别，也可以分别为各网络设置数据保护级别；如果是后者，传入的数据结构需与第三方网络的要求一致而且这些数据结构在未来可能会发生改变。<br>
-<h3>4.1 使用AnyThink SDK方法</h3>
+<h3>11.1 使用AnyThink SDK方法</h3>
 <span style="font-family:‘Times New Roman‘;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>你可以调用AnyThink SDK里**ATAPI**的单例中的**setDataConsentSet:consentString:**方法来设置GDPR级别，其中consentString参数是为Flurry预留的。AT SDK提供了四个级别的数据保护：<br>
 <span style="font-family:‘Times New Roman‘;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>1) AnyThinkDataConsentSetUnknown(0)<br>
 <span style="font-family:‘Times New Roman‘;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>这是默认值，当开发者未设置时采用此值；这种情况下，如果用户在GDPR区域内，SDK初始化将失败，后续广告请求也会因为失败。<br>
@@ -898,7 +888,7 @@ Mintegral和Facebook支持header bidding的应用版本如下：
 <span style="font-family:‘Times New Roman‘;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>4) AnyThinkDataConsentSetForbidden(3)<br>
 <span style="font-family:‘Times New Roman‘;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>禁止收集任何数据，SDK初始化将失败，广告请求将不会发起。<br>
 
-### 4.2 Setting data consent separately
+### 11.2 Setting data consent separately
 以上四种值为枚举类型，你可以设置每一个平台的数据接受度信息，根据不同平台的规范，您应该为平台提供如下的信息：<br>
 **Mintegral**: 您可以以@0(上述枚举类型)作为key设置@YES或者@NO，以此来收集三种类型的数据，例如(@0，@yes)，(@1:yes ,@2:no ,@3:@yes)。有关详情，情浏览其官方网站。<br>
   **Inmobi**: BOOL被包装成NSNumber<br>
@@ -935,4 +925,15 @@ Mintegral和Facebook支持header bidding的应用版本如下：
             kNetworkNameApplovin:@{kApplovinConscentStatusKey:@YES, kApplovinUnderAgeKey:@NO<br>}<br>
            <br>
 具体设置方法请参见[第三方网络配置](http://www.topon.com)
+
+### 11.3 关于Ogury的GDPR配置
+由于Ogury没有提供直接设置GDPR的接口，只能通过它的对话框来设置，所以当你需要通过AnyThinkSDK来集成Ogury时，为了避免重复弹出GDPR询问框，请使用以下代码来配置GDPR:
+<pre><code>[[ConsentManager sharedManager] askWithViewController:myViewController assetKey:@"OGY-0E0F944B6408" andCompletionBlock:^(NSError * error, ConsentManagerAnswer answer) {
+	if(answer == 1){
+		 [[ATAPI sharedInstance] setDataConsentSet:ATDataConsentSetPersonalized consentString:nil];
+	} else {
+	    [[ATAPI sharedInstance] setDataConsentSet:ATDataConsentSetNonpersonalized consentString:nil];
+	}
+ }];
+//OGY-0E0F944B6408 换成你自己的assetKey</code></pre>
 

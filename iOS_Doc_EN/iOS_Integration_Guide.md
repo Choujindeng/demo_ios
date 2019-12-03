@@ -96,6 +96,7 @@ The table below gives a brief summary of third party SDKs. Only import those of 
 | Yeahmobi |CTSDK.framework|v3.2.0|||||  
 | sigmob |WindSDK.framework|v2.14.0|||||
 |KS|KSAdSDK.framework <br> KSAdSDK.bundle|v2.3.9|Additional third-party libraries that need to be introduced：<br>AFNetworking/Godzippa/MJExtension/SDWebImage||||
+|Ogury|OMSDK_Oguryco.framework<br>OguryAds.framework<br>OguryConsentManager.framework|1.0.3|||No way of setting GDPR consent without presenting a view controller.||
 
 You can use CocoaPods to import third party SDKs or you can download and import them manually.
 
@@ -130,6 +131,7 @@ An id(NSInteger) has been assigned to every network supported by AnyThinkSDK, se
 |Maio|24|
 |KS|28|
 |Sigmob|29|
+|Ogury|36|
 
 ### 2.4 Initialize the SDK
 
@@ -889,7 +891,7 @@ We provide two methods to support GDPR:<br>
 1) You can use the **ATAPI** singlton's **setDataConsentSet:consentString:** method to set a uniform consent level for all third party networks;<br>
 2) Or you can use the **networkConsentInfo** property to set consent for third party networks individually; when useing this method, please be aware that data structures of the parameters are subject to future change.<br>
 
-### 4.1 Using AT Method
+### 11.1 Using AT Method
 You can use the **ATAPI** singlton's **setDataConsentSet:consentString:** method to set a uniform consent level for all third party networks, the **consentString** paramters here is preserved for Flurry; AT SDK provide four levels of data protection:<br>
 <h4>1) AnyThinkDataConsentSetUnknown(0)</h4>
 The default level when data consent is not set. When this is the case and the user is located in GDPR-subject rigion the SDK will failed to be initialized and therefore not able to request ad offers.
@@ -903,7 +905,7 @@ When this is set as the consent, users' personal data will not be collected(and 
 #### 4) AnyThinkDataConsentSetForbidden(3)
 Forbid any data collection and ad request. SDK will failed to initialize and ad request will not be sent.
 
-### 4.2 Setting data consent separately
+### 11.2 Setting data consent separately
 You can set network consent info on a per-network basis; according to the network specifications, types for the info you should provide for the networks should be as follows:<br>
 **Mintegral**: dictionary, in which you can either set @YES/@NO for key @0 to allow/prevent all three types of data collection(example, @{@0:@YES}), or you can set @YES/@NO each for @1, @2, @3 keys respectively(example, @{@1:@YES, @2:@NO, @3:@YES});for more detailed infomation, please refer to its official website.<br>
   **Inmobi**: BOOL wrapped as an NSNumber<br>
@@ -949,4 +951,17 @@ You can set network consent info on a per-network basis; according to the networ
            }<br>
            
 Please note that the data structures are provided here according to the latest third-party network specs and are subject to future change. 
+
+### 11.3 Special Configuration When Using Ogury
+
+Since Ogury does not provide any other way of setting GDPR consent than via its **ConsentManager** class' askWithViewController:assetKey:andCompletionBlock: API, which presents a modal view controller, if you need to integrate Ogury through **AnyThinkSDK**, use the following code segment to configure GDPR settings(to avoid duplicate modal view controller presentations, which is rather annoying): 
+
+<pre><code>[[ConsentManager sharedManager] askWithViewController:myViewController assetKey:@"your Ogury assetKey here" andCompletionBlock:^(NSError * error, ConsentManagerAnswer answer) {
+	if(answer == 1){
+		 [[ATAPI sharedInstance] setDataConsentSet:ATDataConsentSetPersonalized consentString:nil];
+	} else {
+	    [[ATAPI sharedInstance] setDataConsentSet:ATDataConsentSetNonpersonalized consentString:nil];
+	}
+ }];
+</code></pre>
 

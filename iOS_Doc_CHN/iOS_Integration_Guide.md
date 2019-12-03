@@ -72,25 +72,25 @@ AnyThinkSDK支持原生广告(Native),激励视频广告(rewardVideo)，banner�
 |Admob|GoogleMobileAds.framework<br>PersonalizedAdConsent.framework|v7.52.0|https://support.google.com/admob/answer/2993059?hl=en|https://developers.google.com/admob/ios/quick-start|Admob requires that **app id be configured in the Info.plist of your project**; for more information please refer to <a href="https://developers.google.com/admob/ios/quick-start#update\_your\_infoplist">Admob's website</a>.|
 | Inmobi |InMobiSDK.framework|v7.3.1|https://support.inmobi.com/monetize/ios-guidelines/||||
 | Flurry |libFlurryAds\_1.0.0.a<br>libFlurry\_9.0.0.a|231\_9.0.0|https://dev.flurry.com/admin/applications||||
-| Applovin |AppLovinSDK.framework<br>AppLovinSDKResources.bundle|v6.9.3|https://dash.applovin.com/docs/integration#iosIntegration||||
+| Applovin |AppLovinSDK.framework<br>AppLovinSDKResources.bundle|v6.10.0|https://dash.applovin.com/docs/integration#iosIntegration||||
 | Mintegral |MTGSDK.framework<br> MTGSDKBidding.framework<br>MTGSDKReward.framework <br> MTGSDKInterstitialVideo.framework <br> MTGSDKInterstitial.framework|v5.8.0|http://cdn-adn.rayjump.com/cdn-adn/v2/markdown\_v2/index.html?file=sdk-m\_sdk-ios&lang=en||||
-| Mopub |MobPowerNative.framework <br> MobPowerSDK.framework| v5.9.0 |https://github.com/mopub||||
+| Mopub |MobPowerNative.framework <br> MobPowerSDK.framework| v5.10.0 |https://github.com/mopub||||
 | GDT |libGDTMobSDK.a|v4.10.13|https://e.qq.com/dev/index.html||||
-| Chartboost |Chartboost.framework| v8.0.1 | https://dashboard.chartboost.com/tools/sdk	||||
-| Tapjoy |Tapjoy.framework <br> TapjoyResources.bundle| v12.3.3 |||||
-| Ironsource |IronSource.framework|v6.8.6|https://developers.ironsrc.com/sdk-repository/||||
+| Chartboost |Chartboost.framework| v8.0.3 | https://dashboard.chartboost.com/tools/sdk	||||
+| Tapjoy |Tapjoy.framework <br> TapjoyResources.bundle| v12.3.4 |||||
+| Ironsource |IronSource.framework|v6.10.0|https://developers.ironsrc.com/sdk-repository/||||
 | UnityAds |UnityAds.framework| v3.3.0 |https://github.com/Unity-Technologies/unity-ads-ios/releases/tag/3.0.3||||
-| Vungle |VungleSDK.framework|v6.4.3|||||
+| Vungle |VungleSDK.framework|v6.4.5|||||
 | Adcolony |AdColony.framework|v4.1.0.0|https://github.com/AdColony||||
 |TouTiao|BUAdSDK.framework<br>BUAdSDK.bundle|v2.4.6.7|http://ad.toutiao.com/union/media/union/download|||
 | Oneway |Oneway|v2.1.0|||||
 | Appnext |AppnextNativeAdsSDK<br>AppnextIOSSDK| v1.9.3 |https://developers.appnext.com/docs/ios-sdk-installation||||
 | Baidu |BaiduMobAdSDK.framework <br> baidumobadsdk.bundle|v4.6.7|https://mssp.baidu.com/bqt/appco.html#/union/download/sdk||||
-|Nend|NendAd.framework <br> NendAdResource.bundle|v5.2.0|https://github.com/fan-ADN||||
-| Maio |Maio.framework|v1.4.8|||https://github.com/imobile-maio||
+|Nend|NendAd.framework <br> NendAdResource.bundle|v5.3.1|https://github.com/fan-ADN||||
+| Maio |Maio.framework|v1.5.0|||https://github.com/imobile-maio||
 | Yeahmobi |CTSDK.framework|v3.2.0|||||
-| sigmob |WindSDK.framework|v2.12.3|||||
-|KS|KSAdSDK.framework <br> KSAdSDK.bundle|v2.2.7|||需要额外导入第三方依赖：<br> AFNetworking/Godzippa/MJExtension/SDWebImage||
+| sigmob |WindSDK.framework|v2.14.0|||||
+|KS|KSAdSDK.framework <br> KSAdSDK.bundle|v2.3.9|||需要额外导入第三方依赖：<br> AFNetworking/Godzippa/MJExtension/SDWebImage||
 |Ogury|OguryOED_1.0.3 包含以下sdk<br>OMSDK_Oguryco.framework<br>OguryAds.framework<br>OguryConsentManager.framework|1.0.3|||由于该平台的GDPR设置必须通过其平台的弹窗来进行设置，如若在欧盟地区不用其平台的弹窗设置GDPR等级，则ecpm会相对较低，所以这里需要开发者自己调用Ogury的api弹窗供用户设置GDPR等级(即需要弹出Topon的GDPR和Ogury的两个GDPR选择界面，且两个都需要用户进行选择)。||
 
 **Ogury的GDPR弹窗api调用**

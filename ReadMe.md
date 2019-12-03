@@ -17,26 +17,26 @@
 | Admob | 7.52.0 ||
 | Inmobi | 7.3.1 ||
 | Flurry | 9.0.0 ||
-| Applovin | 6.9.3 ||
+| Applovin | 6.10.0 ||
 | Mintegral | 5.8.4 ||
-| Mopub | 5.9.0 ||
+| Mopub | 5.10.0 ||
 | GDT | 4.10.19 |广点通/Tencent/腾讯广告|
 | Yeahmobi | 3.2.0 ||
 | Appnext | 1.9.3 ||
-| Chartboost | 8.0.1 ||
-| Ironsource | 6.8.6 ||
-| Vungle | 6.4.3 ||
+| Chartboost | 8.0.3 ||
+| Ironsource | 6.10.0 ||
+| Vungle | 6.4.5 ||
 | Adcolony | 4.1.2.0 ||
 | UnityAds | 3.3.0 ||
 | TT | 2.5.1.5 |头条/穿山甲/TT|
-| Tapjoy | 12.3.3 ||
+| Tapjoy | 12.3.4 ||
 | Oneway | 2.1.0 ||
 | Baidu | 4.67 ||
 | MobPower | 1.0.0 ||
-| Nend | 5.3.0 ||
-| Maio | 1.4.8 ||
-| ks | 2.2.7 |需要额外导入第三方依赖：<br> AFNetworking/Godzippa/MJExtension/SDWebImage|
-| sigmob | 2.12.3 |sdk：WindSDK.framework|
+| Nend | 5.3.1 ||
+| Maio | 1.5.0 ||
+| ks | 2.3.9 |需要额外导入第三方依赖：<br> AFNetworking/Godzippa/MJExtension/SDWebImage|
+| sigmob | 2.14.0 |sdk：WindSDK.framework|
 
 
 ## AnyThink network_name and network_firm_id mapping

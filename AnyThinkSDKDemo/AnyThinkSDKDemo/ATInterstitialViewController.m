@@ -47,6 +47,8 @@ static NSString *const kMaioPlacementID = @"b5cb96cf795c4b";
 static NSString *const kSigmobPlacementID = @"b5d771f79e4a32";
 static NSString *const kKSPlacementID = @"b5d807a4846f50";
 static NSString *const kMyOfferPlacementID = @"b5db6c26999c31";
+static NSString *const kOguryPlacementID = @"b5dde238f2d2ce";
+
 
 @interface ATInterstitialViewController ()<ATInterstitialDelegate>
 @property(nonatomic, readonly) NSString *name;
@@ -94,7 +96,8 @@ static NSString *const kMyOfferPlacementID = @"b5db6c26999c31";
                           kMaioPlacement:kMaioPlacementID,
                           kSigmobPlacement:kSigmobPlacementID,
                           kKSPlacement:kKSPlacementID,
-                          kMyOfferPlacement:kMyOfferPlacementID
+                          kMyOfferPlacement:kMyOfferPlacementID,
+                          kOguryPlacement:kOguryPlacementID
                           };
     }
     return self;

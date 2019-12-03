@@ -32,7 +32,7 @@
 		8DB7051D236D888E007A889D /* ATInterstitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB70517236D888D007A889D /* ATInterstitialViewController.m */; };
 		8DB7051E236D888E007A889D /* ATRewardedVideoVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB70518236D888D007A889D /* ATRewardedVideoVideoViewController.m */; };
 		8DB7051F236D888E007A889D /* ATBannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB70519236D888E007A889D /* ATBannerViewController.m */; };
-		8DB70520236D888E007A889D /* ATADShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB7051A236D888E007A889D /* ATADShowViewController.m */; };
+		8DB70520236D888E007A889D /* ATNativeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB7051A236D888E007A889D /* ATNativeViewController.m */; };
 		8DB707D9236D8A4B007A889D /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB707D8236D8A4B007A889D /* libxml2.tbd */; };
 		8DB707DB236D8A50007A889D /* libresolv.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB707DA236D8A4F007A889D /* libresolv.9.tbd */; };
 		8DB707DD236D8A59007A889D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB707DC236D8A59007A889D /* libz.tbd */; };
@@ -284,13 +284,13 @@
 		8DB70511236D888B007A889D /* ATBannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATBannerViewController.h; sourceTree = "<group>"; };
 		8DB70512236D888C007A889D /* ATNativeBannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATNativeBannerViewController.h; sourceTree = "<group>"; };
 		8DB70513236D888C007A889D /* ATNativeBannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATNativeBannerViewController.m; sourceTree = "<group>"; };
-		8DB70514236D888C007A889D /* ATADShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATADShowViewController.h; sourceTree = "<group>"; };
+		8DB70514236D888C007A889D /* ATNativeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATNativeViewController.h; sourceTree = "<group>"; };
 		8DB70515236D888D007A889D /* ATInterstitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATInterstitialViewController.h; sourceTree = "<group>"; };
 		8DB70516236D888D007A889D /* ATRewardedVideoVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATRewardedVideoVideoViewController.h; sourceTree = "<group>"; };
 		8DB70517236D888D007A889D /* ATInterstitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATInterstitialViewController.m; sourceTree = "<group>"; };
 		8DB70518236D888D007A889D /* ATRewardedVideoVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATRewardedVideoVideoViewController.m; sourceTree = "<group>"; };
 		8DB70519236D888E007A889D /* ATBannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATBannerViewController.m; sourceTree = "<group>"; };
-		8DB7051A236D888E007A889D /* ATADShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATADShowViewController.m; sourceTree = "<group>"; };
+		8DB7051A236D888E007A889D /* ATNativeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATNativeViewController.m; sourceTree = "<group>"; };
 		8DB707D6236D8A45007A889D /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
 		8DB707D8236D8A4B007A889D /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		8DB707DA236D8A4F007A889D /* libresolv.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.9.tbd; path = usr/lib/libresolv.9.tbd; sourceTree = SDKROOT; };
@@ -857,8 +857,8 @@
 		8DB704F5236D883A007A889D /* AnyThinkSDKDemo */ = {
 			isa = PBXGroup;
 			children = (
-				8DB70514236D888C007A889D /* ATADShowViewController.h */,
-				8DB7051A236D888E007A889D /* ATADShowViewController.m */,
+				8DB70514236D888C007A889D /* ATNativeViewController.h */,
+				8DB7051A236D888E007A889D /* ATNativeViewController.m */,
 				8DB70511236D888B007A889D /* ATBannerViewController.h */,
 				8DB70519236D888E007A889D /* ATBannerViewController.m */,
 				8DB70515236D888D007A889D /* ATInterstitialViewController.h */,
@@ -1644,7 +1644,7 @@
 				8DB709E5236D8C89007A889D /* NSObject+MJKeyValue.m in Sources */,
 				8DB70A11236D8C89007A889D /* SDImageAPNGCoder.m in Sources */,
 				8DB709FE236D8C89007A889D /* AFSecurityPolicy.m in Sources */,
-				8DB70520236D888E007A889D /* ATADShowViewController.m in Sources */,
+				8DB70520236D888E007A889D /* ATNativeViewController.m in Sources */,
 				8DB70A29236D8C89007A889D /* SDWebImageDefine.m in Sources */,
 				8DB709F3236D8C89007A889D /* UIImageView+AFNetworking.m in Sources */,
 				8DB704FE236D883A007A889D /* ViewController.m in Sources */,

@@ -1,5 +1,5 @@
 //
-//  ATADShowViewController.h
+//  ATNativeViewController.h
 //  AnyThinkSDKDemo
 //
 //  Created by Martin Lau on 17/04/2018.
@@ -30,7 +30,7 @@ extern NSString *const kNendPlacement;
 extern NSString *const kNendVideoPlacement;
 extern NSString *const kMaioPlacement;
 extern NSString *const kSigmobPlacement;
-@interface ATADShowViewController : UIViewController
+@interface ATNativeViewController : UIViewController
 -(instancetype) initWithPlacementName:(NSString*)name;
 +(NSDictionary<NSString*, NSString*>*)nativePlacementIDs;
 @end

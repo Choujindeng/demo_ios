@@ -1,12 +1,12 @@
 //
-//  ATADShowViewController.m
+//  ATNativeViewController.m
 //  AnyThinkSDKDemo
 //
 //  Created by Martin Lau on 17/04/2018.
 //  Copyright © 2018 Martin Lau. All rights reserved.
 //
 
-#import "ATADShowViewController.h"
+#import "ATNativeViewController.h"
 #import "MTAutolayoutCategories.h"
 @import NendAd;
 @import AnyThinkSDK;
@@ -149,9 +149,9 @@ static NSString *const kBaiduPlacementID = @"b5d36c4ad68a26";
 #endif
 
 #ifdef NATIVE_INTEGRATED
-@interface ATADShowViewController()<ATNativeADDelegate>
+@interface ATNativeViewController()<ATNativeADDelegate>
 #else
-@interface ATADShowViewController()
+@interface ATNativeViewController()
 #endif
 @property(nonatomic, readonly) NSDictionary *placementIDs;
 @property(nonatomic, readonly) NSString *name;
@@ -166,15 +166,15 @@ static NSString *const kBaiduPlacementID = @"b5d36c4ad68a26";
 @end
 static NSString *const kLoadKey = @"load";
 static NSString *const kCallbackKey = @"request";
-@implementation ATADShowViewController
+@implementation ATNativeViewController
 #ifdef NATIVE_INTEGRATED
 -(instancetype) initWithPlacementName:(NSString*)name {
     self = [super initWithNibName:nil bundle:nil];
     if (self != nil) {
         _name = name;
-        _placementIDs = [ATADShowViewController nativePlacementIDs];
+        _placementIDs = [ATNativeViewController nativePlacementIDs];
     }
-    _numberOfLoadAndCallback = [NSMutableDictionary dictionaryWithContentsOfFile:[ATADShowViewController numberOfLoadPath]];
+    _numberOfLoadAndCallback = [NSMutableDictionary dictionaryWithContentsOfFile:[ATNativeViewController numberOfLoadPath]];
     if (_numberOfLoadAndCallback == nil) { _numberOfLoadAndCallback = [NSMutableDictionary dictionary]; }
     return self;
 }
@@ -274,12 +274,12 @@ static NSString *const kCallbackKey = @"request";
 
 -(void) increaseLoad {
     _numberOfLoadAndCallback[kLoadKey] = @([_numberOfLoadAndCallback[kLoadKey] integerValue] + 1);
-    [_numberOfLoadAndCallback writeToFile:[ATADShowViewController numberOfLoadPath] atomically:YES];
+    [_numberOfLoadAndCallback writeToFile:[ATNativeViewController numberOfLoadPath] atomically:YES];
 }
 
 -(void) increaseCallback {
     _numberOfLoadAndCallback[kCallbackKey] = @([_numberOfLoadAndCallback[kCallbackKey] integerValue] + 1);
-    [_numberOfLoadAndCallback writeToFile:[ATADShowViewController numberOfLoadPath] atomically:YES];
+    [_numberOfLoadAndCallback writeToFile:[ATNativeViewController numberOfLoadPath] atomically:YES];
 }
 
 -(void) readyButtonTapped {
@@ -328,25 +328,25 @@ static NSInteger adViewTag = 3333;
 }
     
 -(void) didStartPlayingVideoInAdView:(ATNativeADView*)adView placementID:(NSString*)placementID {
-    NSLog(@"ATADShowViewController:: didStartPlayingVideoInAdView:placementID:%@", placementID);
+    NSLog(@"ATNativeViewController:: didStartPlayingVideoInAdView:placementID:%@", placementID);
 }
 
 -(void) didEndPlayingVideoInAdView:(ATNativeADView*)adView placementID:(NSString*)placementID {
-    NSLog(@"ATADShowViewController:: didEndPlayingVideoInAdView:placementID:%@", placementID);
+    NSLog(@"ATNativeViewController:: didEndPlayingVideoInAdView:placementID:%@", placementID);
 }
 
 -(void) didClickNativeAdInAdView:(ATNativeADView*)adView placementID:(NSString*)placementID {
-    NSLog(@"ATADShowViewController:: didClickNativeAdInAdView:placementID:%@", placementID);
+    NSLog(@"ATNativeViewController:: didClickNativeAdInAdView:placementID:%@", placementID);
 }
 
 -(void) didShowNativeAdInAdView:(ATNativeADView*)adView placementID:(NSString*)placementID {
-    NSLog(@"ATADShowViewController:: didShowNativeAdInAdView:placementID:%@", placementID);
+    NSLog(@"ATNativeViewController:: didShowNativeAdInAdView:placementID:%@", placementID);
     adView.mainImageView.hidden = [adView isVideoContents];
 }
 
 -(void) didFinishLoadingADWithPlacementID:(NSString *)placementID {
     [self increaseCallback];
-    NSLog(@"ATADShowViewController:: didFinishLoadingADWithPlacementID:%@", placementID);
+    NSLog(@"ATNativeViewController:: didFinishLoadingADWithPlacementID:%@", placementID);
     [_loadingView removeFromSuperview];
     _failureTipsLabel.hidden = YES;
     if ([self.view viewWithTag:adViewTag] == nil) {
@@ -356,39 +356,39 @@ static NSInteger adViewTag = 3333;
 
 -(void) didFailToLoadADWithPlacementID:(NSString *)placementID error:(NSError *)error {
     [self increaseCallback];
-    NSLog(@"ATADShowViewController:: didFailToLoadADWithPlacementID:%@ error:%@", placementID, error);
+    NSLog(@"ATNativeViewController:: didFailToLoadADWithPlacementID:%@ error:%@", placementID, error);
     [_loadingView removeFromSuperview];
     _failureTipsLabel.hidden = NO;
 }
 
 -(void) didEnterFullScreenVideoInAdView:(ATNativeADView*)adView placementID:(NSString*)placementID {
-    NSLog(@"ATADShowViewController:: didEnterFullScreenVideoInAdView:placementID:%@", placementID);
+    NSLog(@"ATNativeViewController:: didEnterFullScreenVideoInAdView:placementID:%@", placementID);
 }
 
 -(void) didExitFullScreenVideoInAdView:(ATNativeADView*)adView placementID:(NSString*)placementID {
-    NSLog(@"ATADShowViewController:: didExitFullScreenVideoInAdView:placementID:%@", placementID);
+    NSLog(@"ATNativeViewController:: didExitFullScreenVideoInAdView:placementID:%@", placementID);
 }
 #pragma mark - delegate with networkID and adsourceID
 -(void) didStartPlayingVideoInAdView:(ATNativeADView*)adView placementID:(NSString*)placementID extra:(NSDictionary *)extra{
-    NSLog(@"ATADShowViewController:: didStartPlayingVideoInAdView:placementID:%@with extra: %@", placementID,extra);
+    NSLog(@"ATNativeViewController:: didStartPlayingVideoInAdView:placementID:%@with extra: %@", placementID,extra);
 }
 
 -(void) didEndPlayingVideoInAdView:(ATNativeADView*)adView placementID:(NSString*)placementID extra:(NSDictionary *)extra{
-    NSLog(@"ATADShowViewController:: didEndPlayingVideoInAdView:placementID:%@", placementID);
+    NSLog(@"ATNativeViewController:: didEndPlayingVideoInAdView:placementID:%@", placementID);
 }
 
 -(void) didClickNativeAdInAdView:(ATNativeADView*)adView placementID:(NSString*)placementID extra:(NSDictionary *)extra{
-    NSLog(@"ATADShowViewController:: didClickNativeAdInAdView:placementID:%@ with extra: %@", placementID,extra);
+    NSLog(@"ATNativeViewController:: didClickNativeAdInAdView:placementID:%@ with extra: %@", placementID,extra);
 }
 
 -(void) didShowNativeAdInAdView:(ATNativeADView*)adView placementID:(NSString*)placementID extra:(NSDictionary *)extra{
-    NSLog(@"ATADShowViewController:: didShowNativeAdInAdView:placementID:%@ with extra: %@", placementID,extra);
+    NSLog(@"ATNativeViewController:: didShowNativeAdInAdView:placementID:%@ with extra: %@", placementID,extra);
     adView.mainImageView.hidden = [adView isVideoContents];
 }
 
 -(void) didFinishLoadingADWithPlacementID:(NSString *)placementID extra:(NSDictionary *)extra{
     [self increaseCallback];
-    NSLog(@"ATADShowViewController:: didFinishLoadingADWithPlacementID:%@", placementID);
+    NSLog(@"ATNativeViewController:: didFinishLoadingADWithPlacementID:%@", placementID);
     [_loadingView removeFromSuperview];
     _failureTipsLabel.hidden = YES;
     if ([self.view viewWithTag:adViewTag] == nil) {
@@ -398,17 +398,17 @@ static NSInteger adViewTag = 3333;
 
 -(void) didFailToLoadADWithPlacementID:(NSString *)placementID extra:(NSDictionary *)extra error:(NSError *)error {
     [self increaseCallback];
-    NSLog(@"ATADShowViewController:: didFailToLoadADWithPlacementID:%@ error:%@", placementID, error);
+    NSLog(@"ATNativeViewController:: didFailToLoadADWithPlacementID:%@ error:%@", placementID, error);
     [_loadingView removeFromSuperview];
     _failureTipsLabel.hidden = NO;
 }
 
 -(void) didEnterFullScreenVideoInAdView:(ATNativeADView*)adView placementID:(NSString*)placementID extra:(NSDictionary *)extra{
-    NSLog(@"ATADShowViewController:: didEnterFullScreenVideoInAdView:placementID:%@", placementID);
+    NSLog(@"ATNativeViewController:: didEnterFullScreenVideoInAdView:placementID:%@", placementID);
 }
 
 -(void) didExitFullScreenVideoInAdView:(ATNativeADView*)adView placementID:(NSString*)placementID extra:(NSDictionary *)extra{
-    NSLog(@"ATADShowViewController:: didExitFullScreenVideoInAdView:placementID:%@", placementID);
+    NSLog(@"ATNativeViewController:: didExitFullScreenVideoInAdView:placementID:%@", placementID);
 }
 
 #endif

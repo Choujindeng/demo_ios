@@ -35,6 +35,7 @@ NSString *const kNendPlacement = @"Nend";
 NSString *const kMaioPlacement = @"Maio";
 NSString *const kKSPlacement = @"KS";
 NSString *const kMyOfferPlacement = @"MyOffer";
+NSString *const kOguryPlacement = @"Ogury";
 
 
 static NSString *const kPlacement0ID = @"b5ad9ba61dcb39";
@@ -66,6 +67,7 @@ static NSString *const kMaioPlacementID = @"b5cb96ce0b931e";
 static NSString *const kSigmobPlacementID = @"b5d771f5a3458f";
 static NSString *const kKSPlacementID = @"b5d807a31aa7dd";
 static NSString *const kMyOfferPlacementID = @"b5db6c247dbb1e";
+static NSString *const kOguryPlacementID = @"b5dde2379dc6ce";
 
 
 @implementation ATRewardedVideoVideoViewController
@@ -101,7 +103,8 @@ static NSString *const kMyOfferPlacementID = @"b5db6c247dbb1e";
                           kMaioPlacement:kMaioPlacementID,
                           kSigmobPlacement:kSigmobPlacementID,
                           kKSPlacement:kKSPlacementID,
-                          kMyOfferPlacement:kMyOfferPlacementID
+                          kMyOfferPlacement:kMyOfferPlacementID,
+                          kOguryPlacement:kOguryPlacementID
                           };
     }
     return self;

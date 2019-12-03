@@ -87,10 +87,16 @@ AnyThinkSDK支持原生广告(Native),激励视频广告(rewardVideo)，banner�
 | Appnext |AppnextNativeAdsSDK<br>AppnextIOSSDK| v1.9.3 |https://developers.appnext.com/docs/ios-sdk-installation||||
 | Baidu |BaiduMobAdSDK.framework <br> baidumobadsdk.bundle|v4.6.7|https://mssp.baidu.com/bqt/appco.html#/union/download/sdk||||
 |Nend|NendAd.framework <br> NendAdResource.bundle|v5.2.0|https://github.com/fan-ADN||||
-| Maio |Maio.framework|v1.4.8|https://github.com/imobile-maio||||
+| Maio |Maio.framework|v1.4.8|||https://github.com/imobile-maio||
 | Yeahmobi |CTSDK.framework|v3.2.0|||||
 | sigmob |WindSDK.framework|v2.12.3|||||
-|KS|KSAdSDK.framework <br> KSAdSDK.bundle|v2.2.7|需要额外导入第三方依赖：<br> AFNetworking/Godzippa/MJExtension/SDWebImage||||
+|KS|KSAdSDK.framework <br> KSAdSDK.bundle|v2.2.7|||需要额外导入第三方依赖：<br> AFNetworking/Godzippa/MJExtension/SDWebImage||
+|Ogury|OguryOED_1.0.3 包含以下sdk<br>OMSDK_Oguryco.framework<br>OguryAds.framework<br>OguryConsentManager.framework|1.0.3|||由于该平台的GDPR设置必须通过其平台的弹窗来进行设置，如若在欧盟地区不用其平台的弹窗设置GDPR等级，则ecpm会相对较低，所以这里需要开发者自己调用Ogury的api弹窗供用户设置GDPR等级(即需要弹出Topon的GDPR和Ogury的两个GDPR选择界面，且两个都需要用户进行选择)。||
+
+**Ogury的GDPR弹窗api调用**
+<pre><code>[[ConsentManager sharedManager] askWithViewController:myViewController assetKey:@"OGY-0E0F944B6408" andCompletionBlock:^(NSError * error, ConsentManagerAnswer answer) {
+ }];
+//OGY-0E0F944B6408 换成你自己的assetKey</code></pre>
 
 您可以使用CocoaPods导入第三方SDK，也可以手动下载导入第三方SDK。
 
@@ -125,6 +131,7 @@ AnyThinkSDK为每一个支持的第三方广告平台定义了一个id（整型�
 |Maio|24|
 |KS|28|
 |Sigmob|29|
+|Ogury|36|
 
 ### 2.4 初始化SDK
 

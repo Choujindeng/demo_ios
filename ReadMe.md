@@ -36,7 +36,7 @@
 | Nend | 5.3.1 ||
 | Maio | 1.5.0 ||
 | ks | 2.3.9 |需要额外导入第三方依赖：<br> AFNetworking/Godzippa/MJExtension/SDWebImage|
-| sigmob | 2.14.0 |sdk：WindSDK.framework|
+| sigmob | 2.14.0 |sdk：WindSDK.framework <br>sigmob.bundle|
 | Ogury | 1.0.3 |OguryOED_1.0.3 包含以下sdk<br>OMSDK_Oguryco.framework<br>OguryAds.framework<br>OguryConsentManager.framework|
 
 

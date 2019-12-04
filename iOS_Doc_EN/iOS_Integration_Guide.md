@@ -94,7 +94,7 @@ The table below gives a brief summary of third party SDKs. Only import those of 
 |Nend|NendAd.framework <br> NendAdResource.bundle|v5.3.1|https://github.com/fan-ADN||||
 | Maio |Maio.framework|v1.5.0|https://github.com/imobile-maio||||
 | Yeahmobi |CTSDK.framework|v3.2.0|||||  
-| sigmob |WindSDK.framework|v2.14.0|||||
+| sigmob |WindSDK.framework<br>sigmob.bundle|v2.14.0|||||
 |KS|KSAdSDK.framework <br> KSAdSDK.bundle|v2.3.9|Additional third-party libraries that need to be introduced：<br>AFNetworking/Godzippa/MJExtension/SDWebImage||||
 |Ogury|OMSDK_Oguryco.framework<br>OguryAds.framework<br>OguryConsentManager.framework|1.0.3|||No way of setting GDPR consent without presenting a view controller.||
 

@@ -69,7 +69,7 @@ AnyThinkSDK支持原生广告(Native),激励视频广告(rewardVideo)，banner�
 |Nend|NendAd.framework <br> NendAdResource.bundle|v5.2.0|https://github.com/fan-ADN||||
 | Maio |Maio.framework|v1.4.8|https://github.com/imobile-maio||||
 | Yeahmobi |CTSDK.framework|v3.2.0|||||
-| sigmob |WindSDK.framework|v2.12.3|||||
+| sigmob |WindSDK.framework<br>sigmob.bundle|v2.12.3|||||
 
 您可以使用CocoaPods导入第三方SDK，也可以手动下载导入第三方SDK。
 

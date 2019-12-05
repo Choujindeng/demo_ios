@@ -942,14 +942,4 @@ Mintegral和Facebook支持header bidding的应用版本如下：
  }];
 //OGY-0E0F944B6408 换成你自己的assetKey</code></pre>
 
-### 11.3 关于Ogury的GDPR配置
-由于Ogury没有提供直接设置GDPR的接口，只能通过它的对话框来设置，所以当你需要通过AnyThinkSDK来集成Ogury时，为了避免重复弹出GDPR询问框，请使用以下代码来配置GDPR:
-<pre><code>[[ConsentManager sharedManager] askWithViewController:myViewController assetKey:@"OGY-0E0F944B6408" andCompletionBlock:^(NSError * error, ConsentManagerAnswer answer) {
-	if(answer == 1){
-		 [[ATAPI sharedInstance] setDataConsentSet:ATDataConsentSetPersonalized consentString:nil];
-	} else {
-	    [[ATAPI sharedInstance] setDataConsentSet:ATDataConsentSetNonpersonalized consentString:nil];
-	}
- }];
-//OGY-0E0F944B6408 换成你自己的assetKey</code></pre>
 

@@ -93,7 +93,7 @@ The table below gives a brief summary of third party SDKs. Only import those of 
 | Baidu |BaiduMobAdSDK.framework<br> baidumobadsdk.bundle|v4.6.7|https://mssp.baidu.com/bqt/appco.html#/union/download/sdk||||
 |Nend|NendAd.framework <br> NendAdResource.bundle|v5.3.1|https://github.com/fan-ADN||||
 | Maio |Maio.framework|v1.5.0|https://github.com/imobile-maio||||
-| Yeahmobi |CTSDK.framework|v3.2.0|||||  
+| Yeahmobi |CTSDK.framework|v3.2.0|||||
 | sigmob |WindSDK.framework<br>sigmob.bundle|v2.14.0|||||
 |KS|KSAdSDK.framework <br> KSAdSDK.bundle|v2.3.9|Additional third-party libraries that need to be introduced：<br>AFNetworking/Godzippa/MJExtension/SDWebImage||||
 |Ogury|OMSDK_Oguryco.framework<br>OguryAds.framework<br>OguryConsentManager.framework|1.0.3|||No way of setting GDPR consent without presenting a view controller.||
@@ -688,6 +688,11 @@ The code above gives you the effect shown below:
 
 ![](native_ad_effect.png)
 
+#### 7.3.3 On Template Native Ad
+Template native ad comes with predefined layouts, which you can specify on **Third-Party portal**, and is served as a whole, meaning that you can't layout the assets(icon, title, description & cover image etc.) individually as you do in Self-Rendering native ad. It might look pretty much like a banner(though it is not a banner conceptually):
+
+![](template_native_sample.png)
+
 ### 7.4 Implement Native Delegate
 You can implement the methods defined in **ATNativeDelegate** to get notified on various native event:
 
@@ -951,6 +956,19 @@ You can set network consent info on a per-network basis; according to the networ
            }<br>
            
 Please note that the data structures are provided here according to the latest third-party network specs and are subject to future change. 
+
+### 11.3 Special Configuration When Using Ogury
+
+Since Ogury does not provide any other way of setting GDPR consent than via its **ConsentManager** class' askWithViewController:assetKey:andCompletionBlock: API, which presents a modal view controller, if you need to integrate Ogury through **AnyThinkSDK**, use the following code segment to configure GDPR settings(to avoid duplicate modal view controller presentations, which is rather annoying): 
+
+<pre><code>[[ConsentManager sharedManager] askWithViewController:myViewController assetKey:@"your Ogury assetKey here" andCompletionBlock:^(NSError * error, ConsentManagerAnswer answer) {
+	if(answer == 2){
+		 [[ATAPI sharedInstance] setDataConsentSet:ATDataConsentSetPersonalized consentString:nil];
+	} else {
+	    [[ATAPI sharedInstance] setDataConsentSet:ATDataConsentSetNonpersonalized consentString:nil];
+	}
+ }];
+</code></pre>
 
 ### 11.3 Special Configuration When Using Ogury
 

@@ -684,6 +684,11 @@ UI元素包括：
 
 ![](native_ad_effect.png)
 
+#### 7.3.3 关于个性化模版原生广告
+部分第三方广告平台提供个性化模版原生广告，这种广告的布局是在对应的第三方广告平台的开发者后台预设的，并且不支持单独定义各部件（icon, 标题，描述封面等）的位置和大小，这点与自渲染原生广告是不一样的；个性化模版原生广告不是banner广告，但它有时候看起来会像一个banner广告:
+
+![](template_native_sample.png)
+
 ### 7.4 实现Native的Delegate
 您可以实现**ATNativeDelegate**的方法来获取原生广告的各种事件：
 
@@ -925,6 +930,17 @@ Mintegral和Facebook支持header bidding的应用版本如下：
             kNetworkNameApplovin:@{kApplovinConscentStatusKey:@YES, kApplovinUnderAgeKey:@NO<br>}<br>
            <br>
 具体设置方法请参见[第三方网络配置](http://www.topon.com)
+
+### 11.3 关于Ogury的GDPR配置
+由于Ogury没有提供直接设置GDPR的接口，只能通过它的对话框来设置，所以当你需要通过AnyThinkSDK来集成Ogury时，为了避免重复弹出GDPR询问框，请使用以下代码来配置GDPR:
+<pre><code>[[ConsentManager sharedManager] askWithViewController:myViewController assetKey:@"OGY-0E0F944B6408" andCompletionBlock:^(NSError * error, ConsentManagerAnswer answer) {
+	if(answer == 2){
+		 [[ATAPI sharedInstance] setDataConsentSet:ATDataConsentSetPersonalized consentString:nil];
+	} else {
+	    [[ATAPI sharedInstance] setDataConsentSet:ATDataConsentSetNonpersonalized consentString:nil];
+	}
+ }];
+//OGY-0E0F944B6408 换成你自己的assetKey</code></pre>
 
 ### 11.3 关于Ogury的GDPR配置
 由于Ogury没有提供直接设置GDPR的接口，只能通过它的对话框来设置，所以当你需要通过AnyThinkSDK来集成Ogury时，为了避免重复弹出GDPR询问框，请使用以下代码来配置GDPR:

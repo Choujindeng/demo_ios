@@ -12,7 +12,7 @@
 [Error Code And FAQ 中文版](iOS_Doc_CHN/Error_Code_and_FAQ.md)
 
 <br>
-下载地址（download）：<br>
+(建议从这里的链接下载,git的download zip会出现文件损坏的问题，导致无法编译)下载地址（download）：<br>
 1. TopOn iOS SDK <br>
 http://sdk-release.toponad.com/iOS/5.2.1/AnyThink_SDK_IOS_5.2.1_201912061128.zip <br>
 2. TopOn iOS Demo <br>

@@ -89,8 +89,13 @@ AnyThinkSDK支持原生广告(Native),激励视频广告(rewardVideo)，banner�
 |Nend|NendAd.framework <br> NendAdResource.bundle|v5.3.1|https://github.com/fan-ADN||||
 | Maio |Maio.framework|v1.5.0|||https://github.com/imobile-maio||
 | Yeahmobi |CTSDK.framework|v3.2.0|||||
+<<<<<<< HEAD
+| sigmob |WindSDK.framework|v2.14.0|||||
+|KS|KSAdSDK.framework <br> KSAdSDK.bundle|v2.3.9|||需要额外导入第三方依赖：<br> AFNetworking/Godzippa/MJExtension/SDWebImage||
+=======
 | sigmob |WindSDK.framework<br>sigmob.bundle|v2.14.0|||||
 |KS|KSAdSDK.framework <br> KSAdSDK.bundle|v2.3.9|||需要额外导入第三方依赖：<br> AFNetworking/Godzippa/MJExtension/SDWebImage||
+>>>>>>> db2d10556a98205d6bb11845611bbc67a004f4ec
 |Ogury|OMSDK_Oguryco.framework<br>OguryAds.framework<br>OguryConsentManager.framework|1.0.3|||由于该平台的GDPR设置必须通过其平台的弹窗来进行设置，如若在欧盟地区不用其平台的弹窗设置GDPR等级，则ecpm会相对较低，所以这里建议开发者自己调用Ogury的api弹窗供用户设置GDPR等级，在api的回调中把topon的GDPR等级一并设置(即调用Ogury的GDPR弹窗，然后在用户选择等级设置之后的回调里，将Topon的GDPR设置为其回调中的等级)。||
 
 您可以使用CocoaPods导入第三方SDK，也可以手动下载导入第三方SDK。
@@ -560,8 +565,11 @@ if ([[ATAdManager sharedManager] bannerAdReadyForPlacementID:@"your banner place
 //Other properties&methods declarations
 @end</code></pre>
 
+<a name="loading_native"></a>
 加载native:
-<pre><code>[[ATAdManager sharedManager] loadADWithPlacementID:@"your native placement id" extra:nil delegate:self];</code></pre>
+<pre><code>[[ATAdManager sharedManager] loadADWithPlacementID:@"your native placement id" extra:@{kExtraInfoNativeAdSizeKey:[NSValue valueWithCGSize:CGSizeMake(CGRectGetWidth(self.view.bounds), 400.0f)]} delegate:self];</code></pre>
+
+**Note:** 如果使用GDT（腾讯优量汇）或者TT（穿山甲）的模版广告，此处需要通过**kExtraInfoNativeAdSizeKey**向extra参数传递一个size，这个size需要和展示的广告的最终尺寸一致，详情请参阅[展示原生广告](#showing_native)。
 
 您可以实现以下的代理方法来获取各种加载事件：
 <pre><code>#pragma mark - loading delegate
@@ -575,6 +583,7 @@ if ([[ATAdManager sharedManager] bannerAdReadyForPlacementID:@"your banner place
 
 ### 7.3 展示Native
 您可以检查Native广告是否已经ready：
+<a name="showing_native"></a>
  
 <pre><code>-(void) showAD {
     ATNativeADConfiguration *config = [[ATNativeADConfiguration alloc] init];
@@ -585,6 +594,8 @@ if ([[ATAdManager sharedManager] bannerAdReadyForPlacementID:@"your banner place
     adView.tag = adViewTag;
     [self.view addSubview:adView];
 }</code></pre>
+
+**Note:** 如果使用GDT（腾讯优量汇）或者TT（穿山甲）的模版广告，此处传给ADFrame属性的尺寸需要和load方法中extra包含的尺寸保持一致，详情请参阅[加载原生广告](#loading_native)
 
 #### 7.3.1 实现Custom Native Ad View
 要展示一个Native广告，您需要定义一个自定义的视图，它需要继承于**ATNativeADView**，并添加**ATNativeRendering**协议。所以需要您去实现某些方法，在我们的Demo中，我们通过添加一些属性，确保协议中的方法可以获取到这些属性。
@@ -683,11 +694,6 @@ UI元素包括：
 使用以上代码，得到的展示效果如下图所示：
 
 ![](native_ad_effect.png)
-
-#### 7.3.3 关于个性化模版原生广告
-部分第三方广告平台提供个性化模版原生广告，这种广告的布局是在对应的第三方广告平台的开发者后台预设的，并且不支持单独定义各部件（icon, 标题，描述封面等）的位置和大小，这点与自渲染原生广告是不一样的；个性化模版原生广告不是banner广告，但它有时候看起来会像一个banner广告:
-
-![](template_native_sample.png)
 
 ### 7.4 实现Native的Delegate
 您可以实现**ATNativeDelegate**的方法来获取原生广告的各种事件：
@@ -942,4 +948,14 @@ Mintegral和Facebook支持header bidding的应用版本如下：
  }];
 //OGY-0E0F944B6408 换成你自己的assetKey</code></pre>
 
+### 11.3 关于Ogury的GDPR配置
+由于Ogury没有提供直接设置GDPR的接口，只能通过它的对话框来设置，所以当你需要通过AnyThinkSDK来集成Ogury时，为了避免重复弹出GDPR询问框，请使用以下代码来配置GDPR:
+<pre><code>[[ConsentManager sharedManager] askWithViewController:myViewController assetKey:@"OGY-0E0F944B6408" andCompletionBlock:^(NSError * error, ConsentManagerAnswer answer) {
+	if(answer == 1){
+		 [[ATAPI sharedInstance] setDataConsentSet:ATDataConsentSetPersonalized consentString:nil];
+	} else {
+	    [[ATAPI sharedInstance] setDataConsentSet:ATDataConsentSetNonpersonalized consentString:nil];
+	}
+ }];
+//OGY-0E0F944B6408 换成你自己的assetKey</code></pre>
 

@@ -93,9 +93,14 @@ The table below gives a brief summary of third party SDKs. Only import those of 
 | Baidu |BaiduMobAdSDK.framework<br> baidumobadsdk.bundle|v4.6.7|https://mssp.baidu.com/bqt/appco.html#/union/download/sdk||||
 |Nend|NendAd.framework <br> NendAdResource.bundle|v5.3.1|https://github.com/fan-ADN||||
 | Maio |Maio.framework|v1.5.0|https://github.com/imobile-maio||||
-| Yeahmobi |CTSDK.framework|v3.2.0|||||
+| Yeahmobi |CTSDK.framework|v3.2.0|||||  
+<<<<<<< HEAD
+| sigmob |WindSDK.framework|v2.14.0|||||
+|KS|KSAdSDK.framework <br> KSAdSDK.bundle|v2.3.9|Additional third-party libraries that need to be introduced：<br>AFNetworking/Godzippa/MJExtension/SDWebImage||||
+=======
 | sigmob |WindSDK.framework<br>sigmob.bundle|v2.14.0|||||
 |KS|KSAdSDK.framework <br> KSAdSDK.bundle|v2.3.9|Additional third-party libraries that need to be introduced：<br>AFNetworking/Godzippa/MJExtension/SDWebImage||||
+>>>>>>> db2d10556a98205d6bb11845611bbc67a004f4ec
 |Ogury|OMSDK_Oguryco.framework<br>OguryAds.framework<br>OguryConsentManager.framework|1.0.3|||No way of setting GDPR consent without presenting a view controller.||
 
 You can use CocoaPods to import third party SDKs or you can download and import them manually.
@@ -556,13 +561,18 @@ Drag&drop **AnyThinkNative.framework** into your project. Apart from **AnyThinkN
 |Mopub|AnyThinkMopubNativeAdapter.framework|
 
 ### 7.2 Load Native
+
 Make your view controller confirm to **ATNativeADDelegate**:
 <pre><code>@interface ATNativeViewController()\<ATNativeADDelegate\>
 //Other properties&methods declarations
 @end</code></pre>
 
+<a name="loading_native"></a>
 Load native ad like this:
-<pre><code>[[ATAdManager sharedManager] loadADWithPlacementID:@"your native placement id" extra:nil delegate:self];</code></pre>
+<pre><code>[[ATAdManager sharedManager] loadADWithPlacementID:@"your native placement id" extra:@{kExtraInfoNativeAdSizeKey:[NSValue valueWithCGSize:CGSizeMake(CGRectGetWidth(self.view.bounds), 400.0f)]} delegate:self];</code></pre>
+
+
+**Note:** The size passed here through **kExtraInfoNativeAdSizeKey** is for GDT & TT's template ad type. Specify a size that equals the ultimate showing size(the size of the **ADFrame** property you pass to **ATNativeADConfiguration** object when showing a native ad), see [Show Native](#showing_native_ad) for more details.
 
 To get notified on various ad loading event, you can implemente the methods in ad loading delegate:
 <pre><code>#pragma mark - loading delegate
@@ -574,7 +584,9 @@ To get notified on various ad loading event, you can implemente the methods in a
     NSLog(@"Native Demo: failed to load:%@", error);
 }</code></pre>
 
-### 7.3 Show Native
+
+### 7.3 Show Native 
+<a name="showing_native_ad"></a>
 After native ad has been successfully loaded, you can call the showing API to show it:
  
 <pre><code>-(void) showAD {
@@ -586,6 +598,8 @@ After native ad has been successfully loaded, you can call the showing API to sh
     adView.tag = adViewTag;
     [self.view addSubview:adView];
 }</code></pre>
+
+**Note:** If you use GDT or TT's template ad type, to acquire best layout, in **ADFrame** property of the **ATNativeADConfiguration** object here, specify a size that equals to the one you specify through the **kExtraInfoNativeAdSizeKey** in the **extra** parameter when call the loading method above, see [Load Native](#loading_native) for more details.
 
 #### 7.3.1 Implement Custom Native Ad View
 
@@ -687,11 +701,6 @@ instance, set the frame within which you want to show the ad, the class of your 
 The code above gives you the effect shown below:
 
 ![](native_ad_effect.png)
-
-#### 7.3.3 On Template Native Ad
-Template native ad comes with predefined layouts, which you can specify on **Third-Party portal**, and is served as a whole, meaning that you can't layout the assets(icon, title, description & cover image etc.) individually as you do in Self-Rendering native ad. It might look pretty much like a banner(though it is not a banner conceptually):
-
-![](template_native_sample.png)
 
 ### 7.4 Implement Native Delegate
 You can implement the methods defined in **ATNativeDelegate** to get notified on various native event:
@@ -970,4 +979,16 @@ Since Ogury does not provide any other way of setting GDPR consent than via its 
  }];
 </code></pre>
 
+### 11.3 Special Configuration When Using Ogury
+
+Since Ogury does not provide any other way of setting GDPR consent than via its **ConsentManager** class' askWithViewController:assetKey:andCompletionBlock: API, which presents a modal view controller, if you need to integrate Ogury through **AnyThinkSDK**, use the following code segment to configure GDPR settings(to avoid duplicate modal view controller presentations, which is rather annoying): 
+
+<pre><code>[[ConsentManager sharedManager] askWithViewController:myViewController assetKey:@"your Ogury assetKey here" andCompletionBlock:^(NSError * error, ConsentManagerAnswer answer) {
+	if(answer == 1){
+		 [[ATAPI sharedInstance] setDataConsentSet:ATDataConsentSetPersonalized consentString:nil];
+	} else {
+	    [[ATAPI sharedInstance] setDataConsentSet:ATDataConsentSetNonpersonalized consentString:nil];
+	}
+ }];
+</code></pre>
 

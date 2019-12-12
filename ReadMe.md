@@ -14,7 +14,7 @@
 <br>
 (建议从这里的链接下载,git的download zip会出现文件损坏的问题，导致无法编译)下载地址（download）：<br>
 1. TopOn iOS SDK <br>
-http://sdk-release.toponad.com/iOS/5.2.1/AnyThink_SDK_IOS_5.2.1_201912061128.zip <br>
+http://sdk-release.toponad.com/iOS/5.2.4/AnyThink_SDK_IOS_5.2.4_201912111459.zip <br>
 2. TopOn iOS Demo <br>
 http://sdk-release.toponad.com/iOS/5.2.1/AnyThinkSDKDemo.zip <br>
 3. TopOn Unity SDK for iOS <br>

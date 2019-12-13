@@ -40,7 +40,7 @@ http://sdk-release.toponad.com/Unity/5.2.1/Unity_Androidv5.2.1_iOSv5.2.1.unitypa
 | Ironsource | 6.10.0 ||
 | Vungle | 6.4.5 ||
 | Adcolony | 4.1.2.0 ||
-| UnityAds | 3.4.0 ||
+| UnityAds | 3.3.0 ||
 | TT | 2.5.1.5 |头条/穿山甲/TT|
 | Tapjoy | 12.3.4 ||
 | Oneway | 2.1.0 ||
@@ -48,7 +48,7 @@ http://sdk-release.toponad.com/Unity/5.2.1/Unity_Androidv5.2.1_iOSv5.2.1.unitypa
 | MobPower | 1.0.0 ||
 | Nend | 5.3.1 ||
 | Maio | 1.5.0 ||
-| ks | 2.5.2.12 |需要额外导入第三方依赖：<br> AFNetworking/Godzippa/MJExtension/SDWebImage|
+| ks | 2.5.1 |需要额外导入第三方依赖：<br> AFNetworking/Godzippa/MJExtension/SDWebImage|
 | sigmob | 2.14.0 |sdk：WindSDK.framework <br>sigmob.bundle|
 | Ogury | 1.0.3 |OguryOED_1.0.3 包含以下sdk<br>OMSDK_Oguryco.framework<br>OguryAds.framework<br>OguryConsentManager.framework|
 

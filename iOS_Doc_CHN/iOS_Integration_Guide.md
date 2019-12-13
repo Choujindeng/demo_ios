@@ -79,7 +79,7 @@ AnyThinkSDK支持原生广告(Native),激励视频广告(rewardVideo)，banner�
 | Chartboost |Chartboost.framework| v8.0.3 | https://dashboard.chartboost.com/tools/sdk	||||
 | Tapjoy |Tapjoy.framework <br> TapjoyResources.bundle| v12.3.4 |||||
 | Ironsource |IronSource.framework|v6.10.0|https://developers.ironsrc.com/sdk-repository/||||
-| UnityAds |UnityAds.framework| v3.3.0 |https://github.com/Unity-Technologies/unity-ads-ios/releases/tag/3.0.3||||
+| UnityAds |UnityAds.framework| v3.4.0 |https://github.com/Unity-Technologies/unity-ads-ios/releases/tag/3.0.3||||
 | Vungle |VungleSDK.framework|v6.4.5|||||
 | Adcolony |AdColony.framework|v4.1.0.0|https://github.com/AdColony||||
 |TouTiao|BUAdSDK.framework<br>BUAdSDK.bundle|v2.4.6.7|http://ad.toutiao.com/union/media/union/download|||
@@ -90,7 +90,7 @@ AnyThinkSDK支持原生广告(Native),激励视频广告(rewardVideo)，banner�
 | Maio |Maio.framework|v1.5.0|||https://github.com/imobile-maio||
 | Yeahmobi |CTSDK.framework|v3.2.0|||||
 | sigmob |WindSDK.framework<br>sigmob.bundle|v2.14.0|||||
-|KS|KSAdSDK.framework <br> KSAdSDK.bundle|v2.3.9|||需要额外导入第三方依赖：<br> AFNetworking/Godzippa/MJExtension/SDWebImage||
+|KS|KSAdSDK.framework <br> KSAdSDK.bundle|v2.5.2.12|||需要额外导入第三方依赖：<br> AFNetworking/Godzippa/MJExtension/SDWebImage||
 |Ogury|OMSDK_Oguryco.framework<br>OguryAds.framework<br>OguryConsentManager.framework|1.0.3|||由于该平台的GDPR设置必须通过其平台的弹窗来进行设置，如若在欧盟地区不用其平台的弹窗设置GDPR等级，则ecpm会相对较低，所以这里建议开发者自己调用Ogury的api弹窗供用户设置GDPR等级，在api的回调中把topon的GDPR等级一并设置(即调用Ogury的GDPR弹窗，然后在用户选择等级设置之后的回调里，将Topon的GDPR设置为其回调中的等级)。||
 
 您可以使用CocoaPods导入第三方SDK，也可以手动下载导入第三方SDK。

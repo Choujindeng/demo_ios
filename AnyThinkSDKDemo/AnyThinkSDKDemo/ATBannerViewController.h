@@ -30,6 +30,7 @@ extern NSString *const kBaiduPlacement;
 extern NSString *const kNendPlacement;
 extern NSString *const kBannerShownNotification;
 extern NSString *const kBannerLoadingFailedNotification;
+extern NSString *const kHeaderBiddingPlacement;
 @interface ATBannerViewController : UIViewController
 -(instancetype) initWithPlacementName:(NSString*)name;
 @end

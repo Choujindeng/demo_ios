@@ -84,7 +84,7 @@ The table below gives a brief summary of third party SDKs. Only import those of 
 | Chartboost |Chartboost.framework| v8.0.3 | https://dashboard.chartboost.com/tools/sdk	||||
 | Tapjoy |Tapjoy.framework <br> TapjoyResources.bundle| v12.3.4 |||||
 | Ironsource |IronSource.framework|v6.10.0|https://developers.ironsrc.com/sdk-repository/||||
-| UnityAds |UnityAds.framework| v3.3.0 |https://github.com/Unity-Technologies/unity-ads-ios/releases/tag/3.0.3||||
+| UnityAds |UnityAds.framework| v3.4.0 |https://github.com/Unity-Technologies/unity-ads-ios/releases/tag/3.0.3||||
 | Vungle |VungleSDK.framework|v6.4.5|||||
 | Adcolony |AdColony.framework|v4.1.0.0|https://github.com/AdColony||||
 |TouTiao|BUAdSDK.framework<br>BUAdSDK.bundle|v2.4.6.7|http://ad.toutiao.com/union/media/union/download|||
@@ -95,7 +95,7 @@ The table below gives a brief summary of third party SDKs. Only import those of 
 | Maio |Maio.framework|v1.5.0|https://github.com/imobile-maio||||
 | Yeahmobi |CTSDK.framework|v3.2.0|||||  
 | sigmob |WindSDK.framework<br>sigmob.bundle|v2.14.0|||||
-|KS|KSAdSDK.framework <br> KSAdSDK.bundle|v2.3.9|Additional third-party libraries that need to be introduced：<br>AFNetworking/Godzippa/MJExtension/SDWebImage||||
+|KS|KSAdSDK.framework <br> KSAdSDK.bundle|v2.5.2.12|Additional third-party libraries that need to be introduced：<br>AFNetworking/Godzippa/MJExtension/SDWebImage||||
 |Ogury|OMSDK_Oguryco.framework<br>OguryAds.framework<br>OguryConsentManager.framework|1.0.3|||No way of setting GDPR consent without presenting a view controller.||
 
 You can use CocoaPods to import third party SDKs or you can download and import them manually.

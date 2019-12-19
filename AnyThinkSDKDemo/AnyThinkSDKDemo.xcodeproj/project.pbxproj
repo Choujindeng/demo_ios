@@ -25,6 +25,7 @@
 		459A7735239642DA009BB088 /* OMSDK_Oguryco.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 459A7732239642D9009BB088 /* OMSDK_Oguryco.framework */; };
 		459A7736239642DA009BB088 /* OguryAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 459A7733239642D9009BB088 /* OguryAds.framework */; };
 		459A7737239642DA009BB088 /* OguryConsentManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 459A7734239642D9009BB088 /* OguryConsentManager.framework */; };
+		45B76C6423AB4D7F000471D9 /* TraminiSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45B76C6323AB4D7F000471D9 /* TraminiSDK.framework */; };
 		8DB704F8236D883A007A889D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB704F7236D883A007A889D /* AppDelegate.m */; };
 		8DB704FB236D883A007A889D /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB704FA236D883A007A889D /* SceneDelegate.m */; };
 		8DB704FE236D883A007A889D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB704FD236D883A007A889D /* ViewController.m */; };
@@ -277,6 +278,7 @@
 		459A7732239642D9009BB088 /* OMSDK_Oguryco.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OMSDK_Oguryco.framework; sourceTree = "<group>"; };
 		459A7733239642D9009BB088 /* OguryAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OguryAds.framework; sourceTree = "<group>"; };
 		459A7734239642D9009BB088 /* OguryConsentManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OguryConsentManager.framework; sourceTree = "<group>"; };
+		45B76C6323AB4D7F000471D9 /* TraminiSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TraminiSDK.framework; path = SDK/TraminiSDK.framework; sourceTree = "<group>"; };
 		8DB704F3236D883A007A889D /* AnyThinkSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnyThinkSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DB704F6236D883A007A889D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8DB704F7236D883A007A889D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -739,6 +741,7 @@
 				8DB70A3C236D8C89007A889D /* AnyThinkHeaderBidding.framework in Frameworks */,
 				8DB709D7236D8C89007A889D /* AnyThinkSplash.framework in Frameworks */,
 				8DB707DF236D8A5E007A889D /* libsqlite3.tbd in Frameworks */,
+				45B76C6423AB4D7F000471D9 /* TraminiSDK.framework in Frameworks */,
 				459A7735239642DA009BB088 /* OMSDK_Oguryco.framework in Frameworks */,
 				8DB707DD236D8A59007A889D /* libz.tbd in Frameworks */,
 				8DB709C5236D8C89007A889D /* AnyThinkInmobiNativeAdapter.framework in Frameworks */,
@@ -913,6 +916,7 @@
 		8DB705C7236D898F007A889D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				45B76C6323AB4D7F000471D9 /* TraminiSDK.framework */,
 				459A7731239642D9009BB088 /* OguryOED_1.0.3 */,
 				459A77292396416D009BB088 /* AnyThinkOguryInterstitialAdapter.framework */,
 				459A772A2396416D009BB088 /* AnyThinkOguryRewardedVideoAdapter.framework */,

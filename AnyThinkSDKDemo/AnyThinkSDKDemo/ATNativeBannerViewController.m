@@ -158,35 +158,6 @@ static NSString *const kMaioPlacementID = @"b5cb96d44c0c5f";
     NSLog(@"ATNativeBannerViewController::didFailToLoadNativeBannerAdWithPlacementID:%@ error:%@", placementID, error);
 }
 
--(void) didShowNativeBannerAdInView:(ATNativeBannerView*)bannerView placementID:(NSString*)placementID {
-    NSLog(@"ATNativeBannerViewController::didShowNativeBannerAdInView:%@ placementID:%@", bannerView, placementID);
-}
-
--(void) didClickNativeBannerAdInView:(ATNativeBannerView*)bannerView placementID:(NSString*)placementID {
-    NSLog(@"ATNativeBannerViewController::didClickNativeBannerAdInView:%@ placementID:%@", bannerView, placementID);
-}
-
--(void) didClickCloseButtonInNativeBannerAdView:(ATNativeBannerView*)bannerView placementID:(NSString*)placementID {
-    NSLog(@"ATNativeBannerViewController::didClickCloseButtonInNativeBannerAdView:%@ placementID:%@", bannerView, placementID);
-}
-
--(void) didAutorefreshNativeBannerAdInView:(ATNativeBannerView*)bannerView placementID:(NSString*)placementID {
-    NSLog(@"ATNativeBannerViewController::didAutorefreshNativeBannerAdInView:%@ placementID:%@", bannerView, placementID);
-}
-
--(void) didFailToAutorefreshNativeBannerAdInView:(ATNativeBannerView*)bannerView placementID:(NSString*)placementID error:(NSError*)error {
-    NSLog(@"ATNativeBannerViewController::didFailToAutorefreshNativeBannerAdInView:%@ placementID:%@ error:%@", bannerView, placementID, error);
-}
-#pragma mark - native banner delegate with networkID and adsouceID
--(void) didFinishLoadingNativeBannerAdWithPlacementID:(NSString *)placementID extra:(NSDictionary *)extra{
-    NSLog(@"ATNativeBannerViewController::didFinishLoadingNativeBannerAdWithPlacementID:%@", placementID);
-    if ([self.view viewWithTag:3333] == nil) { [self showAd]; }
-}
-
--(void) didFailToLoadNativeBannerAdWithPlacementID:(NSString*)placementID extra:(NSDictionary *)extra error:(NSError*)error {
-    NSLog(@"ATNativeBannerViewController::didFailToLoadNativeBannerAdWithPlacementID:%@ error:%@", placementID, error);
-}
-
 -(void) didShowNativeBannerAdInView:(ATNativeBannerView*)bannerView placementID:(NSString*)placementID extra:(NSDictionary *)extra{
     NSLog(@"ATNativeBannerViewController::didShowNativeBannerAdInView:%@ placementID:%@ with extra: %@",bannerView, placementID,extra);
 }

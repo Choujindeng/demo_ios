@@ -82,7 +82,7 @@ AnyThinkSDK支持原生广告(Native),激励视频广告(rewardVideo)，banner�
 | UnityAds |UnityAds.framework| v3.4.0 |https://github.com/Unity-Technologies/unity-ads-ios/releases/tag/3.0.3||||
 | Vungle |VungleSDK.framework|v6.4.5|||||
 | Adcolony |AdColony.framework|v4.1.0.0|https://github.com/AdColony||||
-|TouTiao|BUAdSDK.framework<br>BUAdSDK.bundle|v2.4.6.7|http://ad.toutiao.com/union/media/union/download|||
+|TouTiao|BUAdSDK.framework<br>BUAdSDK.bundle|v2.5.1.5|http://ad.toutiao.com/union/media/union/download|||
 | Oneway |Oneway|v2.1.0|||||
 | Appnext |AppnextNativeAdsSDK<br>AppnextIOSSDK| v1.9.3 |https://developers.appnext.com/docs/ios-sdk-installation||||
 | Baidu |BaiduMobAdSDK.framework <br> baidumobadsdk.bundle|v4.6.7|https://mssp.baidu.com/bqt/appco.html#/union/download/sdk||||

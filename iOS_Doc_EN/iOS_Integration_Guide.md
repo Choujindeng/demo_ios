@@ -974,16 +974,10 @@ Since Ogury does not provide any other way of setting GDPR consent than via its 
  }];
 </code></pre>
 
-### 11.3 Special Configuration When Using Ogury
-
-Since Ogury does not provide any other way of setting GDPR consent than via its **ConsentManager** class' askWithViewController:assetKey:andCompletionBlock: API, which presents a modal view controller, if you need to integrate Ogury through **AnyThinkSDK**, use the following code segment to configure GDPR settings(to avoid duplicate modal view controller presentations, which is rather annoying): 
-
-<pre><code>[[ConsentManager sharedManager] askWithViewController:myViewController assetKey:@"your Ogury assetKey here" andCompletionBlock:^(NSError * error, ConsentManagerAnswer answer) {
-	if(answer == 1){
-		 [[ATAPI sharedInstance] setDataConsentSet:ATDataConsentSetPersonalized consentString:nil];
-	} else {
-	    [[ATAPI sharedInstance] setDataConsentSet:ATDataConsentSetNonpersonalized consentString:nil];
-	}
- }];
+### 11.4 Configuration With Channel
+<pre><code>
+	[[ATAPI sharedInstance] setChannel:channelString]; //设置渠道信息，用于TopOn后台区分广告数据，只允许设置字符的规则：[A-Za-z0-9_]
+    [[ATAPI sharedInstance] setSubchannel: subChannelString]; //设置子渠道信息，只允许设置字符的规则：[A-Za-z0-9_]
 </code></pre>
+
 

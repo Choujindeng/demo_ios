@@ -58,6 +58,7 @@ The core module contains the following frameworks and resource bundle files, jus
 |AnyThinkSDK.framework|Base framework|
 |AnyThinkSDK.bundle|Resource bundle|
 |AnyThinkHeaderBiding.framework|Header bidding module|
+|TraminiSDK.framework|Error messages collecting module|
 
 **NOTE:** Since **AnyThinkSDK** does not support cocoapods, framewroks whose name start with the prefex AnyThink have to be manually downloaded and imported into your project whereas third party SDK can be integrated using cocoapods if supported.
 

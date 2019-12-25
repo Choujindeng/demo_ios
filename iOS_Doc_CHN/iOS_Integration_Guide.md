@@ -49,9 +49,10 @@ AnyThinkSDK支持原生广告(Native),激励视频广告(rewardVideo)，banner�
 
 |File|Note|
 |---|---|
-|AnyThinkSDK.framework|Base framework|
-|AnyThinkSDK.bundle|Resource bundle|
-|AnyThinkHeaderBiding.framework|Header bidding module|
+|AnyThinkSDK.framework|基础包|
+|AnyThinkSDK.bundle|资源包|
+|AnyThinkHeaderBiding.framework|头部竞价(Header Biding)模块|
+|TraminiSDK.framework|错误日志收集|
 
 **注:** 由于**AnyThinkSDK**不支持cocoapod，以AnyThink开头的framewrok必须手动下载并导入到您的项目中，而第三方SDK可以使用cocoapod集成。
 

@@ -38,6 +38,39 @@ AnyThinkSDK支持原生广告(Native),激励视频广告(rewardVideo)，banner�
 |AnyThink's Format Module|AnyThinkInterstitial.framework</br> AnyThinkRewardedVideo.framework|
 |AnyThink's Adapters|AnyThinkAdmobRewardedVideoAdapter.framework</br>AnyThinkAdmobInterstitialAdapter.framework</br>AnyThinkFacebookRewardedVideoAdapter.framework|
 |Third Party SDK|GoogleMobileAds.framework</br>PersonalizedAdConsent.framework</br>FBAudienceNetwork.framework</br>FBAudienceNetworkBiddingKit.framework</br>FBSDKCoreKit.framework|
+### 1.3TopOn SDK 集成检查列表
+
+#### 1.3.1 SDK核心依赖包
+ 
+```
+AnyThinkSDK.framework
+AnyThinkSDK.bundle
+```
+
+#### 1.3.2 广告形式依赖包
+
+```
+原生广告：AnyThinkNative.framework 
+横幅广告：AnyThinkBanner.framework 
+插屏广告：AnyThinkInterstitial.framework 
+激励视频：AnyThinkRewardedVideo.framework 
+开屏广告：AnyThinkSplash.framework 
+```
+
+#### 1.3.3 头部竞价功能依赖包
+（使用头部竞价功能时必须导入）
+
+```
+AnyThinkHeaderBidding.framework 
+```
+
+#### 1.3.4 广告平台的依赖
+
+```
+(network).framework
+(network).bundle
+```
+(比如：聚合Facebook和穿山甲两家广告平台，则还需要Facebook的FBSDKCoreKit.framework/FBAudienceNetwork.framework/FBAudienceNetworkBiddingKit.framework 和穿山甲的BUAdSDK.bundle/BUAdSDK.framework）
 
 ## <h2 id='1'>2 配置</h2>
 ### 2.1 基础配置
@@ -69,19 +102,19 @@ AnyThinkSDK支持原生广告(Native),激励视频广告(rewardVideo)，banner�
 
 |第三方平台|需要导入的包|**TopOn**支持的版本|下载链接|参考网址|备注|    
 |---|---|---|---|---|---|   
-|Facebook|FBAudienceNetwork.framework<br> FBAudienceNetworkBiddingKit.framework <br>FBSDKCoreKit.framework<br>|v5.4.0|https://developers.facebook.com/docs/audience-network/download#ios|https://developers.facebook.com/docs/audience-network/ios|测试机需安装并登录Facebook客户端才能请求到广告。|
+|Facebook|FBAudienceNetwork.framework<br> FBAudienceNetworkBiddingKit.framework <br>FBSDKCoreKit.framework<br>|v5.5.1|https://developers.facebook.com/docs/audience-network/download#ios|https://developers.facebook.com/docs/audience-network/ios|测试机需安装并登录Facebook客户端才能请求到广告。|
 |Admob|GoogleMobileAds.framework<br>PersonalizedAdConsent.framework|v7.52.0|https://support.google.com/admob/answer/2993059?hl=en|https://developers.google.com/admob/ios/quick-start|Admob requires that **app id be configured in the Info.plist of your project**; for more information please refer to <a href="https://developers.google.com/admob/ios/quick-start#update\_your\_infoplist">Admob's website</a>.|
 | Inmobi |InMobiSDK.framework|v7.3.1|https://support.inmobi.com/monetize/ios-guidelines/||||
 | Flurry |libFlurryAds\_1.0.0.a<br>libFlurry\_9.0.0.a|231\_9.0.0|https://dev.flurry.com/admin/applications||||
 | Applovin |AppLovinSDK.framework<br>AppLovinSDKResources.bundle|v6.10.0|https://dash.applovin.com/docs/integration#iosIntegration||||
-| Mintegral |MTGSDK.framework<br> MTGSDKBidding.framework<br>MTGSDKReward.framework <br> MTGSDKInterstitialVideo.framework <br> MTGSDKInterstitial.framework|v5.8.0|http://cdn-adn.rayjump.com/cdn-adn/v2/markdown\_v2/index.html?file=sdk-m\_sdk-ios&lang=en||||
+| Mintegral |MTGSDK.framework<br> MTGSDKBidding.framework<br>MTGSDKReward.framework <br> MTGSDKInterstitialVideo.framework <br> MTGSDKInterstitial.framework|v5.8.7|http://cdn-adn.rayjump.com/cdn-adn/v2/markdown\_v2/index.html?file=sdk-m\_sdk-ios&lang=en||||
 | Mopub |MobPowerNative.framework <br> MobPowerSDK.framework| v5.10.0 |https://github.com/mopub||||
-| GDT |libGDTMobSDK.a|v4.10.13|https://e.qq.com/dev/index.html||||
+| GDT |libGDTMobSDK.a|v4.11.2|https://e.qq.com/dev/index.html||||
 | Chartboost |Chartboost.framework| v8.0.3 | https://dashboard.chartboost.com/tools/sdk	||||
 | Tapjoy |Tapjoy.framework <br> TapjoyResources.bundle| v12.3.4 |||||
 | Ironsource |IronSource.framework|v6.10.0|https://developers.ironsrc.com/sdk-repository/||||
 | UnityAds |UnityAds.framework| v3.4.0 |https://github.com/Unity-Technologies/unity-ads-ios/releases/tag/3.0.3||||
-| Vungle |VungleSDK.framework|v6.4.5|||||
+| Vungle |VungleSDK.framework|v6.4.6|||||
 | Adcolony |AdColony.framework|v4.1.0.0|https://github.com/AdColony||||
 |TouTiao|BUAdSDK.framework<br>BUAdSDK.bundle|v2.5.1.5|http://ad.toutiao.com/union/media/union/download|||
 | Oneway |Oneway|v2.1.0|||||
@@ -90,7 +123,7 @@ AnyThinkSDK支持原生广告(Native),激励视频广告(rewardVideo)，banner�
 |Nend|NendAd.framework <br> NendAdResource.bundle|v5.3.1|https://github.com/fan-ADN||||
 | Maio |Maio.framework|v1.5.0|||https://github.com/imobile-maio||
 | Yeahmobi |CTSDK.framework|v3.2.0|||||
-| sigmob |WindSDK.framework<br>sigmob.bundle|v2.14.0|||||
+| sigmob |WindSDK.framework<br>sigmob.bundle|v2.15.2|||||
 |KS|KSAdSDK.framework <br> KSAdSDK.bundle|v2.5.2.12|||需要额外导入第三方依赖：<br> AFNetworking/Godzippa/MJExtension/SDWebImage||
 |Ogury|OMSDK_Oguryco.framework<br>OguryAds.framework<br>OguryConsentManager.framework|1.0.3|||由于该平台的GDPR设置必须通过其平台的弹窗来进行设置，如若在欧盟地区不用其平台的弹窗设置GDPR等级，则ecpm会相对较低，所以这里建议开发者自己调用Ogury的api弹窗供用户设置GDPR等级，在api的回调中把topon的GDPR等级一并设置(即调用Ogury的GDPR弹窗，然后在用户选择等级设置之后的回调里，将Topon的GDPR设置为其回调中的等级)。||
 
@@ -946,9 +979,108 @@ Mintegral和Facebook支持header bidding的应用版本如下：
 
 ### 11.4 关于渠道号的配置
 
-<pre><code>
-	[[ATAPI sharedInstance] setChannel:channelString]; //设置渠道信息，用于TopOn后台区分广告数据，只允许设置字符的规则：[A-Za-z0-9_]
-    [[ATAPI sharedInstance] setSubchannel: subChannelString]; //设置子渠道信息，只允许设置字符的规则：[A-Za-z0-9_]
+<pre><code>//设置渠道信息，用于TopOn后台区分广告数据，只允许设置字符的规则：[A-Za-z0-9_]
+[[ATAPI sharedInstance] setChannel:channelString]; 
+//设置子渠道信息，只允许设置字符的规则：[A-Za-z0-9_]
+[[ATAPI sharedInstance] setSubchannel: subChannelString]; 
 </code></pre>
 
+## 12 API
 
+```
+//初始化SDK 
+//	appid：后台对应的appid
+//	appkey：后台对应的appkey
+//	error：nil
+-(BOOL) startWithAppID:(NSString*)appID appKey:(NSString*)appKey error:(NSError**)error;
+```
+```
+//日志开关
+// logEnaleed:是否开启SDK日志
++(void) setLogEnabled:(BOOL)logEnabled;
+```
+```
+//设置渠道信息，用于TopOn后台区分广告数据，只允许设置字符的规则：[A-Za-z0-9_]
+[[ATAPI sharedInstance] setChannel:channelString]; 
+//设置子渠道信息，只允许设置字符的规则：[A-Za-z0-9_]
+[[ATAPI sharedInstance] setSubchannel: subChannelString]; 
+```
+```
+//设置GDPR
+//  dataConsentSet:
+//			 ATDataConsentSetUnknown = 0,
+//   		 ATDataConsentSetPersonalized = 1,
+//   		 ATDataConsentSetNonpersonalized = 2
+//  consentString:nil
+-(void) setDataConsentSet:(ATDataConsentSet)dataConsentSet consentString:(NSDictionary<NSString*, NSString*>*)consentString;
+```
+```
+//判断用户当前是否在欧盟国家
+-(BOOL)inDataProtectionArea;
+```
+```
+//GDPR用户设置弹窗
+//	 viewController：viewController
+//	 dismissCallback：控制器消失后的block
+-(void) presentDataConsentDialogInViewController:(UIViewController*)viewController dismissalCallback:(void(^)(void))dismissCallback;
+```
+```
+//请求广告
+//	 placementID：请求的广告位id
+//	 extra：需要的额外参数
+// 	 delegate：回调接收者
+-(void) loadADWithPlacementID:(NSString*)placementID extra:(NSDictionary*)extra delegate:(id<ATAdLoadingDelegate>)delegate;
+```
+```
+//Splash
+//	 placementId：
+//	 extra：
+//	 customData：
+//	 delegate：
+//	 window：
+//	 containerView：
+-(void) loadADWithPlacementID:(NSString*)placementID extra:(NSDictionary*)extra 
+customData:(NSDictionary*)customData delegate:(id<ATSplashDelegate>)delegate 
+window:(UIWindow*)window containerView:(UIView*)containerView;
+```
+```
+//Interstitial
+//	 placementID：
+-(BOOL) interstitialReadyForPlacementID:(NSString*)placementID;
+//	 placementID：
+//	 viewController：
+//	 delegate：
+-(void) showInterstitialWithPlacementID:(NSString*)placementID 
+inViewController:(UIViewController*)viewController
+delegate:(id<ATInterstitialDelegate>)delegate;
+
+```
+```
+//RewardedVideo
+//	 placementID：
+-(BOOL) rewardedVideoReadyForPlacementID:(NSString*)placementID;
+//	 placementID：
+//	 viewController：
+//	 delegate：
+-(void) showRewardedVideoWithPlacementID:(NSString*)placementID 
+inViewController:(UIViewController*)viewController 
+delegate:(id<ATRewardedVideoDelegate>)delegate;
+
+```
+```
+//Banner
+//	 placementID：
+-(BOOL) bannerAdReadyForPlacementID:(NSString*)placementID;
+//	 placementID：
+-(nullable ATBannerView*)retrieveBannerViewForPlacementID:(NSString*)placementID;
+```
+```
+//Native
+//	 placementID：
+-(BOOL) nativeAdReadyForPlacementID:(NSString*)placementID;
+//	 placementID：
+//	 configuration：
+-(__kindof UIView*) retriveAdViewWithPlacementID:(NSString*)placementID 
+configuration:(ATNativeADConfiguration*)configuration;
+
+```

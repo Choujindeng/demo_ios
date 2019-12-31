@@ -42,6 +42,38 @@ Suppose you need to integrate Admob's rewarded video & interstitial, and Faceboo
 |AnyThink's Adapters|AnyThinkAdmobRewardedVideoAdapter.framework</br>AnyThinkAdmobInterstitialAdapter.framework</br>AnyThinkFacebookRewardedVideoAdapter.framework|
 |Third Party SDK|GoogleMobileAds.framework</br>PersonalizedAdConsent.framework</br>FBAudienceNetwork.framework</br>FBAudienceNetworkBiddingKit.framework</br>FBSDKCoreKit.framework|
   
+### 1.3 TopOn SDK Integration Self Check
+
+#### 1.3.1 SDK Core framework
+ 
+```
+AnyThinkSDK.framework
+AnyThinkSDK.bundle
+```
+
+#### 1.3.2 Format Relay framework
+
+```
+Native：AnyThinkNative.framework 
+Banner：AnyThinkBanner.framework 
+Interstitial：AnyThinkInterstitial.framework 
+RewardedVideo：AnyThinkRewardedVideo.framework 
+Splash：AnyThinkSplash.framework 
+```
+
+#### 1.3.3 HeaderBidding Relay framework
+(use headerBidding have to integration)
+```
+AnyThinkHeaderBidding.framework 
+```
+
+#### 1.3.4 ThirdNetwork Relay framework
+
+```
+(network).framework
+(network).bundle
+```
+(Example：Use Facebook and TT ad，you should import Facebook's FBSDKCoreKit.framework/FBAudienceNetwork.framework/FBAudienceNetworkBiddingKit.framework and TT's BUAdSDK.bundle/BUAdSDK.framework）  
 <h2 id='1'>2 Get Started</h2>
 
 ### 2.1 Prerequisites
@@ -74,19 +106,19 @@ The table below gives a brief summary of third party SDKs. Only import those of 
 
 |Network|SDK Package Contents|Current Version Supported by **TopOn**|Download Link|Reference Website|Note|    
 |---|---|---|---|---|---|   
-|Facebook|FBAudienceNetwork.framework<br> FBAudienceNetworkBiddingKit.framework <br>FBSDKCoreKit.framework<br>|v5.4.0|https://developers.facebook.com/docs/audience-network/download#ios|https://developers.facebook.com/docs/audience-network/ios|测试机需安装并登录Facebook客户端才能请求到广告。|
+|Facebook|FBAudienceNetwork.framework<br> FBAudienceNetworkBiddingKit.framework <br>FBSDKCoreKit.framework<br>|v5.5.1|https://developers.facebook.com/docs/audience-network/download#ios|https://developers.facebook.com/docs/audience-network/ios|测试机需安装并登录Facebook客户端才能请求到广告。|
 |Admob|GoogleMobileAds.framework<br>PersonalizedAdConsent.framework|v7.52.0|https://support.google.com/admob/answer/2993059?hl=en|https://developers.google.com/admob/ios/quick-start|Admob requires that **app id be configured in the Info.plist of your project**; for more information please refer to <a href="https://developers.google.com/admob/ios/quick-start#update\_your\_infoplist">Admob's website</a>.|
 | Inmobi |InMobiSDK.framework|v7.3.1|https://support.inmobi.com/monetize/ios-guidelines/||||
 | Flurry |libFlurryAds\_1.0.0.a<br>libFlurry\_9.0.0.a|231\_9.0.0|https://dev.flurry.com/admin/applications||||
 | Applovin |AppLovinSDK.framework<br>AppLovinSDKResources.bundle|v6.10.0|https://dash.applovin.com/docs/integration#iosIntegration||||
-| Mintegral |MTGSDK.framework<br> MTGSDKBidding.framework<br>MTGSDKReward.framework <br> MTGSDKInterstitialVideo.framework <br> MTGSDKInterstitial.framework|v5.8.0|http://cdn-adn.rayjump.com/cdn-adn/v2/markdown\_v2/index.html?file=sdk-m\_sdk-ios&lang=en||||
+| Mintegral |MTGSDK.framework<br> MTGSDKBidding.framework<br>MTGSDKReward.framework <br> MTGSDKInterstitialVideo.framework <br> MTGSDKInterstitial.framework|v5.8.7|http://cdn-adn.rayjump.com/cdn-adn/v2/markdown\_v2/index.html?file=sdk-m\_sdk-ios&lang=en||||
 | Mopub |MobPowerNative.framework <br> MobPowerSDK.framework| v5.10.0 |https://github.com/mopub||||
-| GDT |libGDTMobSDK.a|v4.10.13|https://e.qq.com/dev/index.html||||
+| GDT |libGDTMobSDK.a|v4.11.2|https://e.qq.com/dev/index.html||||
 | Chartboost |Chartboost.framework| v8.0.3 | https://dashboard.chartboost.com/tools/sdk	||||
 | Tapjoy |Tapjoy.framework <br> TapjoyResources.bundle| v12.3.4 |||||
 | Ironsource |IronSource.framework|v6.10.0|https://developers.ironsrc.com/sdk-repository/||||
 | UnityAds |UnityAds.framework| v3.4.0 |https://github.com/Unity-Technologies/unity-ads-ios/releases/tag/3.0.3||||
-| Vungle |VungleSDK.framework|v6.4.5|||||
+| Vungle |VungleSDK.framework|v6.4.6|||||
 | Adcolony |AdColony.framework|v4.1.0.0|https://github.com/AdColony||||
 |TouTiao|BUAdSDK.framework<br>BUAdSDK.bundle|v2.4.6.7|http://ad.toutiao.com/union/media/union/download|||
 | Oneway |Oneway|v2.1.0|||||
@@ -95,7 +127,7 @@ The table below gives a brief summary of third party SDKs. Only import those of 
 |Nend|NendAd.framework <br> NendAdResource.bundle|v5.3.1|https://github.com/fan-ADN||||
 | Maio |Maio.framework|v1.5.0|https://github.com/imobile-maio||||
 | Yeahmobi |CTSDK.framework|v3.2.0|||||  
-| sigmob |WindSDK.framework<br>sigmob.bundle|v2.14.0|||||
+| sigmob |WindSDK.framework<br>sigmob.bundle|v2.15.2|||||
 |KS|KSAdSDK.framework <br> KSAdSDK.bundle|v2.5.2.12|Additional third-party libraries that need to be introduced：<br>AFNetworking/Godzippa/MJExtension/SDWebImage||||
 |Ogury|OMSDK_Oguryco.framework<br>OguryAds.framework<br>OguryConsentManager.framework|1.0.3|||No way of setting GDPR consent without presenting a view controller.||
 

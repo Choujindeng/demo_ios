@@ -184,6 +184,8 @@ static NSString *const kOguryPlacementID = @"b5dde2379dc6ce";
     NSLog(@"ATRewardedVideoVideoViewController::didFinishLoadingADWithPlacementID");
     _failureTipsLabel.hidden = YES;
     [_loadingView removeFromSuperview];
+    [self showAD];
+
 //    if (!_reload) [self showAD];
 //    _reload = NO;
 }

@@ -177,6 +177,7 @@ static NSString *const kOguryPlacementID = @"b5dde238f2d2ce";
 #pragma mark - delegate method(s)
 -(void) didFinishLoadingADWithPlacementID:(NSString *)placementID {
     NSLog(@"ATInterstitialViewController::didFinishLoadingADWithPlacementID:%@", placementID);
+    [self showAD];
     _showAdButton.enabled = YES;
 }
 

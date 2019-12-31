@@ -85,7 +85,9 @@ static NSString *const kCellIdentifier = @"cell";
 
 
 -(void)policyButtonTapped {
-    [[ATAPI sharedInstance] presentDataConsentDialogInViewController:self];
+    [[ATAPI sharedInstance] presentDataConsentDialogInViewController:self dismissalCallback:^{
+        
+    }];
 }
 
 -(NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {
@@ -157,7 +159,7 @@ static NSString *const kCellIdentifier = @"cell";
 #pragma mark - native splash delegate(s)
 #define PORTRAIT 1
 -(void) finishLoadingNativeSplashAdForPlacementID:(NSString*)placementID {
-    NSLog(@"ViewController::finishLoadingNativeSplashAdForPlacementID:%@", placementID);
+    NSLog(@"AppDelegate::finishLoadingNativeSplashAdForPlacementID:%@", placementID);
 #ifdef PORTRAIT
     CGFloat width = CGRectGetWidth([UIScreen mainScreen].bounds);
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(.0f, .0f, width, 79.0f)];
@@ -177,52 +179,31 @@ static NSString *const kCellIdentifier = @"cell";
 }
 
 -(void) failedToLoadNativeSplashAdForPlacementID:(NSString*)placementID error:(NSError*)error {
-    NSLog(@"ViewController::failedToLoadNativeSplashAdForPlacementID:%@ error:%@", placementID, error);
-}
-
--(void) didShowNativeSplashAdForPlacementID:(NSString*)placementID {
-    NSLog(@"ViewController::didShowNativeSplashAdForPlacementID:%@", placementID);
-}
-
--(void) didClickNaitveSplashAdForPlacementID:(NSString*)placementID {
-    NSLog(@"ViewController::didClickNaitveSplashAdForPlacementID:%@", placementID);
-}
-
--(void) didCloseNativeSplashAdForPlacementID:(NSString*)placementID {
-    NSLog(@"ViewController::didCloseNativeSplashAdForPlacementID:%@", placementID);
-}
-#pragma mark - AT Splash Delegate method(s)
--(void) didFinishLoadingADWithPlacementID:(NSString *)placementID {
-    NSLog(@"ViewController::didFinishLoadingADWithPlacementID:%@", placementID);
-}
-
--(void) didFailToLoadADWithPlacementID:(NSString*)placementID error:(NSError*)error {
-    NSLog(@"ViewController::didFailToLoadADWithPlacementID:%@ error:%@", placementID, error);
-}
-
--(void)splashDidShowForPlacementID:(NSString*)placementID {
-    NSLog(@"ViewController::splashDidShowForPlacementID:%@", placementID);
-}
-
--(void)splashDidClickForPlacementID:(NSString*)placementID {
-    NSLog(@"ViewController::splashDidClickForPlacementID:%@", placementID);
-}
-
--(void)splashDidCloseForPlacementID:(NSString*)placementID {
-    NSLog(@"ViewController::splashDidCloseForPlacementID:%@", placementID);
+    NSLog(@"AppDelegate::failedToLoadNativeSplashAdForPlacementID:%@ error:%@", placementID, error);
 }
 
 #pragma mark - splash delegate with networkID and adsourceID
 -(void)didShowNativeSplashAdForPlacementID:(NSString*)placementID extra:(NSDictionary *)extra{
-    NSLog(@"ViewController::splashDidShowForPlacementID:%@ with extra: %@", placementID,extra);
+    NSLog(@"AppDelegate::splashDidShowForPlacementID:%@ with extra: %@", placementID,extra);
 }
 
 -(void)didClickNaitveSplashAdForPlacementID:(NSString*)placementID extra:(NSDictionary *)extra{
-    NSLog(@"ViewController::splashDidClickForPlacementID:%@ with extra: %@", placementID,extra);
+    NSLog(@"AppDelegate::splashDidClickForPlacementID:%@ with extra: %@", placementID,extra);
 }
 
 -(void)didCloseNativeSplashAdForPlacementID:(NSString*)placementID extra:(NSDictionary *)extra{
-    NSLog(@"ViewController::splashDidCloseForPlacementID:%@ with extra: %@", placementID,extra);
+    NSLog(@"AppDelegate::splashDidCloseForPlacementID:%@ with extra: %@", placementID,extra);
+}
+
+
+
+#pragma mark - AT Splash Delegate method(s)
+-(void) didFinishLoadingADWithPlacementID:(NSString *)placementID {
+    NSLog(@"AppDelegate::didFinishLoadingADWithPlacementID:%@", placementID);
+}
+
+-(void) didFailToLoadADWithPlacementID:(NSString*)placementID error:(NSError*)error {
+    NSLog(@"AppDelegate::didFailToLoadADWithPlacementID:%@ error:%@", placementID, error);
 }
 -(void)splashDidShowForPlacementID:(NSString*)placementID extra:(NSDictionary *)extra {
     NSLog(@"AppDelegate::splashDidShowForPlacementID:%@ with extra: %@", placementID,extra);

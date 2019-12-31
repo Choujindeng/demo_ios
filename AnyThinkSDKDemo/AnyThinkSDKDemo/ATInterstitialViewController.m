@@ -184,34 +184,6 @@ static NSString *const kOguryPlacementID = @"b5dde238f2d2ce";
     NSLog(@"ATInterstitialViewController::didFailToLoadADWithPlacementID:%@ error:%@", placementID, error);
 }
 
--(void) interstitialDidShowForPlacementID:(NSString *)placementID {
-    NSLog(@"ATInterstitialViewController::interstitialDidShowForPlacementID:%@", placementID);
-}
-
--(void) interstitialFailedToShowForPlacementID:(NSString*)placementID error:(NSError*)error {
-    NSLog(@"ATInterstitialViewController::interstitialFailedToShowForPlacementID:%@ error:%@", placementID, error);
-}
-
--(void) interstitialDidStartPlayingVideoForPlacementID:(NSString*)placementID {
-    NSLog(@"ATInterstitialViewController::interstitialDidStartPlayingVideoForPlacementID:%@", placementID);
-}
-
--(void) interstitialDidEndPlayingVideoForPlacementID:(NSString*)placementID {
-    NSLog(@"ATInterstitialViewController::interstitialDidEndPlayingVideoForPlacementID:%@", placementID);
-}
-
--(void) interstitialDidFailToPlayForPlacementID:(NSString*)placementID error:(NSError*)error {
-    NSLog(@"ATInterstitialViewController::interstitialDidFailToPlayForPlacementID:%@", placementID);
-}
-
--(void) interstitialDidCloseForPlacementID:(NSString*)placementID {
-    NSLog(@"ATInterstitialViewController::interstitialDidCloseForPlacementID:%@", placementID);
-}
-
--(void) interstitialDidClickForPlacementID:(NSString*)placementID {
-    NSLog(@"ATInterstitialViewController::interstitialDidClickForPlacementID:%@", placementID);
-}
-
 -(void) interstitialDidShowForPlacementID:(NSString *)placementID extra:(NSDictionary *)extra {
     NSLog(@"ATInterstitialViewController::interstitialDidShowForPlacementID:%@ extra:%@", placementID, extra);
 }

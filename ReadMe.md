@@ -1,7 +1,7 @@
 ## [IMPORTANT] DO NOT expose any of the frameworks to Windows operating system; Windows modifies frameworks, making them incomplete and resulting in compile errors.
 ## 【重要】请勿将iOS需要用到的SDK（包括.a、.framework及.embededframework格式的套件）下载或传送至Windows操作系统上，因为Windows文件系统会修改这些SDK，导致它们在Xcode中无法编译。
-# AnythinkSDK_iOS_SDK_5.4.0
-## Third-party SDK version for AnyThink_ios_sdk_5.4.0
+# AnythinkSDK_iOS_SDK_5.4.1
+## Third-party SDK version for AnyThink_ios_sdk_5.4.1
 
 [Integrate Guide for AnyThinkSDK for iOS(English)](iOS_Doc_EN/iOS_Integration_Guide.md)
 
@@ -29,14 +29,14 @@ http://sdk-release.toponad.com/Unity/5.3.0/Unity_Androidv5.3.0_iOSv5.3.0.unitypa
 | Inmobi | 7.3.1 ||
 | Flurry | 9.0.0 ||
 | Applovin | 6.10.0 ||
-| Mintegral | 5.8.4 ||
+| Mintegral | 5.8.7 ||
 | Mopub | 5.10.0 ||
-| GDT | 4.11.1 |广点通/Tencent/腾讯广告|
+| GDT | 4.11.2 |广点通/Tencent/腾讯广告|
 | Yeahmobi | 3.2.0 ||
 | Appnext | 1.9.3 ||
 | Chartboost | 8.0.3 ||
 | Ironsource | 6.10.0 ||
-| Vungle | 6.4.5 ||
+| Vungle | 6.4.6 ||
 | Adcolony | 4.1.2.0 ||
 | UnityAds | 3.4.0 ||
 | TT | 2.5.1.5 |头条/穿山甲/TT|
@@ -47,7 +47,7 @@ http://sdk-release.toponad.com/Unity/5.3.0/Unity_Androidv5.3.0_iOSv5.3.0.unitypa
 | Nend | 5.3.1 ||
 | Maio | 1.5.0 ||
 | ks | 2.5.2.12 |需要额外导入第三方依赖：<br> AFNetworking/Godzippa/MJExtension/SDWebImage|
-| sigmob | 2.14.0 |sdk：WindSDK.framework <br>sigmob.bundle|
+| sigmob | 2.15.2 |sdk：WindSDK.framework <br>sigmob.bundle|
 | Ogury | 1.0.3 |OguryOED_1.0.3 包含以下sdk<br>OMSDK_Oguryco.framework<br>OguryAds.framework<br>OguryConsentManager.framework|
 
 

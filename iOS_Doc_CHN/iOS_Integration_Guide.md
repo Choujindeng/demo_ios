@@ -11,7 +11,7 @@
 9、[(原生Splash)Native Splash](#9)<br>
 10、[头部竞价(Header Bidding)](#10)<br>
 11、[通用数据保护条例GDPR](#11)<br>
-
+12、[API](#12)<br>
 
 ## <h2 id='2'>1 简介</h2>
 本文档介绍如何去集成iOS端的AnyThinkSDK（后面简称为SDK），包括获取开发者账号，获取AppID和AppKey并创建配置进行广告投放。
@@ -38,39 +38,6 @@ AnyThinkSDK支持原生广告(Native),激励视频广告(rewardVideo)，banner�
 |AnyThink's Format Module|AnyThinkInterstitial.framework</br> AnyThinkRewardedVideo.framework|
 |AnyThink's Adapters|AnyThinkAdmobRewardedVideoAdapter.framework</br>AnyThinkAdmobInterstitialAdapter.framework</br>AnyThinkFacebookRewardedVideoAdapter.framework|
 |Third Party SDK|GoogleMobileAds.framework</br>PersonalizedAdConsent.framework</br>FBAudienceNetwork.framework</br>FBAudienceNetworkBiddingKit.framework</br>FBSDKCoreKit.framework|
-### 1.3TopOn SDK 集成检查列表
-
-#### 1.3.1 SDK核心依赖包
- 
-```
-AnyThinkSDK.framework
-AnyThinkSDK.bundle
-```
-
-#### 1.3.2 广告形式依赖包
-
-```
-原生广告：AnyThinkNative.framework 
-横幅广告：AnyThinkBanner.framework 
-插屏广告：AnyThinkInterstitial.framework 
-激励视频：AnyThinkRewardedVideo.framework 
-开屏广告：AnyThinkSplash.framework 
-```
-
-#### 1.3.3 头部竞价功能依赖包
-（使用头部竞价功能时必须导入）
-
-```
-AnyThinkHeaderBidding.framework 
-```
-
-#### 1.3.4 广告平台的依赖
-
-```
-(network).framework
-(network).bundle
-```
-(比如：聚合Facebook和穿山甲两家广告平台，则还需要Facebook的FBSDKCoreKit.framework/FBAudienceNetwork.framework/FBAudienceNetworkBiddingKit.framework 和穿山甲的BUAdSDK.bundle/BUAdSDK.framework）
 
 ## <h2 id='1'>2 配置</h2>
 ### 2.1 基础配置
@@ -985,7 +952,7 @@ Mintegral和Facebook支持header bidding的应用版本如下：
 [[ATAPI sharedInstance] setSubchannel: subChannelString]; 
 </code></pre>
 
-## 12 API
+## 12 <h2 id='12'>12 API</h2>
 
 ```
 //初始化SDK 
@@ -1033,23 +1000,23 @@ Mintegral和Facebook支持header bidding的应用版本如下：
 ```
 ```
 //Splash
-//	 placementId：
-//	 extra：
-//	 customData：
-//	 delegate：
-//	 window：
-//	 containerView：
+//	 placementId：请求的广告位id
+//	 extra：需要的额外参数
+//	 customData：nil即可
+//	 delegate：回调接收者
+//	 window：当前的window
+//	 containerView：自定义的开屏label
 -(void) loadADWithPlacementID:(NSString*)placementID extra:(NSDictionary*)extra 
 customData:(NSDictionary*)customData delegate:(id<ATSplashDelegate>)delegate 
 window:(UIWindow*)window containerView:(UIView*)containerView;
 ```
 ```
 //Interstitial
-//	 placementID：
+//	 placementID：请求的广告位id
 -(BOOL) interstitialReadyForPlacementID:(NSString*)placementID;
-//	 placementID：
-//	 viewController：
-//	 delegate：
+//	 placementID：请求的广告位id
+//	 viewController：viewController
+//	 delegate：回调接收者
 -(void) showInterstitialWithPlacementID:(NSString*)placementID 
 inViewController:(UIViewController*)viewController
 delegate:(id<ATInterstitialDelegate>)delegate;
@@ -1057,11 +1024,11 @@ delegate:(id<ATInterstitialDelegate>)delegate;
 ```
 ```
 //RewardedVideo
-//	 placementID：
+//	 placementID：请求的广告位id
 -(BOOL) rewardedVideoReadyForPlacementID:(NSString*)placementID;
-//	 placementID：
-//	 viewController：
-//	 delegate：
+//	 placementID：请求的广告位id
+//	 viewController：viewController
+//	 delegate：回调接收者
 -(void) showRewardedVideoWithPlacementID:(NSString*)placementID 
 inViewController:(UIViewController*)viewController 
 delegate:(id<ATRewardedVideoDelegate>)delegate;
@@ -1069,17 +1036,17 @@ delegate:(id<ATRewardedVideoDelegate>)delegate;
 ```
 ```
 //Banner
-//	 placementID：
+//	 placementID：请求的广告位id
 -(BOOL) bannerAdReadyForPlacementID:(NSString*)placementID;
-//	 placementID：
+//	 placementID：请求的广告位id
 -(nullable ATBannerView*)retrieveBannerViewForPlacementID:(NSString*)placementID;
 ```
 ```
 //Native
-//	 placementID：
+//	 placementID：请求的广告位id
 -(BOOL) nativeAdReadyForPlacementID:(NSString*)placementID;
-//	 placementID：
-//	 configuration：
+//	 placementID：请求的广告位id
+//	 configuration：配置样式
 -(__kindof UIView*) retriveAdViewWithPlacementID:(NSString*)placementID 
 configuration:(ATNativeADConfiguration*)configuration;
 

@@ -28,7 +28,7 @@
 
 ## <h2 id='13'>13 FAQ</h2>
 ### 13.1 应用程序编译报错(App Not Compiles)
-如果您的项目没有编译，并且Xcode发出这样的一些错误信息： **"Undefined symbols for architecture..."** 或是 **"ld: symbol(s) not found for architecture..."**:
+如果您的项目编译出错，并且Xcode发出这样的一些错误信息： **"Undefined symbols for architecture..."** 或是 **"ld: symbol(s) not found for architecture..."**:
 ![](Undefined_Symbols_Errors.png)
 
 您的项目中缺少了一些modules，请使用Xcode中列出的错误信息找到缺失的modules，并将其添加到您的项目中就可以解决问题:

@@ -27,7 +27,7 @@
 | ATADLoadingErrorCodePlacementAdDeliverySwitchOff | 1015 |(广告位没有开启广告投放)Ad delivery not turned on for the placement|
 
 ## <h2 id='13'>13 FAQ</h2>
-### 13.1 应用程序没有编译(App Not Compiles)
+### 13.1 应用程序编译报错(App Not Compiles)
 如果您的项目没有编译，并且Xcode发出这样的一些错误信息： **"Undefined symbols for architecture..."** 或是 **"ld: symbol(s) not found for architecture..."**:
 ![](Undefined_Symbols_Errors.png)
 

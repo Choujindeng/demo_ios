@@ -521,6 +521,9 @@ if ([[ATAdManager sharedManager] bannerAdReadyForPlacementID:@"your banner place
 
 -(void) bannerView:(ATBannerView *)bannerView failedToAutoRefreshWithPlacementID:(NSString *)placementID error:(NSError *)error {
     NSLog(@"ATBannerViewController::bannerView:failedToAutoRefreshWithPlacementID:%@ error:%@", placementID, error);
+}
+-(void) bannerView:(ATBannerView*)bannerView didTapCloseButtonWithPlacementID:(NSString*)placementID extra:(NSDictionary*)extra {
+    NSLog(@"ATBannerViewController::bannerView:didTapCloseButtonWithPlacementID:%@ extra: %@", placementID,extra);
 }</code></pre>
 
 **说明：**横幅广告的回调方法最后的extra参数用**kATBannerDelegateExtraNetworkIDKey**和**kATBannerDelegateExtraAdSourceIDKey**作为键包含了第三方平台相关的信息，比如：

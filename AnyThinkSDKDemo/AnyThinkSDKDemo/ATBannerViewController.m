@@ -223,5 +223,7 @@ NSString *const kBannerLoadingFailedNotification = @"banner_failed_to_load";
     NSLog(@"ATBannerViewController::bannerView:failedToAutoRefreshWithPlacementID:%@ error:%@", placementID, error);
 }
 
-
+-(void) bannerView:(ATBannerView *)bannerView didTapCloseButtonWithPlacementID:(NSString *)placementID extra:(NSDictionary *)extra  {
+    NSLog(@"ATBannerViewController::bannerView:didTapCloseButtonWithPlacementID:%@ extra:%@", placementID,extra);
+}
 @end

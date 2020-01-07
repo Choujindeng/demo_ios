@@ -523,6 +523,9 @@ You can implement the methods defined in **ATBannerDelegate** to get notified on
 }
 -(void) bannerView:(ATBannerView\*)bannerView failedToAutoRefreshWithPlacementID:(NSString\*)placementID  extra:(NSDictionary \*)extra error:(NSError\*)error {
     NSLog(@"ATBannerViewController::bannerView:failedToAutoRefreshWithPlacementID:%@ error:%@", placementID, error);
+}
+-(void) bannerView:(ATBannerView*)bannerView didTapCloseButtonWithPlacementID:(NSString\*)placementID extra:(NSDictionary\*)extra {
+    NSLog(@"ATBannerViewController::bannerView:didTapCloseButtonWithPlacementID:%@ extra: %@", placementID,extra);
 }</code></pre>
 
 **Note:**The trailing extra parameter contains ad network specific info, which, for banner ad, is passed using **kATBannerDelegateExtraNetworkIDKey** and **kATBannerDelegateExtraAdSourceIDKey** as keys; here's an example of extra:

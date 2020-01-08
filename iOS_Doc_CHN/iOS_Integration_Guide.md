@@ -60,7 +60,7 @@ AnyThinkSDK支持原生广告(Native),激励视频广告(rewardVideo)，banner�
 
 1) 在 Xcode中, 点击到 **Build Settings**, 搜索 **Other Linker Flags** 然后添加 **-ObjC**(这里的字母O和字母C**需要大写**), 注意 **Linker Flags** 是区分大小写的:
 ![](Other_Linker_Flags.png)
-如果您没有看到如上图所示的弹出窗口，只需双击 **Other Linker Flags**。<br><br>
+如果您没有看到如上图所示的弹出窗口，请双击 **Other Linker Flags**。<br><br>
 2) 在您app的Info.plist中添加 **NSAllowsArbitraryLoads** 禁用ATS限制。
 ![](Info_Plist_HTTP.png)
 
@@ -154,7 +154,7 @@ AnyThinkSDK为每一个支持的第三方广告平台定义了一个id（整型�
 |Native|b5b0f5663c6e4a|
 
 注：使用这些广告位需要关联 **AppID**：a5b0e8491845b3 和 **AppKey**：7eae0567827cfe2b22874061763f30c9 <br>
-测试完成之后，您需要将**id**和**key**更改为您自己在**TopOn**账号下创建的**id**和**key**。
+测试完成之后，您需要将**id**和**key**更改为您自己在**TopOn**账号下创建的**id**和**key**。<br>由于这些广告位可能包含你没有集成的第三方平台，所以会提示Adapter(framework名) initialization failed The adapter has not been implemented or there are some spelling mistakes in the adapter name in the placement settings.)如果framework名不属于您需要使用的第三方平台，可以不必理会。<br>
 
 ## <h2 id='3'>3 开屏广告(Splash)</h2>
 在继续接入之前，您需要保证您已经完成了以上 [配置](#1) 步骤。
@@ -247,7 +247,7 @@ AnyThinkSDK为每一个支持的第三方广告平台定义了一个id（整型�
 |KS|AnyThinkKSRewardedVideoAdapter.framework|
 
 ### 4.2 加载Rewarded Video
-您需要确认您添加了**ATRewardedVideoDelegate**代理协议：
+您需要确认您遵循了**ATRewardedVideoDelegate**代理协议：
 <pre><code>@interface ATRewardedVideoViewController()\<ATRewardedVideoDelegate\>
 //Other properties&methods declarations
 @end</code></pre>
@@ -955,7 +955,7 @@ Mintegral和Facebook支持header bidding的应用版本如下：
 [[ATAPI sharedInstance] setSubchannel: subChannelString]; 
 </code></pre>
 
-## 12 <h2 id='12'>12 API</h2>
+##  <h2 id='12'>12 API</h2>
 
 ```
 //初始化SDK 

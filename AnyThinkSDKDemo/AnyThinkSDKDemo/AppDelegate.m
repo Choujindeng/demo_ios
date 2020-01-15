@@ -18,6 +18,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [ATAPI setLogEnabled:YES];
+    [ATAPI integrationChecking];
     [ATAPI sharedInstance].channel = @"test_channel";
     [ATAPI sharedInstance].subchannel = @"test_subchannel";
     [ATAPI sharedInstance].customData = @{@"custom_data_key":@"custom_data_val"};

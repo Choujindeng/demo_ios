@@ -26,6 +26,7 @@
 		459A7736239642DA009BB088 /* OguryAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 459A7733239642D9009BB088 /* OguryAds.framework */; };
 		459A7737239642DA009BB088 /* OguryConsentManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 459A7734239642D9009BB088 /* OguryConsentManager.framework */; };
 		45B76C6423AB4D7F000471D9 /* TraminiSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45B76C6323AB4D7F000471D9 /* TraminiSDK.framework */; };
+		45D9BC6423CF0EFF00B3973B /* Sigmob.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 45D9BC6323CF0EFF00B3973B /* Sigmob.bundle */; };
 		8DB704F8236D883A007A889D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB704F7236D883A007A889D /* AppDelegate.m */; };
 		8DB704FB236D883A007A889D /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB704FA236D883A007A889D /* SceneDelegate.m */; };
 		8DB704FE236D883A007A889D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB704FD236D883A007A889D /* ViewController.m */; };
@@ -60,7 +61,6 @@
 		8DB709BD236D8C89007A889D /* AnyThinkBaiduInterstitialAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB707F3236D8C70007A889D /* AnyThinkBaiduInterstitialAdapter.framework */; };
 		8DB709BE236D8C89007A889D /* AnyThinkIronSourceInterstitialAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB707F4236D8C70007A889D /* AnyThinkIronSourceInterstitialAdapter.framework */; };
 		8DB709BF236D8C89007A889D /* AnyThinkTapjoyInterstitialAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB707F5236D8C70007A889D /* AnyThinkTapjoyInterstitialAdapter.framework */; };
-		8DB709C0236D8C89007A889D /* AnyThinkFlurryBannerAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB707F6236D8C70007A889D /* AnyThinkFlurryBannerAdapter.framework */; };
 		8DB709C1236D8C89007A889D /* Maio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB707F7236D8C71007A889D /* Maio.framework */; };
 		8DB709C2236D8C89007A889D /* AnyThinkGDTBannerAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB707F8236D8C71007A889D /* AnyThinkGDTBannerAdapter.framework */; };
 		8DB709C3236D8C89007A889D /* AnyThinkMopubNativeAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB707F9236D8C71007A889D /* AnyThinkMopubNativeAdapter.framework */; };
@@ -84,7 +84,6 @@
 		8DB709D9236D8C89007A889D /* AnyThinkInmobiRewardedVideoAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB7086D236D8C75007A889D /* AnyThinkInmobiRewardedVideoAdapter.framework */; };
 		8DB709DA236D8C89007A889D /* AnyThinkTTRewardedVideoAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB7086E236D8C75007A889D /* AnyThinkTTRewardedVideoAdapter.framework */; };
 		8DB709DB236D8C89007A889D /* AnyThinkChartboostRewardedVideoAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB7086F236D8C76007A889D /* AnyThinkChartboostRewardedVideoAdapter.framework */; };
-		8DB709DC236D8C89007A889D /* AnyThinkFlurryRewardedVideoAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB70870236D8C76007A889D /* AnyThinkFlurryRewardedVideoAdapter.framework */; };
 		8DB709DD236D8C89007A889D /* AnyThinkNative.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB70871236D8C76007A889D /* AnyThinkNative.framework */; };
 		8DB709DE236D8C89007A889D /* AnyThinkSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB70872236D8C76007A889D /* AnyThinkSDK.framework */; };
 		8DB709DF236D8C89007A889D /* AnyThinkOnewayRewardedVideoAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB70873236D8C76007A889D /* AnyThinkOnewayRewardedVideoAdapter.framework */; };
@@ -189,7 +188,6 @@
 		8DB70A42236D8C89007A889D /* CHAMoatMobileAppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB70953236D8C7B007A889D /* CHAMoatMobileAppKit.framework */; };
 		8DB70A43236D8C89007A889D /* AnyThinkMopubBannerAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB70954236D8C7B007A889D /* AnyThinkMopubBannerAdapter.framework */; };
 		8DB70A44236D8C89007A889D /* AnyThinkYeahmobiInterstitialAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB70955236D8C7B007A889D /* AnyThinkYeahmobiInterstitialAdapter.framework */; };
-		8DB70A45236D8C89007A889D /* AnyThinkFlurryInterstitialAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB70956236D8C7B007A889D /* AnyThinkFlurryInterstitialAdapter.framework */; };
 		8DB70A4B236D8C89007A889D /* FBAudienceNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB70961236D8C7C007A889D /* FBAudienceNetwork.framework */; };
 		8DB70A4C236D8C89007A889D /* AnyThinkAdColonyInterstitialAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB70962236D8C7C007A889D /* AnyThinkAdColonyInterstitialAdapter.framework */; };
 		8DB70A4D236D8C89007A889D /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB70963236D8C7C007A889D /* FBSDKCoreKit.framework */; };
@@ -230,7 +228,6 @@
 		8DB70A72236D8C8A007A889D /* AnyThinkYeahmobiRewardedVideoAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB7099E236D8C86007A889D /* AnyThinkYeahmobiRewardedVideoAdapter.framework */; };
 		8DB70A73236D8C8A007A889D /* AnyThinkGDTInterstitialAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB7099F236D8C86007A889D /* AnyThinkGDTInterstitialAdapter.framework */; };
 		8DB70A74236D8C8A007A889D /* UnityAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB709A0236D8C86007A889D /* UnityAds.framework */; };
-		8DB70A75236D8C8A007A889D /* AnyThinkFlurryNativeAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB709A1236D8C86007A889D /* AnyThinkFlurryNativeAdapter.framework */; };
 		8DB70A76236D8C8A007A889D /* AnyThinkApplovinNativeAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB709A2236D8C87007A889D /* AnyThinkApplovinNativeAdapter.framework */; };
 		8DB70A77236D8C8A007A889D /* AnyThinkFacebookNativeAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB709A3236D8C87007A889D /* AnyThinkFacebookNativeAdapter.framework */; };
 		8DB70A78236D8C8A007A889D /* AnyThinkSigmobInterstitialAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB709A4236D8C87007A889D /* AnyThinkSigmobInterstitialAdapter.framework */; };
@@ -279,6 +276,7 @@
 		459A7733239642D9009BB088 /* OguryAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OguryAds.framework; sourceTree = "<group>"; };
 		459A7734239642D9009BB088 /* OguryConsentManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OguryConsentManager.framework; sourceTree = "<group>"; };
 		45B76C6323AB4D7F000471D9 /* TraminiSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TraminiSDK.framework; path = SDK/TraminiSDK.framework; sourceTree = "<group>"; };
+		45D9BC6323CF0EFF00B3973B /* Sigmob.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Sigmob.bundle; path = SDK/Sigmob.bundle; sourceTree = "<group>"; };
 		8DB704F3236D883A007A889D /* AnyThinkSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnyThinkSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DB704F6236D883A007A889D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8DB704F7236D883A007A889D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -723,10 +721,8 @@
 				8DB70A82236D8D02007A889D /* AVFoundation.framework in Frameworks */,
 				8DB70A54236D8C89007A889D /* Tapjoy.framework in Frameworks */,
 				8DB709BC236D8C89007A889D /* AnyThinkAdmobBannerAdapter.framework in Frameworks */,
-				8DB709C0236D8C89007A889D /* AnyThinkFlurryBannerAdapter.framework in Frameworks */,
 				453E4D45237C0F8500F0ECB2 /* BUAdSDK.framework in Frameworks */,
 				9B56A1B6238D191D00204E3D /* PersonalizedAdConsent.framework in Frameworks */,
-				8DB709DC236D8C89007A889D /* AnyThinkFlurryRewardedVideoAdapter.framework in Frameworks */,
 				8DB709B6236D8C89007A889D /* AnyThinkMintegralNativeAdapter.framework in Frameworks */,
 				8DB709D2236D8C89007A889D /* AnyThinkVungleRewardedVideoAdapter.framework in Frameworks */,
 				45655579237961A50009DD36 /* AnyThinkMyOfferInterstitialAdapter.framework in Frameworks */,
@@ -787,7 +783,6 @@
 				8DB70A52236D8C89007A889D /* AnyThinkTTNativeAdapter.framework in Frameworks */,
 				8DB709B8236D8C89007A889D /* AnyThinkGDTNativeAdapter.framework in Frameworks */,
 				8DB70A64236D8C8A007A889D /* AnyThinkMopubRewardedVideoAdapter.framework in Frameworks */,
-				8DB70A75236D8C8A007A889D /* AnyThinkFlurryNativeAdapter.framework in Frameworks */,
 				453C166D236DBC7E006B430A /* KSAdSDK.framework in Frameworks */,
 				8DB709CB236D8C89007A889D /* AnyThinkMintegralRewardedVideoAdapter.framework in Frameworks */,
 				8DB70A6E236D8C8A007A889D /* CTSDK.framework in Frameworks */,
@@ -845,7 +840,6 @@
 				8DB709B3236D8C89007A889D /* AnyThinkAdColonyRewardedVideoAdapter.framework in Frameworks */,
 				8DB709C4236D8C89007A889D /* AnyThinkApplovinInterstitialAdapter.framework in Frameworks */,
 				8DB70A76236D8C8A007A889D /* AnyThinkApplovinNativeAdapter.framework in Frameworks */,
-				8DB70A45236D8C89007A889D /* AnyThinkFlurryInterstitialAdapter.framework in Frameworks */,
 				8DB709D6236D8C89007A889D /* AnyThinkBaiduBannerAdapter.framework in Frameworks */,
 				8DB70A4F236D8C89007A889D /* AnyThinkYeahmobiNativeAdapter.framework in Frameworks */,
 				8DB70A80236D8C8A007A889D /* AnyThinkTTSplashAdapter.framework in Frameworks */,
@@ -869,6 +863,7 @@
 		8DB704EA236D8839007A889D = {
 			isa = PBXGroup;
 			children = (
+				45D9BC6323CF0EFF00B3973B /* Sigmob.bundle */,
 				8DB704F5236D883A007A889D /* AnyThinkSDKDemo */,
 				8DB704F4236D883A007A889D /* Products */,
 				8DB705C7236D898F007A889D /* Frameworks */,
@@ -1630,6 +1625,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45D9BC6423CF0EFF00B3973B /* Sigmob.bundle in Resources */,
 				8DB70506236D883C007A889D /* LaunchScreen.storyboard in Resources */,
 				8DB709CF236D8C89007A889D /* AppLovinSDKResources.bundle in Resources */,
 				8DB70503236D883C007A889D /* Assets.xcassets in Resources */,

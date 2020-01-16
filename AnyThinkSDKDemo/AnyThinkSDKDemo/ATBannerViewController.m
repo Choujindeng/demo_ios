@@ -201,32 +201,8 @@ NSString *const kBannerLoadingFailedNotification = @"banner_failed_to_load";
 #endif
 }
 
--(void) bannerView:(ATBannerView *)bannerView didShowAdWithPlacementID:(NSString *)placementID {
-    NSLog(@"ATBannerViewController::bannerView:didShowAdWithPlacementID:%@", placementID);
-#ifdef BANNER_AUTO_TEST
-    [[NSNotificationCenter defaultCenter] postNotificationName:kBannerShownNotification object:nil];
-    [self.navigationController popViewControllerAnimated:NO];
-#endif
-}
-
--(void) bannerView:(ATBannerView*)bannerView didClickWithPlacementID:(NSString*)placementID {
-    NSLog(@"ATBannerViewController::bannerView:didClickWithPlacementID:%@", placementID);
-}
-
--(void) bannerView:(ATBannerView*)bannerView didCloseWithPlacementID:(NSString*)placementID {
-    NSLog(@"ATBannerViewController::bannerView:didCloseWithPlacementID:%@", placementID);
-}
-
--(void) bannerView:(ATBannerView *)bannerView didAutoRefreshWithPlacement:(NSString *)placementID {
-    NSLog(@"ATBannerViewController::bannerView:didAutoRefreshWithPlacement:%@", placementID);
-}
-
--(void) bannerView:(ATBannerView *)bannerView failedToAutoRefreshWithPlacementID:(NSString *)placementID error:(NSError *)error {
-    NSLog(@"ATBannerViewController::bannerView:failedToAutoRefreshWithPlacementID:%@ error:%@", placementID, error);
-}
 
 #pragma mark - add networkID and adsourceID delegate
-
 -(void) bannerView:(ATBannerView*)bannerView didShowAdWithPlacementID:(NSString*)placementID extra:(NSDictionary *)extra{
     NSLog(@"ATBannerViewController::bannerView:didShowAdWithPlacementID:%@ with extra: %@", placementID,extra);
 #ifdef BANNER_AUTO_TEST
@@ -247,5 +223,7 @@ NSString *const kBannerLoadingFailedNotification = @"banner_failed_to_load";
     NSLog(@"ATBannerViewController::bannerView:failedToAutoRefreshWithPlacementID:%@ error:%@", placementID, error);
 }
 
-
+-(void) bannerView:(ATBannerView *)bannerView didTapCloseButtonWithPlacementID:(NSString *)placementID extra:(NSDictionary *)extra  {
+    NSLog(@"ATBannerViewController::bannerView:didTapCloseButtonWithPlacementID:%@ extra:%@", placementID,extra);
+}
 @end

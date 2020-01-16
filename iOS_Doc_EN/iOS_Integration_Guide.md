@@ -11,6 +11,7 @@
 9、[Implement Native Splash](#9)<br>
 10、[On Header Bidding](#10)<br>
 11、[On GDPR](#11)<br>
+12、[API](#12)<br>
 
 ## <h2 id='2'>1 Introduction</h2>
 This document walks you through the process of integrating AnyThinkSDK for iOS in a step-by-step manner.
@@ -74,19 +75,19 @@ The table below gives a brief summary of third party SDKs. Only import those of 
 
 |Network|SDK Package Contents|Current Version Supported by **TopOn**|Download Link|Reference Website|Note|    
 |---|---|---|---|---|---|   
-|Facebook|FBAudienceNetwork.framework<br> FBAudienceNetworkBiddingKit.framework <br>FBSDKCoreKit.framework<br>|v5.4.0|https://developers.facebook.com/docs/audience-network/download#ios|https://developers.facebook.com/docs/audience-network/ios|测试机需安装并登录Facebook客户端才能请求到广告。|
+|Facebook|FBAudienceNetwork.framework<br> FBAudienceNetworkBiddingKit.framework <br>FBSDKCoreKit.framework<br>|v5.5.1|https://developers.facebook.com/docs/audience-network/download#ios|https://developers.facebook.com/docs/audience-network/ios|测试机需安装并登录Facebook客户端才能请求到广告。|
 |Admob|GoogleMobileAds.framework<br>PersonalizedAdConsent.framework|v7.52.0|https://support.google.com/admob/answer/2993059?hl=en|https://developers.google.com/admob/ios/quick-start|Admob requires that **app id be configured in the Info.plist of your project**; for more information please refer to <a href="https://developers.google.com/admob/ios/quick-start#update\_your\_infoplist">Admob's website</a>.|
 | Inmobi |InMobiSDK.framework|v7.3.1|https://support.inmobi.com/monetize/ios-guidelines/||||
 | Flurry |libFlurryAds\_1.0.0.a<br>libFlurry\_9.0.0.a|231\_9.0.0|https://dev.flurry.com/admin/applications||||
 | Applovin |AppLovinSDK.framework<br>AppLovinSDKResources.bundle|v6.10.0|https://dash.applovin.com/docs/integration#iosIntegration||||
-| Mintegral |MTGSDK.framework<br> MTGSDKBidding.framework<br>MTGSDKReward.framework <br> MTGSDKInterstitialVideo.framework <br> MTGSDKInterstitial.framework|v5.8.0|http://cdn-adn.rayjump.com/cdn-adn/v2/markdown\_v2/index.html?file=sdk-m\_sdk-ios&lang=en||||
+| Mintegral |MTGSDK.framework<br> MTGSDKBidding.framework<br>MTGSDKReward.framework <br> MTGSDKInterstitialVideo.framework <br> MTGSDKInterstitial.framework|v5.8.7|http://cdn-adn.rayjump.com/cdn-adn/v2/markdown\_v2/index.html?file=sdk-m\_sdk-ios&lang=en||||
 | Mopub |MobPowerNative.framework <br> MobPowerSDK.framework| v5.10.0 |https://github.com/mopub||||
-| GDT |libGDTMobSDK.a|v4.10.13|https://e.qq.com/dev/index.html||||
+| GDT |libGDTMobSDK.a|v4.11.2|https://e.qq.com/dev/index.html||||
 | Chartboost |Chartboost.framework| v8.0.3 | https://dashboard.chartboost.com/tools/sdk	||||
 | Tapjoy |Tapjoy.framework <br> TapjoyResources.bundle| v12.3.4 |||||
 | Ironsource |IronSource.framework|v6.10.0|https://developers.ironsrc.com/sdk-repository/||||
 | UnityAds |UnityAds.framework| v3.4.0 |https://github.com/Unity-Technologies/unity-ads-ios/releases/tag/3.0.3||||
-| Vungle |VungleSDK.framework|v6.4.5|||||
+| Vungle |VungleSDK.framework|v6.4.6|||||
 | Adcolony |AdColony.framework|v4.1.0.0|https://github.com/AdColony||||
 |TouTiao|BUAdSDK.framework<br>BUAdSDK.bundle|v2.4.6.7|http://ad.toutiao.com/union/media/union/download|||
 | Oneway |Oneway|v2.1.0|||||
@@ -95,7 +96,7 @@ The table below gives a brief summary of third party SDKs. Only import those of 
 |Nend|NendAd.framework <br> NendAdResource.bundle|v5.3.1|https://github.com/fan-ADN||||
 | Maio |Maio.framework|v1.5.0|https://github.com/imobile-maio||||
 | Yeahmobi |CTSDK.framework|v3.2.0|||||  
-| sigmob |WindSDK.framework<br>sigmob.bundle|v2.14.0|||||
+| sigmob |WindSDK.framework<br>sigmob.bundle|v2.15.2|||||
 |KS|KSAdSDK.framework <br> KSAdSDK.bundle|v2.5.2.12|Additional third-party libraries that need to be introduced：<br>AFNetworking/Godzippa/MJExtension/SDWebImage||||
 |Ogury|OMSDK_Oguryco.framework<br>OguryAds.framework<br>OguryConsentManager.framework|1.0.3|||No way of setting GDPR consent without presenting a view controller.||
 
@@ -522,6 +523,9 @@ You can implement the methods defined in **ATBannerDelegate** to get notified on
 }
 -(void) bannerView:(ATBannerView\*)bannerView failedToAutoRefreshWithPlacementID:(NSString\*)placementID  extra:(NSDictionary \*)extra error:(NSError\*)error {
     NSLog(@"ATBannerViewController::bannerView:failedToAutoRefreshWithPlacementID:%@ error:%@", placementID, error);
+}
+-(void) bannerView:(ATBannerView*)bannerView didTapCloseButtonWithPlacementID:(NSString\*)placementID extra:(NSDictionary\*)extra {
+    NSLog(@"ATBannerViewController::bannerView:didTapCloseButtonWithPlacementID:%@ extra: %@", placementID,extra);
 }</code></pre>
 
 **Note:**The trailing extra parameter contains ad network specific info, which, for banner ad, is passed using **kATBannerDelegateExtraNetworkIDKey** and **kATBannerDelegateExtraAdSourceIDKey** as keys; here's an example of extra:
@@ -894,7 +898,7 @@ The SDK versions of Mintegral and Facebook that support header bidding are as fo
 | Mintegral | iOS | Native, Rewarded Video, Interstitial Video | >= 5.4.2 | MTGSDKBidding.framework |
 
 
-## 11 On GDPR<h2 id='11'>1 Introduction</h2>
+## 11 On GDPR<h2 id='11'></h2>
 
 **General Data Protection Regulation(GDPR)**, which is issued by EU, has come into effect on 5/25/2018. We've updated our privacy policy accordingly, you can check it out by clicking <a href="https://www.topon.com/privacy-policy" target = "_blank">AnyThink Privacy Policy</a>. In the meantime, we've included some features in the SDK, which you can utilize to protect users' private data; please follow this guidelines to set up GDPR settings.
 We provide two methods to support GDPR:<br>
@@ -976,9 +980,109 @@ Since Ogury does not provide any other way of setting GDPR consent than via its 
 </code></pre>
 
 ### 11.4 Configuration With Channel
-<pre><code>
-	[[ATAPI sharedInstance] setChannel:channelString]; //设置渠道信息，用于TopOn后台区分广告数据，只允许设置字符的规则：[A-Za-z0-9_]
-    [[ATAPI sharedInstance] setSubchannel: subChannelString]; //设置子渠道信息，只允许设置字符的规则：[A-Za-z0-9_]
+<pre><code>//Set channel information, used for TopOn background to distinguish advertising data, only rules for setting characters：[A-Za-z0-9_]
+	 [[ATAPI sharedInstance] setChannel:channelString]; 
+//Set subchannel information, used for TopOn background to distinguish advertising data, only rules for setting characters：[A-Za-z0-9_]
+    [[ATAPI sharedInstance] setSubchannel: subChannelString]; 
 </code></pre>
 
+## 12 API <h2 id='12'></h2>
+
+```
+//init SDK 
+//	appid：Backstage config appid
+//	appkey：Backstage config appkey
+//	error：nil
+-(BOOL) startWithAppID:(NSString*)appID appKey:(NSString*)appKey error:(NSError**)error;
+```
+```
+//debug log switch
+// logEnaleed:open or close SDK debug log
++(void) setLogEnabled:(BOOL)logEnabled;
+```
+```
+//Set channel information, used for TopOn background to distinguish advertising data, only rules for setting characters：[A-Za-z0-9_]
+[[ATAPI sharedInstance] setChannel:channelString]; 
+//Set subchannel information, used for TopOn background to distinguish advertising data, only rules for setting characters：[A-Za-z0-9_]
+[[ATAPI sharedInstance] setSubchannel: subChannelString]; 
+```
+```
+//config GDPR
+//  dataConsentSet:
+//			 ATDataConsentSetUnknown = 0,
+//   		 ATDataConsentSetPersonalized = 1,
+//   		 ATDataConsentSetNonpersonalized = 2
+//  consentString:nil
+-(void) setDataConsentSet:(ATDataConsentSet)dataConsentSet consentString:(NSDictionary<NSString*, NSString*>*)consentString;
+```
+```
+//judge user is in EU
+-(BOOL)inDataProtectionArea;
+```
+```
+//GDPR user setting window
+//	 viewController：viewController
+//	 dismissCallback：window dissmiss block
+-(void) presentDataConsentDialogInViewController:(UIViewController*)viewController dismissalCallback:(void(^)(void))dismissCallback;
+```
+```
+//request ad
+//	 placementID：request ad id
+//	 extra：extra
+// 	 delegate：Callback receiver
+-(void) loadADWithPlacementID:(NSString*)placementID extra:(NSDictionary*)extra delegate:(id<ATAdLoadingDelegate>)delegate;
+```
+```
+//Splash
+//	 placementId：request ad id
+//	 extra：extra
+//	 customData：nil
+//	 delegate：Callback receiver
+//	 window：current window
+//	 containerView：custon label
+-(void) loadADWithPlacementID:(NSString*)placementID extra:(NSDictionary*)extra 
+customData:(NSDictionary*)customData delegate:(id<ATSplashDelegate>)delegate 
+window:(UIWindow*)window containerView:(UIView*)containerView;
+```
+```
+//Interstitial
+//	 placementID：request ad id
+-(BOOL) interstitialReadyForPlacementID:(NSString*)placementID;
+//	 placementID：request ad id
+//	 viewController：viewController
+//	 delegate：Callback receiver
+-(void) showInterstitialWithPlacementID:(NSString*)placementID 
+inViewController:(UIViewController*)viewController
+delegate:(id<ATInterstitialDelegate>)delegate;
+
+```
+```
+//RewardedVideo
+//	 placementID：request ad id
+-(BOOL) rewardedVideoReadyForPlacementID:(NSString*)placementID;
+//	 placementID：request ad id
+//	 viewController：viewController
+//	 delegate：Callback receiver
+-(void) showRewardedVideoWithPlacementID:(NSString*)placementID 
+inViewController:(UIViewController*)viewController 
+delegate:(id<ATRewardedVideoDelegate>)delegate;
+
+```
+```
+//Banner
+//	 placementID：request ad id
+-(BOOL) bannerAdReadyForPlacementID:(NSString*)placementID;
+//	 placementID：request ad id
+-(nullable ATBannerView*)retrieveBannerViewForPlacementID:(NSString*)placementID;
+```
+```
+//Native
+//	 placementID：request ad id
+-(BOOL) nativeAdReadyForPlacementID:(NSString*)placementID;
+//	 placementID：request ad id
+//	 configuration：config
+-(__kindof UIView*) retriveAdViewWithPlacementID:(NSString*)placementID 
+configuration:(ATNativeADConfiguration*)configuration;
+
+```
 

@@ -99,7 +99,15 @@ AnyThinkSDK支持原生广告(Native),激励视频广告(rewardVideo)，banner�
 |Ogury| pod 'AnyThinkiOS/AnyThinkOguryAdapter'|
 |MyOffer| pod 'AnyThinkiOS/AnyThinkMyOfferAdapter'|
 
-
+如果您想要引入特定版本的SDK则需要在所有pod 语句后面添加 '5.4.4'(版本号)
+例如:
+	
+	pod 'AnyThinkiOS','5.4.4'
+	pod 'AnyThinkiOS/AnyThinkFacebookAdapter','5.4.4'
+	pod 'AnyThinkiOS/AnyThinkAdmobAdapter','5.4.4'
+	pod 'AnyThinkiOS/AnyThinkTouTiaoAdapter','5.4.4'
+	
+**注**:需要版本是5.4.4之后
 
 ### 2.3 配置 Build Settings 和 Info.plist
 

@@ -106,6 +106,15 @@ All podCode list:
 |Ogury| pod 'AnyThinkiOS/AnyThinkOguryAdapter'|
 |MyOffer| pod 'AnyThinkiOS/AnyThinkMyOfferAdapter'|
 
+If you want import specific version, you should add '5.4.4'(version) after all podCode
+for example:
+	
+	pod 'AnyThinkiOS','5.4.4'
+	pod 'AnyThinkiOS/AnyThinkFacebookAdapter','5.4.4'
+	pod 'AnyThinkiOS/AnyThinkAdmobAdapter','5.4.4'
+	pod 'AnyThinkiOS/AnyThinkTouTiaoAdapter','5.4.4'
+	
+**Note**:using this feature must after 5.4.4 version.
 
 ### 2.3 Configure Build Settings and Info.plist
 

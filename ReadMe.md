@@ -1,7 +1,7 @@
 ## [IMPORTANT] DO NOT expose any of the frameworks to Windows operating system; Windows modifies frameworks, making them incomplete and resulting in compile errors.
 ## 【重要】请勿将iOS需要用到的SDK（包括.a、.framework及.embededframework格式的套件）下载或传送至Windows操作系统上，因为Windows文件系统会修改这些SDK，导致它们在Xcode中无法编译。
-# AnythinkSDK_iOS_SDK_5.4.3
-## Third-party SDK version for AnyThink_ios_sdk_5.4.3
+# AnythinkSDK_iOS_SDK_5.4.4
+## Third-party SDK version for AnyThink_ios_sdk_5.4.4
 
 [Integrate Guide for AnyThinkSDK for iOS(English)](iOS_Doc_EN/iOS_Integration_Guide.md)
 
@@ -39,7 +39,7 @@ http://sdk-release.toponad.com/Unity/5.3.0/Unity_Androidv5.3.0_iOSv5.3.0.unitypa
 | Vungle | 6.4.6 ||
 | Adcolony | 4.1.2.0 ||
 | UnityAds | 3.4.0 ||
-| TT | 2.5.1.5 |头条/穿山甲/TT|
+| TiTok | 2.7.5.2 |头条/穿山甲/TiTok|
 | Tapjoy | 12.3.4 ||
 | Oneway | 2.1.0 ||
 | Baidu | 4.67 ||
@@ -69,7 +69,7 @@ http://sdk-release.toponad.com/Unity/5.3.0/Unity_Androidv5.3.0_iOSv5.3.0.unitypa
 |UnityAds | 12 |
 |Vungle | 13 | 
 |Adcolony | 14 | 
-|TouTiao|15|
+|TiTok|15|
 |玩转互联 | 16 |
 |Oneway|17|
 |MobPower | 18 |

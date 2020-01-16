@@ -52,6 +52,7 @@ Suppose you need to integrate Admob's rewarded video & interstitial, and Faceboo
 
 
 ### 2.2 Import Core(Base) Framework
+#### 2.2.1 import by yourself
 The core module contains the following frameworks and resource bundle files, just drag&drop them into Xcode.
 
 |File|Note|
@@ -62,6 +63,49 @@ The core module contains the following frameworks and resource bundle files, jus
 |TraminiSDK.framework|Error messages collecting module|
 
 **NOTE:** Since **AnyThinkSDK** does not support cocoapods, framewroks whose name start with the prefex AnyThink have to be manually downloaded and imported into your project whereas third party SDK can be integrated using cocoapods if supported.
+
+#### 2.2.2 import by cocoapod
+SDK version after 5.4.4，we surpport cocoapod to import AnyThinkSDK。<br>
+podfile add:<br>
+
+	#core framework,must add
+	pod 'AnyThinkiOS'
+	#network's Adapter
+	#pod 'AnyThinkiOS/AnyThink(networkName)Adapter'
+	#forexample you would like to import Facebook. (you only order to add network that you need to surpport)
+	pod 'AnyThinkiOS/AnyThinkFacebookAdapter'
+	
+All podCode list:
+
+|network|podCode|
+|---|---|
+|AnyThinkSDK| pod 'AnyThinkiOS'|
+|toutiao| pod 'AnyThinkiOS/AnyThinkTouTiaoAdapter'|
+|Facebook| pod 'AnyThinkiOS/AnyThinkFacebookAdapter'|
+|Admob| pod 'AnyThinkiOS/AnyThinkAdmobAdapter'|
+|Inmobi| pod 'AnyThinkiOS/AnyThinkInmobiAdapter'|
+|Flurry| pod 'AnyThinkiOS/AnyThinkFlurryAdapter'|
+|Applovin| pod 'AnyThinkiOS/AnyThinkApplovinAdapter'|
+|Mintegral| pod 'AnyThinkiOS/AnyThinkMintegralAdapter'|
+|Mopub| pod 'AnyThinkiOS/AnyThinkMopubAdapter'|
+|GDT| pod 'AnyThinkiOS/AnyThinkGDTAdapter'|
+|Yeahmobi| pod 'AnyThinkiOS/AnyThinkYeahmobiAdapter'|
+|Appnext| pod 'AnyThinkiOS/AnyThinkAppnextAdapter'|
+|Chartboost| pod 'AnyThinkiOS/AnyThinkChartboostAdapter'|
+|IronSource| pod 'AnyThinkiOS/AnyThinkIronSourceAdapter'|
+|Vungle| pod 'AnyThinkiOS/AnyThinkVungleAdapter'|
+|Adcolony| pod 'AnyThinkiOS/AnyThinkAdcolonyAdapter'|
+|UnityAds| pod 'AnyThinkiOS/AnyThinkUnityAdsAdapter'|
+|Tapjoy| pod 'AnyThinkiOS/AnyThinkTapjoyAdapter'|
+|Oneway| pod 'AnyThinkiOS/AnyThinkOnewayAdapter'|
+|Baidu| pod 'AnyThinkiOS/AnyThinkBaiduAdapter'|
+|Nend| pod 'AnyThinkiOS/AnyThinkNendAdapter'|
+|Maio| pod 'AnyThinkiOS/AnyThinkMaioAdapter'|
+|KS| pod 'AnyThinkiOS/AnyThinkKSAdapter'|
+|Sigmob| pod 'AnyThinkiOS/AnyThinkSigmobAdapter'|
+|Ogury| pod 'AnyThinkiOS/AnyThinkOguryAdapter'|
+|MyOffer| pod 'AnyThinkiOS/AnyThinkMyOfferAdapter'|
+
 
 ### 2.3 Configure Build Settings and Info.plist
 
@@ -135,7 +179,32 @@ An id(NSInteger) has been assigned to every network supported by AnyThinkSDK, se
 |Sigmob|29|
 |Ogury|36|
 
-### 2.4 Initialize the SDK
+### 2.4 Integration Checking
+
+Packages importation and project settings have been completed now; you can check if everything's in place by calling the **Integration Checking API**:
+
+<pre><code>- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+	 [ATAPI setLogEnabled:YES];<span style="color:green">//Turn on debug logs</span>
+    [ATAPI integrationChecking];
+    return YES;
+}</code></pre>
+
+**NOTE:** Make sure you enable log by calling [ATAPI setLogEnabled:YES].
+
+The output of the checking is as follows:
+
+![](integration_checking_log.png)
+
+You can interpret this output as below:
+
+|Field|Note|
+|---|---|
+|**Status**|**Success:** The adapter/network has been set up properly.<br>**Fail:** Something's wrong with the adapter/network, see **Reason** and **Suggestion** for more information.|
+|**Reason**|If the **Status** field is **Fail**, this filed shows what's amiss; see **Suggestion** for what you can do.|
+|**Suggestion**|If the **Status** field is **Fail**, this filed is displayed to show you how to solve the problem.|
+
+
+### 2.5 Initialize the SDK
 
 It's recommanded that you should initialize **AnyThinkSDK** in the **application:didFinishLaunchingWithOptions:** method of your **AppDelegate**(You have to initialize the SDK before requesting any ad):
 
@@ -145,7 +214,7 @@ It's recommanded that you should initialize **AnyThinkSDK** in the **application
     return YES;
 }</code></pre>
 
-### 2.5 Use AnyThink's Sample Ad Placements for Testing
+### 2.6 Use AnyThink's Sample Ad Placements for Testing
 The quickest way to test ad functionalities is to use **AnyThinkSDK** provided test placements, which are listed below:
 
 |Ad Format|Placement ID|

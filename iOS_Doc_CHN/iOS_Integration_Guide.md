@@ -45,6 +45,7 @@ AnyThinkSDK支持原生广告(Native),激励视频广告(rewardVideo)，banner�
 	Target iOS 8.0及以上。
 
 ### 2.2 导入基础核心框架
+#### 2.2.1 手动引入
 核心模块包含以下框架和资源包文件，只需将它们拖放到Xcode中。
 
 |File|Note|
@@ -55,6 +56,50 @@ AnyThinkSDK支持原生广告(Native),激励视频广告(rewardVideo)，banner�
 |TraminiSDK.framework|错误日志收集|
 
 **注:** 由于**AnyThinkSDK**不支持cocoapod，以AnyThink开头的framewrok必须手动下载并导入到您的项目中，而第三方SDK可以使用cocoapod集成。
+
+#### 2.2.2 cocoapod引入
+在SDK版本在5.4.4以上版本，支持cocoapod方式引入AnyThinkSDK。<br>
+在podfile文件中添加:<br>
+
+	#核心库,必须添加
+	pod 'AnyThinkiOS'
+	#各平台的Adapter
+	#pod 'AnyThinkiOS/AnyThink(平台名)Adapter'
+	#例如 Facebook 按照您需要支持的平台，按需引入即可
+	pod 'AnyThinkiOS/AnyThinkFacebookAdapter'
+	
+下面是所有Adapter的pod代码列表
+
+|network|podCode|
+|---|---|
+|AnyThinkSDK| pod 'AnyThinkiOS'|
+|toutiao| pod 'AnyThinkiOS/AnyThinkTouTiaoAdapter'|
+|Facebook| pod 'AnyThinkiOS/AnyThinkFacebookAdapter'|
+|Admob| pod 'AnyThinkiOS/AnyThinkAdmobAdapter'|
+|Inmobi| pod 'AnyThinkiOS/AnyThinkInmobiAdapter'|
+|Flurry| pod 'AnyThinkiOS/AnyThinkFlurryAdapter'|
+|Applovin| pod 'AnyThinkiOS/AnyThinkApplovinAdapter'|
+|Mintegral| pod 'AnyThinkiOS/AnyThinkMintegralAdapter'|
+|Mopub| pod 'AnyThinkiOS/AnyThinkMopubAdapter'|
+|GDT| pod 'AnyThinkiOS/AnyThinkGDTAdapter'|
+|Yeahmobi| pod 'AnyThinkiOS/AnyThinkYeahmobiAdapter'|
+|Appnext| pod 'AnyThinkiOS/AnyThinkAppnextAdapter'|
+|Chartboost| pod 'AnyThinkiOS/AnyThinkChartboostAdapter'|
+|IronSource| pod 'AnyThinkiOS/AnyThinkIronSourceAdapter'|
+|Vungle| pod 'AnyThinkiOS/AnyThinkVungleAdapter'|
+|Adcolony| pod 'AnyThinkiOS/AnyThinkAdcolonyAdapter'|
+|UnityAds| pod 'AnyThinkiOS/AnyThinkUnityAdsAdapter'|
+|Tapjoy| pod 'AnyThinkiOS/AnyThinkTapjoyAdapter'|
+|Oneway| pod 'AnyThinkiOS/AnyThinkOnewayAdapter'|
+|Baidu| pod 'AnyThinkiOS/AnyThinkBaiduAdapter'|
+|Nend| pod 'AnyThinkiOS/AnyThinkNendAdapter'|
+|Maio| pod 'AnyThinkiOS/AnyThinkMaioAdapter'|
+|KS| pod 'AnyThinkiOS/AnyThinkKSAdapter'|
+|Sigmob| pod 'AnyThinkiOS/AnyThinkSigmobAdapter'|
+|Ogury| pod 'AnyThinkiOS/AnyThinkOguryAdapter'|
+|MyOffer| pod 'AnyThinkiOS/AnyThinkMyOfferAdapter'|
+
+
 
 ### 2.3 配置 Build Settings 和 Info.plist
 
@@ -129,7 +174,31 @@ AnyThinkSDK为每一个支持的第三方广告平台定义了一个id（整型�
 |Sigmob|29|
 |Ogury|36|
 
-### 2.4 初始化SDK
+### 2.4 集成完整性检测
+至此，广告sdk的引入及工程配置就完成了，你可以调用集成完整性检测api来检测相关配置是否正确：
+
+<pre><code>- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+	 [ATAPI setLogEnabled:YES];<span style="color:green">//Turn on debug logs</span>
+    [ATAPI integrationChecking];
+    return YES;
+}</code></pre>
+
+
+**NOTE:** 确保在调用检测api调用前[ATAPI setLogEnabled:YES]打开log.
+
+检测api的输出如下图所示：
+
+![](integration_checking_log.png)
+
+该输出的信息如下：
+
+|Field|Note|
+|---|---|
+|**Status**|**Success:** 该adapter/平台的配置是正确的.<br>**Fail:** 该adapter/平台的配置不正确, 请查看**Reason** 及 **Suggestion** 字段获取更详细的信息.|
+|**Reason**|当 **Status** 字段为 **Fail** 时, **Reason**字段显示错误的具体原因; 请查看 **Suggestion** 获取解决办法|
+|**Suggestion**|当 **Status** 字段为 **Fail** 时，**Suggestion**字段显示解决该错误的办法。|
+
+### 2.5 初始化SDK
 
 您需要在**AppDelegate**的**application:didFinishLaunchingWithOptions:**方法里面初始化**AnyThinkSDK**(必须在请求广告之前去初始化SDK)：
 
@@ -140,7 +209,7 @@ AnyThinkSDK为每一个支持的第三方广告平台定义了一个id（整型�
     return YES;
 }</code></pre>
 
-### 2.5 使用AnyThink的广告位进行测试
+### 2.6 使用AnyThink的广告位进行测试
 使用**AnyThinkSDK**提供的测试广告位可以更快地测试广告功能，如下图所示：
 
 |Ad Format|Placement ID|

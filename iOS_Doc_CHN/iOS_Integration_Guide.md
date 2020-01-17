@@ -192,7 +192,7 @@ AnyThinkSDK为每一个支持的第三方广告平台定义了一个id（整型�
 }</code></pre>
 
 
-**NOTE:** 确保在调用检测api调用前[ATAPI setLogEnabled:YES]打开log.
+**NOTE:** 确保在调用检测api前调用[ATAPI setLogEnabled:YES]打开log.
 
 检测api的输出如下图所示：
 

@@ -120,32 +120,32 @@ AnyThinkSDK支持原生广告(Native),激励视频广告(rewardVideo)，banner�
 ### 2.4 导入第三方的SDK
 
 
-|第三方平台|需要导入的包|**TopOn**支持的版本|下载链接|参考网址|备注|    
-|---|---|---|---|---|---|   
-|Facebook|FBAudienceNetwork.framework<br> FBAudienceNetworkBiddingKit.framework <br>FBSDKCoreKit.framework<br>|v5.5.1|https://developers.facebook.com/docs/audience-network/download#ios|https://developers.facebook.com/docs/audience-network/ios|测试机需安装并登录Facebook客户端才能请求到广告。|
-|Admob|GoogleMobileAds.framework<br>PersonalizedAdConsent.framework|v7.52.0|https://support.google.com/admob/answer/2993059?hl=en|https://developers.google.com/admob/ios/quick-start|Admob requires that **app id be configured in the Info.plist of your project**; for more information please refer to <a href="https://developers.google.com/admob/ios/quick-start#update\_your\_infoplist">Admob's website</a>.|
-| Inmobi |InMobiSDK.framework|v7.3.1|https://support.inmobi.com/monetize/ios-guidelines/||||
-| Flurry |libFlurryAds\_1.0.0.a<br>libFlurry\_9.0.0.a|231\_9.0.0|https://dev.flurry.com/admin/applications||||
-| Applovin |AppLovinSDK.framework<br>AppLovinSDKResources.bundle|v6.10.0|https://dash.applovin.com/docs/integration#iosIntegration||||
-| Mintegral |MTGSDK.framework<br> MTGSDKBidding.framework<br>MTGSDKReward.framework <br> MTGSDKInterstitialVideo.framework <br> MTGSDKInterstitial.framework|v5.8.7|http://cdn-adn.rayjump.com/cdn-adn/v2/markdown\_v2/index.html?file=sdk-m\_sdk-ios&lang=en||||
-| Mopub |MobPowerNative.framework <br> MobPowerSDK.framework| v5.10.0 |https://github.com/mopub||||
-| GDT |libGDTMobSDK.a|v4.11.2|https://e.qq.com/dev/index.html||||
-| Chartboost |Chartboost.framework| v8.0.3 | https://dashboard.chartboost.com/tools/sdk	||||
-| Tapjoy |Tapjoy.framework <br> TapjoyResources.bundle| v12.3.4 |||||
-| Ironsource |IronSource.framework|v6.10.0|https://developers.ironsrc.com/sdk-repository/||||
-| UnityAds |UnityAds.framework| v3.4.0 |https://github.com/Unity-Technologies/unity-ads-ios/releases/tag/3.0.3||||
-| Vungle |VungleSDK.framework|v6.4.6|||||
-| Adcolony |AdColony.framework|v4.1.0.0|https://github.com/AdColony||||
-|TouTiao|BUAdSDK.framework<br>BUAdSDK.bundle|v2.5.1.5|http://ad.toutiao.com/union/media/union/download|||
-| Oneway |Oneway|v2.1.0|||||
-| Appnext |AppnextNativeAdsSDK<br>AppnextIOSSDK| v1.9.3 |https://developers.appnext.com/docs/ios-sdk-installation||||
-| Baidu |BaiduMobAdSDK.framework <br> baidumobadsdk.bundle|v4.6.7|https://mssp.baidu.com/bqt/appco.html#/union/download/sdk||||
-|Nend|NendAd.framework <br> NendAdResource.bundle|v5.3.1|https://github.com/fan-ADN||||
-| Maio |Maio.framework|v1.5.0|||https://github.com/imobile-maio||
-| Yeahmobi |CTSDK.framework|v3.2.0|||||
-| sigmob |WindSDK.framework<br>sigmob.bundle|v2.15.2|||||
-|KS|KSAdSDK.framework <br> KSAdSDK.bundle|v2.5.2.12|||需要额外导入第三方依赖：<br> AFNetworking/Godzippa/MJExtension/SDWebImage||
-|Ogury|OMSDK_Oguryco.framework<br>OguryAds.framework<br>OguryConsentManager.framework|1.0.3|||由于该平台的GDPR设置必须通过其平台的弹窗来进行设置，如若在欧盟地区不用其平台的弹窗设置GDPR等级，则ecpm会相对较低，所以这里建议开发者自己调用Ogury的api弹窗供用户设置GDPR等级，在api的回调中把topon的GDPR等级一并设置(即调用Ogury的GDPR弹窗，然后在用户选择等级设置之后的回调里，将Topon的GDPR设置为其回调中的等级)。||
+|第三方平台|需要导入的包|**TopOn**支持的版本|pod指令|下载链接|参考网址|备注|    
+|---|---|---|---|---|---|---|   
+|Facebook|FBAudienceNetwork.framework<br> FBAudienceNetworkBiddingKit.framework <br>FBSDKCoreKit.framework<br>|v5.5.1|pod 'FBAudienceNetwork' , '5.5.1' <br>#pod 无 HB|https://developers.facebook.com/docs/audience-network/download#ios|https://developers.facebook.com/docs/audience-network/ios|测试机需安装并登录Facebook客户端才能请求到广告。|
+|Admob|GoogleMobileAds.framework<br>PersonalizedAdConsent.framework|v7.52.0|pod 'Google-Mobile-Ads-SDK','7.52.0'<br>pod 'PersonalizedAdConsent'|https://support.google.com/admob/answer/2993059?hl=en|https://developers.google.com/admob/ios/quick-start|Admob requires that **app id be configured in the Info.plist of your project**; for more information please refer to <a href="https://developers.google.com/admob/ios/quick-start#update\_your\_infoplist">Admob's website</a>.|
+| Inmobi |InMobiSDK.framework|v7.3.1|pod 'InMobiSDK' ,'7.3.1'|https://support.inmobi.com/monetize/ios-guidelines/||||
+| Flurry |libFlurryAds\_1.0.0.a<br>libFlurry\_9.0.0.a|231\_9.0.0|无|https://dev.flurry.com/admin/applications||||
+| Applovin |AppLovinSDK.framework<br>AppLovinSDKResources.bundle|v6.10.0|pod 'AppLovinSDK', '6.10.0'|https://dash.applovin.com/docs/integration#iosIntegration||||
+| Mintegral |MTGSDK.framework<br> MTGSDKBidding.framework<br>MTGSDKReward.framework <br> MTGSDKInterstitialVideo.framework <br> MTGSDKInterstitial.framework|v5.8.7|pod 'MintegralAdSDK' ,'5.8.7'<br>pod 'MintegralAdSDK/RewardVideoAd','5.8.7'<br>pod 'MintegralAdSDK/BidRewardVideoAd','5.8.7'<br>pod 'MintegralAdSDK/BidInterstitialVideoAd','5.8.7'<br>pod 'MintegralAdSDK/InterstitialVideoAd','5.8.7'<br>pod 'MintegralAdSDK/InterstitialAd','5.8.7'<br>pod 'MintegralAdSDK/BannerAd' ,'5.8.7'<br>pod 'MintegralAdSDK/BidBannerAd','5.8.7'|http://cdn-adn.rayjump.com/cdn-adn/v2/markdown\_v2/index.html?file=sdk-m\_sdk-ios&lang=en||||
+| Mopub |MobPowerNative.framework <br> MobPowerSDK.framework| v5.10.0 |pod 'mopub-ios-sdk', '5.10.0'|https://github.com/mopub||||
+| GDT |libGDTMobSDK.a|v4.11.2|pod 'GDTMobSDK', '4.11.2'|https://e.qq.com/dev/index.html||||
+| Chartboost |Chartboost.framework| v8.0.3 |pod 'ChartboostSDK','8.0.3'| https://dashboard.chartboost.com/tools/sdk	||||
+| Tapjoy |Tapjoy.framework <br> TapjoyResources.bundle| v12.3.4 |pod 'TapjoySDK','12.3.4'|||||
+| Ironsource |IronSource.framework|v6.10.0|pod 'IronSourceSDK','6.10.0'|https://developers.ironsrc.com/sdk-repository/||||
+| UnityAds |UnityAds.framework| v3.4.0 |pod 'UnityAds' , '3.4.0'|https://github.com/Unity-Technologies/unity-ads-ios/releases/tag/3.0.3|||||
+| Vungle |VungleSDK.framework|v6.4.6|pod "VungleSDK-iOS", "6.4.6"|||||
+| Adcolony |AdColony.framework|v4.1.0.0|pod 'AdColony','4.1.0.0'|https://github.com/AdColony||||
+|TouTiao|BUAdSDK.framework<br>BUAdSDK.bundle|v2.5.1.5|pod 'Bytedance-UnionAD' , '2.7.5.2'|http://ad.toutiao.com/union/media/union/download|||
+| Oneway |Oneway|v2.1.0|#无pod|||||
+| Appnext |AppnextNativeAdsSDK<br>AppnextIOSSDK| v1.9.3 |#无pod|https://developers.appnext.com/docs/ios-sdk-installation||||
+| Baidu |BaiduMobAdSDK.framework <br> baidumobadsdk.bundle|v4.6.7|pod 'BaiduMobAdSDK' |https://mssp.baidu.com/bqt/appco.html#/union/download/sdk||||
+|Nend|NendAd.framework <br> NendAdResource.bundle|v5.3.1|pod 'NendSDK_iOS','5.3.1'|https://github.com/fan-ADN||||
+| Maio |Maio.framework|v1.5.0|pod 'MaioSDK','1.5.0'|||https://github.com/imobile-maio||
+| Yeahmobi |CTSDK.framework|v3.2.0|pod 'CTSDK','3.2.0'|||||
+| sigmob |WindSDK.framework<br>sigmob.bundle|v2.15.2|pod 'SigmobAd-iOS', '2.15.2'|||||
+|KS|KSAdSDK.framework <br> KSAdSDK.bundle|v2.5.2.12|#无pod|||需要额外导入第三方依赖：<br> AFNetworking/Godzippa/MJExtension/SDWebImage||
+|Ogury|OMSDK_Oguryco.framework<br>OguryAds.framework<br>OguryConsentManager.framework|1.0.3|#无pod|||由于该平台的GDPR设置必须通过其平台的弹窗来进行设置，如若在欧盟地区不用其平台的弹窗设置GDPR等级，则ecpm会相对较低，所以这里建议开发者自己调用Ogury的api弹窗供用户设置GDPR等级，在api的回调中把topon的GDPR等级一并设置(即调用Ogury的GDPR弹窗，然后在用户选择等级设置之后的回调里，将Topon的GDPR设置为其回调中的等级)。||
 
 您可以使用CocoaPods导入第三方SDK，也可以手动下载导入第三方SDK。
 

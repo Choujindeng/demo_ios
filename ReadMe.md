@@ -1,7 +1,7 @@
 ## [IMPORTANT] DO NOT expose any of the frameworks to Windows operating system; Windows modifies frameworks, making them incomplete and resulting in compile errors.
 ## 【重要】请勿将iOS需要用到的SDK（包括.a、.framework及.embededframework格式的套件）下载或传送至Windows操作系统上，因为Windows文件系统会修改这些SDK，导致它们在Xcode中无法编译。
-# AnythinkSDK_iOS_SDK_5.4.4
-## Third-party SDK version for AnyThink_ios_sdk_5.4.4
+# AnythinkSDK_iOS_SDK_5.4.5
+## Third-party SDK version for AnyThink_ios_sdk_5.4.5
 
 [Integrate Guide for AnyThinkSDK for iOS(English)](iOS_Doc_EN/iOS_Integration_Guide.md)
 
@@ -13,8 +13,8 @@
 
 <br>
 (建议从这里的链接下载,git的download zip会出现文件损坏的问题，导致无法编译)下载地址（download）：<br>
-1.  TopOn iOS SDK v5.4.0 (包括三方广告平台SDK) <br>
-http://sdk-release.toponad.com/iOS/5.4.0/AnyThinkSDKDemo.zip <br>
+1.  TopOn iOS SDK v5.4.5 (包括三方广告平台SDK) <br>
+http://sdk-release.toponad.com/iOS/5.4.5/TopOniOSv5.4.5.zip  <br>
 2. TopOn Unity SDK for iOS <br>
 http://sdk-release.toponad.com/Unity/5.3.0/Unity_iOSv5.3.0.unitypackage <br>
 3. TopOn Unity SDK for iOS & Android <br>

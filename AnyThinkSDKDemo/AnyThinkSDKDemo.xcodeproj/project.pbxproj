@@ -863,7 +863,6 @@
 		8DB704EA236D8839007A889D = {
 			isa = PBXGroup;
 			children = (
-				45D9BC6323CF0EFF00B3973B /* Sigmob.bundle */,
 				8DB704F5236D883A007A889D /* AnyThinkSDKDemo */,
 				8DB704F4236D883A007A889D /* Products */,
 				8DB705C7236D898F007A889D /* Frameworks */,
@@ -911,6 +910,7 @@
 		8DB705C7236D898F007A889D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				45D9BC6323CF0EFF00B3973B /* Sigmob.bundle */,
 				45B76C6323AB4D7F000471D9 /* TraminiSDK.framework */,
 				459A7731239642D9009BB088 /* OguryOED_1.0.3 */,
 				459A77292396416D009BB088 /* AnyThinkOguryInterstitialAdapter.framework */,

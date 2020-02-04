@@ -113,8 +113,7 @@ SDK_Sigmob_Pod="pod 'AnyThinkiOS/AnyThinkSigmobAdapter'"
 SDK_Sigmob_Pod1="pod 'SigmobAd-iOS', '2.15.2'"
 
 input_nwfirmid_list=$1
-input_country=$2
-input_import_type=$3
+input_import_type=$2
 release_folder="release_folder"
 sdk_release="sdk_release_"
 podDoc="pod.txt"

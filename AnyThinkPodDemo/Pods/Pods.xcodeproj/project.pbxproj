@@ -1,0 +1,1161 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		47A48B35767B2FF26EE52EF544D5F14B /* SigmobAd-iOS */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 737E3D978F9632C7A53736391E4F4D28 /* Build configuration list for PBXAggregateTarget "SigmobAd-iOS" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = "SigmobAd-iOS";
+		};
+		F50E9FD6951069AF0D316E257D27E271 /* AnyThinkiOS */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 278AD90FCB445A48AB166D4AF7403C16 /* Build configuration list for PBXAggregateTarget "AnyThinkiOS" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = AnyThinkiOS;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		B823B7749D7CE33E806F322DE0D713DC /* Pods-AnyThinkPodDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B740EE0F01C6672E863C89C43C5C913 /* Pods-AnyThinkPodDemo-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		33626E0EFBF9CEC9EA1892B035863638 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 47A48B35767B2FF26EE52EF544D5F14B;
+			remoteInfo = "SigmobAd-iOS";
+		};
+		49C68A73EE4C9F2BEC6941E3854FEF09 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F50E9FD6951069AF0D316E257D27E271;
+			remoteInfo = AnyThinkiOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		005A8959294023E1C23C208B38AB3637 /* AnyThinkInmobiBannerAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkInmobiBannerAdapter.framework; path = AnyThinkiOS/AnyThinkInmobiBannerAdapter.framework; sourceTree = "<group>"; };
+		02C284B41BC11E8714A8B9126BED3698 /* AnyThinkSigmobInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkSigmobInterstitialAdapter.framework; path = AnyThinkiOS/AnyThinkSigmobInterstitialAdapter.framework; sourceTree = "<group>"; };
+		089475853FE18FCFD2814B4FD8626758 /* AnyThinkAdColonyInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkAdColonyInterstitialAdapter.framework; path = AnyThinkiOS/AnyThinkAdColonyInterstitialAdapter.framework; sourceTree = "<group>"; };
+		0A57FE3C20FA7913AB2FAA1D3F12866B /* AnyThinkAppnextNativeAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkAppnextNativeAdapter.framework; path = AnyThinkiOS/AnyThinkAppnextNativeAdapter.framework; sourceTree = "<group>"; };
+		0CD9A7BF448AF03D4A18EB7D8EF4AD7D /* AnyThinkAdColonyRewardedVideoAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkAdColonyRewardedVideoAdapter.framework; path = AnyThinkiOS/AnyThinkAdColonyRewardedVideoAdapter.framework; sourceTree = "<group>"; };
+		0EF1261E6552744647733853A94A8D01 /* AnyThinkFlurryRewardedVideoAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkFlurryRewardedVideoAdapter.framework; path = AnyThinkiOS/AnyThinkFlurryRewardedVideoAdapter.framework; sourceTree = "<group>"; };
+		0FD01F44CE82C7A1EE62AD5F9E4D41BA /* AnyThinkSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkSDK.framework; path = AnyThinkiOS/AnyThinkSDK.framework; sourceTree = "<group>"; };
+		1084316D37B82D1242379A04BE7F0974 /* AnyThinkOguryRewardedVideoAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkOguryRewardedVideoAdapter.framework; path = AnyThinkiOS/AnyThinkOguryRewardedVideoAdapter.framework; sourceTree = "<group>"; };
+		122ACE2059EC6CDA3BEECF8057E4D389 /* AnyThinkOnewayInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkOnewayInterstitialAdapter.framework; path = AnyThinkiOS/AnyThinkOnewayInterstitialAdapter.framework; sourceTree = "<group>"; };
+		125147DE979167EC93782467C3AB5F74 /* AnyThinkAdmobBannerAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkAdmobBannerAdapter.framework; path = AnyThinkiOS/AnyThinkAdmobBannerAdapter.framework; sourceTree = "<group>"; };
+		132728569B48878FA77C53270A01EF55 /* SigmobAd-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "SigmobAd-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		13F69A6DD928144842CD9BE55F0C7E2E /* AnyThinkApplovinBannerAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkApplovinBannerAdapter.framework; path = AnyThinkiOS/AnyThinkApplovinBannerAdapter.framework; sourceTree = "<group>"; };
+		1C513897426A1A1D6C38719223D339DF /* AnyThinkTTRewardedVideoAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkTTRewardedVideoAdapter.framework; path = AnyThinkiOS/AnyThinkTTRewardedVideoAdapter.framework; sourceTree = "<group>"; };
+		1DDE0EBB98C4B2C5D3BE32D3D1588DD9 /* AnyThinkMaioRewardedVideoAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkMaioRewardedVideoAdapter.framework; path = AnyThinkiOS/AnyThinkMaioRewardedVideoAdapter.framework; sourceTree = "<group>"; };
+		1E75D3F5C330ABEFF50B950B7FEC00F8 /* Pods-AnyThinkPodDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AnyThinkPodDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		263114CECE7F688597A46ED041679A74 /* AnyThinkMyOffer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkMyOffer.framework; path = AnyThinkiOS/AnyThinkMyOffer.framework; sourceTree = "<group>"; };
+		3190C562112C8B24093D4B85C5557E60 /* AnyThinkGDTSplashAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkGDTSplashAdapter.framework; path = AnyThinkiOS/AnyThinkGDTSplashAdapter.framework; sourceTree = "<group>"; };
+		328194AEAD4E591AAC518AAA8A5D9E2C /* AnyThinkInmobiRewardedVideoAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkInmobiRewardedVideoAdapter.framework; path = AnyThinkiOS/AnyThinkInmobiRewardedVideoAdapter.framework; sourceTree = "<group>"; };
+		328E0727120A7E5C1B2732064A64450C /* AnyThinkMaioInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkMaioInterstitialAdapter.framework; path = AnyThinkiOS/AnyThinkMaioInterstitialAdapter.framework; sourceTree = "<group>"; };
+		34E1CD212DD7772D8AAB344190EE410C /* AnyThinkGDTBannerAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkGDTBannerAdapter.framework; path = AnyThinkiOS/AnyThinkGDTBannerAdapter.framework; sourceTree = "<group>"; };
+		36E99BCDE118380A45CDD54B22231A54 /* AnyThinkAdmobNativeAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkAdmobNativeAdapter.framework; path = AnyThinkiOS/AnyThinkAdmobNativeAdapter.framework; sourceTree = "<group>"; };
+		3958032D3B761826F72A98DA699343E5 /* AnyThinkTTBannerAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkTTBannerAdapter.framework; path = AnyThinkiOS/AnyThinkTTBannerAdapter.framework; sourceTree = "<group>"; };
+		39B5B2BED765ECC517CD97063AEC8B6A /* Sigmob.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = Sigmob.bundle; path = Sigmob/Sigmob.bundle; sourceTree = "<group>"; };
+		405A7BA578FEEEE1EF686270B1AF7616 /* AnyThinkYeahmobiNativeAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkYeahmobiNativeAdapter.framework; path = AnyThinkiOS/AnyThinkYeahmobiNativeAdapter.framework; sourceTree = "<group>"; };
+		4754B20CFBAE4E1C07190C8B11E4AC9A /* AnyThinkTTInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkTTInterstitialAdapter.framework; path = AnyThinkiOS/AnyThinkTTInterstitialAdapter.framework; sourceTree = "<group>"; };
+		48591BA5982CA9B54C9AEED0F8345DB8 /* AnyThinkTTSplashAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkTTSplashAdapter.framework; path = AnyThinkiOS/AnyThinkTTSplashAdapter.framework; sourceTree = "<group>"; };
+		4B6D5F2F52C7B52526BB88FB5EDEF61A /* AnyThinkApplovinRewardedVideoAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkApplovinRewardedVideoAdapter.framework; path = AnyThinkiOS/AnyThinkApplovinRewardedVideoAdapter.framework; sourceTree = "<group>"; };
+		4F6AB984D341180C94B75F149C027A72 /* AnyThinkAdmobRewardedVideoAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkAdmobRewardedVideoAdapter.framework; path = AnyThinkiOS/AnyThinkAdmobRewardedVideoAdapter.framework; sourceTree = "<group>"; };
+		5071F47D335AD1CB48C51877648DDD89 /* AnyThinkSigmobRewardedVideoAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkSigmobRewardedVideoAdapter.framework; path = AnyThinkiOS/AnyThinkSigmobRewardedVideoAdapter.framework; sourceTree = "<group>"; };
+		56BB4302093866F85CBE1E851BF64B15 /* AnyThinkGDTInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkGDTInterstitialAdapter.framework; path = AnyThinkiOS/AnyThinkGDTInterstitialAdapter.framework; sourceTree = "<group>"; };
+		57DEB05329B4C28940DC53D65D61AD49 /* AnyThinkiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AnyThinkiOS.release.xcconfig; sourceTree = "<group>"; };
+		591C7D5BB7CD148E4A1A8CE6F2148F39 /* AnyThinkInmobiInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkInmobiInterstitialAdapter.framework; path = AnyThinkiOS/AnyThinkInmobiInterstitialAdapter.framework; sourceTree = "<group>"; };
+		59BA5477FCE15DE98BE48BA3C34AE8E1 /* AnyThinkFacebookNativeAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkFacebookNativeAdapter.framework; path = AnyThinkiOS/AnyThinkFacebookNativeAdapter.framework; sourceTree = "<group>"; };
+		59FFCB7A01C5EEF07DED9ADF9E37B0BC /* AnyThinkMopubRewardedVideoAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkMopubRewardedVideoAdapter.framework; path = AnyThinkiOS/AnyThinkMopubRewardedVideoAdapter.framework; sourceTree = "<group>"; };
+		60C99E251F871D269F21A860DCE9EB0C /* Pods-AnyThinkPodDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AnyThinkPodDemo-resources.sh"; sourceTree = "<group>"; };
+		61036B768153B110631DF6D183C12881 /* AnyThinkFlurryInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkFlurryInterstitialAdapter.framework; path = AnyThinkiOS/AnyThinkFlurryInterstitialAdapter.framework; sourceTree = "<group>"; };
+		634B16CB9D56CB03767080A7350C5C22 /* libPods-AnyThinkPodDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-AnyThinkPodDemo.a"; path = "libPods-AnyThinkPodDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		65DA3205450DB6F5DDBA4F0C8671A317 /* AnyThinkTapjoyRewardedVideoAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkTapjoyRewardedVideoAdapter.framework; path = AnyThinkiOS/AnyThinkTapjoyRewardedVideoAdapter.framework; sourceTree = "<group>"; };
+		699474914FC077F60306A73CDA713AC3 /* AnyThinkApplovinNativeAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkApplovinNativeAdapter.framework; path = AnyThinkiOS/AnyThinkApplovinNativeAdapter.framework; sourceTree = "<group>"; };
+		6D298128C4215AD9125787B9857F2336 /* AnyThinkiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AnyThinkiOS.debug.xcconfig; sourceTree = "<group>"; };
+		6F0A11004A00FF838546D20D0C2B0841 /* AnyThinkOnewayRewardedVideoAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkOnewayRewardedVideoAdapter.framework; path = AnyThinkiOS/AnyThinkOnewayRewardedVideoAdapter.framework; sourceTree = "<group>"; };
+		7024F2349B53BFC60833E53A06ECB667 /* SigmobAd-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "SigmobAd-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		73E251672CE723FC16B73CC64B09D15E /* AnyThinkBaiduInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkBaiduInterstitialAdapter.framework; path = AnyThinkiOS/AnyThinkBaiduInterstitialAdapter.framework; sourceTree = "<group>"; };
+		74D8C87773DA4C7817C2F0354E7B2714 /* AnyThinkKSInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkKSInterstitialAdapter.framework; path = AnyThinkiOS/AnyThinkKSInterstitialAdapter.framework; sourceTree = "<group>"; };
+		7871A9A9AA7397253563D7A255387E05 /* AnyThinkGDTNativeAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkGDTNativeAdapter.framework; path = AnyThinkiOS/AnyThinkGDTNativeAdapter.framework; sourceTree = "<group>"; };
+		7D46281AE54AEB27C5410AC5B6E96356 /* AnyThinkMyOfferRewardedVideoAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkMyOfferRewardedVideoAdapter.framework; path = AnyThinkiOS/AnyThinkMyOfferRewardedVideoAdapter.framework; sourceTree = "<group>"; };
+		80B892684AF6D06F4241873E93A0EBCA /* AnyThinkIronSourceInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkIronSourceInterstitialAdapter.framework; path = AnyThinkiOS/AnyThinkIronSourceInterstitialAdapter.framework; sourceTree = "<group>"; };
+		819555734E55A1FBA3AF22B2AFC56335 /* AnyThinkYeahmobiInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkYeahmobiInterstitialAdapter.framework; path = AnyThinkiOS/AnyThinkYeahmobiInterstitialAdapter.framework; sourceTree = "<group>"; };
+		82B00385B47A9B3AF60F056FD42F0871 /* AnyThinkUnityAdsRewardedVideoAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkUnityAdsRewardedVideoAdapter.framework; path = AnyThinkiOS/AnyThinkUnityAdsRewardedVideoAdapter.framework; sourceTree = "<group>"; };
+		870DA237E623179913F25DE691C82E58 /* AnyThinkNendInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkNendInterstitialAdapter.framework; path = AnyThinkiOS/AnyThinkNendInterstitialAdapter.framework; sourceTree = "<group>"; };
+		87CF6316F70A8E79AA5FD7823B8FCE36 /* AnyThinkGDTRewardedVideoAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkGDTRewardedVideoAdapter.framework; path = AnyThinkiOS/AnyThinkGDTRewardedVideoAdapter.framework; sourceTree = "<group>"; };
+		8C06054C234D9BACBD7A02368B22F58C /* AnyThinkFacebookBannerAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkFacebookBannerAdapter.framework; path = AnyThinkiOS/AnyThinkFacebookBannerAdapter.framework; sourceTree = "<group>"; };
+		8C3B93DEA063B46B0072D835F819815B /* AnyThinkAppnextInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkAppnextInterstitialAdapter.framework; path = AnyThinkiOS/AnyThinkAppnextInterstitialAdapter.framework; sourceTree = "<group>"; };
+		913F175805E19F36A1A3FE7FE93D1144 /* AnyThinkTapjoyInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkTapjoyInterstitialAdapter.framework; path = AnyThinkiOS/AnyThinkTapjoyInterstitialAdapter.framework; sourceTree = "<group>"; };
+		9B2B62146DCA5E9921677E8010F59EC2 /* AnyThinkBaiduSplashAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkBaiduSplashAdapter.framework; path = AnyThinkiOS/AnyThinkBaiduSplashAdapter.framework; sourceTree = "<group>"; };
+		9B740EE0F01C6672E863C89C43C5C913 /* Pods-AnyThinkPodDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AnyThinkPodDemo-dummy.m"; sourceTree = "<group>"; };
+		9C05632C24C411038DC1E54EC020E82D /* AnyThinkVungleRewardedVideoAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkVungleRewardedVideoAdapter.framework; path = AnyThinkiOS/AnyThinkVungleRewardedVideoAdapter.framework; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A50EF140AC1276BD77794432BE065A18 /* AnyThinkIronSourceRewardedVideoAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkIronSourceRewardedVideoAdapter.framework; path = AnyThinkiOS/AnyThinkIronSourceRewardedVideoAdapter.framework; sourceTree = "<group>"; };
+		A5504C7A720E9B401BD9EFDF47CCCD35 /* WindSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WindSDK.framework; path = Sigmob/WindSDK.framework; sourceTree = "<group>"; };
+		AA30709D8F6EFB38F2768626FE473B53 /* Pods-AnyThinkPodDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AnyThinkPodDemo.release.xcconfig"; sourceTree = "<group>"; };
+		AA75E7D6247963DBDBC4C9BB40AB7812 /* AnyThinkMintegralBannerAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkMintegralBannerAdapter.framework; path = AnyThinkiOS/AnyThinkMintegralBannerAdapter.framework; sourceTree = "<group>"; };
+		B6850EBD3AC5A1B4569465EF74F6B961 /* AnyThinkAppnextBannerAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkAppnextBannerAdapter.framework; path = AnyThinkiOS/AnyThinkAppnextBannerAdapter.framework; sourceTree = "<group>"; };
+		B797678939DD347D07FE2E3D123D8C2E /* AnyThinkInmobiNativeAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkInmobiNativeAdapter.framework; path = AnyThinkiOS/AnyThinkInmobiNativeAdapter.framework; sourceTree = "<group>"; };
+		B8FD252F6DDEEFDAA2F14C1E62E9AD30 /* AnyThinkNendNativeAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkNendNativeAdapter.framework; path = AnyThinkiOS/AnyThinkNendNativeAdapter.framework; sourceTree = "<group>"; };
+		BE4267C89EFDDAD6F901E320F9B5FE3E /* AnyThinkApplovinInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkApplovinInterstitialAdapter.framework; path = AnyThinkiOS/AnyThinkApplovinInterstitialAdapter.framework; sourceTree = "<group>"; };
+		BF5703FF08F998BD92E7E48ED4A410C0 /* AnyThinkMintegralInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkMintegralInterstitialAdapter.framework; path = AnyThinkiOS/AnyThinkMintegralInterstitialAdapter.framework; sourceTree = "<group>"; };
+		C050A11D7155A75E4C3C6B07C1D02076 /* AnyThinkSDK.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = AnyThinkSDK.bundle; path = AnyThinkiOS/AnyThinkSDK.bundle; sourceTree = "<group>"; };
+		C0C769A67FA09CD922613BB60970B3BC /* AnyThinkSigmobSplashAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkSigmobSplashAdapter.framework; path = AnyThinkiOS/AnyThinkSigmobSplashAdapter.framework; sourceTree = "<group>"; };
+		C2A223225292DF0CC034F2BC88EE893C /* AnyThinkMintegralRewardedVideoAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkMintegralRewardedVideoAdapter.framework; path = AnyThinkiOS/AnyThinkMintegralRewardedVideoAdapter.framework; sourceTree = "<group>"; };
+		C40612E4A303ED76F01115C68AFB6ECB /* AnyThinkMopubBannerAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkMopubBannerAdapter.framework; path = AnyThinkiOS/AnyThinkMopubBannerAdapter.framework; sourceTree = "<group>"; };
+		C545CC0A24D3990527C4D15AE6411D8F /* AnyThinkMopubNativeAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkMopubNativeAdapter.framework; path = AnyThinkiOS/AnyThinkMopubNativeAdapter.framework; sourceTree = "<group>"; };
+		CD19896A8134272F246CCAFDC0BFC937 /* AnyThinkMopubInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkMopubInterstitialAdapter.framework; path = AnyThinkiOS/AnyThinkMopubInterstitialAdapter.framework; sourceTree = "<group>"; };
+		CEE0841E6C498E4269DA0989405DD838 /* AnyThinkChartboostRewardedVideoAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkChartboostRewardedVideoAdapter.framework; path = AnyThinkiOS/AnyThinkChartboostRewardedVideoAdapter.framework; sourceTree = "<group>"; };
+		CF29D1E00418673C088E4FC3DB8237C1 /* AnyThinkBanner.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkBanner.framework; path = AnyThinkiOS/AnyThinkBanner.framework; sourceTree = "<group>"; };
+		D19D38864B082568D68DC3484E3DA263 /* AnyThinkBaiduNativeAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkBaiduNativeAdapter.framework; path = AnyThinkiOS/AnyThinkBaiduNativeAdapter.framework; sourceTree = "<group>"; };
+		D1CB90EA00959A700AA2A66A57FF1036 /* AnyThinkHeaderBidding.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkHeaderBidding.framework; path = AnyThinkiOS/AnyThinkHeaderBidding.framework; sourceTree = "<group>"; };
+		D694AB57B47612F89A0D0656C4F5C933 /* AnyThinkKSRewardedVideoAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkKSRewardedVideoAdapter.framework; path = AnyThinkiOS/AnyThinkKSRewardedVideoAdapter.framework; sourceTree = "<group>"; };
+		D738B4D5EEE0CE9C57A9BCF0BA85FB04 /* AnyThinkAdmobInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkAdmobInterstitialAdapter.framework; path = AnyThinkiOS/AnyThinkAdmobInterstitialAdapter.framework; sourceTree = "<group>"; };
+		D7C3E7A92510E95D1760770AF10A16C3 /* AnyThinkChartboostInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkChartboostInterstitialAdapter.framework; path = AnyThinkiOS/AnyThinkChartboostInterstitialAdapter.framework; sourceTree = "<group>"; };
+		DAA90A082A997EFA6649AB839668248A /* Pods-AnyThinkPodDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AnyThinkPodDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		DB1565845D04D1E6C01A9EC8A03A1578 /* AnyThinkNendBannerAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkNendBannerAdapter.framework; path = AnyThinkiOS/AnyThinkNendBannerAdapter.framework; sourceTree = "<group>"; };
+		DB2ABE88E5EF4F9E577763025B75C21E /* AnyThinkAppnextRewardedVideoAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkAppnextRewardedVideoAdapter.framework; path = AnyThinkiOS/AnyThinkAppnextRewardedVideoAdapter.framework; sourceTree = "<group>"; };
+		DC714356E2A1375F25C2370FB7660D08 /* AnyThinkFlurryBannerAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkFlurryBannerAdapter.framework; path = AnyThinkiOS/AnyThinkFlurryBannerAdapter.framework; sourceTree = "<group>"; };
+		DE5FA4D9E28F2F2D588BC06127BA5585 /* AnyThinkInterstitial.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkInterstitial.framework; path = AnyThinkiOS/AnyThinkInterstitial.framework; sourceTree = "<group>"; };
+		E3FA61F67FA8489C0ADAAE6DD568C99A /* AnyThinkBaiduBannerAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkBaiduBannerAdapter.framework; path = AnyThinkiOS/AnyThinkBaiduBannerAdapter.framework; sourceTree = "<group>"; };
+		E4DC922CC195E0AF7B236E48D29C975B /* AnyThinkMyOfferInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkMyOfferInterstitialAdapter.framework; path = AnyThinkiOS/AnyThinkMyOfferInterstitialAdapter.framework; sourceTree = "<group>"; };
+		E60899564D99006653F107689B4E3775 /* AnyThinkUnityAdsInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkUnityAdsInterstitialAdapter.framework; path = AnyThinkiOS/AnyThinkUnityAdsInterstitialAdapter.framework; sourceTree = "<group>"; };
+		E6528E4369B9ED1801CD2EF31EDF0623 /* AnyThinkOguryInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkOguryInterstitialAdapter.framework; path = AnyThinkiOS/AnyThinkOguryInterstitialAdapter.framework; sourceTree = "<group>"; };
+		E9DB6EF8CD1C4101B8D7D87B46A1C065 /* AnyThinkFlurryNativeAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkFlurryNativeAdapter.framework; path = AnyThinkiOS/AnyThinkFlurryNativeAdapter.framework; sourceTree = "<group>"; };
+		E9EC1312F9551EF85A08E56C396DF68F /* AnyThinkTTNativeAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkTTNativeAdapter.framework; path = AnyThinkiOS/AnyThinkTTNativeAdapter.framework; sourceTree = "<group>"; };
+		EB3D4DA47F9F435CE698A2C459B57D4E /* AnyThinkNative.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkNative.framework; path = AnyThinkiOS/AnyThinkNative.framework; sourceTree = "<group>"; };
+		ED79A0A52C6303E95F6046704E460A80 /* AnyThinkFacebookRewardedVideoAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkFacebookRewardedVideoAdapter.framework; path = AnyThinkiOS/AnyThinkFacebookRewardedVideoAdapter.framework; sourceTree = "<group>"; };
+		EE5E0704F3F660BACC636D32E74F472A /* AnyThinkVungleInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkVungleInterstitialAdapter.framework; path = AnyThinkiOS/AnyThinkVungleInterstitialAdapter.framework; sourceTree = "<group>"; };
+		EFBD795001F4266F91911BB0CA189095 /* Pods-AnyThinkPodDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AnyThinkPodDemo-acknowledgements.plist"; sourceTree = "<group>"; };
+		F0310E9852F2951589E25F24D24FF9CC /* AnyThinkRewardedVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkRewardedVideo.framework; path = AnyThinkiOS/AnyThinkRewardedVideo.framework; sourceTree = "<group>"; };
+		F0AF2B94AD7B3E2E2BA5AE22023C73E7 /* AnyThinkYeahmobiRewardedVideoAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkYeahmobiRewardedVideoAdapter.framework; path = AnyThinkiOS/AnyThinkYeahmobiRewardedVideoAdapter.framework; sourceTree = "<group>"; };
+		F240E7024A2B8548C61243B1B7CA6AF6 /* AnyThinkFacebookInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkFacebookInterstitialAdapter.framework; path = AnyThinkiOS/AnyThinkFacebookInterstitialAdapter.framework; sourceTree = "<group>"; };
+		F38D2A602865E5BA7E1B5AEFA2CCC075 /* AnyThinkMintegralNativeAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkMintegralNativeAdapter.framework; path = AnyThinkiOS/AnyThinkMintegralNativeAdapter.framework; sourceTree = "<group>"; };
+		F59C4FC0C237C35F8B8A1F26E2744874 /* AnyThinkBaiduRewardedVideoAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkBaiduRewardedVideoAdapter.framework; path = AnyThinkiOS/AnyThinkBaiduRewardedVideoAdapter.framework; sourceTree = "<group>"; };
+		FB79246ED72757C9A01F97758C906755 /* AnyThinkSplash.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkSplash.framework; path = AnyThinkiOS/AnyThinkSplash.framework; sourceTree = "<group>"; };
+		FCCF2791A726917834AF52C7E4F593C2 /* AnyThinkYeahmobiBannerAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkYeahmobiBannerAdapter.framework; path = AnyThinkiOS/AnyThinkYeahmobiBannerAdapter.framework; sourceTree = "<group>"; };
+		FEB6F84D37EA3AAC7C10AD17D75B71AE /* AnyThinkNendRewardedVideoAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkNendRewardedVideoAdapter.framework; path = AnyThinkiOS/AnyThinkNendRewardedVideoAdapter.framework; sourceTree = "<group>"; };
+		FFB1B88E33F78929B560D127F77643A7 /* TraminiSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TraminiSDK.framework; path = AnyThinkiOS/TraminiSDK.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		83E932634D8ABE8E3F19BCD3F3FACE23 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0138C877E13A70BE75847042C6499A08 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E3FA61F67FA8489C0ADAAE6DD568C99A /* AnyThinkBaiduBannerAdapter.framework */,
+				73E251672CE723FC16B73CC64B09D15E /* AnyThinkBaiduInterstitialAdapter.framework */,
+				D19D38864B082568D68DC3484E3DA263 /* AnyThinkBaiduNativeAdapter.framework */,
+				F59C4FC0C237C35F8B8A1F26E2744874 /* AnyThinkBaiduRewardedVideoAdapter.framework */,
+				9B2B62146DCA5E9921677E8010F59EC2 /* AnyThinkBaiduSplashAdapter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0282F1A34E2DE9745091DF521C7B6D5F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D7C3E7A92510E95D1760770AF10A16C3 /* AnyThinkChartboostInterstitialAdapter.framework */,
+				CEE0841E6C498E4269DA0989405DD838 /* AnyThinkChartboostRewardedVideoAdapter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		03DBBD988AD9605139BD5C7A2469BAAB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				634B16CB9D56CB03767080A7350C5C22 /* libPods-AnyThinkPodDemo.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		086B295A1B522760BB0C24215D59701B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7024F2349B53BFC60833E53A06ECB667 /* SigmobAd-iOS.debug.xcconfig */,
+				132728569B48878FA77C53270A01EF55 /* SigmobAd-iOS.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SigmobAd-iOS";
+			sourceTree = "<group>";
+		};
+		0A10353A43A613E7C38AE1AE8FA91C23 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EE5E0704F3F660BACC636D32E74F472A /* AnyThinkVungleInterstitialAdapter.framework */,
+				9C05632C24C411038DC1E54EC020E82D /* AnyThinkVungleRewardedVideoAdapter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		10956E8DE5E83055EAE1219560EF574B /* AnyThinkFacebookAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				D1BB1A18948EA270A37708C67A67BF73 /* Frameworks */,
+			);
+			name = AnyThinkFacebookAdapter;
+			sourceTree = "<group>";
+		};
+		15A8263A40B8B6B028F5B3BB8D1DF291 /* AnyThinkSigmobAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				7A64486474821178397DE390788ADAD7 /* Frameworks */,
+			);
+			name = AnyThinkSigmobAdapter;
+			sourceTree = "<group>";
+		};
+		18404BA0C5809F27E65653D0FF5B456F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A5504C7A720E9B401BD9EFDF47CCCD35 /* WindSDK.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1CCC3002D80B79A262F1734FD808D16C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				005A8959294023E1C23C208B38AB3637 /* AnyThinkInmobiBannerAdapter.framework */,
+				591C7D5BB7CD148E4A1A8CE6F2148F39 /* AnyThinkInmobiInterstitialAdapter.framework */,
+				B797678939DD347D07FE2E3D123D8C2E /* AnyThinkInmobiNativeAdapter.framework */,
+				328194AEAD4E591AAC518AAA8A5D9E2C /* AnyThinkInmobiRewardedVideoAdapter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2006C18993AB8479FE064B485726D3DE /* AnyThinkVungleAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				0A10353A43A613E7C38AE1AE8FA91C23 /* Frameworks */,
+			);
+			name = AnyThinkVungleAdapter;
+			sourceTree = "<group>";
+		};
+		299AE152C1C726F34BC1178B6F27A37A /* AnyThinkOnewayAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				D889A5F232DC0A5C65567F785A5A4E93 /* Frameworks */,
+			);
+			name = AnyThinkOnewayAdapter;
+			sourceTree = "<group>";
+		};
+		2C82371608C8B77C0A03AEF3A86554A7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B6850EBD3AC5A1B4569465EF74F6B961 /* AnyThinkAppnextBannerAdapter.framework */,
+				8C3B93DEA063B46B0072D835F819815B /* AnyThinkAppnextInterstitialAdapter.framework */,
+				0A57FE3C20FA7913AB2FAA1D3F12866B /* AnyThinkAppnextNativeAdapter.framework */,
+				DB2ABE88E5EF4F9E577763025B75C21E /* AnyThinkAppnextRewardedVideoAdapter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		30A73D3A918ADB64BC295D107EBAFF4D /* Pods-AnyThinkPodDemo */ = {
+			isa = PBXGroup;
+			children = (
+				DAA90A082A997EFA6649AB839668248A /* Pods-AnyThinkPodDemo-acknowledgements.markdown */,
+				EFBD795001F4266F91911BB0CA189095 /* Pods-AnyThinkPodDemo-acknowledgements.plist */,
+				9B740EE0F01C6672E863C89C43C5C913 /* Pods-AnyThinkPodDemo-dummy.m */,
+				60C99E251F871D269F21A860DCE9EB0C /* Pods-AnyThinkPodDemo-resources.sh */,
+				1E75D3F5C330ABEFF50B950B7FEC00F8 /* Pods-AnyThinkPodDemo.debug.xcconfig */,
+				AA30709D8F6EFB38F2768626FE473B53 /* Pods-AnyThinkPodDemo.release.xcconfig */,
+			);
+			name = "Pods-AnyThinkPodDemo";
+			path = "Target Support Files/Pods-AnyThinkPodDemo";
+			sourceTree = "<group>";
+		};
+		34DE2DA4B5B716370B999B77DA3D8A86 /* AnyThinkAdcolonyAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				8A1B66B4EF754197A6A2977D6B06D601 /* Frameworks */,
+			);
+			name = AnyThinkAdcolonyAdapter;
+			sourceTree = "<group>";
+		};
+		442A9AD8B23417DC585C05E626F3BB5B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				263114CECE7F688597A46ED041679A74 /* AnyThinkMyOffer.framework */,
+				E4DC922CC195E0AF7B236E48D29C975B /* AnyThinkMyOfferInterstitialAdapter.framework */,
+				7D46281AE54AEB27C5410AC5B6E96356 /* AnyThinkMyOfferRewardedVideoAdapter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4A3927433F79C9245143D1E4285C1A56 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				30A73D3A918ADB64BC295D107EBAFF4D /* Pods-AnyThinkPodDemo */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		4E7671E1571697FE134B8F3C2C591805 /* AnyThinkYeahmobiAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				6D99320A5E386CB26BDBD9224D7A56F0 /* Frameworks */,
+			);
+			name = AnyThinkYeahmobiAdapter;
+			sourceTree = "<group>";
+		};
+		52881EB43A4848E38AFC04B956FD2B8A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3958032D3B761826F72A98DA699343E5 /* AnyThinkTTBannerAdapter.framework */,
+				4754B20CFBAE4E1C07190C8B11E4AC9A /* AnyThinkTTInterstitialAdapter.framework */,
+				E9EC1312F9551EF85A08E56C396DF68F /* AnyThinkTTNativeAdapter.framework */,
+				1C513897426A1A1D6C38719223D339DF /* AnyThinkTTRewardedVideoAdapter.framework */,
+				48591BA5982CA9B54C9AEED0F8345DB8 /* AnyThinkTTSplashAdapter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		53E82FCDBF4C8E5A3309CDB66FA0BD41 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C40612E4A303ED76F01115C68AFB6ECB /* AnyThinkMopubBannerAdapter.framework */,
+				CD19896A8134272F246CCAFDC0BFC937 /* AnyThinkMopubInterstitialAdapter.framework */,
+				C545CC0A24D3990527C4D15AE6411D8F /* AnyThinkMopubNativeAdapter.framework */,
+				59FFCB7A01C5EEF07DED9ADF9E37B0BC /* AnyThinkMopubRewardedVideoAdapter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5412AA65E8FA95942E15BFF0CA0771E8 /* AnyThinkMaioAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				77283E7447C6D945F0DDBA075A628C8D /* Frameworks */,
+			);
+			name = AnyThinkMaioAdapter;
+			sourceTree = "<group>";
+		};
+		58A4044FE86498EB8741B529B886B54C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E60899564D99006653F107689B4E3775 /* AnyThinkUnityAdsInterstitialAdapter.framework */,
+				82B00385B47A9B3AF60F056FD42F0871 /* AnyThinkUnityAdsRewardedVideoAdapter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5A5DE0D7B3214D49351202EBF911EF28 /* AnyThinkUnityAdsAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				58A4044FE86498EB8741B529B886B54C /* Frameworks */,
+			);
+			name = AnyThinkUnityAdsAdapter;
+			sourceTree = "<group>";
+		};
+		5A68EDE329732CFA342CFDA45FCAB163 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				39B5B2BED765ECC517CD97063AEC8B6A /* Sigmob.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		61248AD5F92A6293020996B5567F7BFC /* AnyThinkOguryAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				9AE4591E2FBD9342E733CFFA19647977 /* Frameworks */,
+			);
+			name = AnyThinkOguryAdapter;
+			sourceTree = "<group>";
+		};
+		67EF3D9DD4229373B517A9E8C56EAF93 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C050A11D7155A75E4C3C6B07C1D02076 /* AnyThinkSDK.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		6D99320A5E386CB26BDBD9224D7A56F0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FCCF2791A726917834AF52C7E4F593C2 /* AnyThinkYeahmobiBannerAdapter.framework */,
+				819555734E55A1FBA3AF22B2AFC56335 /* AnyThinkYeahmobiInterstitialAdapter.framework */,
+				405A7BA578FEEEE1EF686270B1AF7616 /* AnyThinkYeahmobiNativeAdapter.framework */,
+				F0AF2B94AD7B3E2E2BA5AE22023C73E7 /* AnyThinkYeahmobiRewardedVideoAdapter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		77283E7447C6D945F0DDBA075A628C8D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				328E0727120A7E5C1B2732064A64450C /* AnyThinkMaioInterstitialAdapter.framework */,
+				1DDE0EBB98C4B2C5D3BE32D3D1588DD9 /* AnyThinkMaioRewardedVideoAdapter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		78711A9BA0908A6FCB67B55626C17044 /* AnyThinkApplovinAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				DAE4473899CEAA5A510F4D575F7C9507 /* Frameworks */,
+			);
+			name = AnyThinkApplovinAdapter;
+			sourceTree = "<group>";
+		};
+		796B71F4D392CBC1F3C362991A848350 /* AnyThinkTapjoyAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				8636AC29105494C7003E72DD74B30548 /* Frameworks */,
+			);
+			name = AnyThinkTapjoyAdapter;
+			sourceTree = "<group>";
+		};
+		7A1527B81D6A2DE23FB8679D48BDF540 /* SigmobAd-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				18404BA0C5809F27E65653D0FF5B456F /* Frameworks */,
+				5A68EDE329732CFA342CFDA45FCAB163 /* Resources */,
+				086B295A1B522760BB0C24215D59701B /* Support Files */,
+			);
+			name = "SigmobAd-iOS";
+			path = "SigmobAd-iOS";
+			sourceTree = "<group>";
+		};
+		7A64486474821178397DE390788ADAD7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				02C284B41BC11E8714A8B9126BED3698 /* AnyThinkSigmobInterstitialAdapter.framework */,
+				5071F47D335AD1CB48C51877648DDD89 /* AnyThinkSigmobRewardedVideoAdapter.framework */,
+				C0C769A67FA09CD922613BB60970B3BC /* AnyThinkSigmobSplashAdapter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7AE4A70C5FCC7E855F93A1D8F27656F5 /* AnyThinkMopubAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				53E82FCDBF4C8E5A3309CDB66FA0BD41 /* Frameworks */,
+			);
+			name = AnyThinkMopubAdapter;
+			sourceTree = "<group>";
+		};
+		7B35394D238F8485948ECFBB1BC6FB1F /* AnyThinkiOS */ = {
+			isa = PBXGroup;
+			children = (
+				34DE2DA4B5B716370B999B77DA3D8A86 /* AnyThinkAdcolonyAdapter */,
+				D1C2EF888E74767CF2A274F4BB358D11 /* AnyThinkAdmobAdapter */,
+				78711A9BA0908A6FCB67B55626C17044 /* AnyThinkApplovinAdapter */,
+				8FA6EED8C82CC8F10B3868B654445975 /* AnyThinkAppnextAdapter */,
+				7EFC8B429FFAEDD0677B516C9ED01E0C /* AnyThinkBaiduAdapter */,
+				D3609FB2E599F3949EC6EED087B9A68D /* AnyThinkChartboostAdapter */,
+				10956E8DE5E83055EAE1219560EF574B /* AnyThinkFacebookAdapter */,
+				FFCAB8FEA385384B40FBC958F898AC15 /* AnyThinkFlurryAdapter */,
+				7DA08F4AFA4011E1CE82B7F0C420EC0E /* AnyThinkGDTAdapter */,
+				A75BEF5084B12C5B2B110D3C07DC2ABD /* AnyThinkInmobiAdapter */,
+				D604A1226570FEA91AF99BAA872FE4FE /* AnyThinkIronSourceAdapter */,
+				DEC874B66337DC868C68E67C7F7E661E /* AnyThinkKSAdapter */,
+				5412AA65E8FA95942E15BFF0CA0771E8 /* AnyThinkMaioAdapter */,
+				BFDF067F64184630BB4CD56024CA91B2 /* AnyThinkMintegralAdapter */,
+				7AE4A70C5FCC7E855F93A1D8F27656F5 /* AnyThinkMopubAdapter */,
+				B26710A4BF93C5EC422A7050E501A367 /* AnyThinkMyOfferAdapter */,
+				E135767B7A912F64CA23AB33D46D83E0 /* AnyThinkNendAdapter */,
+				61248AD5F92A6293020996B5567F7BFC /* AnyThinkOguryAdapter */,
+				299AE152C1C726F34BC1178B6F27A37A /* AnyThinkOnewayAdapter */,
+				90B320BDFD4594CD1DE2301C52BCCEBF /* AnyThinkSDK */,
+				15A8263A40B8B6B028F5B3BB8D1DF291 /* AnyThinkSigmobAdapter */,
+				796B71F4D392CBC1F3C362991A848350 /* AnyThinkTapjoyAdapter */,
+				BA4E1E01D707FC97647F01EF485821E8 /* AnyThinkTouTiaoAdapter */,
+				5A5DE0D7B3214D49351202EBF911EF28 /* AnyThinkUnityAdsAdapter */,
+				2006C18993AB8479FE064B485726D3DE /* AnyThinkVungleAdapter */,
+				4E7671E1571697FE134B8F3C2C591805 /* AnyThinkYeahmobiAdapter */,
+				E7FBE3C55891175A3731D5AAA0CDB877 /* Support Files */,
+			);
+			name = AnyThinkiOS;
+			path = AnyThinkiOS;
+			sourceTree = "<group>";
+		};
+		7DA08F4AFA4011E1CE82B7F0C420EC0E /* AnyThinkGDTAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				E1982925AF7AC036D2EB94418F7B2E16 /* Frameworks */,
+			);
+			name = AnyThinkGDTAdapter;
+			sourceTree = "<group>";
+		};
+		7EFC8B429FFAEDD0677B516C9ED01E0C /* AnyThinkBaiduAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				0138C877E13A70BE75847042C6499A08 /* Frameworks */,
+			);
+			name = AnyThinkBaiduAdapter;
+			sourceTree = "<group>";
+		};
+		837478F86AD8358C2C844EDFEB87087A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CF29D1E00418673C088E4FC3DB8237C1 /* AnyThinkBanner.framework */,
+				D1CB90EA00959A700AA2A66A57FF1036 /* AnyThinkHeaderBidding.framework */,
+				DE5FA4D9E28F2F2D588BC06127BA5585 /* AnyThinkInterstitial.framework */,
+				EB3D4DA47F9F435CE698A2C459B57D4E /* AnyThinkNative.framework */,
+				F0310E9852F2951589E25F24D24FF9CC /* AnyThinkRewardedVideo.framework */,
+				0FD01F44CE82C7A1EE62AD5F9E4D41BA /* AnyThinkSDK.framework */,
+				FB79246ED72757C9A01F97758C906755 /* AnyThinkSplash.framework */,
+				FFB1B88E33F78929B560D127F77643A7 /* TraminiSDK.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8636AC29105494C7003E72DD74B30548 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				913F175805E19F36A1A3FE7FE93D1144 /* AnyThinkTapjoyInterstitialAdapter.framework */,
+				65DA3205450DB6F5DDBA4F0C8671A317 /* AnyThinkTapjoyRewardedVideoAdapter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8A1B66B4EF754197A6A2977D6B06D601 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				089475853FE18FCFD2814B4FD8626758 /* AnyThinkAdColonyInterstitialAdapter.framework */,
+				0CD9A7BF448AF03D4A18EB7D8EF4AD7D /* AnyThinkAdColonyRewardedVideoAdapter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8FA6EED8C82CC8F10B3868B654445975 /* AnyThinkAppnextAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				2C82371608C8B77C0A03AEF3A86554A7 /* Frameworks */,
+			);
+			name = AnyThinkAppnextAdapter;
+			sourceTree = "<group>";
+		};
+		90B320BDFD4594CD1DE2301C52BCCEBF /* AnyThinkSDK */ = {
+			isa = PBXGroup;
+			children = (
+				837478F86AD8358C2C844EDFEB87087A /* Frameworks */,
+				67EF3D9DD4229373B517A9E8C56EAF93 /* Resources */,
+			);
+			name = AnyThinkSDK;
+			sourceTree = "<group>";
+		};
+		9AE4591E2FBD9342E733CFFA19647977 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E6528E4369B9ED1801CD2EF31EDF0623 /* AnyThinkOguryInterstitialAdapter.framework */,
+				1084316D37B82D1242379A04BE7F0974 /* AnyThinkOguryRewardedVideoAdapter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9F98E744DC2F035099EA55DB1D964E40 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				74D8C87773DA4C7817C2F0354E7B2714 /* AnyThinkKSInterstitialAdapter.framework */,
+				D694AB57B47612F89A0D0656C4F5C933 /* AnyThinkKSRewardedVideoAdapter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A5B76F16A3228091F7E4A546739EEB05 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AA75E7D6247963DBDBC4C9BB40AB7812 /* AnyThinkMintegralBannerAdapter.framework */,
+				BF5703FF08F998BD92E7E48ED4A410C0 /* AnyThinkMintegralInterstitialAdapter.framework */,
+				F38D2A602865E5BA7E1B5AEFA2CCC075 /* AnyThinkMintegralNativeAdapter.framework */,
+				C2A223225292DF0CC034F2BC88EE893C /* AnyThinkMintegralRewardedVideoAdapter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A75BEF5084B12C5B2B110D3C07DC2ABD /* AnyThinkInmobiAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				1CCC3002D80B79A262F1734FD808D16C /* Frameworks */,
+			);
+			name = AnyThinkInmobiAdapter;
+			sourceTree = "<group>";
+		};
+		ADFD9F31F7A1596CE89FE20EC745A61E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				80B892684AF6D06F4241873E93A0EBCA /* AnyThinkIronSourceInterstitialAdapter.framework */,
+				A50EF140AC1276BD77794432BE065A18 /* AnyThinkIronSourceRewardedVideoAdapter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B26710A4BF93C5EC422A7050E501A367 /* AnyThinkMyOfferAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				442A9AD8B23417DC585C05E626F3BB5B /* Frameworks */,
+			);
+			name = AnyThinkMyOfferAdapter;
+			sourceTree = "<group>";
+		};
+		B35855254C1948701EA610E7C20DCCC4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7B35394D238F8485948ECFBB1BC6FB1F /* AnyThinkiOS */,
+				7A1527B81D6A2DE23FB8679D48BDF540 /* SigmobAd-iOS */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BA4E1E01D707FC97647F01EF485821E8 /* AnyThinkTouTiaoAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				52881EB43A4848E38AFC04B956FD2B8A /* Frameworks */,
+			);
+			name = AnyThinkTouTiaoAdapter;
+			sourceTree = "<group>";
+		};
+		BFDF067F64184630BB4CD56024CA91B2 /* AnyThinkMintegralAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				A5B76F16A3228091F7E4A546739EEB05 /* Frameworks */,
+			);
+			name = AnyThinkMintegralAdapter;
+			sourceTree = "<group>";
+		};
+		C78C61E5603C366D2D672D02D9D7AD21 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DC714356E2A1375F25C2370FB7660D08 /* AnyThinkFlurryBannerAdapter.framework */,
+				61036B768153B110631DF6D183C12881 /* AnyThinkFlurryInterstitialAdapter.framework */,
+				E9DB6EF8CD1C4101B8D7D87B46A1C065 /* AnyThinkFlurryNativeAdapter.framework */,
+				0EF1261E6552744647733853A94A8D01 /* AnyThinkFlurryRewardedVideoAdapter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CEC831E1550CB0FEC70B20E8B63140BF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DB1565845D04D1E6C01A9EC8A03A1578 /* AnyThinkNendBannerAdapter.framework */,
+				870DA237E623179913F25DE691C82E58 /* AnyThinkNendInterstitialAdapter.framework */,
+				B8FD252F6DDEEFDAA2F14C1E62E9AD30 /* AnyThinkNendNativeAdapter.framework */,
+				FEB6F84D37EA3AAC7C10AD17D75B71AE /* AnyThinkNendRewardedVideoAdapter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
+				B35855254C1948701EA610E7C20DCCC4 /* Pods */,
+				03DBBD988AD9605139BD5C7A2469BAAB /* Products */,
+				4A3927433F79C9245143D1E4285C1A56 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D1BB1A18948EA270A37708C67A67BF73 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C06054C234D9BACBD7A02368B22F58C /* AnyThinkFacebookBannerAdapter.framework */,
+				F240E7024A2B8548C61243B1B7CA6AF6 /* AnyThinkFacebookInterstitialAdapter.framework */,
+				59BA5477FCE15DE98BE48BA3C34AE8E1 /* AnyThinkFacebookNativeAdapter.framework */,
+				ED79A0A52C6303E95F6046704E460A80 /* AnyThinkFacebookRewardedVideoAdapter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D1C2EF888E74767CF2A274F4BB358D11 /* AnyThinkAdmobAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				F255DF49B7F668353FB93D678368286F /* Frameworks */,
+			);
+			name = AnyThinkAdmobAdapter;
+			sourceTree = "<group>";
+		};
+		D3609FB2E599F3949EC6EED087B9A68D /* AnyThinkChartboostAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				0282F1A34E2DE9745091DF521C7B6D5F /* Frameworks */,
+			);
+			name = AnyThinkChartboostAdapter;
+			sourceTree = "<group>";
+		};
+		D604A1226570FEA91AF99BAA872FE4FE /* AnyThinkIronSourceAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				ADFD9F31F7A1596CE89FE20EC745A61E /* Frameworks */,
+			);
+			name = AnyThinkIronSourceAdapter;
+			sourceTree = "<group>";
+		};
+		D889A5F232DC0A5C65567F785A5A4E93 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				122ACE2059EC6CDA3BEECF8057E4D389 /* AnyThinkOnewayInterstitialAdapter.framework */,
+				6F0A11004A00FF838546D20D0C2B0841 /* AnyThinkOnewayRewardedVideoAdapter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DAE4473899CEAA5A510F4D575F7C9507 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				13F69A6DD928144842CD9BE55F0C7E2E /* AnyThinkApplovinBannerAdapter.framework */,
+				BE4267C89EFDDAD6F901E320F9B5FE3E /* AnyThinkApplovinInterstitialAdapter.framework */,
+				699474914FC077F60306A73CDA713AC3 /* AnyThinkApplovinNativeAdapter.framework */,
+				4B6D5F2F52C7B52526BB88FB5EDEF61A /* AnyThinkApplovinRewardedVideoAdapter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DEC874B66337DC868C68E67C7F7E661E /* AnyThinkKSAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				9F98E744DC2F035099EA55DB1D964E40 /* Frameworks */,
+			);
+			name = AnyThinkKSAdapter;
+			sourceTree = "<group>";
+		};
+		E135767B7A912F64CA23AB33D46D83E0 /* AnyThinkNendAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				CEC831E1550CB0FEC70B20E8B63140BF /* Frameworks */,
+			);
+			name = AnyThinkNendAdapter;
+			sourceTree = "<group>";
+		};
+		E1982925AF7AC036D2EB94418F7B2E16 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				34E1CD212DD7772D8AAB344190EE410C /* AnyThinkGDTBannerAdapter.framework */,
+				56BB4302093866F85CBE1E851BF64B15 /* AnyThinkGDTInterstitialAdapter.framework */,
+				7871A9A9AA7397253563D7A255387E05 /* AnyThinkGDTNativeAdapter.framework */,
+				87CF6316F70A8E79AA5FD7823B8FCE36 /* AnyThinkGDTRewardedVideoAdapter.framework */,
+				3190C562112C8B24093D4B85C5557E60 /* AnyThinkGDTSplashAdapter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E7FBE3C55891175A3731D5AAA0CDB877 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6D298128C4215AD9125787B9857F2336 /* AnyThinkiOS.debug.xcconfig */,
+				57DEB05329B4C28940DC53D65D61AD49 /* AnyThinkiOS.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/AnyThinkiOS";
+			sourceTree = "<group>";
+		};
+		F255DF49B7F668353FB93D678368286F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				125147DE979167EC93782467C3AB5F74 /* AnyThinkAdmobBannerAdapter.framework */,
+				D738B4D5EEE0CE9C57A9BCF0BA85FB04 /* AnyThinkAdmobInterstitialAdapter.framework */,
+				36E99BCDE118380A45CDD54B22231A54 /* AnyThinkAdmobNativeAdapter.framework */,
+				4F6AB984D341180C94B75F149C027A72 /* AnyThinkAdmobRewardedVideoAdapter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FFCAB8FEA385384B40FBC958F898AC15 /* AnyThinkFlurryAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				C78C61E5603C366D2D672D02D9D7AD21 /* Frameworks */,
+			);
+			name = AnyThinkFlurryAdapter;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		499B2A984D666EC52DA34E8D2BDB750E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		AF5AB70BF12443BCF6943038A5449F25 /* Pods-AnyThinkPodDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7B95409FB870712730D1D1151897149 /* Build configuration list for PBXNativeTarget "Pods-AnyThinkPodDemo" */;
+			buildPhases = (
+				499B2A984D666EC52DA34E8D2BDB750E /* Headers */,
+				C3E9F40279E062040D4BAA003E4C1744 /* Sources */,
+				83E932634D8ABE8E3F19BCD3F3FACE23 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AB6D4D213F361805BCC1C51E6DBDBD3F /* PBXTargetDependency */,
+				4E32028C144A112B655D4759237A0300 /* PBXTargetDependency */,
+			);
+			name = "Pods-AnyThinkPodDemo";
+			productName = "Pods-AnyThinkPodDemo";
+			productReference = 634B16CB9D56CB03767080A7350C5C22 /* libPods-AnyThinkPodDemo.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 03DBBD988AD9605139BD5C7A2469BAAB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F50E9FD6951069AF0D316E257D27E271 /* AnyThinkiOS */,
+				AF5AB70BF12443BCF6943038A5449F25 /* Pods-AnyThinkPodDemo */,
+				47A48B35767B2FF26EE52EF544D5F14B /* SigmobAd-iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C3E9F40279E062040D4BAA003E4C1744 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B823B7749D7CE33E806F322DE0D713DC /* Pods-AnyThinkPodDemo-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4E32028C144A112B655D4759237A0300 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SigmobAd-iOS";
+			target = 47A48B35767B2FF26EE52EF544D5F14B /* SigmobAd-iOS */;
+			targetProxy = 33626E0EFBF9CEC9EA1892B035863638 /* PBXContainerItemProxy */;
+		};
+		AB6D4D213F361805BCC1C51E6DBDBD3F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AnyThinkiOS;
+			target = F50E9FD6951069AF0D316E257D27E271 /* AnyThinkiOS */;
+			targetProxy = 49C68A73EE4C9F2BEC6941E3854FEF09 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3AB36A86280C5BC2B9E543F994779437 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7024F2349B53BFC60833E53A06ECB667 /* SigmobAd-iOS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4BB1AC3F0457608C60F423946BD3F580 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57DEB05329B4C28940DC53D65D61AD49 /* AnyThinkiOS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		510B057D2E9F059C50D52DA5D90F3ACF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		804E13245C9FBBE6A340C555CA8B2B4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		931294F15DB5CC0555F7FD29933B81AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D298128C4215AD9125787B9857F2336 /* AnyThinkiOS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AE1CD71DFC3517C71E0313BB19F01F46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E75D3F5C330ABEFF50B950B7FEC00F8 /* Pods-AnyThinkPodDemo.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C04B14CEA80E5AEAA3DFBB9E9A5D64F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 132728569B48878FA77C53270A01EF55 /* SigmobAd-iOS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E051B2138CA74E98C61A50495D013946 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA30709D8F6EFB38F2768626FE473B53 /* Pods-AnyThinkPodDemo.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		278AD90FCB445A48AB166D4AF7403C16 /* Build configuration list for PBXAggregateTarget "AnyThinkiOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				931294F15DB5CC0555F7FD29933B81AC /* Debug */,
+				4BB1AC3F0457608C60F423946BD3F580 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				804E13245C9FBBE6A340C555CA8B2B4C /* Debug */,
+				510B057D2E9F059C50D52DA5D90F3ACF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		737E3D978F9632C7A53736391E4F4D28 /* Build configuration list for PBXAggregateTarget "SigmobAd-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AB36A86280C5BC2B9E543F994779437 /* Debug */,
+				C04B14CEA80E5AEAA3DFBB9E9A5D64F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7B95409FB870712730D1D1151897149 /* Build configuration list for PBXNativeTarget "Pods-AnyThinkPodDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE1CD71DFC3517C71E0313BB19F01F46 /* Debug */,
+				E051B2138CA74E98C61A50495D013946 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

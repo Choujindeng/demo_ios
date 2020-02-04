@@ -1,0 +1,97 @@
+PODS:
+  - AnyThinkiOS (5.4.4):
+    - AnyThinkiOS/AnyThinkSDK (= 5.4.4)
+  - AnyThinkiOS/AnyThinkAdcolonyAdapter (5.4.4):
+    - AnyThinkiOS/AnyThinkSDK
+  - AnyThinkiOS/AnyThinkAdmobAdapter (5.4.4):
+    - AnyThinkiOS/AnyThinkSDK
+  - AnyThinkiOS/AnyThinkApplovinAdapter (5.4.4):
+    - AnyThinkiOS/AnyThinkSDK
+  - AnyThinkiOS/AnyThinkAppnextAdapter (5.4.4):
+    - AnyThinkiOS/AnyThinkSDK
+  - AnyThinkiOS/AnyThinkBaiduAdapter (5.4.4):
+    - AnyThinkiOS/AnyThinkSDK
+  - AnyThinkiOS/AnyThinkChartboostAdapter (5.4.4):
+    - AnyThinkiOS/AnyThinkSDK
+  - AnyThinkiOS/AnyThinkFacebookAdapter (5.4.4):
+    - AnyThinkiOS/AnyThinkSDK
+  - AnyThinkiOS/AnyThinkFlurryAdapter (5.4.4):
+    - AnyThinkiOS/AnyThinkSDK
+  - AnyThinkiOS/AnyThinkGDTAdapter (5.4.4):
+    - AnyThinkiOS/AnyThinkSDK
+  - AnyThinkiOS/AnyThinkInmobiAdapter (5.4.4):
+    - AnyThinkiOS/AnyThinkSDK
+  - AnyThinkiOS/AnyThinkIronSourceAdapter (5.4.4):
+    - AnyThinkiOS/AnyThinkSDK
+  - AnyThinkiOS/AnyThinkKSAdapter (5.4.4):
+    - AnyThinkiOS/AnyThinkSDK
+  - AnyThinkiOS/AnyThinkMaioAdapter (5.4.4):
+    - AnyThinkiOS/AnyThinkSDK
+  - AnyThinkiOS/AnyThinkMintegralAdapter (5.4.4):
+    - AnyThinkiOS/AnyThinkSDK
+  - AnyThinkiOS/AnyThinkMopubAdapter (5.4.4):
+    - AnyThinkiOS/AnyThinkSDK
+  - AnyThinkiOS/AnyThinkMyOfferAdapter (5.4.4):
+    - AnyThinkiOS/AnyThinkSDK
+  - AnyThinkiOS/AnyThinkNendAdapter (5.4.4):
+    - AnyThinkiOS/AnyThinkSDK
+  - AnyThinkiOS/AnyThinkOguryAdapter (5.4.4):
+    - AnyThinkiOS/AnyThinkSDK
+  - AnyThinkiOS/AnyThinkOnewayAdapter (5.4.4):
+    - AnyThinkiOS/AnyThinkSDK
+  - AnyThinkiOS/AnyThinkSDK (5.4.4)
+  - AnyThinkiOS/AnyThinkSigmobAdapter (5.4.4):
+    - AnyThinkiOS/AnyThinkSDK
+  - AnyThinkiOS/AnyThinkTapjoyAdapter (5.4.4):
+    - AnyThinkiOS/AnyThinkSDK
+  - AnyThinkiOS/AnyThinkTouTiaoAdapter (5.4.4):
+    - AnyThinkiOS/AnyThinkSDK
+  - AnyThinkiOS/AnyThinkUnityAdsAdapter (5.4.4):
+    - AnyThinkiOS/AnyThinkSDK
+  - AnyThinkiOS/AnyThinkVungleAdapter (5.4.4):
+    - AnyThinkiOS/AnyThinkSDK
+  - AnyThinkiOS/AnyThinkYeahmobiAdapter (5.4.4):
+    - AnyThinkiOS/AnyThinkSDK
+  - SigmobAd-iOS (2.15.2)
+
+DEPENDENCIES:
+  - AnyThinkiOS
+  - AnyThinkiOS/AnyThinkAdcolonyAdapter
+  - AnyThinkiOS/AnyThinkAdmobAdapter
+  - AnyThinkiOS/AnyThinkApplovinAdapter
+  - AnyThinkiOS/AnyThinkAppnextAdapter
+  - AnyThinkiOS/AnyThinkBaiduAdapter
+  - AnyThinkiOS/AnyThinkChartboostAdapter
+  - AnyThinkiOS/AnyThinkFacebookAdapter
+  - AnyThinkiOS/AnyThinkFlurryAdapter
+  - AnyThinkiOS/AnyThinkGDTAdapter
+  - AnyThinkiOS/AnyThinkInmobiAdapter
+  - AnyThinkiOS/AnyThinkIronSourceAdapter
+  - AnyThinkiOS/AnyThinkKSAdapter
+  - AnyThinkiOS/AnyThinkMaioAdapter
+  - AnyThinkiOS/AnyThinkMintegralAdapter
+  - AnyThinkiOS/AnyThinkMopubAdapter
+  - AnyThinkiOS/AnyThinkMyOfferAdapter
+  - AnyThinkiOS/AnyThinkNendAdapter
+  - AnyThinkiOS/AnyThinkOguryAdapter
+  - AnyThinkiOS/AnyThinkOnewayAdapter
+  - AnyThinkiOS/AnyThinkSigmobAdapter
+  - AnyThinkiOS/AnyThinkTapjoyAdapter
+  - AnyThinkiOS/AnyThinkTouTiaoAdapter
+  - AnyThinkiOS/AnyThinkUnityAdsAdapter
+  - AnyThinkiOS/AnyThinkVungleAdapter
+  - AnyThinkiOS/AnyThinkYeahmobiAdapter
+  - SigmobAd-iOS (= 2.15.2)
+
+SPEC REPOS:
+  trunk:
+    - AnyThinkiOS
+    - SigmobAd-iOS
+
+SPEC CHECKSUMS:
+  AnyThinkiOS: 379752e70dc16057f77124fe5bf1eadcdb7edb83
+  SigmobAd-iOS: 36b0a3ba34d3b0e809e75431869327ce45bf29ac
+
+PODFILE CHECKSUM: b016d7001bf0163fde8b63e3f0f0a70bc924df92
+
+COCOAPODS: 1.9.0.beta.2

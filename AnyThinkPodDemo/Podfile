@@ -1,0 +1,106 @@
+
+target 'AnyThinkPodDemo' do
+#    TopOn
+pod 'AnyThinkiOS'
+pod 'AnyThinkiOS/AnyThinkTouTiaoAdapter'
+pod 'AnyThinkiOS/AnyThinkFacebookAdapter'
+pod 'AnyThinkiOS/AnyThinkAdmobAdapter'
+pod 'AnyThinkiOS/AnyThinkInmobiAdapter'
+pod 'AnyThinkiOS/AnyThinkFlurryAdapter'
+pod 'AnyThinkiOS/AnyThinkApplovinAdapter'
+pod 'AnyThinkiOS/AnyThinkMintegralAdapter'
+pod 'AnyThinkiOS/AnyThinkMopubAdapter'
+pod 'AnyThinkiOS/AnyThinkGDTAdapter'
+pod 'AnyThinkiOS/AnyThinkYeahmobiAdapter'
+pod 'AnyThinkiOS/AnyThinkAppnextAdapter'
+pod 'AnyThinkiOS/AnyThinkChartboostAdapter'
+pod 'AnyThinkiOS/AnyThinkIronSourceAdapter'
+pod 'AnyThinkiOS/AnyThinkVungleAdapter'
+pod 'AnyThinkiOS/AnyThinkAdcolonyAdapter'
+pod 'AnyThinkiOS/AnyThinkUnityAdsAdapter'
+pod 'AnyThinkiOS/AnyThinkTapjoyAdapter'
+pod 'AnyThinkiOS/AnyThinkOnewayAdapter'
+pod 'AnyThinkiOS/AnyThinkBaiduAdapter'
+pod 'AnyThinkiOS/AnyThinkNendAdapter'
+pod 'AnyThinkiOS/AnyThinkMaioAdapter'
+pod 'AnyThinkiOS/AnyThinkKSAdapter'
+pod 'AnyThinkiOS/AnyThinkSigmobAdapter'
+pod 'AnyThinkiOS/AnyThinkOguryAdapter'
+pod 'AnyThinkiOS/AnyThinkMyOfferAdapter'
+
+#第三方
+#Facebook
+#pod 'FBAudienceNetwork' , '5.5.1'
+
+#Admob
+#pod 'Google-Mobile-Ads-SDK','7.52.0'
+#pod 'PersonalizedAdConsent'
+
+#Inmobi
+#pod 'InMobiSDK' ,'7.3.1'
+
+
+#Applovin
+#pod 'AppLovinSDK', '6.10.0'
+
+#Mintegral
+#pod 'MintegralAdSDK' ,'5.8.7'
+#pod 'MintegralAdSDK/RewardVideoAd','5.8.7'
+#pod 'MintegralAdSDK/BidRewardVideoAd','5.8.7'
+#pod 'MintegralAdSDK/BidInterstitialVideoAd','5.8.7'
+#pod 'MintegralAdSDK/InterstitialVideoAd','5.8.7'
+#pod 'MintegralAdSDK/InterstitialAd','5.8.7'
+#pod 'MintegralAdSDK/BannerAd' ,'5.8.7'
+#pod 'MintegralAdSDK/BidBannerAd','5.8.7'
+
+#Mopub
+#pod 'mopub-ios-sdk', '5.10.0'
+
+#GDT
+#pod 'GDTMobSDK', '4.11.2'
+
+#Chartboost
+#pod 'ChartboostSDK','8.0.3'
+
+#Tapjoy
+#pod 'TapjoySDK','12.3.4'
+
+#IronSource
+#pod 'IronSourceSDK','6.10.0'
+
+#UnityAds
+#pod 'UnityAds' , '3.4.0'
+
+#Vungle
+#pod "VungleSDK-iOS", "6.4.6"
+
+#AdColony
+#pod 'AdColony','4.1.0.0'
+
+#TiTok
+#pod 'Bytedance-UnionAD' , '2.7.5.2'
+
+#Baidu
+#pod 'BaiduMobAdSDK'
+
+#Nend
+#pod 'NendSDK_iOS','5.3.1'
+
+#Maio
+#pod 'MaioSDK','1.5.0'
+
+#Yeahmobi
+#pod 'CTSDK','3.2.0'
+
+#Sigmob
+pod 'SigmobAd-iOS', '2.15.2'
+
+#FBAudienceNetworkBiddingKit.framework hb需手动引入
+#Flurry 无pod
+#OneWay 无pod
+#Appnext 无pod
+#KS 无pod
+#Ogury 无pod
+
+
+end

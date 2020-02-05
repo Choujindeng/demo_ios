@@ -144,7 +144,7 @@ AnyThinkSDK支持原生广告(Native),激励视频广告(rewardVideo)，banner�
 | Maio |Maio.framework|v1.5.0|pod 'MaioSDK','1.5.0'|||https://github.com/imobile-maio||
 | Yeahmobi |CTSDK.framework|v3.2.0|pod 'CTSDK','3.2.0'|||||
 | sigmob |WindSDK.framework<br>sigmob.bundle|v2.15.2|pod 'SigmobAd-iOS', '2.15.2'|||||
-|KS|KSAdSDK.framework <br> KSAdSDK.bundle|v2.5.2.12|#无pod|||需要额外导入第三方依赖：<br> AFNetworking/Godzippa/MJExtension/SDWebImage||
+|KS|KSAdSDK.framework <br> KSAdSDK.bundle|v2.5.2.12|pod 'KSAdSDK', '2.5.2.21'<br>pod 'SDWebImage'<br>|||需要额外导入第三方依赖：<br> AFNetworking/Godzippa/MJExtension/SDWebImage||
 |Ogury|OMSDK_Oguryco.framework<br>OguryAds.framework<br>OguryConsentManager.framework|1.0.3|#无pod|||由于该平台的GDPR设置必须通过其平台的弹窗来进行设置，如若在欧盟地区不用其平台的弹窗设置GDPR等级，则ecpm会相对较低，所以这里建议开发者自己调用Ogury的api弹窗供用户设置GDPR等级，在api的回调中把topon的GDPR等级一并设置(即调用Ogury的GDPR弹窗，然后在用户选择等级设置之后的回调里，将Topon的GDPR设置为其回调中的等级)。||
 
 您可以使用CocoaPods导入第三方SDK，也可以手动下载导入第三方SDK。

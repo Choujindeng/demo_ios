@@ -131,7 +131,7 @@ The table below gives a brief summary of third party SDKs. Only import those of 
 |Facebook|FBAudienceNetwork.framework<br> FBAudienceNetworkBiddingKit.framework <br>FBSDKCoreKit.framework<br>|v5.5.1|pod 'FBAudienceNetwork' , '5.5.1' <br>#pod 无 HB|https://developers.facebook.com/docs/audience-network/download#ios|https://developers.facebook.com/docs/audience-network/ios|测试机需安装并登录Facebook客户端才能请求到广告。|
 |Admob|GoogleMobileAds.framework<br>PersonalizedAdConsent.framework|v7.52.0|pod 'Google-Mobile-Ads-SDK','7.52.0'<br>pod 'PersonalizedAdConsent'|https://support.google.com/admob/answer/2993059?hl=en|https://developers.google.com/admob/ios/quick-start|Admob requires that **app id be configured in the Info.plist of your project**; for more information please refer to <a href="https://developers.google.com/admob/ios/quick-start#update\_your\_infoplist">Admob's website</a>.|
 | Inmobi |InMobiSDK.framework|v7.3.1|pod 'InMobiSDK' ,'7.3.1'|https://support.inmobi.com/monetize/ios-guidelines/||||
-| Flurry |libFlurryAds\_1.0.0.a<br>libFlurry\_9.0.0.a|231\_9.0.0|无pod|https://dev.flurry.com/admin/applications||||
+| Flurry |libFlurryAds\_1.0.0.a<br>libFlurry\_9.0.0.a|231\_9.0.0|#no pod|https://dev.flurry.com/admin/applications||||
 | Applovin |AppLovinSDK.framework<br>AppLovinSDKResources.bundle|v6.10.0|pod 'AppLovinSDK', '6.10.0'|https://dash.applovin.com/docs/integration#iosIntegration||||
 | Mintegral |MTGSDK.framework<br> MTGSDKBidding.framework<br>MTGSDKReward.framework <br> MTGSDKInterstitialVideo.framework <br> MTGSDKInterstitial.framework|v5.8.7|pod 'MintegralAdSDK' ,'5.8.7'<br>pod 'MintegralAdSDK/RewardVideoAd','5.8.7'<br>pod 'MintegralAdSDK/BidRewardVideoAd','5.8.7'<br>pod 'MintegralAdSDK/BidInterstitialVideoAd','5.8.7'<br>pod 'MintegralAdSDK/InterstitialVideoAd','5.8.7'<br>pod 'MintegralAdSDK/InterstitialAd','5.8.7'<br>pod 'MintegralAdSDK/BannerAd' ,'5.8.7'<br>pod 'MintegralAdSDK/BidBannerAd','5.8.7'|http://cdn-adn.rayjump.com/cdn-adn/v2/markdown\_v2/index.html?file=sdk-m\_sdk-ios&lang=en||||
 | Mopub |MobPowerNative.framework <br> MobPowerSDK.framework| v5.10.0 |pod 'mopub-ios-sdk', '5.10.0'|https://github.com/mopub||||
@@ -144,14 +144,14 @@ The table below gives a brief summary of third party SDKs. Only import those of 
 | Adcolony |AdColony.framework|v4.1.0.0|pod 'AdColony','4.1.0.0'|https://github.com/AdColony||||
 |TouTiao|BUAdSDK.framework<br>BUAdSDK.bundle|v2.4.6.7|pod 'Bytedance-UnionAD' , '2.7.5.2'http://ad.toutiao.com/union/media/union/download|||
 | Oneway |Oneway|v2.1.0|#无pod||||
-| Appnext |AppnextNativeAdsSDK<br>AppnextIOSSDK| v1.9.3 |#无pod|https://developers.appnext.com/docs/ios-sdk-installation||||
-| Baidu |BaiduMobAdSDK.framework<br> baidumobadsdk.bundle|v4.6.7|pod 'BaiduMobAdSDK' |https://mssp.baidu.com/bqt/appco.html#/union/download/sdk||||
+| Appnext |AppnextNativeAdsSDK<br>AppnextIOSSDK| v1.9.3 |#no pod|https://developers.appnext.com/docs/ios-sdk-installation||||
+| Baidu |BaiduMobAdSDK.framework<br> baidumobadsdk.bundle|v4.6.7|#no Pod|https://mssp.baidu.com/bqt/appco.html#/union/download/sdk||||
 |Nend|NendAd.framework <br> NendAdResource.bundle|v5.3.1|pod 'NendSDK_iOS','5.3.1'|https://github.com/fan-ADN||||
 | Maio |Maio.framework|v1.5.0|pod 'MaioSDK','1.5.0'|https://github.com/imobile-maio||||
 | Yeahmobi |CTSDK.framework|v3.2.0|pod 'CTSDK','3.2.0'|||||  
 | sigmob |WindSDK.framework<br>sigmob.bundle|v2.15.2|pod 'SigmobAd-iOS', '2.15.2'|||||
-|KS|KSAdSDK.framework <br> KSAdSDK.bundle|v2.5.2.12|#无pod|Additional third-party libraries that need to be introduced：<br>AFNetworking/Godzippa/MJExtension/SDWebImage||||
-|Ogury|OMSDK_Oguryco.framework<br>OguryAds.framework<br>OguryConsentManager.framework|1.0.3|#无pod|||No way of setting GDPR consent without presenting a view controller.||
+|KS|KSAdSDK.framework <br> KSAdSDK.bundle|v2.5.2.12|#no pod|Additional third-party libraries that need to be introduced：<br>AFNetworking/Godzippa/MJExtension/SDWebImage||||
+|Ogury|OMSDK_Oguryco.framework<br>OguryAds.framework<br>OguryConsentManager.framework|1.0.3|#no pod|||No way of setting GDPR consent without presenting a view controller.||
 
 You can use CocoaPods to import third party SDKs or you can download and import them manually.
 

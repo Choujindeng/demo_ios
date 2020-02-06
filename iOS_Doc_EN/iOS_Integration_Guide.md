@@ -150,7 +150,7 @@ The table below gives a brief summary of third party SDKs. Only import those of 
 | Maio |Maio.framework|v1.5.0|pod 'MaioSDK','1.5.0'|https://github.com/imobile-maio||||
 | Yeahmobi |CTSDK.framework|v3.2.0|pod 'CTSDK','3.2.0'|||||  
 | sigmob |WindSDK.framework<br>sigmob.bundle|v2.15.2|pod 'SigmobAd-iOS', '2.15.2'|||||
-|KS|KSAdSDK.framework <br> KSAdSDK.bundle|v2.5.2.12|#no pod|Additional third-party libraries that need to be introduced：<br>AFNetworking/Godzippa/MJExtension/SDWebImage||||
+|KS|KSAdSDK.framework <br> KSAdSDK.bundle|v2.5.2.12|pod 'KSAdSDK', '2.5.2.21'<br>pod 'SDWebImage'|Additional third-party libraries that need to be introduced：<br>AFNetworking/Godzippa/MJExtension/SDWebImage||||
 |Ogury|OMSDK_Oguryco.framework<br>OguryAds.framework<br>OguryConsentManager.framework|1.0.3|#no pod|||No way of setting GDPR consent without presenting a view controller.||
 
 You can use CocoaPods to import third party SDKs or you can download and import them manually.

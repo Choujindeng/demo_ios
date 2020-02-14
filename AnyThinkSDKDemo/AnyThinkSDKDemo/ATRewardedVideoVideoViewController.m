@@ -176,7 +176,7 @@ static NSString *const kOguryPlacementID = @"b5dde2379dc6ce";
 }
 
 -(void) showAD {
-    [[ATAdManager sharedManager] showRewardedVideoWithPlacementID:_placementIDs[_name] inViewController:self delegate:self];
+    [[ATAdManager sharedManager] showRewardedVideoWithPlacementID:_placementIDs[_name] scene:@"1234567890abcd" inViewController:self delegate:self];
 }
 
 #pragma mark - loading delegate

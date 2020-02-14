@@ -27,6 +27,7 @@
 		459A7737239642DA009BB088 /* OguryConsentManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 459A7734239642D9009BB088 /* OguryConsentManager.framework */; };
 		45B76C6423AB4D7F000471D9 /* TraminiSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45B76C6323AB4D7F000471D9 /* TraminiSDK.framework */; };
 		45D9BC6423CF0EFF00B3973B /* Sigmob.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 45D9BC6323CF0EFF00B3973B /* Sigmob.bundle */; };
+		8D28980523F681910049ACF6 /* AnyThinkKSNativeAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D28980423F681910049ACF6 /* AnyThinkKSNativeAdapter.framework */; };
 		8DB704F8236D883A007A889D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB704F7236D883A007A889D /* AppDelegate.m */; };
 		8DB704FB236D883A007A889D /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB704FA236D883A007A889D /* SceneDelegate.m */; };
 		8DB704FE236D883A007A889D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DB704FD236D883A007A889D /* ViewController.m */; };
@@ -277,6 +278,7 @@
 		459A7734239642D9009BB088 /* OguryConsentManager.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OguryConsentManager.framework; sourceTree = "<group>"; };
 		45B76C6323AB4D7F000471D9 /* TraminiSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TraminiSDK.framework; path = SDK/TraminiSDK.framework; sourceTree = "<group>"; };
 		45D9BC6323CF0EFF00B3973B /* Sigmob.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Sigmob.bundle; path = SDK/Sigmob.bundle; sourceTree = "<group>"; };
+		8D28980423F681910049ACF6 /* AnyThinkKSNativeAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkKSNativeAdapter.framework; path = SDK/AnyThinkKSNativeAdapter.framework; sourceTree = "<group>"; };
 		8DB704F3236D883A007A889D /* AnyThinkSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnyThinkSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DB704F6236D883A007A889D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8DB704F7236D883A007A889D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -713,6 +715,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D28980523F681910049ACF6 /* AnyThinkKSNativeAdapter.framework in Frameworks */,
 				9B56A19F238BDEAA00204E3D /* VideoToolbox.framework in Frameworks */,
 				453C166E236DBF6D006B430A /* MoPubSDKFramework.framework in Frameworks */,
 				453C1665236D9BB3006B430A /* libc++.tbd in Frameworks */,
@@ -910,6 +913,7 @@
 		8DB705C7236D898F007A889D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8D28980423F681910049ACF6 /* AnyThinkKSNativeAdapter.framework */,
 				45D9BC6323CF0EFF00B3973B /* Sigmob.bundle */,
 				45B76C6323AB4D7F000471D9 /* TraminiSDK.framework */,
 				459A7731239642D9009BB088 /* OguryOED_1.0.3 */,

@@ -171,7 +171,7 @@ static NSString *const kOguryPlacementID = @"b5dde238f2d2ce";
 
 -(void) showAD {
     //Remove previously shown ad first.
-    [[ATAdManager sharedManager] showInterstitialWithPlacementID:_placementIDs[_name] inViewController:self delegate:self];
+    [[ATAdManager sharedManager] showInterstitialWithPlacementID:_placementIDs[_name] scene:@"1234567890abcd" inViewController:self delegate:self];
 }
 
 #pragma mark - delegate method(s)

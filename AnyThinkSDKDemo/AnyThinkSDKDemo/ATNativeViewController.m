@@ -56,6 +56,7 @@ static NSString *const kTTDrawPlacementID = @"b5c2c6d62b9d65";
 static NSString *const kNendPlacementID = @"b5cb96d44c0c5f";
 static NSString *const kNendVideoPlacementID = @"b5cb96d5291e93";
 static NSString *const kBaiduPlacementID = @"b5d36c4ad68a26";
+static NSString *const kKSPlacementID = @"b5e4613e50cbf2";
 #ifdef NATIVE_INTEGRATED
 @interface DMADView:ATNativeADView
 @property(nonatomic, readonly) UILabel *advertiserLabel;
@@ -201,7 +202,8 @@ static NSString *const kCallbackKey = @"request";
              kTTDrawPlacementName:kTTDrawPlacementID,
              kNendPlacement:kNendPlacementID,
              kNendVideoPlacement:kNendVideoPlacementID,
-             kBaiduPlacement:kBaiduPlacementID
+             kBaiduPlacement:kBaiduPlacementID,
+             kKSPlacement:kKSPlacementID
              };
 }
 

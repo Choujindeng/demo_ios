@@ -30,6 +30,7 @@ extern NSString *const kNendPlacement;
 extern NSString *const kNendVideoPlacement;
 extern NSString *const kMaioPlacement;
 extern NSString *const kSigmobPlacement;
+extern NSString *const kKSPlacement;
 @interface ATNativeViewController : UIViewController
 -(instancetype) initWithPlacementName:(NSString*)name;
 +(NSDictionary<NSString*, NSString*>*)nativePlacementIDs;

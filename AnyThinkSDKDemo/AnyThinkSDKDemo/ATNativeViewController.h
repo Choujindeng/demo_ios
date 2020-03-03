@@ -7,6 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+@import AnyThinkSDK;
+#ifdef NATIVE_INTEGRATED
+@import AnyThinkNative;
+#endif
+
 extern NSString *const kMPPlacement;
 extern NSString *const kInmobiPlacement;
 extern NSString *const kFacebookPlacement;
@@ -23,7 +28,6 @@ extern NSString *const kGDTTemplatePlacement;
 extern NSString *const kYeahmobiPlacement;
 extern NSString *const kAppnextPlacement;
 extern NSString *const kTTFeedPlacementName;
-extern NSString *const kTTDrawPlacementName;
 extern NSString *const kAllPlacementName;
 extern NSString *const kBaiduPlacement;
 extern NSString *const kNendPlacement;
@@ -34,4 +38,15 @@ extern NSString *const kKSPlacement;
 @interface ATNativeViewController : UIViewController
 -(instancetype) initWithPlacementName:(NSString*)name;
 +(NSDictionary<NSString*, NSString*>*)nativePlacementIDs;
+@end
+
+@interface DMADView:ATNativeADView
+@property(nonatomic, readonly) UILabel *advertiserLabel;
+@property(nonatomic, readonly) UILabel *textLabel;
+@property(nonatomic, readonly) UILabel *titleLabel;
+@property(nonatomic, readonly) UILabel *ctaLabel;
+@property(nonatomic, readonly) UILabel *ratingLabel;
+@property(nonatomic, readonly) UIImageView *iconImageView;
+@property(nonatomic, readonly) UIImageView *mainImageView;
+@property(nonatomic, readonly) UIImageView *sponsorImageView;
 @end

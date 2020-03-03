@@ -243,6 +243,7 @@
 		8DB70A84236D8D3E007A889D /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB70A83236D8D3E007A889D /* CoreMedia.framework */; };
 		9B56A19F238BDEAA00204E3D /* VideoToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB707D6236D8A45007A889D /* VideoToolbox.framework */; };
 		9B56A1B6238D191D00204E3D /* PersonalizedAdConsent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B56A1B5238D191C00204E3D /* PersonalizedAdConsent.framework */; };
+		9BBEE780240DF74C00A7917F /* ATDrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BBEE77E240DF74B00A7917F /* ATDrawViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -708,6 +709,8 @@
 		8DB70A81236D8D02007A889D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		8DB70A83236D8D3E007A889D /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		9B56A1B5238D191C00204E3D /* PersonalizedAdConsent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PersonalizedAdConsent.framework; path = SDK/PersonalizedAdConsent.framework; sourceTree = "<group>"; };
+		9BBEE77E240DF74B00A7917F /* ATDrawViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATDrawViewController.m; sourceTree = "<group>"; };
+		9BBEE77F240DF74C00A7917F /* ATDrawViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATDrawViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -893,6 +896,8 @@
 				8DB70513236D888C007A889D /* ATNativeBannerViewController.m */,
 				8DB70516236D888D007A889D /* ATRewardedVideoVideoViewController.h */,
 				8DB70518236D888D007A889D /* ATRewardedVideoVideoViewController.m */,
+				9BBEE77F240DF74C00A7917F /* ATDrawViewController.h */,
+				9BBEE77E240DF74B00A7917F /* ATDrawViewController.m */,
 				8DB7050F236D888B007A889D /* MTAutolayoutCategories.h */,
 				8DB70510236D888B007A889D /* MTAutolayoutCategories.m */,
 				8DB704F6236D883A007A889D /* AppDelegate.h */,
@@ -1703,6 +1708,7 @@
 				8DB709E8236D8C89007A889D /* MJExtensionConst.m in Sources */,
 				8DB709F5236D8C89007A889D /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				8DB709FF236D8C89007A889D /* NSImage+Compatibility.m in Sources */,
+				9BBEE780240DF74C00A7917F /* ATDrawViewController.m in Sources */,
 				8DB70A34236D8C89007A889D /* SDAsyncBlockOperation.m in Sources */,
 				8DB70A23236D8C89007A889D /* UIImageView+WebCache.m in Sources */,
 				8DB70A1D236D8C89007A889D /* SDWebImageDownloaderOperation.m in Sources */,

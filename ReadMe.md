@@ -46,7 +46,7 @@ http://sdk-release.toponad.com/Unity/5.4.4/Unity_v5.4.4_Android_iOS_.unitypackag
 | MobPower | 1.0.0 ||
 | Nend | 5.3.1 ||
 | Maio | 1.5.0 ||
-| ks | 2.5.2.12 |需要额外导入第三方依赖：<br> AFNetworking/Godzippa/MJExtension/SDWebImage|
+| ks | 2.5.2.21 |需要额外导入第三方依赖：<br> AFNetworking/Godzippa/MJExtension/SDWebImage|
 | sigmob | 2.15.2 |sdk：WindSDK.framework <br>sigmob.bundle|
 | Ogury | 1.0.3 |OguryOED_1.0.3 包含以下sdk<br>OMSDK_Oguryco.framework<br>OguryAds.framework<br>OguryConsentManager.framework|
 

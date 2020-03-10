@@ -8,6 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+extern NSString *const kATADDelegateExtraECPMLevelKey;
+extern NSString *const kATADDelegateExtraSegmentIDKey;
+extern NSString *const kATADDelegateExtraScenarioIDKey;
+extern NSString *const kATADDelegateExtraChannelKey;
+extern NSString *const kATADDelegateExtraSubChannelKey;
+extern NSString *const kATADDelegateExtraCustomRuleKey;
+
 extern NSString *const ATADShowingErrorDomain;
 
 extern NSString *const ATADLoadingErrorDomain;

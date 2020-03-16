@@ -14,6 +14,19 @@ extern NSString *const kATADDelegateExtraScenarioIDKey;
 extern NSString *const kATADDelegateExtraChannelKey;
 extern NSString *const kATADDelegateExtraSubChannelKey;
 extern NSString *const kATADDelegateExtraCustomRuleKey;
+extern NSString *const kATADDelegateExtraIDKey;
+extern NSString *const kATADDelegateExtraAdunitIDKey;
+extern NSString *const kATADDelegateExtraPublisherRevenueKey;
+extern NSString *const kATADDelegateExtraCurrencyKey;
+extern NSString *const kATADDelegateExtraCountryKey;
+extern NSString *const kATADDelegateExtraFormatKey;
+extern NSString *const kATADDelegateExtraPrecisionKey;
+extern NSString *const kATADDelegateExtraNetworkTypeKey;
+extern NSString *const kATADDelegateExtraNetworkPlacementIDKey;
+extern NSString *const kATADDelegateExtraScenarioRewardNameKey;
+extern NSString *const kATADDelegateExtraScenarioRewardNumberKey;
+extern NSString *const kATADDelegateExtraPlacementRewardNameKey;
+extern NSString *const kATADDelegateExtraPlacementRewardNumberKey;
 
 extern NSString *const ATADShowingErrorDomain;
 

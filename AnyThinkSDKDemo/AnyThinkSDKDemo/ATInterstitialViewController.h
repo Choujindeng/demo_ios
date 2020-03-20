@@ -40,7 +40,8 @@ extern NSString *const kSigmobPlacement;
 extern NSString *const kKSPlacement;
 extern NSString *const kMyOfferPlacement;
 extern NSString *const kOguryPlacement;
-
+extern NSString *const kStartAppPlacement;
+extern NSString *const kStartAppVideoPlacement;
 
 @interface ATInterstitialViewController : UIViewController
 -(instancetype) initWithPlacementName:(NSString*)name;

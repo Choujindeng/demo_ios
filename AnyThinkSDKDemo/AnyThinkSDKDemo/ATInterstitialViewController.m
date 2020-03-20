@@ -15,6 +15,8 @@ NSString *const kTTVideoPlacement = @"TT(Video)";
 NSString *const kNendInterstitialVideoPlacement = @"Nend(Video)";
 NSString *const kNendFullScreenInterstitialPlacement = @"Nend(Full Screen)";
 NSString *const kHeaderBiddingPlacement = @"Header Bidding";
+NSString *const kStartAppPlacement = @"StartApp";
+NSString *const kStartAppVideoPlacement = @"StartApp(Video)";
 
 static NSString *const kGDTPlacementID = @"b5bacad8ea3036";
 static NSString *const kTTPlacementID = @"b5bacad7373b89";
@@ -48,7 +50,8 @@ static NSString *const kSigmobPlacementID = @"b5d771f79e4a32";
 static NSString *const kKSPlacementID = @"b5d807a4846f50";
 static NSString *const kMyOfferPlacementID = @"b5db6c26999c31";
 static NSString *const kOguryPlacementID = @"b5dde238f2d2ce";
-
+static NSString *const kStartAppPlacementID = @"b5e731a0acabdf";
+static NSString *const kStartAppVideoPlacementID = @"b5e732a9577182";
 
 @interface ATInterstitialViewController ()<ATInterstitialDelegate>
 @property(nonatomic, readonly) NSString *name;
@@ -97,7 +100,9 @@ static NSString *const kOguryPlacementID = @"b5dde238f2d2ce";
                           kSigmobPlacement:kSigmobPlacementID,
                           kKSPlacement:kKSPlacementID,
                           kMyOfferPlacement:kMyOfferPlacementID,
-                          kOguryPlacement:kOguryPlacementID
+                          kOguryPlacement:kOguryPlacementID,
+                          kStartAppPlacement:kStartAppPlacementID,
+                          kStartAppVideoPlacement:kStartAppVideoPlacementID
                           };
     }
     return self;

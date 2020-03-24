@@ -177,7 +177,7 @@ static NSString *const kStartAppPlacementID = @"b5e7319f619931";
 }
 
 -(void) showAD {
-    [[ATAdManager sharedManager] showRewardedVideoWithPlacementID:_placementIDs[_name] scene:@"1234567890abcd" inViewController:self delegate:self];
+    [[ATAdManager sharedManager] showRewardedVideoWithPlacementID:_placementIDs[_name] scene:@"f5e54970dc84e6" inViewController:self delegate:self];
 }
 
 #pragma mark - loading delegate

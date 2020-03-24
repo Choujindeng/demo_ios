@@ -10,6 +10,10 @@
 		4502EE4C242A1474004D82E0 /* BUFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4502EE49242A1473004D82E0 /* BUFoundation.framework */; };
 		4502EE4D242A1474004D82E0 /* BUAdSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4502EE4A242A1473004D82E0 /* BUAdSDK.framework */; };
 		4502EE4E242A1474004D82E0 /* BUAdSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4502EE4B242A1474004D82E0 /* BUAdSDK.bundle */; };
+		4502EE51242A2C48004D82E0 /* AnyThinkStartAppRewardedVideoAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4502EE4F242A2C47004D82E0 /* AnyThinkStartAppRewardedVideoAdapter.framework */; };
+		4502EE52242A2C48004D82E0 /* AnyThinkStartAppInterstitialAdapter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4502EE50242A2C48004D82E0 /* AnyThinkStartAppInterstitialAdapter.framework */; };
+		4502EE55242A2CBF004D82E0 /* StartApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4502EE53242A2CBE004D82E0 /* StartApp.framework */; };
+		4502EE56242A2CBF004D82E0 /* StartApp.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4502EE54242A2CBF004D82E0 /* StartApp.bundle */; };
 		453C1663236D96B3006B430A /* MoPubSDKFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB70849236D8C72007A889D /* MoPubSDKFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		453C1665236D9BB3006B430A /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 453C1664236D9BB3006B430A /* libc++.tbd */; };
 		453C1669236D9D21006B430A /* WindSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 453C1668236D9D21006B430A /* WindSDK.framework */; };
@@ -265,6 +269,10 @@
 		4502EE49242A1473004D82E0 /* BUFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BUFoundation.framework; path = SDK/BUFoundation.framework; sourceTree = "<group>"; };
 		4502EE4A242A1473004D82E0 /* BUAdSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BUAdSDK.framework; path = SDK/BUAdSDK.framework; sourceTree = "<group>"; };
 		4502EE4B242A1474004D82E0 /* BUAdSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = BUAdSDK.bundle; path = SDK/BUAdSDK.bundle; sourceTree = "<group>"; };
+		4502EE4F242A2C47004D82E0 /* AnyThinkStartAppRewardedVideoAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkStartAppRewardedVideoAdapter.framework; path = SDK/AnyThinkStartAppRewardedVideoAdapter.framework; sourceTree = "<group>"; };
+		4502EE50242A2C48004D82E0 /* AnyThinkStartAppInterstitialAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AnyThinkStartAppInterstitialAdapter.framework; path = SDK/AnyThinkStartAppInterstitialAdapter.framework; sourceTree = "<group>"; };
+		4502EE53242A2CBE004D82E0 /* StartApp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StartApp.framework; path = SDK/StartApp.framework; sourceTree = "<group>"; };
+		4502EE54242A2CBF004D82E0 /* StartApp.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = StartApp.bundle; path = SDK/StartApp.bundle; sourceTree = "<group>"; };
 		453C1664236D9BB3006B430A /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		453C1668236D9D21006B430A /* WindSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WindSDK.framework; path = SDK/WindSDK.framework; sourceTree = "<group>"; };
 		453C166A236DBC7D006B430A /* KSAdSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = KSAdSDK.bundle; path = SDK/KSAdSDK.bundle; sourceTree = "<group>"; };
@@ -789,6 +797,7 @@
 				8DB70A4C236D8C89007A889D /* AnyThinkAdColonyInterstitialAdapter.framework in Frameworks */,
 				8DB709DD236D8C89007A889D /* AnyThinkNative.framework in Frameworks */,
 				8DB709B0236D8C89007A889D /* AnyThinkAppnextNativeAdapter.framework in Frameworks */,
+				4502EE52242A2C48004D82E0 /* AnyThinkStartAppInterstitialAdapter.framework in Frameworks */,
 				8DB70A52236D8C89007A889D /* AnyThinkTTNativeAdapter.framework in Frameworks */,
 				8DB709B8236D8C89007A889D /* AnyThinkGDTNativeAdapter.framework in Frameworks */,
 				8DB70A64236D8C8A007A889D /* AnyThinkMopubRewardedVideoAdapter.framework in Frameworks */,
@@ -812,6 +821,7 @@
 				8DB709DA236D8C89007A889D /* AnyThinkTTRewardedVideoAdapter.framework in Frameworks */,
 				8DB709AF236D8C89007A889D /* AnyThinkUnityAdsRewardedVideoAdapter.framework in Frameworks */,
 				8DB70A7B236D8C8A007A889D /* AnyThinkAppnextBannerAdapter.framework in Frameworks */,
+				4502EE55242A2CBF004D82E0 /* StartApp.framework in Frameworks */,
 				8DB709BA236D8C89007A889D /* MTGSDKBidding.framework in Frameworks */,
 				8DB70A78236D8C8A007A889D /* AnyThinkSigmobInterstitialAdapter.framework in Frameworks */,
 				8DB70A3B236D8C89007A889D /* AnyThinkUnityAdsInterstitialAdapter.framework in Frameworks */,
@@ -834,6 +844,7 @@
 				8DB70A43236D8C89007A889D /* AnyThinkMopubBannerAdapter.framework in Frameworks */,
 				8DB709CC236D8C89007A889D /* AnyThinkNendInterstitialAdapter.framework in Frameworks */,
 				8DB709BE236D8C89007A889D /* AnyThinkIronSourceInterstitialAdapter.framework in Frameworks */,
+				4502EE51242A2C48004D82E0 /* AnyThinkStartAppRewardedVideoAdapter.framework in Frameworks */,
 				8DB70A37236D8C89007A889D /* NendAd.framework in Frameworks */,
 				8DB709E2236D8C89007A889D /* AnyThinkVungleInterstitialAdapter.framework in Frameworks */,
 				8DB70A4B236D8C89007A889D /* FBAudienceNetwork.framework in Frameworks */,
@@ -921,6 +932,10 @@
 		8DB705C7236D898F007A889D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4502EE54242A2CBF004D82E0 /* StartApp.bundle */,
+				4502EE53242A2CBE004D82E0 /* StartApp.framework */,
+				4502EE50242A2C48004D82E0 /* AnyThinkStartAppInterstitialAdapter.framework */,
+				4502EE4F242A2C47004D82E0 /* AnyThinkStartAppRewardedVideoAdapter.framework */,
 				4502EE4B242A1474004D82E0 /* BUAdSDK.bundle */,
 				4502EE4A242A1473004D82E0 /* BUAdSDK.framework */,
 				4502EE49242A1473004D82E0 /* BUFoundation.framework */,
@@ -1640,6 +1655,7 @@
 			files = (
 				45D9BC6423CF0EFF00B3973B /* Sigmob.bundle in Resources */,
 				8DB70506236D883C007A889D /* LaunchScreen.storyboard in Resources */,
+				4502EE56242A2CBF004D82E0 /* StartApp.bundle in Resources */,
 				8DB709CF236D8C89007A889D /* AppLovinSDKResources.bundle in Resources */,
 				8DB70503236D883C007A889D /* Assets.xcassets in Resources */,
 				8DB70A38236D8C89007A889D /* NendAdResource.bundle in Resources */,

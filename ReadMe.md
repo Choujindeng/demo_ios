@@ -1,7 +1,7 @@
 ## [IMPORTANT] DO NOT expose any of the frameworks to Windows operating system; Windows modifies frameworks, making them incomplete and resulting in compile errors.
 ## 【重要】请勿将iOS需要用到的SDK（包括.a、.framework及.embededframework格式的套件）下载或传送至Windows操作系统上，因为Windows文件系统会修改这些SDK，导致它们在Xcode中无法编译。
-# AnythinkSDK_iOS_SDK_5.5.1
-## Third-party SDK version for AnyThink_ios_sdk_5.5.1
+# AnythinkSDK_iOS_SDK_5.5.4
+## Third-party SDK version for AnyThink_ios_sdk_5.5.4
 
 [Integrate Guide for AnyThinkSDK for iOS(English)](iOS_Doc_EN/iOS_Integration_Guide.md)
 
@@ -47,7 +47,8 @@ http://sdk-release.toponad.com/Unity/5.5.1/Unity_Androidv551_iOSv551v2.unitypack
 | MobPower | 1.0.0 ||
 | Nend | 5.3.1 ||
 | Maio | 1.5.0 ||
-| ks | 2.5.2.21 |需要额外导入第三方依赖：<br> AFNetworking/Godzippa/MJExtension/SDWebImage|
+| startApp | 4.4.3 ||
+| ks | 2.6.1 |需要额外导入第三方依赖：<br> AFNetworking/Godzippa/MJExtension/SDWebImage|
 | sigmob | 2.15.2 |sdk：WindSDK.framework <br>sigmob.bundle|
 | Ogury | 1.0.3 |OguryOED_1.0.3 包含以下sdk<br>OMSDK_Oguryco.framework<br>OguryAds.framework<br>OguryConsentManager.framework|
 
@@ -80,6 +81,7 @@ http://sdk-release.toponad.com/Unity/5.5.1/Unity_Androidv551_iOSv551v2.unitypack
 |Baidu|22|
 |Nend|23|
 |Maio|24|
+|startApp|25|
 |KS|28|
 |Sigmob|29|
 |Ogury|36|

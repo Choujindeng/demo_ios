@@ -15,11 +15,11 @@
 (建议从这里的链接下载,git的download zip会出现文件损坏的问题，导致无法编译)下载地址（download）：<br>
 
 1. TopOn SDK Unity for Android V5.5.4  
-http://sdk-release.toponad.com/Unity/5.5.4/Unity_Androidv5.5.4.unitypackage<br>
+http://sdk-release.toponad.com/Android/5.5.4/TopOn_SDK_v5.5.4_20200327_Release.zip  <br>
 2. TopOn SDK Unity for iOS  V5.5.4  
-http://sdk-release.toponad.com/Unity/5.5.4/Unity_iOSv5.5.4.unitypackage<br>
+http://sdk-release.toponad.com/Unity/5.5.4/Unity_iOSv5.5.4.unitypackage  <br>
 3. TopOn SDK Unity for iOS & Android  V5.5.4  
-http://sdk-release.toponad.com/Unity/5.5.4/Unity_Androidv554_iOSv554.unitypackage <br>
+http://sdk-release.toponad.com/Unity/5.5.4/Unity_Androidv554_iOSv554_20200327.unitypackage <br>
 
 
 
